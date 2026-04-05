@@ -1,0 +1,363 @@
+{
+  "nav": {
+    "home": "首頁",
+    "about": "我們的故事",
+    "services": "服務",
+    "blog": "社群",
+    "events": "活動",
+    "contact": "聯繫我們",
+    "contactUs": "聯繫我們",
+    "faq": "幫助中心",
+    "signIn": "進入平台",
+    "signUp": "免費加入",
+    "signOut": "登出",
+    "pricing": "學校方案",
+    "features": "平台",
+    "solutions": "適用對象",
+    "forTeachers": "教師專區",
+    "forAdmins": "行政人員專區",
+    "forSchedulers": "排課人員專區",
+    "forStudents": "學生專區",
+    "forParents": "家長專區",
+    "forTeamLeaders": "組長專區",
+    "forOrganizations": "機構專區",
+    "skipToContent": "跳至主要內容",
+    "classsparkBehavior": "ClassSpark 行為",
+    "skillsGradebook": "技能成績冊",
+    "magneticScheduling": "智能排課",
+    "examPlatform": "考試平台",
+    "curriculumPlanning": "課程規劃",
+    "aiFeatures": "TeacherLab & AI",
+    "viewAllFeatures": "探索完整平台 →",
+    "new": "新功能",
+    "sections": {
+      "teachingLearning": "教學與學習",
+      "schoolOperations": "學校營運",
+      "peopleHR": "人員與人力資源",
+      "financeAdmissions": "財務與招生",
+      "qualityCompliance": "質量與合規"
+    },
+    "featureLinks": {
+      "gamification": "遊戲化",
+      "resourceBooking": "資源預訂",
+      "yearMigration": "年度遷移",
+      "library": "圖書館",
+      "pilotProjects": "試點項目",
+      "integrations": "系統整合",
+      "hrManagement": "人力資源管理",
+      "professionalDev": "專業發展",
+      "teacherKpi": "教師績效指標",
+      "teachingAssistants": "教學助理",
+      "finance": "財務",
+      "salesAdmin": "銷售管理",
+      "marketing": "市場推廣",
+      "qaAccreditation": "質量保證與認證",
+      "policyManagement": "政策管理",
+      "surveyPlatform": "問卷平台",
+      "studentAffairs": "學生事務",
+      "schoolNews": "學校新聞",
+      "aiAnalytics": "AI 分析中心",
+      "digitalPortfolios": "數碼作品集",
+      "wordwall": "Wordwall",
+      "documentHub": "文件中心",
+      "emergencyComms": "緊急通訊",
+      "sparkSpace": "SparkSpace"
+    },
+    "solutionDescriptions": {
+      "forTeachers": "您的全新工作方式",
+      "forTeamLeaders": "部門主管與協調員",
+      "forSchedulers": "輕鬆排課",
+      "forStudents": "個人化學習",
+      "forParents": "保持聯繫",
+      "forOrganizations": "學區與學校網絡"
+    }
+  },
+  "landing": {
+    "heroTitle": "AI 原生學校管理系統",
+    "heroSubtitle": "一個平台整合課程、排課、行為追蹤、成績冊及 AI 智能分析。專為現代學校打造。",
+    "getStarted": "聯絡銷售",
+    "bookDemo": "預約導覽",
+    "trustedBy": "獲全球領先學校信賴",
+    "featuresTitle": "學校所需的一切功能",
+    "featuresSubtitle": "以一個統一平台整合 20+ 模組",
+    "hero": {
+      "badge": "學校管理的未來",
+      "title": "您學校的",
+      "titleHighlight": "作業系統",
+      "titleEnd": "由 AI 驅動",
+      "subtitle": "課程、排課、行為追蹤、成績冊及 AI 智能分析——全部整合於一個為 21 世紀教育打造的統一平台。",
+      "getStarted": "聯絡銷售",
+      "watchDemo": "探索平台",
+      "noCreditCard": "學校導入支援",
+      "freeForever": "學校定制年度報價",
+      "setupTime": "專屬上線支援"
+    },
+    "trusted": {
+      "title": "專為",
+      "roles": "角色",
+      "modules": "模組",
+      "languages": "語言",
+      "comingSoon": "更多即將推出！",
+      "carouselItems": [
+        "國際學校",
+        "公立學校",
+        "私立學校",
+        "特許學校網絡",
+        "蒙特梭利課程",
+        "IB 課程體系",
+        "STEM 學院",
+        "語言學校",
+        "幼兒中心",
+        "K-12 校園",
+        "學校領導",
+        "教師",
+        "教學助理",
+        "輔導員",
+        "家長",
+        "學生",
+        "學區團隊",
+        "課後活動"
+      ]
+    },
+    "stats": {
+      "roles": "用戶角色",
+      "modules": "整合模組",
+      "languages": "支援語言",
+      "teacherWorkflows": "教師工作流程"
+    },
+    "unified": {
+      "badge": "統一平台",
+      "title": "一個學生檔案。一個記錄系統。",
+      "subtitle": "跨學業、出勤、行為和健康信號的 AI 洞察——讓每個決策都基於全面的視角。",
+      "items": [
+        { "title": "學業表現", "description": "技能掌握、成績和課程進度一覽無遺" },
+        { "title": "出勤與參與度", "description": "實時出勤追蹤與趨勢分析" },
+        { "title": "行為與 ClassSpark", "description": "積分、事件和正向強化數據" },
+        { "title": "健康指標", "description": "非醫療信號支援全面的學生關懷" }
+      ],
+      "disclaimer": ""
+    },
+    "features": {
+      "badge": "平台功能",
+      "title": "學校所需的一切",
+      "subtitle": "以一個專為現代教育設計的統一平台整合 20+ 模組",
+      "learnMore": "了解更多",
+      "classspark": {
+        "title": "ClassSpark 行為",
+        "description": "內建行為追蹤與怪獸頭像。實時積分、家長通知和遊戲化互動。",
+        "badge": "免費"
+      },
+      "gradebook": {
+        "title": "技能導向成績冊",
+        "description": "超越字母等級。以色彩編碼熱力圖精確追蹤每位學生的掌握程度。"
+      },
+      "scheduling": {
+        "title": "智能排課",
+        "description": "AI 驅動的拖放式課表。自動衝突檢測和教師工作量平衡。",
+        "badge": "AI"
+      },
+      "aiAssistant": {
+        "title": "TeacherLab & AI",
+        "description": "一站式 AI 工作空間：使用 TeacherLab 生成課程、功課、簡報和報告。以 Teaching Mode 投影到課堂。",
+        "badge": "新功能"
+      },
+      "exams": {
+        "title": "考試平台",
+        "description": "從創建到 AI 輔助批改的完整考試流程，包含信心評分和審批工作流程。"
+      },
+      "curriculum": {
+        "title": "課程規劃",
+        "description": "AI 輔助課程對應與技能對齊。無縫連接標準與評估。"
+      }
+    },
+    "communication": {
+      "badge": "保持連繫",
+      "title": "保持學校互聯互通",
+      "subtitle": "內建訊息、視訊通話和社交功能，連結教師、學生和家長。",
+      "messaging": {
+        "title": "內部訊息",
+        "description": "Discord 風格聊天，支援私訊、群組頻道和檔案分享。保持學校互聯互通。",
+        "badge": "新功能"
+      },
+      "video": {
+        "title": "視訊與語音通話",
+        "description": "內建 Jitsi 視訊會議。從任何聊天對話直接開始視訊或語音通話。",
+        "badge": "新功能"
+      },
+      "materials": {
+        "title": "教材分享",
+        "description": "在聊天中直接分享課程資源、工作表和檔案。一鍵將教材添加到課程計劃。"
+      },
+      "stories": {
+        "title": "班級動態",
+        "description": "社交媒體風格的班級更新。與家長和學生分享照片、影片和成就。",
+        "badge": "新功能"
+      }
+    },
+    "studentParent": {
+      "badge": "家庭與學生中心",
+      "title": "激發學生參與，賦能家長",
+      "subtitle": "互動作業、綜合學習檔案和專屬家長儀表板，讓每個人都掌握最新動態。",
+      "portfolio": {
+        "title": "學生學習檔案",
+        "description": "統一展示所有學生作品——作業、課堂作業、評估和專題——包含 AI 和教師評價。",
+        "badge": "新功能"
+      },
+      "activities": {
+        "title": "17+ 互動活動",
+        "description": "錄音、視訊提交、圖片上傳、配對、填空等，打造互動作業體驗。",
+        "badge": "新功能"
+      },
+      "parentPortal": {
+        "title": "家長入口",
+        "description": "家長專屬儀表板，查看成績、出勤、行為積分、學習檔案和預約會議。"
+      },
+      "development": {
+        "title": "專業發展",
+        "description": "教師觀課評量表、評估、標準追蹤和成長證據管理。"
+      }
+    },
+    "ai": {
+      "badge": "AI 驅動",
+      "title": "懂教育的 AI",
+      "subtitle": "不只是另一個聊天機器人。我們的 AI 專為教育場景訓練，理解課程標準、教學法和課堂動態。",
+      "feature1": "生成與課程對齊的教案",
+      "feature2": "一鍵創建差異化作業",
+      "feature3": "AI 自動批改試卷，附帶信心評分",
+      "feature4": "AI 輔助生成學期報告",
+      "feature5": "持續性 AI 對話進行任何研究",
+      "feature6": "數據科學家儀表板，提供角色專屬分析",
+      "feature7": "SparkSpace AI 學習空間，為學生提供個人化輔導",
+      "exploreButton": "探索 AI 能力",
+      "chooseModel": "選擇您的 AI 模型",
+      "modes": {
+        "fast": { "name": "快速", "tag": "速度", "desc": "快速草稿、創意和課堂訊息" },
+        "balanced": { "name": "平衡", "tag": "日常", "desc": "日常規劃的品質與速度最佳組合" },
+        "deep": { "name": "深度", "tag": "推理", "desc": "報告和分析的更強推理能力" },
+        "safe": { "name": "安全模式", "tag": "安全", "desc": "學生使用的額外保護措施" }
+      }
+    },
+    "solutions": {
+      "title": "為學校每個人打造",
+      "subtitle": "16+ 個專業角色，各有量身定制的儀表板和功能",
+      "forTeachers": { "title": "教師專區", "description": "AI 驅動工具帶來全新工作方式" },
+      "forAdmins": { "title": "行政人員專區", "description": "完整監督和控制" },
+      "forSchedulers": { "title": "排課人員專區", "description": "AI 簡化排課流程" },
+      "forStudents": { "title": "學生專區", "description": "個人化學習路徑" },
+      "forOrganizations": { "title": "機構專區", "description": "多校管理" }
+    },
+    "howItWorks": {
+      "badge": "簡單流程",
+      "title": "三步啟動",
+      "subtitle": "透過我們直觀的三步驟流程，幾分鐘內即可開始",
+      "step1Badge": "規劃",
+      "step1Title": "規劃您的課程",
+      "step1Description": "使用 AI 在幾分鐘內（而非幾小時）生成與課程標準對齊的綜合教案。",
+      "step2Badge": "創建",
+      "step2Title": "創建資源",
+      "step2Description": "自動生成工作表、簡報和評估。輕鬆建立您的資源庫。",
+      "step3Badge": "互動",
+      "step3Title": "激發學生參與",
+      "step3Description": "以 ClassSpark 積分追蹤行為，監控技能進度，即時通知家長。"
+    },
+    "testimonials": {
+      "badge": "深受教育工作者喜愛",
+      "title": "深受教育工作者喜愛",
+      "items": [
+        { "quote": "規劃課程和生成資源，無需在多個工具間切換。", "author": "課程規劃", "role": "教師工作流程" },
+        { "quote": "透過技能導向追蹤和清晰的進度洞察，讓掌握程度一目了然。", "author": "技能成績冊", "role": "評估工作流程" },
+        { "quote": "及早發現課表衝突，保持團隊間課表同步。", "author": "排課系統", "role": "營運工作流程" }
+      ]
+    },
+    "compliance": {
+      "ferpa": "符合 FERPA 規範",
+      "gdpr": "符合 GDPR 要求",
+      "soc2": "SOC 2 認證",
+      "uptime": "99.9% 正常運行時間"
+    },
+    "blog": {
+      "badge": "學習資源",
+      "title": "掌握課堂科技",
+      "subtitle": "探索我們的網誌，獲取現代教學的技巧、教程和洞見",
+      "topic1Title": "教育中的 AI",
+      "topic1Description": "探索人工智能如何改變課堂教學和個人化學習。",
+      "topic2Title": "教育科技工具",
+      "topic2Description": "現代課堂最新教育科技工具的評測和指南。",
+      "topic3Title": "數碼工作流程",
+      "topic3Description": "使用雲端工具和自動化簡化教學工作流程的技巧。",
+      "topic4Title": "教學創新",
+      "topic4Description": "探索吸引數碼原生代學生的創新教學方法和策略。",
+      "viewAll": "探索社群"
+    },
+    "cta": {
+      "title": "準備好轉型您的學校了嗎？",
+      "subtitle": "加入數以千計使用 Bee Education AI 更智能工作的教育工作者。",
+      "getStarted": "聯絡銷售",
+      "viewPricing": "學校方案",
+      "connectWithUs": "與我們聯繫"
+    }
+  },
+  "cta": {
+    "title": "準備好轉型您的學校了嗎？",
+    "subtitle": "加入數以千計使用 Bee Education AI 的教育工作者",
+    "getStarted": "聯絡銷售",
+    "talkToSales": "與我們團隊聊聊"
+  },
+  "footer": {
+    "description": "為現代教育工作者打造的 AI 學校管理系統。",
+    "product": "產品",
+    "solutions": "解決方案",
+    "company": "公司",
+    "legal": "法律",
+    "privacy": "私隱政策",
+    "terms": "服務條款",
+    "about": "關於我們",
+    "careers": "招聘",
+    "copyright": "版權所有。",
+    "sections": {
+      "features": "平台",
+      "useCases": "適用對象",
+      "resources": "學習",
+      "about": "我們的故事"
+    },
+    "links": {
+      "classspark": "ClassSpark",
+      "gradebook": "成績冊",
+      "scheduling": "排課",
+      "exams": "考試",
+      "curriculum": "課程",
+      "pricing": "定價",
+      "forTeachers": "教師專區",
+      "forSchedulers": "排課人員專區",
+      "forStudents": "學生專區",
+      "forParents": "家長專區",
+      "blog": "社群",
+      "faq": "幫助中心",
+      "contact": "聯繫我們",
+      "privacyLink": "私隱",
+      "termsLink": "條款",
+      "cookieSettings": "私隱偏好設定"
+    },
+    "newsletter": {
+      "title": "保持更新",
+      "subtitle": "獲取最新資訊和見解",
+      "placeholder": "您的電郵",
+      "subscribe": "加入社群",
+      "thanks": "感謝您的訂閱！",
+      "errorEmpty": "請輸入電郵地址",
+      "errorInvalid": "請輸入有效的電郵地址",
+      "errorFailed": "訂閱失敗，請稍後再試。"
+    },
+    "contact": {
+      "email": "電郵",
+      "whatsapp": "WhatsApp",
+      "address": "地址",
+      "addressValue": "香港旺角彌敦道721-725號比利時銀行大廈",
+      "worldwide": "服務全球學校"
+    }
+  },
+  "seo": {
+    "defaultTitle": "Bee Education AI（Bee Education）- AI 原生學校管理平台",
+    "defaultDescription": "更智能的學校管理方式。Bee Education AI（亦稱 Bee Education）一個平台整合課程、排課、行為追蹤、成績冊及 AI 智能分析。專為現代學校打造。"
+  }
+}

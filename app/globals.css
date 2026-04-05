@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Trusted Schools Carousel */
+.trusted-carousel {
+  overflow: hidden;
+  position: relative;
+}
+
+.trusted-carousel-track {
+  display: flex;
+  gap: 1rem;
+  animation: trusted-scroll 35s linear infinite;
+  width: max-content;
+}
+
+.trusted-carousel-track:hover {
+  animation-play-state: paused;
+}
+
+.trusted-school-card {
+  flex-shrink: 0;
+  padding: 0.25rem 0;
+}
+
+@keyframes trusted-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

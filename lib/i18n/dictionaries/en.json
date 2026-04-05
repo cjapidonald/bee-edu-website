@@ -1,0 +1,363 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "Our Story",
+    "services": "Services",
+    "blog": "Community",
+    "events": "Events",
+    "contact": "Let's Connect",
+    "contactUs": "Let's Connect",
+    "faq": "Help Center",
+    "signIn": "Access Portal",
+    "signUp": "Join Free",
+    "signOut": "Sign Out",
+    "pricing": "School Pricing",
+    "features": "Platform",
+    "solutions": "Who It's For",
+    "forTeachers": "For Teachers",
+    "forAdmins": "For Admins",
+    "forSchedulers": "For Schedulers",
+    "forStudents": "For Students",
+    "forParents": "For Parents",
+    "forTeamLeaders": "Team Leaders",
+    "forOrganizations": "Organizations",
+    "skipToContent": "Skip to main content",
+    "classsparkBehavior": "ClassSpark Behavior",
+    "skillsGradebook": "Skills Gradebook",
+    "magneticScheduling": "Magnetic Scheduling",
+    "examPlatform": "Exam Platform",
+    "curriculumPlanning": "Curriculum Planning",
+    "aiFeatures": "TeacherLab & AI",
+    "viewAllFeatures": "Explore Full Platform →",
+    "new": "NEW",
+    "sections": {
+      "teachingLearning": "Teaching & Learning",
+      "schoolOperations": "School Operations",
+      "peopleHR": "People & HR",
+      "financeAdmissions": "Finance & Admissions",
+      "qualityCompliance": "Quality & Compliance"
+    },
+    "featureLinks": {
+      "gamification": "Gamification",
+      "resourceBooking": "Resource Booking",
+      "yearMigration": "Year Migration",
+      "library": "Library",
+      "pilotProjects": "Pilot Projects",
+      "integrations": "Integrations",
+      "hrManagement": "HR Management",
+      "professionalDev": "Professional Dev",
+      "teacherKpi": "Teacher KPI",
+      "teachingAssistants": "Teaching Assistants",
+      "finance": "Finance",
+      "salesAdmin": "Sales Admin",
+      "marketing": "Marketing",
+      "qaAccreditation": "QA & Accreditation",
+      "policyManagement": "Policy Management",
+      "surveyPlatform": "Survey Platform",
+      "studentAffairs": "Student Affairs",
+      "schoolNews": "SchoolNews",
+      "aiAnalytics": "AI Analytics Hub",
+      "digitalPortfolios": "Digital Portfolios",
+      "wordwall": "Wordwall",
+      "documentHub": "Document Hub",
+      "emergencyComms": "Emergency Comms",
+      "sparkSpace": "SparkSpace"
+    },
+    "solutionDescriptions": {
+      "forTeachers": "Your new workstyle",
+      "forTeamLeaders": "Department heads & coordinators",
+      "forSchedulers": "Scheduling made simple",
+      "forStudents": "Personalized learning",
+      "forParents": "Stay connected",
+      "forOrganizations": "Districts & school networks"
+    }
+  },
+  "landing": {
+    "heroTitle": "AI-Native School Management",
+    "heroSubtitle": "One platform for curriculum, scheduling, behavior tracking, gradebook, and AI-powered insights. Built for modern schools.",
+    "getStarted": "Contact Sales",
+    "bookDemo": "Schedule a Walkthrough",
+    "trustedBy": "Trusted by leading schools worldwide",
+    "featuresTitle": "Everything your school needs",
+    "featuresSubtitle": "Bring 20+ modules into one unified platform",
+    "hero": {
+      "badge": "The Future of School Management",
+      "title": "Your School's",
+      "titleHighlight": "Operating System",
+      "titleEnd": "Powered by AI",
+      "subtitle": "Curriculum, scheduling, behavior tracking, gradebook, and AI-powered insights—all in one unified platform built for 21st-century education.",
+      "getStarted": "Contact Sales",
+      "watchDemo": "Explore Platform",
+      "noCreditCard": "School rollout support",
+      "freeForever": "Custom annual quote",
+      "setupTime": "Guided onboarding"
+    },
+    "trusted": {
+      "title": "Built for",
+      "roles": "Roles",
+      "modules": "Modules",
+      "languages": "Languages",
+      "comingSoon": "More coming soon!",
+      "carouselItems": [
+        "International Schools",
+        "Public Schools",
+        "Private Schools",
+        "Charter Networks",
+        "Montessori Programs",
+        "IB Continuums",
+        "STEM Academies",
+        "Language Schools",
+        "Early Years Centers",
+        "K–12 Campuses",
+        "School Leaders",
+        "Teachers",
+        "Teaching Assistants",
+        "Counselors",
+        "Parents",
+        "Students",
+        "District Teams",
+        "After-School Programs"
+      ]
+    },
+    "stats": {
+      "roles": "User Roles",
+      "modules": "Integrated Modules",
+      "languages": "Languages Supported",
+      "teacherWorkflows": "Teacher Workflows"
+    },
+    "unified": {
+      "badge": "Unified Platform",
+      "title": "One student profile. One system of record.",
+      "subtitle": "AI insights across academics, attendance, behavior, and wellbeing signals—so every decision is informed by the full picture.",
+      "items": [
+        { "title": "Academic Performance", "description": "Skills mastery, grades, and curriculum progress in one view" },
+        { "title": "Attendance & Engagement", "description": "Real-time attendance tracking with trend analysis" },
+        { "title": "Behavior & ClassSpark", "description": "Points, incidents, and positive reinforcement data" },
+        { "title": "Wellbeing Indicators", "description": "Non-medical signals for holistic student support" }
+      ],
+      "disclaimer": ""
+    },
+    "features": {
+      "badge": "What's Inside",
+      "title": "Everything your school needs",
+      "subtitle": "Bring 20+ modules into one unified platform designed for modern education",
+      "learnMore": "Learn more",
+      "classspark": {
+        "title": "ClassSpark Behavior",
+        "description": "Built-in behavior tracking with monster avatars. Real-time points, parent notifications, and gamified engagement.",
+        "badge": "FREE"
+      },
+      "gradebook": {
+        "title": "Skills-Based Gradebook",
+        "description": "Move beyond letter grades. Track mastery with color-coded heatmaps showing exactly what each student knows."
+      },
+      "scheduling": {
+        "title": "Magnetic Scheduling",
+        "description": "AI-powered drag-and-drop timetables. Automatic conflict detection and teacher workload balancing.",
+        "badge": "AI"
+      },
+      "aiAssistant": {
+        "title": "TeacherLab & AI",
+        "description": "Your all-in-one AI workspace: generate lessons, homework, presentations, and reports with TeacherLab. Present with Teaching Mode.",
+        "badge": "NEW"
+      },
+      "exams": {
+        "title": "Exam Platform",
+        "description": "Complete exam lifecycle from creation to AI-assisted marking with confidence scoring and approval workflows."
+      },
+      "curriculum": {
+        "title": "Curriculum Planning",
+        "description": "AI-assisted curriculum mapping with skills alignment. Connect standards to assessments seamlessly."
+      }
+    },
+    "communication": {
+      "badge": "Stay Connected",
+      "title": "Keep your school connected",
+      "subtitle": "Built-in messaging, video calls, and social features that bring teachers, students, and parents together.",
+      "messaging": {
+        "title": "Internal Messaging",
+        "description": "Discord-style chat with direct messages, group channels, and file sharing. Keep your school connected.",
+        "badge": "NEW"
+      },
+      "video": {
+        "title": "Video & Voice Calls",
+        "description": "Built-in Jitsi video conferencing. Start video or voice calls directly from any chat conversation.",
+        "badge": "NEW"
+      },
+      "materials": {
+        "title": "Materials Sharing",
+        "description": "Share lesson resources, worksheets, and files directly in chat. Add materials to lesson plans with one click."
+      },
+      "stories": {
+        "title": "Class Stories",
+        "description": "Social media-style updates for classes. Share photos, videos, and achievements with parents and students.",
+        "badge": "NEW"
+      }
+    },
+    "studentParent": {
+      "badge": "Family & Student Hub",
+      "title": "Engage students, empower parents",
+      "subtitle": "Interactive homework, comprehensive portfolios, and a dedicated parent dashboard keep everyone in the loop.",
+      "portfolio": {
+        "title": "Student Portfolio",
+        "description": "Unified portfolio of all student work—homework, classwork, assessments, and projects—with AI and teacher evaluations.",
+        "badge": "NEW"
+      },
+      "activities": {
+        "title": "17+ Interactive Activities",
+        "description": "Audio recording, video submissions, image uploads, matching, fill-in-blank, and more for engaging homework.",
+        "badge": "NEW"
+      },
+      "parentPortal": {
+        "title": "Parent Portal",
+        "description": "Dedicated dashboard for parents to view grades, attendance, behavior points, portfolios, and book meetings."
+      },
+      "development": {
+        "title": "Professional Development",
+        "description": "Teacher observation rubrics, evaluations, standards tracking, and evidence management for growth."
+      }
+    },
+    "ai": {
+      "badge": "AI-Powered",
+      "title": "AI that understands education",
+      "subtitle": "Not just another chatbot. Our AI is trained specifically for educational contexts, understanding curriculum standards, pedagogy, and classroom dynamics.",
+      "feature1": "Generate lesson plans aligned to your curriculum",
+      "feature2": "Create differentiated homework in one click",
+      "feature3": "Auto-mark exams with confidence scoring",
+      "feature4": "Produce term reports with AI assistance",
+      "feature5": "Research anything with persistent AI conversations",
+      "feature6": "Data Scientist dashboards with role-specific analytics",
+      "feature7": "SparkSpace AI learning spaces for personalized student tutoring",
+      "exploreButton": "Explore AI Powers",
+      "chooseModel": "Choose Your AI Model",
+      "modes": {
+        "fast": { "name": "Fast", "tag": "Speed", "desc": "Quick drafts, ideas, and classroom messages" },
+        "balanced": { "name": "Balanced", "tag": "Everyday", "desc": "Best mix of quality and speed for daily planning" },
+        "deep": { "name": "Deep", "tag": "Reasoning", "desc": "Stronger reasoning for reports and analysis" },
+        "safe": { "name": "Safe Mode", "tag": "Safety", "desc": "Extra-guardrails for student-facing use" }
+      }
+    },
+    "solutions": {
+      "title": "Built for everyone in your school",
+      "subtitle": "16+ specialized roles, each with tailored dashboards and features",
+      "forTeachers": { "title": "For Teachers", "description": "Your new workstyle with AI-powered tools" },
+      "forAdmins": { "title": "For Admins", "description": "Complete oversight and control" },
+      "forSchedulers": { "title": "For Schedulers", "description": "Scheduling made simple with AI" },
+      "forStudents": { "title": "For Students", "description": "Personalized learning paths" },
+      "forOrganizations": { "title": "For Organizations", "description": "Multi-school management" }
+    },
+    "howItWorks": {
+      "badge": "Simple Process",
+      "title": "3 Steps to Launch",
+      "subtitle": "Get started in minutes with our intuitive three-step process",
+      "step1Badge": "Plan",
+      "step1Title": "Plan Your Lessons",
+      "step1Description": "Use AI to generate comprehensive lesson plans aligned with your curriculum standards in minutes, not hours.",
+      "step2Badge": "Create",
+      "step2Title": "Create Resources",
+      "step2Description": "Generate worksheets, presentations, and assessments automatically. Build your resource library effortlessly.",
+      "step3Badge": "Engage",
+      "step3Title": "Engage Students",
+      "step3Description": "Track behavior with ClassSpark points, monitor skill progress, and keep parents informed in real-time."
+    },
+    "testimonials": {
+      "badge": "Loved by Educators",
+      "title": "Loved by Educators",
+      "items": [
+        { "quote": "Plan lessons and generate resources without jumping between tools.", "author": "Lesson Planning", "role": "Teacher Workflow" },
+        { "quote": "Make mastery visible with skills-based tracking and clear progress insights.", "author": "Skills Gradebook", "role": "Assessment Workflow" },
+        { "quote": "Catch timetable conflicts early and keep schedules aligned across teams.", "author": "Scheduling", "role": "Operations Workflow" }
+      ]
+    },
+    "compliance": {
+      "ferpa": "FERPA Compliant",
+      "gdpr": "GDPR Ready",
+      "soc2": "SOC 2 Certified",
+      "uptime": "99.9% Uptime"
+    },
+    "blog": {
+      "badge": "Learn",
+      "title": "Master Classroom Technology",
+      "subtitle": "Explore our blog for tips, tutorials, and insights on modern teaching",
+      "topic1Title": "AI in Education",
+      "topic1Description": "Discover how artificial intelligence is transforming classroom teaching and personalized learning.",
+      "topic2Title": "EdTech Tools",
+      "topic2Description": "Reviews and guides on the latest educational technology tools for modern classrooms.",
+      "topic3Title": "Digital Workflow",
+      "topic3Description": "Tips for streamlining your teaching workflow with cloud-based tools and automation.",
+      "topic4Title": "Teaching Innovations",
+      "topic4Description": "Explore innovative teaching methods and strategies that engage today's digital-native students.",
+      "viewAll": "Explore the Community"
+    },
+    "cta": {
+      "title": "Ready to transform your school?",
+      "subtitle": "Join thousands of educators using Bee Education AI to work smarter, not harder.",
+      "getStarted": "Contact Sales",
+      "viewPricing": "School Pricing",
+      "connectWithUs": "Connect with us"
+    }
+  },
+  "cta": {
+    "title": "Ready to transform your school?",
+    "subtitle": "Join thousands of educators using Bee Education AI",
+    "getStarted": "Contact Sales",
+    "talkToSales": "Chat with Our Team"
+  },
+  "footer": {
+    "description": "AI-powered school management for modern educators.",
+    "product": "Product",
+    "solutions": "Solutions",
+    "company": "Company",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "about": "About Us",
+    "careers": "Careers",
+    "copyright": "All rights reserved.",
+    "sections": {
+      "features": "Platform",
+      "useCases": "Who It's For",
+      "resources": "Learn",
+      "about": "Our Story"
+    },
+    "links": {
+      "classspark": "ClassSpark",
+      "gradebook": "Gradebook",
+      "scheduling": "Scheduling",
+      "exams": "Exams",
+      "curriculum": "Curriculum",
+      "pricing": "Pricing",
+      "forTeachers": "For Teachers",
+      "forSchedulers": "For Schedulers",
+      "forStudents": "For Students",
+      "forParents": "For Parents",
+      "blog": "Community",
+      "faq": "Help Center",
+      "contact": "Let's Connect",
+      "privacyLink": "Privacy",
+      "termsLink": "Terms",
+      "cookieSettings": "Privacy Preferences"
+    },
+    "newsletter": {
+      "title": "Stay in the Loop",
+      "subtitle": "Get the latest updates and insights",
+      "placeholder": "Your email",
+      "subscribe": "Join the Community",
+      "thanks": "Thanks for subscribing!",
+      "errorEmpty": "Please enter your email address",
+      "errorInvalid": "Please enter a valid email address",
+      "errorFailed": "Subscription failed. Please try again."
+    },
+    "contact": {
+      "email": "Email",
+      "whatsapp": "WhatsApp",
+      "address": "Address",
+      "addressValue": "721-725 Nathan Road, Belgian Bank Building, Mongkok, Hong Kong",
+      "worldwide": "Serving schools globally"
+    }
+  },
+  "seo": {
+    "defaultTitle": "Bee Education AI (Bee Education) - AI-Native School Management Platform",
+    "defaultDescription": "The smarter way to run your school with Bee Education AI (also searched as Bee Education). One platform for curriculum, scheduling, behavior tracking, gradebook, and AI-powered insights."
+  }
+}
