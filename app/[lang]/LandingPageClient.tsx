@@ -87,7 +87,7 @@ const StatItem = memo(function StatItem({
   value,
   label,
   delay = 0,
-  colorClass = "text-primary"
+  colorClass = "text-[#fc3c00]"
 }: {
   value: string;
   label: string;
@@ -139,11 +139,11 @@ const TrustedByCarousel = memo(function TrustedByCarousel({ dict }: { dict: Dict
       >
         <p className="text-center text-base font-semibold text-gray-600">
           {dict.landing.trusted.title}{" "}
-          <span className="text-primary">16+</span> {dict.landing.trusted.roles}{" "}
+          <span className="text-[#fc3c00]">16+</span> {dict.landing.trusted.roles}{" "}
           <span className="text-gray-400">•</span>{" "}
-          <span className="text-primary">20+</span> {dict.landing.trusted.modules}{" "}
+          <span className="text-[#fc3c00]">20+</span> {dict.landing.trusted.modules}{" "}
           <span className="text-gray-400">•</span>{" "}
-          <span className="text-primary">2+</span> {dict.landing.trusted.languages}{" "}
+          <span className="text-[#fc3c00]">2+</span> {dict.landing.trusted.languages}{" "}
           <span className="text-gray-400">•</span>{" "}
           <span className="text-gray-700">{dict.landing.trusted.comingSoon}</span>
         </p>
@@ -186,11 +186,11 @@ const getFeatures = (dict: Dictionary) => [
     title: dict.landing?.features?.classspark?.title || "ClassSpark Behavior",
     description: dict.landing?.features?.classspark?.description || "Built-in behavior tracking with monster avatars.",
     badge: dict.landing?.features?.classspark?.badge || "FREE",
-    badgeColor: "bg-mint text-white",
-    color: "text-mint",
-    bg: "bg-mint-light",
-    border: "hover:border-mint/30",
-    shadow: "hover:shadow-mint/20",
+    badgeColor: "bg-emerald-600 text-white",
+    color: "text-emerald-600",
+    bg: "bg-emerald-50",
+    border: "hover:border-emerald-300",
+    shadow: "hover:shadow-emerald-200/40",
   },
   {
     icon: BarChart3,
@@ -199,10 +199,10 @@ const getFeatures = (dict: Dictionary) => [
     description: dict.landing?.features?.gradebook?.description || "Move beyond letter grades.",
     badge: null,
     badgeColor: null,
-    color: "text-amber",
-    bg: "bg-amber-light",
-    border: "hover:border-amber/30",
-    shadow: "hover:shadow-amber/20",
+    color: "text-amber-600",
+    bg: "bg-amber-50",
+    border: "hover:border-amber-300",
+    shadow: "hover:shadow-amber-200/40",
   },
   {
     icon: Calendar,
@@ -211,10 +211,10 @@ const getFeatures = (dict: Dictionary) => [
     description: dict.landing?.features?.scheduling?.description || "AI-powered timetables.",
     badge: dict.landing?.features?.scheduling?.badge || "AI",
     badgeColor: "bg-rose-600 text-white",
-    color: "text-coral",
-    bg: "bg-coral-light",
-    border: "hover:border-coral/30",
-    shadow: "hover:shadow-coral/20",
+    color: "text-rose-600",
+    bg: "bg-rose-50",
+    border: "hover:border-rose-300",
+    shadow: "hover:shadow-rose-200/40",
   },
   {
     icon: Brain,
@@ -222,11 +222,11 @@ const getFeatures = (dict: Dictionary) => [
     title: dict.landing?.features?.aiAssistant?.title || "AI Teaching Assistant",
     description: dict.landing?.features?.aiAssistant?.description || "Generate lessons in seconds.",
     badge: dict.landing?.features?.aiAssistant?.badge || "NEW",
-    badgeColor: "bg-rose-600 text-white",
-    color: "text-vibrant-purple",
-    bg: "bg-vibrant-purple-light",
-    border: "hover:border-vibrant-purple/30",
-    shadow: "hover:shadow-vibrant-purple/20",
+    badgeColor: "bg-violet-600 text-white",
+    color: "text-violet-600",
+    bg: "bg-violet-50",
+    border: "hover:border-violet-300",
+    shadow: "hover:shadow-violet-200/40",
   },
   {
     icon: FileText,
@@ -235,10 +235,10 @@ const getFeatures = (dict: Dictionary) => [
     description: dict.landing?.features?.exams?.description || "Complete exam lifecycle.",
     badge: null,
     badgeColor: null,
-    color: "text-orange",
-    bg: "bg-orange-light",
-    border: "hover:border-orange/30",
-    shadow: "hover:shadow-orange/20",
+    color: "text-sky-600",
+    bg: "bg-sky-50",
+    border: "hover:border-sky-300",
+    shadow: "hover:shadow-sky-200/40",
   },
   {
     icon: BookOpen,
@@ -247,10 +247,10 @@ const getFeatures = (dict: Dictionary) => [
     description: dict.landing?.features?.curriculum?.description || "AI-assisted curriculum mapping.",
     badge: null,
     badgeColor: null,
-    color: "text-primary",
-    bg: "bg-primary/10",
-    border: "hover:border-primary/30",
-    shadow: "hover:shadow-primary/20",
+    color: "text-orange-600",
+    bg: "bg-orange-50",
+    border: "hover:border-orange-300",
+    shadow: "hover:shadow-orange-200/40",
   },
 ];
 
@@ -270,7 +270,7 @@ const FeaturesSection = memo(function FeaturesSection({ dict, lang }: { dict: Di
             transition: 'opacity 0.7s ease-out, transform 0.7s ease-out'
           }}
         >
-          <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 mb-3 sm:mb-4 bg-primary/10 text-primary rounded-full text-xs sm:text-sm font-medium">
+          <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 mb-3 sm:mb-4 bg-[#fc3c00]/10 text-[#fc3c00] rounded-full text-xs sm:text-sm font-medium">
             <Sparkles className="h-3 w-3 sm:h-4 sm:w-4" />
             <span>{dict.landing.features.badge}</span>
           </div>
@@ -401,9 +401,9 @@ export default function LandingPageClient({
       title: dict.landing?.studentParent?.portfolio?.title,
       description: dict.landing?.studentParent?.portfolio?.description,
       badge: dict.landing?.studentParent?.portfolio?.badge,
-      badgeColor: "bg-amber text-gray-900",
-      iconColor: "text-amber",
-      iconBg: "bg-amber-light",
+      badgeColor: "bg-amber-600 text-white",
+      iconColor: "text-amber-600",
+      iconBg: "bg-amber-50",
     },
     {
       icon: Gamepad2,
@@ -411,8 +411,8 @@ export default function LandingPageClient({
       description: dict.landing?.studentParent?.activities?.description,
       badge: dict.landing?.studentParent?.activities?.badge,
       badgeColor: "bg-rose-600 text-white",
-      iconColor: "text-coral",
-      iconBg: "bg-coral-light",
+      iconColor: "text-rose-600",
+      iconBg: "bg-rose-50",
     },
     {
       icon: Heart,
@@ -420,8 +420,8 @@ export default function LandingPageClient({
       description: dict.landing?.studentParent?.parentPortal?.description,
       badge: null,
       badgeColor: null,
-      iconColor: "text-mint",
-      iconBg: "bg-mint-light",
+      iconColor: "text-teal-600",
+      iconBg: "bg-teal-50",
     },
     {
       icon: ClipboardCheck,
@@ -429,8 +429,8 @@ export default function LandingPageClient({
       description: dict.landing?.studentParent?.development?.description,
       badge: null,
       badgeColor: null,
-      iconColor: "text-vibrant-purple",
-      iconBg: "bg-vibrant-purple-light",
+      iconColor: "text-violet-600",
+      iconBg: "bg-violet-50",
     },
   ];
 
@@ -448,38 +448,38 @@ export default function LandingPageClient({
       badge: dict.landing?.howItWorks?.step1Badge,
       title: dict.landing?.howItWorks?.step1Title,
       description: dict.landing?.howItWorks?.step1Description,
-      color: "text-mint",
-      bgColor: "bg-mint-light",
-      badgeBg: "bg-mint/15",
-      badgeText: "text-emerald-900",
+      color: "text-sky-600",
+      bgColor: "bg-sky-50",
+      badgeBg: "bg-sky-100",
+      badgeText: "text-sky-900",
     },
     {
       icon: BookOpen,
       badge: dict.landing?.howItWorks?.step2Badge,
       title: dict.landing?.howItWorks?.step2Title,
       description: dict.landing?.howItWorks?.step2Description,
-      color: "text-coral",
-      bgColor: "bg-coral-light",
-      badgeBg: "bg-coral/15",
-      badgeText: "text-rose-900",
+      color: "text-amber-600",
+      bgColor: "bg-amber-50",
+      badgeBg: "bg-amber-100",
+      badgeText: "text-amber-900",
     },
     {
       icon: Users,
       badge: dict.landing?.howItWorks?.step3Badge,
       title: dict.landing?.howItWorks?.step3Title,
       description: dict.landing?.howItWorks?.step3Description,
-      color: "text-purple-600",
-      bgColor: "bg-purple-100",
-      badgeBg: "bg-purple-600/15",
-      badgeText: "text-purple-900",
+      color: "text-emerald-600",
+      bgColor: "bg-emerald-50",
+      badgeBg: "bg-emerald-100",
+      badgeText: "text-emerald-900",
     },
   ];
 
   const techTopics = [
-    { icon: BrainCircuit, title: dict.landing?.blog?.topic1Title, description: dict.landing?.blog?.topic1Description },
-    { icon: TabletSmartphone, title: dict.landing?.blog?.topic2Title, description: dict.landing?.blog?.topic2Description },
-    { icon: CloudCog, title: dict.landing?.blog?.topic3Title, description: dict.landing?.blog?.topic3Description },
-    { icon: Sparkles, title: dict.landing?.blog?.topic4Title, description: dict.landing?.blog?.topic4Description },
+    { icon: BrainCircuit, title: dict.landing?.blog?.topic1Title, description: dict.landing?.blog?.topic1Description, iconColor: "text-violet-600", iconBg: "bg-violet-50", hoverBorder: "hover:border-violet-300", hoverChevron: "group-hover:text-violet-600" },
+    { icon: TabletSmartphone, title: dict.landing?.blog?.topic2Title, description: dict.landing?.blog?.topic2Description, iconColor: "text-sky-600", iconBg: "bg-sky-50", hoverBorder: "hover:border-sky-300", hoverChevron: "group-hover:text-sky-600" },
+    { icon: CloudCog, title: dict.landing?.blog?.topic3Title, description: dict.landing?.blog?.topic3Description, iconColor: "text-emerald-600", iconBg: "bg-emerald-50", hoverBorder: "hover:border-emerald-300", hoverChevron: "group-hover:text-emerald-600" },
+    { icon: Sparkles, title: dict.landing?.blog?.topic4Title, description: dict.landing?.blog?.topic4Description, iconColor: "text-amber-600", iconBg: "bg-amber-50", hoverBorder: "hover:border-amber-300", hoverChevron: "group-hover:text-amber-600" },
   ];
 
   const getLocalizedPath = (path: string) => `/${lang === 'en' ? '' : lang + '/'}${path.startsWith('/') ? path.slice(1) : path}`;
@@ -490,15 +490,14 @@ export default function LandingPageClient({
       <section className="relative pt-12 sm:pt-16 md:pt-20 pb-10 sm:pb-12 md:pb-16 lg:pt-28 lg:pb-24 overflow-hidden">
         <NeuralNetworkBackground
           className="z-[1]"
-          particleColor="rgba(40, 102, 240, 0.5)"
-          lineColor="rgba(40, 102, 240, 0.22)"
+          particleColor="rgba(252, 60, 0, 0.4)"
+          lineColor="rgba(252, 60, 0, 0.15)"
           particleCount={60}
         />
 
-        <div className="absolute inset-0 bg-gradient-to-b from-[#EEF4FF]/30 via-white/40 to-white/70 z-[2]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#fff0eb]/30 via-white/40 to-white/70 z-[2]" />
 
-        <div className="absolute top-20 left-10 w-48 sm:w-60 md:w-72 h-48 sm:h-60 md:h-72 bg-[#D9F4FF]/40 rounded-full blur-3xl hidden sm:block z-[2]" />
-        <div className="absolute bottom-0 right-10 w-60 sm:w-72 md:w-96 h-60 sm:h-72 md:h-96 bg-[#D7E7FF]/40 rounded-full blur-3xl hidden sm:block z-[2]" />
+        {/* Decorative blobs removed */}
 
         <div className="container px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
@@ -506,9 +505,9 @@ export default function LandingPageClient({
               {/* Left Column - Text Content */}
               <div className="text-center lg:text-left">
                 {/* Animated Badge */}
-                <div className="group relative inline-flex items-center justify-center rounded-full px-4 sm:px-6 py-2 sm:py-3 mb-6 sm:mb-8 shadow-[inset_0_-8px_10px_#8fdfff1f] transition-shadow duration-500 ease-out hover:shadow-[inset_0_-5px_10px_#8fdfff3f] bg-white/80 backdrop-blur-sm">
+                <div className="group relative inline-flex items-center justify-center rounded-full px-4 sm:px-6 py-2 sm:py-3 mb-6 sm:mb-8 shadow-[inset_0_-8px_10px_#fc3c001f] transition-shadow duration-500 ease-out hover:shadow-[inset_0_-5px_10px_#fc3c003f] bg-white/80 backdrop-blur-sm">
                   <span
-                    className="animate-gradient absolute inset-0 block h-full w-full rounded-[inherit] bg-gradient-to-r from-[#2866F0]/50 via-[#60A5FA]/50 to-[#2866F0]/50 bg-[length:300%_100%] p-[1px]"
+                    className="animate-gradient absolute inset-0 block h-full w-full rounded-[inherit] bg-gradient-to-r from-[#fc3c00]/50 via-[#ff8c5a]/50 to-[#fc3c00]/50 bg-[length:300%_100%] p-[1px]"
                     style={{
                       WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
                       WebkitMaskComposite: "destination-out",
@@ -516,7 +515,7 @@ export default function LandingPageClient({
                       maskComposite: "subtract",
                     }}
                   />
-                  <Sparkles className="h-4 w-4 sm:h-5 sm:w-5 text-blue-500" />
+                  <Sparkles className="h-4 w-4 sm:h-5 sm:w-5 text-[#fc3c00]" />
                   <hr className="mx-2 h-4 w-px shrink-0 bg-neutral-300" />
                   <AnimatedGradientText className="text-sm sm:text-base md:text-lg font-semibold">
                     {dict.landing.hero.badge}
@@ -527,7 +526,7 @@ export default function LandingPageClient({
                 {/* Main Headline */}
                 <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
                   {dict.landing.hero.title}{" "}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2866F0] via-[#3B82F6] to-[#60A5FA]">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#fc3c00] via-[#ff6b35] to-[#ff8c5a]">
                     {dict.landing.hero.titleHighlight}
                   </span>
                   <br />
@@ -548,7 +547,7 @@ export default function LandingPageClient({
                   <Link href={getLocalizedPath("/contact")} className="w-full sm:w-auto">
                     <Button
                       size="lg"
-                      className="w-full sm:w-auto bg-primary hover:bg-[#1F5FE0] text-white px-6 sm:px-8 py-4 sm:py-5 md:py-6 text-sm sm:text-base md:text-lg rounded-xl shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all"
+                      className="w-full sm:w-auto bg-[#fc3c00] hover:bg-[#e03500] text-white px-6 sm:px-8 py-4 sm:py-5 md:py-6 text-sm sm:text-base md:text-lg rounded-xl shadow-lg shadow-[#fc3c00]/25 hover:shadow-xl hover:shadow-[#fc3c00]/30 transition-all"
                     >
                       {dict.landing.hero.getStarted}
                       <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
@@ -558,7 +557,7 @@ export default function LandingPageClient({
                     <Button
                       size="lg"
                       variant="outline"
-                      className="w-full sm:w-auto border-[#C9D7F0] text-gray-700 px-6 sm:px-8 py-4 sm:py-5 md:py-6 text-sm sm:text-base md:text-lg rounded-xl hover:bg-[#E7F0FF]"
+                      className="w-full sm:w-auto border-[#fc3c00] text-gray-700 px-6 sm:px-8 py-4 sm:py-5 md:py-6 text-sm sm:text-base md:text-lg rounded-xl hover:bg-[#fff0eb]"
                     >
                       <Play className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                       {dict.landing.hero.watchDemo}
@@ -569,15 +568,15 @@ export default function LandingPageClient({
                 {/* Trust indicators */}
                 <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-4 md:gap-6 text-xs sm:text-sm text-gray-500">
                   <div className="flex items-center gap-1.5 sm:gap-2">
-                    <Check className="h-3 w-3 sm:h-4 sm:w-4 text-primary" />
+                    <Check className="h-3 w-3 sm:h-4 sm:w-4 text-[#fc3c00]" />
                     <span>{dict.landing.hero.noCreditCard}</span>
                   </div>
                   <div className="flex items-center gap-1.5 sm:gap-2">
-                    <Check className="h-3 w-3 sm:h-4 sm:w-4 text-primary" />
+                    <Check className="h-3 w-3 sm:h-4 sm:w-4 text-[#fc3c00]" />
                     <span>{dict.landing.hero.freeForever}</span>
                   </div>
                   <div className="flex items-center gap-1.5 sm:gap-2">
-                    <Check className="h-3 w-3 sm:h-4 sm:w-4 text-primary" />
+                    <Check className="h-3 w-3 sm:h-4 sm:w-4 text-[#fc3c00]" />
                     <span>{dict.landing.hero.setupTime}</span>
                   </div>
                 </div>
@@ -587,11 +586,11 @@ export default function LandingPageClient({
               <div className="flex flex-col items-center justify-center">
                 <div className="relative w-full max-w-sm mx-auto">
                   {/* Phone mockup frame */}
-                  <div className="relative bg-gradient-to-br from-[#EEF4FF] to-[#D7E7FF] rounded-[2.5rem] p-8 sm:p-10 shadow-2xl shadow-blue-200/40">
-                    <div className="absolute inset-0 rounded-[2.5rem] bg-white/40 backdrop-blur-sm" />
+                  <div className="relative bg-gradient-to-br from-[#fff0eb] to-[#ffd5c4] rounded-xl p-8 sm:p-10 shadow-none">
+                    <div className="absolute inset-0 rounded-xl bg-white/40 backdrop-blur-sm" />
                     <div className="relative z-10 flex flex-col items-center gap-6 sm:gap-8">
                       {/* App icon */}
-                      <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-white shadow-lg flex items-center justify-center overflow-hidden">
+                      <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-[#fc3c00] shadow-lg flex items-center justify-center overflow-hidden">
                         <Image
                           src="/app-icon.svg"
                           alt="Bee Education AI"
@@ -651,14 +650,12 @@ export default function LandingPageClient({
                             <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
                           ))}
                         </div>
-                        <span className="text-sm text-gray-500 font-medium">5.0</span>
+                        <span className="text-sm text-gray-500 font-medium">4.6</span>
                       </div>
                     </div>
                   </div>
 
-                  {/* Decorative floating elements */}
-                  <div className="absolute -top-4 -right-4 w-16 h-16 bg-[#D9F4FF]/60 rounded-full blur-xl" />
-                  <div className="absolute -bottom-4 -left-4 w-20 h-20 bg-[#D7E7FF]/60 rounded-full blur-xl" />
+                  {/* Decorative floating elements removed */}
                 </div>
               </div>
             </div>
@@ -686,10 +683,10 @@ export default function LandingPageClient({
       </section>
 
       {/* UNIFIED PLATFORM SECTION */}
-      <section className="py-12 sm:py-16 bg-gradient-to-b from-white to-[#F5F8FF]/60 border-y border-gray-100">
+      <section className="py-12 sm:py-16 bg-gradient-to-b from-white to-[#fff5f0]/60 border-y border-gray-100">
         <div className="container px-4">
           <div className="max-w-4xl mx-auto text-center mb-8 sm:mb-10">
-            <div className="inline-flex items-center gap-2 px-4 py-2 mb-4 bg-primary/10 text-primary rounded-full text-sm font-medium">
+            <div className="inline-flex items-center gap-2 px-4 py-2 mb-4 bg-[#fc3c00]/10 text-[#fc3c00] rounded-full text-sm font-medium">
               <LineChart className="h-4 w-4" />
               <span>{dict.landing?.unified?.badge}</span>
             </div>
@@ -712,8 +709,8 @@ export default function LandingPageClient({
                   className="p-6 bg-white border border-gray-200 rounded-2xl hover:shadow-lg transition-all duration-300"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="p-3 bg-primary/10 rounded-xl shrink-0">
-                      <IconComponent className="h-5 w-5 text-primary" />
+                    <div className="p-3 bg-[#fc3c00]/10 rounded-xl shrink-0">
+                      <IconComponent className="h-5 w-5 text-[#fc3c00]" />
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold text-gray-900 mb-1">{item.title}</h3>
@@ -731,10 +728,10 @@ export default function LandingPageClient({
       <FeaturesSection dict={dict} lang={lang} />
 
       {/* COMMUNICATION SECTION */}
-      <section className="py-20 bg-gradient-to-b from-[#F5F8FF] to-white">
+      <section className="py-20 bg-gradient-to-b from-[#fff5f0] to-white">
         <div className="container">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 mb-4 bg-blue-50 text-blue-900 rounded-full text-sm font-medium">
+            <div className="inline-flex items-center gap-2 px-4 py-2 mb-4 bg-[#fc3c00]/10 text-[#fc3c00] rounded-full text-sm font-medium">
               <MessageCircle className="h-4 w-4" />
               <span>{dict.landing?.communication?.badge}</span>
             </div>
@@ -774,7 +771,7 @@ export default function LandingPageClient({
       <section className="py-20 bg-white">
         <div className="container">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 mb-4 bg-blue-50 text-blue-900 rounded-full text-sm font-medium">
+            <div className="inline-flex items-center gap-2 px-4 py-2 mb-4 bg-[#fc3c00]/10 text-[#fc3c00] rounded-full text-sm font-medium">
               <Heart className="h-4 w-4" />
               <span>{dict.landing?.studentParent?.badge}</span>
             </div>
@@ -811,11 +808,11 @@ export default function LandingPageClient({
       </section>
 
       {/* AI SHOWCASE SECTION */}
-      <section className="py-20 bg-gradient-to-b from-[#E3F8FF] to-white">
+      <section className="py-20 bg-gradient-to-b from-[#fff0eb] to-white">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-flex items-center gap-2 px-4 py-2 mb-4 bg-primary/10 text-primary rounded-full text-sm font-medium">
+              <div className="inline-flex items-center gap-2 px-4 py-2 mb-4 bg-[#fc3c00]/10 text-[#fc3c00] rounded-full text-sm font-medium">
                 <Brain className="h-4 w-4" />
                 <span>{dict.landing?.ai?.badge}</span>
               </div>
@@ -837,8 +834,8 @@ export default function LandingPageClient({
                   dict.landing?.ai?.feature7,
                 ].map((item, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <div className="p-1 bg-primary/10 rounded-full">
-                      <Check className="h-4 w-4 text-primary" />
+                    <div className="p-1 bg-[#fc3c00]/10 rounded-full">
+                      <Check className="h-4 w-4 text-[#fc3c00]" />
                     </div>
                     <span className="text-gray-700">{item}</span>
                   </div>
@@ -847,7 +844,7 @@ export default function LandingPageClient({
 
               <div className="mt-8 flex items-center gap-4">
                 <Link href={getLocalizedPath("/features/ai")}>
-                  <Button className="bg-primary hover:bg-[#1F5FE0] text-white">
+                  <Button className="bg-[#fc3c00] hover:bg-[#e03500] text-white">
                     {dict.landing?.ai?.exploreButton}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
@@ -855,33 +852,32 @@ export default function LandingPageClient({
               </div>
             </div>
 
-            {/* AI Models Card */}
+            {/* Best-in-Class AI Card */}
             <div className="relative">
               <Card className="p-8 bg-white border border-gray-200 rounded-2xl shadow-xl">
-                <h3 className="text-xl font-semibold text-gray-900 mb-6">{dict.landing?.ai?.chooseModel}</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Best-in-Class AI Models</h3>
+                <p className="text-sm text-gray-500 mb-6">Purpose-built for education, powered by the latest AI technology</p>
                 <div className="space-y-4">
                   {[
-                    { name: dict.landing?.ai?.modes?.fast?.name, tag: dict.landing?.ai?.modes?.fast?.tag, desc: dict.landing?.ai?.modes?.fast?.desc },
-                    { name: dict.landing?.ai?.modes?.balanced?.name, tag: dict.landing?.ai?.modes?.balanced?.tag, desc: dict.landing?.ai?.modes?.balanced?.desc },
-                    { name: dict.landing?.ai?.modes?.deep?.name, tag: dict.landing?.ai?.modes?.deep?.tag, desc: dict.landing?.ai?.modes?.deep?.desc },
-                    { name: dict.landing?.ai?.modes?.safe?.name, tag: dict.landing?.ai?.modes?.safe?.tag, desc: dict.landing?.ai?.modes?.safe?.desc },
-                  ].map((model, index) => (
+                    { icon: "⚡", title: "Lightning Fast", desc: "Get responses in seconds — lesson plans, feedback, and reports generated instantly" },
+                    { icon: "🎯", title: "Reliable & Accurate", desc: "No hallucinations. Every output is grounded in your curriculum and school data" },
+                    { icon: "🔧", title: "Fully Customizable", desc: "Tailor AI behavior to your school's tone, standards, and pedagogical approach" },
+                    { icon: "🛡️", title: "Safe & Compliant", desc: "Enterprise-grade guardrails ensure student data privacy and age-appropriate content" },
+                  ].map((item, index) => (
                     <div
                       key={index}
-                      className="flex items-center justify-between p-4 bg-gray-50 rounded-xl hover:bg-primary/10 transition-colors cursor-pointer"
+                      className="flex items-start gap-4 p-4 bg-gray-50 rounded-xl hover:bg-[#fc3c00]/5 transition-colors"
                     >
+                      <span className="text-2xl flex-shrink-0">{item.icon}</span>
                       <div>
-                        <div className="font-medium text-gray-900">{model.name}</div>
-                        <div className="text-sm text-gray-500">{model.desc}</div>
+                        <div className="font-medium text-gray-900">{item.title}</div>
+                        <div className="text-sm text-gray-500">{item.desc}</div>
                       </div>
-                      <span className="text-xs px-2 py-1 bg-gray-200 text-gray-600 rounded">
-                        {model.tag}
-                      </span>
                     </div>
                   ))}
                 </div>
               </Card>
-              <div className="absolute -z-10 top-10 right-10 w-72 h-72 bg-[#D9F4FF]/60 rounded-full blur-3xl" />
+              <div className="absolute -z-10 top-10 right-10 w-72 h-72 bg-[#ffe0d4]/60 rounded-full blur-3xl" />
             </div>
           </div>
         </div>
@@ -1006,7 +1002,7 @@ export default function LandingPageClient({
                     <span
                       className={`block rounded-full transition-all ${
                         index === activeTestimonial
-                          ? "h-2 w-8 bg-primary"
+                          ? "h-2 w-8 bg-[#fc3c00]"
                           : "h-2 w-2 bg-gray-300 group-hover:bg-gray-400"
                       }`}
                     />
@@ -1029,7 +1025,7 @@ export default function LandingPageClient({
               { icon: Clock, label: dict.landing?.compliance?.uptime },
             ].map((item, index) => (
               <div key={index} className="flex items-center gap-2 text-gray-600">
-                <item.icon className="h-5 w-5 text-primary" />
+                <item.icon className="h-5 w-5 text-[#fc3c00]" />
                 <span className="font-medium">{item.label}</span>
               </div>
             ))}
@@ -1041,7 +1037,7 @@ export default function LandingPageClient({
       <section className="py-20 bg-gray-50">
         <div className="container">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 mb-4 bg-primary text-primary-foreground rounded-full text-sm font-medium">
+            <div className="inline-flex items-center gap-2 px-4 py-2 mb-4 bg-[#fc3c00] text-white rounded-full text-sm font-medium">
               <BrainCircuit className="h-4 w-4" />
               <span>{dict.landing?.blog?.badge}</span>
             </div>
@@ -1056,12 +1052,12 @@ export default function LandingPageClient({
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {techTopics.map((topic, index) => (
               <Link key={index} href={getLocalizedPath("/blog")} className="block">
-                <Card className="group h-full p-6 bg-white border border-gray-200 rounded-2xl hover:border-primary/30 hover:shadow-lg transition-all duration-300">
+                <Card className={`group h-full p-6 bg-white border border-gray-200 rounded-2xl ${topic.hoverBorder} hover:shadow-lg transition-all duration-300`}>
                   <div className="flex items-center justify-between mb-4">
-                    <div className="p-3 bg-primary/10 rounded-xl">
-                      <topic.icon className="h-6 w-6 text-primary" />
+                    <div className={`p-3 ${topic.iconBg} rounded-xl`}>
+                      <topic.icon className={`h-6 w-6 ${topic.iconColor}`} />
                     </div>
-                    <ChevronRight className="h-5 w-5 text-gray-400 group-hover:text-primary group-hover:translate-x-1 transition-all" />
+                    <ChevronRight className={`h-5 w-5 text-gray-400 ${topic.hoverChevron} group-hover:translate-x-1 transition-all`} />
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">{topic.title}</h3>
                   <p className="text-sm text-gray-600">{topic.description}</p>
@@ -1072,7 +1068,7 @@ export default function LandingPageClient({
 
           <div className="text-center mt-10">
             <Link href={getLocalizedPath("/blog")}>
-              <Button variant="outline" className="border-primary/30 text-primary hover:bg-primary/10">
+              <Button variant="outline" className="border-[#fc3c00]/30 text-[#fc3c00] hover:bg-[#fc3c00]/10">
                 {dict.landing?.blog?.viewAll}
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
@@ -1082,7 +1078,7 @@ export default function LandingPageClient({
       </section>
 
       {/* CTA SECTION */}
-      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-r from-[#2866F0] via-[#006B9D] to-[#007090]">
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-r from-[#fc3c00] via-[#e03500] to-[#c52d00]">
         <div className="container px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 px-2 !text-white">
@@ -1095,7 +1091,7 @@ export default function LandingPageClient({
               <Link href={getLocalizedPath("/contact")} className="w-full sm:w-auto">
                 <Button
                   size="lg"
-                  className="w-full sm:w-auto bg-white text-primary hover:bg-gray-100 px-6 sm:px-8 py-4 sm:py-5 md:py-6 text-sm sm:text-base md:text-lg rounded-xl"
+                  className="w-full sm:w-auto bg-white text-[#fc3c00] hover:bg-gray-100 px-6 sm:px-8 py-4 sm:py-5 md:py-6 text-sm sm:text-base md:text-lg rounded-xl"
                 >
                   {dict.landing.cta.getStarted}
                   <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />

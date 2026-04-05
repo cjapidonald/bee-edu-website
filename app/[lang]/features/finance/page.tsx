@@ -37,7 +37,7 @@ export default async function FinancePage({ params }: { params: Promise<{ lang: 
       title: t.feature2Title,
       description: t.feature2Desc,
       badge: common.popular,
-      badgeColor: "bg-blue-100 text-blue-700",
+      badgeColor: "bg-[#fc3c00]/10 text-[#fc3c00]",
     },
     {
       icon: Bell,

@@ -132,7 +132,7 @@ export default async function TermsPage({ params }: TermsPageProps) {
             <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl">{t.title}</h1>
             <p className="text-sm text-gray-600">{t.description}</p>
             <div className="mt-4 flex flex-col items-center justify-center gap-2 sm:flex-row">
-              <Button asChild variant="outline" className="rounded-xl border-[#C9D7F0]">
+              <Button asChild variant="outline" className="rounded-xl border-[#fc3c00]">
                 <Link href={getLocalizedPath("/privacy")}>{t.primaryCta}</Link>
               </Button>
               <Button asChild variant="ghost" className="rounded-xl">
@@ -185,13 +185,13 @@ export default async function TermsPage({ params }: TermsPageProps) {
               <h2 className="text-xl font-semibold text-[#0B1F3A]">{t.sections.contact.title}</h2>
               <p className="mt-3 text-sm text-slate-600 leading-relaxed">
                 {t.sections.contact.body} {" "}
-                <a className="text-[#2866F0] hover:underline" href={`mailto:${contactEmail}`}>
+                <a className="text-[#fc3c00] hover:underline" href={`mailto:${contactEmail}`}>
                   {contactEmail}
                 </a>
                 .
               </p>
               <div className="mt-4 flex flex-col gap-2 sm:flex-row">
-                <Button asChild variant="outline" className="rounded-xl border-[#C9D7F0]">
+                <Button asChild variant="outline" className="rounded-xl border-[#fc3c00]">
                   <Link href={getLocalizedPath("/contact")}>{t.sections.contact.contactCta}</Link>
                 </Button>
                 <Button asChild variant="ghost" className="rounded-xl">

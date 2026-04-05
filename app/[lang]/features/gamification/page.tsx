@@ -30,14 +30,14 @@ export default async function GamificationPage({ params }: { params: Promise<{ l
       title: t.feature1Title,
       description: t.feature1Desc,
       badge: common.popular,
-      badgeColor: "bg-blue-100 text-blue-700",
+      badgeColor: "bg-[#fc3c00]/10 text-[#fc3c00]",
     },
     {
       icon: Zap,
       title: t.feature2Title,
       description: t.feature2Desc,
       badge: extraBadges.core,
-      badgeColor: "bg-blue-100 text-blue-700",
+      badgeColor: "bg-[#fc3c00]/10 text-[#fc3c00]",
     },
     {
       icon: Flame,

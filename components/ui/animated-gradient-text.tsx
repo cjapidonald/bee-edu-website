@@ -13,7 +13,7 @@ export function AnimatedGradientText({
   return (
     <span
       className={cn(
-        "animate-gradient bg-gradient-to-r from-[#2866F0] via-[#60A5FA] to-[#2866F0] bg-[length:300%_100%] bg-clip-text text-transparent",
+        "animate-gradient bg-gradient-to-r from-[#fc3c00] via-[#ff8c5a] to-[#fc3c00] bg-[length:300%_100%] bg-clip-text text-transparent",
         className
       )}
     >

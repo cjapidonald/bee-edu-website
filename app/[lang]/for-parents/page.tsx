@@ -59,7 +59,7 @@ const contentByLang: Record<
         description:
           "Get real-time alerts when your child earns points, has homework due, or when teachers post updates.",
         badge: "Popular",
-        badgeColor: "bg-blue-100 text-blue-700",
+        badgeColor: "bg-[#fc3c00]/10 text-[#fc3c00]",
       },
       {
         icon: BarChart3,
@@ -128,7 +128,7 @@ const contentByLang: Record<
         title: "即時通知",
         description: "孩子獲得積分、功課到期或老師發佈更新時，即時收到提示。",
         badge: "熱門",
-        badgeColor: "bg-blue-100 text-blue-700",
+        badgeColor: "bg-[#fc3c00]/10 text-[#fc3c00]",
       },
       {
         icon: BarChart3,

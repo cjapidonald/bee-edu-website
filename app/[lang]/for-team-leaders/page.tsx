@@ -60,7 +60,7 @@ const contentByLang: Record<
         description:
           "See all lesson plans, assessments, and student progress across your entire team. Identify who needs support.",
         badge: "Popular",
-        badgeColor: "bg-blue-100 text-blue-700",
+        badgeColor: "bg-[#fc3c00]/10 text-[#fc3c00]",
       },
       {
         icon: CheckCircle,
@@ -136,7 +136,7 @@ const contentByLang: Record<
         title: "部門總覽",
         description: "查看整個團隊的教案、評估與學生進度，快速識別需要支援的地方。",
         badge: "熱門",
-        badgeColor: "bg-blue-100 text-blue-700",
+        badgeColor: "bg-[#fc3c00]/10 text-[#fc3c00]",
       },
       {
         icon: CheckCircle,

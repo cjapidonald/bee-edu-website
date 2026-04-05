@@ -48,15 +48,15 @@ export default async function PortfoliosPage({ params }: { params: Promise<{ lan
   const t = texts[lang] ?? texts.en;
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-[#fff0eb] to-white">
       <div className="max-w-4xl mx-auto px-4 py-20 text-center">
-        <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-6">
+        <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#fc3c00]/10 text-[#fc3c00] rounded-full text-sm font-medium mb-6">
           <Presentation className="h-4 w-4" />
           {t.badge}
         </div>
 
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-          {t.title} <span className="text-blue-600">{t.highlight}</span>
+          {t.title} <span className="text-[#fc3c00]">{t.highlight}</span>
         </h1>
 
         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
@@ -67,8 +67,8 @@ export default async function PortfoliosPage({ params }: { params: Promise<{ lan
           <ul className="text-left space-y-4">
             {[t.feature1, t.feature2, t.feature3, t.feature4].map((feature, i) => (
               <li key={i} className="flex items-start gap-3">
-                <div className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <span className="text-blue-600 text-sm font-bold">{i + 1}</span>
+                <div className="w-6 h-6 rounded-full bg-[#fc3c00]/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <span className="text-[#fc3c00] text-sm font-bold">{i + 1}</span>
                 </div>
                 <span className="text-gray-700">{feature}</span>
               </li>
@@ -78,7 +78,7 @@ export default async function PortfoliosPage({ params }: { params: Promise<{ lan
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link href={`/${lang}/contact`}>
-            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8">
+            <Button size="lg" className="bg-[#fc3c00] hover:bg-[#e03500] text-white px-8">
               {t.cta}
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>

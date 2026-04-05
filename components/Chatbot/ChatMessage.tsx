@@ -31,7 +31,7 @@ function formatContent(content: string): React.ReactNode[] {
       parts.push(
         <strong
           key={`bold-${lineIndex}-${match.index}`}
-          style={{ fontWeight: 600, color: "#2866F0" }}
+          style={{ fontWeight: 600, color: "#fc3c00" }}
         >
           {match[1]}
         </strong>
@@ -63,7 +63,7 @@ export function ChatMessage({ message, onLinkClick }: ChatMessageProps) {
           maxWidth: "85%",
           padding: "12px 16px",
           borderRadius: isUser ? "16px 16px 4px 16px" : "16px 16px 16px 4px",
-          backgroundColor: isUser ? "#2866F0" : "#f3f4f6",
+          backgroundColor: isUser ? "#fc3c00" : "#f3f4f6",
           border: isUser ? "none" : "1px solid #e5e7eb",
           color: isUser ? "#ffffff" : "#111827",
           fontSize: "14px",
@@ -84,8 +84,8 @@ export function ChatMessage({ message, onLinkClick }: ChatMessageProps) {
               padding: "8px 12px",
               backgroundColor: isUser
                 ? "rgba(255, 255, 255, 0.2)"
-                : "rgba(40, 102, 240, 0.1)",
-              color: isUser ? "#ffffff" : "#2866F0",
+                : "rgba(252, 60, 0, 0.1)",
+              color: isUser ? "#ffffff" : "#fc3c00",
               borderRadius: "8px",
               textDecoration: "none",
               fontSize: "13px",
@@ -121,7 +121,7 @@ export function TypingIndicator() {
             width: "8px",
             height: "8px",
             borderRadius: "50%",
-            backgroundColor: "#2866F0",
+            backgroundColor: "#fc3c00",
             animation: "typingBounce 1.2s infinite",
             animationDelay: "0ms",
           }}
@@ -131,7 +131,7 @@ export function TypingIndicator() {
             width: "8px",
             height: "8px",
             borderRadius: "50%",
-            backgroundColor: "#2866F0",
+            backgroundColor: "#fc3c00",
             animation: "typingBounce 1.2s infinite",
             animationDelay: "150ms",
           }}
@@ -141,7 +141,7 @@ export function TypingIndicator() {
             width: "8px",
             height: "8px",
             borderRadius: "50%",
-            backgroundColor: "#2866F0",
+            backgroundColor: "#fc3c00",
             animation: "typingBounce 1.2s infinite",
             animationDelay: "300ms",
           }}

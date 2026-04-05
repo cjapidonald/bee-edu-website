@@ -181,7 +181,7 @@ export default function SitemapPage({ params }: SitemapPageProps) {
                         <div className="flex items-start justify-between gap-2">
                           <Link
                             href={getLocalizedPath(link.url)}
-                            className="text-primary hover:underline font-medium"
+                            className="text-[#fc3c00] hover:underline font-medium"
                           >
                             {link.title}
                           </Link>
@@ -205,7 +205,7 @@ export default function SitemapPage({ params }: SitemapPageProps) {
                 href="/sitemap.xml"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-primary hover:underline"
+                className="text-[#fc3c00] hover:underline"
               >
                 https://beeeducation.com/sitemap.xml
               </a>

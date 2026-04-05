@@ -27,7 +27,7 @@ export default async function SchedulingPage({ params }: { params: Promise<{ lan
       title: t.feature1Title,
       description: t.feature1Desc,
       badge: common.popular,
-      badgeColor: "bg-blue-100 text-blue-700",
+      badgeColor: "bg-[#fc3c00]/10 text-[#fc3c00]",
     },
     {
       icon: AlertTriangle,
@@ -44,7 +44,7 @@ export default async function SchedulingPage({ params }: { params: Promise<{ lan
       title: t.feature4Title,
       description: t.feature4Desc,
       badge: common.ai,
-      badgeColor: "bg-blue-100 text-blue-700",
+      badgeColor: "bg-[#fc3c00]/10 text-[#fc3c00]",
     },
     {
       icon: Clock,

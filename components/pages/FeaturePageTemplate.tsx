@@ -120,20 +120,20 @@ export function FeaturePageTemplate({
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative pt-16 sm:pt-20 md:pt-24 pb-16 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#EEF4FF]/70 via-white to-white" />
-        <div className="absolute top-20 left-10 w-72 h-72 bg-[#D9F4FF]/60 rounded-full blur-3xl hidden sm:block" />
-        <div className="absolute bottom-0 right-10 w-96 h-96 bg-[#D7E7FF]/40 rounded-full blur-3xl hidden sm:block" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#fff0eb]/70 via-white to-white" />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-[#ffe0d4]/60 rounded-full blur-3xl hidden sm:block" />
+        <div className="absolute bottom-0 right-10 w-96 h-96 bg-[#ffd5c4]/40 rounded-full blur-3xl hidden sm:block" />
 
         <div className="container px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-primary/10 text-primary rounded-full text-sm font-medium">
+            <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-[#fc3c00]/10 text-[#fc3c00] rounded-full text-sm font-medium">
               <BadgeIcon className="h-4 w-4" />
               <span>{badge}</span>
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
               {title}{" "}
-              <span className="bg-gradient-to-r from-[#2866F0] to-[#007090] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#fc3c00] to-[#c52d00] bg-clip-text text-transparent">
                 {highlight}
               </span>
             </h1>
@@ -142,7 +142,7 @@ export function FeaturePageTemplate({
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Link href={getLocalizedPath("/contact")}>
-                <Button size="lg" className="px-8 py-6 text-lg rounded-xl bg-primary hover:bg-primary/90">
+                <Button size="lg" className="px-8 py-6 text-lg rounded-xl bg-[#fc3c00] hover:bg-[#fc3c00]/90">
                   {t.getStarted}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
@@ -183,14 +183,14 @@ export function FeaturePageTemplate({
                 className="p-6 bg-white border border-gray-200 rounded-2xl hover:shadow-lg transition-all duration-300"
               >
                 <div className="flex items-start gap-4">
-                  <div className="p-3 bg-primary/10 rounded-xl">
-                    <feature.icon className="h-6 w-6 text-primary" />
+                  <div className="p-3 bg-[#fc3c00]/10 rounded-xl">
+                    <feature.icon className="h-6 w-6 text-[#fc3c00]" />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
                       <h3 className="font-semibold text-gray-900">{feature.title}</h3>
                       {feature.badge && (
-                        <Badge className={feature.badgeColor || "bg-primary/10 text-primary"}>{feature.badge}</Badge>
+                        <span className={`inline-flex items-center rounded-full border-0 px-2.5 py-0.5 text-xs font-semibold ${feature.badgeColor || "bg-[#fc3c00]/10 text-[#fc3c00]"}`}>{feature.badge}</span>
                       )}
                     </div>
                     <p className="text-sm text-gray-600">{feature.description}</p>
@@ -214,7 +214,7 @@ export function FeaturePageTemplate({
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
               {safeHowItWorks.map((step) => (
                 <div key={`step-${step.step}`} className="text-center">
-                  <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+                  <div className="w-12 h-12 bg-[#fc3c00] text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                     {step.step}
                   </div>
                   <h3 className="font-semibold text-gray-900 mb-2">{step.title}</h3>
@@ -258,14 +258,14 @@ export function FeaturePageTemplate({
       )}
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-[#2866F0] via-[#006B9D] to-[#007090]">
+      <section className="py-16 bg-gradient-to-r from-[#fc3c00] via-[#e03500] to-[#c52d00]">
         <div className="container px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-4">{t.ctaTitle}</h2>
             <p className="text-lg text-white/90 mb-8">{t.ctaSubtitle}</p>
             <div className="flex justify-center">
               <Link href={getLocalizedPath("/contact")}>
-                <Button size="lg" className="bg-white text-primary hover:bg-gray-100 px-8 py-6 text-lg rounded-xl">
+                <Button size="lg" className="bg-white text-[#fc3c00] hover:bg-gray-100 px-8 py-6 text-lg rounded-xl">
                   {t.talkToSales}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>

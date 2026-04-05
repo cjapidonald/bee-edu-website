@@ -314,7 +314,7 @@ export function ChatbotWidget() {
                       borderRadius: "12px",
                       border: "1px solid rgba(40, 102, 240, 0.3)",
                       backgroundColor: "transparent",
-                      color: "#2866F0",
+                      color: "#000000",
                       cursor: "pointer",
                       transition: "all 0.15s",
                       whiteSpace: "nowrap",
@@ -364,7 +364,7 @@ export function ChatbotWidget() {
                 borderRadius: "12px",
                 border: "none",
                 background: inputValue.trim()
-                  ? "linear-gradient(135deg, #2866F0, #1F5FE0)"
+                  ? "linear-gradient(135deg, #fc3c00, #e03500)"
                   : "#e5e7eb",
                 color: inputValue.trim() ? "#ffffff" : "#9ca3af",
                 cursor: inputValue.trim() ? "pointer" : "not-allowed",
@@ -392,7 +392,7 @@ export function ChatbotWidget() {
           background: "rgba(255, 255, 255, 0.85)",
           backdropFilter: "blur(20px) saturate(180%)",
           WebkitBackdropFilter: "blur(20px) saturate(180%)",
-          color: "#2866F0",
+          color: "#000000",
           cursor: "pointer",
           display: "flex",
           alignItems: "center",
@@ -430,7 +430,7 @@ export function ChatbotWidget() {
             width: "60px",
             textAlign: "center",
             fontSize: "10px",
-            color: "#2866F0",
+            color: "#000000",
             zIndex: 9996,
             fontWeight: 500,
           }}

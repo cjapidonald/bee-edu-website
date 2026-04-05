@@ -446,12 +446,12 @@ const pageText: Record<
 };
 
 const colorClasses = [
-  { bg: "bg-primary/10", text: "text-primary", border: "hover:border-primary/30" },
-  { bg: "bg-blue-50", text: "text-blue-600", border: "hover:border-blue-300/30" },
-  { bg: "bg-blue-50", text: "text-blue-500", border: "hover:border-blue-300/30" },
-  { bg: "bg-blue-50", text: "text-blue-700", border: "hover:border-blue-300/30" },
-  { bg: "bg-blue-50", text: "text-blue-500", border: "hover:border-blue-300/30" },
-  { bg: "bg-primary/10", text: "text-primary", border: "hover:border-primary/30" },
+  { bg: "bg-[#fc3c00]/10", text: "text-[#fc3c00]", border: "hover:border-primary/30" },
+  { bg: "bg-[#fff0eb]", text: "text-[#fc3c00]", border: "hover:border-[#fc3c00]/30" },
+  { bg: "bg-[#fff0eb]", text: "text-[#fc3c00]", border: "hover:border-[#fc3c00]/30" },
+  { bg: "bg-[#fff0eb]", text: "text-[#fc3c00]", border: "hover:border-[#fc3c00]/30" },
+  { bg: "bg-[#fff0eb]", text: "text-[#fc3c00]", border: "hover:border-[#fc3c00]/30" },
+  { bg: "bg-[#fc3c00]/10", text: "text-[#fc3c00]", border: "hover:border-primary/30" },
 ];
 
 export default function FeaturesPage({ params }: { params: { lang: Locale } }) {
@@ -492,9 +492,9 @@ export default function FeaturesPage({ params }: { params: { lang: Locale } }) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: structuredDataJson }} />
 
       <section className="relative pt-16 sm:pt-20 md:pt-24 pb-12 sm:pb-16 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#EEF4FF]/50 via-white to-white" />
-        <div className="absolute top-20 left-10 w-72 h-72 bg-[#D9F4FF]/60 rounded-full blur-3xl hidden sm:block" />
-        <div className="absolute bottom-0 right-10 w-96 h-96 bg-[#D7E7FF]/60 rounded-full blur-3xl hidden sm:block" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#fff0eb]/50 via-white to-white" />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-[#ffe0d4]/60 rounded-full blur-3xl hidden sm:block" />
+        <div className="absolute bottom-0 right-10 w-96 h-96 bg-[#ffd5c4]/60 rounded-full blur-3xl hidden sm:block" />
 
         <div
           ref={heroRef}
@@ -506,14 +506,14 @@ export default function FeaturesPage({ params }: { params: { lang: Locale } }) {
           }}
         >
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-primary/10 text-primary rounded-full text-sm font-medium">
+            <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-[#fc3c00]/10 text-[#fc3c00] rounded-full text-sm font-medium">
               <BrainCircuit className="h-4 w-4" />
               <span>{t.badge}</span>
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               {t.heroTitle}{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2866F0] via-[#3B82F6] to-[#60A5FA]">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#fc3c00] via-[#ff6b35] to-[#ff8c5a]">
                 {t.heroHighlight}
               </span>
             </h1>
@@ -524,7 +524,7 @@ export default function FeaturesPage({ params }: { params: { lang: Locale } }) {
               <Link href={getLocalizedPath("/pricing")}>
                 <Button
                   size="lg"
-                  className="bg-primary hover:bg-[#1F5FE0] text-white px-8 py-6 text-lg rounded-xl shadow-lg"
+                  className="bg-[#fc3c00] hover:bg-[#e03500] text-white px-8 py-6 text-lg rounded-xl shadow-lg"
                 >
                   {t.seePricing}
                   <ArrowRight className="ml-2 h-5 w-5" />
@@ -540,7 +540,7 @@ export default function FeaturesPage({ params }: { params: { lang: Locale } }) {
             <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-gray-500">
               {t.highlights.map((item) => (
                 <div key={item} className="flex items-center gap-2">
-                  <Sparkles className="h-4 w-4 text-primary" />
+                  <Sparkles className="h-4 w-4 text-[#fc3c00]" />
                   <span>{item}</span>
                 </div>
               ))}
@@ -572,7 +572,7 @@ export default function FeaturesPage({ params }: { params: { lang: Locale } }) {
                     <div className={`p-3 ${colors.bg} rounded-xl w-fit mb-4`}>
                       <feature.icon className={`h-6 w-6 ${colors.text}`} />
                     </div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-[#fc3c00] transition-colors">
                       {feature.title}
                     </h3>
                     <p className="text-gray-600 text-sm">{feature.description}</p>
@@ -585,7 +585,7 @@ export default function FeaturesPage({ params }: { params: { lang: Locale } }) {
           <div className="mt-12 text-center">
             <p className="text-gray-600 mb-4">{t.guidedTitle}</p>
             <Link href={getLocalizedPath("/contact")}>
-              <Button size="lg" className="bg-primary hover:bg-[#1F5FE0] text-white rounded-xl">
+              <Button size="lg" className="bg-[#fc3c00] hover:bg-[#e03500] text-white rounded-xl">
                 {t.requestDemo}
               </Button>
             </Link>

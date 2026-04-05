@@ -59,7 +59,7 @@ const contentByLang: Record<
         description:
           "Your own unique monster character that grows and evolves as you earn points and achieve goals.",
         badge: "Popular",
-        badgeColor: "bg-blue-100 text-blue-700",
+        badgeColor: "bg-[#fc3c00]/10 text-[#fc3c00]",
       },
       {
         icon: Trophy,
@@ -128,7 +128,7 @@ const contentByLang: Record<
         title: "怪獸頭像",
         description: "屬於你的獨特怪獸角色，隨著獲得積分與達成目標而成長進化。",
         badge: "熱門",
-        badgeColor: "bg-blue-100 text-blue-700",
+        badgeColor: "bg-[#fc3c00]/10 text-[#fc3c00]",
       },
       {
         icon: Trophy,

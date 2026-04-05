@@ -595,9 +595,9 @@ export default async function BlogPostPage({
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: structuredDataJson }} />
       {/* Subtle gradient background */}
       <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#EEF4FF]/70 via-white to-white" />
-        <div className="absolute top-20 left-10 w-72 h-72 bg-[#D9F4FF]/60 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-10 w-96 h-96 bg-[#D7E7FF]/40 rounded-full blur-3xl" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#fff0eb]/70 via-white to-white" />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-[#ffe0d4]/60 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-10 w-96 h-96 bg-[#ffd5c4]/40 rounded-full blur-3xl" />
       </div>
 
       <div className="container relative mx-auto px-4 pt-8 pb-16">
@@ -643,7 +643,7 @@ export default async function BlogPostPage({
               <header className="flex flex-col gap-6 text-center">
                 <div className="flex flex-wrap justify-center gap-2">
                   {categoryLabel && (
-                    <Badge className="bg-primary/10 text-primary px-3 py-1 rounded-full">
+                    <Badge className="bg-[#fc3c00]/10 text-[#fc3c00] px-3 py-1 rounded-full">
                       {categoryLabel}
                     </Badge>
                   )}
@@ -677,8 +677,8 @@ export default async function BlogPostPage({
                         className="h-10 w-10 rounded-full object-cover border border-[#D9E2EF]"
                       />
                     ) : (
-                      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
-                        <User className="h-5 w-5 text-primary" />
+                      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#fc3c00]/10">
+                        <User className="h-5 w-5 text-[#fc3c00]" />
                       </div>
                     )}
                     <div className="text-left">
