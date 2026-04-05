@@ -152,7 +152,7 @@ export default function Footer({ lang, dict }: FooterProps) {
           <div className="col-span-2 md:col-span-1">
             <Link href={getLocalizedPath("/")} className="flex items-center mb-3">
               <Image
-                src="/logo.png"
+                src="/logo.svg"
                 alt="Bee Education"
                 width={120}
                 height={32}

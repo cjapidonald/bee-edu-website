@@ -593,7 +593,7 @@ export default function LandingPageClient({
                       {/* App icon */}
                       <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-white shadow-lg flex items-center justify-center overflow-hidden">
                         <Image
-                          src="/logo.png"
+                          src="/logo.svg"
                           alt="Bee Education AI (Bee Education)"
                           width={80}
                           height={80}

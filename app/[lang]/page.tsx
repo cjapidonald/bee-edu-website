@@ -102,7 +102,7 @@ export default async function LandingPage({
         name: "Bee Education AI",
         alternateName: ["Bee Education", "Bee Education"],
         url: siteUrl,
-        logo: `${siteUrl}/logo.png`,
+        logo: `${siteUrl}/logo.svg`,
         description: orgDescription,
         sameAs: [
           "https://www.facebook.com/profile.php?id=61578235291840",

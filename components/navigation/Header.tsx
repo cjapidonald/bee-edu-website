@@ -201,7 +201,7 @@ export default function Header({ lang, dict }: HeaderProps) {
         {/* Logo */}
         <Link href={getLocalizedPath("/")} className="flex items-center">
           <Image
-            src="/logo.png"
+            src="/logo.svg"
             alt="Bee Education"
             width={150}
             height={40}
