@@ -154,10 +154,10 @@ export default function Footer({ lang, dict }: FooterProps) {
               <Image
                 src="/logo.svg"
                 alt="Bee Education"
-                width={120}
-                height={32}
-                className="h-8"
-                style={{ width: 'auto', height: 'auto' }}
+                width={100}
+                height={28}
+                className="h-7 w-auto max-h-[28px]"
+                unoptimized
               />
             </Link>
             <p className="text-sm text-gray-600 mb-4">

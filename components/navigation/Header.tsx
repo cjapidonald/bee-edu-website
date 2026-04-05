@@ -203,11 +203,11 @@ export default function Header({ lang, dict }: HeaderProps) {
           <Image
             src="/logo.svg"
             alt="Bee Education"
-            width={150}
-            height={40}
-            className="h-10"
-            style={{ width: 'auto', height: 'auto' }}
+            width={120}
+            height={36}
+            className="h-9 w-auto max-h-[36px]"
             priority
+            unoptimized
           />
         </Link>
 
