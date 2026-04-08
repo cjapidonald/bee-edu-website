@@ -72,13 +72,13 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const lang = (await params).lang === "zh-HK" ? "zh-HK" : "en";
 
   const titles: Record<string, string> = {
-    en: "FAQ | Bee Education AI",
-    "zh-HK": "常見問題 | Bee Education AI",
+    en: "FAQ | Elementals",
+    "zh-HK": "常見問題 | Elementals",
   };
 
   const descriptions: Record<string, string> = {
-    en: "Answers to common questions about Bee Education AI—features, pricing, implementation, and support.",
-    "zh-HK": "Bee Education AI 常見問題解答——功能、價格、導入與支援。",
+    en: "Answers to common questions about Elementals—features, pricing, implementation, and support.",
+    "zh-HK": "Elementals 常見問題解答——功能、價格、導入與支援。",
   };
 
   return buildPageMetadata({

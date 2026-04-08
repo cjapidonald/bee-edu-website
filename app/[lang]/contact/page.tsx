@@ -7,13 +7,13 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const lang = (await params).lang === "zh-HK" ? "zh-HK" : "en";
 
   const titles: Record<string, string> = {
-    en: "Contact | Bee Education AI",
-    "zh-HK": "聯絡我們 | Bee Education AI",
+    en: "Contact | Elementals",
+    "zh-HK": "聯絡我們 | Elementals",
   };
 
   const descriptions: Record<string, string> = {
-    en: "Talk to Bee Education AI. Email hello@beeeducation.com or WhatsApp +852 94954912.",
-    "zh-HK": "聯絡 Bee Education AI。電郵 hello@beeeducation.com 或 WhatsApp +852 94954912。",
+    en: "Talk to Elementals. Email hello@elementals.com or WhatsApp +852 94954912.",
+    "zh-HK": "聯絡 Elementals。電郵 hello@elementals.com 或 WhatsApp +852 94954912。",
   };
 
   return buildPageMetadata({

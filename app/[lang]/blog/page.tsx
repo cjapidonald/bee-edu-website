@@ -30,7 +30,7 @@ interface BlogPost {
   language?: string | null;
 }
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://beeeducation.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://elementals.com";
 const includeSampleContent = true;
 
 const getLocalizedPath = (lang: string, path: string) => {
@@ -155,7 +155,7 @@ export async function generateMetadata({
   const lang = (await params).lang === "zh-HK" ? "zh-HK" : "en";
   const locale: Locale = lang === "zh-HK" ? "zh-HK" : "en";
   const isZh = locale === "zh-HK";
-  const title = isZh ? "Bee Education AI 博客" : "Bee Education AI Blog";
+  const title = isZh ? "Elementals 博客" : "Elementals Blog";
   const description = isZh
     ? "面向 K-12 教育者的理念、研究、教學技巧與資源。"
     : "Ideas, research, teaching techniques, and resources for K-12 educators.";

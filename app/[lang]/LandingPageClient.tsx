@@ -321,9 +321,9 @@ const FeaturesSection = memo(function FeaturesSection({ dict, lang }: { dict: Di
 // Social links
 const socialLinks = [
   { href: "https://web.facebook.com/profile.php?id=61578235291840", icon: Facebook, label: "Facebook" },
-  { href: "https://www.instagram.com/beeeducation/", icon: Instagram, label: "Instagram" },
-  { href: "https://www.linkedin.com/company/beeeducation", icon: Linkedin, label: "LinkedIn" },
-  { href: "mailto:hello@beeeducation.com", icon: Mail, label: "Email" },
+  { href: "https://www.instagram.com/elementals/", icon: Instagram, label: "Instagram" },
+  { href: "https://www.linkedin.com/company/elementals", icon: Linkedin, label: "LinkedIn" },
+  { href: "mailto:hello@elementals.com", icon: Mail, label: "Email" },
 ];
 
 // Main Landing Page Component
@@ -538,8 +538,8 @@ export default function LandingPageClient({
                 </p>
                 <p className="text-sm sm:text-base text-gray-500 mb-6 sm:mb-8 max-w-2xl lg:max-w-none">
                   {lang === "zh-HK"
-                    ? "Bee Education（亦稱 Bee Education）AI 學校管理系統（SIS + LMS）：課程規劃、智能排課、ClassSpark 行為追蹤、成績冊、出勤、評估與家校溝通一站式整合。"
-                    : "Bee Education is an AI-powered teaching, learning and school management platform built by teachers for schools, students, and families."}
+                    ? "Elementals（亦稱 Elementals）AI 學校管理系統（SIS + LMS）：課程規劃、智能排課、ClassSpark 行為追蹤、成績冊、出勤、評估與家校溝通一站式整合。"
+                    : "Elementals is an AI-powered teaching, learning and school management platform built by teachers for schools, students, and families."}
                 </p>
 
                 {/* CTA Buttons */}
@@ -593,7 +593,7 @@ export default function LandingPageClient({
                       <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-[#fc3c00] shadow-lg flex items-center justify-center overflow-hidden">
                         <Image
                           src="/app-icon.svg"
-                          alt="Bee Education AI"
+                          alt="Elementals"
                           width={80}
                           height={80}
                           className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
@@ -603,7 +603,7 @@ export default function LandingPageClient({
 
                       {/* App name */}
                       <div className="text-center">
-                        <h3 className="text-lg sm:text-xl font-bold text-gray-900">Bee Education AI</h3>
+                        <h3 className="text-lg sm:text-xl font-bold text-gray-900">Elementals</h3>
                         <p className="text-sm text-gray-500 mt-1">
                           {lang === "zh-HK" ? "隨時隨地管理學校" : "School management on the go"}
                         </p>

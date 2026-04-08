@@ -58,7 +58,7 @@ interface BlogPost {
   language?: string | null;
 }
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://beeeducation.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://elementals.com";
 const includeSampleContent = true;
 
 const getLocalizedPath = (lang: string, path: string) => {
@@ -402,13 +402,13 @@ const labels = {
     back: "Back to Blog",
     share: "Share",
     copied: "Copied!",
-    defaultAuthor: "Bee Education Team",
+    defaultAuthor: "Elementals Team",
   },
   "zh-HK": {
     back: "返回博客",
     share: "分享",
     copied: "已複製！",
-    defaultAuthor: "Bee Education 團隊",
+    defaultAuthor: "Elementals 團隊",
   },
 };
 
@@ -434,7 +434,7 @@ export async function generateMetadata({
   const canonicalPath = getLocalizedPath(lang, `/blog/${identifier}`);
   const canonicalUrl = new URL(canonicalPath, siteUrl);
   const title = post.meta_title?.trim() || post.title;
-  const description = post.meta_description?.trim() || post.excerpt || post.subtitle || "Bee Education AI Blog";
+  const description = post.meta_description?.trim() || post.excerpt || post.subtitle || "Elementals Blog";
 
   const keywordValues = uniqueValues([...extractTags(post.tags), ...extractTags(post.keywords)]);
 
@@ -581,7 +581,7 @@ export default async function BlogPostPage({
     },
     publisher: {
       "@type": "Organization",
-      name: "Bee Education AI",
+      name: "Elementals",
       url: siteUrl,
     },
     ...(post.featured_image ? { image: [post.featured_image] } : {}),

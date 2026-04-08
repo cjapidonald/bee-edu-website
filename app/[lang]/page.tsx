@@ -4,7 +4,7 @@ import type { Locale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
 import LandingPageClient from "./LandingPageClient";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://beeeducation.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://elementals.com";
 
 const getLocalizedPath = (lang: Locale, path: string) => {
   if (lang === "en") return path;
@@ -22,29 +22,29 @@ export async function generateMetadata({
 
   const title =
     lang === "zh-HK"
-      ? "Bee Education AI（Bee Education）- AI 原生學校管理平台"
-      : "Bee Education AI (Bee Education) - AI-Native School Management Platform";
+      ? "Elementals（Elementals）- AI 原生學校管理平台"
+      : "Elementals (Elementals) - AI-Native School Management Platform";
   const description =
     lang === "zh-HK"
-      ? "Bee Education AI（亦稱 Bee Education）提供一站式學校管理：課程、排課、行為追蹤、成績冊與 AI 智能分析。"
-      : "Bee Education AI (also searched as Bee Education) is an AI-native school management platform for curriculum, scheduling, behavior tracking, gradebook, and AI-powered insights.";
+      ? "Elementals（亦稱 Elementals）提供一站式學校管理：課程、排課、行為追蹤、成績冊與 AI 智能分析。"
+      : "Elementals (also searched as Elementals) is an AI-native school management platform for curriculum, scheduling, behavior tracking, gradebook, and AI-powered insights.";
   const canonical = getLocalizedPath(lang, "/");
   const ogImageUrl = new URL("/og-default.png", siteUrl);
   const keywords =
     lang === "zh-HK"
       ? [
-          "Bee Education",
-          "Bee Education",
-          "Bee Education AI",
+          "Elementals",
+          "Elementals",
+          "Elementals",
           "學校管理系統",
           "SIS",
           "LMS",
           "AI 學校管理",
         ]
       : [
-          "Bee Education",
-          "Bee Education",
-          "Bee Education AI",
+          "Elementals",
+          "Elementals",
+          "Elementals",
           "school management system",
           "SIS",
           "LMS",
@@ -67,7 +67,7 @@ export async function generateMetadata({
       title,
       description,
       url: canonical,
-      siteName: "Bee Education AI",
+      siteName: "Elementals",
       type: "website",
       images: [{ url: ogImageUrl }],
     },
@@ -90,8 +90,8 @@ export default async function LandingPage({
   const localizedHomeUrl = new URL(getLocalizedPath(lang, "/"), siteUrl).toString();
   const orgDescription =
     lang === "zh-HK"
-      ? "Bee Education AI（亦稱 Bee Education）是一個 AI 原生學校管理平台。"
-      : "Bee Education AI (also known as Bee Education) is an AI-native school management platform.";
+      ? "Elementals（亦稱 Elementals）是一個 AI 原生學校管理平台。"
+      : "Elementals (also known as Elementals) is an AI-native school management platform.";
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -99,30 +99,30 @@ export default async function LandingPage({
       {
         "@type": "Organization",
         "@id": `${siteUrl}#organization`,
-        name: "Bee Education AI",
-        alternateName: ["Bee Education", "Bee Education"],
+        name: "Elementals",
+        alternateName: ["Elementals", "Elementals"],
         url: siteUrl,
         logo: `${siteUrl}/logo.svg`,
         description: orgDescription,
         sameAs: [
           "https://www.facebook.com/profile.php?id=61578235291840",
-          "https://www.instagram.com/beeeducation/",
-          "https://www.linkedin.com/company/beeeducation",
+          "https://www.instagram.com/elementals/",
+          "https://www.linkedin.com/company/elementals",
         ],
       },
       {
         "@type": "WebSite",
         "@id": `${siteUrl}#website`,
-        name: "Bee Education AI",
-        alternateName: ["Bee Education", "Bee Education"],
+        name: "Elementals",
+        alternateName: ["Elementals", "Elementals"],
         url: siteUrl,
         inLanguage: lang,
       },
       {
         "@type": "SoftwareApplication",
         "@id": `${localizedHomeUrl}#software`,
-        name: "Bee Education AI",
-        alternateName: "Bee Education",
+        name: "Elementals",
+        alternateName: "Elementals",
         applicationCategory: "EducationalApplication",
         operatingSystem: "Web, iOS, Android",
         offers: {

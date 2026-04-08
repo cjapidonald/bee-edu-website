@@ -26,14 +26,14 @@ const contentByLang: Record<
   }
 > = {
   en: {
-    seoTitle: "Integrations & API | Bee Education AI",
+    seoTitle: "Integrations & API | Elementals",
     seoDescription:
-      "Connect Bee Education AI with your existing tools using integrations, webhooks, and a secure API. Designed for schools and modern education operations.",
+      "Connect Elementals with your existing tools using integrations, webhooks, and a secure API. Designed for schools and modern education operations.",
     badge: "Integrations & API",
     title: "Connect Your",
     highlight: "School Stack",
     description:
-      "Connect Bee Education AI with the tools you already use. Integrations, webhooks, and a secure API keep data flowing—without manual spreadsheets.",
+      "Connect Elementals with the tools you already use. Integrations, webhooks, and a secure API keep data flowing—without manual spreadsheets.",
     trustIndicators: ["Secure by design", "Webhooks + API", "Works with existing tools"],
     features: [
       {
@@ -90,14 +90,14 @@ const contentByLang: Record<
     ],
   },
   "zh-HK": {
-    seoTitle: "整合與 API | Bee Education AI",
+    seoTitle: "整合與 API | Elementals",
     seoDescription:
-      "透過整合、Webhook 與安全 API 連接 Bee Education AI 與你現有的工具。專為學校與現代教育營運而設。",
+      "透過整合、Webhook 與安全 API 連接 Elementals 與你現有的工具。專為學校與現代教育營運而設。",
     badge: "整合與 API",
     title: "連接你的",
     highlight: "學校系統",
     description:
-      "把 Bee Education AI 與現有工具無縫連接。整合、Webhook 與安全 API 讓數據自動流動——不再依賴手動試算表。",
+      "把 Elementals 與現有工具無縫連接。整合、Webhook 與安全 API 讓數據自動流動——不再依賴手動試算表。",
     trustIndicators: ["安全為先", "Webhook + API", "兼容現有工具"],
     features: [
       {

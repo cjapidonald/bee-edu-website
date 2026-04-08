@@ -7,8 +7,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const lang = (await params).lang === "zh-HK" ? "zh-HK" : "en";
 
   const titles: Record<string, string> = {
-    en: "Pricing | Bee Education AI",
-    "zh-HK": "價格 | Bee Education AI",
+    en: "Pricing | Elementals",
+    "zh-HK": "價格 | Elementals",
   };
 
   const descriptions: Record<string, string> = {

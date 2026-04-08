@@ -7,13 +7,13 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const lang = (await params).lang === "zh-HK" ? "zh-HK" : "en";
 
   const titles: Record<string, string> = {
-    en: "Sitemap | Bee Education AI",
-    "zh-HK": "網站地圖 | Bee Education AI",
+    en: "Sitemap | Elementals",
+    "zh-HK": "網站地圖 | Elementals",
   };
 
   const descriptions: Record<string, string> = {
-    en: "Browse all pages and sections of Bee Education AI.",
-    "zh-HK": "瀏覽 Bee Education AI 的所有頁面與分類。",
+    en: "Browse all pages and sections of Elementals.",
+    "zh-HK": "瀏覽 Elementals 的所有頁面與分類。",
   };
 
   return buildPageMetadata({

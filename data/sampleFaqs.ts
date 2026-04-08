@@ -27,7 +27,7 @@ export const SAMPLE_FAQS: Record<string, SampleFaqItem[]> = {
       id: "faq-en-2",
       category: "AI & Safety",
       display_order: 2,
-      question: "Can students use Bee Education AI safely?",
+      question: "Can students use Elementals safely?",
       answer:
         "Yes. Schools can enable Safe Mode for student-facing use, and access is controlled with role-based permissions.",
     },
@@ -61,7 +61,7 @@ export const SAMPLE_FAQS: Record<string, SampleFaqItem[]> = {
       display_order: 6,
       question: "How can I contact support?",
       answer:
-        "Email hello@beeeducation.com or message us on WhatsApp. You can also use the Contact page to book a demo.",
+        "Email hello@elementals.com or message us on WhatsApp. You can also use the Contact page to book a demo.",
     },
   ],
   "zh-HK": [
@@ -77,7 +77,7 @@ export const SAMPLE_FAQS: Record<string, SampleFaqItem[]> = {
       id: "faq-zh-2",
       category: "AI 與安全",
       display_order: 2,
-      question: "學生可以安全使用 Bee Education AI 嗎？",
+      question: "學生可以安全使用 Elementals 嗎？",
       answer:
         "可以。學校可為學生端啟用 Safe Mode，並以角色權限控制存取與可見範圍。",
     },
@@ -111,7 +111,7 @@ export const SAMPLE_FAQS: Record<string, SampleFaqItem[]> = {
       display_order: 6,
       question: "如何聯絡支援？",
       answer:
-        "你可以電郵至 hello@beeeducation.com 或透過 WhatsApp 聯絡我們；亦可在聯絡頁面預約演示。",
+        "你可以電郵至 hello@elementals.com 或透過 WhatsApp 聯絡我們；亦可在聯絡頁面預約演示。",
     },
   ],
 };

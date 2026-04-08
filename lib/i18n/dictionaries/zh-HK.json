@@ -291,7 +291,7 @@
     },
     "cta": {
       "title": "準備好轉型您的學校了嗎？",
-      "subtitle": "加入數以千計使用 Bee Education AI 更智能工作的教育工作者。",
+      "subtitle": "加入數以千計使用 Elementals 更智能工作的教育工作者。",
       "getStarted": "聯絡銷售",
       "viewPricing": "學校方案",
       "connectWithUs": "與我們聯繫"
@@ -299,7 +299,7 @@
   },
   "cta": {
     "title": "準備好轉型您的學校了嗎？",
-    "subtitle": "加入數以千計使用 Bee Education AI 的教育工作者",
+    "subtitle": "加入數以千計使用 Elementals 的教育工作者",
     "getStarted": "聯絡銷售",
     "talkToSales": "與我們團隊聊聊"
   },
@@ -357,7 +357,7 @@
     }
   },
   "seo": {
-    "defaultTitle": "Bee Education AI（Bee Education）- AI 原生學校管理平台",
-    "defaultDescription": "更智能的學校管理方式。Bee Education AI（亦稱 Bee Education）一個平台整合課程、排課、行為追蹤、成績冊及 AI 智能分析。專為現代學校打造。"
+    "defaultTitle": "Elementals（Elementals）- AI 原生學校管理平台",
+    "defaultDescription": "更智能的學校管理方式。Elementals（亦稱 Elementals）一個平台整合課程、排課、行為追蹤、成績冊及 AI 智能分析。專為現代學校打造。"
   }
 }

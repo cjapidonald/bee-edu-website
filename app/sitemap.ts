@@ -10,7 +10,7 @@ interface BlogSitemapEntry {
   language?: string | null;
 }
 
-const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://beeeducation.com").trim();
+const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://elementals.com").trim();
 const includeSampleContent = process.env.NODE_ENV !== "production";
 
 const baseRoutes = [

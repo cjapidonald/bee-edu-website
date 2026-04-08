@@ -18,21 +18,21 @@ export function ChatbotWidget() {
           tryLabel: "建議：",
           placeholder: "想了解什麼？…",
           tooltipTitle: "你好！有問題嗎？",
-          tooltipBody: "我是 Einstein，你的導覽員。你可以問我 Bee Education AI 的功能、價格或如何開始使用。",
-          openAria: "開啟與 Einstein 對話",
-          closeAria: "關閉與 Einstein 對話",
+          tooltipBody: "我是 Bumblebee，你的導覽員。你可以問我 Elementals 的功能、價格或如何開始使用。",
+          openAria: "開啟與 Bumblebee 對話",
+          closeAria: "關閉與 Bumblebee 對話",
           dismissTooltip: "關閉提示",
-          buttonLabel: "問 Einstein",
+          buttonLabel: "問 Bumblebee",
         }
       : {
           tryLabel: "Try:",
           placeholder: "Ask me anything...",
           tooltipTitle: "Hi there! Have questions?",
-          tooltipBody: "I'm Einstein, your guide. Ask me anything about Bee Education AI!",
-          openAria: "Open chat with Einstein",
-          closeAria: "Close chat with Einstein",
+          tooltipBody: "I'm Bumblebee, your guide. Ask me anything about Elementals!",
+          openAria: "Open chat with Bumblebee",
+          closeAria: "Close chat with Bumblebee",
           dismissTooltip: "Dismiss tooltip",
-          buttonLabel: "Ask Einstein",
+          buttonLabel: "Ask Bumblebee",
         };
 
 
@@ -229,8 +229,8 @@ export function ChatbotWidget() {
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/einstein.png"
-                  alt="Einstein"
+                  src="/bumblebee.svg"
+                  alt="Bumblebee"
                   width={36}
                   height={36}
                   loading="lazy"
@@ -238,7 +238,7 @@ export function ChatbotWidget() {
                 />
               </div>
               <div>
-                <div style={{ fontWeight: 600, color: "#111827" }}>Einstein</div>
+                <div style={{ fontWeight: 600, color: "#111827" }}>Bumblebee</div>
               </div>
             </div>
             <button
@@ -410,8 +410,8 @@ export function ChatbotWidget() {
         ) : (
           /* eslint-disable-next-line @next/next/no-img-element */
           <img
-            src="/einstein.png"
-            alt="Einstein"
+            src="/bumblebee.svg"
+            alt="Bumblebee"
             width={40}
             height={40}
             loading="lazy"

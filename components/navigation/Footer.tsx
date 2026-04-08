@@ -33,9 +33,9 @@ const getFooterText = (dict: FooterDict, key: string, fallback: string): string 
 
 const socialLinks = [
   { href: "https://web.facebook.com/profile.php?id=61578235291840", icon: Facebook, label: "Facebook" },
-  { href: "https://www.instagram.com/beeeducation/", icon: Instagram, label: "Instagram" },
-  { href: "https://www.linkedin.com/company/beeeducation", icon: Linkedin, label: "LinkedIn" },
-  { href: "mailto:hello@beeeducation.com", icon: Mail, label: "Email" },
+  { href: "https://www.instagram.com/elementals/", icon: Instagram, label: "Instagram" },
+  { href: "https://www.linkedin.com/company/elementals", icon: Linkedin, label: "LinkedIn" },
+  { href: "mailto:hello@elementals.com", icon: Mail, label: "Email" },
 ];
 
 const getFeaturesLinks = (dict: FooterDict) => [
@@ -152,8 +152,8 @@ export default function Footer({ lang, dict }: FooterProps) {
           <div className="col-span-2 md:col-span-1">
             <Link href={getLocalizedPath("/")} className="flex items-center mb-3">
               <Image
-                src="/bee-education-logo.svg"
-                alt="Bee Education"
+                src="/elementals-education-logo.svg"
+                alt="Elementals"
                 width={100}
                 height={28}
                 className="h-7 w-auto max-h-[28px]"
@@ -278,10 +278,10 @@ export default function Footer({ lang, dict }: FooterProps) {
         {/* Bottom Section */}
         <div className="border-t mt-10 pt-6 text-center">
           <p className="text-sm text-gray-600">
-            &copy; {new Date().getFullYear()} Bee Education AI (Bee Education). {(dict.footer.copyright as string) || "All rights reserved."}
+            &copy; {new Date().getFullYear()} Elementals (Elementals). {(dict.footer.copyright as string) || "All rights reserved."}
           </p>
           <p className="text-sm text-gray-600 mt-2">
-            {getFooterText(dict, 'contact.email', 'Email')}: <a href="mailto:hello@beeeducation.com" className="hover:text-[#fc3c00]">hello@beeeducation.com</a>
+            {getFooterText(dict, 'contact.email', 'Email')}: <a href="mailto:hello@elementals.com" className="hover:text-[#fc3c00]">hello@elementals.com</a>
             {" | "}
             {getFooterText(dict, 'contact.whatsapp', 'WhatsApp')}: <a href="https://wa.me/85294954912" className="hover:text-[#fc3c00]">+852 94954912</a>
           </p>

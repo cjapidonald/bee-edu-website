@@ -10,7 +10,7 @@ interface PrivacyPageProps {
   params: Promise<{ lang: string }>;
 }
 
-const contactEmail = "hello@beeeducation.com";
+const contactEmail = "hello@elementals.com";
 
 const texts = {
   en: {
@@ -23,7 +23,7 @@ const texts = {
       overview: {
         title: "Overview",
         body:
-          "Bee Education AI (also known as Bee Education) provides a web-based platform for schools, teachers, students, and families. We collect and process limited information to operate the service, improve the experience, and provide support.",
+          "Elementals (also known as Elementals) provides a web-based platform for schools, teachers, students, and families. We collect and process limited information to operate the service, improve the experience, and provide support.",
       },
       data: {
         title: "Data we collect",
@@ -69,7 +69,7 @@ const texts = {
       overview: {
         title: "概覽",
         body:
-          "Bee Education AI（亦稱 Bee Education）為學校、教師、學生及家庭提供網上平台。我們只收集及處理營運服務、改善體驗及提供支援所需的有限資料。",
+          "Elementals（亦稱 Elementals）為學校、教師、學生及家庭提供網上平台。我們只收集及處理營運服務、改善體驗及提供支援所需的有限資料。",
       },
       data: {
         title: "我們收集的資料",
@@ -111,7 +111,7 @@ const texts = {
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const lang = (await params).lang === "zh-HK" ? "zh-HK" : "en";
   const isZh = lang === "zh-HK";
-  const title = isZh ? "私隱政策 | Bee Education AI" : "Privacy Policy | Bee Education AI";
+  const title = isZh ? "私隱政策 | Elementals" : "Privacy Policy | Elementals";
   const t = texts[lang as keyof typeof texts] || texts.en;
   return buildPageMetadata({
     lang,

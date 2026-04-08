@@ -162,7 +162,7 @@ const contentByLang: Record<
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const lang = (await params).lang === "zh-HK" ? "zh-HK" : "en";
   const t = contentByLang[lang] ?? contentByLang.en;
-  const title = `${t.badge}: ${t.title} ${t.highlight} | Bee Education AI`;
+  const title = `${t.badge}: ${t.title} ${t.highlight} | Elementals`;
   const description = t.description;
   return buildPageMetadata({ lang, path: "/for-parents", title, description });
 }

@@ -33,13 +33,13 @@ export async function generateMetadata({
   const lang = (await params).lang === "zh-HK" ? "zh-HK" : "en";
 
   const titles: Record<string, string> = {
-    en: 'Bee Education AI (Bee Education) - AI-Native School Management Platform',
-    'zh-HK': 'Bee Education AI（Bee Education）- AI 原生學校管理平台',
+    en: 'Elementals (Elementals) - AI-Native School Management Platform',
+    'zh-HK': 'Elementals（Elementals）- AI 原生學校管理平台',
   };
 
   const descriptions: Record<string, string> = {
-    en: 'Transform education with Bee Education AI (also searched as Bee Education). One platform for curriculum, scheduling, behavior tracking, gradebook, and AI-powered insights.',
-    'zh-HK': '透過 Bee Education AI（亦稱 Bee Education）轉型教育。一個平台整合課程、排課、行為追蹤、成績冊及 AI 智能分析。',
+    en: 'Transform education with Elementals (also searched as Elementals). One platform for curriculum, scheduling, behavior tracking, gradebook, and AI-powered insights.',
+    'zh-HK': '透過 Elementals（亦稱 Elementals）轉型教育。一個平台整合課程、排課、行為追蹤、成績冊及 AI 智能分析。',
   };
 
   return {

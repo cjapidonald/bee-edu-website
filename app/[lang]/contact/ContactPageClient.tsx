@@ -38,7 +38,7 @@ const texts = {
     tabTalkToSales: "Chat with Our Team",
     tabBookDemo: "Schedule a Walkthrough",
     tabTalkDesc: "Reach out and we'll get back to you shortly",
-    tabDemoDesc: "See Bee Education AI in action with our team",
+    tabDemoDesc: "See Elementals in action with our team",
     quickContact: "Quick Contact",
     email: "Email",
     whatsApp: "WhatsApp",
@@ -53,12 +53,12 @@ const texts = {
     avgResponse: "Average response time",
     under4Hours: "Under 4 hours",
     bookDemo: "Schedule a Walkthrough",
-    demoSubtitle: "See Bee Education AI in action with a personalized walkthrough",
+    demoSubtitle: "See Elementals in action with a personalized walkthrough",
     thirtyMin: "30 min session",
     formTitle: "Send us a message",
     formSubtitle: "Fill out the form below and we'll get back to you within 24 hours.",
     demoFormTitle: "Schedule Your Demo",
-    demoFormSubtitle: "Pick a time that works for you and we'll show you Bee Education AI in action.",
+    demoFormSubtitle: "Pick a time that works for you and we'll show you Elementals in action.",
     yourName: "Your Name",
     emailAddress: "Email Address",
     phoneNumber: "Phone Number",
@@ -114,7 +114,7 @@ const texts = {
     tabTalkToSales: "與我們團隊聊聊",
     tabBookDemo: "預約導覽",
     tabTalkDesc: "聯繫我們，我們會盡快回覆",
-    tabDemoDesc: "與我們的團隊一起體驗 Bee Education AI",
+    tabDemoDesc: "與我們的團隊一起體驗 Elementals",
     quickContact: "快速聯絡",
     email: "電郵",
     whatsApp: "WhatsApp",
@@ -129,12 +129,12 @@ const texts = {
     avgResponse: "平均回覆時間",
     under4Hours: "4 小時內",
     bookDemo: "預約導覽",
-    demoSubtitle: "透過個人化導覽體驗 Bee Education AI",
+    demoSubtitle: "透過個人化導覽體驗 Elementals",
     thirtyMin: "30 分鐘課程",
     formTitle: "發送訊息給我們",
     formSubtitle: "填寫以下表格，我們將在 24 小時內回覆您。",
     demoFormTitle: "預約您的演示",
-    demoFormSubtitle: "選擇適合您的時間，我們將為您展示 Bee Education AI。",
+    demoFormSubtitle: "選擇適合您的時間，我們將為您展示 Elementals。",
     yourName: "您的姓名",
     emailAddress: "電郵地址",
     phoneNumber: "電話號碼",
@@ -595,8 +595,8 @@ export default function ContactPage({
                       </div>
                       <div>
                         <p className="text-sm text-gray-500">{t.email}</p>
-                        <a href="mailto:hello@beeeducation.com" className="text-[#fc3c00] font-medium hover:underline">
-                          hello@beeeducation.com
+                        <a href="mailto:hello@elementals.com" className="text-[#fc3c00] font-medium hover:underline">
+                          hello@elementals.com
                         </a>
                       </div>
                     </div>
@@ -1035,7 +1035,7 @@ export default function ContactPage({
             <p className="text-lg text-white/90 mb-8">
               {t.ctaSubtitle}
             </p>
-            <a href="mailto:hello@beeeducation.com?subject=School%20Pricing%20Inquiry">
+            <a href="mailto:hello@elementals.com?subject=School%20Pricing%20Inquiry">
               <Button size="lg" className="bg-white text-[#fc3c00] hover:bg-gray-100 px-8 py-6 text-lg rounded-xl">
                 {t.startFreeTrial}
                 <Sparkles className="ml-2 h-5 w-5" />

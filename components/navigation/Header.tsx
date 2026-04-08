@@ -110,7 +110,7 @@ export default function Header({ lang, dict }: HeaderProps) {
   const featuresCloseTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const solutionsCloseTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const appUrl = process.env.NEXT_PUBLIC_APP_URL || "https://app.beeeducation.com";
+  const appUrl = process.env.NEXT_PUBLIC_APP_URL || "https://app.elementals.com";
 
   useEffect(() => {
     return () => {
@@ -201,8 +201,8 @@ export default function Header({ lang, dict }: HeaderProps) {
         {/* Logo */}
         <Link href={getLocalizedPath("/")} className="flex items-center">
           <Image
-            src="/bee-education-logo.svg"
-            alt="Bee Education"
+            src="/elementals-education-logo.svg"
+            alt="Elementals"
             width={120}
             height={36}
             className="h-9 w-auto max-h-[36px]"

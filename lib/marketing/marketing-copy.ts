@@ -174,7 +174,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
       step4Desc: "Automatically notify parents of significant events. Build a collaborative approach to behavior management.",
       // Comparison
       comparisonTitle: "Before vs After",
-      comparisonDescription: "See how Bee Education AI transforms classroom management.",
+      comparisonDescription: "See how Elementals transforms classroom management.",
       before1: "Inconsistent behavior tracking",
       after1: "Systematic, real-time tracking",
       before2: "Limited parent communication",
@@ -198,7 +198,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
       // Why free section
       whyFreeBadge: "Included",
       whyFreeTitle: "Why is ClassSpark behavior tracking included?",
-      whyFreeDescription: "We believe every teacher deserves powerful classroom management tools without breaking the budget. Behavior tracking is included in all Bee Education AI plans, because positive classroom culture shouldn't be a paid add-on.",
+      whyFreeDescription: "We believe every teacher deserves powerful classroom management tools without breaking the budget. Behavior tracking is included in all Elementals plans, because positive classroom culture shouldn't be a paid add-on.",
       startUsingFree: "Contact Sales",
       comparePlans: "Compare Plans",
       // CTA
@@ -512,7 +512,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
     // Survey Page
     survey: {
       // SEO
-      seoTitle: "Survey Platform for Schools | Bee Education AI",
+      seoTitle: "Survey Platform for Schools | Elementals",
       seoDescription: "Build surveys with AI, add skip logic, and target by role/school/class. Typeform-style experience with powerful analytics. Built for education.",
       seoKeywords: "school surveys, survey builder, feedback collection, student surveys, parent surveys, survey analytics",
       // Hero
@@ -633,7 +633,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
     // QA & Accreditation Page
     qa: {
       // SEO
-      seoTitle: "QA & Accreditation Management | Bee Education AI",
+      seoTitle: "QA & Accreditation Management | Elementals",
       seoDescription: "Track compliance with IB, CIS, WASC, and local standards. Teacher evaluations, evidence management, and audit preparation in one integrated system.",
       seoKeywords: "school accreditation, QA management, IB standards, CIS compliance, teacher evaluation, audit preparation",
       // Hero
@@ -874,7 +874,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
     // Professional Development Page
     professionalDevelopment: {
       // SEO
-      seoTitle: "Professional Development - Teacher Training & CPD | Bee Education AI",
+      seoTitle: "Professional Development - Teacher Training & CPD | Elementals",
       seoDescription: "Comprehensive professional development platform for educators. Course catalog, CPD tracking, certification management, and personalized learning paths.",
       seoKeywords: "professional development, teacher training, CPD tracking, certification management, teacher growth, continuing education, educator learning",
       // Hero
@@ -1009,7 +1009,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
       step4Desc: "CPD hours auto-logged. Generate compliance reports and celebrate achievements.",
       // Comparison Section
       comparisonBadge: "Comparison",
-      comparisonTitle: "Traditional PD vs Bee Education AI",
+      comparisonTitle: "Traditional PD vs Elementals",
       comparisonDescription: "See the difference a modern PD platform makes.",
       before1: "Paper certificates in folders",
       after1: "Digital certification wallet",
@@ -1028,7 +1028,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
     // Year Migration Page
     yearMigration: {
       // SEO
-      seoTitle: "Year Migration - Academic Year Transitions | Bee Education AI",
+      seoTitle: "Year Migration - Academic Year Transitions | Elementals",
       seoDescription: "Seamlessly transition between academic years. Automated student promotions, data archival, class rollovers, and graduate processing—all in one system.",
       seoKeywords: "year migration, academic year transition, student promotion, school year end, data archival, class rollover, graduate processing",
       // Hero
@@ -1141,7 +1141,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
       step4Desc: "Review migration results, make adjustments if needed, then activate the new academic year.",
       // Comparison Section
       comparisonBadge: "Comparison",
-      comparisonTitle: "Manual Migration vs Bee Education AI",
+      comparisonTitle: "Manual Migration vs Elementals",
       comparisonDescription: "See how automated year migration transforms end-of-year operations.",
       before1: "Weeks of manual data entry",
       after1: "One-click automated migration",
@@ -1170,7 +1170,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
     // Pilot Projects Page
     pilotProjects: {
       // SEO
-      seoTitle: "Pilot Projects - School Innovation Management | Bee Education AI",
+      seoTitle: "Pilot Projects - School Innovation Management | Elementals",
       seoDescription: "Run controlled experiments for school improvement initiatives. Track hypotheses, measure outcomes, collect feedback, and make data-driven decisions about scaling.",
       seoKeywords: "pilot projects, school innovation, education experiments, improvement initiatives, data-driven decisions, school improvement",
       // Hero
@@ -1276,7 +1276,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
     // HR Management Page
     hr: {
       // SEO
-      seoTitle: "HR Management for Schools | Bee Education AI",
+      seoTitle: "HR Management for Schools | Elementals",
       seoDescription: "Complete HR management for schools. Recruitment, candidate pipeline, interview scheduling, qualifications tracking, contract management, and onboarding in one system.",
       seoKeywords: "school HR, recruitment software, candidate tracking, interview scheduling, employee onboarding, qualification management",
       // Hero
@@ -1399,7 +1399,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
     // Policy Management Page
     policyManagement: {
       // SEO
-      seoTitle: "Policy Management - School Policy Repository | Bee Education AI",
+      seoTitle: "Policy Management - School Policy Repository | Elementals",
       seoDescription: "Centralized policy management for schools. Version control, acknowledgment tracking, review reminders, and compliance documentation all in one place.",
       seoKeywords: "policy management, school policies, compliance, version control, policy acknowledgment, school governance, document management",
       // Hero
@@ -1524,7 +1524,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
     // Library Page
     library: {
       // SEO
-      seoTitle: "Library Management System for Schools | Bee Education AI",
+      seoTitle: "Library Management System for Schools | Elementals",
       seoDescription: "Digital library management for schools. Book catalog, borrowing system, member management, overdue tracking, and usage analytics all in one place.",
       seoKeywords: "school library, library management, book catalog, borrowing system, library software, school librarian",
       // Hero
@@ -1648,7 +1648,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
     // Student Affairs & Wellbeing Page
     studentAffairs: {
       // SEO
-      seoTitle: "Student Affairs & Wellbeing Platform | Bee Education AI",
+      seoTitle: "Student Affairs & Wellbeing Platform | Elementals",
       seoDescription: "Comprehensive student wellbeing and case management. Risk assessment, intervention tracking, safeguarding, and parent communication in one secure platform.",
       seoKeywords: "student wellbeing, case management, safeguarding, risk assessment, student affairs, school counseling",
       // Hero
@@ -1854,7 +1854,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
       step4Title: "Measure & Optimize",
       step4Desc: "Analytics reveal what's working. Double down on successful channels and campaigns.",
       // Comparison Section
-      comparisonTitle: "Spreadsheets vs Bee Education AI Marketing",
+      comparisonTitle: "Spreadsheets vs Elementals Marketing",
       comparisonDescription: "See how a dedicated platform transforms admissions.",
       before1: "Spreadsheets for lead tracking",
       after1: "Visual CRM pipeline",
@@ -1873,7 +1873,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
     // Sales Admin Page
     salesAdmin: {
       // SEO
-      seoTitle: "Sales Admin - B2B School CRM | Bee Education AI",
+      seoTitle: "Sales Admin - B2B School CRM | Elementals",
       seoDescription: "CRM for selling to schools. Pipeline management, contact tracking, proposal generation, and sales analytics designed for education sales teams.",
       seoKeywords: "sales CRM, education sales, school sales, B2B CRM, pipeline management, proposal tracking, sales admin",
       // Hero
@@ -2016,7 +2016,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
     // Finance Page
     finance: {
       // SEO
-      seoTitle: "Financial Management for Schools | Bee Education AI",
+      seoTitle: "Financial Management for Schools | Elementals",
       seoDescription: "Complete financial management for schools. Staff contracts, payroll, leave management, student billing, and discounts all in one integrated system with multi-currency support.",
       seoKeywords: "school finance, payroll software, staff contracts, student billing, leave management, school accounting",
       // Hero
@@ -2032,7 +2032,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
       // Visual Preview Section
       visualBadge: "All-in-One Finance",
       visualTitle: "Everything Finance Needs in One Place",
-      visualDescription: "No more juggling between spreadsheets, payroll software, and billing systems. Bee Education AI brings all financial operations together with real-time data from scheduling and HR.",
+      visualDescription: "No more juggling between spreadsheets, payroll software, and billing systems. Elementals brings all financial operations together with real-time data from scheduling and HR.",
       visualItem1: "Staff contracts with digital signatures",
       visualItem2: "Automatic hours calculation from schedules",
       visualItem3: "Integrated leave and cover management",
@@ -2114,7 +2114,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
     // SchoolNews Page
     schoolNews: {
       // SEO
-      seoTitle: "SchoolNews - Digital School Newspaper | Bee Education AI",
+      seoTitle: "SchoolNews - Digital School Newspaper | Elementals",
       seoDescription: "A digital newspaper for your school. Students and staff can write, publish, and engage with articles. Breaking news banners, categories, and trending lists.",
       seoKeywords: "school newspaper, student journalism, school news, digital newspaper, student voice, school communication",
       // Hero
@@ -2238,7 +2238,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
     // Resource Booking Page
     resourceBooking: {
       // SEO
-      seoTitle: "Resource Booking System for Schools | Bee Education AI",
+      seoTitle: "Resource Booking System for Schools | Elementals",
       seoDescription: "Book rooms, equipment, and facilities with ease. Calendar view, conflict detection, approval workflows, and utilization analytics for schools.",
       seoKeywords: "room booking, resource reservation, school facilities, equipment booking, facility management, school scheduling",
       // Hero
@@ -2349,7 +2349,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
     // Teaching Assistant Page
     teachingAssistant: {
       // SEO
-      seoTitle: "Teaching Assistants - TA Dashboard & Tools | Bee Education AI",
+      seoTitle: "Teaching Assistants - TA Dashboard & Tools | Elementals",
       seoDescription: "Dedicated tools for teaching assistants. Task management, student support tracking, lesson plan access, and seamless communication with lead teachers.",
       seoKeywords: "teaching assistant, TA tools, classroom support, student support, teacher assistant, paraprofessional, education support",
       // Hero
@@ -2488,7 +2488,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
     // KPI Performance Page
     kpi: {
       // SEO
-      seoTitle: "Teacher KPI & Performance Tracking | Bee Education AI",
+      seoTitle: "Teacher KPI & Performance Tracking | Elementals",
       seoDescription: "Measure teaching excellence across 7 categories with 11 data sources. Visualize trends, compare teams, and celebrate achievements with badges.",
       seoKeywords: "teacher KPI, performance management, teacher evaluation, school analytics, achievement badges, performance tracking",
       // Hero
@@ -2658,7 +2658,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
       feature6Title: "Resource Library",
       feature6Desc: "Access and contribute to a library of lesson plans, worksheets, and activities from other teachers.",
       // Daily workflow
-      workflowTitle: "A Day With Bee Education AI",
+      workflowTitle: "A Day With Elementals",
       workflowDescription: "See how your workflow transforms",
       workflow1: "Review AI-suggested lesson plans",
       workflow2: "Quick-generate today's homework",
@@ -2667,7 +2667,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
       workflow5: "AI marks today's quiz",
       workflow6: "Go home—work stays at school",
       // Testimonial
-      testimonialQuote: "Bee Education AI has completely transformed how I manage my classroom. I spend less time on admin and more time teaching. The behavior tracking keeps students motivated, and parents love seeing their child's progress in real-time.",
+      testimonialQuote: "Elementals has completely transformed how I manage my classroom. I spend less time on admin and more time teaching. The behavior tracking keeps students motivated, and parents love seeing their child's progress in real-time.",
       testimonialAuthor: "Emily Thompson",
       testimonialRole: "4th Grade Teacher, Riverside Elementary",
       // Badges
@@ -2751,7 +2751,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
       securityDescription: "Bank-level encryption, regular security audits, and compliance with international education data protection standards.",
       // CTA
       ctaTitle: "Ready for Complete School Oversight?",
-      ctaDescription: "See how Bee Education AI gives you visibility and control over your entire school."
+      ctaDescription: "See how Elementals gives you visibility and control over your entire school."
     },
     // For Students Page
     students: {
@@ -2876,7 +2876,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
       trustIndicator3: "Performance analytics",
       // Comparison section
       comparisonTitle: "From Frustration to Flow",
-      comparisonDescription: "See how Bee Education AI transforms the daily challenges of leading a teaching team.",
+      comparisonDescription: "See how Elementals transforms the daily challenges of leading a teaching team.",
       before1: "Chasing teachers for lesson plans via email",
       after1: "All plans visible in one dashboard with approval workflow",
       before2: "Manual spreadsheets to track curriculum coverage",
@@ -2905,7 +2905,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
       feature6Desc: "Schedule and document department meetings. Track action items and follow-ups.",
       // Daily workflow section
       workflowBadge: "Your Day",
-      workflowSectionTitle: "Your Day with Bee Education AI",
+      workflowSectionTitle: "Your Day with Elementals",
       workflowSectionDescription: "See how team leaders use the platform throughout their workday.",
       workflowTime1: "Morning",
       workflowTitle1: "Quick Team Check",
@@ -2941,7 +2941,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
       traditionalTime: "2-3 Days",
       traditionalLabel: "Traditional scheduling",
       beeTime: "30 Min",
-      beeLabel: "With Bee Education AI",
+      beeLabel: "With Elementals",
       // Features
       featuresBadge: "Scheduling Tools",
       featuresTitle: "Everything You Need",
@@ -3004,7 +3004,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
       securityDescription: "SOC 2 certified, FERPA compliant, and GDPR ready. Enterprise-grade security with SSO integration, audit logging, and role-based access control.",
       // CTA
       ctaTitle: "Ready to Unify Your Schools?",
-      ctaDescription: "See how Bee Education AI can transform your entire organization."
+      ctaDescription: "See how Elementals can transform your entire organization."
     }
   },
   },
@@ -3211,7 +3211,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
       step4Desc: "自動通知家長重要事件。建立合作式的行為管理方法。",
       // Comparison
       comparisonTitle: "前後對比",
-      comparisonDescription: "了解 Bee Education AI 如何轉變課堂管理。",
+      comparisonDescription: "了解 Elementals 如何轉變課堂管理。",
       before1: "不一致的行為追蹤",
       after1: "系統化即時追蹤",
       before2: "有限的家長溝通",
@@ -3235,7 +3235,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
       // Why free section
       whyFreeBadge: "方案包含",
       whyFreeTitle: "為什麼 ClassSpark 行為追蹤是內建包含？",
-      whyFreeDescription: "我們相信每位教師都值得擁有強大的課堂管理工具，而不必增加預算負擔。行為追蹤在所有 Bee Education AI 計劃中包含，因為正向的課堂文化不應該是額外付費項目。",
+      whyFreeDescription: "我們相信每位教師都值得擁有強大的課堂管理工具，而不必增加預算負擔。行為追蹤在所有 Elementals 計劃中包含，因為正向的課堂文化不應該是額外付費項目。",
       startUsingFree: "聯絡銷售",
       comparePlans: "比較計劃",
       // CTA
@@ -3582,7 +3582,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
     // Survey Page
     survey: {
       // SEO
-      seoTitle: "學校問卷調查平台 | Bee Education AI",
+      seoTitle: "學校問卷調查平台 | Elementals",
       seoDescription: "使用 AI 建立問卷調查、添加跳題邏輯，並按角色/學校/班級定向。Typeform 風格體驗配合強大分析功能。專為教育而設。",
       seoKeywords: "學校問卷調查, 問卷建立器, 意見收集, 學生問卷, 家長問卷, 問卷分析",
       // Hero
@@ -3703,7 +3703,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
     // QA & Accreditation Page
     qa: {
       // SEO
-      seoTitle: "質量保證及認證管理 | Bee Education AI",
+      seoTitle: "質量保證及認證管理 | Elementals",
       seoDescription: "追蹤 IB、CIS、WASC 及本地標準的合規性。教師評估、證據管理和審核準備集於一個整合系統。",
       seoKeywords: "學校認證, 質量保證管理, IB 標準, CIS 合規, 教師評估, 審核準備",
       // Hero
@@ -3944,7 +3944,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
     // Professional Development Page
     professionalDevelopment: {
       // SEO
-      seoTitle: "專業發展 - 教師培訓及持續專業發展 | Bee Education AI",
+      seoTitle: "專業發展 - 教師培訓及持續專業發展 | Elementals",
       seoDescription: "為教育工作者提供的全面專業發展平台。課程目錄、持續專業發展追蹤、證書管理和個人化學習路徑。",
       seoKeywords: "專業發展, 教師培訓, 持續專業發展追蹤, 證書管理, 教師成長, 持續進修, 教育者學習",
       // Hero
@@ -4079,7 +4079,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
       step4Desc: "持續專業發展時數自動記錄。生成合規報告並慶祝成就。",
       // Comparison Section
       comparisonBadge: "比較",
-      comparisonTitle: "傳統專業發展 vs Bee Education AI",
+      comparisonTitle: "傳統專業發展 vs Elementals",
       comparisonDescription: "了解現代專業發展平台帶來的不同。",
       before1: "資料夾中的紙本證書",
       after1: "數碼證書錢包",
@@ -4098,7 +4098,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
     // Year Migration Page
     yearMigration: {
       // SEO
-      seoTitle: "學年遷移 - 學年過渡 | Bee Education AI",
+      seoTitle: "學年遷移 - 學年過渡 | Elementals",
       seoDescription: "無縫過渡學年。自動學生升級、數據存檔、班級延續和畢業生處理——全部在一個系統中完成。",
       seoKeywords: "學年遷移, 學年過渡, 學生升級, 學年結束, 數據存檔, 班級延續, 畢業生處理",
       // Hero
@@ -4211,7 +4211,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
       step4Desc: "審核遷移結果，如需要進行調整，然後啟動新學年。",
       // Comparison Section
       comparisonBadge: "比較",
-      comparisonTitle: "手動遷移 vs Bee Education AI",
+      comparisonTitle: "手動遷移 vs Elementals",
       comparisonDescription: "了解自動化學年遷移如何轉變年終操作。",
       before1: "數週的手動數據輸入",
       after1: "一鍵自動遷移",
@@ -4240,7 +4240,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
     // Pilot Projects Page
     pilotProjects: {
       // SEO
-      seoTitle: "先導計劃 - 學校創新管理 | Bee Education AI",
+      seoTitle: "先導計劃 - 學校創新管理 | Elementals",
       seoDescription: "為學校改進措施運行受控實驗。追蹤假設、衡量結果、收集反饋，並做出數據驅動的擴展決策。",
       seoKeywords: "先導計劃, 學校創新, 教育實驗, 改進措施, 數據驅動決策, 學校改進",
       // Hero
@@ -4346,7 +4346,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
     // HR Management Page
     hr: {
       // SEO
-      seoTitle: "學校人力資源管理 | Bee Education AI",
+      seoTitle: "學校人力資源管理 | Elementals",
       seoDescription: "完整的學校人力資源管理。招聘、候選人管道、面試排程、資格追蹤、合約管理和入職流程一站式系統。",
       seoKeywords: "學校人力資源, 招聘軟體, 候選人追蹤, 面試排程, 員工入職, 資格管理",
       // Hero
@@ -4469,7 +4469,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
     // Policy Management Page
     policyManagement: {
       // SEO
-      seoTitle: "政策管理 - 學校政策庫 | Bee Education AI",
+      seoTitle: "政策管理 - 學校政策庫 | Elementals",
       seoDescription: "學校集中化政策管理。版本控制、確認追蹤、審核提醒和合規文檔集於一處。",
       seoKeywords: "政策管理, 學校政策, 合規, 版本控制, 政策確認, 學校管治, 文檔管理",
       // Hero
@@ -4594,7 +4594,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
     // Library Page
     library: {
       // SEO
-      seoTitle: "學校圖書館管理系統 | Bee Education AI",
+      seoTitle: "學校圖書館管理系統 | Elementals",
       seoDescription: "學校數碼圖書館管理。書籍目錄、借閱系統、會員管理、逾期追蹤和使用分析，一站式解決方案。",
       seoKeywords: "學校圖書館, 圖書館管理, 書籍目錄, 借閱系統, 圖書館軟件, 學校圖書館員",
       // Hero
@@ -4806,7 +4806,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
       step4Title: "測量和優化",
       step4Desc: "分析揭示有效的方法。加倍投入成功的渠道和推廣活動。",
       // Comparison Section
-      comparisonTitle: "試算表 vs Bee Education AI 市場推廣",
+      comparisonTitle: "試算表 vs Elementals 市場推廣",
       comparisonDescription: "了解專用平台如何改變招生。",
       before1: "試算表追蹤潛在學生",
       after1: "視覺化 CRM 流程",
@@ -4825,7 +4825,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
     // Finance Page
     finance: {
       // SEO
-      seoTitle: "學校財務管理 | Bee Education AI",
+      seoTitle: "學校財務管理 | Elementals",
       seoDescription: "學校完整財務管理系統。員工合約、薪資、請假管理、學生收費和折扣全部整合在一個系統中，支援多種貨幣。",
       seoKeywords: "學校財務, 薪資軟件, 員工合約, 學生收費, 請假管理, 學校會計",
       // Hero
@@ -4841,7 +4841,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
       // Visual Preview Section
       visualBadge: "一站式財務",
       visualTitle: "財務所需一應俱全",
-      visualDescription: "不再需要在電子表格、薪資軟件和收費系統之間切換。Bee Education AI 將所有財務運作整合在一起，與排程和人力資源即時同步數據。",
+      visualDescription: "不再需要在電子表格、薪資軟件和收費系統之間切換。Elementals 將所有財務運作整合在一起，與排程和人力資源即時同步數據。",
       visualItem1: "電子簽名的員工合約",
       visualItem2: "從排程自動計算工時",
       visualItem3: "整合請假和代課管理",
@@ -4923,7 +4923,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
     // SchoolNews Page
     schoolNews: {
       // SEO
-      seoTitle: "校園新聞 - 數碼校報 | Bee Education AI",
+      seoTitle: "校園新聞 - 數碼校報 | Elementals",
       seoDescription: "您學校的數碼報紙。學生和教職員可以撰寫、發佈和互動文章。突發新聞橫幅、分類和熱門列表。",
       seoKeywords: "校報, 學生新聞, 學校新聞, 數碼報紙, 學生發聲, 學校傳訊",
       // Hero
@@ -5047,7 +5047,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
     // Student Affairs & Wellbeing Page
     studentAffairs: {
       // SEO
-      seoTitle: "學生事務及身心健康平台 | Bee Education AI",
+      seoTitle: "學生事務及身心健康平台 | Elementals",
       seoDescription: "全面的學生身心健康及個案管理。風險評估、介入追蹤、保護兒童及家長溝通，全部整合於一個安全平台。",
       seoKeywords: "學生身心健康, 個案管理, 保護兒童, 風險評估, 學生事務, 學校輔導",
       // Hero
@@ -5165,7 +5165,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
     // Resource Booking Page
     resourceBooking: {
       // SEO
-      seoTitle: "學校資源預約系統 | Bee Education AI",
+      seoTitle: "學校資源預約系統 | Elementals",
       seoDescription: "輕鬆預訂課室、設備和設施。日曆視圖、衝突檢測、審批流程和使用率分析——專為學校設計。",
       seoKeywords: "課室預約, 資源預訂, 學校設施, 設備預約, 設施管理, 學校排程",
       // Hero
@@ -5276,7 +5276,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
     // Teaching Assistant Page
     teachingAssistant: {
       // SEO
-      seoTitle: "教學助理 - TA 控制台與工具 | Bee Education AI",
+      seoTitle: "教學助理 - TA 控制台與工具 | Elementals",
       seoDescription: "專為教學助理設計的工具。任務管理、學生支援追蹤、課程計劃存取，以及與主任教師的無縫溝通。",
       seoKeywords: "教學助理, TA工具, 課堂支援, 學生支援, 助理教師, 教育支援",
       // Hero
@@ -5415,7 +5415,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
     // Sales Admin Page
     salesAdmin: {
       // SEO
-      seoTitle: "銷售管理 - B2B 學校 CRM | Bee Education AI",
+      seoTitle: "銷售管理 - B2B 學校 CRM | Elementals",
       seoDescription: "專為學校銷售設計的 CRM 系統。管道管理、聯繫人追蹤、提案生成和銷售分析，專為教育銷售團隊打造。",
       seoKeywords: "銷售 CRM, 教育銷售, 學校銷售, B2B CRM, 管道管理, 提案追蹤, 銷售管理",
       // Hero
@@ -5558,7 +5558,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
     // KPI Performance Page
     kpi: {
       // SEO
-      seoTitle: "教師KPI及績效追蹤 | Bee Education AI",
+      seoTitle: "教師KPI及績效追蹤 | Elementals",
       seoDescription: "透過7大類別和11個數據來源衡量教學卓越。視覺化趨勢、比較團隊，並以徽章表彰成就。",
       seoKeywords: "教師KPI, 績效管理, 教師評估, 學校分析, 成就徽章, 績效追蹤",
       // Hero
@@ -5728,7 +5728,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
       feature6Title: "資源庫",
       feature6Desc: "存取和貢獻其他教師的課程計劃、工作紙和活動庫。",
       // Daily workflow
-      workflowTitle: "使用 Bee Education AI 的一天",
+      workflowTitle: "使用 Elementals 的一天",
       workflowDescription: "看看您的工作流程如何轉變",
       workflow1: "查看 AI 建議的課程計劃",
       workflow2: "快速生成今天的功課",
@@ -5737,7 +5737,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
       workflow5: "AI 批改今天的測驗",
       workflow6: "回家——工作留在學校",
       // Testimonial
-      testimonialQuote: "Bee Education AI 徹底改變了我管理課堂的方式。我花更少的時間在行政工作上，更多時間在教學上。行為追蹤讓學生保持動力，家長也喜歡看到孩子每天的表現。",
+      testimonialQuote: "Elementals 徹底改變了我管理課堂的方式。我花更少的時間在行政工作上，更多時間在教學上。行為追蹤讓學生保持動力，家長也喜歡看到孩子每天的表現。",
       testimonialAuthor: "Emily Thompson",
       testimonialRole: "四年級教師，Riverside 小學",
       // Badges
@@ -5821,7 +5821,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
       securityDescription: "銀行級加密、定期安全審計，並符合國際教育數據保護標準。",
       // CTA
       ctaTitle: "準備好全面監督學校？",
-      ctaDescription: "了解 Bee Education AI 如何為您提供對整個學校的可見性和控制。"
+      ctaDescription: "了解 Elementals 如何為您提供對整個學校的可見性和控制。"
     },
     // For Students Page
     students: {
@@ -5946,7 +5946,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
       trustIndicator3: "表現分析",
       // Comparison section
       comparisonTitle: "從挫折到順暢",
-      comparisonDescription: "了解 Bee Education AI 如何改變領導教學團隊的日常挑戰。",
+      comparisonDescription: "了解 Elementals 如何改變領導教學團隊的日常挑戰。",
       before1: "透過電郵追討教師課程計劃",
       after1: "所有計劃在儀表板中可見，配有審批流程",
       before2: "手動電子表格追蹤課程覆蓋率",
@@ -5975,7 +5975,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
       feature6Desc: "安排和記錄部門會議。追蹤行動項目和跟進事項。",
       // Daily workflow section
       workflowBadge: "您的日程",
-      workflowSectionTitle: "您在 Bee Education AI 的一天",
+      workflowSectionTitle: "您在 Elementals 的一天",
       workflowSectionDescription: "了解團隊主管如何在工作日中使用平台。",
       workflowTime1: "上午",
       workflowTitle1: "快速團隊檢視",
@@ -6011,7 +6011,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
       traditionalTime: "2-3 天",
       traditionalLabel: "傳統排程",
       beeTime: "30 分鐘",
-      beeLabel: "使用 Bee Education AI",
+      beeLabel: "使用 Elementals",
       // Features
       featuresBadge: "排程工具",
       featuresTitle: "您需要的一切",
@@ -6074,7 +6074,7 @@ export const marketingCopy: Record<string, { featurePages: any; rolePages: any }
       securityDescription: "SOC 2 認證、符合 FERPA、GDPR 就緒。企業級安全，支援 SSO 整合、審計日誌和基於角色的存取控制。",
       // CTA
       ctaTitle: "準備好統一您的學校？",
-      ctaDescription: "了解 Bee Education AI 如何轉變您的整個機構。"
+      ctaDescription: "了解 Elementals 如何轉變您的整個機構。"
     }
   },
   },

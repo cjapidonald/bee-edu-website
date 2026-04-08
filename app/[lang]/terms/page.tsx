@@ -10,14 +10,14 @@ interface TermsPageProps {
   params: Promise<{ lang: string }>;
 }
 
-const contactEmail = "hello@beeeducation.com";
+const contactEmail = "hello@elementals.com";
 
 const texts = {
   en: {
     badge: "Legal",
     title: "Terms of service",
     description:
-      "These terms describe how you may use the Bee Education AI platform and what to expect from the service.",
+      "These terms describe how you may use the Elementals platform and what to expect from the service.",
     lastUpdatedLabel: "Last updated",
     primaryCta: "Privacy policy",
     secondaryCta: "Contact",
@@ -25,7 +25,7 @@ const texts = {
       agreement: {
         title: "Agreement",
         body:
-          "By accessing or using Bee Education AI (also known as Bee Education), you agree to these terms. If you do not agree, do not use the service.",
+          "By accessing or using Elementals (also known as Elementals), you agree to these terms. If you do not agree, do not use the service.",
       },
       accounts: {
         title: "Accounts",
@@ -59,7 +59,7 @@ const texts = {
   "zh-HK": {
     badge: "法律",
     title: "服務條款",
-    description: "以下條款說明你可如何使用 Bee Education AI 平台，以及服務內容。",
+    description: "以下條款說明你可如何使用 Elementals 平台，以及服務內容。",
     lastUpdatedLabel: "最後更新",
     primaryCta: "私隱政策",
     secondaryCta: "聯絡我們",
@@ -67,7 +67,7 @@ const texts = {
       agreement: {
         title: "同意",
         body:
-          "使用 Bee Education AI（亦稱 Bee Education）即表示你同意本條款。如不同意，請勿使用本服務。",
+          "使用 Elementals（亦稱 Elementals）即表示你同意本條款。如不同意，請勿使用本服務。",
       },
       accounts: {
         title: "帳戶",
@@ -103,7 +103,7 @@ const texts = {
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const lang = (await params).lang === "zh-HK" ? "zh-HK" : "en";
   const isZh = lang === "zh-HK";
-  const title = isZh ? "服務條款 | Bee Education AI" : "Terms of Service | Bee Education AI";
+  const title = isZh ? "服務條款 | Elementals" : "Terms of Service | Elementals";
   const t = texts[lang as keyof typeof texts] || texts.en;
   return buildPageMetadata({
     lang,

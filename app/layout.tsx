@@ -1,13 +1,13 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://beeeducation.com';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://elementals.com';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: 'Bee Education AI (Bee Education) - AI-Native School Management Platform',
-  description: 'Transform education with Bee Education AI (also searched as Bee Education). One platform for curriculum, scheduling, behavior tracking, gradebook, and AI-powered insights.',
-  keywords: 'Bee Education, Bee Education, school management, AI education, curriculum planning, gradebook, ClassSpark behavior tracking',
+  title: 'Elementals (Elementals) - AI-Native School Management Platform',
+  description: 'Transform education with Elementals (also searched as Elementals). One platform for curriculum, scheduling, behavior tracking, gradebook, and AI-powered insights.',
+  keywords: 'Elementals, Elementals, school management, AI education, curriculum planning, gradebook, ClassSpark behavior tracking',
   manifest: '/manifest.json',
   verification: {
     google: 'BQkRrgKoFbYF3Eyds0sD-R_oVJZ-Z9U_aMbINcYXtw8',

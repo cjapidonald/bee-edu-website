@@ -28,7 +28,7 @@ export default function SitemapPage({ params }: SitemapPageProps) {
   const texts = {
     en: {
       title: "Sitemap",
-      description: "Navigate all pages and sections of Bee Education AI",
+      description: "Navigate all pages and sections of Elementals",
       sections: {
         publicPages: "Public Pages",
         features: "Features",
@@ -74,7 +74,7 @@ export default function SitemapPage({ params }: SitemapPageProps) {
     },
     "zh-HK": {
       title: "網站地圖",
-      description: "瀏覽 Bee Education AI 的所有頁面和部分",
+      description: "瀏覽 Elementals 的所有頁面和部分",
       sections: {
         publicPages: "公開頁面",
         features: "功能",
@@ -207,7 +207,7 @@ export default function SitemapPage({ params }: SitemapPageProps) {
                 rel="noopener noreferrer"
                 className="text-[#fc3c00] hover:underline"
               >
-                https://beeeducation.com/sitemap.xml
+                https://elementals.com/sitemap.xml
               </a>
             </CardContent>
           </Card>

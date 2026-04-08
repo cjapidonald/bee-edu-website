@@ -1,4 +1,4 @@
-// Chatbot knowledge base for Bee Education AI
+// Chatbot knowledge base for Elementals
 // Simplified version for Next.js
 
 import type { ChatbotCategory } from "./types";
@@ -20,10 +20,10 @@ const getSupportedLang = (lang?: string): SupportedLang => (lang === "zh-HK" ? "
 
 export const knowledgeBase: KnowledgeEntry[] = [
   {
-    keywords: ["what", "beeeducation", "platform", "about", "do", "is"],
-    question: "What is Bee Education AI?",
+    keywords: ["what", "elementals", "platform", "about", "do", "is"],
+    question: "What is Elementals?",
     answer:
-      "Bee Education AI is an all-in-one school management platform designed to replace disconnected tools across teaching, operations, and communication. With **16+ specialized user roles** and **20+ integrated modules**, we cover everything from classroom behavior and gradebooks to scheduling, exams, curriculum, document workflows, HR, finance, and reporting.\n\nOur AI offers simple modes—**Fast / Balanced / Deep**—plus **Safe Mode** for student-facing use.",
+      "Elementals is an all-in-one school management platform designed to replace disconnected tools across teaching, operations, and communication. With **16+ specialized user roles** and **20+ integrated modules**, we cover everything from classroom behavior and gradebooks to scheduling, exams, curriculum, document workflows, HR, finance, and reporting.\n\nOur AI offers simple modes—**Fast / Balanced / Deep**—plus **Safe Mode** for student-facing use.",
     category: "general",
     followUp: ["What features do you offer?", "How much does it cost?"],
     priority: 10,
@@ -114,7 +114,7 @@ export const knowledgeBase: KnowledgeEntry[] = [
     keywords: ["contact", "support", "help", "talk", "human"],
     question: "How can I get support?",
     answer:
-      "**We're here to help!**\n\n**Contact Options:**\n• Email: hello@beeeducation.com\n• WhatsApp: +852 94954912\n• Address: 721-725 Nathan Road, Belgian Bank Building, Mongkok, Hong Kong\n\n**Self-Service:**\n• Documentation & tutorials\n• FAQ section\n• In-app guides\n\n**For Schools:**\n• Dedicated success manager\n• On-site training",
+      "**We're here to help!**\n\n**Contact Options:**\n• Email: hello@elementals.com\n• WhatsApp: +852 94954912\n• Address: 721-725 Nathan Road, Belgian Bank Building, Mongkok, Hong Kong\n\n**Self-Service:**\n• Documentation & tutorials\n• FAQ section\n• In-app guides\n\n**For Schools:**\n• Dedicated success manager\n• On-site training",
     category: "support",
     priority: 7,
     pageLink: "/contact",
@@ -230,7 +230,7 @@ export const knowledgeBase: KnowledgeEntry[] = [
   },
   {
     keywords: ["new", "latest", "recent", "updates", "coming soon", "roadmap"],
-    question: "What's new in Bee Education AI?",
+    question: "What's new in Elementals?",
     answer:
       "**Recent & Upcoming Features:**\n\n**Now Available:**\n• AI Analytics Hub with Student 360\n• Document Hub with Google Drive sync\n• Digital Portfolios for students\n• Emergency Communications system\n• Wordwall interactive games\n• Gamification with XP & badges\n\n**Coming Soon:**\n• AI Tutor for students\n• Microcredentials & digital badges\n• Enhanced mobile experience",
     category: "general",
@@ -242,9 +242,9 @@ export const knowledgeBase: KnowledgeEntry[] = [
 
 export const knowledgeBaseZhHK: KnowledgeEntry[] = [
   {
-    keywords: ["beeeducation", "平台", "介紹", "做什麼", "是什麼", "甚麼", "what", "about"],
-    question: "Bee Education AI 是什麼？",
-    answer: `Bee Education AI 是一個一站式的 AI 原生學校管理平台，旨在取代教學、營運與溝通中分散的工具。透過 **16+ 個專業用戶角色** 及 **20+ 個整合模組**，我們涵蓋：行為追蹤、成績冊、排課、考試、課程規劃、文件流程、人力資源、財務、溝通與報告等。
+    keywords: ["elementals", "平台", "介紹", "做什麼", "是什麼", "甚麼", "what", "about"],
+    question: "Elementals 是什麼？",
+    answer: `Elementals 是一個一站式的 AI 原生學校管理平台，旨在取代教學、營運與溝通中分散的工具。透過 **16+ 個專業用戶角色** 及 **20+ 個整合模組**，我們涵蓋：行為追蹤、成績冊、排課、考試、課程規劃、文件流程、人力資源、財務、溝通與報告等。
 
 AI 亦提供 **Fast / Balanced / Deep** 模式，以及面向學生使用的 **Safe Mode**。`,
     category: "general",
@@ -310,7 +310,7 @@ AI 亦提供 **Fast / Balanced / Deep** 模式，以及面向學生使用的 **S
     answer: `**我們很樂意協助！**
 
 **聯絡方式：**
-• 電郵：hello@beeeducation.com
+• 電郵：hello@elementals.com
 • WhatsApp：+852 94954912
 • 地址：721-725 Nathan Road, Belgian Bank Building, Mongkok, Hong Kong
 
@@ -477,7 +477,7 @@ SparkSpace 讓教師利用 AI 大規模提供個人化支援。`,
   },
   {
     keywords: ["新功能", "最新", "更新", "即將推出", "路線圖"],
-    question: "Bee Education AI 有什麼新功能？",
+    question: "Elementals 有什麼新功能？",
     answer: `**最新及即將推出的功能：**
 
 **現已推出：**
@@ -500,7 +500,7 @@ SparkSpace 讓教師利用 AI 大規模提供個人化支援。`,
 
 // Greeting messages
 export const greetingMessages = [
-  "Hi! I'm Einstein. Ask me anything about Bee Education AI—features, pricing, or getting started.",
+  "Hi! I'm Bumblebee. Ask me anything about Elementals—features, pricing, or getting started.",
   "Hello! Want a quick tour? Ask about roles, modules, AI modes, or setup.",
   "Hey there—how can I help? Try: pricing, behavior tracking, gradebook, or AI features.",
 ];
@@ -521,7 +521,7 @@ export const suggestedQuestions = [
 
 // Traditional Chinese (zh-HK) chatbot strings
 export const greetingMessagesZhHK = [
-  "你好！我是 Einstein。你可以問我 Bee Education AI 的功能、價格、或如何開始使用。",
+  "你好！我是 Bumblebee。你可以問我 Elementals 的功能、價格、或如何開始使用。",
   "哈囉！想快速了解？可以問：角色、模組、AI 模式、或導入流程。",
   "你好—我可以協助你了解定價、行為追蹤、成績冊、或 AI 功能。",
 ];
@@ -603,8 +603,8 @@ export function findAnswer(
     return {
       answer:
         supportedLang === "zh-HK"
-          ? "不客氣！你還想了解 Bee Education AI 的哪些內容？"
-          : "You're welcome! Is there anything else you'd like to know about Bee Education AI?",
+          ? "不客氣！你還想了解 Elementals 的哪些內容？"
+          : "You're welcome! Is there anything else you'd like to know about Elementals?",
       confidence: 1,
       category: null,
       followUps: suggestedQuestionsForLang,

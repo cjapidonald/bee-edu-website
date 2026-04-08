@@ -10,7 +10,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const lang = (await params).lang === "zh-HK" ? "zh-HK" : "en";
   const copy = marketingCopy[lang] ?? marketingCopy.en;
   const t = copy.featurePages.teachingAssistant;
-  const title = t.seoTitle || `${t.title} ${t.highlight} | Bee Education AI`;
+  const title = t.seoTitle || `${t.title} ${t.highlight} | Elementals`;
   const description = t.seoDescription || t.description || "";
   return buildPageMetadata({ lang, path: "/features/teaching-assistants", title, description });
 }

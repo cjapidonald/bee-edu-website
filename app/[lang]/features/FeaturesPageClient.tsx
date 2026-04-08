@@ -412,7 +412,7 @@ const pageText: Record<
     heroTitle: "Everything your school needs",
     heroHighlight: "in one platform",
     heroSubtitle:
-      "Discover the complete Bee Education AI feature set—built to reduce admin load, improve teaching quality, and give school leaders full operational visibility.",
+      "Discover the complete Elementals feature set—built to reduce admin load, improve teaching quality, and give school leaders full operational visibility.",
     seePricing: "See Pricing",
     contactSales: "Contact Sales",
     highlights: [
@@ -424,15 +424,15 @@ const pageText: Record<
     exploreSubtitle: "Choose a module to learn more and see real workflows.",
     guidedTitle: "Want a guided walkthrough tailored to your school?",
     requestDemo: "Request a demo",
-    structuredName: "Bee Education AI Features",
-    structuredDescription: "Complete list of Bee Education AI platform features for school management",
+    structuredName: "Elementals Features",
+    structuredDescription: "Complete list of Elementals platform features for school management",
   },
   "zh-HK": {
     badge: "平台總覽",
     heroTitle: "學校所需的一切",
     heroHighlight: "盡在同一平台",
     heroSubtitle:
-      "探索 Bee Education AI 的完整功能組合——為減少行政負擔、提升教學質素，並讓學校領導者獲得全面營運可視性而打造。",
+      "探索 Elementals 的完整功能組合——為減少行政負擔、提升教學質素，並讓學校領導者獲得全面營運可視性而打造。",
     seePricing: "查看價格",
     contactSales: "聯絡銷售",
     highlights: ["為教師而設的 AI 工作流程", "學校營運一套系統整合", "為現代學校網絡而設"],
@@ -440,8 +440,8 @@ const pageText: Record<
     exploreSubtitle: "選擇模組了解更多並查看實際工作流程。",
     guidedTitle: "想要為你的學校量身訂做的導覽示範？",
     requestDemo: "申請示範",
-    structuredName: "Bee Education AI 功能",
-    structuredDescription: "Bee Education AI 平台的完整功能列表（學校管理）",
+    structuredName: "Elementals 功能",
+    structuredDescription: "Elementals 平台的完整功能列表（學校管理）",
   },
 };
 
@@ -462,7 +462,7 @@ export default function FeaturesPage({ params }: { params: { lang: Locale } }) {
   const t = pageText[lang] ?? pageText.en;
   const features = FEATURE_SETS[lang] ?? FEATURE_SETS.en;
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://beeeducation.com";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://elementals.com";
 
   const getLocalizedPath = (path: string) => {
     if (lang === "en") return path;

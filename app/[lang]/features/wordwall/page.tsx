@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   return buildPageMetadata({
     lang,
     path: "/features/wordwall",
-    title: `${t.title} - ${t.highlight} | Bee Education AI`,
+    title: `${t.title} - ${t.highlight} | Elementals`,
     description: t.description,
   });
 }

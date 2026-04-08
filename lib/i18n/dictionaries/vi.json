@@ -55,9 +55,9 @@
     "testimonials": { "badge": "Được Yêu thích", "title": "Được Giáo viên Yêu thích", "items": [{"quote":"Lập giáo án mà không cần chuyển đổi công cụ.","author":"Lập Giáo án","role":"Giáo viên"},{"quote":"Trực quan hóa kỹ năng và tiến độ.","author":"Sổ điểm","role":"Đánh giá"},{"quote":"Phát hiện xung đột lịch sớm.","author":"Lập lịch","role":"Vận hành"}] },
     "compliance": { "ferpa": "Tuân thủ FERPA", "gdpr": "Sẵn sàng GDPR", "soc2": "SOC 2", "uptime": "99.9%" },
     "blog": { "badge": "Tìm hiểu", "title": "Công nghệ Lớp học", "subtitle": "Mẹo và hướng dẫn giảng dạy hiện đại", "topic1Title": "AI trong Giáo dục", "topic1Description": "AI đang biến đổi giảng dạy.", "topic2Title": "Công cụ EdTech", "topic2Description": "Công nghệ giáo dục mới nhất.", "topic3Title": "Quy trình Số", "topic3Description": "Tối ưu hóa với công cụ đám mây.", "topic4Title": "Đổi mới", "topic4Description": "Phương pháp thu hút học sinh.", "viewAll": "Khám phá Cộng đồng" },
-    "cta": { "title": "Sẵn sàng thay đổi?", "subtitle": "Hàng nghìn nhà giáo đang sử dụng Bee Education AI.", "getStarted": "Liên hệ Tư vấn", "viewPricing": "Xem Bảng giá", "connectWithUs": "Kết nối" }
+    "cta": { "title": "Sẵn sàng thay đổi?", "subtitle": "Hàng nghìn nhà giáo đang sử dụng Elementals.", "getStarted": "Liên hệ Tư vấn", "viewPricing": "Xem Bảng giá", "connectWithUs": "Kết nối" }
   },
-  "cta": { "title": "Sẵn sàng thay đổi?", "subtitle": "Hàng nghìn nhà giáo đang sử dụng Bee Education AI", "getStarted": "Liên hệ Tư vấn", "talkToSales": "Trò chuyện" },
+  "cta": { "title": "Sẵn sàng thay đổi?", "subtitle": "Hàng nghìn nhà giáo đang sử dụng Elementals", "getStarted": "Liên hệ Tư vấn", "talkToSales": "Trò chuyện" },
   "footer": {
     "description": "Quản lý trường học hỗ trợ AI.",
     "product": "Sản phẩm", "solutions": "Giải pháp", "company": "Công ty", "legal": "Pháp lý",
@@ -69,7 +69,7 @@
     "contact": { "email": "Email", "whatsapp": "WhatsApp", "address": "Địa chỉ", "addressValue": "721-725 Nathan Road, Belgian Bank Building, Mongkok, Hong Kong", "worldwide": "Phục vụ toàn cầu" }
   },
   "seo": {
-    "defaultTitle": "Bee Education AI - Nền tảng Quản lý Trường học AI",
+    "defaultTitle": "Elementals - Nền tảng Quản lý Trường học AI",
     "defaultDescription": "Một nền tảng cho chương trình giảng dạy, lịch học, theo dõi hành vi, sổ điểm và phân tích AI."
   }
 }
