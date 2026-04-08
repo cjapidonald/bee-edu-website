@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Elementals — One platform for everything your school runs on.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --bg-soft: #111111;
+      --card: #161616;
+      --card-hi: #1c1c1c;
+      --fg: #e8e5e0;
+      --fg-soft: #a8a39a;
+      --fg-dim: #6b6761;
+      --gold: #d4af37;
+      --gold-hi: #e8c757;
+      --gold-dim: rgba(212, 175, 55, 0.28);
+      --border: rgba(212, 175, 55, 0.18);
+      --rule: rgba(232, 229, 224, 0.08);
+      --serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+      --sans: 'Inter', system-ui, -apple-system, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+
+    /* — Nav — */
+    nav.site {
+      padding: 32px 0;
+      border-bottom: 1px solid var(--border);
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(10, 10, 10, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+    nav.site .row {
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    nav.site .brand {
+      font-family: var(--serif);
+      font-size: 32px;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      color: var(--gold);
+    }
+    nav.site ul {
+      display: flex; list-style: none; gap: 40px;
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    nav.site ul a { color: var(--fg-soft); transition: color .3s; }
+    nav.site ul a:hover { color: var(--gold); }
+    nav.site .cta {
+      padding: 12px 26px;
+      border: 1px solid var(--gold);
+      background: var(--gold);
+      color: var(--bg);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: all .3s;
+    }
+    nav.site .cta:hover {
+      background: var(--gold-hi);
+      border-color: var(--gold-hi);
+    }
+
+    /* — Gold rule — */
+    .gold-rule {
+      width: 60px;
+      height: 1px;
+      background: var(--gold);
+      margin: 0 0 28px;
+    }
+    .gold-rule.center { margin: 0 auto 28px; }
+
+    /* — Section label — */
+    .label {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+
+    /* — Hero — */
+    section.hero {
+      padding: 160px 0 180px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    section.hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at center top, rgba(212,175,55,0.14), transparent 60%),
+        radial-gradient(ellipse 50% 30% at center top, rgba(212,175,55,0.08), transparent 70%);
+      pointer-events: none;
+    }
+    section.hero .inner { position: relative; z-index: 1; }
+    section.hero .label { display: inline-block; margin-bottom: 32px; }
+    section.hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(52px, 8vw, 120px);
+      font-weight: 300;
+      line-height: 0.98;
+      letter-spacing: -0.02em;
+      margin-bottom: 40px;
+      max-width: 15ch;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    section.hero h1 em {
+      font-style: italic;
+      color: var(--gold);
+      font-weight: 400;
+    }
+    section.hero .sub {
+      max-width: 58ch;
+      margin: 0 auto 48px;
+      font-size: 18px;
+      color: var(--fg-soft);
+      line-height: 1.75;
+      font-weight: 300;
+    }
+    .ctas { display: inline-flex; gap: 24px; align-items: center; }
+    .btn-primary {
+      padding: 18px 38px;
+      background: var(--gold);
+      color: var(--bg);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      transition: all .3s;
+      border: 1px solid var(--gold);
+    }
+    .btn-primary:hover {
+      background: transparent;
+      color: var(--gold);
+    }
+    .btn-secondary {
+      padding: 18px 30px;
+      background: transparent;
+      color: var(--fg);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      border: 1px solid var(--border);
+      transition: all .3s;
+    }
+    .btn-secondary:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    /* — Divider with gold — */
+    .gold-div {
+      display: flex; align-items: center; justify-content: center;
+      gap: 16px;
+      padding: 40px 0;
+    }
+    .gold-div::before, .gold-div::after {
+      content: "";
+      flex: 1; max-width: 200px;
+      height: 1px; background: var(--gold-dim);
+    }
+    .gold-div .dot {
+      width: 6px; height: 6px;
+      background: var(--gold);
+      transform: rotate(45deg);
+    }
+
+    /* — Stats — */
+    section.stats { padding: 100px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    section.stats .row {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+    }
+    section.stats .stat {
+      padding: 30px;
+      text-align: center;
+      border-right: 1px solid var(--border);
+    }
+    section.stats .stat:last-child { border-right: none; }
+    section.stats .num {
+      font-family: var(--serif);
+      font-size: 92px;
+      font-weight: 300;
+      line-height: 1;
+      color: var(--gold);
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
+    }
+    section.stats .cap {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--fg-soft);
+    }
+
+    /* — Features — */
+    section.features { padding: 160px 0; }
+    section.features .head { text-align: center; margin-bottom: 96px; }
+    section.features h2 {
+      font-family: var(--serif);
+      font-size: clamp(44px, 6vw, 80px);
+      font-weight: 300;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      max-width: 20ch;
+      margin: 0 auto;
+    }
+    section.features h2 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+    section.features .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    .feature {
+      padding: 48px 36px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      transition: all .4s;
+    }
+    .feature:hover {
+      background: var(--card-hi);
+      border-color: var(--gold);
+      transform: translateY(-3px);
+    }
+    .feature .fnum {
+      font-family: var(--serif);
+      font-size: 14px;
+      color: var(--gold);
+      font-style: italic;
+      margin-bottom: 22px;
+      letter-spacing: 0.02em;
+    }
+    .feature h3 {
+      font-family: var(--serif);
+      font-size: 30px;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      line-height: 1.15;
+      margin-bottom: 16px;
+      color: var(--fg);
+    }
+    .feature p {
+      font-size: 14.5px;
+      color: var(--fg-soft);
+      line-height: 1.65;
+      font-weight: 300;
+    }
+
+    /* — Roles — */
+    section.roles {
+      padding: 160px 0;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      background: var(--bg-soft);
+      position: relative;
+      overflow: hidden;
+    }
+    section.roles::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center, rgba(212,175,55,0.05), transparent 70%);
+    }
+    section.roles .inner { position: relative; z-index: 1; }
+    section.roles h2 {
+      font-family: var(--serif);
+      font-size: clamp(44px, 6vw, 76px);
+      font-weight: 300;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      max-width: 20ch;
+      margin: 0 auto 72px;
+    }
+    section.roles h2 em { font-style: italic; color: var(--gold); }
+    .chipgrid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .rolechip {
+      padding: 24px 18px;
+      border: 1px solid var(--border);
+      background: var(--card);
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+      transition: all .3s;
+    }
+    .rolechip:hover {
+      background: var(--card-hi);
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    /* — AI — */
+    section.ai {
+      padding: 160px 0;
+      border-top: 1px solid var(--border);
+    }
+    section.ai .head { text-align: center; margin-bottom: 80px; }
+    section.ai h2 {
+      font-family: var(--serif);
+      font-size: clamp(44px, 6vw, 76px);
+      font-weight: 300;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      max-width: 18ch;
+      margin: 0 auto;
+    }
+    section.ai h2 em { font-style: italic; color: var(--gold); }
+    .ai-layout {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 32px;
+    }
+    .aitools-card {
+      padding: 56px 48px;
+      background: var(--card);
+      border: 1px solid var(--border);
+    }
+    .aitools-card h3 {
+      font-family: var(--serif);
+      font-size: 26px;
+      font-weight: 400;
+      color: var(--gold);
+      font-style: italic;
+      margin-bottom: 32px;
+      letter-spacing: -0.005em;
+    }
+    .aitools {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 40px;
+    }
+    .aitools li {
+      padding: 18px 0;
+      border-bottom: 1px solid var(--rule);
+      font-size: 15px;
+      color: var(--fg);
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .aitools li .n {
+      font-family: var(--serif);
+      font-size: 13px;
+      color: var(--gold);
+      font-style: italic;
+    }
+    .modes-card {
+      padding: 56px 44px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+    }
+    .modes-card h3 {
+      font-family: var(--serif);
+      font-size: 26px;
+      font-weight: 400;
+      color: var(--gold);
+      font-style: italic;
+      margin-bottom: 32px;
+    }
+    .mode {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--rule);
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .mode:last-of-type { border-bottom: none; }
+    .mode .name {
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 400;
+    }
+    .mode .desc {
+      font-size: 12px;
+      color: var(--fg-dim);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .safe {
+      margin-top: 32px;
+      padding: 20px 22px;
+      background: rgba(212, 175, 55, 0.05);
+      border: 1px solid var(--gold-dim);
+      font-size: 13px;
+      color: var(--fg-soft);
+      font-style: italic;
+    }
+    .safe strong {
+      color: var(--gold);
+      font-weight: 500;
+      font-style: normal;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-size: 11px;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    /* — Pricing — */
+    section.pricing {
+      padding: 160px 0;
+      border-top: 1px solid var(--border);
+    }
+    section.pricing .head { text-align: center; margin-bottom: 96px; }
+    section.pricing h2 {
+      font-family: var(--serif);
+      font-size: clamp(44px, 6vw, 76px);
+      font-weight: 300;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      max-width: 18ch;
+      margin: 0 auto;
+    }
+    section.pricing h2 em { font-style: italic; color: var(--gold); }
+    .plans {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .plan {
+      padding: 56px 48px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      text-align: center;
+    }
+    .plan.hi {
+      background: linear-gradient(180deg, var(--card-hi), var(--card));
+      border-color: var(--gold);
+    }
+    .plan .tier {
+      font-family: var(--serif);
+      font-style: italic;
+      color: var(--gold);
+      font-size: 15px;
+      margin-bottom: 24px;
+      letter-spacing: 0.02em;
+    }
+    .plan .name {
+      font-family: var(--serif);
+      font-size: 44px;
+      font-weight: 400;
+      letter-spacing: -0.015em;
+      margin-bottom: 16px;
+      line-height: 1.1;
+    }
+    .plan .price {
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--fg-soft);
+      margin-bottom: 32px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--rule);
+    }
+    .plan p.desc {
+      font-size: 15px;
+      color: var(--fg-soft);
+      line-height: 1.7;
+      margin-bottom: 40px;
+      font-weight: 300;
+    }
+    .plan-cta {
+      display: inline-block;
+      padding: 16px 36px;
+      background: var(--gold);
+      color: var(--bg);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      transition: all .3s;
+      border: 1px solid var(--gold);
+    }
+    .plan-cta:hover {
+      background: transparent;
+      color: var(--gold);
+    }
+
+    /* — Testimonial — */
+    section.testimonial {
+      padding: 180px 0;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      background: var(--bg-soft);
+      position: relative;
+    }
+    section.testimonial::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center, rgba(212,175,55,0.06), transparent 70%);
+    }
+    section.testimonial .inner { position: relative; z-index: 1; }
+    section.testimonial .mark {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 120px;
+      color: var(--gold);
+      line-height: 0.5;
+      margin-bottom: 20px;
+      display: block;
+    }
+    section.testimonial blockquote {
+      font-family: var(--serif);
+      font-size: clamp(30px, 4vw, 52px);
+      font-weight: 300;
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+      max-width: 22ch;
+      margin: 0 auto;
+      color: var(--fg);
+    }
+    section.testimonial cite {
+      display: block;
+      margin-top: 48px;
+      font-size: 11px;
+      font-style: normal;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    /* — CTA band — */
+    section.cta-band {
+      padding: 180px 0;
+      text-align: center;
+      border-top: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+    section.cta-band::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center, rgba(212,175,55,0.12), transparent 60%);
+    }
+    section.cta-band .inner { position: relative; z-index: 1; }
+    section.cta-band h2 {
+      font-family: var(--serif);
+      font-size: clamp(52px, 8vw, 120px);
+      font-weight: 300;
+      line-height: 1;
+      letter-spacing: -0.025em;
+      max-width: 14ch;
+      margin: 0 auto 56px;
+    }
+    section.cta-band h2 em { font-style: italic; color: var(--gold); }
+
+    /* — Footer — */
+    footer.site {
+      padding: 80px 0 48px;
+      border-top: 1px solid var(--border);
+    }
+    footer.site .cols {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+    footer.site .brand-col .mark {
+      font-family: var(--serif);
+      font-size: 36px;
+      color: var(--gold);
+      margin-bottom: 16px;
+      display: block;
+    }
+    footer.site .brand-col p {
+      font-size: 14px;
+      color: var(--fg-soft);
+      max-width: 28ch;
+      font-weight: 300;
+    }
+    footer.site h4 {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 22px;
+      font-weight: 500;
+    }
+    footer.site ul {
+      list-style: none;
+      display: flex; flex-direction: column; gap: 12px;
+    }
+    footer.site ul a {
+      color: var(--fg-soft);
+      font-size: 14px;
+      font-weight: 300;
+      transition: color .3s;
+    }
+    footer.site ul a:hover { color: var(--gold); }
+    footer.site .baseline {
+      padding-top: 40px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--fg-dim);
+    }
+
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0;
+      margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0);
+      white-space: nowrap; border: 0;
+    }
+
+    @media (max-width: 900px) {
+      nav.site ul { display: none; }
+      .wrap { padding: 0 24px; }
+      section.hero { padding: 100px 0 120px; }
+      section.stats .row { grid-template-columns: 1fr; }
+      section.stats .stat { border-right: none; border-bottom: 1px solid var(--border); }
+      section.stats .stat:last-child { border-bottom: none; }
+      section.features .grid { grid-template-columns: 1fr; }
+      .chipgrid { grid-template-columns: repeat(2, 1fr); }
+      .ai-layout { grid-template-columns: 1fr; }
+      .aitools { grid-template-columns: 1fr; }
+      .plans { grid-template-columns: 1fr; }
+      footer.site .cols { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="site">
+    <div class="wrap row">
+      <a href="#" class="brand">Elementals</a>
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#roles">Roles</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <a href="#" class="cta">Book a demo</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <section class="hero">
+      <div class="wrap inner">
+        <div class="label">— Est. 2026 · School Platform</div>
+        <h1>One platform for <em>everything</em> your school runs on.</h1>
+        <p class="sub">Built for schools: 16+ specialized roles, 20+ integrated modules, and 10 AI tools — all in one place.</p>
+        <div class="ctas">
+          <a href="#" class="btn-primary">Book a demo</a>
+          <a href="#features" class="btn-secondary">See how it works</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="wrap">
+        <div class="row">
+          <div class="stat">
+            <span class="sr-only">16+ roles</span>
+            <div class="num">16+</div>
+            <div class="cap">Specialized roles</div>
+          </div>
+          <div class="stat">
+            <span class="sr-only">20+ modules</span>
+            <div class="num">20+</div>
+            <div class="cap">Integrated modules</div>
+          </div>
+          <div class="stat">
+            <span class="sr-only">10 AI tools</span>
+            <div class="num">10</div>
+            <div class="cap">AI tools</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <div class="wrap">
+        <div class="head">
+          <div class="label">— The Features</div>
+          <h2>Everything your school needs, in one <em>quietly confident</em> place.</h2>
+        </div>
+        <div class="grid">
+          <div class="feature">
+            <div class="fnum">— I.</div>
+            <h3>ClassSpark Behavior</h3>
+            <p>Real-time points, badges, and parent updates from the classroom.</p>
+          </div>
+          <div class="feature">
+            <div class="fnum">— II.</div>
+            <h3>Skills Gradebook</h3>
+            <p>Mastery tracking on a 4-level scale with heatmap dashboards.</p>
+          </div>
+          <div class="feature">
+            <div class="fnum">— III.</div>
+            <h3>AI Scheduling</h3>
+            <p>Build timetables in minutes with constraint-aware optimization.</p>
+          </div>
+          <div class="feature">
+            <div class="fnum">— IV.</div>
+            <h3>Exams &amp; Marking</h3>
+            <p>Full assessment lifecycle from draft to transcript.</p>
+          </div>
+          <div class="feature">
+            <div class="fnum">— V.</div>
+            <h3>AI Teaching Assistant</h3>
+            <p>Lesson plans, rubrics, and differentiated homework in seconds.</p>
+          </div>
+          <div class="feature">
+            <div class="fnum">— VI.</div>
+            <h3>Insights &amp; Reports</h3>
+            <p>Ask questions about your data in plain English.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="roles" id="roles">
+      <div class="wrap inner">
+        <div class="label">— The Roles</div>
+        <h2>Built for <em>everyone</em> who runs a school.</h2>
+        <div class="chipgrid">
+          <div class="rolechip">Teacher</div>
+          <div class="rolechip">Admin</div>
+          <div class="rolechip">Principal</div>
+          <div class="rolechip">Parent</div>
+          <div class="rolechip">Student</div>
+          <div class="rolechip">HR</div>
+          <div class="rolechip">Finance</div>
+          <div class="rolechip">Counselor</div>
+          <div class="rolechip">Librarian</div>
+          <div class="rolechip">IT</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ai">
+      <div class="wrap">
+        <div class="head">
+          <div class="label">— Intelligence</div>
+          <h2>Ten AI tools, three <em>thinking</em> modes.</h2>
+        </div>
+        <div class="ai-layout">
+          <div class="aitools-card">
+            <h3>The AI Toolkit</h3>
+            <ul class="aitools">
+              <li>AI Insights Dashboard<span class="n">i.</span></li>
+              <li>Researcher Platform<span class="n">ii.</span></li>
+              <li>AI Student Reports<span class="n">iii.</span></li>
+              <li>AI Homework Builder<span class="n">iv.</span></li>
+              <li>AI Exam Marking<span class="n">v.</span></li>
+              <li>AI Teaching Assistant<span class="n">vi.</span></li>
+              <li>AI Presentation Builder<span class="n">vii.</span></li>
+              <li>AI Schedule Optimizer<span class="n">viii.</span></li>
+              <li>AI Rubric Generator<span class="n">ix.</span></li>
+              <li>AI Lesson Planning<span class="n">x.</span></li>
+            </ul>
+          </div>
+          <div class="modes-card">
+            <h3>Modes of thought</h3>
+            <div class="mode"><span class="name">Fast</span><span class="desc">Instant</span></div>
+            <div class="mode"><span class="name">Balanced</span><span class="desc">Default</span></div>
+            <div class="mode"><span class="name">Deep</span><span class="desc">Thorough</span></div>
+            <div class="safe">
+              <strong>Safe Mode</strong>
+              Default for student-facing use — respects context and privacy.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+      <div class="wrap">
+        <div class="head">
+          <div class="label">— Investment</div>
+          <h2>Transparent pricing. <em>No</em> per-seat surprises.</h2>
+        </div>
+        <div class="plans">
+          <div class="plan hi">
+            <div class="tier">— For Schools</div>
+            <div class="name">School All-in-One</div>
+            <div class="price">Custom Quote</div>
+            <p class="desc">Full platform access, 16+ specialized roles, annual invoicing, and dedicated rollout support.</p>
+            <a href="#" class="plan-cta">Contact Sales</a>
+          </div>
+          <div class="plan">
+            <div class="tier">— For Teachers</div>
+            <div class="name">Teacher</div>
+            <div class="price">Coming Soon</div>
+            <p class="desc">Per-teacher monthly pricing, targeting approximately US$9.83 per month.</p>
+            <a href="#" class="plan-cta">Join Waitlist</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonial">
+      <div class="wrap inner">
+        <span class="mark">“</span>
+        <blockquote>
+          Elementals replaced five disconnected tools overnight. Our teachers got their evenings back.
+        </blockquote>
+        <cite>— Head of School, Sample Academy</cite>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="wrap inner">
+        <div class="label">— Next</div>
+        <h2><span class="sr-only">Ready to unify your school operations?</span><span aria-hidden="true">Ready to <em>unify</em> your school operations?</span></h2>
+        <a href="#" class="btn-primary">Book a demo</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <div class="cols">
+        <div class="brand-col">
+          <span class="mark">Elementals</span>
+          <p>One platform for everything your school runs on.</p>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Roles</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">AI Tools</a></li>
+            <li><a href="#">Changelog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Help center</a></li>
+            <li><a href="#">API docs</a></li>
+            <li><a href="#">Status</a></li>
+            <li><a href="#">Security</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">DPA</a></li>
+            <li><a href="#">Cookies</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="baseline">
+        <span>© 2026 Elementals. All rights reserved.</span>
+        <span>Built for schools.</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

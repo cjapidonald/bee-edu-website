@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Elementals — One platform for everything your school runs on.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #faf6f0;
+      --bg-2: #f3ecdd;
+      --bg-3: #e9dfc9;
+      --fg: #2d241f;
+      --fg-soft: #6b5b4f;
+      --fg-dim: #9e8d7d;
+      --terra: #c25430;
+      --terra-hi: #d8663f;
+      --sage: #6b8e4e;
+      --sage-hi: #82a760;
+      --cream: #faf6f0;
+      --mustard: #d4a547;
+      --border: rgba(45, 36, 31, 0.12);
+      --sans: 'DM Sans', system-ui, -apple-system, sans-serif;
+      --display: 'DM Serif Display', Georgia, serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 0 32px; position: relative; z-index: 2; }
+
+    /* — Nav — */
+    nav.site {
+      padding: 28px 0;
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(250, 246, 240, 0.92);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+    nav.site .row {
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    nav.site .brand {
+      font-family: var(--display);
+      font-size: 30px;
+      color: var(--terra);
+      letter-spacing: -0.01em;
+    }
+    nav.site ul {
+      display: flex; list-style: none; gap: 36px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    nav.site ul a { color: var(--fg); transition: color .25s; }
+    nav.site ul a:hover { color: var(--terra); }
+    nav.site .cta {
+      padding: 14px 26px;
+      border-radius: 100px;
+      background: var(--terra);
+      color: var(--bg);
+      font-size: 14px;
+      font-weight: 600;
+      transition: all .25s;
+    }
+    nav.site .cta:hover { background: var(--terra-hi); transform: translateY(-1px); }
+
+    /* — Section label — */
+    .label {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 18px;
+      border-radius: 100px;
+      background: var(--bg-2);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--sage);
+      margin-bottom: 22px;
+    }
+    .label::before {
+      content: "";
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--sage);
+    }
+
+    /* — Blob decoration — */
+    .blob {
+      position: absolute;
+      border-radius: 60% 40% 55% 45% / 50% 60% 40% 50%;
+      pointer-events: none;
+      filter: blur(40px);
+      opacity: 0.5;
+    }
+
+    /* — Hero — */
+    section.hero {
+      padding: 120px 0 140px;
+      position: relative;
+      overflow: hidden;
+    }
+    section.hero .blob-1 {
+      width: 440px; height: 440px;
+      background: var(--terra);
+      top: -120px; right: -80px;
+      opacity: 0.18;
+    }
+    section.hero .blob-2 {
+      width: 360px; height: 360px;
+      background: var(--sage);
+      bottom: -100px; left: -80px;
+      opacity: 0.2;
+      border-radius: 55% 45% 60% 40% / 45% 55% 45% 55%;
+    }
+    section.hero .blob-3 {
+      width: 220px; height: 220px;
+      background: var(--mustard);
+      top: 30%; left: 45%;
+      opacity: 0.15;
+    }
+    section.hero h1 {
+      font-family: var(--display);
+      font-size: clamp(48px, 7vw, 100px);
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: -0.025em;
+      margin-bottom: 32px;
+      max-width: 14ch;
+      color: var(--fg);
+    }
+    section.hero h1 em {
+      color: var(--terra);
+      font-style: italic;
+    }
+    section.hero .sub {
+      max-width: 52ch;
+      margin-bottom: 40px;
+      font-size: 19px;
+      color: var(--fg-soft);
+      line-height: 1.6;
+    }
+    .ctas { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+    .btn-primary {
+      padding: 18px 36px;
+      border-radius: 100px;
+      background: var(--terra);
+      color: var(--bg);
+      font-size: 15px;
+      font-weight: 600;
+      box-shadow: 0 8px 0 rgba(194, 84, 48, 0.2), 0 16px 32px rgba(194, 84, 48, 0.18);
+      transition: all .25s;
+    }
+    .btn-primary:hover {
+      background: var(--terra-hi);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 0 rgba(194, 84, 48, 0.2), 0 22px 40px rgba(194, 84, 48, 0.22);
+    }
+    .btn-secondary {
+      padding: 18px 32px;
+      border-radius: 100px;
+      background: var(--bg);
+      color: var(--fg);
+      font-size: 15px;
+      font-weight: 600;
+      border: 2px solid var(--fg);
+      transition: all .25s;
+    }
+    .btn-secondary:hover { background: var(--fg); color: var(--bg); }
+
+    /* — Wavy divider — */
+    .wave {
+      display: block;
+      width: 100%;
+      height: 60px;
+    }
+
+    /* — Stats — */
+    section.stats {
+      padding: 80px 0;
+      background: var(--bg-2);
+      border-radius: 56px 56px 0 0;
+    }
+    section.stats .row {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    section.stats .stat {
+      background: var(--bg);
+      padding: 44px 36px;
+      border-radius: 32px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(45, 36, 31, 0.06);
+    }
+    section.stats .num {
+      font-family: var(--display);
+      font-size: 84px;
+      color: var(--terra);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    section.stats .cap {
+      font-size: 14px;
+      color: var(--fg-soft);
+      font-weight: 500;
+    }
+
+    /* — Features — */
+    section.features {
+      padding: 140px 0;
+      background: var(--bg-2);
+    }
+    section.features .head { text-align: center; margin-bottom: 72px; }
+    section.features .head .label { margin: 0 auto 20px; }
+    section.features h2 {
+      font-family: var(--display);
+      font-size: clamp(40px, 5.5vw, 68px);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      max-width: 18ch;
+      margin: 0 auto;
+      font-weight: 400;
+    }
+    section.features h2 em { color: var(--terra); font-style: italic; }
+    section.features .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .feature {
+      padding: 44px 36px;
+      background: var(--bg);
+      border-radius: 36px;
+      transition: all .3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .feature:nth-child(1) { border-radius: 36px 60px 36px 36px; }
+    .feature:nth-child(2) { border-radius: 60px 36px 36px 36px; }
+    .feature:nth-child(3) { border-radius: 36px 36px 60px 36px; }
+    .feature:nth-child(4) { border-radius: 36px 36px 36px 60px; }
+    .feature:nth-child(5) { border-radius: 60px 36px 36px 60px; }
+    .feature:nth-child(6) { border-radius: 36px 60px 60px 36px; }
+    .feature:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(45, 36, 31, 0.1); }
+    .feature .icon-wrap {
+      width: 64px; height: 64px;
+      border-radius: 55% 45% 60% 40% / 45% 55% 45% 55%;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 24px;
+    }
+    .feature:nth-child(1) .icon-wrap { background: rgba(194, 84, 48, 0.16); color: var(--terra); }
+    .feature:nth-child(2) .icon-wrap { background: rgba(107, 142, 78, 0.18); color: var(--sage); }
+    .feature:nth-child(3) .icon-wrap { background: rgba(212, 165, 71, 0.2); color: var(--mustard); }
+    .feature:nth-child(4) .icon-wrap { background: rgba(194, 84, 48, 0.16); color: var(--terra); }
+    .feature:nth-child(5) .icon-wrap { background: rgba(107, 142, 78, 0.18); color: var(--sage); }
+    .feature:nth-child(6) .icon-wrap { background: rgba(212, 165, 71, 0.2); color: var(--mustard); }
+    .feature .icon-wrap svg { width: 30px; height: 30px; }
+    .feature h3 {
+      font-family: var(--display);
+      font-size: 26px;
+      font-weight: 400;
+      line-height: 1.15;
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+    .feature p {
+      font-size: 15px;
+      color: var(--fg-soft);
+      line-height: 1.6;
+    }
+
+    /* — Roles — */
+    section.roles {
+      padding: 140px 0;
+      background: var(--sage);
+      color: var(--cream);
+      position: relative;
+      overflow: hidden;
+    }
+    section.roles .blob-a {
+      width: 400px; height: 400px;
+      background: var(--sage-hi);
+      top: -100px; right: -100px;
+      opacity: 0.5;
+    }
+    section.roles .head { text-align: center; margin-bottom: 60px; }
+    section.roles .head .label {
+      background: rgba(250, 246, 240, 0.15);
+      color: var(--cream);
+    }
+    section.roles .head .label::before { background: var(--cream); }
+    section.roles h2 {
+      font-family: var(--display);
+      font-size: clamp(40px, 5.5vw, 64px);
+      font-weight: 400;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      max-width: 18ch;
+      margin: 0 auto;
+      color: var(--cream);
+    }
+    .chipgrid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: center;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .rolechip {
+      padding: 16px 28px;
+      border-radius: 100px;
+      background: rgba(250, 246, 240, 0.1);
+      border: 2px solid rgba(250, 246, 240, 0.3);
+      color: var(--cream);
+      font-size: 16px;
+      font-weight: 500;
+      transition: all .25s;
+    }
+    .rolechip:hover {
+      background: var(--cream);
+      color: var(--sage);
+      border-color: var(--cream);
+      transform: translateY(-2px);
+    }
+
+    /* — AI — */
+    section.ai {
+      padding: 140px 0;
+      background: var(--bg-2);
+    }
+    section.ai .head { text-align: center; margin-bottom: 72px; }
+    section.ai .head .label { margin: 0 auto 20px; }
+    section.ai h2 {
+      font-family: var(--display);
+      font-size: clamp(40px, 5.5vw, 68px);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      max-width: 18ch;
+      margin: 0 auto;
+      font-weight: 400;
+    }
+    section.ai h2 em { color: var(--terra); font-style: italic; }
+    .ai-layout {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 28px;
+    }
+    .aitools-card {
+      background: var(--bg);
+      border-radius: 42px 42px 20px 42px;
+      padding: 48px 44px;
+    }
+    .aitools-card h3 {
+      font-family: var(--display);
+      font-size: 26px;
+      font-weight: 400;
+      margin-bottom: 24px;
+      color: var(--terra);
+    }
+    .aitools {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 24px;
+    }
+    .aitools li {
+      padding: 14px 0;
+      font-size: 15px;
+      color: var(--fg);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 1px dashed var(--border);
+      font-weight: 500;
+    }
+    .aitools li::before {
+      content: "";
+      width: 10px; height: 10px;
+      border-radius: 60% 40% 60% 40%;
+      background: var(--terra);
+      flex-shrink: 0;
+    }
+    .modes-card {
+      background: var(--terra);
+      color: var(--cream);
+      border-radius: 20px 42px 42px 42px;
+      padding: 48px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .modes-card h3 {
+      font-family: var(--display);
+      font-size: 24px;
+      font-weight: 400;
+      color: var(--cream);
+      margin-bottom: 6px;
+    }
+    .mode {
+      padding: 16px 22px;
+      border-radius: 20px;
+      background: rgba(250, 246, 240, 0.15);
+      border: 1px solid rgba(250, 246, 240, 0.2);
+      display: flex; justify-content: space-between; align-items: baseline;
+    }
+    .mode .name {
+      font-family: var(--display);
+      font-size: 22px;
+      color: var(--cream);
+    }
+    .mode .desc {
+      font-size: 12px;
+      color: rgba(250, 246, 240, 0.75);
+    }
+    .safe {
+      margin-top: 8px;
+      padding: 16px 22px;
+      background: rgba(250, 246, 240, 0.1);
+      border-radius: 20px;
+      font-size: 13px;
+      color: rgba(250, 246, 240, 0.9);
+    }
+    .safe strong { color: var(--cream); display: block; margin-bottom: 2px; font-size: 14px; }
+
+    /* — Pricing — */
+    section.pricing {
+      padding: 140px 0;
+      background: var(--bg-2);
+    }
+    section.pricing .head { text-align: center; margin-bottom: 72px; }
+    section.pricing .head .label { margin: 0 auto 20px; }
+    section.pricing h2 {
+      font-family: var(--display);
+      font-size: clamp(40px, 5.5vw, 68px);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      max-width: 18ch;
+      margin: 0 auto;
+      font-weight: 400;
+    }
+    section.pricing h2 em { color: var(--terra); font-style: italic; }
+    .plans {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      max-width: 980px;
+      margin: 0 auto;
+    }
+    .plan {
+      padding: 56px 48px;
+      background: var(--bg);
+      border-radius: 44px;
+      text-align: center;
+      transition: all .3s;
+    }
+    .plan.hi {
+      background: var(--fg);
+      color: var(--cream);
+      transform: translateY(-12px);
+      border-radius: 44px 44px 60px 44px;
+    }
+    .plan:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(45, 36, 31, 0.1); }
+    .plan.hi:hover { transform: translateY(-16px); }
+    .plan .tier {
+      font-size: 13px;
+      color: var(--sage);
+      font-weight: 600;
+      margin-bottom: 16px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .plan.hi .tier { color: var(--mustard); }
+    .plan .name {
+      font-family: var(--display);
+      font-size: 40px;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+    .plan .price {
+      font-size: 15px;
+      color: var(--fg-soft);
+      margin-bottom: 32px;
+      padding-bottom: 24px;
+      border-bottom: 1px dashed var(--border);
+    }
+    .plan.hi .price { color: rgba(250, 246, 240, 0.7); border-color: rgba(250, 246, 240, 0.2); }
+    .plan p.desc {
+      font-size: 15px;
+      color: var(--fg-soft);
+      line-height: 1.65;
+      margin-bottom: 32px;
+      max-width: 36ch;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .plan.hi p.desc { color: rgba(250, 246, 240, 0.85); }
+    .plan-cta {
+      display: inline-block;
+      padding: 16px 36px;
+      border-radius: 100px;
+      background: var(--terra);
+      color: var(--bg);
+      font-size: 14px;
+      font-weight: 600;
+      transition: all .25s;
+    }
+    .plan-cta:hover { background: var(--terra-hi); transform: translateY(-2px); }
+
+    /* — Testimonial — */
+    section.testimonial {
+      padding: 140px 0;
+      background: var(--bg-2);
+      position: relative;
+      overflow: hidden;
+    }
+    section.testimonial .blob-a {
+      width: 300px; height: 300px;
+      background: var(--terra);
+      top: 10%; left: -50px;
+      opacity: 0.1;
+    }
+    section.testimonial .blob-b {
+      width: 380px; height: 380px;
+      background: var(--sage);
+      bottom: -80px; right: -80px;
+      opacity: 0.12;
+    }
+    .quote-card {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 72px 64px;
+      background: var(--bg);
+      border-radius: 56px;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(45, 36, 31, 0.08);
+    }
+    .quote-card .mark {
+      font-family: var(--display);
+      font-size: 96px;
+      color: var(--terra);
+      line-height: 0.5;
+      display: block;
+      margin-bottom: 24px;
+    }
+    .quote-card blockquote {
+      font-family: var(--display);
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 400;
+      line-height: 1.25;
+      letter-spacing: -0.015em;
+      color: var(--fg);
+    }
+    .quote-card cite {
+      display: block;
+      margin-top: 32px;
+      font-size: 14px;
+      font-style: normal;
+      color: var(--fg-soft);
+      font-weight: 500;
+    }
+
+    /* — CTA band — */
+    section.cta-band {
+      padding: 180px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      background: var(--terra);
+      color: var(--cream);
+      border-radius: 0 0 56px 56px;
+    }
+    section.cta-band .blob-a {
+      width: 500px; height: 500px;
+      background: var(--terra-hi);
+      top: -150px; left: 10%;
+      opacity: 0.4;
+    }
+    section.cta-band .blob-b {
+      width: 400px; height: 400px;
+      background: var(--mustard);
+      bottom: -100px; right: 10%;
+      opacity: 0.25;
+    }
+    section.cta-band h2 {
+      font-family: var(--display);
+      font-size: clamp(48px, 7vw, 96px);
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: -0.025em;
+      max-width: 16ch;
+      margin: 0 auto 48px;
+      color: var(--cream);
+    }
+    section.cta-band .btn-primary {
+      background: var(--cream);
+      color: var(--terra);
+      box-shadow: 0 8px 0 rgba(0, 0, 0, 0.15), 0 16px 32px rgba(0, 0, 0, 0.15);
+    }
+    section.cta-band .btn-primary:hover { background: var(--bg-3); color: var(--terra); }
+
+    /* — Footer — */
+    footer.site {
+      padding: 100px 0 48px;
+      background: var(--bg);
+    }
+    footer.site .cols {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 64px;
+    }
+    footer.site .brand-col .mark {
+      font-family: var(--display);
+      font-size: 34px;
+      color: var(--terra);
+      margin-bottom: 16px;
+    }
+    footer.site .brand-col p {
+      font-size: 14px;
+      color: var(--fg-soft);
+      max-width: 28ch;
+    }
+    footer.site h4 {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--sage);
+      margin-bottom: 18px;
+    }
+    footer.site ul {
+      list-style: none;
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    footer.site ul a {
+      color: var(--fg-soft);
+      font-size: 14px;
+    }
+    footer.site ul a:hover { color: var(--terra); }
+    footer.site .baseline {
+      padding-top: 40px;
+      border-top: 1px dashed var(--border);
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      color: var(--fg-dim);
+    }
+
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0;
+      margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0);
+      white-space: nowrap; border: 0;
+    }
+
+    @media (max-width: 900px) {
+      nav.site ul { display: none; }
+      section.hero { padding: 60px 0 80px; }
+      section.stats .row { grid-template-columns: 1fr; }
+      section.features .grid { grid-template-columns: 1fr; }
+      .ai-layout { grid-template-columns: 1fr; }
+      .aitools { grid-template-columns: 1fr; }
+      .plans { grid-template-columns: 1fr; }
+      .plan.hi { transform: none; }
+      footer.site .cols { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="site">
+    <div class="wrap row">
+      <a href="#" class="brand">Elementals</a>
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#roles">Roles</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <a href="#" class="cta">Book a demo</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <section class="hero">
+      <span class="blob blob-1"></span>
+      <span class="blob blob-2"></span>
+      <span class="blob blob-3"></span>
+      <div class="wrap">
+        <div class="label">School operations, rewilded</div>
+        <h1>One <em>platform</em> for everything your school runs on.</h1>
+        <p class="sub">Built for schools: 16+ specialized roles, 20+ integrated modules, and 10 AI tools — all in one place.</p>
+        <div class="ctas">
+          <a href="#" class="btn-primary">Book a demo</a>
+          <a href="#features" class="btn-secondary">See how it works</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="wrap">
+        <div class="row">
+          <div class="stat">
+            <span class="sr-only">16+ roles</span>
+            <div class="num">16+</div>
+            <div class="cap">Specialized roles</div>
+          </div>
+          <div class="stat">
+            <span class="sr-only">20+ modules</span>
+            <div class="num">20+</div>
+            <div class="cap">Integrated modules</div>
+          </div>
+          <div class="stat">
+            <span class="sr-only">10 AI tools</span>
+            <div class="num">10</div>
+            <div class="cap">AI tools</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <div class="wrap">
+        <div class="head">
+          <div class="label">Features</div>
+          <h2>Everything your school needs, <em>gently</em> rounded.</h2>
+        </div>
+        <div class="grid">
+          <div class="feature">
+            <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 7h7l-5.5 4.5 2 7L12 16l-6.5 4.5 2-7L2 9h7z"/></svg></div>
+            <h3>ClassSpark Behavior</h3>
+            <p>Real-time points, badges, and parent updates from the classroom.</p>
+          </div>
+          <div class="feature">
+            <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3-9 4 18 3-9h4"/></svg></div>
+            <h3>Skills Gradebook</h3>
+            <p>Mastery tracking on a 4-level scale with heatmap dashboards.</p>
+          </div>
+          <div class="feature">
+            <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="4"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+            <h3>AI Scheduling</h3>
+            <p>Build timetables in minutes with constraint-aware optimization.</p>
+          </div>
+          <div class="feature">
+            <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg></div>
+            <h3>Exams &amp; Marking</h3>
+            <p>Full assessment lifecycle from draft to transcript.</p>
+          </div>
+          <div class="feature">
+            <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+            <h3>AI Teaching Assistant</h3>
+            <p>Lesson plans, rubrics, and differentiated homework in seconds.</p>
+          </div>
+          <div class="feature">
+            <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18M7 14l4-4 4 4 5-5"/></svg></div>
+            <h3>Insights &amp; Reports</h3>
+            <p>Ask questions about your data in plain English.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="roles" id="roles">
+      <span class="blob blob-a"></span>
+      <div class="wrap">
+        <div class="head">
+          <div class="label">Roles</div>
+          <h2>Built for everyone who runs a school.</h2>
+        </div>
+        <div class="chipgrid">
+          <span class="rolechip">Teacher</span>
+          <span class="rolechip">Admin</span>
+          <span class="rolechip">Principal</span>
+          <span class="rolechip">Parent</span>
+          <span class="rolechip">Student</span>
+          <span class="rolechip">HR</span>
+          <span class="rolechip">Finance</span>
+          <span class="rolechip">Counselor</span>
+          <span class="rolechip">Librarian</span>
+          <span class="rolechip">IT</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="ai">
+      <div class="wrap">
+        <div class="head">
+          <div class="label">Intelligence</div>
+          <h2>Ten AI tools, three <em>thinking</em> modes.</h2>
+        </div>
+        <div class="ai-layout">
+          <div class="aitools-card">
+            <h3>The toolkit</h3>
+            <ul class="aitools">
+              <li>AI Insights Dashboard</li>
+              <li>Researcher Platform</li>
+              <li>AI Student Reports</li>
+              <li>AI Homework Builder</li>
+              <li>AI Exam Marking</li>
+              <li>AI Teaching Assistant</li>
+              <li>AI Presentation Builder</li>
+              <li>AI Schedule Optimizer</li>
+              <li>AI Rubric Generator</li>
+              <li>AI Lesson Planning</li>
+            </ul>
+          </div>
+          <div class="modes-card">
+            <h3>Thinking modes</h3>
+            <div class="mode"><span class="name">Fast</span><span class="desc">Instant drafts</span></div>
+            <div class="mode"><span class="name">Balanced</span><span class="desc">Default</span></div>
+            <div class="mode"><span class="name">Deep</span><span class="desc">Thorough</span></div>
+            <div class="safe">
+              <strong>Safe Mode</strong>
+              Default for student-facing use.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+      <div class="wrap">
+        <div class="head">
+          <div class="label">Pricing</div>
+          <h2>Transparent pricing. No per-seat <em>surprises</em>.</h2>
+        </div>
+        <div class="plans">
+          <div class="plan hi">
+            <div class="tier">For schools</div>
+            <div class="name">School All-in-One</div>
+            <div class="price">Custom quote</div>
+            <p class="desc">Full platform access, 16+ specialized roles, annual invoicing, and dedicated rollout support.</p>
+            <a href="#" class="plan-cta">Contact sales</a>
+          </div>
+          <div class="plan">
+            <div class="tier">For teachers</div>
+            <div class="name">Teacher</div>
+            <div class="price">Coming soon</div>
+            <p class="desc">Per-teacher monthly pricing, targeting approximately US$9.83 per month.</p>
+            <a href="#" class="plan-cta">Join waitlist</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonial">
+      <span class="blob blob-a"></span>
+      <span class="blob blob-b"></span>
+      <div class="wrap">
+        <div class="quote-card">
+          <span class="mark">“</span>
+          <blockquote>Elementals replaced five disconnected tools overnight. Our teachers got their evenings back.</blockquote>
+          <cite>— Head of School, Sample Academy</cite>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <span class="blob blob-a"></span>
+      <span class="blob blob-b"></span>
+      <div class="wrap">
+        <h2>Ready to unify your school operations?</h2>
+        <a href="#" class="btn-primary">Book a demo</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <div class="cols">
+        <div class="brand-col">
+          <div class="mark">Elementals</div>
+          <p>One platform for everything your school runs on.</p>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Roles</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">AI Tools</a></li>
+            <li><a href="#">Changelog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Help center</a></li>
+            <li><a href="#">API docs</a></li>
+            <li><a href="#">Status</a></li>
+            <li><a href="#">Security</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">DPA</a></li>
+            <li><a href="#">Cookies</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="baseline">
+        <span>© 2026 Elementals. All rights reserved.</span>
+        <span>Made warm for schools.</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

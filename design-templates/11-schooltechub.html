@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Elementals — AI-Native School Management Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Inspired by schooltechub.com — Hyper-Futuristic Design System -->
+  <style>
+    :root {
+      /* Deep Space Background */
+      --background: hsl(230, 35%, 7%);
+      --background-soft: hsl(230, 35%, 10%);
+      --foreground: hsl(220, 20%, 97%);
+      --muted: hsl(225, 25%, 15%);
+      --muted-foreground: hsl(220, 15%, 60%);
+      --card: hsl(225, 30%, 12%);
+      --border: hsl(225, 25%, 20%);
+
+      /* Holographic Cyan, Quantum Purple, Neural Green, Solar Gold */
+      --primary: hsl(185, 100%, 55%);
+      --secondary: hsl(270, 100%, 70%);
+      --accent: hsl(155, 100%, 50%);
+      --ai: hsl(45, 100%, 60%);
+
+      --glow-primary: hsla(185, 100%, 55%, 1);
+      --glow-secondary: hsla(270, 100%, 70%, 1);
+      --glow-accent: hsla(155, 100%, 50%, 1);
+      --glow-ai: hsla(45, 100%, 60%, 1);
+
+      --radius: 1rem;
+
+      --orbitron: 'Orbitron', 'Space Grotesk', sans-serif;
+      --space: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--background);
+      color: var(--foreground);
+      font-family: var(--space);
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      position: relative;
+    }
+    h1, h2, h3, h4, h5, h6 { font-family: var(--orbitron); }
+    a { color: inherit; text-decoration: none; }
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 32px;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* — Keyframes — */
+    @keyframes glow {
+      0%, 100% { box-shadow: 0 0 20px hsla(185, 100%, 55%, 0.5), 0 0 40px hsla(185, 100%, 55%, 0.3); }
+      50% { box-shadow: 0 0 30px hsla(185, 100%, 55%, 0.7), 0 0 60px hsla(185, 100%, 55%, 0.4); }
+    }
+    @keyframes pulse-glow {
+      0%, 100% { opacity: 1; filter: drop-shadow(0 0 10px hsla(185, 100%, 55%, 0.6)); }
+      50% { opacity: 0.85; filter: drop-shadow(0 0 20px hsla(185, 100%, 55%, 0.9)); }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-16px); }
+    }
+    @keyframes scan {
+      0% { transform: translateY(-100%); }
+      100% { transform: translateY(100%); }
+    }
+    @keyframes neon-pulse {
+      0%, 100% { text-shadow: 0 0 10px var(--glow-primary), 0 0 20px var(--glow-primary), 0 0 30px var(--glow-primary); }
+      50% { text-shadow: 0 0 20px var(--glow-primary), 0 0 30px var(--glow-primary), 0 0 40px var(--glow-primary); }
+    }
+    @keyframes holo-shift {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+    @keyframes gradient-rotate {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 200% 50%; }
+    }
+    @keyframes binary-scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    @keyframes ai-pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.7; transform: scale(1.1); }
+    }
+    @keyframes shimmer-flow {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+
+    /* — Global background — */
+    .bg-space {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(ellipse 80% 50% at 20% 10%, hsla(185, 100%, 55%, 0.12), transparent 60%),
+        radial-gradient(ellipse 60% 60% at 80% 30%, hsla(270, 100%, 70%, 0.1), transparent 60%),
+        radial-gradient(ellipse 70% 60% at 50% 80%, hsla(155, 100%, 50%, 0.08), transparent 60%);
+    }
+    .circuit-pattern {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%2300d4ff' stroke-width='0.4' opacity='0.09'%3E%3Cpath d='M50 0v30M50 70v30M0 50h30M70 50h30M25 25l15 15M60 60l15 15M25 75l15-15M60 40l15-15'/%3E%3Ccircle cx='50' cy='50' r='8'/%3E%3Ccircle cx='50' cy='20' r='3'/%3E%3Ccircle cx='50' cy='80' r='3'/%3E%3Ccircle cx='20' cy='50' r='3'/%3E%3Ccircle cx='80' cy='50' r='3'/%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3Ccircle cx='70' cy='70' r='2'/%3E%3Ccircle cx='30' cy='70' r='2'/%3E%3Ccircle cx='70' cy='30' r='2'/%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    /* — Holographic badge — */
+    .holo-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 20px;
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--primary);
+      background: linear-gradient(135deg,
+        hsla(185, 100%, 55%, 0.18) 0%,
+        hsla(270, 100%, 70%, 0.12) 50%,
+        hsla(155, 100%, 50%, 0.18) 100%);
+      background-size: 200% 200%;
+      border: 1px solid hsla(185, 100%, 55%, 0.35);
+      box-shadow: 0 0 24px hsla(185, 100%, 55%, 0.22);
+      animation: holo-shift 5s ease-in-out infinite;
+    }
+    .holo-badge .icon {
+      width: 14px; height: 14px;
+      background: currentColor;
+      clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+      animation: ai-pulse 2s ease-in-out infinite;
+    }
+    .holo-badge .sparkle {
+      width: 14px; height: 14px;
+      color: var(--ai);
+      background: currentColor;
+      clip-path: polygon(50% 0, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    }
+
+    /* — Holographic text — */
+    .holo-text {
+      background: linear-gradient(135deg,
+        var(--primary) 0%,
+        var(--secondary) 50%,
+        var(--accent) 100%);
+      background-size: 200% 200%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: holo-shift 4s ease-in-out infinite;
+    }
+
+    /* — Liquid glass card — */
+    .liquid-glass {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius);
+      background: linear-gradient(145deg,
+        hsla(225, 30%, 14%, 0.9) 0%,
+        hsla(230, 35%, 10%, 0.95) 100%);
+      backdrop-filter: blur(32px) saturate(180%);
+      -webkit-backdrop-filter: blur(32px) saturate(180%);
+      border: 1px solid hsla(185, 100%, 55%, 0.18);
+      box-shadow:
+        0 25px 60px -15px hsla(230, 40%, 5%, 0.5),
+        0 0 0 1px hsla(185, 100%, 55%, 0.1),
+        inset 0 1px 0 hsla(0, 0%, 100%, 0.08);
+      transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .liquid-glass::before {
+      content: "";
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg,
+        hsla(185, 100%, 55%, 0.05) 0%,
+        transparent 40%,
+        hsla(270, 100%, 70%, 0.04) 100%);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      pointer-events: none;
+    }
+    .liquid-glass:hover {
+      transform: translateY(-6px);
+      border-color: hsla(185, 100%, 55%, 0.4);
+      box-shadow:
+        0 40px 80px -20px hsla(230, 40%, 5%, 0.6),
+        0 0 60px hsla(185, 100%, 55%, 0.2),
+        0 0 120px hsla(270, 100%, 70%, 0.12);
+    }
+    .liquid-glass:hover::before { opacity: 1; }
+
+    /* — AI glow card — */
+    .ai-glow-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius);
+      background: linear-gradient(135deg,
+        hsla(45, 100%, 60%, 0.1) 0%,
+        hsla(230, 35%, 10%, 0.95) 30%,
+        hsla(230, 35%, 10%, 0.95) 70%,
+        hsla(270, 100%, 70%, 0.1) 100%);
+      border: 1px solid hsla(45, 100%, 60%, 0.3);
+      box-shadow:
+        0 0 40px hsla(45, 100%, 60%, 0.15),
+        inset 0 0 60px hsla(45, 100%, 60%, 0.05);
+    }
+
+    /* — Neon pulse button — */
+    .neon-pulse {
+      animation: glow 2.5s ease-in-out infinite;
+    }
+
+    /* — Scan line — */
+    .scan-line {
+      position: relative;
+      overflow: hidden;
+    }
+    .scan-line::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, hsla(185, 100%, 55%, 0.9), transparent);
+      animation: scan 3s ease-in-out infinite;
+    }
+
+    /* — Nav — */
+    nav.site {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      padding: 18px 0;
+      background: hsla(230, 35%, 7%, 0.7);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border-bottom: 1px solid hsla(185, 100%, 55%, 0.15);
+    }
+    nav.site .row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    nav.site .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: var(--orbitron);
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    nav.site .brand .mark {
+      width: 38px; height: 38px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 0 24px hsla(185, 100%, 55%, 0.5);
+      position: relative;
+    }
+    nav.site .brand .mark::before {
+      content: "E";
+      font-family: var(--orbitron);
+      font-size: 22px;
+      font-weight: 900;
+      color: hsl(230, 35%, 7%);
+    }
+    nav.site .brand .name {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    nav.site ul {
+      display: flex;
+      list-style: none;
+      gap: 36px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    nav.site ul a {
+      color: hsla(220, 20%, 97%, 0.75);
+      transition: color .25s;
+    }
+    nav.site ul a:hover { color: var(--primary); }
+    nav.site .cta {
+      padding: 12px 26px;
+      border-radius: 100px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: hsl(230, 35%, 7%);
+      font-weight: 700;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      box-shadow: 0 0 30px hsla(185, 100%, 55%, 0.4);
+      transition: all .25s;
+    }
+    nav.site .cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 50px hsla(185, 100%, 55%, 0.7);
+    }
+
+    /* — Hero — */
+    section.hero {
+      position: relative;
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      padding: 120px 0;
+      overflow: hidden;
+    }
+    section.hero .hero-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+    section.hero .holo-badge { margin-bottom: 32px; }
+    section.hero h1 {
+      font-family: var(--orbitron);
+      font-size: clamp(44px, 7vw, 92px);
+      font-weight: 800;
+      line-height: 1.02;
+      letter-spacing: -0.01em;
+      margin-bottom: 28px;
+      text-transform: uppercase;
+    }
+    section.hero h1 .line1 {
+      display: block;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 50%, var(--accent) 100%);
+      background-size: 200% 200%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: holo-shift 5s ease-in-out infinite;
+    }
+    section.hero h1 .line2 {
+      display: block;
+      color: var(--foreground);
+    }
+    section.hero .sub {
+      font-size: 20px;
+      color: hsla(220, 20%, 97%, 0.75);
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+    section.hero .desc {
+      font-size: 16px;
+      color: hsla(220, 20%, 97%, 0.6);
+      max-width: 62ch;
+      margin: 0 auto 36px;
+      line-height: 1.7;
+    }
+    .trust-row {
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      flex-wrap: wrap;
+      margin-bottom: 44px;
+      font-size: 14px;
+      color: hsla(220, 20%, 97%, 0.72);
+    }
+    .trust-row .item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .trust-row .check {
+      width: 18px; height: 18px;
+      border-radius: 50%;
+      background: hsla(155, 100%, 50%, 0.15);
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 900;
+    }
+    .trust-row .check::before { content: "✓"; }
+    .ctas {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      padding: 18px 40px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: hsl(230, 35%, 7%);
+      font-family: var(--orbitron);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      box-shadow: 0 0 40px hsla(185, 100%, 55%, 0.5);
+      transition: all .3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 70px hsla(185, 100%, 55%, 0.75);
+    }
+    .btn-primary .arrow::before { content: "→"; font-size: 20px; }
+    .btn-secondary {
+      padding: 18px 34px;
+      border-radius: 14px;
+      background: hsla(220, 20%, 97%, 0.05);
+      border: 1px solid hsla(220, 20%, 97%, 0.25);
+      color: var(--foreground);
+      font-family: var(--orbitron);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      transition: all .3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .btn-secondary:hover { background: hsla(220, 20%, 97%, 0.1); }
+    .btn-secondary .play::before { content: "▶"; font-size: 12px; color: var(--primary); }
+
+    /* — Hero floating cards — */
+    .hero-float {
+      position: absolute;
+      border-radius: 24px;
+      overflow: hidden;
+      width: 220px; height: 220px;
+      border: 1px solid hsla(185, 100%, 55%, 0.2);
+      background:
+        linear-gradient(145deg, hsla(225, 30%, 14%, 0.8), hsla(230, 35%, 10%, 0.95));
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      box-shadow: 0 30px 80px hsla(230, 40%, 5%, 0.7);
+      z-index: 1;
+      pointer-events: none;
+    }
+    .hero-float::after {
+      content: "";
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(circle at 25% 20%, hsla(185, 100%, 55%, 0.35), transparent 60%),
+        radial-gradient(circle at 80% 70%, hsla(270, 100%, 70%, 0.25), transparent 55%);
+      mix-blend-mode: screen;
+    }
+    .hero-float.a {
+      top: 14%;
+      left: 4%;
+      animation: float 14s ease-in-out infinite;
+    }
+    .hero-float.b {
+      bottom: 8%;
+      right: 4%;
+      width: 260px; height: 260px;
+      animation: float 18s ease-in-out infinite reverse;
+    }
+
+    /* — Problem-Solution — */
+    section.problem {
+      padding: 120px 0;
+      position: relative;
+    }
+    section.problem::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent, hsla(185, 100%, 55%, 0.025), transparent);
+    }
+    .section-head { text-align: center; margin-bottom: 64px; }
+    .section-head .holo-badge { margin-bottom: 18px; }
+    .section-head h2 {
+      font-size: clamp(34px, 5vw, 58px);
+      font-weight: 800;
+      color: var(--foreground);
+      margin-bottom: 14px;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      line-height: 1.05;
+    }
+    .section-head p {
+      font-size: 17px;
+      color: hsla(220, 20%, 97%, 0.6);
+      max-width: 62ch;
+      margin: 0 auto;
+    }
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .problem-card {
+      padding: 28px 26px;
+    }
+    .problem-card .before {
+      font-size: 13px;
+      color: hsla(220, 20%, 97%, 0.45);
+      text-decoration: line-through;
+      margin-bottom: 8px;
+    }
+    .problem-card .after {
+      font-size: 15px;
+      color: var(--foreground);
+      font-weight: 600;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      line-height: 1.5;
+    }
+    .problem-card .after::before {
+      content: "✓";
+      color: var(--accent);
+      font-weight: 900;
+      flex-shrink: 0;
+      font-size: 16px;
+      line-height: 1.4;
+    }
+
+    /* — Stats — */
+    section.stats {
+      padding: 80px 0;
+      position: relative;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .stat-card {
+      padding: 36px 28px;
+      text-align: center;
+    }
+    .stat-card .icon {
+      width: 52px; height: 52px;
+      margin: 0 auto 18px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, hsla(185, 100%, 55%, 0.18), hsla(270, 100%, 70%, 0.1));
+      border: 1px solid hsla(185, 100%, 55%, 0.3);
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 0 24px hsla(185, 100%, 55%, 0.25);
+    }
+    .stat-card .icon svg { width: 24px; height: 24px; stroke: var(--primary); fill: none; stroke-width: 2; }
+    .stat-card .num {
+      font-family: var(--orbitron);
+      font-size: 44px;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      line-height: 1;
+      margin-bottom: 8px;
+      letter-spacing: -0.015em;
+    }
+    .stat-card .label {
+      font-size: 13px;
+      color: hsla(220, 20%, 97%, 0.65);
+      letter-spacing: 0.04em;
+    }
+
+    /* — Modules — */
+    section.modules {
+      padding: 120px 0;
+      position: relative;
+    }
+    .modules-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .module-card {
+      padding: 40px 32px;
+      position: relative;
+    }
+    .module-card .icon-box {
+      width: 58px; height: 58px;
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 24px;
+      position: relative;
+    }
+    .module-card.c-primary .icon-box {
+      background: linear-gradient(135deg, hsla(185, 100%, 55%, 0.2), hsla(185, 100%, 55%, 0.05));
+      border: 1px solid hsla(185, 100%, 55%, 0.4);
+      box-shadow: 0 0 30px hsla(185, 100%, 55%, 0.25);
+    }
+    .module-card.c-primary .icon-box svg { stroke: var(--primary); }
+    .module-card.c-secondary .icon-box {
+      background: linear-gradient(135deg, hsla(270, 100%, 70%, 0.2), hsla(270, 100%, 70%, 0.05));
+      border: 1px solid hsla(270, 100%, 70%, 0.4);
+      box-shadow: 0 0 30px hsla(270, 100%, 70%, 0.25);
+    }
+    .module-card.c-secondary .icon-box svg { stroke: var(--secondary); }
+    .module-card.c-accent .icon-box {
+      background: linear-gradient(135deg, hsla(155, 100%, 50%, 0.2), hsla(155, 100%, 50%, 0.05));
+      border: 1px solid hsla(155, 100%, 50%, 0.4);
+      box-shadow: 0 0 30px hsla(155, 100%, 50%, 0.25);
+    }
+    .module-card.c-accent .icon-box svg { stroke: var(--accent); }
+    .module-card.c-ai .icon-box {
+      background: linear-gradient(135deg, hsla(45, 100%, 60%, 0.2), hsla(45, 100%, 60%, 0.05));
+      border: 1px solid hsla(45, 100%, 60%, 0.4);
+      box-shadow: 0 0 30px hsla(45, 100%, 60%, 0.25);
+    }
+    .module-card.c-ai .icon-box svg { stroke: var(--ai); }
+    .module-card .icon-box svg { width: 28px; height: 28px; fill: none; stroke-width: 2; }
+    .module-card .tag {
+      font-family: var(--orbitron);
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+    .module-card h3 {
+      font-family: var(--orbitron);
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+    }
+    .module-card p {
+      font-size: 14.5px;
+      color: hsla(220, 20%, 97%, 0.65);
+      line-height: 1.65;
+      margin-bottom: 20px;
+    }
+    .module-card .learn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--primary);
+      font-family: var(--orbitron);
+      letter-spacing: 0.05em;
+    }
+    .module-card .learn::after {
+      content: "→";
+      transition: transform .25s;
+    }
+    .module-card:hover .learn::after { transform: translateX(4px); }
+
+    /* — Roles — */
+    section.roles {
+      padding: 120px 0;
+      position: relative;
+    }
+    .roles-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 18px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .role-card {
+      padding: 28px 20px;
+      text-align: center;
+      cursor: pointer;
+    }
+    .role-card .icon {
+      width: 48px; height: 48px;
+      margin: 0 auto 14px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, hsla(185, 100%, 55%, 0.15), hsla(270, 100%, 70%, 0.08));
+      border: 1px solid hsla(185, 100%, 55%, 0.3);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .role-card .icon svg { width: 22px; height: 22px; stroke: var(--primary); fill: none; stroke-width: 2; }
+    .role-card .name {
+      font-family: var(--orbitron);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--foreground);
+    }
+
+    /* — AI — */
+    section.ai-section {
+      padding: 120px 0;
+      position: relative;
+    }
+    .ai-layout {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 28px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .ai-tools {
+      padding: 48px 44px;
+    }
+    .ai-tools h3 {
+      font-family: var(--orbitron);
+      font-size: 13px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ai);
+      margin-bottom: 28px;
+    }
+    .ai-tools .list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px 32px;
+    }
+    .ai-tools .list li {
+      padding: 16px 0;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--foreground);
+      border-bottom: 1px solid hsla(185, 100%, 55%, 0.1);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .ai-tools .list li::before {
+      content: "";
+      width: 28px; height: 28px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, hsla(45, 100%, 60%, 0.2), hsla(45, 100%, 60%, 0.05));
+      border: 1px solid hsla(45, 100%, 60%, 0.4);
+      flex-shrink: 0;
+      position: relative;
+    }
+    .ai-tools .list li::after {
+      content: "▸";
+      position: absolute;
+      margin-left: 9px;
+      color: var(--ai);
+      font-size: 12px;
+    }
+    .modes-card {
+      padding: 44px 36px;
+    }
+    .modes-card h3 {
+      font-family: var(--orbitron);
+      font-size: 13px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 24px;
+    }
+    .modes-card .mode {
+      padding: 18px 22px;
+      border-radius: 12px;
+      background: hsla(225, 30%, 14%, 0.6);
+      border: 1px solid hsla(185, 100%, 55%, 0.2);
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 12px;
+      transition: all .25s;
+    }
+    .modes-card .mode:hover {
+      border-color: var(--primary);
+      box-shadow: 0 0 24px hsla(185, 100%, 55%, 0.25);
+    }
+    .modes-card .mode .name {
+      font-family: var(--orbitron);
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .modes-card .mode .desc {
+      font-size: 11px;
+      color: hsla(220, 20%, 97%, 0.55);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .modes-card .safe {
+      margin-top: 22px;
+      padding: 16px 20px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, hsla(45, 100%, 60%, 0.12), hsla(45, 100%, 60%, 0.04));
+      border: 1px solid hsla(45, 100%, 60%, 0.3);
+      font-size: 12px;
+      color: hsla(220, 20%, 97%, 0.75);
+      line-height: 1.55;
+    }
+    .modes-card .safe strong {
+      display: block;
+      color: var(--ai);
+      font-family: var(--orbitron);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    /* — Pricing — */
+    section.pricing {
+      padding: 120px 0;
+      position: relative;
+    }
+    .plans {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .plan {
+      padding: 56px 44px;
+      text-align: center;
+      position: relative;
+    }
+    .plan.hi {
+      background:
+        linear-gradient(135deg,
+          hsla(185, 100%, 55%, 0.12) 0%,
+          hsla(230, 35%, 10%, 0.95) 40%,
+          hsla(230, 35%, 10%, 0.95) 60%,
+          hsla(270, 100%, 70%, 0.12) 100%);
+      border-color: hsla(185, 100%, 55%, 0.5);
+      box-shadow: 0 0 60px hsla(185, 100%, 55%, 0.25);
+    }
+    .plan.hi::before {
+      content: "RECOMMENDED";
+      position: absolute;
+      top: -12px; left: 50%;
+      transform: translateX(-50%);
+      padding: 6px 18px;
+      border-radius: 100px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: hsl(230, 35%, 7%);
+      font-family: var(--orbitron);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      box-shadow: 0 0 24px hsla(185, 100%, 55%, 0.5);
+    }
+    .plan .tier {
+      font-family: var(--orbitron);
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 18px;
+    }
+    .plan .name {
+      font-family: var(--orbitron);
+      font-size: 30px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+      margin-bottom: 14px;
+      line-height: 1.05;
+    }
+    .plan .price {
+      font-family: var(--orbitron);
+      font-size: 14px;
+      color: hsla(220, 20%, 97%, 0.7);
+      margin-bottom: 32px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid hsla(185, 100%, 55%, 0.15);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .plan p.desc {
+      font-size: 14.5px;
+      color: hsla(220, 20%, 97%, 0.7);
+      line-height: 1.7;
+      margin-bottom: 36px;
+      max-width: 34ch;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .plan-cta {
+      display: inline-block;
+      padding: 16px 38px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: hsl(230, 35%, 7%);
+      font-family: var(--orbitron);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      box-shadow: 0 0 30px hsla(185, 100%, 55%, 0.4);
+      transition: all .25s;
+    }
+    .plan-cta:hover { transform: translateY(-2px); box-shadow: 0 0 50px hsla(185, 100%, 55%, 0.65); }
+
+    /* — Testimonial — */
+    section.testimonial {
+      padding: 120px 0;
+      position: relative;
+    }
+    .quote-wrap {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 72px 64px;
+      text-align: center;
+    }
+    .quote-wrap .mark {
+      font-family: var(--orbitron);
+      font-size: 72px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      line-height: 0.5;
+      display: block;
+      margin-bottom: 28px;
+    }
+    .quote-wrap blockquote {
+      font-family: var(--orbitron);
+      font-size: clamp(22px, 3vw, 34px);
+      font-weight: 600;
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+      color: var(--foreground);
+      text-transform: none;
+    }
+    .quote-wrap cite {
+      display: block;
+      margin-top: 36px;
+      font-family: var(--orbitron);
+      font-size: 11px;
+      font-style: normal;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--primary);
+    }
+
+    /* — CTA band — */
+    section.cta-band {
+      padding: 160px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    section.cta-band::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at center, hsla(185, 100%, 55%, 0.25), transparent 60%),
+        radial-gradient(ellipse at 30% 40%, hsla(270, 100%, 70%, 0.15), transparent 70%);
+    }
+    section.cta-band .inner {
+      position: relative;
+      z-index: 2;
+    }
+    section.cta-band h2 {
+      font-family: var(--orbitron);
+      font-size: clamp(42px, 6.5vw, 86px);
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      max-width: 16ch;
+      margin: 0 auto 52px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary), var(--accent));
+      background-size: 200% 200%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: holo-shift 5s ease-in-out infinite;
+    }
+
+    /* — Footer — */
+    footer.site {
+      padding: 80px 0 44px;
+      border-top: 1px solid hsla(185, 100%, 55%, 0.15);
+      background: hsla(230, 35%, 5%, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      position: relative;
+    }
+    footer.site .cols {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+    footer.site .brand-col .mark {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: var(--orbitron);
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    footer.site .brand-col .mark .logo {
+      width: 34px; height: 34px;
+      border-radius: 9px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--orbitron);
+      font-size: 18px;
+      font-weight: 900;
+      color: hsl(230, 35%, 7%);
+      box-shadow: 0 0 20px hsla(185, 100%, 55%, 0.5);
+    }
+    footer.site .brand-col .mark .logo::before { content: "E"; }
+    footer.site .brand-col .mark .name {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    footer.site .brand-col p {
+      color: hsla(220, 20%, 97%, 0.6);
+      font-size: 14px;
+      max-width: 28ch;
+      line-height: 1.6;
+    }
+    footer.site h4 {
+      font-family: var(--orbitron);
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 18px;
+      font-weight: 700;
+    }
+    footer.site ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    footer.site ul a {
+      color: hsla(220, 20%, 97%, 0.6);
+      font-size: 14px;
+      transition: color .25s;
+    }
+    footer.site ul a:hover { color: var(--primary); }
+    footer.site .baseline {
+      padding-top: 36px;
+      border-top: 1px solid hsla(185, 100%, 55%, 0.1);
+      display: flex;
+      justify-content: space-between;
+      font-family: var(--orbitron);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: hsla(220, 20%, 97%, 0.4);
+    }
+
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0;
+      margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0);
+      white-space: nowrap; border: 0;
+    }
+
+    @media (max-width: 1024px) {
+      .problem-grid { grid-template-columns: repeat(2, 1fr); }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .modules-grid { grid-template-columns: repeat(2, 1fr); }
+      .roles-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 720px) {
+      nav.site ul { display: none; }
+      section.hero { padding: 60px 0; min-height: auto; }
+      section.hero h1 { font-size: 44px; }
+      .trust-row { gap: 14px; font-size: 13px; }
+      .hero-float { display: none; }
+      .problem-grid, .stats-grid, .modules-grid { grid-template-columns: 1fr; }
+      .roles-grid { grid-template-columns: repeat(2, 1fr); }
+      .ai-layout { grid-template-columns: 1fr; }
+      .ai-tools .list { grid-template-columns: 1fr; }
+      .plans { grid-template-columns: 1fr; }
+      footer.site .cols { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg-space"></div>
+  <div class="circuit-pattern"></div>
+
+  <nav class="site">
+    <div class="container row">
+      <a href="#" class="brand">
+        <span class="mark"></span>
+        <span class="name">Elementals</span>
+      </a>
+      <ul>
+        <li><a href="#modules">Features</a></li>
+        <li><a href="#roles">Roles</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <a href="#" class="cta">Start Free Trial</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero-float a"></div>
+      <div class="hero-float b"></div>
+      <div class="container">
+        <div class="hero-inner">
+          <div class="holo-badge">
+            <span class="icon"></span>
+            <span>AI-Native Platform · Est. 2026</span>
+            <span class="sparkle"></span>
+          </div>
+          <h1>
+            <span class="line1">Empowering Schools</span>
+            <span class="line2">with AI at the core</span>
+          </h1>
+          <p class="sub">One platform for everything your school runs on.</p>
+          <p class="desc">Built for schools: 16+ specialized roles, 20+ integrated modules, and 10 AI tools — all in one place.</p>
+          <div class="trust-row">
+            <div class="item"><span class="check"></span>Free 14-day trial</div>
+            <div class="item"><span class="check"></span>No credit card required</div>
+            <div class="item"><span class="check"></span>FERPA &amp; GDPR compliant</div>
+          </div>
+          <div class="ctas">
+            <a href="#" class="btn-primary neon-pulse">Book a demo <span class="arrow"></span></a>
+            <a href="#modules" class="btn-secondary"><span class="play"></span> See how it works</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROBLEM-SOLUTION ============ -->
+    <section class="problem">
+      <div class="container">
+        <div class="section-head">
+          <div class="holo-badge">
+            <span class="icon"></span>
+            <span>The Problem We Solve</span>
+          </div>
+          <h2>From Chaos to Clarity</h2>
+          <p>Teachers juggle 5+ apps daily. Data doesn't flow between systems. We changed that.</p>
+        </div>
+        <div class="problem-grid">
+          <div class="problem-card liquid-glass">
+            <div class="before">Jumping between ClassDojo, Google Classroom, and a gradebook.</div>
+            <div class="after">One unified classroom experience from behavior to grades.</div>
+          </div>
+          <div class="problem-card liquid-glass">
+            <div class="before">Writing report cards on weekends.</div>
+            <div class="after">AI drafts reports in minutes, with teacher approval.</div>
+          </div>
+          <div class="problem-card liquid-glass">
+            <div class="before">Spreadsheets that never agree on the schedule.</div>
+            <div class="after">Constraint-aware AI scheduling that actually works.</div>
+          </div>
+          <div class="problem-card liquid-glass">
+            <div class="before">Paper behavior forms that parents never see.</div>
+            <div class="after">Real-time parent updates from every classroom.</div>
+          </div>
+          <div class="problem-card liquid-glass">
+            <div class="before">Five different logins for HR, finance, and curriculum.</div>
+            <div class="after">One sign-in, one system, 16+ role-aware dashboards.</div>
+          </div>
+          <div class="problem-card liquid-glass">
+            <div class="before">Data locked in silos, reports that take days.</div>
+            <div class="after">Ask questions about your data in plain English.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STATS ============ -->
+    <section class="stats">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-card liquid-glass">
+            <div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg></div>
+            <span class="sr-only">16+ roles</span>
+            <div class="num">16+</div>
+            <div class="label">Specialized Roles</div>
+          </div>
+          <div class="stat-card liquid-glass">
+            <div class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div>
+            <span class="sr-only">20+ modules</span>
+            <div class="num">20+</div>
+            <div class="label">Integrated Modules</div>
+          </div>
+          <div class="stat-card liquid-glass">
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 6v6l4 2"/></svg></div>
+            <span class="sr-only">10 AI tools</span>
+            <div class="num">10</div>
+            <div class="label">AI Tools</div>
+          </div>
+          <div class="stat-card liquid-glass">
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M20 12c0 4-4 8-8 8s-8-4-8-8 4-8 8-8"/><path d="M20 4v4h-4"/></svg></div>
+            <div class="num">97%</div>
+            <div class="label">Teacher Satisfaction</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MODULES ============ -->
+    <section class="modules" id="modules">
+      <div class="container">
+        <div class="section-head">
+          <div class="holo-badge">
+            <span class="icon"></span>
+            <span>Core Modules</span>
+          </div>
+          <h2>Everything your school runs on</h2>
+          <p>Six interconnected modules that cover every corner of school operations — from classroom behavior to AI-driven insights.</p>
+        </div>
+        <div class="modules-grid">
+          <div class="module-card liquid-glass c-primary">
+            <div class="icon-box"><svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5 2 7L12 16l-6.5 4.5 2-7L2 9h7z" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="tag">Module 01 · Behavior</div>
+            <h3>ClassSpark Behavior</h3>
+            <p>Real-time points, badges, and parent updates from the classroom.</p>
+            <a href="#" class="learn">Learn more</a>
+          </div>
+          <div class="module-card liquid-glass c-secondary">
+            <div class="icon-box"><svg viewBox="0 0 24 24"><path d="M3 12h4l3-9 4 18 3-9h4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="tag">Module 02 · Mastery</div>
+            <h3>Skills Gradebook</h3>
+            <p>Mastery tracking on a 4-level scale with heatmap dashboards.</p>
+            <a href="#" class="learn">Learn more</a>
+          </div>
+          <div class="module-card liquid-glass c-accent">
+            <div class="icon-box"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+            <div class="tag">Module 03 · Timetable</div>
+            <h3>AI Scheduling</h3>
+            <p>Build timetables in minutes with constraint-aware optimization.</p>
+            <a href="#" class="learn">Learn more</a>
+          </div>
+          <div class="module-card liquid-glass c-primary">
+            <div class="icon-box"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg></div>
+            <div class="tag">Module 04 · Assess</div>
+            <h3>Exams &amp; Marking</h3>
+            <p>Full assessment lifecycle from draft to transcript.</p>
+            <a href="#" class="learn">Learn more</a>
+          </div>
+          <div class="module-card liquid-glass c-ai">
+            <div class="icon-box"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 10v6M1 12h6m10 0h6M4.22 4.22l4.24 4.24m7.08 7.08l4.24 4.24M4.22 19.78l4.24-4.24m7.08-7.08l4.24-4.24"/></svg></div>
+            <div class="tag">Module 05 · AI</div>
+            <h3>AI Teaching Assistant</h3>
+            <p>Lesson plans, rubrics, and differentiated homework in seconds.</p>
+            <a href="#" class="learn">Learn more</a>
+          </div>
+          <div class="module-card liquid-glass c-secondary">
+            <div class="icon-box"><svg viewBox="0 0 24 24"><path d="M3 3v18h18M7 14l4-4 4 4 5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="tag">Module 06 · Analytics</div>
+            <h3>Insights &amp; Reports</h3>
+            <p>Ask questions about your data in plain English.</p>
+            <a href="#" class="learn">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ROLES ============ -->
+    <section class="roles" id="roles">
+      <div class="container">
+        <div class="section-head">
+          <div class="holo-badge">
+            <span class="icon"></span>
+            <span>User Layer</span>
+          </div>
+          <h2>Built for everyone who runs a school</h2>
+          <p>Ten specialized roles, one unified system. Each persona gets exactly the view they need.</p>
+        </div>
+        <div class="roles-grid">
+          <div class="role-card liquid-glass"><div class="icon"><svg viewBox="0 0 24 24"><path d="M22 10L12 5 2 10l10 5 10-5zM6 12v5c3 3 9 3 12 0v-5"/></svg></div><div class="name">Teacher</div></div>
+          <div class="role-card liquid-glass"><div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg></div><div class="name">Admin</div></div>
+          <div class="role-card liquid-glass"><div class="icon"><svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5 2 7L12 16l-6.5 4.5 2-7L2 9h7z"/></svg></div><div class="name">Principal</div></div>
+          <div class="role-card liquid-glass"><div class="icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/><circle cx="9" cy="7" r="4"/></svg></div><div class="name">Parent</div></div>
+          <div class="role-card liquid-glass"><div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg></div><div class="name">Student</div></div>
+          <div class="role-card liquid-glass"><div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div class="name">HR</div></div>
+          <div class="role-card liquid-glass"><div class="icon"><svg viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h12"/></svg></div><div class="name">Finance</div></div>
+          <div class="role-card liquid-glass"><div class="icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div><div class="name">Counselor</div></div>
+          <div class="role-card liquid-glass"><div class="icon"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div><div class="name">Librarian</div></div>
+          <div class="role-card liquid-glass"><div class="icon"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 22h8M12 18v4"/></svg></div><div class="name">IT</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ AI ============ -->
+    <section class="ai-section">
+      <div class="container">
+        <div class="section-head">
+          <div class="holo-badge">
+            <span class="icon"></span>
+            <span>AI Layer</span>
+          </div>
+          <h2>10 AI tools · 3 thinking modes</h2>
+          <p>Every feature is AI-augmented. Dial the depth from instant drafts to deeply-reasoned analysis.</p>
+        </div>
+        <div class="ai-layout">
+          <div class="ai-tools ai-glow-card">
+            <h3>// AI Toolkit</h3>
+            <ul class="list">
+              <li>AI Insights Dashboard</li>
+              <li>Researcher Platform</li>
+              <li>AI Student Reports</li>
+              <li>AI Homework Builder</li>
+              <li>AI Exam Marking</li>
+              <li>AI Teaching Assistant</li>
+              <li>AI Presentation Builder</li>
+              <li>AI Schedule Optimizer</li>
+              <li>AI Rubric Generator</li>
+              <li>AI Lesson Planning</li>
+            </ul>
+          </div>
+          <div class="modes-card liquid-glass">
+            <h3>// Thinking Modes</h3>
+            <div class="mode"><span class="name">Fast</span><span class="desc">Instant</span></div>
+            <div class="mode"><span class="name">Balanced</span><span class="desc">Default</span></div>
+            <div class="mode"><span class="name">Deep</span><span class="desc">Thorough</span></div>
+            <div class="safe">
+              <strong>Safe Mode</strong>
+              Default for student-facing use — context and privacy preserved.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRICING ============ -->
+    <section class="pricing" id="pricing">
+      <div class="container">
+        <div class="section-head">
+          <div class="holo-badge">
+            <span class="icon"></span>
+            <span>Pricing</span>
+          </div>
+          <h2>Transparent pricing. No per-seat surprises.</h2>
+          <p>Priced by the school, not the seat. Choose the path that fits.</p>
+        </div>
+        <div class="plans">
+          <div class="plan liquid-glass hi">
+            <div class="tier">For Schools</div>
+            <div class="name">School All-in-One</div>
+            <div class="price">Custom Quote</div>
+            <p class="desc">Full platform access, 16+ specialized roles, annual invoicing, and dedicated rollout support.</p>
+            <a href="#" class="plan-cta">Contact Sales</a>
+          </div>
+          <div class="plan liquid-glass">
+            <div class="tier">For Teachers</div>
+            <div class="name">Teacher</div>
+            <div class="price">Coming Soon</div>
+            <p class="desc">Per-teacher monthly pricing, targeting approximately US$9.83 per month.</p>
+            <a href="#" class="plan-cta">Join Waitlist</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIAL ============ -->
+    <section class="testimonial">
+      <div class="container">
+        <div class="quote-wrap liquid-glass">
+          <span class="mark">“</span>
+          <blockquote>Elementals replaced five disconnected tools overnight. Our teachers got their evenings back.</blockquote>
+          <cite>— Head of School, Sample Academy</cite>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA BAND ============ -->
+    <section class="cta-band">
+      <div class="container inner">
+        <h2>Ready to unify your school operations?</h2>
+        <div class="ctas">
+          <a href="#" class="btn-primary neon-pulse">Book a demo <span class="arrow"></span></a>
+          <a href="#" class="btn-secondary">Contact sales</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site">
+    <div class="container">
+      <div class="cols">
+        <div class="brand-col">
+          <div class="mark">
+            <span class="logo"></span>
+            <span class="name">Elementals</span>
+          </div>
+          <p>AI-native school management platform. One platform for everything your school runs on.</p>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Roles</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">AI Tools</a></li>
+            <li><a href="#">Changelog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Help center</a></li>
+            <li><a href="#">API docs</a></li>
+            <li><a href="#">Status</a></li>
+            <li><a href="#">Security</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">DPA</a></li>
+            <li><a href="#">Cookies</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="baseline">
+        <span>© 2026 Elementals. All rights reserved.</span>
+        <span>Inspired by SchoolTech Hub · v26.04</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

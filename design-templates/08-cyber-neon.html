@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ELEMENTALS // One platform for everything your school runs on.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0420;
+      --bg-2: #12082e;
+      --bg-3: #180d3b;
+      --fg: #ffffff;
+      --fg-soft: rgba(255, 255, 255, 0.72);
+      --fg-dim: rgba(255, 255, 255, 0.42);
+      --pink: #ff006e;
+      --cyan: #00f5ff;
+      --purple: #9d4edd;
+      --yellow: #ffee32;
+      --border: rgba(255, 0, 110, 0.35);
+      --border-cyan: rgba(0, 245, 255, 0.35);
+      --display: 'Orbitron', 'Space Grotesk', sans-serif;
+      --body: 'Space Grotesk', system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--body);
+      font-size: 15px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 0 32px; position: relative; z-index: 2; }
+
+    /* — Global overlays — */
+    .grid-bg {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255, 0, 110, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 245, 255, 0.08) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    .nebula {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(ellipse at 20% 20%, rgba(255, 0, 110, 0.25), transparent 50%),
+        radial-gradient(ellipse at 80% 40%, rgba(0, 245, 255, 0.2), transparent 50%),
+        radial-gradient(ellipse at 50% 100%, rgba(157, 78, 221, 0.25), transparent 60%);
+      filter: blur(40px);
+    }
+
+    /* — Nav — */
+    nav.site {
+      padding: 24px 0;
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(10, 4, 32, 0.8);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+    nav.site .row {
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    nav.site .brand {
+      font-family: var(--display);
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      color: var(--fg);
+      text-shadow: 0 0 8px var(--pink), 0 0 16px var(--pink);
+    }
+    nav.site ul {
+      display: flex; list-style: none; gap: 36px;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    nav.site ul a { color: var(--fg-soft); transition: all .25s; position: relative; }
+    nav.site ul a:hover {
+      color: var(--cyan);
+      text-shadow: 0 0 8px var(--cyan);
+    }
+    nav.site .cta {
+      padding: 12px 26px;
+      background: linear-gradient(135deg, var(--pink), var(--purple));
+      color: var(--fg);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      box-shadow: 0 0 20px rgba(255, 0, 110, 0.5);
+      clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
+      transition: all .25s;
+    }
+    nav.site .cta:hover { box-shadow: 0 0 40px rgba(255, 0, 110, 0.8); }
+
+    /* — Section labels — */
+    .label {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-family: var(--display);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--cyan);
+      margin-bottom: 28px;
+      text-shadow: 0 0 6px var(--cyan);
+    }
+    .label::before {
+      content: "";
+      width: 24px; height: 1px;
+      background: var(--cyan);
+      box-shadow: 0 0 6px var(--cyan);
+    }
+
+    /* — HUD corner brackets — */
+    .hud { position: relative; }
+    .hud::before, .hud::after {
+      content: "";
+      position: absolute;
+      width: 18px; height: 18px;
+      border: 2px solid var(--pink);
+      pointer-events: none;
+    }
+    .hud::before {
+      top: -2px; left: -2px;
+      border-right: none; border-bottom: none;
+    }
+    .hud::after {
+      bottom: -2px; right: -2px;
+      border-left: none; border-top: none;
+    }
+    .hud-cyan::before, .hud-cyan::after { border-color: var(--cyan); }
+
+    /* — Hero — */
+    section.hero {
+      padding: 120px 0 160px;
+      position: relative;
+      overflow: hidden;
+    }
+    .grid-floor {
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 200%;
+      height: 50%;
+      transform: translateX(-50%) perspective(600px) rotateX(65deg);
+      transform-origin: top center;
+      background-image:
+        linear-gradient(rgba(255, 0, 110, 0.5) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 245, 255, 0.5) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.9), transparent);
+      -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.9), transparent);
+      pointer-events: none;
+    }
+    section.hero .inner { position: relative; z-index: 2; }
+    section.hero h1 {
+      font-family: var(--display);
+      font-size: clamp(48px, 7.5vw, 108px);
+      font-weight: 800;
+      line-height: 0.92;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      margin-bottom: 36px;
+      max-width: 13ch;
+      color: var(--fg);
+      text-shadow:
+        0 0 10px rgba(255, 0, 110, 0.8),
+        0 0 20px rgba(255, 0, 110, 0.5),
+        0 0 40px rgba(255, 0, 110, 0.3);
+    }
+    section.hero h1 .cyan {
+      color: var(--cyan);
+      text-shadow:
+        0 0 10px var(--cyan),
+        0 0 20px rgba(0, 245, 255, 0.5),
+        0 0 40px rgba(0, 245, 255, 0.3);
+    }
+    section.hero .sub {
+      max-width: 58ch;
+      margin-bottom: 48px;
+      font-size: 18px;
+      color: var(--fg-soft);
+      line-height: 1.6;
+      padding: 20px 24px;
+      background: rgba(10, 4, 32, 0.5);
+      border-left: 2px solid var(--cyan);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+    .ctas { display: flex; gap: 18px; flex-wrap: wrap; align-items: center; }
+    .btn-primary {
+      padding: 18px 38px;
+      background: linear-gradient(135deg, var(--pink) 0%, var(--purple) 100%);
+      color: var(--fg);
+      font-family: var(--display);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      clip-path: polygon(10px 0, 100% 0, calc(100% - 10px) 100%, 0 100%);
+      box-shadow: 0 0 40px rgba(255, 0, 110, 0.6);
+      transition: all .25s;
+    }
+    .btn-primary:hover {
+      box-shadow: 0 0 80px rgba(255, 0, 110, 0.9);
+      transform: translateY(-2px);
+    }
+    .btn-secondary {
+      padding: 18px 32px;
+      background: transparent;
+      border: 1px solid var(--cyan);
+      color: var(--cyan);
+      font-family: var(--display);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      clip-path: polygon(10px 0, 100% 0, calc(100% - 10px) 100%, 0 100%);
+      box-shadow: 0 0 20px rgba(0, 245, 255, 0.3);
+      transition: all .25s;
+    }
+    .btn-secondary:hover {
+      background: rgba(0, 245, 255, 0.1);
+      box-shadow: 0 0 40px rgba(0, 245, 255, 0.5);
+    }
+
+    /* — Stats — */
+    section.stats { padding: 60px 0 100px; }
+    section.stats .row {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    section.stats .stat {
+      padding: 44px 32px;
+      background: rgba(10, 4, 32, 0.6);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      text-align: center;
+      position: relative;
+    }
+    section.stats .num {
+      font-family: var(--display);
+      font-size: 72px;
+      font-weight: 800;
+      line-height: 1;
+      color: var(--cyan);
+      text-shadow:
+        0 0 10px var(--cyan),
+        0 0 20px rgba(0, 245, 255, 0.5);
+      margin-bottom: 10px;
+      letter-spacing: -0.02em;
+    }
+    section.stats .cap {
+      font-family: var(--display);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--fg-soft);
+    }
+
+    /* — Features — */
+    section.features { padding: 120px 0; }
+    section.features .head { text-align: center; margin-bottom: 80px; }
+    section.features .head .label { margin: 0 auto 24px; }
+    section.features h2 {
+      font-family: var(--display);
+      font-size: clamp(40px, 5.5vw, 72px);
+      line-height: 1;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      max-width: 18ch;
+      margin: 0 auto;
+      text-shadow: 0 0 10px rgba(255, 0, 110, 0.6);
+    }
+    section.features .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .feature {
+      padding: 40px 32px;
+      background: rgba(18, 8, 46, 0.6);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      transition: all .3s;
+      clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
+    }
+    .feature:hover {
+      background: rgba(24, 13, 59, 0.8);
+      border-color: var(--cyan);
+      transform: translateY(-4px);
+      box-shadow: 0 0 40px rgba(0, 245, 255, 0.25);
+    }
+    .feature .fnum {
+      font-family: var(--display);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      color: var(--pink);
+      margin-bottom: 18px;
+      text-shadow: 0 0 6px rgba(255, 0, 110, 0.6);
+    }
+    .feature h3 {
+      font-family: var(--display);
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+    }
+    .feature p {
+      font-size: 14px;
+      color: var(--fg-soft);
+      line-height: 1.65;
+    }
+
+    /* — Roles — */
+    section.roles {
+      padding: 120px 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+    section.roles::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center, rgba(157, 78, 221, 0.15), transparent 60%);
+    }
+    section.roles .head { text-align: center; margin-bottom: 64px; position: relative; }
+    section.roles .head .label { margin: 0 auto 24px; }
+    section.roles h2 {
+      font-family: var(--display);
+      font-size: clamp(40px, 5.5vw, 72px);
+      line-height: 1;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      max-width: 16ch;
+      margin: 0 auto;
+      text-shadow: 0 0 10px rgba(255, 0, 110, 0.6);
+    }
+    .chipgrid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+      max-width: 1000px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .rolechip {
+      padding: 22px 18px;
+      background: rgba(10, 4, 32, 0.6);
+      border: 1px solid var(--border);
+      font-family: var(--display);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-align: center;
+      transition: all .25s;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      position: relative;
+    }
+    .rolechip::before {
+      content: "";
+      position: absolute;
+      top: -1px; left: -1px;
+      width: 12px; height: 12px;
+      border-top: 2px solid var(--cyan);
+      border-left: 2px solid var(--cyan);
+    }
+    .rolechip::after {
+      content: "";
+      position: absolute;
+      bottom: -1px; right: -1px;
+      width: 12px; height: 12px;
+      border-bottom: 2px solid var(--pink);
+      border-right: 2px solid var(--pink);
+    }
+    .rolechip:hover {
+      background: rgba(255, 0, 110, 0.15);
+      color: var(--cyan);
+      text-shadow: 0 0 8px var(--cyan);
+      box-shadow: 0 0 30px rgba(255, 0, 110, 0.4);
+    }
+
+    /* — AI — */
+    section.ai { padding: 120px 0; }
+    section.ai .head { text-align: center; margin-bottom: 72px; }
+    section.ai .head .label { margin: 0 auto 24px; }
+    section.ai h2 {
+      font-family: var(--display);
+      font-size: clamp(40px, 5.5vw, 72px);
+      line-height: 1;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      max-width: 18ch;
+      margin: 0 auto;
+      text-shadow: 0 0 10px rgba(255, 0, 110, 0.6);
+    }
+    .ai-layout {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 24px;
+    }
+    .aitools-card {
+      padding: 48px 44px;
+      background: rgba(18, 8, 46, 0.6);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      position: relative;
+    }
+    .aitools-card h3 {
+      font-family: var(--display);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--cyan);
+      margin-bottom: 28px;
+      text-shadow: 0 0 6px var(--cyan);
+    }
+    .aitools {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px 28px;
+    }
+    .aitools li {
+      padding: 14px 0;
+      font-size: 14px;
+      color: var(--fg);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      font-weight: 500;
+    }
+    .aitools li::before {
+      content: "▸";
+      color: var(--pink);
+      text-shadow: 0 0 6px var(--pink);
+      font-size: 12px;
+    }
+    .modes-card {
+      padding: 48px 36px;
+      background: linear-gradient(180deg, rgba(255, 0, 110, 0.1), rgba(157, 78, 221, 0.1));
+      border: 1px solid var(--pink);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      position: relative;
+      box-shadow: 0 0 40px rgba(255, 0, 110, 0.2);
+    }
+    .modes-card h3 {
+      font-family: var(--display);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--pink);
+      margin-bottom: 24px;
+      text-shadow: 0 0 6px var(--pink);
+    }
+    .mode {
+      padding: 14px 18px;
+      background: rgba(10, 4, 32, 0.5);
+      border: 1px solid rgba(0, 245, 255, 0.25);
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      transition: all .25s;
+    }
+    .mode:hover {
+      border-color: var(--cyan);
+      box-shadow: 0 0 20px rgba(0, 245, 255, 0.3);
+    }
+    .mode .name {
+      font-family: var(--display);
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .mode .desc {
+      font-size: 10px;
+      color: var(--fg-dim);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .safe {
+      margin-top: 18px;
+      padding: 14px 18px;
+      background: rgba(255, 238, 50, 0.1);
+      border: 1px solid rgba(255, 238, 50, 0.4);
+      font-size: 12px;
+      color: var(--yellow);
+    }
+    .safe strong {
+      display: block;
+      font-family: var(--display);
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+      text-shadow: 0 0 4px var(--yellow);
+    }
+
+    /* — Pricing — */
+    section.pricing {
+      padding: 120px 0;
+      border-top: 1px solid var(--border);
+    }
+    section.pricing .head { text-align: center; margin-bottom: 80px; }
+    section.pricing .head .label { margin: 0 auto 24px; }
+    section.pricing h2 {
+      font-family: var(--display);
+      font-size: clamp(40px, 5.5vw, 72px);
+      line-height: 1;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      max-width: 16ch;
+      margin: 0 auto;
+      text-shadow: 0 0 10px rgba(255, 0, 110, 0.6);
+    }
+    .plans {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .plan {
+      padding: 56px 44px;
+      background: rgba(18, 8, 46, 0.7);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      text-align: center;
+      position: relative;
+      clip-path: polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 24px 100%, 0 calc(100% - 24px));
+    }
+    .plan.hi {
+      background: linear-gradient(180deg, rgba(255, 0, 110, 0.18), rgba(157, 78, 221, 0.1));
+      border-color: var(--pink);
+      box-shadow: 0 0 60px rgba(255, 0, 110, 0.3);
+    }
+    .plan .tier {
+      font-family: var(--display);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--cyan);
+      text-shadow: 0 0 6px var(--cyan);
+      margin-bottom: 18px;
+    }
+    .plan.hi .tier { color: var(--pink); text-shadow: 0 0 6px var(--pink); }
+    .plan .name {
+      font-family: var(--display);
+      font-size: 30px;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      line-height: 1.05;
+    }
+    .plan .price {
+      font-family: var(--display);
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--fg-soft);
+      margin-bottom: 32px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+    .plan p.desc {
+      font-size: 14px;
+      color: var(--fg-soft);
+      line-height: 1.65;
+      margin-bottom: 32px;
+      max-width: 34ch;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .plan-cta {
+      display: inline-block;
+      padding: 16px 34px;
+      background: linear-gradient(135deg, var(--pink), var(--purple));
+      color: var(--fg);
+      font-family: var(--display);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      clip-path: polygon(10px 0, 100% 0, calc(100% - 10px) 100%, 0 100%);
+      transition: all .25s;
+    }
+    .plan-cta:hover { box-shadow: 0 0 40px rgba(255, 0, 110, 0.6); }
+
+    /* — Testimonial — */
+    section.testimonial { padding: 140px 0; }
+    .quote-wrap {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 72px 64px;
+      background: rgba(18, 8, 46, 0.7);
+      border: 1px solid var(--cyan);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      text-align: center;
+      box-shadow: 0 0 60px rgba(0, 245, 255, 0.25);
+      position: relative;
+      clip-path: polygon(0 0, calc(100% - 30px) 0, 100% 30px, 100% 100%, 30px 100%, 0 calc(100% - 30px));
+    }
+    .quote-wrap .mark {
+      font-family: var(--display);
+      font-size: 96px;
+      color: var(--pink);
+      line-height: 0.4;
+      display: block;
+      margin-bottom: 30px;
+      text-shadow: 0 0 20px var(--pink);
+    }
+    .quote-wrap blockquote {
+      font-family: var(--display);
+      font-size: clamp(22px, 3vw, 36px);
+      font-weight: 600;
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+      color: var(--fg);
+      text-shadow: 0 0 10px rgba(0, 245, 255, 0.3);
+    }
+    .quote-wrap cite {
+      display: block;
+      margin-top: 40px;
+      font-family: var(--display);
+      font-size: 11px;
+      font-style: normal;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--cyan);
+      text-shadow: 0 0 6px var(--cyan);
+    }
+
+    /* — CTA band — */
+    section.cta-band {
+      padding: 180px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      border-top: 1px solid var(--border);
+    }
+    section.cta-band::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at center, rgba(255, 0, 110, 0.25), transparent 60%),
+        radial-gradient(ellipse at center, rgba(0, 245, 255, 0.15), transparent 70%);
+    }
+    section.cta-band .inner { position: relative; z-index: 2; }
+    section.cta-band h2 {
+      font-family: var(--display);
+      font-size: clamp(48px, 7vw, 108px);
+      font-weight: 900;
+      line-height: 0.95;
+      letter-spacing: -0.025em;
+      text-transform: uppercase;
+      max-width: 14ch;
+      margin: 0 auto 56px;
+      text-shadow:
+        0 0 15px rgba(255, 0, 110, 0.8),
+        0 0 30px rgba(255, 0, 110, 0.5),
+        0 0 60px rgba(255, 0, 110, 0.3);
+    }
+    section.cta-band h2 .cyan { color: var(--cyan); text-shadow: 0 0 15px var(--cyan), 0 0 30px rgba(0, 245, 255, 0.5); }
+
+    /* — Footer — */
+    footer.site {
+      padding: 80px 0 48px;
+      border-top: 1px solid var(--border);
+      background: rgba(10, 4, 32, 0.8);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+    footer.site .cols {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+    footer.site .brand-col .mark {
+      font-family: var(--display);
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
+      text-shadow: 0 0 8px var(--pink);
+    }
+    footer.site .brand-col p {
+      color: var(--fg-soft);
+      font-size: 14px;
+      max-width: 28ch;
+    }
+    footer.site h4 {
+      font-family: var(--display);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--cyan);
+      margin-bottom: 20px;
+      text-shadow: 0 0 6px var(--cyan);
+    }
+    footer.site ul {
+      list-style: none;
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    footer.site ul a {
+      color: var(--fg-soft);
+      font-size: 13px;
+      transition: color .25s;
+    }
+    footer.site ul a:hover { color: var(--pink); }
+    footer.site .baseline {
+      padding-top: 40px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      font-family: var(--display);
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--fg-dim);
+    }
+
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0;
+      margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0);
+      white-space: nowrap; border: 0;
+    }
+
+    @media (max-width: 900px) {
+      nav.site ul { display: none; }
+      section.hero { padding: 60px 0 100px; }
+      section.stats .row { grid-template-columns: 1fr; }
+      section.features .grid { grid-template-columns: 1fr; }
+      .chipgrid { grid-template-columns: repeat(2, 1fr); }
+      .ai-layout { grid-template-columns: 1fr; }
+      .aitools { grid-template-columns: 1fr; }
+      .plans { grid-template-columns: 1fr; }
+      footer.site .cols { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grid-bg"></div>
+  <div class="nebula"></div>
+
+  <nav class="site">
+    <div class="wrap row">
+      <a href="#" class="brand">ELEMENTALS</a>
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#roles">Roles</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <a href="#" class="cta">Book Demo</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <section class="hero">
+      <div class="grid-floor"></div>
+      <div class="wrap inner">
+        <div class="label">System online · Est. 2026</div>
+        <h1>One <span class="cyan">platform</span> for everything your school runs on.</h1>
+        <p class="sub">Built for schools: 16+ specialized roles, 20+ integrated modules, and 10 AI tools — all in one place.</p>
+        <div class="ctas">
+          <a href="#" class="btn-primary">Book a demo</a>
+          <a href="#features" class="btn-secondary">See how it works</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="wrap">
+        <div class="row">
+          <div class="stat hud">
+            <span class="sr-only">16+ roles</span>
+            <div class="num">16+</div>
+            <div class="cap">Specialized roles</div>
+          </div>
+          <div class="stat hud hud-cyan">
+            <span class="sr-only">20+ modules</span>
+            <div class="num">20+</div>
+            <div class="cap">Integrated modules</div>
+          </div>
+          <div class="stat hud">
+            <span class="sr-only">10 AI tools</span>
+            <div class="num">10</div>
+            <div class="cap">AI tools</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <div class="wrap">
+        <div class="head">
+          <div class="label">Core Modules</div>
+          <h2>Everything your school runs on.</h2>
+        </div>
+        <div class="grid">
+          <div class="feature">
+            <div class="fnum">MOD·01</div>
+            <h3>ClassSpark Behavior</h3>
+            <p>Real-time points, badges, and parent updates from the classroom.</p>
+          </div>
+          <div class="feature">
+            <div class="fnum">MOD·02</div>
+            <h3>Skills Gradebook</h3>
+            <p>Mastery tracking on a 4-level scale with heatmap dashboards.</p>
+          </div>
+          <div class="feature">
+            <div class="fnum">MOD·03</div>
+            <h3>AI Scheduling</h3>
+            <p>Build timetables in minutes with constraint-aware optimization.</p>
+          </div>
+          <div class="feature">
+            <div class="fnum">MOD·04</div>
+            <h3>Exams &amp; Marking</h3>
+            <p>Full assessment lifecycle from draft to transcript.</p>
+          </div>
+          <div class="feature">
+            <div class="fnum">MOD·05</div>
+            <h3>AI Teaching Assistant</h3>
+            <p>Lesson plans, rubrics, and differentiated homework in seconds.</p>
+          </div>
+          <div class="feature">
+            <div class="fnum">MOD·06</div>
+            <h3>Insights &amp; Reports</h3>
+            <p>Ask questions about your data in plain English.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="roles" id="roles">
+      <div class="wrap">
+        <div class="head">
+          <div class="label">User Layer</div>
+          <h2>Ten roles. One system.</h2>
+        </div>
+        <div class="chipgrid">
+          <span class="rolechip">Teacher</span>
+          <span class="rolechip">Admin</span>
+          <span class="rolechip">Principal</span>
+          <span class="rolechip">Parent</span>
+          <span class="rolechip">Student</span>
+          <span class="rolechip">HR</span>
+          <span class="rolechip">Finance</span>
+          <span class="rolechip">Counselor</span>
+          <span class="rolechip">Librarian</span>
+          <span class="rolechip">IT</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="ai">
+      <div class="wrap">
+        <div class="head">
+          <div class="label">AI Matrix</div>
+          <h2>10 AI tools · 3 thinking modes.</h2>
+        </div>
+        <div class="ai-layout">
+          <div class="aitools-card hud hud-cyan">
+            <h3>// AI Toolkit</h3>
+            <ul class="aitools">
+              <li>AI Insights Dashboard</li>
+              <li>Researcher Platform</li>
+              <li>AI Student Reports</li>
+              <li>AI Homework Builder</li>
+              <li>AI Exam Marking</li>
+              <li>AI Teaching Assistant</li>
+              <li>AI Presentation Builder</li>
+              <li>AI Schedule Optimizer</li>
+              <li>AI Rubric Generator</li>
+              <li>AI Lesson Planning</li>
+            </ul>
+          </div>
+          <div class="modes-card hud">
+            <h3>// Thinking modes</h3>
+            <div class="mode"><span class="name">Fast</span><span class="desc">-F</span></div>
+            <div class="mode"><span class="name">Balanced</span><span class="desc">-B</span></div>
+            <div class="mode"><span class="name">Deep</span><span class="desc">-D</span></div>
+            <div class="safe">
+              <strong>Safe Mode</strong>
+              Default for student-facing use
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+      <div class="wrap">
+        <div class="head">
+          <div class="label">Pricing Tiers</div>
+          <h2>No per-seat surprises.</h2>
+        </div>
+        <div class="plans">
+          <div class="plan hi">
+            <div class="tier">For Schools</div>
+            <div class="name">School All-in-One</div>
+            <div class="price">Custom Quote</div>
+            <p class="desc">Full platform access, 16+ specialized roles, annual invoicing, and dedicated rollout support.</p>
+            <a href="#" class="plan-cta">Contact Sales</a>
+          </div>
+          <div class="plan">
+            <div class="tier">For Teachers</div>
+            <div class="name">Teacher</div>
+            <div class="price">Coming Soon</div>
+            <p class="desc">Per-teacher monthly pricing, targeting approximately US$9.83 per month.</p>
+            <a href="#" class="plan-cta">Join Waitlist</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonial">
+      <div class="wrap">
+        <div class="quote-wrap">
+          <span class="mark">“</span>
+          <blockquote>Elementals replaced five disconnected tools overnight. Our teachers got their evenings back.</blockquote>
+          <cite>— Head of School, Sample Academy</cite>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="wrap inner">
+        <h2><span class="sr-only">Ready to unify your school operations?</span><span aria-hidden="true">Ready to <span class="cyan">unify</span> your school operations?</span></h2>
+        <a href="#" class="btn-primary">Book a demo now</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <div class="cols">
+        <div class="brand-col">
+          <div class="mark">ELEMENTALS</div>
+          <p>One platform for everything your school runs on.</p>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Roles</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">AI Tools</a></li>
+            <li><a href="#">Changelog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Help center</a></li>
+            <li><a href="#">API docs</a></li>
+            <li><a href="#">Status</a></li>
+            <li><a href="#">Security</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">DPA</a></li>
+            <li><a href="#">Cookies</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="baseline">
+        <span>© 2026 Elementals. All rights reserved.</span>
+        <span>v26.04 · Built for schools</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

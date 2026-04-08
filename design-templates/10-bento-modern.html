@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Elementals — One platform for everything your school runs on.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f4f4f5;
+      --card: #ffffff;
+      --fg: #18181b;
+      --fg-soft: #52525b;
+      --fg-dim: #a1a1aa;
+      --rule: #e4e4e7;
+
+      /* Pastel accents per card */
+      --blue-bg: #dbeafe;
+      --blue-fg: #1e40af;
+      --green-bg: #dcfce7;
+      --green-fg: #15803d;
+      --yellow-bg: #fef3c7;
+      --yellow-fg: #a16207;
+      --pink-bg: #fce7f3;
+      --pink-fg: #be185d;
+      --purple-bg: #ede9fe;
+      --purple-fg: #6d28d9;
+      --orange-bg: #fed7aa;
+      --orange-fg: #c2410c;
+      --teal-bg: #ccfbf1;
+      --teal-fg: #0f766e;
+
+      --radius-lg: 28px;
+      --radius-md: 20px;
+      --radius-sm: 14px;
+      --shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.06);
+      --shadow-lg: 0 4px 6px rgba(0, 0, 0, 0.04), 0 10px 20px rgba(0, 0, 0, 0.05);
+      --sans: 'Inter', system-ui, -apple-system, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--sans);
+      font-size: 15px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      font-feature-settings: "cv11", "ss01";
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { max-width: 1280px; margin: 0 auto; padding: 0 28px; }
+
+    /* — Nav — */
+    nav.site {
+      padding: 20px 0;
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(244, 244, 245, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+    nav.site .row {
+      display: flex; align-items: center; justify-content: space-between;
+      background: var(--card);
+      padding: 14px 22px;
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+    }
+    nav.site .brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 800;
+      font-size: 20px;
+      letter-spacing: -0.02em;
+    }
+    nav.site .brand .logo {
+      width: 32px; height: 32px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #6366f1, #ec4899);
+      display: flex; align-items: center; justify-content: center;
+      color: #fff;
+      font-weight: 900;
+      font-size: 16px;
+    }
+    nav.site .brand .logo::before { content: "E"; }
+    nav.site ul {
+      display: flex; list-style: none; gap: 28px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    nav.site ul a { color: var(--fg-soft); transition: color .2s; }
+    nav.site ul a:hover { color: var(--fg); }
+    nav.site .cta {
+      padding: 10px 20px;
+      border-radius: 12px;
+      background: var(--fg);
+      color: var(--card);
+      font-size: 14px;
+      font-weight: 600;
+      transition: transform .2s;
+    }
+    nav.site .cta:hover { transform: scale(1.03); }
+
+    /* — Hero Bento — */
+    section.hero { padding: 32px 0 32px; }
+    .bento-hero {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-auto-rows: 180px;
+      gap: 16px;
+    }
+    .bento {
+      background: var(--card);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+      transition: all .3s;
+    }
+    .bento:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+
+    /* — Hero main card — */
+    .bento.hero-main {
+      grid-column: span 4;
+      grid-row: span 3;
+      padding: 44px 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: linear-gradient(135deg, #18181b 0%, #27272a 100%);
+      color: #fafafa;
+      border-radius: 32px;
+    }
+    .hero-main .badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 8px 16px;
+      border-radius: 100px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      font-size: 12px;
+      font-weight: 500;
+      color: #fafafa;
+      width: fit-content;
+      margin-bottom: 24px;
+    }
+    .hero-main .badge .dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: #22c55e;
+      box-shadow: 0 0 12px #22c55e;
+    }
+    .hero-main h1 {
+      font-size: clamp(36px, 5.5vw, 72px);
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -0.035em;
+      margin-bottom: 20px;
+      max-width: 15ch;
+    }
+    .hero-main h1 .accent {
+      background: linear-gradient(135deg, #60a5fa, #c084fc, #f472b6);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .hero-main .sub {
+      font-size: 17px;
+      color: rgba(250, 250, 250, 0.7);
+      max-width: 48ch;
+      line-height: 1.55;
+      margin-bottom: 32px;
+    }
+    .hero-main .ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn-primary {
+      padding: 14px 28px;
+      border-radius: 12px;
+      background: #fafafa;
+      color: #18181b;
+      font-weight: 600;
+      font-size: 14px;
+      transition: all .2s;
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    .btn-primary:hover { transform: scale(1.03); }
+    .btn-primary::after { content: "→"; }
+    .btn-secondary {
+      padding: 14px 24px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #fafafa;
+      font-weight: 500;
+      font-size: 14px;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+    .btn-secondary:hover { background: rgba(255, 255, 255, 0.12); }
+
+    /* — Hero small cards — */
+    .bento.stat-1 {
+      grid-column: span 2;
+      grid-row: span 1;
+      background: var(--blue-bg);
+      color: var(--blue-fg);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .bento.stat-1 .num { font-size: 52px; font-weight: 800; letter-spacing: -0.03em; line-height: 1; }
+    .bento.stat-1 .cap { font-size: 13px; font-weight: 500; }
+    .bento.stat-2 {
+      grid-column: span 1;
+      grid-row: span 1;
+      background: var(--green-bg);
+      color: var(--green-fg);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .bento.stat-2 .num { font-size: 42px; font-weight: 800; letter-spacing: -0.03em; line-height: 1; }
+    .bento.stat-2 .cap { font-size: 12px; font-weight: 500; line-height: 1.3; }
+    .bento.stat-3 {
+      grid-column: span 1;
+      grid-row: span 1;
+      background: var(--pink-bg);
+      color: var(--pink-fg);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .bento.stat-3 .num { font-size: 42px; font-weight: 800; letter-spacing: -0.03em; line-height: 1; }
+    .bento.stat-3 .cap { font-size: 12px; font-weight: 500; line-height: 1.3; }
+    .bento.mini-feature {
+      grid-column: span 2;
+      grid-row: span 2;
+      background: var(--purple-bg);
+      color: var(--purple-fg);
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .bento.mini-feature .icon-box {
+      width: 48px; height: 48px;
+      border-radius: 14px;
+      background: rgba(109, 40, 217, 0.15);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .bento.mini-feature .icon-box svg { width: 24px; height: 24px; stroke: currentColor; fill: none; stroke-width: 2; }
+    .bento.mini-feature h3 { font-size: 22px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 8px; }
+    .bento.mini-feature p { font-size: 13px; color: rgba(109, 40, 217, 0.75); line-height: 1.5; }
+
+    /* — Section label — */
+    .label {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 16px;
+      border-radius: 100px;
+      background: var(--card);
+      box-shadow: var(--shadow);
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--fg-soft);
+      margin-bottom: 20px;
+    }
+    .label::before {
+      content: "";
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: #6366f1;
+    }
+
+    /* — Features bento — */
+    section.features {
+      padding: 60px 0 40px;
+    }
+    section.features .head {
+      text-align: center;
+      margin-bottom: 44px;
+    }
+    section.features h2 {
+      font-size: clamp(32px, 4.5vw, 56px);
+      font-weight: 800;
+      letter-spacing: -0.035em;
+      line-height: 1.05;
+      max-width: 18ch;
+      margin: 0 auto 12px;
+    }
+    section.features .head p {
+      font-size: 16px;
+      color: var(--fg-soft);
+      max-width: 52ch;
+      margin: 0 auto;
+    }
+    .features-bento {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-auto-rows: 220px;
+      gap: 16px;
+    }
+    .feature-card {
+      padding: 32px;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+      transition: all .3s;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .feature-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+    .feature-card .icon-box {
+      width: 52px; height: 52px;
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 20px;
+    }
+    .feature-card .icon-box svg { width: 26px; height: 26px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .feature-card h3 {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+    .feature-card p {
+      font-size: 14px;
+      line-height: 1.55;
+      opacity: 0.7;
+    }
+    .feature-card.big {
+      grid-column: span 3;
+      grid-row: span 2;
+      padding: 44px;
+    }
+    .feature-card.med {
+      grid-column: span 3;
+      grid-row: span 1;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 24px;
+      align-items: center;
+      padding: 32px 36px;
+    }
+    .feature-card.med .icon-box { margin-bottom: 0; width: 56px; height: 56px; }
+    .feature-card.med .content h3 { font-size: 20px; margin-bottom: 6px; }
+    .feature-card.med .content p { font-size: 13.5px; }
+    .feature-card.small { grid-column: span 2; grid-row: span 1; padding: 28px; }
+    .feature-card.small h3 { font-size: 18px; margin-bottom: 6px; }
+    .feature-card.small p { font-size: 13px; }
+    .feature-card.small .icon-box { width: 44px; height: 44px; margin-bottom: 16px; }
+
+    .f-blue { background: var(--blue-bg); color: var(--blue-fg); }
+    .f-blue .icon-box { background: rgba(30, 64, 175, 0.12); }
+    .f-green { background: var(--green-bg); color: var(--green-fg); }
+    .f-green .icon-box { background: rgba(21, 128, 61, 0.12); }
+    .f-yellow { background: var(--yellow-bg); color: var(--yellow-fg); }
+    .f-yellow .icon-box { background: rgba(161, 98, 7, 0.12); }
+    .f-pink { background: var(--pink-bg); color: var(--pink-fg); }
+    .f-pink .icon-box { background: rgba(190, 24, 93, 0.12); }
+    .f-purple { background: var(--purple-bg); color: var(--purple-fg); }
+    .f-purple .icon-box { background: rgba(109, 40, 217, 0.12); }
+    .f-orange { background: var(--orange-bg); color: var(--orange-fg); }
+    .f-orange .icon-box { background: rgba(194, 65, 12, 0.12); }
+    .f-teal { background: var(--teal-bg); color: var(--teal-fg); }
+    .f-teal .icon-box { background: rgba(15, 118, 110, 0.12); }
+    .f-dark { background: #18181b; color: #fafafa; }
+    .f-dark .icon-box { background: rgba(255, 255, 255, 0.1); }
+    .f-dark p { opacity: 0.7; }
+
+    /* — Roles — */
+    section.roles {
+      padding: 60px 0 40px;
+    }
+    .roles-bento {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-auto-rows: 140px;
+      gap: 16px;
+    }
+    .roles-head {
+      grid-column: span 2;
+      grid-row: span 2;
+      padding: 32px;
+      background: var(--card);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .roles-head .label { margin-bottom: 0; }
+    .roles-head h2 {
+      font-size: clamp(26px, 3.2vw, 38px);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      line-height: 1.05;
+    }
+    .roles-head p {
+      font-size: 14px;
+      color: var(--fg-soft);
+      line-height: 1.55;
+    }
+    .role-chip {
+      padding: 20px 22px;
+      border-radius: var(--radius-md);
+      background: var(--card);
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all .25s;
+      cursor: pointer;
+    }
+    .role-chip:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+    .role-chip .icon-box {
+      width: 36px; height: 36px;
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 8px;
+    }
+    .role-chip .icon-box svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2; }
+    .role-chip .name {
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    .role-chip.a { background: var(--blue-bg); color: var(--blue-fg); }
+    .role-chip.a .icon-box { background: rgba(30, 64, 175, 0.15); }
+    .role-chip.b { background: var(--green-bg); color: var(--green-fg); }
+    .role-chip.b .icon-box { background: rgba(21, 128, 61, 0.15); }
+    .role-chip.c { background: var(--yellow-bg); color: var(--yellow-fg); }
+    .role-chip.c .icon-box { background: rgba(161, 98, 7, 0.15); }
+    .role-chip.d { background: var(--pink-bg); color: var(--pink-fg); }
+    .role-chip.d .icon-box { background: rgba(190, 24, 93, 0.15); }
+    .role-chip.e { background: var(--purple-bg); color: var(--purple-fg); }
+    .role-chip.e .icon-box { background: rgba(109, 40, 217, 0.15); }
+    .role-chip.f { background: var(--orange-bg); color: var(--orange-fg); }
+    .role-chip.f .icon-box { background: rgba(194, 65, 12, 0.15); }
+    .role-chip.g { background: var(--teal-bg); color: var(--teal-fg); }
+    .role-chip.g .icon-box { background: rgba(15, 118, 110, 0.15); }
+    .role-chip.h { background: var(--card); color: var(--fg); border: 1px solid var(--rule); }
+    .role-chip.h .icon-box { background: #f4f4f5; }
+    .role-chip.i { background: #18181b; color: #fafafa; }
+    .role-chip.i .icon-box { background: rgba(255, 255, 255, 0.1); }
+    .role-chip.j { background: var(--blue-bg); color: var(--blue-fg); }
+    .role-chip.j .icon-box { background: rgba(30, 64, 175, 0.15); }
+
+    /* — AI section — */
+    section.ai {
+      padding: 60px 0 40px;
+    }
+    .ai-bento {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-auto-rows: auto;
+      gap: 16px;
+    }
+    .ai-head {
+      grid-column: span 4;
+      padding: 40px 44px;
+      background: #18181b;
+      color: #fafafa;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+    .ai-head::before {
+      content: "";
+      position: absolute;
+      top: -50%; right: -20%;
+      width: 60%; height: 200%;
+      background: radial-gradient(circle, rgba(99, 102, 241, 0.3), transparent 60%);
+    }
+    .ai-head .inner { position: relative; }
+    .ai-head .label { background: rgba(255, 255, 255, 0.08); color: #fafafa; margin-bottom: 16px; }
+    .ai-head .label::before { background: #a5b4fc; box-shadow: 0 0 8px #a5b4fc; }
+    .ai-head h2 {
+      font-size: clamp(28px, 4vw, 48px);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      line-height: 1.05;
+      max-width: 14ch;
+    }
+    .ai-head h2 .accent {
+      background: linear-gradient(135deg, #a5b4fc, #f472b6);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .modes-panel {
+      grid-column: span 2;
+      padding: 32px 28px;
+      background: var(--card);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+    }
+    .modes-panel h3 {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--fg-dim);
+      margin-bottom: 18px;
+      font-weight: 600;
+    }
+    .mode {
+      padding: 14px 16px;
+      border-radius: 12px;
+      background: var(--bg);
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .mode .name { font-size: 14px; font-weight: 700; }
+    .mode .desc { font-size: 11px; color: var(--fg-dim); }
+    .safe {
+      margin-top: 14px;
+      padding: 12px 16px;
+      border-radius: 12px;
+      background: var(--yellow-bg);
+      color: var(--yellow-fg);
+      font-size: 12px;
+    }
+    .safe strong { display: block; margin-bottom: 2px; font-size: 12px; }
+    .aitools-list {
+      grid-column: span 6;
+      padding: 36px 40px;
+      background: var(--card);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+    }
+    .aitools-list h3 {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--fg-dim);
+      margin-bottom: 24px;
+      font-weight: 600;
+    }
+    .aitools-list .grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+    }
+    .ai-chip {
+      padding: 18px 20px;
+      border-radius: var(--radius-md);
+      background: var(--bg);
+      font-size: 13px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: all .2s;
+    }
+    .ai-chip:hover { background: var(--fg); color: var(--card); }
+    .ai-chip::before {
+      content: "";
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: #6366f1;
+      flex-shrink: 0;
+    }
+
+    /* — Pricing bento — */
+    section.pricing {
+      padding: 60px 0 40px;
+    }
+    .pricing-head {
+      text-align: center;
+      margin-bottom: 44px;
+    }
+    .pricing-head h2 {
+      font-size: clamp(32px, 4.5vw, 56px);
+      font-weight: 800;
+      letter-spacing: -0.035em;
+      line-height: 1.05;
+      max-width: 18ch;
+      margin: 0 auto;
+    }
+    .plans {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .plan {
+      padding: 48px 44px;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+    .plan.hi {
+      background: #18181b;
+      color: #fafafa;
+    }
+    .plan.hi .tier, .plan.hi .name, .plan.hi .price, .plan.hi .desc { color: inherit; }
+    .plan:not(.hi) { background: var(--card); }
+    .plan .tier {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--fg-dim);
+      margin-bottom: 14px;
+    }
+    .plan.hi .tier { color: #a5b4fc; }
+    .plan .name {
+      font-size: 30px;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      line-height: 1.05;
+      margin-bottom: 10px;
+    }
+    .plan .price {
+      font-size: 14px;
+      color: var(--fg-soft);
+      margin-bottom: 28px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--rule);
+    }
+    .plan.hi .price { color: rgba(250, 250, 250, 0.6); border-color: rgba(255, 255, 255, 0.1); }
+    .plan .desc {
+      font-size: 14.5px;
+      color: var(--fg-soft);
+      line-height: 1.65;
+      margin-bottom: 32px;
+    }
+    .plan.hi .desc { color: rgba(250, 250, 250, 0.7); }
+    .plan-cta {
+      display: inline-block;
+      padding: 14px 28px;
+      border-radius: 12px;
+      background: var(--fg);
+      color: var(--card);
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .plan.hi .plan-cta { background: #fafafa; color: #18181b; }
+    .plan-cta:hover { transform: scale(1.03); }
+
+    /* — Testimonial bento — */
+    section.testimonial { padding: 60px 0 40px; }
+    .quote-bento {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 16px;
+    }
+    .quote-main {
+      padding: 56px 52px;
+      background: var(--card);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+    }
+    .quote-main .mark {
+      font-size: 80px;
+      line-height: 0.4;
+      background: linear-gradient(135deg, #6366f1, #ec4899);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      display: block;
+      margin-bottom: 20px;
+    }
+    .quote-main blockquote {
+      font-size: clamp(22px, 2.8vw, 32px);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.35;
+      color: var(--fg);
+    }
+    .quote-main cite {
+      display: block;
+      margin-top: 28px;
+      font-size: 12px;
+      font-style: normal;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--fg-dim);
+      font-weight: 600;
+    }
+    .quote-metric {
+      padding: 40px 32px;
+      border-radius: var(--radius-lg);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .quote-metric.a { background: var(--green-bg); color: var(--green-fg); }
+    .quote-metric.b { background: var(--purple-bg); color: var(--purple-fg); }
+    .quote-metric .big { font-size: 48px; font-weight: 800; letter-spacing: -0.03em; line-height: 1; }
+    .quote-metric .label { font-size: 13px; font-weight: 500; line-height: 1.4; }
+
+    /* — CTA band bento — */
+    section.cta-band {
+      padding: 60px 0 80px;
+    }
+    .cta-bento {
+      padding: 80px 56px;
+      background: linear-gradient(135deg, #6366f1 0%, #ec4899 50%, #f59e0b 100%);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      color: #fff;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-bento::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.15), transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1), transparent 40%);
+    }
+    .cta-bento .inner { position: relative; }
+    .cta-bento h2 {
+      font-size: clamp(40px, 6vw, 72px);
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -0.035em;
+      max-width: 16ch;
+      margin: 0 auto 36px;
+      color: #fff;
+    }
+    .cta-bento .btn-primary {
+      background: #18181b;
+      color: #fafafa;
+      padding: 18px 34px;
+      font-size: 15px;
+      border-radius: 14px;
+    }
+
+    /* — Footer — */
+    footer.site {
+      padding: 60px 0 40px;
+    }
+    .footer-bento {
+      background: var(--card);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      padding: 48px 44px;
+    }
+    footer.site .cols {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 44px;
+    }
+    footer.site .brand-col .mark {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 800;
+      font-size: 20px;
+      margin-bottom: 14px;
+    }
+    footer.site .brand-col .mark .logo {
+      width: 32px; height: 32px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #6366f1, #ec4899);
+      color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 900;
+      font-size: 16px;
+    }
+    footer.site .brand-col .mark .logo::before { content: "E"; }
+    footer.site .brand-col p {
+      font-size: 13.5px;
+      color: var(--fg-soft);
+      max-width: 28ch;
+      line-height: 1.55;
+    }
+    footer.site h4 {
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--fg-dim);
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
+    footer.site ul {
+      list-style: none;
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    footer.site ul a {
+      color: var(--fg-soft);
+      font-size: 13.5px;
+    }
+    footer.site ul a:hover { color: var(--fg); }
+    footer.site .baseline {
+      padding-top: 28px;
+      border-top: 1px solid var(--rule);
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: var(--fg-dim);
+    }
+
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0;
+      margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0);
+      white-space: nowrap; border: 0;
+    }
+
+    /* — Responsive — */
+    @media (max-width: 1024px) {
+      .bento-hero { grid-auto-rows: 160px; }
+      .bento.hero-main { grid-column: span 6; grid-row: span 2; padding: 40px; }
+      .bento.stat-1 { grid-column: span 3; }
+      .bento.stat-2 { grid-column: span 3; }
+      .bento.stat-3 { grid-column: span 3; }
+      .bento.mini-feature { grid-column: span 3; grid-row: span 2; }
+      .features-bento { grid-template-columns: repeat(4, 1fr); }
+      .feature-card.big { grid-column: span 4; }
+      .feature-card.med { grid-column: span 4; }
+      .feature-card.small { grid-column: span 2; }
+      .roles-bento { grid-template-columns: repeat(4, 1fr); }
+      .roles-head { grid-column: span 4; grid-row: span 1; }
+      .ai-head, .modes-panel, .aitools-list { grid-column: span 6; }
+      .aitools-list .grid { grid-template-columns: repeat(3, 1fr); }
+      .quote-bento { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      nav.site ul { display: none; }
+      .bento.stat-1, .bento.stat-2, .bento.stat-3, .bento.mini-feature { grid-column: span 6; }
+      .features-bento, .roles-bento { grid-template-columns: repeat(2, 1fr); }
+      .feature-card.big, .feature-card.med, .feature-card.small { grid-column: span 2; }
+      .roles-head { grid-column: span 2; }
+      .aitools-list .grid { grid-template-columns: repeat(2, 1fr); }
+      .plans { grid-template-columns: 1fr; }
+      footer.site .cols { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="site">
+    <div class="wrap">
+      <div class="row">
+        <a href="#" class="brand">
+          <span class="logo"></span>
+          <span>Elementals</span>
+        </a>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#roles">Roles</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <a href="#" class="cta">Book a demo</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- Hero bento -->
+    <section class="hero">
+      <div class="wrap">
+        <div class="bento-hero">
+          <div class="bento hero-main">
+            <div>
+              <div class="badge"><span class="dot"></span>AI-native · Est. 2026</div>
+              <h1>One <span class="accent">platform</span> for everything your school runs on.</h1>
+              <p class="sub">Built for schools: 16+ specialized roles, 20+ integrated modules, and 10 AI tools — all in one place.</p>
+            </div>
+            <div class="ctas">
+              <a href="#" class="btn-primary">Book a demo</a>
+              <a href="#features" class="btn-secondary">See how it works</a>
+            </div>
+          </div>
+          <div class="bento stat-1">
+            <span class="sr-only">16+ roles</span>
+            <div class="num">16+</div>
+            <div class="cap">Specialized roles across the platform</div>
+          </div>
+          <div class="bento stat-2">
+            <span class="sr-only">20+ modules</span>
+            <div class="num">20+</div>
+            <div class="cap">Modules</div>
+          </div>
+          <div class="bento stat-3">
+            <span class="sr-only">10 AI tools</span>
+            <div class="num">10</div>
+            <div class="cap">AI tools</div>
+          </div>
+          <div class="bento mini-feature">
+            <div>
+              <div class="icon-box"><svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5 2 7L12 16l-6.5 4.5 2-7L2 9h7z" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <h3>ClassSpark</h3>
+              <p>Real-time classroom behavior with parent updates.</p>
+            </div>
+            <a href="#" style="font-size: 13px; font-weight: 600;">Learn more →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features bento -->
+    <section class="features" id="features">
+      <div class="wrap">
+        <div class="head">
+          <div class="label">Features</div>
+          <h2>Everything your school needs, boxed.</h2>
+          <p>Six core modules, each with its own bento box. Pick what you need — they all snap together.</p>
+        </div>
+        <div class="features-bento">
+          <div class="feature-card big f-dark">
+            <div>
+              <div class="icon-box"><svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5 2 7L12 16l-6.5 4.5 2-7L2 9h7z"/></svg></div>
+              <h3>ClassSpark Behavior</h3>
+              <p>Real-time points, badges, and parent updates from the classroom. Our gamified behavior system integrates directly with every other module — no more double entry.</p>
+            </div>
+            <a href="#" style="color: #a5b4fc; font-weight: 600; font-size: 14px;">Explore ClassSpark →</a>
+          </div>
+          <div class="feature-card med f-blue">
+            <div class="icon-box"><svg viewBox="0 0 24 24"><path d="M3 12h4l3-9 4 18 3-9h4"/></svg></div>
+            <div class="content">
+              <h3>Skills Gradebook</h3>
+              <p>Mastery tracking on a 4-level scale with heatmap dashboards.</p>
+            </div>
+          </div>
+          <div class="feature-card small f-green">
+            <div class="icon-box"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+            <h3>AI Scheduling</h3>
+            <p>Constraint-aware timetables in minutes.</p>
+          </div>
+          <div class="feature-card small f-yellow">
+            <div class="icon-box"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg></div>
+            <h3>Exams &amp; Marking</h3>
+            <p>Full assessment lifecycle.</p>
+          </div>
+          <div class="feature-card small f-pink">
+            <div class="icon-box"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+            <h3>AI Teaching Assistant</h3>
+            <p>Lesson plans, rubrics, differentiated homework.</p>
+          </div>
+          <div class="feature-card med f-purple">
+            <div class="icon-box"><svg viewBox="0 0 24 24"><path d="M3 3v18h18M7 14l4-4 4 4 5-5"/></svg></div>
+            <div class="content">
+              <h3>Insights &amp; Reports</h3>
+              <p>Ask questions about your data in plain English.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Roles bento -->
+    <section class="roles" id="roles">
+      <div class="wrap">
+        <div class="roles-bento">
+          <div class="roles-head">
+            <div>
+              <div class="label">Roles</div>
+              <h2>Ten roles. One system.</h2>
+            </div>
+            <p>Every persona gets the view they need.</p>
+          </div>
+          <div class="role-chip a"><div class="icon-box"><svg viewBox="0 0 24 24"><path d="M22 10L12 5 2 10l10 5 10-5zM6 12v5c3 3 9 3 12 0v-5"/></svg></div><div class="name">Teacher</div></div>
+          <div class="role-chip b"><div class="icon-box"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg></div><div class="name">Admin</div></div>
+          <div class="role-chip c"><div class="icon-box"><svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5 2 7L12 16l-6.5 4.5 2-7L2 9h7z"/></svg></div><div class="name">Principal</div></div>
+          <div class="role-chip d"><div class="icon-box"><svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M5.5 21h13l-1-5c-.5-2-2.5-3.5-4.5-3.5h-2c-2 0-4 1.5-4.5 3.5z"/></svg></div><div class="name">Parent</div></div>
+          <div class="role-chip e"><div class="icon-box"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg></div><div class="name">Student</div></div>
+          <div class="role-chip f"><div class="icon-box"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div class="name">HR</div></div>
+          <div class="role-chip g"><div class="icon-box"><svg viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h12"/></svg></div><div class="name">Finance</div></div>
+          <div class="role-chip h"><div class="icon-box"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div><div class="name">Counselor</div></div>
+          <div class="role-chip i"><div class="icon-box"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div><div class="name">Librarian</div></div>
+          <div class="role-chip j"><div class="icon-box"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 22h8M12 18v4"/></svg></div><div class="name">IT</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI bento -->
+    <section class="ai">
+      <div class="wrap">
+        <div class="ai-bento">
+          <div class="ai-head">
+            <div class="inner">
+              <div class="label">Intelligence</div>
+              <h2>Ten AI tools. Three <span class="accent">thinking</span> modes.</h2>
+            </div>
+          </div>
+          <div class="modes-panel">
+            <h3>Thinking modes</h3>
+            <div class="mode"><span class="name">Fast</span><span class="desc">Instant</span></div>
+            <div class="mode"><span class="name">Balanced</span><span class="desc">Default</span></div>
+            <div class="mode"><span class="name">Deep</span><span class="desc">Thorough</span></div>
+            <div class="safe">
+              <strong>Safe Mode</strong>
+              Default for student-facing use.
+            </div>
+          </div>
+          <div class="aitools-list">
+            <h3>The AI Toolkit</h3>
+            <div class="grid">
+              <div class="ai-chip">AI Insights Dashboard</div>
+              <div class="ai-chip">Researcher Platform</div>
+              <div class="ai-chip">AI Student Reports</div>
+              <div class="ai-chip">AI Homework Builder</div>
+              <div class="ai-chip">AI Exam Marking</div>
+              <div class="ai-chip">AI Teaching Assistant</div>
+              <div class="ai-chip">AI Presentation Builder</div>
+              <div class="ai-chip">AI Schedule Optimizer</div>
+              <div class="ai-chip">AI Rubric Generator</div>
+              <div class="ai-chip">AI Lesson Planning</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing" id="pricing">
+      <div class="wrap">
+        <div class="pricing-head">
+          <div class="label">Pricing</div>
+          <h2>Transparent pricing. No per-seat surprises.</h2>
+        </div>
+        <div class="plans">
+          <div class="plan hi">
+            <div class="tier">For schools</div>
+            <div class="name">School All-in-One</div>
+            <div class="price">Custom quote</div>
+            <p class="desc">Full platform access, 16+ specialized roles, annual invoicing, and dedicated rollout support.</p>
+            <a href="#" class="plan-cta">Contact sales</a>
+          </div>
+          <div class="plan">
+            <div class="tier">For teachers</div>
+            <div class="name">Teacher</div>
+            <div class="price">Coming soon</div>
+            <p class="desc">Per-teacher monthly pricing, targeting approximately US$9.83 per month.</p>
+            <a href="#" class="plan-cta">Join waitlist</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial bento -->
+    <section class="testimonial">
+      <div class="wrap">
+        <div class="quote-bento">
+          <div class="quote-main">
+            <span class="mark">“</span>
+            <blockquote>Elementals replaced five disconnected tools overnight. Our teachers got their evenings back.</blockquote>
+            <cite>— Head of School, Sample Academy</cite>
+          </div>
+          <div class="quote-metric a">
+            <div class="big">5x</div>
+            <div class="label">Tools consolidated into one platform per school</div>
+          </div>
+          <div class="quote-metric b">
+            <div class="big">97%</div>
+            <div class="label">Teacher satisfaction after rollout</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA band -->
+    <section class="cta-band">
+      <div class="wrap">
+        <div class="cta-bento">
+          <div class="inner">
+            <h2>Ready to unify your school operations?</h2>
+            <a href="#" class="btn-primary">Book a demo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <div class="footer-bento">
+        <div class="cols">
+          <div class="brand-col">
+            <div class="mark">
+              <span class="logo"></span>
+              <span>Elementals</span>
+            </div>
+            <p>One platform for everything your school runs on.</p>
+          </div>
+          <div>
+            <h4>Product</h4>
+            <ul>
+              <li><a href="#">Features</a></li>
+              <li><a href="#">Roles</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">AI Tools</a></li>
+              <li><a href="#">Changelog</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="#">Help center</a></li>
+              <li><a href="#">API docs</a></li>
+              <li><a href="#">Status</a></li>
+              <li><a href="#">Security</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">Terms</a></li>
+              <li><a href="#">DPA</a></li>
+              <li><a href="#">Cookies</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="baseline">
+          <span>© 2026 Elementals. All rights reserved.</span>
+          <span>Boxed with care.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
