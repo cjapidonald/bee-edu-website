@@ -1442,7 +1442,7 @@ export default function LandingPageClient({
       </section>
 
       {/* CTA SECTION */}
-      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-r from-orange-100 via-orange-50 to-amber-50">
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-r from-gray-900 via-gray-900/50 to-gray-950">
         <div className="container px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 px-2 !text-orange-950">

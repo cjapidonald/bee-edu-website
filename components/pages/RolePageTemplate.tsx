@@ -122,8 +122,8 @@ export function RolePageTemplate({
       {/* Hero Section */}
       <section className="relative pt-16 sm:pt-20 md:pt-24 pb-16 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-gray-900/70 via-gray-950 to-gray-950" />
-        <div className="absolute top-20 left-10 w-72 h-72 bg-[#ffe0d4]/60 rounded-full blur-3xl hidden sm:block" />
-        <div className="absolute bottom-0 right-10 w-96 h-96 bg-[#ffd5c4]/40 rounded-full blur-3xl hidden sm:block" />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-green-500/10 rounded-full blur-3xl hidden sm:block" />
+        <div className="absolute bottom-0 right-10 w-96 h-96 bg-yellow-500/8 rounded-full blur-3xl hidden sm:block" />
 
         <div className="container px-4 relative z-10">
           {mockup ? (

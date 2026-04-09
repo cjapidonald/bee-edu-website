@@ -220,7 +220,7 @@ export function ChatbotWidget() {
                   width: "44px",
                   height: "44px",
                   borderRadius: "12px",
-                  background: "#ffffff",
+                  background: "#111827",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",

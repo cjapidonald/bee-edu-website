@@ -232,8 +232,8 @@ export default async function AboutPage({ params }: AboutPageProps) {
       {/* Subtle gradient background */}
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-gradient-to-b from-gray-900/70 via-gray-950 to-gray-950" />
-        <div className="absolute top-20 left-10 w-72 h-72 bg-[#ffe0d4]/60 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-10 w-96 h-96 bg-[#ffd5c4]/40 rounded-full blur-3xl" />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-green-500/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-10 w-96 h-96 bg-yellow-500/8 rounded-full blur-3xl" />
         <div className="absolute top-1/3 left-[-8rem] h-64 w-64 rounded-full bg-gray-900/50 blur-3xl" />
       </div>
 

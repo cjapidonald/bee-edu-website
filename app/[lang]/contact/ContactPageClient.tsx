@@ -541,8 +541,8 @@ export default function ContactPage({
       {/* Hero Section */}
       <section className="relative pt-16 sm:pt-20 md:pt-24 pb-12 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-gray-900/50 via-gray-950 to-gray-950" />
-        <div className="absolute top-20 left-10 w-72 h-72 bg-[#ffe0d4]/60 rounded-full blur-3xl hidden sm:block" />
-        <div className="absolute bottom-0 right-10 w-96 h-96 bg-[#ffd5c4]/60 rounded-full blur-3xl hidden sm:block" />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-green-500/10 rounded-full blur-3xl hidden sm:block" />
+        <div className="absolute bottom-0 right-10 w-96 h-96 bg-yellow-500/10 rounded-full blur-3xl hidden sm:block" />
 
         <div
           ref={heroRef}
@@ -832,7 +832,7 @@ export default function ContactPage({
                                     "p-1.5 rounded-lg transition-colors",
                                     weekOffset === 0
                                       ? "text-gray-300 cursor-not-allowed"
-                                      : "text-gray-400 hover:bg-gray-200"
+                                      : "text-gray-400 hover:bg-gray-700"
                                   )}
                                 >
                                   <ChevronLeft className="h-4 w-4" />
@@ -848,7 +848,7 @@ export default function ContactPage({
                                     "p-1.5 rounded-lg transition-colors",
                                     !hasNextWeekSlots
                                       ? "text-gray-300 cursor-not-allowed"
-                                      : "text-gray-400 hover:bg-gray-200"
+                                      : "text-gray-400 hover:bg-gray-700"
                                   )}
                                 >
                                   <ChevronRight className="h-4 w-4" />
@@ -912,7 +912,7 @@ export default function ContactPage({
                                                 className={cn(
                                                   "w-full text-left px-1.5 py-1.5 rounded-md text-[11px] leading-tight transition-all",
                                                   isBooked && "bg-gray-800 text-gray-400 cursor-not-allowed line-through",
-                                                  !isBooked && !isSelected && "bg-gray-900 text-[#15803d] hover:bg-[#ffe0d4] cursor-pointer border border-[#16a34a]/20",
+                                                  !isBooked && !isSelected && "bg-gray-900 text-[#15803d] hover:bg-kiwi cursor-pointer border border-[#16a34a]/20",
                                                   isSelected && "bg-[#16a34a] text-white border border-[#16a34a] shadow-sm"
                                                 )}
                                                 title={isBooked ? t.booked : `${slot.startTime} - ${slot.endTime}`}

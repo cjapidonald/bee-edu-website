@@ -596,8 +596,8 @@ export default async function BlogPostPage({
       {/* Subtle gradient background */}
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-gradient-to-b from-gray-900/70 via-gray-950 to-gray-950" />
-        <div className="absolute top-20 left-10 w-72 h-72 bg-[#ffe0d4]/60 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-10 w-96 h-96 bg-[#ffd5c4]/40 rounded-full blur-3xl" />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-green-500/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-10 w-96 h-96 bg-yellow-500/8 rounded-full blur-3xl" />
       </div>
 
       <div className="container relative mx-auto px-4 pt-8 pb-16">
@@ -606,7 +606,7 @@ export default async function BlogPostPage({
           <Button
             asChild
             variant="ghost"
-            className="w-fit rounded-xl border border-gray-800 bg-gray-900 px-4 text-gray-300 shadow-sm hover:bg-[#F5F8FF] hover:border-primary/30"
+            className="w-fit rounded-xl border border-gray-800 bg-gray-900 px-4 text-gray-300 shadow-sm hover:bg-gray-800 hover:border-primary/30"
           >
             <Link href={getLocalizedPath(lang, "/blog")}>
               <ArrowLeft className="mr-2 h-4 w-4" />
@@ -621,7 +621,7 @@ export default async function BlogPostPage({
               {/* Featured Image */}
               {safeImageUrl(post.featured_image) && (
                 <figure className="mx-auto flex w-full flex-col items-center gap-4 text-center">
-                  <div className="relative w-full overflow-hidden rounded-2xl border border-gray-800 bg-[#F5F8FF] p-1.5 shadow-lg">
+                  <div className="relative w-full overflow-hidden rounded-2xl border border-gray-800 bg-gray-800 p-1.5 shadow-lg">
                     <div className="relative overflow-hidden rounded-xl">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img

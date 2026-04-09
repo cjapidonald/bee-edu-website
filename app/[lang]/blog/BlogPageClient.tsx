@@ -761,7 +761,7 @@ export default function BlogPageClient({
         <div className="space-y-8">
           {/* Hero/Search Section */}
           <section className="relative overflow-hidden rounded-2xl border border-gray-800 bg-gray-900 p-6 shadow-sm md:p-8">
-            <div className="absolute -right-24 -top-24 h-48 w-48 rounded-full bg-[#ffd5c4]/70 blur-3xl" />
+            <div className="absolute -right-24 -top-24 h-48 w-48 rounded-full bg-bee/70 blur-3xl" />
             <div className="absolute -left-20 bottom-0 h-32 w-32 rounded-full bg-[#E3F8FF]/60 blur-2xl" />
             <div className="relative space-y-6">
               <div className="space-y-2">
@@ -777,7 +777,7 @@ export default function BlogPageClient({
                   value={searchValue}
                   onChange={(event) => setSearchValue(event.target.value)}
                   placeholder={t.searchPlaceholder}
-                  className="h-11 rounded-xl border-gray-800 bg-[#F5F8FF] pl-9 text-sm focus-visible:ring-primary/40"
+                  className="h-11 rounded-xl border-gray-800 bg-gray-800 pl-9 text-sm focus-visible:ring-primary/40"
                 />
               </div>
             </div>
@@ -1002,7 +1002,7 @@ export default function BlogPageClient({
                               type="button"
                               key={post.id}
                               onClick={() => openPost(post)}
-                              className="block w-full text-left rounded-lg border border-gray-800 px-3 py-2 transition-colors hover:bg-[#F5F8FF] cursor-pointer"
+                              className="block w-full text-left rounded-lg border border-gray-800 px-3 py-2 transition-colors hover:bg-gray-800 cursor-pointer"
                             >
                               <p className="text-sm font-medium line-clamp-2">{post.title}</p>
                               <p className="mt-1 text-xs text-slate-500">

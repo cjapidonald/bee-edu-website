@@ -65,7 +65,7 @@ export function ChatMessage({ message, onLinkClick }: ChatMessageProps) {
           borderRadius: isUser ? "16px 16px 4px 16px" : "16px 16px 16px 4px",
           backgroundColor: isUser ? "#16a34a" : "#f3f4f6",
           border: isUser ? "none" : "1px solid #e5e7eb",
-          color: isUser ? "#ffffff" : "#111827",
+          color: isUser ? "#ffffff" : "#e5e7eb",
           fontSize: "14px",
           lineHeight: "1.6",
         }}

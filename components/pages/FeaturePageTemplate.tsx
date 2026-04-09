@@ -125,8 +125,8 @@ export function FeaturePageTemplate({
       {/* Hero Section */}
       <section className="relative pt-16 sm:pt-20 md:pt-24 pb-16 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-gray-900/70 via-gray-950 to-gray-950" />
-        <div className="absolute top-20 left-10 w-72 h-72 bg-[#ffe0d4]/60 rounded-full blur-3xl hidden sm:block" />
-        <div className="absolute bottom-0 right-10 w-96 h-96 bg-[#ffd5c4]/40 rounded-full blur-3xl hidden sm:block" />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-green-500/10 rounded-full blur-3xl hidden sm:block" />
+        <div className="absolute bottom-0 right-10 w-96 h-96 bg-yellow-500/8 rounded-full blur-3xl hidden sm:block" />
 
         <div className="container px-4 relative z-10">
           {mockup ? (
@@ -231,7 +231,7 @@ export function FeaturePageTemplate({
       </section>
 
       {/* Features Grid */}
-      <section className="relative py-16 overflow-hidden bg-gradient-to-br from-[#fff7f2] via-[#fff3ec] to-[#ffe9dd]">
+      <section className="relative py-16 overflow-hidden bg-gradient-to-br from-gray-900 via-gray-900/80 to-gray-950">
         <div
           aria-hidden
           className="absolute inset-0 opacity-[0.04] pointer-events-none"
@@ -285,7 +285,7 @@ export function FeaturePageTemplate({
 
       {/* How It Works — editorial infographic */}
       {safeHowItWorks.length > 0 && (
-        <section className="relative py-24 overflow-hidden bg-[#fff7f2]">
+        <section className="relative py-24 overflow-hidden bg-gray-900/50">
           {/* Ambient background texture + top hairline */}
           <div
             aria-hidden
@@ -405,7 +405,7 @@ export function FeaturePageTemplate({
 
                       {/* Inline arrow between cards on tablet (md) */}
                       {!isLast && (
-                        <div className="hidden md:flex lg:hidden absolute top-1/2 -right-4 -translate-y-1/2 z-10 w-7 h-7 items-center justify-center bg-[#fff7f2] rounded-full">
+                        <div className="hidden md:flex lg:hidden absolute top-1/2 -right-4 -translate-y-1/2 z-10 w-7 h-7 items-center justify-center bg-gray-900/50 rounded-full">
                           <ArrowRight className="w-4 h-4 text-[#16a34a]" strokeWidth={2.5} />
                         </div>
                       )}
@@ -494,7 +494,7 @@ export function FeaturePageTemplate({
                 </div>
 
                 {/* RIGHT — WITH (branded) */}
-                <div className="relative bg-gradient-to-br from-[#fff7f2] via-[#fff0e6] to-[#ffe3d1] p-8 sm:p-10 md:pl-14">
+                <div className="relative bg-gradient-to-br from-gray-900 via-gray-900/80 to-gray-950 p-8 sm:p-10 md:pl-14">
                   {/* Crop marks */}
                   <span aria-hidden className="absolute top-3 right-3 w-2.5 h-px bg-[#16a34a]" />
                   <span aria-hidden className="absolute top-3 right-3 w-px h-2.5 bg-[#16a34a]" />

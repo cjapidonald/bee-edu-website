@@ -189,7 +189,7 @@ export default function PricingPage({
     <div className="min-h-screen bg-gray-900">
       <section className="relative pt-16 sm:pt-20 md:pt-24 pb-12 sm:pb-16 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-gray-900/50 via-gray-950 to-gray-950" />
-        <div className="absolute top-20 left-10 w-72 h-72 bg-[#ffe0d4]/60 rounded-full blur-3xl hidden sm:block" />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-green-500/10 rounded-full blur-3xl hidden sm:block" />
         <div className="absolute bottom-0 right-10 w-96 h-96 bg-gray-900/60 rounded-full blur-3xl hidden sm:block" />
 
         <div
@@ -202,7 +202,7 @@ export default function PricingPage({
           }}
         >
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-gradient-to-r from-gray-900 to-[#ffe0d4] text-[#15803d] rounded-full text-sm font-semibold">
+            <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-gradient-to-r from-gray-900 to-gray-800 text-[#15803d] rounded-full text-sm font-semibold">
               <Sparkles className="h-4 w-4 text-[#f0fdf4]0" />
               <span>{t.badge}</span>
             </div>
@@ -271,7 +271,7 @@ export default function PricingPage({
                 <p className="text-sm text-gray-500">{pricingTier.description}</p>
               </div>
 
-              <div className="mb-6 p-4 rounded-xl border border-[#ffe0d4] bg-gray-900/50">
+              <div className="mb-6 p-4 rounded-xl border border-green-900/30 bg-gray-900/50">
                 <div className="flex items-center gap-2 mb-3">
                   <Brain className="h-4 w-4 text-[#15803d]" />
                   <span className="text-sm font-semibold text-white">{t.aiFeatures}</span>
