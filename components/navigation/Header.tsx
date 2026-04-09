@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
@@ -199,15 +198,7 @@ export default function Header({ lang, dict }: HeaderProps) {
       <nav className="container flex h-16 items-center justify-between px-4">
         {/* Logo */}
         <Link href={getLocalizedPath("/")} className="flex items-center">
-          <Image
-            src="/elementals-education-logo.svg"
-            alt="Elementals"
-            width={120}
-            height={36}
-            className="h-9 w-auto max-h-[36px]"
-            priority
-            unoptimized
-          />
+          <span className="text-2xl font-bold"><span className="text-green-500">Kiwi</span><span className="text-yellow-400">Bee</span></span>
         </Link>
 
         {/* Desktop Navigation */}

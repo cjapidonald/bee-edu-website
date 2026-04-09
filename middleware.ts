@@ -1,6 +1,12 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
-import { i18n, type Locale } from '@/lib/i18n/config';
+
+const i18n = {
+  defaultLocale: 'vi' as const,
+  locales: ['vi', 'en', 'zh-HK'] as const,
+};
+
+type Locale = (typeof i18n)['locales'][number];
 
 const WRITE_METHODS = new Set(['POST', 'PUT', 'PATCH', 'DELETE']);
 

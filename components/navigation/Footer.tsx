@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { Facebook, Instagram, Linkedin, Mail } from "lucide-react";
@@ -151,14 +150,7 @@ export default function Footer({ lang, dict }: FooterProps) {
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <Link href={getLocalizedPath("/")} className="flex items-center mb-3">
-              <Image
-                src="/elementals-education-logo.svg"
-                alt="Elementals"
-                width={100}
-                height={28}
-                className="h-7 w-auto max-h-[28px]"
-                unoptimized
-              />
+              <span className="text-xl font-bold"><span className="text-green-500">Kiwi</span><span className="text-yellow-400">Bee</span></span>
             </Link>
             <p className="text-sm text-gray-600 mb-4">
               {(dict.footer.description as string) || "AI-powered school management for modern educators."}
@@ -278,7 +270,7 @@ export default function Footer({ lang, dict }: FooterProps) {
         {/* Bottom Section */}
         <div className="border-t mt-10 pt-6 text-center">
           <p className="text-sm text-gray-600">
-            &copy; {new Date().getFullYear()} Elementals (Elementals). {(dict.footer.copyright as string) || "All rights reserved."}
+            &copy; {new Date().getFullYear()} Kiwibee. {(dict.footer.copyright as string) || "All rights reserved."}
           </p>
           <p className="text-sm text-gray-600 mt-2">
             {getFooterText(dict, 'contact.email', 'Email')}: <a href="mailto:hello@elementals.com" className="hover:text-[#fc3c00]">hello@elementals.com</a>
