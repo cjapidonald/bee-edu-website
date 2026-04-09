@@ -81,15 +81,15 @@ export function AIAssistantMockup({ className = "", lang = "en" }: { className?:
       <div className="grid grid-cols-5 gap-2.5">
         {/* LEFT — Chat (3/5) */}
         <div className="col-span-3">
-          <div className="rounded-2xl bg-gray-900 border border-gray-700/70 shadow-lg shadow-black/20 overflow-hidden flex flex-col" style={{ height: 360 }}>
+          <div className="rounded-2xl bg-white border border-gray-200 shadow-sm overflow-hidden flex flex-col" style={{ height: 360 }}>
             {/* Chat header */}
-            <div className="flex items-center justify-between px-3 py-2 border-b border-gray-800 bg-gradient-to-r from-[#8b5cf6]/5 to-[#E83B5E]/5">
+            <div className="flex items-center justify-between px-3 py-2 border-b border-gray-100 bg-gradient-to-r from-[#8b5cf6]/5 to-[#E83B5E]/5">
               <div className="flex items-center gap-1.5">
                 <div className="h-5 w-5 rounded-full bg-gradient-to-br from-[#8b5cf6] to-[#E83B5E] flex items-center justify-center">
-                  <Sparkles className="h-2.5 w-2.5 text-white" />
+                  <Sparkles className="h-2.5 w-2.5 text-gray-900" />
                 </div>
                 <div>
-                  <div className="text-[10px] font-bold text-white leading-tight">KiwiBee AI</div>
+                  <div className="text-[10px] font-bold text-gray-900 leading-tight">KiwiBee AI</div>
                   <div className="text-[8px] text-gray-500">{lang === "vi" ? `${mt("aiAssistant.balancedMode", lang)} · Tiếng Anh lớp 5` : "Balanced · English Grade 5"}</div>
                 </div>
               </div>
@@ -100,7 +100,7 @@ export function AIAssistantMockup({ className = "", lang = "en" }: { className?:
             <div className="flex-1 overflow-hidden p-3 space-y-2 bg-gradient-to-b from-gray-900 to-gray-950">
               {/* User message */}
               <div className="flex justify-end">
-                <div className="max-w-[75%] px-2.5 py-1.5 bg-[#E83B5E] text-white rounded-xl rounded-tr-sm">
+                <div className="max-w-[75%] px-2.5 py-1.5 bg-[#E83B5E] text-gray-900 rounded-xl rounded-tr-sm">
                   <div className="text-[9px]">
                     {lang === "vi"
                       ? "Hãy tạo giáo án 45 phút cho Chủ đề 4 — Thơ ca, tập trung vào hình ảnh và ẩn dụ."
@@ -112,14 +112,14 @@ export function AIAssistantMockup({ className = "", lang = "en" }: { className?:
               {/* AI response */}
               <div className="flex gap-1.5">
                 <div className="h-5 w-5 rounded-full bg-gradient-to-br from-[#8b5cf6] to-[#E83B5E] flex items-center justify-center shrink-0">
-                  <Sparkles className="h-2 w-2 text-white" />
+                  <Sparkles className="h-2 w-2 text-gray-900" />
                 </div>
                 <div className="max-w-[80%]">
-                  <div className="px-2.5 py-1.5 bg-gray-800 rounded-xl rounded-tl-sm">
-                    <div className="text-[9px] text-white font-semibold mb-1">
+                  <div className="px-2.5 py-1.5 bg-gray-50 rounded-xl rounded-tl-sm">
+                    <div className="text-[9px] text-gray-900 font-semibold mb-1">
                       {lang === "vi" ? "Giáo án · Chủ đề 4: Thơ ca & Hình ảnh" : "Lesson Plan · Unit 4: Poetry & Imagery"}
                     </div>
-                    <div className="text-[8px] text-gray-300 leading-relaxed space-y-0.5">
+                    <div className="text-[8px] text-gray-600 leading-relaxed space-y-0.5">
                       {lang === "vi" ? (
                         <>
                           <div>• <span className="font-semibold">Khởi động (5p):</span> Chia sẻ bài thơ yêu thích</div>
@@ -138,17 +138,17 @@ export function AIAssistantMockup({ className = "", lang = "en" }: { className?:
                         </>
                       )}
                     </div>
-                    <div className="mt-1.5 pt-1.5 border-t border-gray-700/70 flex items-center gap-1">
+                    <div className="mt-1.5 pt-1.5 border-t border-gray-200 flex items-center gap-1">
                       <span className="text-[7px] font-semibold text-gray-500">{lang === "vi" ? "Dựa trên:" : "Grounded in:"}</span>
                       <span className="text-[7px] px-1 py-0.5 bg-[#FDB714]/20 rounded text-[#FDB714]">{lang === "vi" ? "Bản đồ CT" : "Curriculum map"}</span>
                       <span className="text-[7px] px-1 py-0.5 bg-[#3b82f6]/10 rounded text-[#3b82f6]">{lang === "vi" ? "Chuẩn trường" : "School standards"}</span>
                     </div>
                   </div>
                   <div className="flex items-center gap-2 mt-1 px-1">
-                    <button className="flex items-center gap-0.5 text-[8px] text-gray-500 hover:text-gray-300">
+                    <button className="flex items-center gap-0.5 text-[8px] text-gray-500 hover:text-gray-600">
                       <Copy className="h-2 w-2" /> {lang === "vi" ? "Sao chép" : "Copy"}
                     </button>
-                    <button className="flex items-center gap-0.5 text-[8px] text-gray-500 hover:text-gray-300">
+                    <button className="flex items-center gap-0.5 text-[8px] text-gray-500 hover:text-gray-600">
                       <ThumbsUp className="h-2 w-2" /> {lang === "vi" ? "Hữu ích" : "Helpful"}
                     </button>
                     <button className="flex items-center gap-0.5 text-[8px] text-[#E83B5E] hover:underline">
@@ -161,9 +161,9 @@ export function AIAssistantMockup({ className = "", lang = "en" }: { className?:
               {/* Typing indicator */}
               <div className="flex gap-1.5">
                 <div className="h-5 w-5 rounded-full bg-gradient-to-br from-[#8b5cf6] to-[#E83B5E] flex items-center justify-center shrink-0">
-                  <Sparkles className="h-2 w-2 text-white" />
+                  <Sparkles className="h-2 w-2 text-gray-900" />
                 </div>
-                <div className="px-2.5 py-1.5 bg-gray-800 rounded-xl rounded-tl-sm">
+                <div className="px-2.5 py-1.5 bg-gray-50 rounded-xl rounded-tl-sm">
                   <div className="flex gap-0.5">
                     <div className="h-1 w-1 rounded-full bg-gray-400 animate-pulse" />
                     <div className="h-1 w-1 rounded-full bg-gray-400 animate-pulse" style={{ animationDelay: "0.2s" }} />
@@ -174,20 +174,20 @@ export function AIAssistantMockup({ className = "", lang = "en" }: { className?:
             </div>
 
             {/* Input */}
-            <div className="border-t border-gray-800 p-2">
-              <div className="flex items-center gap-1.5 px-2 py-1.5 bg-gray-800/50 rounded-lg">
-                <Paperclip className="h-3 w-3 text-gray-400 shrink-0" />
-                <span className="text-[9px] text-gray-400 flex-1">{mt("aiAssistant.askAnything", lang)}</span>
+            <div className="border-t border-gray-100 p-2">
+              <div className="flex items-center gap-1.5 px-2 py-1.5 bg-gray-50/50 rounded-lg">
+                <Paperclip className="h-3 w-3 text-gray-500 shrink-0" />
+                <span className="text-[9px] text-gray-500 flex-1">{mt("aiAssistant.askAnything", lang)}</span>
                 <button className="h-5 w-5 rounded-md bg-[#E83B5E] flex items-center justify-center shrink-0">
-                  <Send className="h-2.5 w-2.5 text-white" />
+                  <Send className="h-2.5 w-2.5 text-gray-900" />
                 </button>
               </div>
               <div className="flex items-center gap-1 mt-1.5 px-1">
-                <span className="text-[7px] text-gray-400">{lang === "vi" ? "Chế độ:" : "Mode:"}</span>
+                <span className="text-[7px] text-gray-500">{lang === "vi" ? "Chế độ:" : "Mode:"}</span>
                 <span className="text-[7px] px-1 py-0.5 bg-[#FDB714]/15 text-[#FDB714] rounded font-bold">{mt("aiAssistant.fastMode", lang)}</span>
-                <span className="text-[7px] px-1 py-0.5 bg-[#3b82f6] text-white rounded font-bold">{mt("aiAssistant.balancedMode", lang)}</span>
-                <span className="text-[7px] px-1 py-0.5 bg-gray-800 text-gray-500 rounded font-bold">{mt("aiAssistant.deepMode", lang)}</span>
-                <span className="text-[7px] text-gray-400 ml-auto">{lang === "vi" ? "Dựa trên dữ liệu trường" : "Grounded in school data"}</span>
+                <span className="text-[7px] px-1 py-0.5 bg-[#3b82f6] text-gray-900 rounded font-bold">{mt("aiAssistant.balancedMode", lang)}</span>
+                <span className="text-[7px] px-1 py-0.5 bg-gray-50 text-gray-500 rounded font-bold">{mt("aiAssistant.deepMode", lang)}</span>
+                <span className="text-[7px] text-gray-500 ml-auto">{lang === "vi" ? "Dựa trên dữ liệu trường" : "Grounded in school data"}</span>
               </div>
             </div>
           </div>
@@ -200,7 +200,7 @@ export function AIAssistantMockup({ className = "", lang = "en" }: { className?:
               {TOOLS.map((t) => (
                 <div
                   key={t.label}
-                  className="flex items-center gap-1 p-1.5 rounded-lg hover:bg-gray-800/50 border border-gray-800 cursor-pointer"
+                  className="flex items-center gap-1 p-1.5 rounded-lg hover:bg-gray-50/50 border border-gray-100 cursor-pointer"
                 >
                   <div
                     className="h-5 w-5 rounded flex items-center justify-center shrink-0"
@@ -208,7 +208,7 @@ export function AIAssistantMockup({ className = "", lang = "en" }: { className?:
                   >
                     <t.icon className="h-2.5 w-2.5" style={{ color: t.color }} />
                   </div>
-                  <span className="text-[9px] font-semibold text-gray-300 truncate">
+                  <span className="text-[9px] font-semibold text-gray-600 truncate">
                     {t.label}
                   </span>
                 </div>
@@ -222,14 +222,14 @@ export function AIAssistantMockup({ className = "", lang = "en" }: { className?:
                 <div
                   key={i}
                   className={`flex items-center gap-1.5 p-1.5 rounded-md cursor-pointer ${
-                    c.active ? "bg-[#E83B5E]/10 border-l-2 border-[#E83B5E]" : "hover:bg-gray-800/50"
+                    c.active ? "bg-[#E83B5E]/10 border-l-2 border-[#E83B5E]" : "hover:bg-gray-50/50"
                   }`}
                 >
                   <MessageSquare
-                    className={`h-2.5 w-2.5 shrink-0 ${c.active ? "text-[#E83B5E]" : "text-gray-400"}`}
+                    className={`h-2.5 w-2.5 shrink-0 ${c.active ? "text-[#E83B5E]" : "text-gray-500"}`}
                   />
                   <div className="min-w-0 flex-1">
-                    <div className="text-[9px] font-semibold text-white truncate">
+                    <div className="text-[9px] font-semibold text-gray-900 truncate">
                       {c.title}
                     </div>
                     <div className="text-[7px] text-gray-500">{c.time}</div>

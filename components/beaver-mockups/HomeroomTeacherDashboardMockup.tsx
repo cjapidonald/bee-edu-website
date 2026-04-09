@@ -94,18 +94,18 @@ export function HomeroomTeacherDashboardMockup({
       tabTitle={`${mt("homeroomTeacher.title", lang)} — Primary 5A`}
       className={className}
     >
-      <div className="flex bg-gray-950 text-white" style={{ fontFamily: "-apple-system, system-ui, sans-serif" }}>
+      <div className="flex bg-[#fafafa] text-gray-900" style={{ fontFamily: "-apple-system, system-ui, sans-serif" }}>
         {/* ================= SIDEBAR ================= */}
-        <aside className="w-[120px] shrink-0 bg-gray-900 border-r border-gray-700/70 py-3 px-2 flex flex-col gap-0.5">
+        <aside className="w-[120px] shrink-0 bg-white border-r border-gray-200 py-3 px-2 flex flex-col gap-0.5">
           {/* Brand */}
-          <div className="flex items-center gap-1.5 px-2 pb-3 mb-1 border-b border-gray-800">
+          <div className="flex items-center gap-1.5 px-2 pb-3 mb-1 border-b border-gray-100">
             <div
-              className="h-5 w-5 rounded-md flex items-center justify-center text-white font-black text-[9px]"
+              className="h-5 w-5 rounded-md flex items-center justify-center text-gray-900 font-black text-[9px]"
               style={{ background: "linear-gradient(135deg, #16a34a, #FDB714)" }}
             >
               K
             </div>
-            <span className="text-[10px] font-bold text-white">KiwiBee</span>
+            <span className="text-[10px] font-bold text-gray-900">KiwiBee</span>
           </div>
 
           {/* Nav items */}
@@ -137,9 +137,9 @@ export function HomeroomTeacherDashboardMockup({
         {/* ================= MAIN CONTENT ================= */}
         <main className="flex-1 min-w-0 overflow-hidden">
           {/* Top bar */}
-          <div className="flex items-center justify-between px-4 py-2.5 bg-gray-900 border-b border-gray-700/70">
+          <div className="flex items-center justify-between px-4 py-2.5 bg-white border-b border-gray-200">
             <div className="flex items-center gap-2 min-w-0">
-              <div className="text-[11px] font-semibold text-white">{mt("homeroomTeacher.title", lang)} · Primary 5A</div>
+              <div className="text-[11px] font-semibold text-gray-900">{mt("homeroomTeacher.title", lang)} · Primary 5A</div>
               <MockBadge color="yellow">
                 <Sun className="h-2 w-2" />
                 {mt("common.monday", lang)}
@@ -147,9 +147,9 @@ export function HomeroomTeacherDashboardMockup({
             </div>
             <div className="flex items-center gap-2 shrink-0">
               {/* Search */}
-              <div className="hidden md:flex items-center gap-1 px-2 py-1 bg-gray-800 rounded-md w-[120px]">
-                <Search className="h-2.5 w-2.5 text-gray-400" />
-                <span className="text-[9px] text-gray-400">{mt("common.search", lang)}</span>
+              <div className="hidden md:flex items-center gap-1 px-2 py-1 bg-gray-50 rounded-md w-[120px]">
+                <Search className="h-2.5 w-2.5 text-gray-500" />
+                <span className="text-[9px] text-gray-500">{mt("common.search", lang)}</span>
               </div>
               {/* Notification */}
               <div className="relative">
@@ -159,17 +159,17 @@ export function HomeroomTeacherDashboardMockup({
               {/* Avatar */}
               <div className="flex items-center gap-1">
                 <MockAvatar name="Ms Nguyen" size={22} gradientFrom="#FDB714" gradientTo="#E83B5E" />
-                <ChevronDown className="h-2 w-2 text-gray-400" />
+                <ChevronDown className="h-2 w-2 text-gray-500" />
               </div>
             </div>
           </div>
 
           {/* ================= DASHBOARD BODY ================= */}
-          <div className="p-3 bg-gray-950 space-y-2.5">
+          <div className="p-3 bg-[#fafafa] space-y-2.5">
             {/* Greeting row */}
             <div className="flex items-end justify-between">
               <div>
-                <div className="text-[14px] font-bold text-white leading-tight">{mt("common.greeting", lang)}, Ms. Nguyen</div>
+                <div className="text-[14px] font-bold text-gray-900 leading-tight">{mt("common.greeting", lang)}, Ms. Nguyen</div>
                 <div className="text-[10px] text-gray-500">{mt("common.mondayFull", lang)} · 18 {mt("common.students", lang).toLowerCase()}</div>
               </div>
               <button
@@ -182,7 +182,7 @@ export function HomeroomTeacherDashboardMockup({
 
             {/* Attendance summary — 6 up */}
             <div className="grid grid-cols-6 gap-1.5">
-              <StatCard icon={Users} label={lang === "vi" ? "Tổng" : "Total"} value={18} color="text-gray-400" bg="bg-gray-800" />
+              <StatCard icon={Users} label={lang === "vi" ? "Tổng" : "Total"} value={18} color="text-gray-500" bg="bg-gray-50" />
               <StatCard icon={CheckCircle2} label={mt("common.present", lang)} value={15} color="text-emerald-600" bg="bg-emerald-100" trend="+2" />
               <StatCard icon={Clock} label={mt("common.late", lang)} value={1} color="text-amber-600" bg="bg-amber-100" />
               <StatCard icon={XCircle} label={mt("common.absent", lang)} value={1} color="text-red-600" bg="bg-red-100" />
@@ -205,11 +205,11 @@ export function HomeroomTeacherDashboardMockup({
                   }
                 >
                   {/* Table header */}
-                  <div className="grid grid-cols-[1.3fr_0.6fr_0.9fr_0.9fr] gap-1 px-1 pb-1.5 border-b border-gray-800">
-                    <div className="text-[8px] font-semibold text-gray-400 uppercase tracking-wider">{lang === "vi" ? "Tên" : "Name"}</div>
-                    <div className="text-[8px] font-semibold text-gray-400 uppercase tracking-wider">{mt("common.status", lang)}</div>
-                    <div className="text-[8px] font-semibold text-gray-400 uppercase tracking-wider">ClassSpark</div>
-                    <div className="text-[8px] font-semibold text-gray-400 uppercase tracking-wider">{lang === "vi" ? "TB" : "Avg"}</div>
+                  <div className="grid grid-cols-[1.3fr_0.6fr_0.9fr_0.9fr] gap-1 px-1 pb-1.5 border-b border-gray-100">
+                    <div className="text-[8px] font-semibold text-gray-500 uppercase tracking-wider">{lang === "vi" ? "Tên" : "Name"}</div>
+                    <div className="text-[8px] font-semibold text-gray-500 uppercase tracking-wider">{mt("common.status", lang)}</div>
+                    <div className="text-[8px] font-semibold text-gray-500 uppercase tracking-wider">ClassSpark</div>
+                    <div className="text-[8px] font-semibold text-gray-500 uppercase tracking-wider">{lang === "vi" ? "TB" : "Avg"}</div>
                   </div>
 
                   {/* Rows */}
@@ -226,13 +226,13 @@ export function HomeroomTeacherDashboardMockup({
                             gradientFrom={s.gradient[0]}
                             gradientTo={s.gradient[1]}
                           />
-                          <span className="text-[10px] font-medium text-white truncate">
+                          <span className="text-[10px] font-medium text-gray-900 truncate">
                             {s.name}
                           </span>
                         </div>
                         <div className="flex items-center gap-1">
                           <StatusDot status={s.status} />
-                          <span className="text-[9px] text-gray-400 capitalize">{mt(`common.${s.status}`, lang)}</span>
+                          <span className="text-[9px] text-gray-500 capitalize">{mt(`common.${s.status}`, lang)}</span>
                         </div>
                         <div className="flex items-center gap-1">
                           <div className="flex items-center gap-0.5 px-1 py-0.5 bg-[#FDB714]/10 rounded">
@@ -282,7 +282,7 @@ export function HomeroomTeacherDashboardMockup({
                   subtitle={lang === "vi" ? "Đá quý · 10 ngày qua" : "Gems earned · last 10 days"}
                   right={
                     <div className="flex items-baseline gap-1">
-                      <span className="text-[13px] font-bold text-white tabular-nums">+127</span>
+                      <span className="text-[13px] font-bold text-gray-900 tabular-nums">+127</span>
                       <span className="text-[9px] text-emerald-600 font-semibold">+24%</span>
                     </div>
                   }
@@ -305,7 +305,7 @@ export function HomeroomTeacherDashboardMockup({
                     {SCHEDULE.map((s, i) => (
                       <div
                         key={s.time}
-                        className="flex items-center gap-2 py-1 px-1.5 rounded-lg hover:bg-gray-800/50"
+                        className="flex items-center gap-2 py-1 px-1.5 rounded-lg hover:bg-gray-50/50"
                       >
                         <div className="text-[9px] font-bold text-gray-500 tabular-nums w-7 shrink-0">
                           {s.time}
@@ -315,7 +315,7 @@ export function HomeroomTeacherDashboardMockup({
                           style={{ background: s.color }}
                         />
                         <div className="min-w-0 flex-1">
-                          <div className="text-[10px] font-semibold text-white truncate">
+                          <div className="text-[10px] font-semibold text-gray-900 truncate">
                             {mt(`subjects.${s.subjectKey}`, lang)}
                           </div>
                           <div className="text-[8px] text-gray-500 truncate">{s.roomKey}</div>
@@ -338,7 +338,7 @@ export function HomeroomTeacherDashboardMockup({
                 <div className="flex items-center justify-between">
                   <div>
                     <div className="text-[9px] text-[#FDB714] font-semibold uppercase tracking-wide">{mt("classSpark.topPerformer", lang)}</div>
-                    <div className="text-[11px] font-bold text-white mt-0.5">Maya Patel · 92</div>
+                    <div className="text-[11px] font-bold text-gray-900 mt-0.5">Maya Patel · 92</div>
                   </div>
                   <Star className="h-4 w-4 text-[#FDB714] fill-[#FDB714]" />
                 </div>
@@ -347,7 +347,7 @@ export function HomeroomTeacherDashboardMockup({
                 <div className="flex items-center justify-between">
                   <div>
                     <div className="text-[9px] text-emerald-700 font-semibold uppercase tracking-wide">{mt("gradebook.classAverage", lang)}</div>
-                    <div className="text-[11px] font-bold text-white mt-0.5">82.6 · {lang === "vi" ? "Trên mục tiêu" : "Above target"}</div>
+                    <div className="text-[11px] font-bold text-gray-900 mt-0.5">82.6 · {lang === "vi" ? "Trên mục tiêu" : "Above target"}</div>
                   </div>
                   <Sparkline data={[72, 74, 78, 80, 82, 83]} color="#10b981" width={40} height={18} />
                 </div>
@@ -356,7 +356,7 @@ export function HomeroomTeacherDashboardMockup({
                 <div className="flex items-center justify-between">
                   <div>
                     <div className="text-[9px] text-[#E83B5E] font-semibold uppercase tracking-wide">{mt("gradebook.needsSupport", lang)}</div>
-                    <div className="text-[11px] font-bold text-white mt-0.5">Ethan Kim · 72</div>
+                    <div className="text-[11px] font-bold text-gray-900 mt-0.5">Ethan Kim · 72</div>
                   </div>
                   <Heart className="h-4 w-4 text-[#E83B5E]" />
                 </div>

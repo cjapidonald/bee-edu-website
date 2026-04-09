@@ -71,28 +71,28 @@ export function ClassSparkMockup({ className = "", lang = "en" }: { className?: 
       ]}
     >
       {/* Vibrant header */}
-      <div className="relative rounded-2xl overflow-hidden mb-2.5 p-3 bg-gradient-to-br from-[#FDB714] via-[#FF6B9D] to-[#E83B5E] text-white">
-        <div className="absolute -top-8 -right-8 w-32 h-32 rounded-full bg-gray-900/20 blur-2xl" />
+      <div className="relative rounded-2xl overflow-hidden mb-2.5 p-3 bg-gradient-to-br from-[#FDB714] via-[#FF6B9D] to-[#E83B5E] text-gray-900">
+        <div className="absolute -top-8 -right-8 w-32 h-32 rounded-full bg-white/20 blur-2xl" />
         <div className="absolute -bottom-10 -left-10 w-28 h-28 rounded-full bg-[#FDB714]/40 blur-2xl" />
         <div className="relative flex items-center justify-between">
           <div>
             <div className="flex items-center gap-1.5 mb-1">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gray-900 opacity-75" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-gray-900" />
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-white" />
               </span>
               <span className="text-[9px] uppercase tracking-wider font-bold">{lang === "vi" ? "Buổi trực tiếp" : "Live session"}</span>
             </div>
             <div className="text-[16px] font-black leading-tight">{mt("classSpark.title", lang)} · Primary 5A</div>
-            <div className="text-[10px] text-white/90 mt-0.5">
+            <div className="text-[10px] text-gray-900/90 mt-0.5">
               {lang === "vi" ? `Tiết ${mt("subjects.english", lang)} · 28 đá quý trong tiết này` : "English lesson · 28 gems given this period"}
             </div>
           </div>
           <div className="flex gap-1.5 shrink-0">
-            <button className="flex items-center gap-1 px-2 py-1.5 bg-gray-900/20 backdrop-blur-sm rounded-lg text-[10px] font-bold border border-white/30">
+            <button className="flex items-center gap-1 px-2 py-1.5 bg-white/20 backdrop-blur-sm rounded-lg text-[10px] font-bold border border-white/30">
               <Bolt className="h-3 w-3" /> {lang === "vi" ? "Bom kết hợp" : "Fuse Bomb"}
             </button>
-            <button className="flex items-center gap-1 px-2 py-1.5 bg-gray-900 text-[#E83B5E] rounded-lg text-[10px] font-bold shadow-md">
+            <button className="flex items-center gap-1 px-2 py-1.5 bg-white text-[#E83B5E] rounded-lg text-[10px] font-bold shadow-md">
               <Plus className="h-3 w-3" /> {lang === "vi" ? "Trao đá quý" : "Give Gems"}
             </button>
           </div>
@@ -111,7 +111,7 @@ export function ClassSparkMockup({ className = "", lang = "en" }: { className?: 
               {MONSTERS.map((m) => (
                 <div
                   key={m.name}
-                  className="relative rounded-xl p-2 border border-gray-700/60 bg-gradient-to-br from-gray-900 to-gray-50 hover:border-[#FDB714]/50 cursor-pointer"
+                  className="relative rounded-xl p-2 border border-gray-200/60 bg-gradient-to-br from-gray-900 to-gray-50 hover:border-[#FDB714]/50 cursor-pointer"
                 >
                   {/* Level badge */}
                   <div className="absolute top-1 right-1 h-4 px-1 rounded-md bg-[#FDB714] flex items-center justify-center">
@@ -130,7 +130,7 @@ export function ClassSparkMockup({ className = "", lang = "en" }: { className?: 
                   </div>
 
                   <div className="text-center">
-                    <div className="text-[9px] font-bold text-white truncate">{m.name}</div>
+                    <div className="text-[9px] font-bold text-gray-900 truncate">{m.name}</div>
                     <div className="flex items-center justify-center gap-0.5 mt-0.5">
                       <Coins className="h-2 w-2 text-[#FDB714]" />
                       <span className="text-[9px] font-black text-[#FDB714] tabular-nums">
@@ -154,7 +154,7 @@ export function ClassSparkMockup({ className = "", lang = "en" }: { className?: 
               {RECENT_EVENTS.map((e, i) => (
                 <div
                   key={i}
-                  className="flex items-start gap-1.5 py-1 px-1.5 rounded-md bg-gray-800/50/80"
+                  className="flex items-start gap-1.5 py-1 px-1.5 rounded-md bg-gray-50/50/80"
                 >
                   <div
                     className="h-5 w-5 rounded-md flex items-center justify-center shrink-0"
@@ -163,8 +163,8 @@ export function ClassSparkMockup({ className = "", lang = "en" }: { className?: 
                     <e.icon className="h-2.5 w-2.5" style={{ color: e.color }} />
                   </div>
                   <div className="min-w-0 flex-1">
-                    <div className="text-[9px] text-gray-300 leading-tight">
-                      <span className="font-bold text-white">{e.student}</span> {e.action}
+                    <div className="text-[9px] text-gray-600 leading-tight">
+                      <span className="font-bold text-gray-900">{e.student}</span> {e.action}
                     </div>
                   </div>
                   <span className="text-[8px] font-black text-[#FDB714] tabular-nums shrink-0">

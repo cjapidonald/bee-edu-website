@@ -22,10 +22,10 @@ export function BrowserFrame({
 }) {
   return (
     <div
-      className={`relative rounded-2xl bg-gray-900/50 shadow-[0_20px_60px_-10px_rgba(0,0,0,0.7),0_8px_20px_-6px_rgba(0,0,0,0.5)] ring-1 ring-white/5 overflow-hidden ${className}`}
+      className={`relative rounded-2xl bg-white shadow-[0_20px_60px_-10px_rgba(0,0,0,0.5),0_8px_20px_-6px_rgba(0,0,0,0.3)] ring-1 ring-black/10 overflow-hidden ${className}`}
     >
       {/* Top chrome */}
-      <div className="bg-gradient-to-b from-gray-800 to-gray-850 border-b border-gray-700/50">
+      <div className="bg-gradient-to-b from-[#fafafa] to-[#f0f0f0] border-b border-black/5">
         {/* Traffic lights + tabs */}
         <div className="flex items-center gap-3 px-4 pt-3 pb-2">
           {/* Traffic lights */}
@@ -36,22 +36,22 @@ export function BrowserFrame({
           </div>
 
           {/* Tab */}
-          <div className="flex items-center gap-2 px-3 py-1.5 bg-gray-900 rounded-t-lg border border-gray-700/30 border-b-0 max-w-[260px] min-w-0">
+          <div className="flex items-center gap-2 px-3 py-1.5 bg-white rounded-t-lg shadow-sm max-w-[260px] min-w-0">
             <span
               className="h-4 w-4 rounded-sm shrink-0 flex items-center justify-center text-[10px] font-black text-white"
               style={{ background: accent }}
             >
               K
             </span>
-            <span className="text-[11px] text-gray-300 truncate font-medium">
+            <span className="text-[11px] text-gray-600 truncate font-medium">
               {tabTitle}
             </span>
             <span className="ml-auto text-gray-400 text-xs leading-none">×</span>
           </div>
 
           <div className="ml-auto flex items-center gap-1.5 shrink-0">
-            <span className="h-5 w-5 rounded bg-gray-700/50" />
-            <span className="h-5 w-5 rounded bg-gray-700/50" />
+            <span className="h-5 w-5 rounded bg-black/5" />
+            <span className="h-5 w-5 rounded bg-black/5" />
           </div>
         </div>
 
@@ -63,7 +63,7 @@ export function BrowserFrame({
                 <path d="M15 18l-6-6 6-6" />
               </svg>
             </button>
-            <button className="h-6 w-6 flex items-center justify-center text-gray-300">
+            <button className="h-6 w-6 flex items-center justify-center text-gray-400">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <path d="M9 18l6-6-6-6" />
               </svg>
@@ -76,15 +76,15 @@ export function BrowserFrame({
             </button>
           </div>
 
-          <div className="flex-1 flex items-center gap-1.5 bg-gray-900 rounded-md px-3 py-1 border border-gray-700/50 min-w-0">
+          <div className="flex-1 flex items-center gap-1.5 bg-white rounded-md px-3 py-1 border border-black/5 shadow-inner min-w-0">
             <Lock className="h-3 w-3 text-gray-400 shrink-0" />
-            <span className="text-[11px] text-gray-400 truncate">{url}</span>
+            <span className="text-[11px] text-gray-500 truncate">{url}</span>
           </div>
         </div>
       </div>
 
       {/* Content viewport */}
-      <div className="relative bg-gray-900">{children}</div>
+      <div className="relative bg-[#fafafa]">{children}</div>
     </div>
   );
 }

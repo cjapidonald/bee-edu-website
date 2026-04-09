@@ -56,14 +56,14 @@ export function CustomerServiceMockup({ className = "", lang = "en" }: { classNa
     >
       <div className="flex items-end justify-between mb-2.5">
         <div>
-          <div className="text-[14px] font-bold text-white leading-tight">
+          <div className="text-[14px] font-bold text-gray-900 leading-tight">
             Customer Service
           </div>
           <div className="text-[10px] text-gray-500">
             8 open tickets · 3 renewals due · NPS +62
           </div>
         </div>
-        <button className="flex items-center gap-1 px-2 py-1 bg-[#3b82f6] text-white rounded-lg text-[10px] font-semibold shadow-sm">
+        <button className="flex items-center gap-1 px-2 py-1 bg-[#3b82f6] text-gray-900 rounded-lg text-[10px] font-semibold shadow-sm">
           <Plus className="h-2.5 w-2.5" />
           New Ticket
         </button>
@@ -79,7 +79,7 @@ export function CustomerServiceMockup({ className = "", lang = "en" }: { classNa
         ].map((k) => (
           <div
             key={k.label}
-            className="rounded-xl bg-gray-900 border border-gray-700/70 p-2.5 shadow-lg shadow-black/20"
+            className="rounded-xl bg-white border border-gray-200 p-2.5 shadow-sm"
           >
             <div
               className="h-5 w-5 rounded-lg flex items-center justify-center mb-1"
@@ -88,7 +88,7 @@ export function CustomerServiceMockup({ className = "", lang = "en" }: { classNa
               <k.icon className="h-3 w-3" style={{ color: k.color }} />
             </div>
             <div className="text-[9px] text-gray-500">{k.label}</div>
-            <div className="text-base font-black text-white tabular-nums leading-none">
+            <div className="text-base font-black text-gray-900 tabular-nums leading-none">
               {k.value}
             </div>
           </div>
@@ -107,7 +107,7 @@ export function CustomerServiceMockup({ className = "", lang = "en" }: { classNa
               {TICKETS.map((t) => (
                 <div
                   key={t.id}
-                  className="rounded-lg bg-gray-800/50/80 border border-gray-800 p-1.5"
+                  className="rounded-lg bg-gray-50/50/80 border border-gray-100 p-1.5"
                 >
                   <div className="flex items-center gap-2">
                     <MockAvatar
@@ -118,12 +118,12 @@ export function CustomerServiceMockup({ className = "", lang = "en" }: { classNa
                     />
                     <div className="min-w-0 flex-1">
                       <div className="flex items-center gap-1.5">
-                        <span className="text-[8px] font-mono text-gray-400">{t.id}</span>
-                        <span className="text-[9px] font-bold text-white truncate">
+                        <span className="text-[8px] font-mono text-gray-500">{t.id}</span>
+                        <span className="text-[9px] font-bold text-gray-900 truncate">
                           {t.parent}
                         </span>
                       </div>
-                      <div className="text-[8px] text-gray-400 truncate">{t.subject}</div>
+                      <div className="text-[8px] text-gray-500 truncate">{t.subject}</div>
                     </div>
                     <div className="flex flex-col items-end gap-0.5 shrink-0">
                       <span
@@ -134,7 +134,7 @@ export function CustomerServiceMockup({ className = "", lang = "en" }: { classNa
                               ? "bg-amber-950/50 text-amber-700"
                               : t.priority === "medium"
                                 ? "bg-blue-950/50 text-blue-700"
-                                : "bg-gray-800 text-gray-400"
+                                : "bg-gray-50 text-gray-500"
                         }`}
                       >
                         {t.priority}
@@ -145,7 +145,7 @@ export function CustomerServiceMockup({ className = "", lang = "en" }: { classNa
                             ? "text-emerald-600"
                             : t.status === "in-progress"
                               ? "text-[#FDB714]"
-                              : "text-gray-400"
+                              : "text-gray-500"
                         }`}
                       >
                         {t.status}
@@ -168,10 +168,10 @@ export function CustomerServiceMockup({ className = "", lang = "en" }: { classNa
               {RENEWALS.map((r) => (
                 <div
                   key={r.school}
-                  className="flex items-center justify-between p-1.5 rounded-md bg-gray-800/50"
+                  className="flex items-center justify-between p-1.5 rounded-md bg-gray-50/50"
                 >
                   <div className="min-w-0 flex-1">
-                    <div className="text-[9px] font-bold text-white truncate">
+                    <div className="text-[9px] font-bold text-gray-900 truncate">
                       {r.school}
                     </div>
                     <div className="text-[7px] text-gray-500">{r.plan} · {r.expires}</div>
@@ -188,21 +188,21 @@ export function CustomerServiceMockup({ className = "", lang = "en" }: { classNa
 
           <Panel title="Satisfaction" subtitle="NPS last 30 days">
             <div className="flex items-baseline gap-1 mb-1">
-              <span className="text-2xl font-black text-white leading-none">+62</span>
+              <span className="text-2xl font-black text-gray-900 leading-none">+62</span>
               <span className="text-[8px] text-emerald-600 font-bold">+8</span>
             </div>
             <div className="flex items-center gap-2 mt-1">
               <div className="flex items-center gap-0.5">
                 <Smile className="h-2.5 w-2.5 text-emerald-600" />
-                <span className="text-[8px] font-bold text-gray-300">72%</span>
+                <span className="text-[8px] font-bold text-gray-600">72%</span>
               </div>
               <div className="flex items-center gap-0.5">
                 <Meh className="h-2.5 w-2.5 text-amber-600" />
-                <span className="text-[8px] font-bold text-gray-300">18%</span>
+                <span className="text-[8px] font-bold text-gray-600">18%</span>
               </div>
               <div className="flex items-center gap-0.5">
                 <Frown className="h-2.5 w-2.5 text-rose-600" />
-                <span className="text-[8px] font-bold text-gray-300">10%</span>
+                <span className="text-[8px] font-bold text-gray-600">10%</span>
               </div>
             </div>
           </Panel>

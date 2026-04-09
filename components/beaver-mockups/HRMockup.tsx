@@ -55,12 +55,12 @@ export function HRMockup({ className = "", lang = "en" }: { className?: string; 
     >
       <div className="flex items-end justify-between mb-2.5">
         <div>
-          <div className="text-[14px] font-bold text-white leading-tight">HR Overview</div>
+          <div className="text-[14px] font-bold text-gray-900 leading-tight">HR Overview</div>
           <div className="text-[10px] text-gray-500">
             42 staff · 38 active · 3 on leave · 1 open position
           </div>
         </div>
-        <button className="flex items-center gap-1 px-2 py-1 bg-emerald-600 text-white rounded-lg text-[10px] font-semibold shadow-sm">
+        <button className="flex items-center gap-1 px-2 py-1 bg-emerald-600 text-gray-900 rounded-lg text-[10px] font-semibold shadow-sm">
           <UserPlus className="h-2.5 w-2.5" />
           Add Staff
         </button>
@@ -68,7 +68,7 @@ export function HRMockup({ className = "", lang = "en" }: { className?: string; 
 
       {/* Stats row */}
       <div className="grid grid-cols-6 gap-1.5 mb-2.5">
-        <StatCard icon={Users} label="Total" value={42} color="text-gray-400" bg="bg-gray-800" />
+        <StatCard icon={Users} label="Total" value={42} color="text-gray-500" bg="bg-gray-50" />
         <StatCard icon={CheckCircle2} label="Active" value={38} color="text-emerald-600" bg="bg-emerald-100" trend="+2" />
         <StatCard icon={Clock} label="On leave" value={3} color="text-amber-600" bg="bg-amber-100" />
         <StatCard icon={XCircle} label="Absent" value={1} color="text-red-600" bg="bg-red-100" />
@@ -84,12 +84,12 @@ export function HRMockup({ className = "", lang = "en" }: { className?: string; 
             subtitle="Active staff members"
             right={<MockBadge color="emerald">42 staff</MockBadge>}
           >
-            <div className="grid grid-cols-[1.5fr_1fr_0.9fr_0.8fr_0.6fr] gap-1 pb-1.5 border-b border-gray-800">
-              <div className="text-[8px] font-semibold text-gray-400 uppercase tracking-wider">Name</div>
-              <div className="text-[8px] font-semibold text-gray-400 uppercase tracking-wider">Role</div>
-              <div className="text-[8px] font-semibold text-gray-400 uppercase tracking-wider">Contract</div>
-              <div className="text-[8px] font-semibold text-gray-400 uppercase tracking-wider">Status</div>
-              <div className="text-[8px] font-semibold text-gray-400 uppercase tracking-wider text-right">Perf</div>
+            <div className="grid grid-cols-[1.5fr_1fr_0.9fr_0.8fr_0.6fr] gap-1 pb-1.5 border-b border-gray-100">
+              <div className="text-[8px] font-semibold text-gray-500 uppercase tracking-wider">Name</div>
+              <div className="text-[8px] font-semibold text-gray-500 uppercase tracking-wider">Role</div>
+              <div className="text-[8px] font-semibold text-gray-500 uppercase tracking-wider">Contract</div>
+              <div className="text-[8px] font-semibold text-gray-500 uppercase tracking-wider">Status</div>
+              <div className="text-[8px] font-semibold text-gray-500 uppercase tracking-wider text-right">Perf</div>
             </div>
             <div className="divide-y divide-gray-100">
               {STAFF.map((s) => (
@@ -104,9 +104,9 @@ export function HRMockup({ className = "", lang = "en" }: { className?: string; 
                       gradientFrom={s.avatar[0]}
                       gradientTo={s.avatar[1]}
                     />
-                    <span className="text-[9px] font-semibold text-white truncate">{s.name}</span>
+                    <span className="text-[9px] font-semibold text-gray-900 truncate">{s.name}</span>
                   </div>
-                  <span className="text-[9px] text-gray-400 truncate">{s.role}</span>
+                  <span className="text-[9px] text-gray-500 truncate">{s.role}</span>
                   <span className="text-[8px] text-gray-500">{s.contract}</span>
                   <div>
                     {s.status === "Active" ? (
@@ -131,7 +131,7 @@ export function HRMockup({ className = "", lang = "en" }: { className?: string; 
         {/* RIGHT — Payroll + Leaves (2/5) */}
         <div className="col-span-2 space-y-2.5">
           <Panel title="Monthly Payroll" subtitle="Oct 2025">
-            <div className="text-lg font-black text-white leading-none tabular-nums mb-1">
+            <div className="text-lg font-black text-gray-900 leading-none tabular-nums mb-1">
               $48,250
             </div>
             <div className="text-[8px] text-gray-500 mb-2">42 employees · paid on 25th</div>
@@ -156,7 +156,7 @@ export function HRMockup({ className = "", lang = "en" }: { className?: string; 
                 <div key={l.name} className="flex items-center gap-1.5 py-0.5">
                   <MockAvatar name={l.name} size={14} gradientFrom="#10b981" gradientTo="#00C9A7" />
                   <div className="min-w-0 flex-1">
-                    <div className="text-[8px] font-bold text-white truncate">{l.name}</div>
+                    <div className="text-[8px] font-bold text-gray-900 truncate">{l.name}</div>
                     <div className="text-[7px] text-gray-500">
                       {l.type} · {l.days}
                     </div>

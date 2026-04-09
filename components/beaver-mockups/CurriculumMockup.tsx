@@ -78,14 +78,14 @@ export function CurriculumMockup({ className = "", lang = "en" }: { className?: 
     >
       <div className="flex items-end justify-between mb-2.5">
         <div>
-          <div className="text-[14px] font-bold text-white leading-tight">
+          <div className="text-[14px] font-bold text-gray-900 leading-tight">
             {lang === "vi" ? "Tiếng Anh Lớp 5 — Bản đồ Chương trình" : "English Primary 5 — Curriculum Map"}
           </div>
           <div className="text-[10px] text-gray-500">
             {lang === "vi" ? "6 chủ đề · 64 kỹ năng · 42 bài · Tiến độ HK1" : "6 units · 64 skills · 42 lessons · Term 1 progress"}
           </div>
         </div>
-        <button className="flex items-center gap-1 px-2 py-1 bg-gradient-to-r from-[#FDB714] to-[#E83B5E] text-white rounded-lg text-[10px] font-semibold shadow-sm">
+        <button className="flex items-center gap-1 px-2 py-1 bg-gradient-to-r from-[#FDB714] to-[#E83B5E] text-gray-900 rounded-lg text-[10px] font-semibold shadow-sm">
           <Sparkles className="h-2.5 w-2.5" />
           AI Build Unit
         </button>
@@ -118,11 +118,11 @@ export function CurriculumMockup({ className = "", lang = "en" }: { className?: 
                         }`}
                       >
                         {u.status === "done" ? (
-                          <CheckCircle2 className="h-4 w-4 text-white" />
+                          <CheckCircle2 className="h-4 w-4 text-gray-900" />
                         ) : u.status === "current" ? (
                           <span className="text-[10px] font-black text-[#7a4e00]">{u.num}</span>
                         ) : (
-                          <Circle className="h-3 w-3 text-white" />
+                          <Circle className="h-3 w-3 text-gray-900" />
                         )}
                       </div>
                     </div>
@@ -134,7 +134,7 @@ export function CurriculumMockup({ className = "", lang = "en" }: { className?: 
                           ? "bg-[#FDB714]/5 border-[#FDB714]/30 shadow-sm"
                           : u.status === "done"
                             ? "bg-emerald-950/50/50 border-emerald-100"
-                            : "bg-gray-900 border-gray-800"
+                            : "bg-white border-gray-100"
                       }`}
                     >
                       <div className="flex items-center justify-between">
@@ -146,23 +146,23 @@ export function CurriculumMockup({ className = "", lang = "en" }: { className?: 
                                   ? "text-[#FDB714]"
                                   : u.status === "done"
                                     ? "text-emerald-700"
-                                    : "text-gray-400"
+                                    : "text-gray-500"
                               }`}
                             >
                               {mt("curriculum.unit", lang)} {u.num}
                             </span>
                             {u.status === "current" && (
-                              <span className="text-[7px] font-bold text-white px-1 py-0.5 bg-[#FDB714] rounded">
+                              <span className="text-[7px] font-bold text-gray-900 px-1 py-0.5 bg-[#FDB714] rounded">
                                 {lang === "vi" ? "HIỆN TẠI" : "ACTIVE"}
                               </span>
                             )}
                           </div>
-                          <div className="text-[10px] font-bold text-white truncate">
+                          <div className="text-[10px] font-bold text-gray-900 truncate">
                             {u.title}
                           </div>
                         </div>
                         <div className="shrink-0 text-right">
-                          <div className="text-[9px] font-bold text-gray-300 tabular-nums">
+                          <div className="text-[9px] font-bold text-gray-600 tabular-nums">
                             {u.skills}
                           </div>
                           <div className="text-[7px] text-gray-500">{mt("gradebook.skills", lang).toLowerCase()}</div>
@@ -201,7 +201,7 @@ export function CurriculumMockup({ className = "", lang = "en" }: { className?: 
                   <div className="flex items-center justify-between mb-0.5">
                     <div className="flex items-center gap-1 min-w-0">
                       <GitBranch className="h-2.5 w-2.5 text-[#FDB714] shrink-0" />
-                      <span className="text-[9px] font-semibold text-white truncate">
+                      <span className="text-[9px] font-semibold text-gray-900 truncate">
                         {s.name}
                       </span>
                     </div>
@@ -238,7 +238,7 @@ export function CurriculumMockup({ className = "", lang = "en" }: { className?: 
             <div className="text-[9px] text-gray-100 font-semibold mb-0.5">
               {lang === "vi" ? "Đồng bộ CEFR A2 + Bộ GD&ĐT" : "Aligned with CEFR A2 + local MoET"}
             </div>
-            <div className="text-[8px] text-gray-400">
+            <div className="text-[8px] text-gray-500">
               {lang === "vi" ? "42/48 chuẩn · Độ phủ 88%" : "42 of 48 curriculum standards met · 88% coverage"}
             </div>
           </div>

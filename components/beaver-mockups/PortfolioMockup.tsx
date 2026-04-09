@@ -69,11 +69,11 @@ export function PortfolioMockup({ className = "", lang = "en" }: { className?: s
             <div className="text-[9px] uppercase tracking-wider text-gray-500 font-semibold">
               Portfolio
             </div>
-            <div className="text-[14px] font-bold text-white leading-tight">Alex Chen</div>
-            <div className="text-[9px] text-gray-400">Primary 5A · 24 artifacts · 18 skills mastered</div>
+            <div className="text-[14px] font-bold text-gray-900 leading-tight">Alex Chen</div>
+            <div className="text-[9px] text-gray-500">Primary 5A · 24 artifacts · 18 skills mastered</div>
           </div>
           <div className="flex gap-1 shrink-0">
-            <button className="flex items-center gap-1 px-2 py-1 bg-gray-900 border border-gray-700 text-gray-300 rounded-lg text-[9px] font-semibold">
+            <button className="flex items-center gap-1 px-2 py-1 bg-white border border-gray-200 text-gray-600 rounded-lg text-[9px] font-semibold">
               <Share2 className="h-2.5 w-2.5" />
               Share
             </button>
@@ -97,7 +97,7 @@ export function PortfolioMockup({ className = "", lang = "en" }: { className?: s
               {ARTIFACTS.map((a, i) => (
                 <div
                   key={i}
-                  className="rounded-lg bg-gray-800/50/80 border border-gray-800 overflow-hidden cursor-pointer hover:shadow-md transition-shadow"
+                  className="rounded-lg bg-gray-50/50/80 border border-gray-100 overflow-hidden cursor-pointer hover:shadow-md transition-shadow"
                 >
                   {/* Thumbnail area */}
                   <div
@@ -114,7 +114,7 @@ export function PortfolioMockup({ className = "", lang = "en" }: { className?: s
                   </div>
                   {/* Info */}
                   <div className="p-1.5">
-                    <div className="text-[8px] font-bold text-white truncate">{a.title}</div>
+                    <div className="text-[8px] font-bold text-gray-900 truncate">{a.title}</div>
                     <div className="flex items-center justify-between mt-0.5">
                       <span className="text-[7px] text-gray-500">{a.subject}</span>
                       <span
@@ -143,8 +143,8 @@ export function PortfolioMockup({ className = "", lang = "en" }: { className?: s
               {SKILLS.map((s) => (
                 <div key={s.name}>
                   <div className="flex items-center justify-between mb-0.5">
-                    <span className="text-[9px] font-semibold text-white">{s.name}</span>
-                    <span className="text-[8px] font-bold text-gray-300 tabular-nums">
+                    <span className="text-[9px] font-semibold text-gray-900">{s.name}</span>
+                    <span className="text-[8px] font-bold text-gray-600 tabular-nums">
                       {s.level}%
                     </span>
                   </div>

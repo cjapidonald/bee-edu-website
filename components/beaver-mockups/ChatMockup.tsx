@@ -59,9 +59,9 @@ export function ChatMockup({ className = "", lang = "en" }: { className?: string
         <div className="col-span-2">
           <Panel className="h-full flex flex-col">
             <div className="px-1 pb-1 pt-1">
-              <div className="flex items-center gap-1.5 px-2 py-1 bg-gray-800 rounded-md">
-                <Search className="h-2.5 w-2.5 text-gray-400" />
-                <span className="text-[9px] text-gray-400">{lang === "vi" ? "Tìm tin nhắn…" : "Search messages…"}</span>
+              <div className="flex items-center gap-1.5 px-2 py-1 bg-gray-50 rounded-md">
+                <Search className="h-2.5 w-2.5 text-gray-500" />
+                <span className="text-[9px] text-gray-500">{lang === "vi" ? "Tìm tin nhắn…" : "Search messages…"}</span>
               </div>
             </div>
 
@@ -70,7 +70,7 @@ export function ChatMockup({ className = "", lang = "en" }: { className?: string
                 <div
                   key={t.name}
                   className={`flex items-start gap-1.5 p-1.5 rounded-md cursor-pointer ${
-                    t.active ? "bg-[#FDB714]/10 border-l-2 border-[#FDB714]" : "hover:bg-gray-800/50"
+                    t.active ? "bg-[#FDB714]/10 border-l-2 border-[#FDB714]" : "hover:bg-gray-50/50"
                   }`}
                 >
                   <MockAvatar
@@ -81,15 +81,15 @@ export function ChatMockup({ className = "", lang = "en" }: { className?: string
                   />
                   <div className="min-w-0 flex-1">
                     <div className="flex items-center gap-1">
-                      {t.type === "group" && <Hash className="h-2 w-2 text-gray-400 shrink-0" />}
-                      <span className="text-[9px] font-bold text-white truncate">{t.name}</span>
+                      {t.type === "group" && <Hash className="h-2 w-2 text-gray-500 shrink-0" />}
+                      <span className="text-[9px] font-bold text-gray-900 truncate">{t.name}</span>
                     </div>
                     <div className="text-[8px] text-gray-500 truncate">{t.preview}</div>
                   </div>
                   <div className="flex flex-col items-end gap-0.5 shrink-0">
-                    <span className="text-[7px] text-gray-400">{t.time}</span>
+                    <span className="text-[7px] text-gray-500">{t.time}</span>
                     {t.unread > 0 && (
-                      <span className="text-[7px] font-bold text-white bg-[#E83B5E] px-1 py-0.5 rounded-full min-w-[12px] text-center">
+                      <span className="text-[7px] font-bold text-gray-900 bg-[#E83B5E] px-1 py-0.5 rounded-full min-w-[12px] text-center">
                         {t.unread}
                       </span>
                     )}
@@ -102,23 +102,23 @@ export function ChatMockup({ className = "", lang = "en" }: { className?: string
 
         {/* RIGHT — Conversation (3/5) */}
         <div className="col-span-3">
-          <div className="rounded-2xl bg-gray-900 border border-gray-700/70 shadow-lg shadow-black/20 overflow-hidden flex flex-col h-full">
+          <div className="rounded-2xl bg-white border border-gray-200 shadow-sm overflow-hidden flex flex-col h-full">
             {/* Header */}
-            <div className="flex items-center justify-between px-3 py-2 border-b border-gray-800 bg-gradient-to-r from-[#FDB714]/5 to-[#E83B5E]/5">
+            <div className="flex items-center justify-between px-3 py-2 border-b border-gray-100 bg-gradient-to-r from-[#FDB714]/5 to-[#E83B5E]/5">
               <div className="flex items-center gap-1.5">
                 <MockAvatar name="Primary 5A" size={24} gradientFrom="#FDB714" gradientTo="#E83B5E" />
                 <div>
-                  <div className="text-[10px] font-bold text-white leading-tight">
+                  <div className="text-[10px] font-bold text-gray-900 leading-tight">
                     {lang === "vi" ? "Phụ huynh Lớp 5A" : "Primary 5A parents"}
                   </div>
                   <div className="text-[8px] text-gray-500">{lang === "vi" ? "18 thành viên · 3 trực tuyến" : "18 members · 3 online"}</div>
                 </div>
               </div>
               <div className="flex items-center gap-1">
-                <button className="h-5 w-5 rounded flex items-center justify-center text-gray-400 hover:bg-gray-800">
+                <button className="h-5 w-5 rounded flex items-center justify-center text-gray-500 hover:bg-gray-50">
                   <Phone className="h-2.5 w-2.5" />
                 </button>
-                <button className="h-5 w-5 rounded flex items-center justify-center text-gray-400 hover:bg-gray-800">
+                <button className="h-5 w-5 rounded flex items-center justify-center text-gray-500 hover:bg-gray-50">
                   <Video className="h-2.5 w-2.5" />
                 </button>
               </div>
@@ -131,7 +131,7 @@ export function ChatMockup({ className = "", lang = "en" }: { className?: string
                 <MockAvatar name="Ms Nguyen" size={18} gradientFrom="#FDB714" gradientTo="#E83B5E" />
                 <div className="max-w-[70%]">
                   <div className="text-[7px] text-gray-500 mb-0.5">Ms Nguyen · 10:14</div>
-                  <div className="px-2 py-1 bg-gray-800 rounded-xl rounded-tl-sm">
+                  <div className="px-2 py-1 bg-gray-50 rounded-xl rounded-tl-sm">
                     <div className="text-[9px] text-gray-100">
                       {lang === "vi" ? "Nhắc nhở: họp phụ huynh vào Thứ Sáu lúc 15:00. Vui lòng xác nhận khung giờ." : "Reminder: parent-teacher conferences this Friday at 3pm. Please confirm your slot."}
                     </div>
@@ -154,9 +154,9 @@ export function ChatMockup({ className = "", lang = "en" }: { className?: string
                 <MockAvatar name="Mr Patel" size={18} gradientFrom="#3b82f6" gradientTo="#00C9A7" />
                 <div className="max-w-[70%]">
                   <div className="text-[7px] text-gray-500 mb-0.5">Mr Patel · 10:22</div>
-                  <div className="flex items-center gap-1.5 px-2 py-1.5 bg-gray-800 rounded-xl rounded-tl-sm">
+                  <div className="flex items-center gap-1.5 px-2 py-1.5 bg-gray-50 rounded-xl rounded-tl-sm">
                     <div className="h-5 w-5 rounded-full bg-[#E83B5E] flex items-center justify-center shrink-0">
-                      <Play className="h-2 w-2 text-white fill-white ml-0.5" />
+                      <Play className="h-2 w-2 text-gray-900 fill-white ml-0.5" />
                     </div>
                     <div className="flex-1 flex items-center gap-0.5">
                       {[3, 5, 8, 12, 8, 6, 4, 7, 10, 6, 4, 2].map((h, i) => (
@@ -177,7 +177,7 @@ export function ChatMockup({ className = "", lang = "en" }: { className?: string
                 <MockAvatar name="Ms Nguyen" size={18} gradientFrom="#FDB714" gradientTo="#E83B5E" />
                 <div className="max-w-[70%]">
                   <div className="text-[7px] text-gray-500 mb-0.5">Ms Nguyen · 10:25</div>
-                  <div className="px-2 py-1 bg-gray-800 rounded-xl rounded-tl-sm">
+                  <div className="px-2 py-1 bg-gray-50 rounded-xl rounded-tl-sm">
                     <div className="text-[9px] text-gray-100">
                       {lang === "vi" ? "Tuyệt! Hẹn gặp mọi người vào Thứ Sáu. 🙂" : "Perfect! See you all on Friday. 🙂"}
                     </div>
@@ -187,12 +187,12 @@ export function ChatMockup({ className = "", lang = "en" }: { className?: string
             </div>
 
             {/* Input */}
-            <div className="border-t border-gray-800 p-2">
-              <div className="flex items-center gap-1.5 px-2 py-1.5 bg-gray-800/50 rounded-lg">
-                <Paperclip className="h-3 w-3 text-gray-400 shrink-0" />
-                <Smile className="h-3 w-3 text-gray-400 shrink-0" />
-                <span className="text-[9px] text-gray-400 flex-1">{lang === "vi" ? "Nhắn cho Phụ huynh Lớp 5A…" : "Message Primary 5A parents…"}</span>
-                <Mic className="h-3 w-3 text-gray-400 shrink-0" />
+            <div className="border-t border-gray-100 p-2">
+              <div className="flex items-center gap-1.5 px-2 py-1.5 bg-gray-50/50 rounded-lg">
+                <Paperclip className="h-3 w-3 text-gray-500 shrink-0" />
+                <Smile className="h-3 w-3 text-gray-500 shrink-0" />
+                <span className="text-[9px] text-gray-500 flex-1">{lang === "vi" ? "Nhắn cho Phụ huynh Lớp 5A…" : "Message Primary 5A parents…"}</span>
+                <Mic className="h-3 w-3 text-gray-500 shrink-0" />
                 <button className="h-5 w-5 rounded-md bg-[#FDB714] flex items-center justify-center shrink-0">
                   <Send className="h-2.5 w-2.5 text-[#7a4e00]" />
                 </button>

@@ -58,12 +58,12 @@ export function StudentAffairsMockup({ className = "", lang = "en" }: { classNam
     >
       <div className="flex items-end justify-between mb-2.5">
         <div>
-          <div className="text-[14px] font-bold text-white leading-tight">Student Affairs</div>
+          <div className="text-[14px] font-bold text-gray-900 leading-tight">Student Affairs</div>
           <div className="text-[10px] text-gray-500">
             3 open incidents · 1 active support case · 96% positive wellbeing
           </div>
         </div>
-        <button className="flex items-center gap-1 px-2 py-1 bg-[#f43f5e] text-white rounded-lg text-[10px] font-semibold shadow-sm">
+        <button className="flex items-center gap-1 px-2 py-1 bg-[#f43f5e] text-gray-900 rounded-lg text-[10px] font-semibold shadow-sm">
           <Plus className="h-2.5 w-2.5" />
           Log Incident
         </button>
@@ -79,7 +79,7 @@ export function StudentAffairsMockup({ className = "", lang = "en" }: { classNam
         ].map((k) => (
           <div
             key={k.label}
-            className="rounded-xl bg-gray-900 border border-gray-700/70 p-2.5 shadow-lg shadow-black/20"
+            className="rounded-xl bg-white border border-gray-200 p-2.5 shadow-sm"
           >
             <div
               className="h-5 w-5 rounded-lg flex items-center justify-center mb-1"
@@ -88,7 +88,7 @@ export function StudentAffairsMockup({ className = "", lang = "en" }: { classNam
               <k.icon className="h-3 w-3" style={{ color: k.color }} />
             </div>
             <div className="text-[9px] text-gray-500">{k.label}</div>
-            <div className="text-base font-black text-white tabular-nums leading-none">
+            <div className="text-base font-black text-gray-900 tabular-nums leading-none">
               {k.value}
             </div>
           </div>
@@ -107,7 +107,7 @@ export function StudentAffairsMockup({ className = "", lang = "en" }: { classNam
               {INCIDENTS.map((inc) => (
                 <div
                   key={inc.id}
-                  className="rounded-lg bg-gray-800/50/80 border border-gray-800 p-1.5"
+                  className="rounded-lg bg-gray-50/50/80 border border-gray-100 p-1.5"
                 >
                   <div className="flex items-center gap-2">
                     <MockAvatar
@@ -118,12 +118,12 @@ export function StudentAffairsMockup({ className = "", lang = "en" }: { classNam
                     />
                     <div className="min-w-0 flex-1">
                       <div className="flex items-center gap-1">
-                        <span className="text-[7px] font-mono text-gray-400">{inc.id}</span>
-                        <span className="text-[9px] font-bold text-white truncate">
+                        <span className="text-[7px] font-mono text-gray-500">{inc.id}</span>
+                        <span className="text-[9px] font-bold text-gray-900 truncate">
                           {inc.student}
                         </span>
                       </div>
-                      <div className="text-[8px] text-gray-400">{inc.type}</div>
+                      <div className="text-[8px] text-gray-500">{inc.type}</div>
                     </div>
                     <div className="flex flex-col items-end gap-0.5 shrink-0">
                       <span
@@ -132,7 +132,7 @@ export function StudentAffairsMockup({ className = "", lang = "en" }: { classNam
                             ? "bg-rose-950/50 text-rose-700"
                             : inc.severity === "medium"
                               ? "bg-amber-950/50 text-amber-700"
-                              : "bg-gray-800 text-gray-400"
+                              : "bg-gray-50 text-gray-500"
                         }`}
                       >
                         {inc.severity}
@@ -157,7 +157,7 @@ export function StudentAffairsMockup({ className = "", lang = "en" }: { classNam
               {WELLBEING.map((w) => (
                 <div
                   key={w.name}
-                  className="flex items-center gap-1.5 p-1 rounded-md hover:bg-gray-800/50"
+                  className="flex items-center gap-1.5 p-1 rounded-md hover:bg-gray-50/50"
                 >
                   <MockAvatar
                     name={w.name}
@@ -165,7 +165,7 @@ export function StudentAffairsMockup({ className = "", lang = "en" }: { classNam
                     gradientFrom={w.avatar[0]}
                     gradientTo={w.avatar[1]}
                   />
-                  <span className="text-[9px] font-semibold text-white flex-1 truncate">
+                  <span className="text-[9px] font-semibold text-gray-900 flex-1 truncate">
                     {w.name}
                   </span>
                   {w.mood === "positive" ? (
@@ -187,10 +187,10 @@ export function StudentAffairsMockup({ className = "", lang = "en" }: { classNam
                 Active Alert
               </span>
             </div>
-            <div className="text-[10px] font-bold text-white">
+            <div className="text-[10px] font-bold text-gray-900">
               Ethan Kim — wellbeing trend down
             </div>
-            <div className="text-[8px] text-gray-400 mt-0.5">
+            <div className="text-[8px] text-gray-500 mt-0.5">
               Counselor notified · Support plan active
             </div>
           </div>

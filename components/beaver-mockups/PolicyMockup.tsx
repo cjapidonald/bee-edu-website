@@ -57,12 +57,12 @@ export function PolicyMockup({ className = "", lang = "en" }: { className?: stri
     >
       <div className="flex items-end justify-between mb-2.5">
         <div>
-          <div className="text-[14px] font-bold text-white leading-tight">Policy Management</div>
+          <div className="text-[14px] font-bold text-gray-900 leading-tight">Policy Management</div>
           <div className="text-[10px] text-gray-500">
             31 active policies · 96% staff acknowledgment rate
           </div>
         </div>
-        <button className="flex items-center gap-1 px-2 py-1 bg-[#f43f5e] text-white rounded-lg text-[10px] font-semibold shadow-sm">
+        <button className="flex items-center gap-1 px-2 py-1 bg-[#f43f5e] text-gray-900 rounded-lg text-[10px] font-semibold shadow-sm">
           <Plus className="h-2.5 w-2.5" />
           New Policy
         </button>
@@ -75,7 +75,7 @@ export function PolicyMockup({ className = "", lang = "en" }: { className?: stri
           return (
             <div
               key={c.name}
-              className="rounded-xl bg-gray-900 border border-gray-700/70 p-2 shadow-lg shadow-black/20"
+              className="rounded-xl bg-white border border-gray-200 p-2 shadow-sm"
             >
               <div
                 className="h-5 w-5 rounded-lg flex items-center justify-center mb-1"
@@ -83,7 +83,7 @@ export function PolicyMockup({ className = "", lang = "en" }: { className?: stri
               >
                 <Shield className="h-3 w-3" style={{ color: c.color }} />
               </div>
-              <div className="text-[9px] font-bold text-white truncate">{c.name}</div>
+              <div className="text-[9px] font-bold text-gray-900 truncate">{c.name}</div>
               <div className="text-[7px] text-gray-500 mb-1">{c.count} policies</div>
               <div className="h-1 bg-gray-200 rounded-full overflow-hidden">
                 <div
@@ -91,7 +91,7 @@ export function PolicyMockup({ className = "", lang = "en" }: { className?: stri
                   style={{ width: `${pct}%`, background: c.color }}
                 />
               </div>
-              <div className="text-[7px] text-gray-400 mt-0.5 tabular-nums">
+              <div className="text-[7px] text-gray-500 mt-0.5 tabular-nums">
                 {c.acknowledged}/{c.total} ack
               </div>
             </div>
@@ -109,13 +109,13 @@ export function PolicyMockup({ className = "", lang = "en" }: { className?: stri
           {RECENT_POLICIES.map((p) => (
             <div
               key={p.title}
-              className="rounded-lg bg-gray-800/50/80 border border-gray-800 p-2"
+              className="rounded-lg bg-gray-50/50/80 border border-gray-100 p-2"
             >
               <div className="flex items-start justify-between gap-2">
                 <div className="min-w-0 flex-1">
                   <div className="flex items-center gap-1.5 mb-0.5">
-                    <span className="text-[10px] font-bold text-white truncate">{p.title}</span>
-                    <span className="text-[7px] text-gray-400 font-mono">{p.version}</span>
+                    <span className="text-[10px] font-bold text-gray-900 truncate">{p.title}</span>
+                    <span className="text-[7px] text-gray-500 font-mono">{p.version}</span>
                     {p.status === "published" ? (
                       <span className="inline-flex items-center gap-0.5 px-1 py-0.5 bg-emerald-950/50 rounded text-[7px] font-bold text-emerald-700">
                         <CheckCircle2 className="h-2 w-2" />
@@ -130,7 +130,7 @@ export function PolicyMockup({ className = "", lang = "en" }: { className?: stri
                   </div>
                   <div className="flex items-center gap-1.5">
                     <span className="text-[8px] text-gray-500">{p.category}</span>
-                    <span className="text-[8px] text-gray-300">·</span>
+                    <span className="text-[8px] text-gray-600">·</span>
                     <span className="text-[8px] text-gray-500">Updated {p.updated}</span>
                   </div>
                   {p.status === "published" && (
@@ -141,17 +141,17 @@ export function PolicyMockup({ className = "", lang = "en" }: { className?: stri
                           style={{ width: `${p.ackRate}%` }}
                         />
                       </div>
-                      <span className="text-[7px] text-gray-400 font-bold tabular-nums">
+                      <span className="text-[7px] text-gray-500 font-bold tabular-nums">
                         {p.ackRate}% ack
                       </span>
                     </div>
                   )}
                 </div>
                 <div className="flex gap-0.5 shrink-0">
-                  <button className="h-5 w-5 rounded bg-gray-900 border border-gray-700 flex items-center justify-center">
+                  <button className="h-5 w-5 rounded bg-white border border-gray-200 flex items-center justify-center">
                     <Eye className="h-2.5 w-2.5 text-gray-500" />
                   </button>
-                  <button className="h-5 w-5 rounded bg-gray-900 border border-gray-700 flex items-center justify-center">
+                  <button className="h-5 w-5 rounded bg-white border border-gray-200 flex items-center justify-center">
                     <Download className="h-2.5 w-2.5 text-gray-500" />
                   </button>
                 </div>

@@ -59,12 +59,12 @@ export function AdminDashboardMockup({ className = "", lang = "en" }: { classNam
       {/* Header */}
       <div className="flex items-end justify-between mb-2.5">
         <div>
-          <div className="text-[14px] font-bold text-white leading-tight">{lang === "vi" ? "Tổng quan Điều hành" : "Executive Overview"}</div>
+          <div className="text-[14px] font-bold text-gray-900 leading-tight">{lang === "vi" ? "Tổng quan Điều hành" : "Executive Overview"}</div>
           <div className="text-[10px] text-gray-500">
             {lang === "vi" ? "Tổ chức Demo · 2 trường · 557 học sinh · Năm học 2025–26" : "Demo Organization · 2 schools · 557 students · AY 2025–26"}
           </div>
         </div>
-        <button className="flex items-center gap-1 px-2 py-1 bg-[#3b82f6] text-white rounded-lg text-[10px] font-semibold shadow-sm">
+        <button className="flex items-center gap-1 px-2 py-1 bg-[#3b82f6] text-gray-900 rounded-lg text-[10px] font-semibold shadow-sm">
           <FileText className="h-2.5 w-2.5" />
           {lang === "vi" ? "Xuất báo cáo" : "Export Report"}
         </button>
@@ -80,7 +80,7 @@ export function AdminDashboardMockup({ className = "", lang = "en" }: { classNam
         ].map((k) => (
           <div
             key={k.label}
-            className={`relative rounded-2xl bg-gradient-to-br ${k.bg} to-gray-950 border border-gray-700/60 p-2.5 overflow-hidden`}
+            className={`relative rounded-2xl bg-gradient-to-br ${k.bg} to-gray-950 border border-gray-200/60 p-2.5 overflow-hidden`}
           >
             <div className="flex items-center justify-between mb-1">
               <div
@@ -92,7 +92,7 @@ export function AdminDashboardMockup({ className = "", lang = "en" }: { classNam
               <span className="text-[8px] font-bold text-emerald-600">{k.trend}</span>
             </div>
             <div className="text-[9px] text-gray-500 uppercase tracking-wide font-semibold">{k.label}</div>
-            <div className="text-lg font-black text-white leading-none tabular-nums mt-0.5">
+            <div className="text-lg font-black text-gray-900 leading-none tabular-nums mt-0.5">
               {k.value}
             </div>
           </div>
@@ -112,19 +112,19 @@ export function AdminDashboardMockup({ className = "", lang = "en" }: { classNam
               {SCHOOLS.map((s) => (
                 <div
                   key={s.name}
-                  className="flex items-center gap-2 p-1.5 rounded-lg bg-gray-800/50/80 border border-gray-800"
+                  className="flex items-center gap-2 p-1.5 rounded-lg bg-gray-50/50/80 border border-gray-100"
                 >
                   <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-blue-500 to-violet-500 flex items-center justify-center shrink-0">
-                    <Building2 className="h-4 w-4 text-white" />
+                    <Building2 className="h-4 w-4 text-gray-900" />
                   </div>
                   <div className="min-w-0 flex-1">
-                    <div className="text-[10px] font-bold text-white truncate">{s.name}</div>
+                    <div className="text-[10px] font-bold text-gray-900 truncate">{s.name}</div>
                     <div className="flex items-center gap-2 mt-0.5">
                       <span className="text-[8px] text-gray-500">
-                        <span className="font-semibold text-gray-300">{s.students}</span> {mt("common.students", lang).toLowerCase()}
+                        <span className="font-semibold text-gray-600">{s.students}</span> {mt("common.students", lang).toLowerCase()}
                       </span>
                       <span className="text-[8px] text-gray-500">
-                        <span className="font-semibold text-gray-300">{s.teachers}</span> {lang === "vi" ? "giáo viên" : "teachers"}
+                        <span className="font-semibold text-gray-600">{s.teachers}</span> {lang === "vi" ? "giáo viên" : "teachers"}
                       </span>
                     </div>
                   </div>
@@ -170,7 +170,7 @@ export function AdminDashboardMockup({ className = "", lang = "en" }: { classNam
               ].map((a) => (
                 <div
                   key={a.label}
-                  className="flex items-center gap-1.5 py-1 px-1.5 rounded-md bg-gray-800/50"
+                  className="flex items-center gap-1.5 py-1 px-1.5 rounded-md bg-gray-50/50"
                 >
                   <AlertCircle
                     className={`h-2.5 w-2.5 shrink-0 ${
@@ -181,8 +181,8 @@ export function AdminDashboardMockup({ className = "", lang = "en" }: { classNam
                           : "text-blue-500"
                     }`}
                   />
-                  <span className="text-[9px] text-gray-300 flex-1 truncate">{a.label}</span>
-                  <span className="text-[9px] font-bold text-white tabular-nums">{a.value}</span>
+                  <span className="text-[9px] text-gray-600 flex-1 truncate">{a.label}</span>
+                  <span className="text-[9px] font-bold text-gray-900 tabular-nums">{a.value}</span>
                 </div>
               ))}
             </div>

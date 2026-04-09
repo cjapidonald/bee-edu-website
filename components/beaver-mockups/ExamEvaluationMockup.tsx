@@ -57,7 +57,7 @@ export function ExamEvaluationMockup({ className = "", lang = "en" }: { classNam
     >
       <div className="flex items-end justify-between mb-2.5">
         <div>
-          <div className="text-[14px] font-bold text-white leading-tight">
+          <div className="text-[14px] font-bold text-gray-900 leading-tight">
             {lang === "vi" ? "Chủ đề 4 · Bài kiểm tra Thơ" : "Unit 4 · Poetry Assessment"}
           </div>
           <div className="text-[10px] text-gray-500">
@@ -65,11 +65,11 @@ export function ExamEvaluationMockup({ className = "", lang = "en" }: { classNam
           </div>
         </div>
         <div className="flex gap-1">
-          <button className="flex items-center gap-1 px-2 py-1 bg-gradient-to-r from-[#8b5cf6] to-[#E83B5E] text-white rounded-lg text-[9px] font-semibold shadow-sm">
+          <button className="flex items-center gap-1 px-2 py-1 bg-gradient-to-r from-[#8b5cf6] to-[#E83B5E] text-gray-900 rounded-lg text-[9px] font-semibold shadow-sm">
             <Sparkles className="h-2.5 w-2.5" />
             {lang === "vi" ? "AI Chấm tất cả" : "AI Mark All"}
           </button>
-          <button className="flex items-center gap-1 px-2 py-1 bg-gray-900 border border-gray-700 text-gray-300 rounded-lg text-[9px] font-semibold">
+          <button className="flex items-center gap-1 px-2 py-1 bg-white border border-gray-200 text-gray-600 rounded-lg text-[9px] font-semibold">
             <Download className="h-2.5 w-2.5" />
             {mt("common.export", lang)}
           </button>
@@ -86,7 +86,7 @@ export function ExamEvaluationMockup({ className = "", lang = "en" }: { classNam
         ].map((s) => (
           <div
             key={s.label}
-            className="rounded-xl bg-gray-900 border border-gray-700/70 p-2 flex items-center gap-2"
+            className="rounded-xl bg-white border border-gray-200 p-2 flex items-center gap-2"
           >
             <div className={`h-6 w-6 rounded-lg ${s.bg} flex items-center justify-center shrink-0`}>
               <s.icon className={`h-3 w-3 ${s.color}`} />
@@ -111,15 +111,15 @@ export function ExamEvaluationMockup({ className = "", lang = "en" }: { classNam
           >
             <div className="overflow-hidden">
               {/* Header */}
-              <div className="grid grid-cols-[1.4fr_repeat(4,1fr)_0.9fr_0.7fr] gap-1 pb-1.5 border-b border-gray-800">
-                <div className="text-[8px] font-semibold text-gray-400 uppercase tracking-wider">
+              <div className="grid grid-cols-[1.4fr_repeat(4,1fr)_0.9fr_0.7fr] gap-1 pb-1.5 border-b border-gray-100">
+                <div className="text-[8px] font-semibold text-gray-500 uppercase tracking-wider">
                   {mt("common.student", lang)}
                 </div>
-                <div className="text-[8px] font-semibold text-gray-400 uppercase tracking-wider text-center">C1</div>
-                <div className="text-[8px] font-semibold text-gray-400 uppercase tracking-wider text-center">C2</div>
-                <div className="text-[8px] font-semibold text-gray-400 uppercase tracking-wider text-center">C3</div>
-                <div className="text-[8px] font-semibold text-gray-400 uppercase tracking-wider text-center">C4</div>
-                <div className="text-[8px] font-semibold text-gray-400 uppercase tracking-wider text-center">{lang === "vi" ? "Tổng" : "Total"}</div>
+                <div className="text-[8px] font-semibold text-gray-500 uppercase tracking-wider text-center">C1</div>
+                <div className="text-[8px] font-semibold text-gray-500 uppercase tracking-wider text-center">C2</div>
+                <div className="text-[8px] font-semibold text-gray-500 uppercase tracking-wider text-center">C3</div>
+                <div className="text-[8px] font-semibold text-gray-500 uppercase tracking-wider text-center">C4</div>
+                <div className="text-[8px] font-semibold text-gray-500 uppercase tracking-wider text-center">{lang === "vi" ? "Tổng" : "Total"}</div>
                 <div />
               </div>
 
@@ -138,7 +138,7 @@ export function ExamEvaluationMockup({ className = "", lang = "en" }: { classNam
                           gradientFrom={s.avatar[0]}
                           gradientTo={s.avatar[1]}
                         />
-                        <span className="text-[9px] font-semibold text-white truncate">
+                        <span className="text-[9px] font-semibold text-gray-900 truncate">
                           {s.name}
                         </span>
                       </div>
@@ -153,10 +153,10 @@ export function ExamEvaluationMockup({ className = "", lang = "en" }: { classNam
                         <div
                           className={`h-5 px-1 min-w-[28px] rounded-md font-black tabular-nums flex items-center justify-center text-[9px] ${
                             s.total >= 32
-                              ? "bg-emerald-950/500 text-white"
+                              ? "bg-emerald-950/500 text-gray-900"
                               : s.total >= 26
                                 ? "bg-[#FDB714] text-[#7a4e00]"
-                                : "bg-rose-950/500 text-white"
+                                : "bg-rose-950/500 text-gray-900"
                           }`}
                         >
                           {s.total}
@@ -203,7 +203,7 @@ export function ExamEvaluationMockup({ className = "", lang = "en" }: { classNam
             <div className="text-[9px] text-gray-100 font-semibold leading-tight mb-0.5">
               {lang === "vi" ? "Câu 3 là điểm yếu phổ biến" : "Q3 is a common weak point"}
             </div>
-            <div className="text-[8px] text-gray-400 leading-snug">
+            <div className="text-[8px] text-gray-500 leading-snug">
               {lang === "vi" ? "3 học sinh dưới 70% ở phần nhận diện ẩn dụ. Nên dạy lại 10 phút trước Chủ đề 5." : "3 students scored below 70% on metaphor identification. Suggest a 10-min reteach before Unit 5."}
             </div>
           </div>

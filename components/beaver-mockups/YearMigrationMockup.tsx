@@ -57,14 +57,14 @@ export function YearMigrationMockup({ className = "", lang = "en" }: { className
     >
       <div className="flex items-end justify-between mb-2.5">
         <div>
-          <div className="text-[14px] font-bold text-white leading-tight">
+          <div className="text-[14px] font-bold text-gray-900 leading-tight">
             Academic Year Migration
           </div>
           <div className="text-[10px] text-gray-500">
             AY 2025→2026 · 557 students · 18 classes · Step 3 of 6
           </div>
         </div>
-        <button className="flex items-center gap-1 px-2 py-1 bg-[#3b82f6] text-white rounded-lg text-[10px] font-semibold shadow-sm">
+        <button className="flex items-center gap-1 px-2 py-1 bg-[#3b82f6] text-gray-900 rounded-lg text-[10px] font-semibold shadow-sm">
           <Play className="h-2.5 w-2.5" />
           Continue
         </button>
@@ -82,15 +82,15 @@ export function YearMigrationMockup({ className = "", lang = "en" }: { className
               <div className="shrink-0">
                 {step.status === "done" ? (
                   <div className="h-5 w-5 rounded-full bg-emerald-950/500 flex items-center justify-center">
-                    <CheckCircle2 className="h-3 w-3 text-white" />
+                    <CheckCircle2 className="h-3 w-3 text-gray-900" />
                   </div>
                 ) : step.status === "current" ? (
                   <div className="h-5 w-5 rounded-full bg-[#3b82f6] flex items-center justify-center ring-2 ring-[#3b82f6]/30">
-                    <span className="text-[9px] font-black text-white">{i + 1}</span>
+                    <span className="text-[9px] font-black text-gray-900">{i + 1}</span>
                   </div>
                 ) : (
                   <div className="h-5 w-5 rounded-full bg-gray-200 flex items-center justify-center">
-                    <Circle className="h-2.5 w-2.5 text-gray-400" />
+                    <Circle className="h-2.5 w-2.5 text-gray-500" />
                   </div>
                 )}
               </div>
@@ -128,7 +128,7 @@ export function YearMigrationMockup({ className = "", lang = "en" }: { className
             {MAPPINGS.map((m) => (
               <div
                 key={m.from}
-                className="flex items-center gap-2 p-2 rounded-lg bg-gray-800/50/80 border border-gray-800"
+                className="flex items-center gap-2 p-2 rounded-lg bg-gray-50/50/80 border border-gray-100"
               >
                 {/* From */}
                 <div className="flex items-center gap-1.5 min-w-0 flex-1">
@@ -136,7 +136,7 @@ export function YearMigrationMockup({ className = "", lang = "en" }: { className
                     {m.avatar}
                   </div>
                   <div className="min-w-0">
-                    <div className="text-[9px] font-bold text-white truncate">{m.from}</div>
+                    <div className="text-[9px] font-bold text-gray-900 truncate">{m.from}</div>
                     <div className="text-[7px] text-gray-500">AY 2025</div>
                   </div>
                 </div>

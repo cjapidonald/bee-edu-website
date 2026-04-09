@@ -59,14 +59,14 @@ export function ProfessionalDevMockup({ className = "", lang = "en" }: { classNa
     >
       <div className="flex items-end justify-between mb-2.5">
         <div>
-          <div className="text-[14px] font-bold text-white leading-tight">
+          <div className="text-[14px] font-bold text-gray-900 leading-tight">
             Professional Development
           </div>
           <div className="text-[10px] text-gray-500">
             12 active PD plans · 8 observations this month · 4 certifications
           </div>
         </div>
-        <button className="flex items-center gap-1 px-2 py-1 bg-emerald-600 text-white rounded-lg text-[10px] font-semibold shadow-sm">
+        <button className="flex items-center gap-1 px-2 py-1 bg-emerald-600 text-gray-900 rounded-lg text-[10px] font-semibold shadow-sm">
           <Sparkles className="h-2.5 w-2.5" />
           AI Coach
         </button>
@@ -82,7 +82,7 @@ export function ProfessionalDevMockup({ className = "", lang = "en" }: { classNa
         ].map((k) => (
           <div
             key={k.label}
-            className="rounded-xl bg-gray-900 border border-gray-700/70 p-2.5 shadow-lg shadow-black/20"
+            className="rounded-xl bg-white border border-gray-200 p-2.5 shadow-sm"
           >
             <div
               className="h-5 w-5 rounded-lg flex items-center justify-center mb-1"
@@ -91,7 +91,7 @@ export function ProfessionalDevMockup({ className = "", lang = "en" }: { classNa
               <k.icon className="h-3 w-3" style={{ color: k.color }} />
             </div>
             <div className="text-[9px] text-gray-500">{k.label}</div>
-            <div className="text-base font-black text-white tabular-nums leading-none">
+            <div className="text-base font-black text-gray-900 tabular-nums leading-none">
               {k.value}
             </div>
           </div>
@@ -110,7 +110,7 @@ export function ProfessionalDevMockup({ className = "", lang = "en" }: { classNa
               {PD_PLANS.map((p) => (
                 <div
                   key={p.teacher}
-                  className="rounded-lg bg-gray-800/50/80 border border-gray-800 p-1.5"
+                  className="rounded-lg bg-gray-50/50/80 border border-gray-100 p-1.5"
                 >
                   <div className="flex items-center gap-2">
                     <MockAvatar
@@ -120,8 +120,8 @@ export function ProfessionalDevMockup({ className = "", lang = "en" }: { classNa
                       gradientTo={p.avatar[1]}
                     />
                     <div className="min-w-0 flex-1">
-                      <div className="text-[10px] font-bold text-white">{p.teacher}</div>
-                      <div className="text-[8px] text-gray-400 truncate">{p.goal}</div>
+                      <div className="text-[10px] font-bold text-gray-900">{p.teacher}</div>
+                      <div className="text-[8px] text-gray-500 truncate">{p.goal}</div>
                     </div>
                     <div className="text-right shrink-0">
                       <div className="text-[10px] font-black text-emerald-600 tabular-nums">
@@ -163,10 +163,10 @@ export function ProfessionalDevMockup({ className = "", lang = "en" }: { classNa
               {OBSERVATIONS.map((o) => (
                 <div
                   key={o.teacher}
-                  className="p-1.5 rounded-md bg-gray-800/50 border border-gray-800"
+                  className="p-1.5 rounded-md bg-gray-50/50 border border-gray-100"
                 >
                   <div className="flex items-center justify-between mb-0.5">
-                    <div className="text-[9px] font-bold text-white">{o.teacher}</div>
+                    <div className="text-[9px] font-bold text-gray-900">{o.teacher}</div>
                     <div className="flex items-center gap-0.5">
                       <Star className="h-2 w-2 text-[#FDB714] fill-[#FDB714]" />
                       <span className="text-[8px] font-bold text-[#FDB714]">{o.score}</span>
@@ -192,10 +192,10 @@ export function ProfessionalDevMockup({ className = "", lang = "en" }: { classNa
                 Milestone
               </span>
             </div>
-            <div className="text-[10px] font-bold text-white">
+            <div className="text-[10px] font-bold text-gray-900">
               3 teachers completed IB Level 1
             </div>
-            <div className="text-[8px] text-gray-400 mt-0.5">This month · +2 from Sep</div>
+            <div className="text-[8px] text-gray-500 mt-0.5">This month · +2 from Sep</div>
           </div>
         </div>
       </div>

@@ -66,7 +66,7 @@ export function TeamLeaderDashboardMockup({ className = "", lang = "en" }: { cla
     >
       <div className="flex items-end justify-between mb-2.5">
         <div>
-          <div className="text-[14px] font-bold text-white leading-tight">
+          <div className="text-[14px] font-bold text-gray-900 leading-tight">
             {lang === "vi" ? "Tổng quan Học thuật" : "Academics Overview"}
           </div>
           <div className="text-[10px] text-gray-500">
@@ -89,7 +89,7 @@ export function TeamLeaderDashboardMockup({ className = "", lang = "en" }: { cla
         ].map((k) => (
           <div
             key={k.label}
-            className="rounded-2xl bg-gray-900 border border-gray-700/70 p-2.5 shadow-lg shadow-black/20"
+            className="rounded-2xl bg-white border border-gray-200 p-2.5 shadow-sm"
           >
             <div className="flex items-center justify-between mb-1">
               <div
@@ -101,7 +101,7 @@ export function TeamLeaderDashboardMockup({ className = "", lang = "en" }: { cla
               <span className="text-[8px] font-bold text-emerald-600">{k.trend}</span>
             </div>
             <div className="text-[8px] text-gray-500 font-medium truncate">{k.label}</div>
-            <div className="text-lg font-black text-white tabular-nums leading-none mt-0.5">
+            <div className="text-lg font-black text-gray-900 tabular-nums leading-none mt-0.5">
               {k.value}
             </div>
           </div>
@@ -120,7 +120,7 @@ export function TeamLeaderDashboardMockup({ className = "", lang = "en" }: { cla
               {CURRICULA.map((c) => (
                 <div
                   key={c.title}
-                  className="rounded-lg bg-gray-800/50/80 border border-gray-800 p-1.5"
+                  className="rounded-lg bg-gray-50/50/80 border border-gray-100 p-1.5"
                 >
                   <div className="flex items-center justify-between mb-1">
                     <div className="flex items-center gap-1.5 min-w-0">
@@ -131,7 +131,7 @@ export function TeamLeaderDashboardMockup({ className = "", lang = "en" }: { cla
                         <BookOpen className="h-3 w-3" style={{ color: c.color }} />
                       </div>
                       <div className="min-w-0">
-                        <div className="text-[10px] font-semibold text-white truncate">
+                        <div className="text-[10px] font-semibold text-gray-900 truncate">
                           {c.title}
                         </div>
                         <div className="text-[8px] text-gray-500">
@@ -182,7 +182,7 @@ export function TeamLeaderDashboardMockup({ className = "", lang = "en" }: { cla
                     gradientTo={t.avatar[1]}
                   />
                   <div className="min-w-0 flex-1">
-                    <div className="text-[9px] font-bold text-white truncate">{t.name}</div>
+                    <div className="text-[9px] font-bold text-gray-900 truncate">{t.name}</div>
                     <div className="text-[7px] text-gray-500">{mt(`subjects.${t.subjectKey}`, lang)}</div>
                   </div>
                   <div className="text-right shrink-0">

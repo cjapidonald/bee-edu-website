@@ -54,10 +54,10 @@ export function FinanceMockup({ className = "", lang = "en" }: { className?: str
     >
       <div className="flex items-end justify-between mb-2.5">
         <div>
-          <div className="text-[14px] font-bold text-white leading-tight">Finance Overview</div>
+          <div className="text-[14px] font-bold text-gray-900 leading-tight">Finance Overview</div>
           <div className="text-[10px] text-gray-500">October 2025 · 557 student accounts</div>
         </div>
-        <button className="flex items-center gap-1 px-2 py-1 bg-[#3b82f6] text-white rounded-lg text-[10px] font-semibold shadow-sm">
+        <button className="flex items-center gap-1 px-2 py-1 bg-[#3b82f6] text-gray-900 rounded-lg text-[10px] font-semibold shadow-sm">
           <Plus className="h-2.5 w-2.5" />
           New Invoice
         </button>
@@ -73,7 +73,7 @@ export function FinanceMockup({ className = "", lang = "en" }: { className?: str
         ].map((k) => (
           <div
             key={k.label}
-            className={`relative rounded-2xl bg-gradient-to-br ${k.bg} to-gray-950 border border-gray-700/60 p-2.5 overflow-hidden`}
+            className={`relative rounded-2xl bg-gradient-to-br ${k.bg} to-gray-950 border border-gray-200/60 p-2.5 overflow-hidden`}
           >
             <div className="flex items-center justify-between mb-1">
               <div
@@ -89,7 +89,7 @@ export function FinanceMockup({ className = "", lang = "en" }: { className?: str
             <div className="text-[9px] text-gray-500 uppercase tracking-wide font-semibold">
               {k.label}
             </div>
-            <div className="text-lg font-black text-white leading-none tabular-nums mt-0.5">
+            <div className="text-lg font-black text-gray-900 leading-none tabular-nums mt-0.5">
               {k.value}
             </div>
           </div>
@@ -104,12 +104,12 @@ export function FinanceMockup({ className = "", lang = "en" }: { className?: str
             subtitle="October 2025"
             right={<MockBadge color="blue">24 this month</MockBadge>}
           >
-            <div className="grid grid-cols-[1fr_1.2fr_0.8fr_0.9fr_0.6fr] gap-1 pb-1.5 border-b border-gray-800">
-              <div className="text-[8px] font-semibold text-gray-400 uppercase tracking-wider">Invoice</div>
-              <div className="text-[8px] font-semibold text-gray-400 uppercase tracking-wider">Parent</div>
-              <div className="text-[8px] font-semibold text-gray-400 uppercase tracking-wider">Date</div>
-              <div className="text-[8px] font-semibold text-gray-400 uppercase tracking-wider text-right">Amount</div>
-              <div className="text-[8px] font-semibold text-gray-400 uppercase tracking-wider text-right">Status</div>
+            <div className="grid grid-cols-[1fr_1.2fr_0.8fr_0.9fr_0.6fr] gap-1 pb-1.5 border-b border-gray-100">
+              <div className="text-[8px] font-semibold text-gray-500 uppercase tracking-wider">Invoice</div>
+              <div className="text-[8px] font-semibold text-gray-500 uppercase tracking-wider">Parent</div>
+              <div className="text-[8px] font-semibold text-gray-500 uppercase tracking-wider">Date</div>
+              <div className="text-[8px] font-semibold text-gray-500 uppercase tracking-wider text-right">Amount</div>
+              <div className="text-[8px] font-semibold text-gray-500 uppercase tracking-wider text-right">Status</div>
             </div>
             <div className="divide-y divide-gray-100">
               {INVOICES.map((inv) => (
@@ -117,10 +117,10 @@ export function FinanceMockup({ className = "", lang = "en" }: { className?: str
                   key={inv.id}
                   className="grid grid-cols-[1fr_1.2fr_0.8fr_0.9fr_0.6fr] gap-1 items-center py-1.5"
                 >
-                  <span className="text-[9px] font-mono text-gray-400 truncate">{inv.id}</span>
-                  <span className="text-[9px] font-semibold text-white truncate">{inv.parent}</span>
+                  <span className="text-[9px] font-mono text-gray-500 truncate">{inv.id}</span>
+                  <span className="text-[9px] font-semibold text-gray-900 truncate">{inv.parent}</span>
                   <span className="text-[8px] text-gray-500">{inv.date}</span>
-                  <span className="text-[9px] font-bold text-white tabular-nums text-right">
+                  <span className="text-[9px] font-bold text-gray-900 tabular-nums text-right">
                     {inv.amount}
                   </span>
                   <div className="flex justify-end">
@@ -170,7 +170,7 @@ export function FinanceMockup({ className = "", lang = "en" }: { className?: str
             <div className="text-[9px] text-gray-100 font-semibold leading-tight mb-0.5">
               4 accounts at risk
             </div>
-            <div className="text-[8px] text-gray-400 leading-snug">
+            <div className="text-[8px] text-gray-500 leading-snug">
               Kim Family is 7 days overdue. Send gentle reminder via parent portal.
             </div>
           </div>

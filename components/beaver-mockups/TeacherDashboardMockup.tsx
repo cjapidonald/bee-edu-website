@@ -75,14 +75,14 @@ export function TeacherDashboardMockup({ className = "", lang = "en" }: { classN
       {/* Greeting */}
       <div className="flex items-end justify-between mb-2.5">
         <div>
-          <div className="text-[14px] font-bold text-white leading-tight">
+          <div className="text-[14px] font-bold text-gray-900 leading-tight">
             {lang === "vi" ? "Chào mừng trở lại, cô Trần" : "Welcome back, Ms. Tran"}
           </div>
           <div className="text-[10px] text-gray-500">
             {lang === "vi" ? "3 lớp · 59 học sinh · Tiết kế tiếp sau 23 phút" : "3 classes · 59 students · Next lesson in 23 min"}
           </div>
         </div>
-        <button className="flex items-center gap-1 px-2 py-1 bg-[#E83B5E] text-white rounded-lg text-[10px] font-semibold shadow-sm">
+        <button className="flex items-center gap-1 px-2 py-1 bg-[#E83B5E] text-gray-900 rounded-lg text-[10px] font-semibold shadow-sm">
           <Wand2 className="h-2.5 w-2.5" />
           {lang === "vi" ? "Tạo bài giảng" : "Generate Lesson"}
         </button>
@@ -90,7 +90,7 @@ export function TeacherDashboardMockup({ className = "", lang = "en" }: { classN
 
       {/* Top stats row */}
       <div className="grid grid-cols-4 gap-1.5 mb-2.5">
-        <StatCard icon={Users} label={mt("common.students", lang)} value={59} color="text-gray-400" bg="bg-gray-800" />
+        <StatCard icon={Users} label={mt("common.students", lang)} value={59} color="text-gray-500" bg="bg-gray-50" />
         <StatCard icon={CheckCircle2} label={lang === "vi" ? "Đã chấm hôm nay" : "Graded today"} value={23} color="text-emerald-600" bg="bg-emerald-100" trend="+8" />
         <StatCard icon={Clock} label={lang === "vi" ? "Chờ chấm" : "Pending"} value={22} color="text-amber-600" bg="bg-amber-100" />
         <StatCard icon={GraduationCap} label={lang === "vi" ? "Điểm TB" : "Avg grade"} value="84.2" color="text-[#FDB714]" bg="bg-[#FDB714]/20" trend="+1.3" />
@@ -109,20 +109,20 @@ export function TeacherDashboardMockup({ className = "", lang = "en" }: { classN
               {CLASSES.map((c, i) => (
                 <div
                   key={c.name}
-                  className="flex items-center gap-2 p-1.5 rounded-lg bg-gray-800/50/80 border border-gray-800"
+                  className="flex items-center gap-2 p-1.5 rounded-lg bg-gray-50/50/80 border border-gray-100"
                 >
                   <div
-                    className="h-8 w-8 rounded-lg flex items-center justify-center text-white font-bold text-[10px] shrink-0"
+                    className="h-8 w-8 rounded-lg flex items-center justify-center text-gray-900 font-bold text-[10px] shrink-0"
                     style={{ background: `linear-gradient(135deg, ${c.gradient[0]}, ${c.gradient[1]})` }}
                   >
                     {c.name.split(" ")[1]?.[0]}
                     {c.name.split(" ")[2]?.[0]}
                   </div>
                   <div className="min-w-0 flex-1">
-                    <div className="text-[10px] font-semibold text-white truncate">{c.name}</div>
+                    <div className="text-[10px] font-semibold text-gray-900 truncate">{c.name}</div>
                     <div className="flex items-center gap-1.5 mt-0.5">
                       <span className="text-[8px] text-gray-500">{c.students} {mt("common.students", lang).toLowerCase()}</span>
-                      <span className="text-[8px] text-gray-300">·</span>
+                      <span className="text-[8px] text-gray-600">·</span>
                       <span className="text-[8px] text-gray-500">{lang === "vi" ? "Chương trình" : "Curriculum"} {c.progress}%</span>
                     </div>
                     <div className="h-0.5 bg-gray-200 rounded-full mt-1 overflow-hidden">
@@ -136,7 +136,7 @@ export function TeacherDashboardMockup({ className = "", lang = "en" }: { classN
                     </div>
                   </div>
                   <div className="flex items-center gap-1 shrink-0">
-                    <span className="text-[9px] font-bold text-gray-300">{c.next}</span>
+                    <span className="text-[9px] font-bold text-gray-600">{c.next}</span>
                     {i === 0 && (
                       <span className="text-[7px] font-bold text-emerald-600 px-1 py-0.5 bg-emerald-950/50 rounded">{lang === "vi" ? "KẾ TIẾP" : "NEXT"}</span>
                     )}
@@ -158,16 +158,16 @@ export function TeacherDashboardMockup({ className = "", lang = "en" }: { classN
                     <ClipboardCheck className="h-2.5 w-2.5 text-[#E83B5E]" />
                   </div>
                   <div className="min-w-0 flex-1">
-                    <div className="text-[10px] font-semibold text-white truncate">{h.title}</div>
+                    <div className="text-[10px] font-semibold text-gray-900 truncate">{h.title}</div>
                     <div className="text-[8px] text-gray-500">{h.class}</div>
                   </div>
                   <div className="shrink-0 text-right">
-                    <div className="text-[10px] font-bold text-white tabular-nums">
+                    <div className="text-[10px] font-bold text-gray-900 tabular-nums">
                       {h.pending}/{h.total}
                     </div>
                     <div className="text-[7px] text-gray-500">{lang === "vi" ? "cần chấm" : "to grade"}</div>
                   </div>
-                  <ChevronRight className="h-3 w-3 text-gray-300 shrink-0" />
+                  <ChevronRight className="h-3 w-3 text-gray-600 shrink-0" />
                 </div>
               ))}
             </div>
@@ -192,9 +192,9 @@ export function TeacherDashboardMockup({ className = "", lang = "en" }: { classN
                 { label: lang === "vi" ? "Chấm thi" : "Exam Marking", uses: 12, color: "text-blue-600" },
                 { label: lang === "vi" ? "Báo cáo HS" : "Student Reports", uses: 8, color: "text-[#E83B5E]" },
               ].map((t) => (
-                <div key={t.label} className="flex items-center gap-1.5 py-1 px-1.5 rounded-md bg-gray-800/50">
+                <div key={t.label} className="flex items-center gap-1.5 py-1 px-1.5 rounded-md bg-gray-50/50">
                   <Sparkles className={`h-2.5 w-2.5 ${t.color} shrink-0`} />
-                  <span className="text-[9px] font-medium text-white flex-1 truncate">{t.label}</span>
+                  <span className="text-[9px] font-medium text-gray-900 flex-1 truncate">{t.label}</span>
                   <span className="text-[8px] text-gray-500 tabular-nums">{t.uses}</span>
                 </div>
               ))}

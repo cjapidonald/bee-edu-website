@@ -76,42 +76,42 @@ export function StudentDashboardMockup({ className = "", lang = "en" }: { classN
       ]}
     >
       {/* Hero gem wallet card */}
-      <div className="relative rounded-2xl overflow-hidden mb-2.5 p-3 bg-gradient-to-br from-[#FDB714] via-[#FF6B9D] to-[#E83B5E] text-white shadow-lg">
-        <div className="absolute -top-8 -right-8 w-32 h-32 rounded-full bg-gray-900/10 blur-2xl" />
+      <div className="relative rounded-2xl overflow-hidden mb-2.5 p-3 bg-gradient-to-br from-[#FDB714] via-[#FF6B9D] to-[#E83B5E] text-gray-900 shadow-lg">
+        <div className="absolute -top-8 -right-8 w-32 h-32 rounded-full bg-white/10 blur-2xl" />
         <div className="relative flex items-center gap-3">
           {/* Monster avatar placeholder */}
-          <div className="h-14 w-14 rounded-2xl bg-gray-900/20 backdrop-blur-sm border-2 border-white/30 flex items-center justify-center text-3xl shrink-0">
+          <div className="h-14 w-14 rounded-2xl bg-white/20 backdrop-blur-sm border-2 border-white/30 flex items-center justify-center text-3xl shrink-0">
             🐾
           </div>
           <div className="flex-1 min-w-0">
-            <div className="text-[10px] uppercase tracking-wider text-white/80 font-semibold">
+            <div className="text-[10px] uppercase tracking-wider text-gray-900/80 font-semibold">
               {lang === "vi" ? "Chào buổi sáng, Alex!" : "Good morning, Alex!"}
             </div>
             <div className="flex items-baseline gap-2 mt-0.5">
               <div className="flex items-center gap-1">
-                <Coins className="h-4 w-4 text-white" />
+                <Coins className="h-4 w-4 text-gray-900" />
                 <span className="text-2xl font-black tabular-nums">148</span>
               </div>
-              <span className="text-[9px] text-white/80">{lang === "vi" ? "đá quý · +12 hôm nay" : "gems · +12 today"}</span>
+              <span className="text-[9px] text-gray-900/80">{lang === "vi" ? "đá quý · +12 hôm nay" : "gems · +12 today"}</span>
             </div>
             <div className="flex items-center gap-2 mt-1">
               <div className="flex items-center gap-0.5">
-                <Flame className="h-2.5 w-2.5 text-white" />
+                <Flame className="h-2.5 w-2.5 text-gray-900" />
                 <span className="text-[9px] font-semibold">{lang === "vi" ? "Chuỗi 7 ngày" : "7 day streak"}</span>
               </div>
-              <span className="text-[9px] text-white/60">·</span>
+              <span className="text-[9px] text-gray-900/60">·</span>
               <div className="flex items-center gap-0.5">
-                <Zap className="h-2.5 w-2.5 text-white" />
+                <Zap className="h-2.5 w-2.5 text-gray-900" />
                 <span className="text-[9px] font-semibold">{lang === "vi" ? "Cấp 12" : "Level 12"}</span>
               </div>
-              <span className="text-[9px] text-white/60">·</span>
+              <span className="text-[9px] text-gray-900/60">·</span>
               <div className="flex items-center gap-0.5">
-                <Star className="h-2.5 w-2.5 text-white fill-white" />
+                <Star className="h-2.5 w-2.5 text-gray-900 fill-white" />
                 <span className="text-[9px] font-semibold">{lang === "vi" ? "Hạng Vàng" : "Gold tier"}</span>
               </div>
             </div>
           </div>
-          <button className="shrink-0 flex items-center gap-1 px-2 py-1 bg-gray-900 text-[#E83B5E] rounded-lg text-[9px] font-bold shadow-md">
+          <button className="shrink-0 flex items-center gap-1 px-2 py-1 bg-white text-[#E83B5E] rounded-lg text-[9px] font-bold shadow-md">
             <Store className="h-2.5 w-2.5" />
             {lang === "vi" ? "Cửa hàng" : "Shop"}
           </button>
@@ -131,7 +131,7 @@ export function StudentDashboardMockup({ className = "", lang = "en" }: { classN
               {HOMEWORK.map((h) => (
                 <div
                   key={h.title}
-                  className="flex items-center gap-2 p-1.5 rounded-lg bg-gray-800/50/80 border border-gray-800"
+                  className="flex items-center gap-2 p-1.5 rounded-lg bg-gray-50/50/80 border border-gray-100"
                 >
                   <div
                     className="h-7 w-7 rounded-lg flex items-center justify-center shrink-0"
@@ -140,7 +140,7 @@ export function StudentDashboardMockup({ className = "", lang = "en" }: { classN
                     <BookOpen className="h-3 w-3" style={{ color: h.color }} />
                   </div>
                   <div className="min-w-0 flex-1">
-                    <div className="text-[10px] font-semibold text-white truncate">{h.title}</div>
+                    <div className="text-[10px] font-semibold text-gray-900 truncate">{h.title}</div>
                     <div className="text-[8px] text-gray-500">{mt(`subjects.${h.subjectKey}`, lang)}</div>
                   </div>
                   <div className="shrink-0">
@@ -190,7 +190,7 @@ export function StudentDashboardMockup({ className = "", lang = "en" }: { classN
                     {s.crown ? (
                       <Crown className="h-3 w-3 text-[#FDB714] fill-[#FDB714]" />
                     ) : (
-                      <span className="text-[9px] font-bold text-gray-400">{s.rank}</span>
+                      <span className="text-[9px] font-bold text-gray-500">{s.rank}</span>
                     )}
                   </div>
                   <MockAvatar
@@ -199,7 +199,7 @@ export function StudentDashboardMockup({ className = "", lang = "en" }: { classN
                     gradientFrom={s.gradient[0]}
                     gradientTo={s.gradient[1]}
                   />
-                  <span className="text-[9px] font-medium text-white flex-1 truncate">
+                  <span className="text-[9px] font-medium text-gray-900 flex-1 truncate">
                     {s.name}
                   </span>
                   <div className="flex items-center gap-0.5 shrink-0">
@@ -219,8 +219,8 @@ export function StudentDashboardMockup({ className = "", lang = "en" }: { classN
                 <Award className="h-4 w-4 text-[#00C9A7]" />
               </div>
               <div className="flex-1 min-w-0">
-                <div className="text-[10px] font-bold text-white">{lang === "vi" ? "Huy hiệu kế tiếp" : "Next badge"}</div>
-                <div className="text-[8px] text-gray-400">{lang === "vi" ? "Nhà vô địch đọc · còn 12 đá quý" : "Reading Champion · 12 gems away"}</div>
+                <div className="text-[10px] font-bold text-gray-900">{lang === "vi" ? "Huy hiệu kế tiếp" : "Next badge"}</div>
+                <div className="text-[8px] text-gray-500">{lang === "vi" ? "Nhà vô địch đọc · còn 12 đá quý" : "Reading Champion · 12 gems away"}</div>
                 <div className="h-1 bg-[#00C9A7]/20 rounded-full mt-1 overflow-hidden">
                   <div className="h-full bg-[#00C9A7] rounded-full" style={{ width: "75%" }} />
                 </div>
