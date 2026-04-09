@@ -61,7 +61,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   return buildPageMetadata({
     lang,
     path: "/features/customer-service",
-    title: `${t.title} — ${t.highlight} | Elementals`,
+    title: `${t.title} — ${t.highlight} | KiwiBee`,
     description: t.description,
   });
 }

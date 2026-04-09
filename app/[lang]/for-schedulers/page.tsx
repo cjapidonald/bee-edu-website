@@ -178,7 +178,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const rawLang = (await params).lang;
   const lang = rawLang === "zh-HK" ? "zh-HK" : "en";
   const t = contentByLang[lang] ?? contentByLang.en;
-  const title = `${t.badge}: ${t.title} ${t.highlight} | Elementals`;
+  const title = `${t.badge}: ${t.title} ${t.highlight} | KiwiBee`;
   const description = t.description;
   return buildPageMetadata({ lang, path: "/for-schedulers", title, description });
 }

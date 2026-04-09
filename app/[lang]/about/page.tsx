@@ -31,12 +31,12 @@ const coreModuleColors = ["primary", "secondary", "accent", "primary", "accent",
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const lang = (await params).lang === "zh-HK" ? "zh-HK" : "en";
   const titles: Record<string, string> = {
-    en: "About Elementals | Elementals",
-    "zh-HK": "關於 Elementals | Elementals",
+    en: "About KiwiBee | KiwiBee",
+    "zh-HK": "關於 KiwiBee | KiwiBee",
   };
   const descriptions: Record<string, string> = {
-    en: "Learn about Elementals—our mission, values, and how we help schools run smarter with AI.",
-    "zh-HK": "了解 Elementals 的使命與價值，以及我們如何以 AI 協助學校更高效運作。",
+    en: "Learn about KiwiBee—our mission, values, and how we help schools run smarter with AI.",
+    "zh-HK": "了解 KiwiBee 的使命與價值，以及我們如何以 AI 協助學校更高效運作。",
   };
   return buildPageMetadata({
     lang,
@@ -59,7 +59,7 @@ export default async function AboutPage({ params }: AboutPageProps) {
       story: {
         title: "Our Story",
         paragraphs: [
-          "Elementals was founded on a simple yet powerful belief: that every educator deserves tools that work as hard as they do.",
+          "KiwiBee was founded on a simple yet powerful belief: that every educator deserves tools that work as hard as they do.",
           "What started as a passion project to help teachers manage their classrooms more effectively has grown into a comprehensive platform serving schools around the world.",
         ],
         mission: {
@@ -70,7 +70,7 @@ export default async function AboutPage({ params }: AboutPageProps) {
       platform: {
         title: "Complete School Management",
         subtitle: "One unified platform serving every role in your school ecosystem.",
-        todayText: "Today, Elementals has evolved into a comprehensive multi-tenant school management platform, serving schools with",
+        todayText: "Today, KiwiBee has evolved into a comprehensive multi-tenant school management platform, serving schools with",
         rolesHighlight: "16+ integrated user roles",
         andText: "and",
         modulesHighlight: "20+ integrated modules",
@@ -135,14 +135,14 @@ export default async function AboutPage({ params }: AboutPageProps) {
       ceo: {
         title: "Donald Cjapi",
         signature: "Chief Executive Officer",
-        message: "As a software engineer with a passion for education, I founded Elementals to bridge the gap between powerful technology and everyday classroom needs. We are committed to green, sustainable AI—building tools that digitalize school management, make institutions more efficient, and take them into the next phase of education. Our platform represents years of collaboration with educators to build something truly transformative.",
+        message: "As a software engineer with a passion for education, I founded KiwiBee to bridge the gap between powerful technology and everyday classroom needs. We are committed to green, sustainable AI—building tools that digitalize school management, make institutions more efficient, and take them into the next phase of education. Our platform represents years of collaboration with educators to build something truly transformative.",
       },
     },
     "zh-HK": {
       story: {
         title: "我們的故事",
         paragraphs: [
-          "Elementals 的創立基於一個簡單而有力的信念：每位教育者都值得擁有與他們同樣努力工作的工具。",
+          "KiwiBee 的創立基於一個簡單而有力的信念：每位教育者都值得擁有與他們同樣努力工作的工具。",
           "最初只是一個幫助教師更有效管理課堂的熱情項目，如今已發展成為服務全球學校的綜合平台。",
         ],
         mission: {
@@ -153,7 +153,7 @@ export default async function AboutPage({ params }: AboutPageProps) {
       platform: {
         title: "全方位學校管理",
         subtitle: "一個統一的平台服務學校生態系統中的每個角色。",
-        todayText: "如今，Elementals 已發展成為綜合性的多租戶學校管理平台，為學校提供",
+        todayText: "如今，KiwiBee 已發展成為綜合性的多租戶學校管理平台，為學校提供",
         rolesHighlight: "16+ 個整合用戶角色",
         andText: "和",
         modulesHighlight: "20+ 個整合模組",
@@ -218,7 +218,7 @@ export default async function AboutPage({ params }: AboutPageProps) {
       ceo: {
         title: "Donald Cjapi",
         signature: "首席執行官",
-        message: "作為一名對教育充滿熱情的軟體工程師，我創立了 Elementals，以彌合強大技術與日常課堂需求之間的差距。我們致力於綠色可持續的 AI——構建工具將學校管理數碼化，使機構更高效，帶領它們邁入教育的下一階段。我們的平台代表了多年與教育者合作構建真正具有變革性事物的成果。",
+        message: "作為一名對教育充滿熱情的軟體工程師，我創立了 KiwiBee，以彌合強大技術與日常課堂需求之間的差距。我們致力於綠色可持續的 AI——構建工具將學校管理數碼化，使機構更高效，帶領它們邁入教育的下一階段。我們的平台代表了多年與教育者合作構建真正具有變革性事物的成果。",
       },
     },
   };

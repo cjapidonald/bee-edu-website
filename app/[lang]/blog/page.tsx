@@ -155,7 +155,7 @@ export async function generateMetadata({
   const lang = (await params).lang === "zh-HK" ? "zh-HK" : "en";
   const locale: Locale = lang === "zh-HK" ? "zh-HK" : "en";
   const isZh = locale === "zh-HK";
-  const title = isZh ? "Elementals 博客" : "Elementals Blog";
+  const title = isZh ? "KiwiBee 博客" : "KiwiBee Blog";
   const description = isZh
     ? "面向 K-12 教育者的理念、研究、教學技巧與資源。"
     : "Ideas, research, teaching techniques, and resources for K-12 educators.";

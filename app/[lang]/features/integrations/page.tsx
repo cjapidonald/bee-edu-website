@@ -27,14 +27,14 @@ const contentByLang: Record<
   }
 > = {
   en: {
-    seoTitle: "Integrations & API | Elementals",
+    seoTitle: "Integrations & API | KiwiBee",
     seoDescription:
-      "Connect Elementals with your existing tools using integrations, webhooks, and a secure API. Designed for schools and modern education operations.",
+      "Connect KiwiBee with your existing tools using integrations, webhooks, and a secure API. Designed for schools and modern education operations.",
     badge: "Integrations & API",
     title: "Connect Your",
     highlight: "School Stack",
     description:
-      "Connect Elementals with the tools you already use. Integrations, webhooks, and a secure API keep data flowing—without manual spreadsheets.",
+      "Connect KiwiBee with the tools you already use. Integrations, webhooks, and a secure API keep data flowing—without manual spreadsheets.",
     trustIndicators: ["Secure by design", "Webhooks + API", "Works with existing tools"],
     features: [
       {
@@ -91,14 +91,14 @@ const contentByLang: Record<
     ],
   },
   "zh-HK": {
-    seoTitle: "整合與 API | Elementals",
+    seoTitle: "整合與 API | KiwiBee",
     seoDescription:
-      "透過整合、Webhook 與安全 API 連接 Elementals 與你現有的工具。專為學校與現代教育營運而設。",
+      "透過整合、Webhook 與安全 API 連接 KiwiBee 與你現有的工具。專為學校與現代教育營運而設。",
     badge: "整合與 API",
     title: "連接你的",
     highlight: "學校系統",
     description:
-      "把 Elementals 與現有工具無縫連接。整合、Webhook 與安全 API 讓數據自動流動——不再依賴手動試算表。",
+      "把 KiwiBee 與現有工具無縫連接。整合、Webhook 與安全 API 讓數據自動流動——不再依賴手動試算表。",
     trustIndicators: ["安全為先", "Webhook + API", "兼容現有工具"],
     features: [
       {

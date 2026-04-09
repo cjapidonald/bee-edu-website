@@ -7,13 +7,13 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const lang = (await params).lang === "zh-HK" ? "zh-HK" : "en";
 
   const titles: Record<string, string> = {
-    en: "Contact | Elementals",
-    "zh-HK": "聯絡我們 | Elementals",
+    en: "Contact | KiwiBee",
+    "zh-HK": "聯絡我們 | KiwiBee",
   };
 
   const descriptions: Record<string, string> = {
-    en: "Talk to Elementals. Email hello@elementals.com or WhatsApp +852 94954912.",
-    "zh-HK": "聯絡 Elementals。電郵 hello@elementals.com 或 WhatsApp +852 94954912。",
+    en: "Talk to KiwiBee. Email hello@elementals.com or WhatsApp +852 94954912.",
+    "zh-HK": "聯絡 KiwiBee。電郵 hello@elementals.com 或 WhatsApp +852 94954912。",
   };
 
   return buildPageMetadata({

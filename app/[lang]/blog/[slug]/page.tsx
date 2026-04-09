@@ -402,13 +402,13 @@ const labels = {
     back: "Back to Blog",
     share: "Share",
     copied: "Copied!",
-    defaultAuthor: "Elementals Team",
+    defaultAuthor: "KiwiBee Team",
   },
   "zh-HK": {
     back: "返回博客",
     share: "分享",
     copied: "已複製！",
-    defaultAuthor: "Elementals 團隊",
+    defaultAuthor: "KiwiBee 團隊",
   },
 };
 
@@ -434,7 +434,7 @@ export async function generateMetadata({
   const canonicalPath = getLocalizedPath(lang, `/blog/${identifier}`);
   const canonicalUrl = new URL(canonicalPath, siteUrl);
   const title = post.meta_title?.trim() || post.title;
-  const description = post.meta_description?.trim() || post.excerpt || post.subtitle || "Elementals Blog";
+  const description = post.meta_description?.trim() || post.excerpt || post.subtitle || "KiwiBee Blog";
 
   const keywordValues = uniqueValues([...extractTags(post.tags), ...extractTags(post.keywords)]);
 
@@ -581,7 +581,7 @@ export default async function BlogPostPage({
     },
     publisher: {
       "@type": "Organization",
-      name: "Elementals",
+      name: "KiwiBee",
       url: siteUrl,
     },
     ...(post.featured_image ? { image: [post.featured_image] } : {}),

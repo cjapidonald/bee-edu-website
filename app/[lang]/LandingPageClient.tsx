@@ -634,8 +634,8 @@ export default function LandingPageClient({
                 </p>
                 <p className="text-sm sm:text-base text-gray-500 mb-6 sm:mb-8 max-w-2xl lg:max-w-none">
                   {lang === "zh-HK"
-                    ? "Elementals（亦稱 Elementals）AI 學校管理系統（SIS + LMS）：課程規劃、智能排課、ClassSpark 行為追蹤、成績冊、出勤、評估與家校溝通一站式整合。"
-                    : "Elementals is an AI-powered teaching, learning and school management platform built by teachers for schools, students, and families."}
+                    ? "KiwiBeeAI 學校管理系統（SIS + LMS）：課程規劃、智能排課、ClassSpark 行為追蹤、成績冊、出勤、評估與家校溝通一站式整合。"
+                    : "KiwiBee is an AI-powered teaching, learning and school management platform built by teachers for schools, students, and families."}
                 </p>
 
                 {/* CTA Buttons */}

@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const lang = rawLang === "zh-HK" ? "zh-HK" : "en";
   const copy = marketingCopy[lang] ?? marketingCopy.en;
   const t = copy.featurePages.classspark;
-  const title = t.seoTitle || `${t.title} ${t.highlight} | Elementals`;
+  const title = t.seoTitle || `${t.title} ${t.highlight} | KiwiBee`;
   const description = t.seoDescription || t.description || "";
   return buildPageMetadata({ lang, path: "/features/classspark", title, description });
 }

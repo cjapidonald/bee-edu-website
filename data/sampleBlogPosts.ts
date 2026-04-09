@@ -145,13 +145,13 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
       {
         type: "heading",
         level: 2,
-        children: [{ text: "A Better Way: ClassSpark by Elementals" }],
+        children: [{ text: "A Better Way: ClassSpark by KiwiBee" }],
       },
       {
         type: "paragraph",
         children: [
           {
-            text: "While these ClassDojo workarounds are effective, they require significant manual effort to set up and maintain. Elementals's ClassSpark system was designed to make these strategies effortless and built-in from the start. ClassSpark includes native avatar customization with automatic tier unlocking based on point thresholds you define, so there is no need to manually track which students have earned which rewards.",
+            text: "While these ClassDojo workarounds are effective, they require significant manual effort to set up and maintain. KiwiBee's ClassSpark system was designed to make these strategies effortless and built-in from the start. ClassSpark includes native avatar customization with automatic tier unlocking based on point thresholds you define, so there is no need to manually track which students have earned which rewards.",
           },
         ],
       },
@@ -159,14 +159,14 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
         type: "paragraph",
         children: [
           {
-            text: "The Challenge Character concept is built directly into ClassSpark's class-wide goals feature, allowing you to set collective behavior targets with automated tracking and reward triggers. And because ClassSpark is part of the broader Elementals ecosystem, every behavior data point connects seamlessly to your gradebook, parent communication portal, and student reports. No more workarounds, no more spreadsheets, just a unified system that makes advanced classroom management accessible to every teacher.",
+            text: "The Challenge Character concept is built directly into ClassSpark's class-wide goals feature, allowing you to set collective behavior targets with automated tracking and reward triggers. And because ClassSpark is part of the broader KiwiBee ecosystem, every behavior data point connects seamlessly to your gradebook, parent communication portal, and student reports. No more workarounds, no more spreadsheets, just a unified system that makes advanced classroom management accessible to every teacher.",
           },
         ],
       },
     ],
-    author: { name: "Elementals", job_title: "Elementals" },
-    author_name: "Elementals",
-    author_job_title: "Elementals",
+    author: { name: "KiwiBee", job_title: "KiwiBee" },
+    author_name: "KiwiBee",
+    author_job_title: "KiwiBee",
     author_image:
       "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=150&q=80",
     created_at: "2024-03-15T10:00:00Z",
@@ -174,7 +174,7 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
     updated_at: "2024-03-15T10:00:00Z",
     is_published: true,
     is_pinned: false,
-    meta_title: "Mastering ClassDojo: Smart Strategies for Engagement and Classroom Management | Elementals Blog",
+    meta_title: "Mastering ClassDojo: Smart Strategies for Engagement and Classroom Management | KiwiBee Blog",
     meta_description:
       "Learn advanced ClassDojo strategies including avatar rewards, challenge characters, and attendance tracking to transform your classroom management approach.",
     read_time: 8,
@@ -276,20 +276,20 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
       {
         type: "heading",
         level: 2,
-        children: [{ text: "A Platform That Solves This Natively: ClassSpark by Elementals" }],
+        children: [{ text: "A Platform That Solves This Natively: ClassSpark by KiwiBee" }],
       },
       {
         type: "paragraph",
         children: [
           {
-            text: "While the numbering workaround is effective, it highlights a design limitation that should not exist in a modern classroom tool. Elementals's ClassSpark behavior tracking system includes built-in drag-and-drop skill reordering out of the box. Simply tap, hold, and drag any skill to your preferred position. No numbering hacks, no renaming, no maintenance. ClassSpark also supports skill grouping, color coding, and custom categories that make organizing your behavior framework intuitive and fast. If you are tired of workarounds, it might be time to explore a platform built with teacher workflow in mind.",
+            text: "While the numbering workaround is effective, it highlights a design limitation that should not exist in a modern classroom tool. KiwiBee's ClassSpark behavior tracking system includes built-in drag-and-drop skill reordering out of the box. Simply tap, hold, and drag any skill to your preferred position. No numbering hacks, no renaming, no maintenance. ClassSpark also supports skill grouping, color coding, and custom categories that make organizing your behavior framework intuitive and fast. If you are tired of workarounds, it might be time to explore a platform built with teacher workflow in mind.",
           },
         ],
       },
     ],
-    author: { name: "Elementals", job_title: "Elementals" },
-    author_name: "Elementals",
-    author_job_title: "Elementals",
+    author: { name: "KiwiBee", job_title: "KiwiBee" },
+    author_name: "KiwiBee",
+    author_job_title: "KiwiBee",
     author_image:
       "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=150&q=80",
     created_at: "2024-05-08T14:00:00Z",
@@ -297,7 +297,7 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
     updated_at: "2024-05-08T14:00:00Z",
     is_published: true,
     is_pinned: false,
-    meta_title: "Skills in ClassDojo: A Numbering Solution | Elementals Blog",
+    meta_title: "Skills in ClassDojo: A Numbering Solution | KiwiBee Blog",
     meta_description:
       "ClassDojo lacks drag-and-drop skill reordering. Learn the numbering prefix workaround and discover a platform with native skill organization built in.",
     read_time: 5,
@@ -409,20 +409,20 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
       {
         type: "heading",
         level: 2,
-        children: [{ text: "Going Further with ClassSpark by Elementals" }],
+        children: [{ text: "Going Further with ClassSpark by KiwiBee" }],
       },
       {
         type: "paragraph",
         children: [
           {
-            text: "All five of these features are available in Elementals's ClassSpark system, along with capabilities that ClassDojo does not offer. ClassSpark includes AI-powered behavior insights that identify patterns in student engagement over time, a direct integration with the skills gradebook so behavior data informs academic progress reports, and automated report generation that sends personalized summaries to parents without extra work from the teacher. If you love what ClassDojo does but wish it connected to the rest of your school management workflow, ClassSpark is worth exploring.",
+            text: "All five of these features are available in KiwiBee's ClassSpark system, along with capabilities that ClassDojo does not offer. ClassSpark includes AI-powered behavior insights that identify patterns in student engagement over time, a direct integration with the skills gradebook so behavior data informs academic progress reports, and automated report generation that sends personalized summaries to parents without extra work from the teacher. If you love what ClassDojo does but wish it connected to the rest of your school management workflow, ClassSpark is worth exploring.",
           },
         ],
       },
     ],
-    author: { name: "Elementals", job_title: "Elementals" },
-    author_name: "Elementals",
-    author_job_title: "Elementals",
+    author: { name: "KiwiBee", job_title: "KiwiBee" },
+    author_name: "KiwiBee",
+    author_job_title: "KiwiBee",
     author_image:
       "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=150&q=80",
     created_at: "2024-06-22T08:30:00Z",
@@ -430,7 +430,7 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
     updated_at: "2024-06-22T08:30:00Z",
     is_published: true,
     is_pinned: false,
-    meta_title: "ClassDojo: My Top 5 Most Used Features | Elementals Blog",
+    meta_title: "ClassDojo: My Top 5 Most Used Features | KiwiBee Blog",
     meta_description:
       "Discover the five ClassDojo features teachers rely on daily: Random Selector, Timer, Class Points, Groups, and Chats, plus a powerful alternative.",
     read_time: 7,
@@ -447,7 +447,7 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
     excerpt:
       "From all-in-one school management to interactive quiz games, these five apps will transform how you teach, engage students, and manage your classroom every day.",
     category: "eduTech",
-    tags: ["EdTech", "Classroom Apps", "Teaching Tools", "Elementals"],
+    tags: ["EdTech", "Classroom Apps", "Teaching Tools", "KiwiBee"],
     keywords: ["best classroom apps", "top teacher apps", "education technology apps"],
     featured_image:
       "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?auto=format&fit=crop&w=1200&q=80",
@@ -469,13 +469,13 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
       {
         type: "heading",
         level: 2,
-        children: [{ text: "1. Elementals: The All-in-One School Management Platform" }],
+        children: [{ text: "1. KiwiBee: The All-in-One School Management Platform" }],
       },
       {
         type: "paragraph",
         children: [
           {
-            text: "Elementals sits at the top of this list because it replaces the need for multiple separate tools. It is a comprehensive school management platform that includes ClassSpark behavior tracking, AI-powered lesson planning, a full gradebook, scheduling, parent communication, and student reporting, all in one integrated system. Instead of juggling between a behavior app, a gradebook spreadsheet, a lesson planner, and a parent messaging tool, everything lives in one place.",
+            text: "KiwiBee sits at the top of this list because it replaces the need for multiple separate tools. It is a comprehensive school management platform that includes ClassSpark behavior tracking, AI-powered lesson planning, a full gradebook, scheduling, parent communication, and student reporting, all in one integrated system. Instead of juggling between a behavior app, a gradebook spreadsheet, a lesson planner, and a parent messaging tool, everything lives in one place.",
           },
         ],
       },
@@ -483,7 +483,7 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
         type: "paragraph",
         children: [
           {
-            text: "What sets Elementals apart is how its features connect. When you track a student's behavior in ClassSpark, that data flows into their academic profile and parent reports automatically. When you plan a lesson, the AI suggests resources aligned to your curriculum standards. The time savings compound across every part of your workflow. For schools looking to modernize without adding complexity, Elementals is the single best investment in education technology.",
+            text: "What sets KiwiBee apart is how its features connect. When you track a student's behavior in ClassSpark, that data flows into their academic profile and parent reports automatically. When you plan a lesson, the AI suggests resources aligned to your curriculum standards. The time savings compound across every part of your workflow. For schools looking to modernize without adding complexity, KiwiBee is the single best investment in education technology.",
           },
         ],
       },
@@ -530,7 +530,7 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
         type: "paragraph",
         children: [
           {
-            text: "Wordwall is the Swiss Army knife of interactive classroom activities. It lets you create quizzes, matching games, word searches, anagrams, crosswords, and more from a single set of content. Once you create an activity, you can switch between formats with a single click, meaning one set of vocabulary words can become a matching game, then a quiz, then a word search without any extra work. Wordwall also integrates with Elementals's lesson planning tools, allowing teachers to embed interactive activities directly into their lesson workflows.",
+            text: "Wordwall is the Swiss Army knife of interactive classroom activities. It lets you create quizzes, matching games, word searches, anagrams, crosswords, and more from a single set of content. Once you create an activity, you can switch between formats with a single click, meaning one set of vocabulary words can become a matching game, then a quiz, then a word search without any extra work. Wordwall also integrates with KiwiBee's lesson planning tools, allowing teachers to embed interactive activities directly into their lesson workflows.",
           },
         ],
       },
@@ -551,14 +551,14 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
         type: "paragraph",
         children: [
           {
-            text: "Each of these five apps brings something unique to the classroom. But if you could only choose one, Elementals delivers the broadest impact because it addresses management, planning, assessment, and communication in a single platform. Pair it with one or two of the gamification tools above, and you have a technology stack that covers virtually every classroom need.",
+            text: "Each of these five apps brings something unique to the classroom. But if you could only choose one, KiwiBee delivers the broadest impact because it addresses management, planning, assessment, and communication in a single platform. Pair it with one or two of the gamification tools above, and you have a technology stack that covers virtually every classroom need.",
           },
         ],
       },
     ],
-    author: { name: "Elementals", job_title: "Elementals" },
-    author_name: "Elementals",
-    author_job_title: "Elementals",
+    author: { name: "KiwiBee", job_title: "KiwiBee" },
+    author_name: "KiwiBee",
+    author_job_title: "KiwiBee",
     author_image:
       "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=150&q=80",
     created_at: "2024-08-10T09:00:00Z",
@@ -566,9 +566,9 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
     updated_at: "2024-08-10T09:00:00Z",
     is_published: true,
     is_pinned: true,
-    meta_title: "Top 5 Apps to Use in the Classroom | Elementals Blog",
+    meta_title: "Top 5 Apps to Use in the Classroom | KiwiBee Blog",
     meta_description:
-      "Discover the five best classroom apps for teachers: Elementals, Kahoot, Blooket, Wordwall, and Baamboozle. Reviews, pros, and practical tips.",
+      "Discover the five best classroom apps for teachers: KiwiBee, Kahoot, Blooket, Wordwall, and Baamboozle. Reviews, pros, and practical tips.",
     read_time: 6,
     view_count: 4210,
     language: "en",
@@ -673,20 +673,20 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
       {
         type: "heading",
         level: 3,
-        children: [{ text: "Complement Both with Elementals" }],
+        children: [{ text: "Complement Both with KiwiBee" }],
       },
       {
         type: "paragraph",
         children: [
           {
-            text: "Whichever platform you choose, both Kahoot and Blooket pair well with Elementals's broader classroom management ecosystem. Elementals's gamification features, including ClassSpark behavior points and reward tracking, complement quiz platforms by extending the gamified experience beyond review games into daily classroom culture. The result is a consistently engaging environment where students are motivated across every part of the school day.",
+            text: "Whichever platform you choose, both Kahoot and Blooket pair well with KiwiBee's broader classroom management ecosystem. KiwiBee's gamification features, including ClassSpark behavior points and reward tracking, complement quiz platforms by extending the gamified experience beyond review games into daily classroom culture. The result is a consistently engaging environment where students are motivated across every part of the school day.",
           },
         ],
       },
     ],
-    author: { name: "Elementals", job_title: "Elementals" },
-    author_name: "Elementals",
-    author_job_title: "Elementals",
+    author: { name: "KiwiBee", job_title: "KiwiBee" },
+    author_name: "KiwiBee",
+    author_job_title: "KiwiBee",
     author_image:
       "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=150&q=80",
     created_at: "2024-09-05T11:00:00Z",
@@ -694,7 +694,7 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
     updated_at: "2024-09-05T11:00:00Z",
     is_published: true,
     is_pinned: false,
-    meta_title: "Kahoot vs Blooket: Which One is the Best? | Elementals Blog",
+    meta_title: "Kahoot vs Blooket: Which One is the Best? | KiwiBee Blog",
     meta_description:
       "Kahoot or Blooket? Compare features, pricing, game variety, and analytics to find the best classroom quiz platform for your teaching needs.",
     read_time: 6,
@@ -812,9 +812,9 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
         ],
       },
     ],
-    author: { name: "Elementals", job_title: "Elementals" },
-    author_name: "Elementals",
-    author_job_title: "Elementals",
+    author: { name: "KiwiBee", job_title: "KiwiBee" },
+    author_name: "KiwiBee",
+    author_job_title: "KiwiBee",
     author_image:
       "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=150&q=80",
     created_at: "2024-10-18T13:00:00Z",
@@ -822,7 +822,7 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
     updated_at: "2024-10-18T13:00:00Z",
     is_published: true,
     is_pinned: false,
-    meta_title: "Gimkit vs Blooket: The Ultimate Classroom Game Showdown | Elementals Blog",
+    meta_title: "Gimkit vs Blooket: The Ultimate Classroom Game Showdown | KiwiBee Blog",
     meta_description:
       "Gimkit or Blooket? Compare gameplay depth, learning value, pricing, and grade-level fit to pick the best classroom game platform for your students.",
     read_time: 5,
@@ -956,20 +956,20 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
       {
         type: "heading",
         level: 3,
-        children: [{ text: "Even Better with Elementals Integration" }],
+        children: [{ text: "Even Better with KiwiBee Integration" }],
       },
       {
         type: "paragraph",
         children: [
           {
-            text: "Wordwall becomes even more powerful when integrated with Elementals's lesson planning tools. Teachers using Elementals can embed Wordwall activities directly into their lesson plans, aligning interactive exercises with specific curriculum objectives and skills. This connection ensures that every Wordwall activity is mapped to learning goals and automatically reflected in student progress tracking. It transforms Wordwall from a standalone activity tool into part of a cohesive instructional ecosystem.",
+            text: "Wordwall becomes even more powerful when integrated with KiwiBee's lesson planning tools. Teachers using KiwiBee can embed Wordwall activities directly into their lesson plans, aligning interactive exercises with specific curriculum objectives and skills. This connection ensures that every Wordwall activity is mapped to learning goals and automatically reflected in student progress tracking. It transforms Wordwall from a standalone activity tool into part of a cohesive instructional ecosystem.",
           },
         ],
       },
     ],
-    author: { name: "Elementals", job_title: "Elementals" },
-    author_name: "Elementals",
-    author_job_title: "Elementals",
+    author: { name: "KiwiBee", job_title: "KiwiBee" },
+    author_name: "KiwiBee",
+    author_job_title: "KiwiBee",
     author_image:
       "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=150&q=80",
     created_at: "2024-11-30T10:30:00Z",
@@ -977,7 +977,7 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
     updated_at: "2024-11-30T10:30:00Z",
     is_published: true,
     is_pinned: false,
-    meta_title: "Is Wordwall.net Really Worth It? | Elementals Blog",
+    meta_title: "Is Wordwall.net Really Worth It? | KiwiBee Blog",
     meta_description:
       "An honest Wordwall review covering warm-ups, quizzes, games, homework, and smartboard use. Find out if this interactive activity platform is worth it.",
     read_time: 6,
@@ -1146,20 +1146,20 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
       {
         type: "heading",
         level: 2,
-        children: [{ text: "Mapping Vocabulary to Curriculum With Elementals" }],
+        children: [{ text: "Mapping Vocabulary to Curriculum With KiwiBee" }],
       },
       {
         type: "paragraph",
         children: [
           {
-            text: "This 10-step workflow is even more effective when combined with Elementals's curriculum tools. Elementals allows teachers to map vocabulary words directly to curriculum standards and learning objectives, ensuring that every Wordwall activity aligns with broader educational goals. When vocabulary is linked to specific skills and strands in the system, student progress on vocabulary activities is automatically tracked and reflected in skills-based reports, giving teachers and parents a clear picture of language development over time.",
+            text: "This 10-step workflow is even more effective when combined with KiwiBee's curriculum tools. KiwiBee allows teachers to map vocabulary words directly to curriculum standards and learning objectives, ensuring that every Wordwall activity aligns with broader educational goals. When vocabulary is linked to specific skills and strands in the system, student progress on vocabulary activities is automatically tracked and reflected in skills-based reports, giving teachers and parents a clear picture of language development over time.",
           },
         ],
       },
     ],
-    author: { name: "Elementals", job_title: "Elementals" },
-    author_name: "Elementals",
-    author_job_title: "Elementals",
+    author: { name: "KiwiBee", job_title: "KiwiBee" },
+    author_name: "KiwiBee",
+    author_job_title: "KiwiBee",
     author_image:
       "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=150&q=80",
     created_at: "2025-01-12T09:00:00Z",
@@ -1167,7 +1167,7 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
     updated_at: "2025-01-12T09:00:00Z",
     is_published: true,
     is_pinned: false,
-    meta_title: "Using Wordwall for Vocabulary Instruction: A 10-Step Guide | Elementals Blog",
+    meta_title: "Using Wordwall for Vocabulary Instruction: A 10-Step Guide | KiwiBee Blog",
     meta_description:
       "A structured 10-step Wordwall vocabulary workflow using flashcards, anagrams, matching, Whack-a-Mole, crosswords, and more for effective word learning.",
     read_time: 8,
@@ -1288,14 +1288,14 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
         type: "paragraph",
         children: [
           {
-            text: "Elementals's teacher dashboard includes many of the same display features, such as timers, random student selectors, and activity indicators, built directly into the teaching interface. The difference is that these tools are connected to everything else: behavior tracking, lesson plans, gradebook, and parent communication. Instead of paying for a separate display tool, Elementals gives you those visual widgets as part of a comprehensive platform where every interaction feeds into a unified student profile. For teachers who want display functionality and meaningful data, it is a more complete solution.",
+            text: "KiwiBee's teacher dashboard includes many of the same display features, such as timers, random student selectors, and activity indicators, built directly into the teaching interface. The difference is that these tools are connected to everything else: behavior tracking, lesson plans, gradebook, and parent communication. Instead of paying for a separate display tool, KiwiBee gives you those visual widgets as part of a comprehensive platform where every interaction feeds into a unified student profile. For teachers who want display functionality and meaningful data, it is a more complete solution.",
           },
         ],
       },
     ],
-    author: { name: "Elementals", job_title: "Elementals" },
-    author_name: "Elementals",
-    author_job_title: "Elementals",
+    author: { name: "KiwiBee", job_title: "KiwiBee" },
+    author_name: "KiwiBee",
+    author_job_title: "KiwiBee",
     author_image:
       "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=150&q=80",
     created_at: "2025-02-20T08:00:00Z",
@@ -1303,7 +1303,7 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
     updated_at: "2025-02-20T08:00:00Z",
     is_published: true,
     is_pinned: false,
-    meta_title: "Is Classroom Screen Really Worth It? | Elementals Blog",
+    meta_title: "Is Classroom Screen Really Worth It? | KiwiBee Blog",
     meta_description:
       "An honest Classroom Screen review covering features, pros, cons, and pricing. Find out if this browser-based display tool is worth the subscription.",
     read_time: 6,
@@ -1413,13 +1413,13 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
       {
         type: "heading",
         level: 2,
-        children: [{ text: "A Better Alternative: Elementals" }],
+        children: [{ text: "A Better Alternative: KiwiBee" }],
       },
       {
         type: "paragraph",
         children: [
           {
-            text: "MagicSchool.ai is a useful standalone AI tool, but it exists in isolation. It generates content, but that content does not connect to your gradebook, your behavior data, your schedule, or your parent communication. This is where Elementals offers a fundamentally different and more powerful approach.",
+            text: "MagicSchool.ai is a useful standalone AI tool, but it exists in isolation. It generates content, but that content does not connect to your gradebook, your behavior data, your schedule, or your parent communication. This is where KiwiBee offers a fundamentally different and more powerful approach.",
           },
         ],
       },
@@ -1427,7 +1427,7 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
         type: "paragraph",
         children: [
           {
-            text: "Elementals includes all the AI-powered generation features that MagicSchool.ai offers, including lesson planning, assessment creation, and communication drafting, but these tools are embedded in a complete school management platform. When Elementals generates a lesson plan, it knows which curriculum standards you are covering, which skills your students have already mastered, and what is on your schedule for the week. The AI output is personalized because it draws from actual data about your students and your school.",
+            text: "KiwiBee includes all the AI-powered generation features that MagicSchool.ai offers, including lesson planning, assessment creation, and communication drafting, but these tools are embedded in a complete school management platform. When KiwiBee generates a lesson plan, it knows which curriculum standards you are covering, which skills your students have already mastered, and what is on your schedule for the week. The AI output is personalized because it draws from actual data about your students and your school.",
           },
         ],
       },
@@ -1435,14 +1435,14 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
         type: "paragraph",
         children: [
           {
-            text: "Beyond AI generation, Elementals includes a full gradebook, ClassSpark behavior tracking, scheduling, a parent portal, student reports, and exam management. Instead of paying for a standalone AI tool and then manually transferring its output into other systems, Elementals is the system. Every AI-generated lesson plan is automatically linked to your curriculum map, every assessment connects to the gradebook, and every parent communication draws from real student data. For teachers who want AI assistance that is deeply integrated into their daily workflow rather than bolted on as a separate subscription, Elementals is the more complete and cost-effective choice.",
+            text: "Beyond AI generation, KiwiBee includes a full gradebook, ClassSpark behavior tracking, scheduling, a parent portal, student reports, and exam management. Instead of paying for a standalone AI tool and then manually transferring its output into other systems, KiwiBee is the system. Every AI-generated lesson plan is automatically linked to your curriculum map, every assessment connects to the gradebook, and every parent communication draws from real student data. For teachers who want AI assistance that is deeply integrated into their daily workflow rather than bolted on as a separate subscription, KiwiBee is the more complete and cost-effective choice.",
           },
         ],
       },
     ],
-    author: { name: "Elementals", job_title: "Elementals" },
-    author_name: "Elementals",
-    author_job_title: "Elementals",
+    author: { name: "KiwiBee", job_title: "KiwiBee" },
+    author_name: "KiwiBee",
+    author_job_title: "KiwiBee",
     author_image:
       "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=150&q=80",
     created_at: "2025-03-28T10:00:00Z",
@@ -1450,9 +1450,9 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
     updated_at: "2025-03-28T10:00:00Z",
     is_published: true,
     is_pinned: false,
-    meta_title: "Is MagicSchool.ai Worth It for Teachers? | Elementals Blog",
+    meta_title: "Is MagicSchool.ai Worth It for Teachers? | KiwiBee Blog",
     meta_description:
-      "An honest MagicSchool.ai review covering AI lesson planning, assessments, limitations, and why Elementals is a stronger integrated alternative.",
+      "An honest MagicSchool.ai review covering AI lesson planning, assessments, limitations, and why KiwiBee is a stronger integrated alternative.",
     read_time: 9,
     view_count: 1890,
     language: "en",
@@ -1573,7 +1573,7 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
         type: "paragraph",
         children: [
           {
-            text: "It is also worth mentioning that platforms like Elementals now offer built-in AI presentation features specifically designed for lesson delivery. Teachers can generate slide decks directly from their lesson plans with a single click, complete with relevant images, structured content, and curriculum-aligned talking points. This eliminates the design step entirely and lets educators focus on teaching rather than formatting slides.",
+            text: "It is also worth mentioning that platforms like KiwiBee now offer built-in AI presentation features specifically designed for lesson delivery. Teachers can generate slide decks directly from their lesson plans with a single click, complete with relevant images, structured content, and curriculum-aligned talking points. This eliminates the design step entirely and lets educators focus on teaching rather than formatting slides.",
           },
         ],
       },
@@ -1591,9 +1591,9 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
         ],
       },
     ],
-    author: { name: "Elementals", job_title: "Elementals" },
-    author_name: "Elementals",
-    author_job_title: "Elementals",
+    author: { name: "KiwiBee", job_title: "KiwiBee" },
+    author_name: "KiwiBee",
+    author_job_title: "KiwiBee",
     author_image:
       "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=150&q=80",
     created_at: "2024-09-15T10:00:00Z",
@@ -1601,7 +1601,7 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
     updated_at: "2024-09-15T10:00:00Z",
     is_published: true,
     is_pinned: false,
-    meta_title: "What Tool Should I Use to Present My Lessons? | Elementals Blog",
+    meta_title: "What Tool Should I Use to Present My Lessons? | KiwiBee Blog",
     meta_description:
       "Compare Canva, Google Slides, and PowerPoint for classroom presentations. Honest pros and cons to help teachers choose the right tool.",
     read_time: 7,
@@ -1747,9 +1747,9 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
         ],
       },
     ],
-    author: { name: "Elementals", job_title: "Elementals" },
-    author_name: "Elementals",
-    author_job_title: "Elementals",
+    author: { name: "KiwiBee", job_title: "KiwiBee" },
+    author_name: "KiwiBee",
+    author_job_title: "KiwiBee",
     author_image:
       "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=150&q=80",
     created_at: "2024-10-02T08:30:00Z",
@@ -1757,7 +1757,7 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
     updated_at: "2024-10-02T08:30:00Z",
     is_published: true,
     is_pinned: false,
-    meta_title: "Napkin AI: Note-Taking, Brainstorming, and Infographics | Elementals Blog",
+    meta_title: "Napkin AI: Note-Taking, Brainstorming, and Infographics | KiwiBee Blog",
     meta_description:
       "Review of Napkin AI for educators. Discover how this AI tool transforms notes into visual diagrams, brainstorming canvases, and infographics.",
     read_time: 7,
@@ -1894,14 +1894,14 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
         type: "paragraph",
         children: [
           {
-            text: "The warm-up is only effective if it connects smoothly to the main lesson. Plan a one-sentence bridge: \"Now that we have seen how ecosystems are connected, let us look at the specific role pollinators play.\" This signals to students that the warm-up was purposeful, not filler. Elementals's lesson planning tools include built-in warm-up activity suggestions aligned to your curriculum, making it easy to plan this transition in advance and keep your opening minutes focused and productive.",
+            text: "The warm-up is only effective if it connects smoothly to the main lesson. Plan a one-sentence bridge: \"Now that we have seen how ecosystems are connected, let us look at the specific role pollinators play.\" This signals to students that the warm-up was purposeful, not filler. KiwiBee's lesson planning tools include built-in warm-up activity suggestions aligned to your curriculum, making it easy to plan this transition in advance and keep your opening minutes focused and productive.",
           },
         ],
       },
     ],
-    author: { name: "Elementals", job_title: "Elementals" },
-    author_name: "Elementals",
-    author_job_title: "Elementals",
+    author: { name: "KiwiBee", job_title: "KiwiBee" },
+    author_name: "KiwiBee",
+    author_job_title: "KiwiBee",
     author_image:
       "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=150&q=80",
     created_at: "2024-06-20T09:00:00Z",
@@ -1909,7 +1909,7 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
     updated_at: "2024-06-20T09:00:00Z",
     is_published: true,
     is_pinned: false,
-    meta_title: "Top Warm-Up Activities for the Classroom | Elementals Blog",
+    meta_title: "Top Warm-Up Activities for the Classroom | KiwiBee Blog",
     meta_description:
       "Discover four proven warm-up strategies including video, image, question, and brainstorming activities to engage students in the first five minutes.",
     read_time: 5,
@@ -2064,9 +2064,9 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
         ],
       },
     ],
-    author: { name: "Elementals", job_title: "Elementals" },
-    author_name: "Elementals",
-    author_job_title: "Elementals",
+    author: { name: "KiwiBee", job_title: "KiwiBee" },
+    author_name: "KiwiBee",
+    author_job_title: "KiwiBee",
     author_image:
       "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=150&q=80",
     created_at: "2024-07-08T11:00:00Z",
@@ -2074,7 +2074,7 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
     updated_at: "2024-07-08T11:00:00Z",
     is_published: true,
     is_pinned: false,
-    meta_title: "Warm-Up Activities: A Kaleidoscope of Options | Elementals Blog",
+    meta_title: "Warm-Up Activities: A Kaleidoscope of Options | KiwiBee Blog",
     meta_description:
       "Explore five warm-up activity types including TPR, Wordwall games, brainstorming, and image-based prompts to keep students engaged from the first minute.",
     read_time: 6,
@@ -2216,9 +2216,9 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
         ],
       },
     ],
-    author: { name: "Elementals", job_title: "Elementals" },
-    author_name: "Elementals",
-    author_job_title: "Elementals",
+    author: { name: "KiwiBee", job_title: "KiwiBee" },
+    author_name: "KiwiBee",
+    author_job_title: "KiwiBee",
     author_image:
       "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=150&q=80",
     created_at: "2024-11-10T14:00:00Z",
@@ -2226,7 +2226,7 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
     updated_at: "2024-11-10T14:00:00Z",
     is_published: true,
     is_pinned: false,
-    meta_title: "Mastering Talk for Writing: A Step-by-Step Guide | Elementals Blog",
+    meta_title: "Mastering Talk for Writing: A Step-by-Step Guide | KiwiBee Blog",
     meta_description:
       "Learn the four stages of Talk for Writing: storytelling, story maps, invention, and adaptation. A practical guide for primary teachers building young writers.",
     read_time: 7,
@@ -2355,14 +2355,14 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
         type: "paragraph",
         children: [
           {
-            text: "Collecting exit ticket responses is only half the equation. The real value emerges when you track patterns over time. ClassSpark, Elementals's behavior and progress tracking system, lets teachers digitally log exit ticket results alongside behavior data and participation notes. Over the course of a term, you build a detailed picture of each student's learning trajectory. This data feeds directly into student progress reports, giving parents and administrators evidence-based insights rather than subjective impressions. Instead of spending hours compiling data at report card time, teachers who log exit ticket responses in ClassSpark have a ready-made record of student understanding that updates with every lesson.",
+            text: "Collecting exit ticket responses is only half the equation. The real value emerges when you track patterns over time. ClassSpark, KiwiBee's behavior and progress tracking system, lets teachers digitally log exit ticket results alongside behavior data and participation notes. Over the course of a term, you build a detailed picture of each student's learning trajectory. This data feeds directly into student progress reports, giving parents and administrators evidence-based insights rather than subjective impressions. Instead of spending hours compiling data at report card time, teachers who log exit ticket responses in ClassSpark have a ready-made record of student understanding that updates with every lesson.",
           },
         ],
       },
     ],
-    author: { name: "Elementals", job_title: "Elementals" },
-    author_name: "Elementals",
-    author_job_title: "Elementals",
+    author: { name: "KiwiBee", job_title: "KiwiBee" },
+    author_name: "KiwiBee",
+    author_job_title: "KiwiBee",
     author_image:
       "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=150&q=80",
     created_at: "2025-01-14T09:00:00Z",
@@ -2370,7 +2370,7 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
     updated_at: "2025-01-14T09:00:00Z",
     is_published: true,
     is_pinned: false,
-    meta_title: "Effective Exit Tickets and End-of-Class Assessments | Elementals Blog",
+    meta_title: "Effective Exit Tickets and End-of-Class Assessments | KiwiBee Blog",
     meta_description:
       "Four proven end-of-class assessment methods including hand-raising, team games, quizzes, and recall questions. Plus how to track results with ClassSpark.",
     read_time: 7,
@@ -2504,9 +2504,9 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
         ],
       },
     ],
-    author: { name: "Elementals", job_title: "Elementals" },
-    author_name: "Elementals",
-    author_job_title: "Elementals",
+    author: { name: "KiwiBee", job_title: "KiwiBee" },
+    author_name: "KiwiBee",
+    author_job_title: "KiwiBee",
     author_image:
       "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=150&q=80",
     created_at: "2024-08-22T10:30:00Z",
@@ -2514,7 +2514,7 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
     updated_at: "2024-08-22T10:30:00Z",
     is_published: true,
     is_pinned: false,
-    meta_title: "Pair Work for English Classes: Primary Level Activities | Elementals Blog",
+    meta_title: "Pair Work for English Classes: Primary Level Activities | KiwiBee Blog",
     meta_description:
       "Four practical pair work activities for primary English classes: word mats, dice games, spinners, and Snakes and Ladders for speaking and vocabulary practice.",
     read_time: 6,
@@ -2638,14 +2638,14 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
         type: "paragraph",
         children: [
           {
-            text: "For teachers who want to track the impact of strategies like this on classroom behavior, ClassSpark by Elementals provides a simple way to log behavior patterns over time. You can note when distractions decrease and correlate the data with the management techniques you are using, building an evidence base for what works in your specific classroom.",
+            text: "For teachers who want to track the impact of strategies like this on classroom behavior, ClassSpark by KiwiBee provides a simple way to log behavior patterns over time. You can note when distractions decrease and correlate the data with the management techniques you are using, building an evidence base for what works in your specific classroom.",
           },
         ],
       },
     ],
-    author: { name: "Elementals", job_title: "Elementals" },
-    author_name: "Elementals",
-    author_job_title: "Elementals",
+    author: { name: "KiwiBee", job_title: "KiwiBee" },
+    author_name: "KiwiBee",
+    author_job_title: "KiwiBee",
     author_image:
       "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=150&q=80",
     created_at: "2025-02-03T08:00:00Z",
@@ -2653,7 +2653,7 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
     updated_at: "2025-02-03T08:00:00Z",
     is_published: true,
     is_pinned: false,
-    meta_title: "The Pencil Case is Lava: A Classroom Management Technique | Elementals Blog",
+    meta_title: "The Pencil Case is Lava: A Classroom Management Technique | KiwiBee Blog",
     meta_description:
       "Turn the floor is lava game into a classroom management tool. A playful technique to stop stationery fidgeting and keep students focused during instruction.",
     read_time: 5,
@@ -2807,9 +2807,9 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
         ],
       },
     ],
-    author: { name: "Elementals", job_title: "Elementals" },
-    author_name: "Elementals",
-    author_job_title: "Elementals",
+    author: { name: "KiwiBee", job_title: "KiwiBee" },
+    author_name: "KiwiBee",
+    author_job_title: "KiwiBee",
     author_image:
       "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=150&q=80",
     created_at: "2024-05-10T12:00:00Z",
@@ -2817,7 +2817,7 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
     updated_at: "2024-05-10T12:00:00Z",
     is_published: true,
     is_pinned: false,
-    meta_title: "Top Flashcard Games for Kids to Learn English | Elementals Blog",
+    meta_title: "Top Flashcard Games for Kids to Learn English | KiwiBee Blog",
     meta_description:
       "Eight engaging flashcard games for kids learning English: from classic drills and Bingo to Charades and Hot Potato. Make vocabulary practice fun and effective.",
     read_time: 8,
@@ -2967,14 +2967,14 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
         type: "paragraph",
         children: [
           {
-            text: "The principles behind effective game design extend to broader classroom gamification strategies. Point systems, achievement badges, leaderboards, and team competitions can all follow the 75/25 rule to maintain engagement over weeks and months rather than single lessons. Elementals's gamification features, including ClassSpark's point tracking and team reward systems, are built on this same philosophy: rewarding effort and knowledge while keeping an element of fun unpredictability that motivates every student to participate, not just the top performers.",
+            text: "The principles behind effective game design extend to broader classroom gamification strategies. Point systems, achievement badges, leaderboards, and team competitions can all follow the 75/25 rule to maintain engagement over weeks and months rather than single lessons. KiwiBee's gamification features, including ClassSpark's point tracking and team reward systems, are built on this same philosophy: rewarding effort and knowledge while keeping an element of fun unpredictability that motivates every student to participate, not just the top performers.",
           },
         ],
       },
     ],
-    author: { name: "Elementals", job_title: "Elementals" },
-    author_name: "Elementals",
-    author_job_title: "Elementals",
+    author: { name: "KiwiBee", job_title: "KiwiBee" },
+    author_name: "KiwiBee",
+    author_job_title: "KiwiBee",
     author_image:
       "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=150&q=80",
     created_at: "2024-12-05T15:00:00Z",
@@ -2982,7 +2982,7 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
     updated_at: "2024-12-05T15:00:00Z",
     is_published: true,
     is_pinned: false,
-    meta_title: "Choosing the Right Game for Maximum Class Participation | Elementals Blog",
+    meta_title: "Choosing the Right Game for Maximum Class Participation | KiwiBee Blog",
     meta_description:
       "Learn the 75/25 skill-luck ratio for classroom games that maximize participation. Practical game design tips for teachers at every level.",
     read_time: 7,
@@ -3118,9 +3118,9 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
         ],
       },
     ],
-    author: { name: "Elementals", job_title: "Elementals" },
-    author_name: "Elementals",
-    author_job_title: "Elementals",
+    author: { name: "KiwiBee", job_title: "KiwiBee" },
+    author_name: "KiwiBee",
+    author_job_title: "KiwiBee",
     author_image:
       "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=150&q=80",
     created_at: "2024-06-10T08:00:00Z",
@@ -3128,7 +3128,7 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
     updated_at: "2024-06-10T08:00:00Z",
     is_published: true,
     is_pinned: false,
-    meta_title: "Top Brain Break Activities for the Classroom | Elementals Blog",
+    meta_title: "Top Brain Break Activities for the Classroom | KiwiBee Blog",
     meta_description:
       "Discover three proven brain break activities that re-energize students and sharpen focus. Includes movement games, video channels, and animation breaks.",
     read_time: 6,
@@ -3259,13 +3259,13 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
       {
         type: "heading",
         level: 2,
-        children: [{ text: "5. Digital Rewards with ClassSpark by Elementals" }],
+        children: [{ text: "5. Digital Rewards with ClassSpark by KiwiBee" }],
       },
       {
         type: "paragraph",
         children: [
           {
-            text: "Physical rewards are wonderful, but they come with logistical overhead: restocking supplies, tracking inventories, and managing lost items. ClassSpark, the behavior tracking system built into Elementals, brings the excitement of a reward system into the digital realm. Students earn virtual points for positive behavior, customize their own digital avatars, and watch their progress climb on a visual leaderboard.",
+            text: "Physical rewards are wonderful, but they come with logistical overhead: restocking supplies, tracking inventories, and managing lost items. ClassSpark, the behavior tracking system built into KiwiBee, brings the excitement of a reward system into the digital realm. Students earn virtual points for positive behavior, customize their own digital avatars, and watch their progress climb on a visual leaderboard.",
           },
         ],
       },
@@ -3278,9 +3278,9 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
         ],
       },
     ],
-    author: { name: "Elementals", job_title: "Elementals" },
-    author_name: "Elementals",
-    author_job_title: "Elementals",
+    author: { name: "KiwiBee", job_title: "KiwiBee" },
+    author_name: "KiwiBee",
+    author_job_title: "KiwiBee",
     author_image:
       "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=150&q=80",
     created_at: "2024-07-15T10:00:00Z",
@@ -3288,7 +3288,7 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
     updated_at: "2024-07-15T10:00:00Z",
     is_published: true,
     is_pinned: false,
-    meta_title: "Top Rewards for Kindergarten and Primary Students | Elementals Blog",
+    meta_title: "Top Rewards for Kindergarten and Primary Students | KiwiBee Blog",
     meta_description:
       "Explore five affordable, effective reward ideas for kindergarten and primary classrooms, from stickers and collectible cards to digital points with ClassSpark.",
     read_time: 6,
@@ -3421,13 +3421,13 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
       {
         type: "heading",
         level: 2,
-        children: [{ text: "ClassSpark by Elementals: The Best of Both Worlds" }],
+        children: [{ text: "ClassSpark by KiwiBee: The Best of Both Worlds" }],
       },
       {
         type: "paragraph",
         children: [
           {
-            text: "Elementals's ClassSpark was built for teachers who want the engagement of physical collectibles and the data power of a digital system in one unified platform. Like ClassDojo, ClassSpark offers real-time point tracking, customizable behavior categories, and student avatars. Unlike ClassDojo, it also integrates with the school's gradebook, attendance, and parent communication modules, so behavior data does not live in a silo.",
+            text: "KiwiBee's ClassSpark was built for teachers who want the engagement of physical collectibles and the data power of a digital system in one unified platform. Like ClassDojo, ClassSpark offers real-time point tracking, customizable behavior categories, and student avatars. Unlike ClassDojo, it also integrates with the school's gradebook, attendance, and parent communication modules, so behavior data does not live in a silo.",
           },
         ],
       },
@@ -3448,9 +3448,9 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
         ],
       },
     ],
-    author: { name: "Elementals", job_title: "Elementals" },
-    author_name: "Elementals",
-    author_job_title: "Elementals",
+    author: { name: "KiwiBee", job_title: "KiwiBee" },
+    author_name: "KiwiBee",
+    author_job_title: "KiwiBee",
     author_image:
       "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=150&q=80",
     created_at: "2024-08-05T09:00:00Z",
@@ -3459,7 +3459,7 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
     is_published: true,
     is_pinned: false,
     meta_title:
-      "Effective Reward Systems for Kids: ClassDojo and Collectibles | Elementals Blog",
+      "Effective Reward Systems for Kids: ClassDojo and Collectibles | KiwiBee Blog",
     meta_description:
       "Compare ClassDojo digital points with collectible rewards like stickers and gems. Discover how ClassSpark combines both for smarter behavior management.",
     read_time: 8,
@@ -3601,9 +3601,9 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
         ],
       },
     ],
-    author: { name: "Elementals", job_title: "Elementals" },
-    author_name: "Elementals",
-    author_job_title: "Elementals",
+    author: { name: "KiwiBee", job_title: "KiwiBee" },
+    author_name: "KiwiBee",
+    author_job_title: "KiwiBee",
     author_image:
       "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=150&q=80",
     created_at: "2024-09-20T11:00:00Z",
@@ -3612,7 +3612,7 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
     is_published: true,
     is_pinned: false,
     meta_title:
-      "Top Gadgets to Use in the Classroom for Kindergarten and Primary Teachers | Elementals Blog",
+      "Top Gadgets to Use in the Classroom for Kindergarten and Primary Teachers | KiwiBee Blog",
     meta_description:
       "Five affordable classroom gadgets every kindergarten and primary teacher should own: laser pointer, doorbell, foam dice, whistle, and self-inking stamps.",
     read_time: 5,
@@ -3741,7 +3741,7 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
         type: "paragraph",
         children: [
           {
-            text: "Every board idea described above can be digitized with Elementals's ClassSpark. The happy-sad concept becomes a real-time mood tracker. The behavior slide becomes a color-coded dashboard visible to teachers and parents simultaneously. Star charts translate into cumulative point totals with automated milestone alerts. Tally charts become behavior analytics with trend graphs and AI-generated insights.",
+            text: "Every board idea described above can be digitized with KiwiBee's ClassSpark. The happy-sad concept becomes a real-time mood tracker. The behavior slide becomes a color-coded dashboard visible to teachers and parents simultaneously. Star charts translate into cumulative point totals with automated milestone alerts. Tally charts become behavior analytics with trend graphs and AI-generated insights.",
           },
         ],
       },
@@ -3754,9 +3754,9 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
         ],
       },
     ],
-    author: { name: "Elementals", job_title: "Elementals" },
-    author_name: "Elementals",
-    author_job_title: "Elementals",
+    author: { name: "KiwiBee", job_title: "KiwiBee" },
+    author_name: "KiwiBee",
+    author_job_title: "KiwiBee",
     author_image:
       "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=150&q=80",
     created_at: "2024-10-12T07:30:00Z",
@@ -3764,7 +3764,7 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
     updated_at: "2024-10-12T07:30:00Z",
     is_published: true,
     is_pinned: false,
-    meta_title: "Quick Classroom Management Board Ideas | Elementals Blog",
+    meta_title: "Quick Classroom Management Board Ideas | KiwiBee Blog",
     meta_description:
       "Four classic behavior board ideas for the classroom plus a digital upgrade with ClassSpark. Includes happy face charts, behavior slides, and star systems.",
     read_time: 6,
@@ -3892,9 +3892,9 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
         ],
       },
     ],
-    author: { name: "Elementals", job_title: "Elementals" },
-    author_name: "Elementals",
-    author_job_title: "Elementals",
+    author: { name: "KiwiBee", job_title: "KiwiBee" },
+    author_name: "KiwiBee",
+    author_job_title: "KiwiBee",
     author_image:
       "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=150&q=80",
     created_at: "2024-11-03T14:00:00Z",
@@ -3902,7 +3902,7 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
     updated_at: "2024-11-03T14:00:00Z",
     is_published: true,
     is_pinned: false,
-    meta_title: "Top Worksheet Choice for Primary English: Word Search | Elementals Blog",
+    meta_title: "Top Worksheet Choice for Primary English: Word Search | KiwiBee Blog",
     meta_description:
       "Word searches are the most popular primary English worksheet. Discover why students love them, the educational benefits, and tips for creating effective puzzles.",
     read_time: 5,
@@ -4025,20 +4025,20 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
       {
         type: "heading",
         level: 3,
-        children: [{ text: "Supplementing with Elementals" }],
+        children: [{ text: "Supplementing with KiwiBee" }],
       },
       {
         type: "paragraph",
         children: [
           {
-            text: "Elementals's built-in resource library offers a growing collection of worksheets and lesson materials that complement these free platforms. Teachers can upload their favorite downloads from any of the sites above, organize them by subject and level within Elementals, and share them instantly with colleagues across the school. It is a convenient way to centralize your best finds in one searchable location.",
+            text: "KiwiBee's built-in resource library offers a growing collection of worksheets and lesson materials that complement these free platforms. Teachers can upload their favorite downloads from any of the sites above, organize them by subject and level within KiwiBee, and share them instantly with colleagues across the school. It is a convenient way to centralize your best finds in one searchable location.",
           },
         ],
       },
     ],
-    author: { name: "Elementals", job_title: "Elementals" },
-    author_name: "Elementals",
-    author_job_title: "Elementals",
+    author: { name: "KiwiBee", job_title: "KiwiBee" },
+    author_name: "KiwiBee",
+    author_job_title: "KiwiBee",
     author_image:
       "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=150&q=80",
     created_at: "2024-12-01T09:30:00Z",
@@ -4046,7 +4046,7 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
     updated_at: "2024-12-01T09:30:00Z",
     is_published: true,
     is_pinned: false,
-    meta_title: "Top Free Worksheet Sites for English Teachers | Elementals Blog",
+    meta_title: "Top Free Worksheet Sites for English Teachers | KiwiBee Blog",
     meta_description:
       "Four of the best free worksheet platforms for English teachers: Canva, ISL Collective, Liveworksheets, and Mamaloveprint. Pros, cons, and best use cases.",
     read_time: 5,
@@ -4169,20 +4169,20 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
       {
         type: "heading",
         level: 3,
-        children: [{ text: "AI-Generated Worksheets with Elementals" }],
+        children: [{ text: "AI-Generated Worksheets with KiwiBee" }],
       },
       {
         type: "paragraph",
         children: [
           {
-            text: "Looking beyond traditional platforms, Elementals allows teachers to generate custom worksheets using artificial intelligence. Describe the topic, specify the level, and the system produces a printable worksheet tailored to your exact needs in seconds. This is particularly useful when you need a worksheet on a niche topic that none of the major platforms cover, or when you want to create differentiated versions for students at different levels within the same class.",
+            text: "Looking beyond traditional platforms, KiwiBee allows teachers to generate custom worksheets using artificial intelligence. Describe the topic, specify the level, and the system produces a printable worksheet tailored to your exact needs in seconds. This is particularly useful when you need a worksheet on a niche topic that none of the major platforms cover, or when you want to create differentiated versions for students at different levels within the same class.",
           },
         ],
       },
     ],
-    author: { name: "Elementals", job_title: "Elementals" },
-    author_name: "Elementals",
-    author_job_title: "Elementals",
+    author: { name: "KiwiBee", job_title: "KiwiBee" },
+    author_name: "KiwiBee",
+    author_job_title: "KiwiBee",
     author_image:
       "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=150&q=80",
     created_at: "2025-01-10T10:00:00Z",
@@ -4190,7 +4190,7 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
     updated_at: "2025-01-10T10:00:00Z",
     is_published: true,
     is_pinned: false,
-    meta_title: "Top Paid Worksheet Websites for English Teachers | Elementals Blog",
+    meta_title: "Top Paid Worksheet Websites for English Teachers | KiwiBee Blog",
     meta_description:
       "Compare four premium worksheet platforms for English teachers: TpT, Twinkl, Education.com, and BusyTeacher. Pricing, quality, and best use cases reviewed.",
     read_time: 6,
@@ -4353,9 +4353,9 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
         ],
       },
     ],
-    author: { name: "Elementals", job_title: "Elementals" },
-    author_name: "Elementals",
-    author_job_title: "Elementals",
+    author: { name: "KiwiBee", job_title: "KiwiBee" },
+    author_name: "KiwiBee",
+    author_job_title: "KiwiBee",
     author_image:
       "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=150&q=80",
     created_at: "2025-02-18T08:00:00Z",
@@ -4363,7 +4363,7 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
     updated_at: "2025-02-18T08:00:00Z",
     is_published: true,
     is_pinned: false,
-    meta_title: "Windows Laptops as a Teacher: Tips and Tricks | Elementals Blog",
+    meta_title: "Windows Laptops as a Teacher: Tips and Tricks | KiwiBee Blog",
     meta_description:
       "Six practical Windows tips for teachers: PowerToys Awake, Notepad formatting trick, fullscreen shortcut, Snipping Tool OCR, Snap Layouts, and voice typing.",
     read_time: 6,
@@ -4491,13 +4491,13 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
       {
         type: "heading",
         level: 2,
-        children: [{ text: "Beyond Traditional Grades: Skills-Based Mastery with Elementals" }],
+        children: [{ text: "Beyond Traditional Grades: Skills-Based Mastery with KiwiBee" }],
       },
       {
         type: "paragraph",
         children: [
           {
-            text: "While letter grades serve as an effective summary score, they tell you very little about which specific skills a student has mastered and which still need work. Elementals's Skills Gradebook takes assessment a step further by mapping every assignment, quiz, and observation to individual curriculum skills. Instead of a single grade for \"Math,\" teachers and parents see a detailed skills heatmap showing mastery levels across dozens of competencies.",
+            text: "While letter grades serve as an effective summary score, they tell you very little about which specific skills a student has mastered and which still need work. KiwiBee's Skills Gradebook takes assessment a step further by mapping every assignment, quiz, and observation to individual curriculum skills. Instead of a single grade for \"Math,\" teachers and parents see a detailed skills heatmap showing mastery levels across dozens of competencies.",
           },
         ],
       },
@@ -4505,14 +4505,14 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
         type: "paragraph",
         children: [
           {
-            text: "The heatmap uses a simple color scale: green for mastered, yellow for developing, red for needs support. This visual format communicates more information at a glance than any letter grade can. Formative assessments feed into the heatmap in real time, so the picture of each student's progress is always current. For schools that want the communicative simplicity of letter grades alongside the diagnostic power of skills-based tracking, Elementals offers a system that delivers both in one integrated platform.",
+            text: "The heatmap uses a simple color scale: green for mastered, yellow for developing, red for needs support. This visual format communicates more information at a glance than any letter grade can. Formative assessments feed into the heatmap in real time, so the picture of each student's progress is always current. For schools that want the communicative simplicity of letter grades alongside the diagnostic power of skills-based tracking, KiwiBee offers a system that delivers both in one integrated platform.",
           },
         ],
       },
     ],
-    author: { name: "Elementals", job_title: "Elementals" },
-    author_name: "Elementals",
-    author_job_title: "Elementals",
+    author: { name: "KiwiBee", job_title: "KiwiBee" },
+    author_name: "KiwiBee",
+    author_job_title: "KiwiBee",
     author_image:
       "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=150&q=80",
     created_at: "2025-03-22T11:00:00Z",
@@ -4520,7 +4520,7 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
     updated_at: "2025-03-22T11:00:00Z",
     is_published: true,
     is_pinned: false,
-    meta_title: "The Optimal Scoring System: A Comprehensive Analysis | Elementals Blog",
+    meta_title: "The Optimal Scoring System: A Comprehensive Analysis | KiwiBee Blog",
     meta_description:
       "Analyzing grading systems from numeric scales to letter grades. Discover why letter grades with modifiers win, and how skills-based mastery tracking goes further.",
     read_time: 8,
@@ -4669,7 +4669,7 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
         type: "paragraph",
         children: [
           {
-            text: "Modern classroom tools make individual accountability easier than ever. Elementals's ClassSpark, for example, allows teachers to award behavior and participation points to individual students during group activities. If one student is leading the discussion while another contributes a breakthrough idea, both can receive recognition in real time. Over the course of a term, this data builds a detailed picture of each student's collaborative habits, which teachers can use when forming future groups or writing reports.",
+            text: "Modern classroom tools make individual accountability easier than ever. KiwiBee's ClassSpark, for example, allows teachers to award behavior and participation points to individual students during group activities. If one student is leading the discussion while another contributes a breakthrough idea, both can receive recognition in real time. Over the course of a term, this data builds a detailed picture of each student's collaborative habits, which teachers can use when forming future groups or writing reports.",
           },
         ],
       },
@@ -4687,9 +4687,9 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
         ],
       },
     ],
-    author: { name: "Elementals", job_title: "Elementals" },
-    author_name: "Elementals",
-    author_job_title: "Elementals",
+    author: { name: "KiwiBee", job_title: "KiwiBee" },
+    author_name: "KiwiBee",
+    author_job_title: "KiwiBee",
     author_image:
       "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=150&q=80",
     created_at: "2024-09-15T08:00:00Z",
@@ -4697,7 +4697,7 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
     updated_at: "2024-09-15T08:00:00Z",
     is_published: true,
     is_pinned: false,
-    meta_title: "Do Team Work Activities Actually Work? | Elementals Blog",
+    meta_title: "Do Team Work Activities Actually Work? | KiwiBee Blog",
     meta_description:
       "Evidence-based strategies to make group work effective. Learn how to solve the free-rider problem, assign meaningful roles, and track participation.",
     read_time: 7,
@@ -4714,7 +4714,7 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
     excerpt:
       "From AI coloring books to animated student drawings, teachers around the world are finding inventive ways to bring artificial intelligence into daily lessons. Here are six practical ideas you can try this week.",
     category: "eduTech",
-    tags: ["AI", "Classroom Innovation", "EdTech", "Elementals"],
+    tags: ["AI", "Classroom Innovation", "EdTech", "KiwiBee"],
     keywords: ["ai in classroom", "teachers using ai", "ai classroom tools"],
     featured_image:
       "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=80",
@@ -4846,20 +4846,20 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
       {
         type: "heading",
         level: 2,
-        children: [{ text: "The All-in-One Platform: Elementals" }],
+        children: [{ text: "The All-in-One Platform: KiwiBee" }],
       },
       {
         type: "paragraph",
         children: [
           {
-            text: "While individual AI tools are powerful on their own, juggling multiple platforms creates friction. Elementals brings artificial intelligence directly into school management so that teachers never have to copy-paste between tools. The platform includes AI-powered lesson planning that generates objectives, activities, and resources in minutes, AI homework generation tailored to each class's curriculum, AI exam marking that provides consistent, rubric-aligned feedback, and AI report writing that transforms raw assessment data into polished student reports. Instead of visiting six different websites, teachers get all of these capabilities inside the same system they use for attendance, behavior tracking, and communication.",
+            text: "While individual AI tools are powerful on their own, juggling multiple platforms creates friction. KiwiBee brings artificial intelligence directly into school management so that teachers never have to copy-paste between tools. The platform includes AI-powered lesson planning that generates objectives, activities, and resources in minutes, AI homework generation tailored to each class's curriculum, AI exam marking that provides consistent, rubric-aligned feedback, and AI report writing that transforms raw assessment data into polished student reports. Instead of visiting six different websites, teachers get all of these capabilities inside the same system they use for attendance, behavior tracking, and communication.",
           },
         ],
       },
     ],
-    author: { name: "Elementals", job_title: "Elementals" },
-    author_name: "Elementals",
-    author_job_title: "Elementals",
+    author: { name: "KiwiBee", job_title: "KiwiBee" },
+    author_name: "KiwiBee",
+    author_job_title: "KiwiBee",
     author_image:
       "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=150&q=80",
     created_at: "2025-01-10T10:00:00Z",
@@ -4867,7 +4867,7 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
     updated_at: "2025-01-10T10:00:00Z",
     is_published: true,
     is_pinned: true,
-    meta_title: "How Teachers Are Turning AI Into a Classroom Superpower | Elementals Blog",
+    meta_title: "How Teachers Are Turning AI Into a Classroom Superpower | KiwiBee Blog",
     meta_description:
       "Six creative ways teachers use AI in the classroom: coloring books, reward videos, avatars, speaking practice, animated drawings, and image generation.",
     read_time: 8,
@@ -4884,7 +4884,7 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
     excerpt:
       "ChatGPT can save teachers hours every week when used strategically. This comprehensive guide covers seven high-impact use cases with example prompts you can copy and adapt today.",
     category: "eduTech",
-    tags: ["ChatGPT", "AI Teaching", "Lesson Planning", "Elementals"],
+    tags: ["ChatGPT", "AI Teaching", "Lesson Planning", "KiwiBee"],
     keywords: ["chatgpt for teachers", "using chatgpt teaching", "ai teacher assistant"],
     featured_image:
       "https://images.unsplash.com/photo-1676299081847-824916de030a?auto=format&fit=crop&w=1200&q=80",
@@ -5054,14 +5054,14 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
         type: "paragraph",
         children: [
           {
-            text: "While ChatGPT is remarkably versatile, using it for teaching tasks still requires copying data between platforms, crafting prompts from scratch, and manually transferring outputs back into your school systems. Elementals eliminates this friction by embedding AI directly into the tools teachers already use. The platform offers AI lesson planning that pulls from your curriculum and class data, AI quiz generation aligned to your skills and strands, and AI report writing that draws on gradebook scores, behavior data, and attendance records automatically. No prompts to write, no copy-pasting, no context switching. The AI already knows your students.",
+            text: "While ChatGPT is remarkably versatile, using it for teaching tasks still requires copying data between platforms, crafting prompts from scratch, and manually transferring outputs back into your school systems. KiwiBee eliminates this friction by embedding AI directly into the tools teachers already use. The platform offers AI lesson planning that pulls from your curriculum and class data, AI quiz generation aligned to your skills and strands, and AI report writing that draws on gradebook scores, behavior data, and attendance records automatically. No prompts to write, no copy-pasting, no context switching. The AI already knows your students.",
           },
         ],
       },
     ],
-    author: { name: "Elementals", job_title: "Elementals" },
-    author_name: "Elementals",
-    author_job_title: "Elementals",
+    author: { name: "KiwiBee", job_title: "KiwiBee" },
+    author_name: "KiwiBee",
+    author_job_title: "KiwiBee",
     author_image:
       "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=150&q=80",
     created_at: "2024-11-05T09:00:00Z",
@@ -5069,7 +5069,7 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
     updated_at: "2024-11-05T09:00:00Z",
     is_published: true,
     is_pinned: false,
-    meta_title: "Using ChatGPT as a Teacher's Assistant: A Comprehensive Guide | Elementals Blog",
+    meta_title: "Using ChatGPT as a Teacher's Assistant: A Comprehensive Guide | KiwiBee Blog",
     meta_description:
       "A practical guide to using ChatGPT for lesson planning, quiz creation, presentations, custom GPTs, and student report writing with ready-to-use prompts.",
     read_time: 10,
@@ -5218,9 +5218,9 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
         ],
       },
     ],
-    author: { name: "Elementals", job_title: "Elementals" },
-    author_name: "Elementals",
-    author_job_title: "Elementals",
+    author: { name: "KiwiBee", job_title: "KiwiBee" },
+    author_name: "KiwiBee",
+    author_job_title: "KiwiBee",
     author_image:
       "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=150&q=80",
     created_at: "2024-12-02T11:00:00Z",
@@ -5228,7 +5228,7 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
     updated_at: "2024-12-02T11:00:00Z",
     is_published: true,
     is_pinned: false,
-    meta_title: "NotebookLM as a Teaching Assistant: A Comprehensive Guide | Elementals Blog",
+    meta_title: "NotebookLM as a Teaching Assistant: A Comprehensive Guide | KiwiBee Blog",
     meta_description:
       "Discover seven powerful NotebookLM features for teachers: mind maps, Q&A, quizzes, summaries, source merging, personalized study, and audio generation.",
     read_time: 8,
@@ -5369,13 +5369,13 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
       {
         type: "heading",
         level: 2,
-        children: [{ text: "A Better Way: Elementals's ClassSpark" }],
+        children: [{ text: "A Better Way: KiwiBee's ClassSpark" }],
       },
       {
         type: "paragraph",
         children: [
           {
-            text: "The workflow above is effective, but it involves five separate tools: ClassDojo for data collection, CSV export, Excel for data processing, ChatGPT for writing, and your school's reporting template for formatting. Elementals's ClassSpark was designed to eliminate every one of these workarounds. ClassSpark includes built-in skill-based tracking with unlimited custom categories, so there is no need for doppelganger classes. Assessment data, behavior points, attendance records, and gradebook scores all live in one system. When report time arrives, the AI-powered report writer pulls from all of this data automatically, generating individualized, curriculum-aligned reports that teachers can review and publish without ever opening a spreadsheet.",
+            text: "The workflow above is effective, but it involves five separate tools: ClassDojo for data collection, CSV export, Excel for data processing, ChatGPT for writing, and your school's reporting template for formatting. KiwiBee's ClassSpark was designed to eliminate every one of these workarounds. ClassSpark includes built-in skill-based tracking with unlimited custom categories, so there is no need for doppelganger classes. Assessment data, behavior points, attendance records, and gradebook scores all live in one system. When report time arrives, the AI-powered report writer pulls from all of this data automatically, generating individualized, curriculum-aligned reports that teachers can review and publish without ever opening a spreadsheet.",
           },
         ],
       },
@@ -5388,9 +5388,9 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
         ],
       },
     ],
-    author: { name: "Elementals", job_title: "Elementals" },
-    author_name: "Elementals",
-    author_job_title: "Elementals",
+    author: { name: "KiwiBee", job_title: "KiwiBee" },
+    author_name: "KiwiBee",
+    author_job_title: "KiwiBee",
     author_image:
       "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=150&q=80",
     created_at: "2024-10-20T07:30:00Z",
@@ -5398,7 +5398,7 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
     updated_at: "2024-10-20T07:30:00Z",
     is_published: true,
     is_pinned: false,
-    meta_title: "Generating Student Reports with ClassDojo and Formative Assessments | Elementals Blog",
+    meta_title: "Generating Student Reports with ClassDojo and Formative Assessments | KiwiBee Blog",
     meta_description:
       "Step-by-step guide to using ClassDojo data, the doppelganger class strategy, Excel, and ChatGPT to generate professional student reports efficiently.",
     read_time: 9,
@@ -5568,14 +5568,14 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
         type: "paragraph",
         children: [
           {
-            text: "Elementals's ClassSpark takes everything described in this article and automates it. Where ClassDojo requires manual data export, spreadsheet analysis, and separate report writing, ClassSpark provides real-time analytics dashboards that surface trends automatically. The AI identifies students who need attention, suggests balanced team formations based on multi-dimensional data, tracks reward effectiveness over time, and generates data-driven report comments at the click of a button. If you are already using ClassDojo data for decision-making, ClassSpark is the platform that removes the manual steps and lets you focus on what matters: teaching.",
+            text: "KiwiBee's ClassSpark takes everything described in this article and automates it. Where ClassDojo requires manual data export, spreadsheet analysis, and separate report writing, ClassSpark provides real-time analytics dashboards that surface trends automatically. The AI identifies students who need attention, suggests balanced team formations based on multi-dimensional data, tracks reward effectiveness over time, and generates data-driven report comments at the click of a button. If you are already using ClassDojo data for decision-making, ClassSpark is the platform that removes the manual steps and lets you focus on what matters: teaching.",
           },
         ],
       },
     ],
-    author: { name: "Elementals", job_title: "Elementals" },
-    author_name: "Elementals",
-    author_job_title: "Elementals",
+    author: { name: "KiwiBee", job_title: "KiwiBee" },
+    author_name: "KiwiBee",
+    author_job_title: "KiwiBee",
     author_image:
       "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=150&q=80",
     created_at: "2024-08-18T14:00:00Z",
@@ -5583,7 +5583,7 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
     updated_at: "2024-08-18T14:00:00Z",
     is_published: true,
     is_pinned: false,
-    meta_title: "Leveraging ClassDojo Data for Enhanced Classroom Decision-Making | Elementals Blog",
+    meta_title: "Leveraging ClassDojo Data for Enhanced Classroom Decision-Making | KiwiBee Blog",
     meta_description:
       "Turn ClassDojo behavior data into actionable insights for student reports, data-driven reward systems, and intelligent team formation strategies.",
     read_time: 8,
@@ -5712,7 +5712,7 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
         type: "paragraph",
         children: [
           {
-            text: "The vision described above is not science fiction. Most of the underlying technologies already exist in some form. What is missing is integration: a single platform that brings AI lesson planning, automated grading, behavior tracking, and intelligent analytics into one cohesive system. That is exactly what Elementals is building. Today, the platform already offers AI-powered lesson planning, ClassSpark behavior tracking, automated gradebook management, and AI-generated student reports. Each new feature moves closer to the future classroom, not by replacing teachers, but by giving them superpowers.",
+            text: "The vision described above is not science fiction. Most of the underlying technologies already exist in some form. What is missing is integration: a single platform that brings AI lesson planning, automated grading, behavior tracking, and intelligent analytics into one cohesive system. That is exactly what KiwiBee is building. Today, the platform already offers AI-powered lesson planning, ClassSpark behavior tracking, automated gradebook management, and AI-generated student reports. Each new feature moves closer to the future classroom, not by replacing teachers, but by giving them superpowers.",
           },
         ],
       },
@@ -5725,9 +5725,9 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
         ],
       },
     ],
-    author: { name: "Elementals", job_title: "Elementals" },
-    author_name: "Elementals",
-    author_job_title: "Elementals",
+    author: { name: "KiwiBee", job_title: "KiwiBee" },
+    author_name: "KiwiBee",
+    author_job_title: "KiwiBee",
     author_image:
       "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=150&q=80",
     created_at: "2025-02-01T08:00:00Z",
@@ -5735,7 +5735,7 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
     updated_at: "2025-02-01T08:00:00Z",
     is_published: true,
     is_pinned: true,
-    meta_title: "The Future Classroom: How AI Will Transform Education | Elementals Blog",
+    meta_title: "The Future Classroom: How AI Will Transform Education | KiwiBee Blog",
     meta_description:
       "A visionary look at the AI-powered classroom: automated grading, real-time behavior monitoring, voice-activated rewards, and smart infrastructure.",
     read_time: 8,
@@ -5752,7 +5752,7 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
     excerpt:
       "Excel, Google Sheets, Notion, Monday.com, or a purpose-built platform? We compare five tools for curriculum development and management to help you choose the right one for your school.",
     category: "tutorials",
-    tags: ["Curriculum", "Tools", "Organization", "Elementals"],
+    tags: ["Curriculum", "Tools", "Organization", "KiwiBee"],
     keywords: ["curriculum development tools", "curriculum management software", "excel vs notion curriculum"],
     featured_image:
       "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&w=1200&q=80",
@@ -5858,13 +5858,13 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
       {
         type: "heading",
         level: 2,
-        children: [{ text: "5. Elementals: Purpose-Built for Curriculum" }],
+        children: [{ text: "5. KiwiBee: Purpose-Built for Curriculum" }],
       },
       {
         type: "paragraph",
         children: [
           {
-            text: "The tools above all share a common limitation: none of them were designed specifically for curriculum management. Elementals was. The platform provides a built-in curriculum framework with hierarchical organization: ",
+            text: "The tools above all share a common limitation: none of them were designed specifically for curriculum management. KiwiBee was. The platform provides a built-in curriculum framework with hierarchical organization: ",
           },
           {
             text: "subjects, strands, substrands, and individual skills",
@@ -5879,7 +5879,7 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
         type: "paragraph",
         children: [
           {
-            text: "What sets Elementals apart is the integration between curriculum and instruction. When a teacher creates a lesson plan, the system suggests relevant skills from the curriculum database. When a student is assessed, the score is automatically linked to the corresponding skill. At the end of the term, curriculum leaders can see exactly which skills were taught, assessed, and mastered across every class in the school. AI-powered planning takes this further by generating lesson plans that align to curriculum standards automatically, ensuring coverage without manual tracking.",
+            text: "What sets KiwiBee apart is the integration between curriculum and instruction. When a teacher creates a lesson plan, the system suggests relevant skills from the curriculum database. When a student is assessed, the score is automatically linked to the corresponding skill. At the end of the term, curriculum leaders can see exactly which skills were taught, assessed, and mastered across every class in the school. AI-powered planning takes this further by generating lesson plans that align to curriculum standards automatically, ensuring coverage without manual tracking.",
           },
         ],
       },
@@ -5892,14 +5892,14 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
         type: "paragraph",
         children: [
           {
-            text: "The best tool depends on your school's size, budget, technical comfort, and the complexity of your curriculum. Excel and Google Sheets work for small teams with straightforward needs. Notion suits schools that value flexibility and have the time to build a custom workspace. Monday.com serves large networks that need project management rigor. And Elementals is for schools that want a platform where curriculum, lesson planning, assessment, and reporting all connect seamlessly, because curriculum management should not require five tools and a spreadsheet.",
+            text: "The best tool depends on your school's size, budget, technical comfort, and the complexity of your curriculum. Excel and Google Sheets work for small teams with straightforward needs. Notion suits schools that value flexibility and have the time to build a custom workspace. Monday.com serves large networks that need project management rigor. And KiwiBee is for schools that want a platform where curriculum, lesson planning, assessment, and reporting all connect seamlessly, because curriculum management should not require five tools and a spreadsheet.",
           },
         ],
       },
     ],
-    author: { name: "Elementals", job_title: "Elementals" },
-    author_name: "Elementals",
-    author_job_title: "Elementals",
+    author: { name: "KiwiBee", job_title: "KiwiBee" },
+    author_name: "KiwiBee",
+    author_job_title: "KiwiBee",
     author_image:
       "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=150&q=80",
     created_at: "2024-07-12T09:00:00Z",
@@ -5907,9 +5907,9 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
     updated_at: "2024-07-12T09:00:00Z",
     is_published: true,
     is_pinned: false,
-    meta_title: "Choosing the Right Tool for Curriculum Development and Management | Elementals Blog",
+    meta_title: "Choosing the Right Tool for Curriculum Development and Management | KiwiBee Blog",
     meta_description:
-      "Compare Excel, Google Sheets, Notion, Monday.com, and Elementals for curriculum development. Find the right tool for your school's needs and budget.",
+      "Compare Excel, Google Sheets, Notion, Monday.com, and KiwiBee for curriculum development. Find the right tool for your school's needs and budget.",
     read_time: 9,
     view_count: 1540,
     language: "en",
@@ -6064,9 +6064,9 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
         ],
       },
     ],
-    author: { name: "Elementals", job_title: "Elementals" },
-    author_name: "Elementals",
-    author_job_title: "Elementals",
+    author: { name: "KiwiBee", job_title: "KiwiBee" },
+    author_name: "KiwiBee",
+    author_job_title: "KiwiBee",
     author_image:
       "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=150&q=80",
     created_at: "2024-06-08T12:00:00Z",
@@ -6074,7 +6074,7 @@ export const SAMPLE_BLOG_POSTS: SampleBlogPost[] = [
     updated_at: "2024-06-08T12:00:00Z",
     is_published: true,
     is_pinned: false,
-    meta_title: "Top Teacher Discounts with an .edu Email | Elementals Blog",
+    meta_title: "Top Teacher Discounts with an .edu Email | KiwiBee Blog",
     meta_description:
       "Six valuable discounts for teachers: Adobe Creative Cloud, Apple and Samsung hardware, free Notion Pro, Maxon Cinema 4D, ScreenStudio, and Canva Pro.",
     read_time: 7,

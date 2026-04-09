@@ -362,8 +362,8 @@ const pageText: Record<
     exploreSubtitle: "Pick a category to dive into the modules your team uses every day.",
     guidedTitle: "Want a guided walkthrough tailored to your school?",
     requestDemo: "Request a demo",
-    structuredName: "Elementals Features",
-    structuredDescription: "Complete list of Elementals platform features for school management",
+    structuredName: "KiwiBee Features",
+    structuredDescription: "Complete list of KiwiBee platform features for school management",
     newBadge: "NEW",
   },
   "zh-HK": {
@@ -379,8 +379,8 @@ const pageText: Record<
     exploreSubtitle: "選擇類別，深入了解你的團隊每天使用的模組。",
     guidedTitle: "想要為你的學校量身訂做的導覽示範？",
     requestDemo: "申請示範",
-    structuredName: "Elementals 功能",
-    structuredDescription: "Elementals 平台的完整功能列表（學校管理）",
+    structuredName: "KiwiBee 功能",
+    structuredDescription: "KiwiBee 平台的完整功能列表（學校管理）",
     newBadge: "新功能",
   },
 };

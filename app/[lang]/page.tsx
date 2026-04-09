@@ -22,29 +22,29 @@ export async function generateMetadata({
 
   const title =
     lang === "zh-HK"
-      ? "Elementals（Elementals）- AI 原生學校管理平台"
-      : "Elementals (Elementals) - AI-Native School Management Platform";
+      ? "KiwiBee- AI 原生學校管理平台"
+      : "KiwiBee - AI-Native School Management Platform";
   const description =
     lang === "zh-HK"
-      ? "Elementals（亦稱 Elementals）提供一站式學校管理：課程、排課、行為追蹤、成績冊與 AI 智能分析。"
-      : "Elementals (also searched as Elementals) is an AI-native school management platform for curriculum, scheduling, behavior tracking, gradebook, and AI-powered insights.";
+      ? "KiwiBee提供一站式學校管理：課程、排課、行為追蹤、成績冊與 AI 智能分析。"
+      : "KiwiBee is an AI-native school management platform for curriculum, scheduling, behavior tracking, gradebook, and AI-powered insights.";
   const canonical = getLocalizedPath(lang, "/");
   const ogImageUrl = new URL("/og-default.png", siteUrl);
   const keywords =
     lang === "zh-HK"
       ? [
-          "Elementals",
-          "Elementals",
-          "Elementals",
+          "KiwiBee",
+          "KiwiBee",
+          "KiwiBee",
           "學校管理系統",
           "SIS",
           "LMS",
           "AI 學校管理",
         ]
       : [
-          "Elementals",
-          "Elementals",
-          "Elementals",
+          "KiwiBee",
+          "KiwiBee",
+          "KiwiBee",
           "school management system",
           "SIS",
           "LMS",
@@ -67,7 +67,7 @@ export async function generateMetadata({
       title,
       description,
       url: canonical,
-      siteName: "Elementals",
+      siteName: "KiwiBee",
       type: "website",
       images: [{ url: ogImageUrl }],
     },
@@ -90,8 +90,8 @@ export default async function LandingPage({
   const localizedHomeUrl = new URL(getLocalizedPath(lang, "/"), siteUrl).toString();
   const orgDescription =
     lang === "zh-HK"
-      ? "Elementals（亦稱 Elementals）是一個 AI 原生學校管理平台。"
-      : "Elementals (also known as Elementals) is an AI-native school management platform.";
+      ? "KiwiBee是一個 AI 原生學校管理平台。"
+      : "KiwiBee is an AI-native school management platform.";
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -99,8 +99,8 @@ export default async function LandingPage({
       {
         "@type": "Organization",
         "@id": `${siteUrl}#organization`,
-        name: "Elementals",
-        alternateName: ["Elementals", "Elementals"],
+        name: "KiwiBee",
+        alternateName: ["KiwiBee", "KiwiBee"],
         url: siteUrl,
         logo: `${siteUrl}/logo.svg`,
         description: orgDescription,
@@ -113,16 +113,16 @@ export default async function LandingPage({
       {
         "@type": "WebSite",
         "@id": `${siteUrl}#website`,
-        name: "Elementals",
-        alternateName: ["Elementals", "Elementals"],
+        name: "KiwiBee",
+        alternateName: ["KiwiBee", "KiwiBee"],
         url: siteUrl,
         inLanguage: lang,
       },
       {
         "@type": "SoftwareApplication",
         "@id": `${localizedHomeUrl}#software`,
-        name: "Elementals",
-        alternateName: "Elementals",
+        name: "KiwiBee",
+        alternateName: "KiwiBee",
         applicationCategory: "EducationalApplication",
         operatingSystem: "Web, iOS, Android",
         offers: {

@@ -27,7 +27,7 @@ export const SAMPLE_FAQS: Record<string, SampleFaqItem[]> = {
       id: "faq-en-2",
       category: "AI & Safety",
       display_order: 2,
-      question: "Can students use Elementals safely?",
+      question: "Can students use KiwiBee safely?",
       answer:
         "Yes. Schools can enable Safe Mode for student-facing use, and access is controlled with role-based permissions.",
     },
@@ -77,7 +77,7 @@ export const SAMPLE_FAQS: Record<string, SampleFaqItem[]> = {
       id: "faq-zh-2",
       category: "AI 與安全",
       display_order: 2,
-      question: "學生可以安全使用 Elementals 嗎？",
+      question: "學生可以安全使用 KiwiBee 嗎？",
       answer:
         "可以。學校可為學生端啟用 Safe Mode，並以角色權限控制存取與可見範圍。",
     },

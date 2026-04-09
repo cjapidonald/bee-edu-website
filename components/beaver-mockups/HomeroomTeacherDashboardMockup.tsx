@@ -40,7 +40,7 @@ import type { Locale } from "@/lib/i18n/config";
  *
  * A static, self-contained recreation of Beaver's Homeroom Teacher Dashboard
  * (src/pages/HomeroomTeacherDashboard.tsx) — used as a product visual in the
- * Elementals marketing site.
+ * KiwiBee marketing site.
  *
  * Data is hardcoded to match Beaver's demo seed: Primary 5A class, English/Math/
  * Science/Vietnamese subjects, ~5 students.
