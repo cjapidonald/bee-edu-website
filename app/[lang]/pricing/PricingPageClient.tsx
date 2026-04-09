@@ -188,9 +188,9 @@ export default function PricingPage({
   return (
     <div className="min-h-screen bg-white">
       <section className="relative pt-16 sm:pt-20 md:pt-24 pb-12 sm:pb-16 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#fff0eb]/50 via-white to-white" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#f0fdf4]/50 via-white to-white" />
         <div className="absolute top-20 left-10 w-72 h-72 bg-[#ffe0d4]/60 rounded-full blur-3xl hidden sm:block" />
-        <div className="absolute bottom-0 right-10 w-96 h-96 bg-[#fff0eb]/60 rounded-full blur-3xl hidden sm:block" />
+        <div className="absolute bottom-0 right-10 w-96 h-96 bg-[#f0fdf4]/60 rounded-full blur-3xl hidden sm:block" />
 
         <div
           ref={heroRef}
@@ -202,14 +202,14 @@ export default function PricingPage({
           }}
         >
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-gradient-to-r from-[#fff0eb] to-[#ffe0d4] text-[#e03500] rounded-full text-sm font-semibold">
-              <Sparkles className="h-4 w-4 text-[#fff0eb]0" />
+            <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-gradient-to-r from-[#f0fdf4] to-[#ffe0d4] text-[#15803d] rounded-full text-sm font-semibold">
+              <Sparkles className="h-4 w-4 text-[#f0fdf4]0" />
               <span>{t.badge}</span>
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               {t.heroTitle1}{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#fc3c00] via-[#fff0eb]0 to-[#fc3c00]">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#16a34a] via-[#f0fdf4]0 to-[#16a34a]">
                 {t.heroTitle2}
               </span>
             </h1>
@@ -219,7 +219,7 @@ export default function PricingPage({
             <div className="flex flex-wrap items-center justify-center gap-4">
               {["FERPA", "COPPA", "GDPR", "SOC 2"].map((badge) => (
                 <div key={badge} className="flex items-center gap-2 px-3 py-2 bg-white/60 backdrop-blur-sm rounded-full border border-gray-200/50 shadow-sm">
-                  <Shield className="w-4 h-4 text-[#fff0eb]0" />
+                  <Shield className="w-4 h-4 text-[#f0fdf4]0" />
                   <span className="text-sm font-medium text-gray-600">{badge}</span>
                 </div>
               ))}
@@ -243,16 +243,16 @@ export default function PricingPage({
               transition: "opacity 0.5s ease-out, transform 0.5s ease-out",
             }}
           >
-            <Card className="relative h-full flex flex-col p-6 lg:p-8 rounded-2xl border-2 border-[#fc3c00] shadow-lg hover:shadow-xl transition-all duration-300 bg-white">
+            <Card className="relative h-full flex flex-col p-6 lg:p-8 rounded-2xl border-2 border-[#16a34a] shadow-lg hover:shadow-xl transition-all duration-300 bg-white">
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-10">
-                <Badge className="bg-gradient-to-r from-[#fc3c00] to-[#e03500] text-white px-4 py-1.5 text-sm font-semibold shadow-lg">
+                <Badge className="bg-gradient-to-r from-[#16a34a] to-[#15803d] text-white px-4 py-1.5 text-sm font-semibold shadow-lg">
                   {pricingTier.badge}
                 </Badge>
               </div>
 
               <div className="mb-6 mt-4">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl shadow-lg bg-gradient-to-br from-[#fc3c00] to-[#c52d00]">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl shadow-lg bg-gradient-to-br from-[#16a34a] to-[#166534]">
                     <Building2 className="h-6 w-6 text-white" />
                   </div>
                   <div>
@@ -262,7 +262,7 @@ export default function PricingPage({
                 </div>
 
                 <div className="mb-3">
-                  <span className="text-3xl lg:text-4xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#fc3c00] to-[#c52d00]">
+                  <span className="text-3xl lg:text-4xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#16a34a] to-[#166534]">
                     {t.getQuote}
                   </span>
                   <p className="text-sm text-gray-500 mt-1">{t.customPricing}</p>
@@ -271,15 +271,15 @@ export default function PricingPage({
                 <p className="text-sm text-gray-500">{pricingTier.description}</p>
               </div>
 
-              <div className="mb-6 p-4 rounded-xl border border-[#ffe0d4] bg-[#fff0eb]/50">
+              <div className="mb-6 p-4 rounded-xl border border-[#ffe0d4] bg-[#f0fdf4]/50">
                 <div className="flex items-center gap-2 mb-3">
-                  <Brain className="h-4 w-4 text-[#e03500]" />
+                  <Brain className="h-4 w-4 text-[#15803d]" />
                   <span className="text-sm font-semibold text-gray-900">{t.aiFeatures}</span>
                 </div>
                 <ul className="space-y-2">
                   {pricingTier.aiFeatures.map((feature) => (
                     <li key={feature} className="flex items-start gap-2 text-sm text-gray-600">
-                      <Check className="h-4 w-4 mt-0.5 shrink-0 text-[#fc3c00]" />
+                      <Check className="h-4 w-4 mt-0.5 shrink-0 text-[#16a34a]" />
                       {feature}
                     </li>
                   ))}
@@ -298,7 +298,7 @@ export default function PricingPage({
               </div>
 
               <Link href={getLocalizedPath(pricingTier.ctaLink)}>
-                <Button className="w-full py-6 text-base font-semibold rounded-xl bg-gradient-to-r from-[#fc3c00] to-[#c52d00] hover:from-[#e03500] hover:to-[#a82400] text-white shadow-lg transition-all">
+                <Button className="w-full py-6 text-base font-semibold rounded-xl bg-gradient-to-r from-[#16a34a] to-[#166534] hover:from-[#15803d] hover:to-[#a82400] text-white shadow-lg transition-all">
                   {pricingTier.cta}
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
@@ -344,13 +344,13 @@ export default function PricingPage({
         </div>
       </section>
 
-      <section className="py-16 bg-gradient-to-r from-[#fc3c00] via-[#e03500] to-[#c52d00]">
+      <section className="py-16 bg-gradient-to-r from-[#16a34a] via-[#15803d] to-[#166534]">
         <div className="container px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-4">{t.ctaTitle}</h2>
             <p className="text-lg text-white/90 mb-8">{t.ctaSubtitle}</p>
             <Link href={getLocalizedPath("/contact?type=school")}> 
-              <Button size="lg" className="bg-white text-[#fc3c00] hover:bg-gray-100 px-8 py-6 text-lg rounded-xl">
+              <Button size="lg" className="bg-white text-[#16a34a] hover:bg-gray-100 px-8 py-6 text-lg rounded-xl">
                 {t.contactSales}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>

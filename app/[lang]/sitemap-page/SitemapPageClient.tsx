@@ -181,7 +181,7 @@ export default function SitemapPage({ params }: SitemapPageProps) {
                         <div className="flex items-start justify-between gap-2">
                           <Link
                             href={getLocalizedPath(link.url)}
-                            className="text-[#fc3c00] hover:underline font-medium"
+                            className="text-[#16a34a] hover:underline font-medium"
                           >
                             {link.title}
                           </Link>
@@ -205,7 +205,7 @@ export default function SitemapPage({ params }: SitemapPageProps) {
                 href="/sitemap.xml"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#fc3c00] hover:underline"
+                className="text-[#16a34a] hover:underline"
               >
                 https://kiwibee.io/sitemap.xml
               </a>

@@ -43,7 +43,7 @@ const contentByLang: Record<
         description:
           "Connect common school tools faster with pre-built connectors and guided setup.",
         badge: "Popular",
-        badgeColor: "bg-[#fc3c00]/10 text-[#fc3c00]",
+        badgeColor: "bg-[#16a34a]/10 text-[#16a34a]",
       },
       {
         icon: Database,
@@ -106,7 +106,7 @@ const contentByLang: Record<
         title: "現成整合",
         description: "透過預設連接器與引導式設定，更快連接常用校園工具。",
         badge: "熱門",
-        badgeColor: "bg-[#fc3c00]/10 text-[#fc3c00]",
+        badgeColor: "bg-[#16a34a]/10 text-[#16a34a]",
       },
       {
         icon: Database,

@@ -540,7 +540,7 @@ export default function ContactPage({
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative pt-16 sm:pt-20 md:pt-24 pb-12 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#fff0eb]/50 via-white to-white" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#f0fdf4]/50 via-white to-white" />
         <div className="absolute top-20 left-10 w-72 h-72 bg-[#ffe0d4]/60 rounded-full blur-3xl hidden sm:block" />
         <div className="absolute bottom-0 right-10 w-96 h-96 bg-[#ffd5c4]/60 rounded-full blur-3xl hidden sm:block" />
 
@@ -554,14 +554,14 @@ export default function ContactPage({
           }}
         >
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-[#fc3c00]/10 text-[#fc3c00] rounded-full text-sm font-medium">
+            <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-[#16a34a]/10 text-[#16a34a] rounded-full text-sm font-medium">
               <MessageSquare className="h-4 w-4" />
               <span>{t.badge}</span>
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
               {t.heroTitle1}{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#fc3c00] via-[#ff6b35] to-[#ff8c5a]">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#16a34a] via-[#facc15] to-[#facc15]">
                 {t.heroTitle2}
               </span>
             </h1>
@@ -590,20 +590,20 @@ export default function ContactPage({
 
                   <div className="space-y-4">
                     <div className="flex items-start gap-3">
-                      <div className="p-2 bg-[#fc3c00]/10 rounded-lg">
-                        <Mail className="h-5 w-5 text-[#fc3c00]" />
+                      <div className="p-2 bg-[#16a34a]/10 rounded-lg">
+                        <Mail className="h-5 w-5 text-[#16a34a]" />
                       </div>
                       <div>
                         <p className="text-sm text-gray-500">{t.email}</p>
-                        <a href="mailto:hello@elementals.com" className="text-[#fc3c00] font-medium hover:underline">
+                        <a href="mailto:hello@elementals.com" className="text-[#16a34a] font-medium hover:underline">
                           hello@elementals.com
                         </a>
                       </div>
                     </div>
 
                     <div className="flex items-start gap-3">
-                      <div className="p-2 bg-[#fff0eb] rounded-lg">
-                        <Phone className="h-5 w-5 text-[#fc3c00]" />
+                      <div className="p-2 bg-[#f0fdf4] rounded-lg">
+                        <Phone className="h-5 w-5 text-[#16a34a]" />
                       </div>
                       <div>
                         <p className="text-sm text-gray-500">{t.whatsApp}</p>
@@ -617,8 +617,8 @@ export default function ContactPage({
                     </div>
 
                     <div className="flex items-start gap-3">
-                      <div className="p-2 bg-[#fff0eb] rounded-lg">
-                        <MapPin className="h-5 w-5 text-[#fc3c00]" />
+                      <div className="p-2 bg-[#f0fdf4] rounded-lg">
+                        <MapPin className="h-5 w-5 text-[#16a34a]" />
                       </div>
                       <div>
                         <p className="text-sm text-gray-500">{t.address}</p>
@@ -633,8 +633,8 @@ export default function ContactPage({
                 {/* Office Hours */}
                 <Card className="p-6 rounded-2xl border border-gray-200 hover:shadow-lg transition-all">
                   <div className="flex items-start gap-4">
-                    <div className="p-3 bg-[#fff0eb] rounded-xl">
-                      <Clock className="h-6 w-6 text-[#e03500]" />
+                    <div className="p-3 bg-[#f0fdf4] rounded-xl">
+                      <Clock className="h-6 w-6 text-[#15803d]" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-2">{t.officeHours}</h3>
@@ -651,8 +651,8 @@ export default function ContactPage({
                 {activeTab === "talk-to-sales" && (
                   <Card className="p-6 rounded-2xl border border-gray-200 hover:shadow-lg transition-all">
                     <div className="flex items-start gap-4">
-                      <div className="p-3 bg-[#fff0eb] rounded-xl">
-                        <MessageSquare className="h-6 w-6 text-[#fc3c00]" />
+                      <div className="p-3 bg-[#f0fdf4] rounded-xl">
+                        <MessageSquare className="h-6 w-6 text-[#16a34a]" />
                       </div>
                       <div>
                         <h3 className="font-semibold text-gray-900 mb-1">{t.responseTime}</h3>
@@ -667,13 +667,13 @@ export default function ContactPage({
                 {activeTab === "book-demo" && (
                   <Card className="p-6 rounded-2xl border border-gray-200 hover:shadow-lg transition-all bg-gradient-to-br from-primary/5 to-primary/10">
                     <div className="flex items-start gap-4">
-                      <div className="p-3 bg-[#fc3c00]/20 rounded-xl">
-                        <Calendar className="h-6 w-6 text-[#fc3c00]" />
+                      <div className="p-3 bg-[#16a34a]/20 rounded-xl">
+                        <Calendar className="h-6 w-6 text-[#16a34a]" />
                       </div>
                       <div>
                         <h3 className="font-semibold text-gray-900 mb-1">{t.bookDemo}</h3>
                         <p className="text-gray-600 text-sm mb-3">{t.demoSubtitle}</p>
-                        <Badge className="bg-[#fc3c00]/10 text-[#fc3c00]">{t.thirtyMin}</Badge>
+                        <Badge className="bg-[#16a34a]/10 text-[#16a34a]">{t.thirtyMin}</Badge>
                       </div>
                     </div>
                   </Card>
@@ -692,8 +692,8 @@ export default function ContactPage({
 
                   {submitSuccess ? (
                     <div className="text-center py-12">
-                      <div className="inline-flex items-center justify-center w-16 h-16 bg-[#fff0eb] rounded-full mb-4">
-                        <Check className="h-8 w-8 text-[#fc3c00]" />
+                      <div className="inline-flex items-center justify-center w-16 h-16 bg-[#f0fdf4] rounded-full mb-4">
+                        <Check className="h-8 w-8 text-[#16a34a]" />
                       </div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-2">
                         {activeTab === "talk-to-sales" ? t.messageSent : t.demoBooked}
@@ -869,7 +869,7 @@ export default function ContactPage({
                                       <div
                                         className={cn(
                                           "px-1 py-2 text-center border-b border-gray-100",
-                                          isToday && "bg-[#fc3c00]/5"
+                                          isToday && "bg-[#16a34a]/5"
                                         )}
                                       >
                                         <div className="text-[10px] font-medium text-gray-400 uppercase">
@@ -878,7 +878,7 @@ export default function ContactPage({
                                         <div
                                           className={cn(
                                             "text-sm font-semibold mt-0.5 w-7 h-7 mx-auto flex items-center justify-center rounded-full",
-                                            isToday && "bg-[#fc3c00] text-white",
+                                            isToday && "bg-[#16a34a] text-white",
                                             isPast && !isToday && "text-gray-300",
                                             !isToday && !isPast && "text-gray-700"
                                           )}
@@ -912,8 +912,8 @@ export default function ContactPage({
                                                 className={cn(
                                                   "w-full text-left px-1.5 py-1.5 rounded-md text-[11px] leading-tight transition-all",
                                                   isBooked && "bg-gray-100 text-gray-400 cursor-not-allowed line-through",
-                                                  !isBooked && !isSelected && "bg-[#fff0eb] text-[#e03500] hover:bg-[#ffe0d4] cursor-pointer border border-[#fc3c00]/20",
-                                                  isSelected && "bg-[#fc3c00] text-white border border-[#fc3c00] shadow-sm"
+                                                  !isBooked && !isSelected && "bg-[#f0fdf4] text-[#15803d] hover:bg-[#ffe0d4] cursor-pointer border border-[#16a34a]/20",
+                                                  isSelected && "bg-[#16a34a] text-white border border-[#16a34a] shadow-sm"
                                                 )}
                                                 title={isBooked ? t.booked : `${slot.startTime} - ${slot.endTime}`}
                                               >
@@ -922,7 +922,7 @@ export default function ContactPage({
                                                 </div>
                                                 <div className={cn(
                                                   "text-[9px] truncate",
-                                                  isSelected ? "text-white/80" : isBooked ? "text-gray-400" : "text-[#fc3c00]"
+                                                  isSelected ? "text-white/80" : isBooked ? "text-gray-400" : "text-[#16a34a]"
                                                 )}>
                                                   {isBooked
                                                     ? t.booked
@@ -952,9 +952,9 @@ export default function ContactPage({
                               day: "numeric",
                             });
                             return (
-                              <div className="mt-3 flex items-center gap-2 px-3 py-2 bg-[#fc3c00]/5 border border-[#fc3c00]/20 rounded-lg">
-                                <Check className="h-4 w-4 text-[#fc3c00] flex-shrink-0" />
-                                <span className="text-sm text-[#fc3c00] font-medium">
+                              <div className="mt-3 flex items-center gap-2 px-3 py-2 bg-[#16a34a]/5 border border-[#16a34a]/20 rounded-lg">
+                                <Check className="h-4 w-4 text-[#16a34a] flex-shrink-0" />
+                                <span className="text-sm text-[#16a34a] font-medium">
                                   {dayLabel}, {sel.startTime} - {sel.endTime} HKT
                                 </span>
                               </div>
@@ -989,7 +989,7 @@ export default function ContactPage({
                         disabled={isSubmitting}
                         className={cn(
                           "w-full py-6 text-lg font-semibold rounded-xl transition-all",
-                          "bg-[#fc3c00] hover:bg-[#e03500] text-white",
+                          "bg-[#16a34a] hover:bg-[#15803d] text-white",
                           isSubmitting && "opacity-70 cursor-not-allowed"
                         )}
                       >
@@ -1026,7 +1026,7 @@ export default function ContactPage({
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-[#fc3c00] via-[#e03500] to-[#c52d00]">
+      <section className="py-16 bg-gradient-to-r from-[#16a34a] via-[#15803d] to-[#166534]">
         <div className="container px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -1036,7 +1036,7 @@ export default function ContactPage({
               {t.ctaSubtitle}
             </p>
             <a href="mailto:hello@elementals.com?subject=School%20Pricing%20Inquiry">
-              <Button size="lg" className="bg-white text-[#fc3c00] hover:bg-gray-100 px-8 py-6 text-lg rounded-xl">
+              <Button size="lg" className="bg-white text-[#16a34a] hover:bg-gray-100 px-8 py-6 text-lg rounded-xl">
                 {t.startFreeTrial}
                 <Sparkles className="ml-2 h-5 w-5" />
               </Button>

@@ -60,7 +60,7 @@ const contentByLang: Record<
         description:
           "See performance, attendance, and metrics across all schools in one view. Compare and identify best practices.",
         badge: "Enterprise",
-        badgeColor: "bg-[#fc3c00]/10 text-[#fc3c00]",
+        badgeColor: "bg-[#16a34a]/10 text-[#16a34a]",
       },
       {
         icon: BarChart3,
@@ -129,7 +129,7 @@ const contentByLang: Record<
         title: "多校儀表板",
         description: "在同一視圖查看所有學校的表現、出席與指標，並可比較與找出最佳做法。",
         badge: "企業級",
-        badgeColor: "bg-[#fc3c00]/10 text-[#fc3c00]",
+        badgeColor: "bg-[#16a34a]/10 text-[#16a34a]",
       },
       {
         icon: BarChart3,

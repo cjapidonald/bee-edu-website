@@ -60,7 +60,7 @@ const contentByLang: Record<
         description:
           "Real-time insights on academic performance, attendance, behavior, and operations across the entire school.",
         badge: "Popular",
-        badgeColor: "bg-[#fc3c00]/10 text-[#fc3c00]",
+        badgeColor: "bg-[#16a34a]/10 text-[#16a34a]",
       },
       {
         icon: Users,
@@ -129,7 +129,7 @@ const contentByLang: Record<
         title: "學校分析儀表板",
         description: "即時洞察全校學業表現、出席、行為與營運狀況。",
         badge: "熱門",
-        badgeColor: "bg-[#fc3c00]/10 text-[#fc3c00]",
+        badgeColor: "bg-[#16a34a]/10 text-[#16a34a]",
       },
       {
         icon: Users,

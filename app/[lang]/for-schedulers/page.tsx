@@ -61,7 +61,7 @@ const contentByLang: Record<
         description:
           "Drag and drop lessons that snap into valid slots. Constraints are automatically respected.",
         badge: "Popular",
-        badgeColor: "bg-[#fc3c00]/10 text-[#fc3c00]",
+        badgeColor: "bg-[#16a34a]/10 text-[#16a34a]",
       },
       {
         icon: AlertTriangle,
@@ -78,7 +78,7 @@ const contentByLang: Record<
         title: "AI Optimization",
         description: "Let AI suggest improvements to minimize gaps and balance workloads.",
         badge: "AI",
-        badgeColor: "bg-[#fc3c00]/10 text-[#fc3c00]",
+        badgeColor: "bg-[#16a34a]/10 text-[#16a34a]",
       },
       {
         icon: Clock,
@@ -134,7 +134,7 @@ const contentByLang: Record<
         title: "磁性排課",
         description: "拖放課節會自動吸附到可用時段，系統會自動遵守所有約束條件。",
         badge: "熱門",
-        badgeColor: "bg-[#fc3c00]/10 text-[#fc3c00]",
+        badgeColor: "bg-[#16a34a]/10 text-[#16a34a]",
       },
       {
         icon: AlertTriangle,
@@ -151,7 +151,7 @@ const contentByLang: Record<
         title: "AI 優化",
         description: "讓 AI 建議改進方案，減少空檔並平衡工作量。",
         badge: "AI",
-        badgeColor: "bg-[#fc3c00]/10 text-[#fc3c00]",
+        badgeColor: "bg-[#16a34a]/10 text-[#16a34a]",
       },
       {
         icon: Clock,

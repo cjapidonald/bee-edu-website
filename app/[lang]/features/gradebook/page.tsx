@@ -48,7 +48,7 @@ export default async function GradebookPage({ params }: { params: Promise<{ lang
       title: t.feature4Title,
       description: t.feature4Desc,
       badge: common.ai,
-      badgeColor: "bg-[#fc3c00]/10 text-[#fc3c00]",
+      badgeColor: "bg-[#16a34a]/10 text-[#16a34a]",
     },
     {
       icon: FileText,

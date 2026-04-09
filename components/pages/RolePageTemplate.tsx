@@ -121,7 +121,7 @@ export function RolePageTemplate({
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative pt-16 sm:pt-20 md:pt-24 pb-16 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#fff0eb]/70 via-white to-white" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#f0fdf4]/70 via-white to-white" />
         <div className="absolute top-20 left-10 w-72 h-72 bg-[#ffe0d4]/60 rounded-full blur-3xl hidden sm:block" />
         <div className="absolute bottom-0 right-10 w-96 h-96 bg-[#ffd5c4]/40 rounded-full blur-3xl hidden sm:block" />
 
@@ -132,14 +132,14 @@ export function RolePageTemplate({
               <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-center">
                 {/* Text column */}
                 <div className="text-center lg:text-left lg:col-span-5">
-                  <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-[#fc3c00]/10 text-[#fc3c00] rounded-full text-sm font-medium">
+                  <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-[#16a34a]/10 text-[#16a34a] rounded-full text-sm font-medium">
                     <BadgeIcon className="h-4 w-4" />
                     <span>{badge}</span>
                   </div>
 
                   <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                     {title}{" "}
-                    <span className="bg-gradient-to-r from-[#fc3c00] to-[#c52d00] bg-clip-text text-transparent">
+                    <span className="bg-gradient-to-r from-[#16a34a] to-[#166534] bg-clip-text text-transparent">
                       {highlight}
                     </span>
                   </h1>
@@ -148,7 +148,7 @@ export function RolePageTemplate({
 
                   <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
                     <Link href={getLocalizedPath("/contact")}>
-                      <Button size="lg" className="px-8 py-6 text-lg rounded-xl bg-[#fc3c00] hover:bg-[#fc3c00]/90">
+                      <Button size="lg" className="px-8 py-6 text-lg rounded-xl bg-[#16a34a] hover:bg-[#16a34a]/90">
                         {t.startFree}
                         <ArrowRight className="ml-2 h-5 w-5" />
                       </Button>
@@ -175,7 +175,7 @@ export function RolePageTemplate({
                 {/* Mockup column */}
                 <div className="lg:col-span-7 w-full">
                   <div className="relative w-full">
-                    <div className="absolute -inset-4 bg-gradient-to-br from-[#fc3c00]/20 via-[#ff8c5a]/10 to-transparent rounded-[32px] blur-2xl pointer-events-none" />
+                    <div className="absolute -inset-4 bg-gradient-to-br from-[#16a34a]/20 via-[#facc15]/10 to-transparent rounded-[32px] blur-2xl pointer-events-none" />
                     <div className="relative lg:rotate-[0.5deg] lg:hover:rotate-0 transition-transform duration-500 ease-out">
                       {mockup}
                     </div>
@@ -186,14 +186,14 @@ export function RolePageTemplate({
           ) : (
             // Original centered layout
             <div className="max-w-4xl mx-auto text-center">
-              <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-[#fc3c00]/10 text-[#fc3c00] rounded-full text-sm font-medium">
+              <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-[#16a34a]/10 text-[#16a34a] rounded-full text-sm font-medium">
                 <BadgeIcon className="h-4 w-4" />
                 <span>{badge}</span>
               </div>
 
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                 {title}{" "}
-                <span className="bg-gradient-to-r from-[#fc3c00] to-[#c52d00] bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-[#16a34a] to-[#166534] bg-clip-text text-transparent">
                   {highlight}
                 </span>
               </h1>
@@ -202,7 +202,7 @@ export function RolePageTemplate({
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                 <Link href={getLocalizedPath("/contact")}>
-                  <Button size="lg" className="px-8 py-6 text-lg rounded-xl bg-[#fc3c00] hover:bg-[#fc3c00]/90">
+                  <Button size="lg" className="px-8 py-6 text-lg rounded-xl bg-[#16a34a] hover:bg-[#16a34a]/90">
                     {t.startFree}
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
@@ -274,14 +274,14 @@ export function RolePageTemplate({
                 className="p-6 bg-white border border-gray-200 rounded-2xl hover:shadow-lg transition-all duration-300"
               >
                 <div className="flex items-start gap-4">
-                  <div className="p-3 bg-[#fc3c00]/10 rounded-xl">
-                    <feature.icon className="h-6 w-6 text-[#fc3c00]" />
+                  <div className="p-3 bg-[#16a34a]/10 rounded-xl">
+                    <feature.icon className="h-6 w-6 text-[#16a34a]" />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
                       <h3 className="font-semibold text-gray-900">{feature.title}</h3>
                       {feature.badge && (
-                        <span className={`inline-flex items-center rounded-full border-0 px-2.5 py-0.5 text-xs font-semibold ${feature.badgeColor || "bg-[#fc3c00]/10 text-[#fc3c00]"}`}>{feature.badge}</span>
+                        <span className={`inline-flex items-center rounded-full border-0 px-2.5 py-0.5 text-xs font-semibold ${feature.badgeColor || "bg-[#16a34a]/10 text-[#16a34a]"}`}>{feature.badge}</span>
                       )}
                     </div>
                     <p className="text-sm text-gray-600">{feature.description}</p>
@@ -309,8 +309,8 @@ export function RolePageTemplate({
                   className="flex items-center gap-4 py-4 border-b border-gray-200 last:border-0"
                 >
                   <div className="w-20 text-sm font-medium text-gray-500">{item.time}</div>
-                  <div className="p-2 bg-[#fc3c00]/10 rounded-lg">
-                    <item.icon className="h-5 w-5 text-[#fc3c00]" />
+                  <div className="p-2 bg-[#16a34a]/10 rounded-lg">
+                    <item.icon className="h-5 w-5 text-[#16a34a]" />
                   </div>
                   <div className="text-gray-700">{item.task}</div>
                 </div>
@@ -321,14 +321,14 @@ export function RolePageTemplate({
       )}
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-[#fc3c00] via-[#e03500] to-[#c52d00]">
+      <section className="py-16 bg-gradient-to-r from-[#16a34a] via-[#15803d] to-[#166534]">
         <div className="container px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-4">{t.ctaTitle}</h2>
             <p className="text-lg text-white/90 mb-8">{t.ctaSubtitle}</p>
             <div className="flex justify-center">
               <Link href={getLocalizedPath("/contact")}>
-                <Button size="lg" className="bg-white text-[#fc3c00] hover:bg-gray-100 px-8 py-6 text-lg rounded-xl">
+                <Button size="lg" className="bg-white text-[#16a34a] hover:bg-gray-100 px-8 py-6 text-lg rounded-xl">
                   {t.talkToSales}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>

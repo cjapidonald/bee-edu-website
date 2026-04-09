@@ -231,16 +231,16 @@ export default async function AboutPage({ params }: AboutPageProps) {
     <div className="relative min-h-screen overflow-hidden bg-white text-gray-900">
       {/* Subtle gradient background */}
       <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#fff0eb]/70 via-white to-white" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#f0fdf4]/70 via-white to-white" />
         <div className="absolute top-20 left-10 w-72 h-72 bg-[#ffe0d4]/60 rounded-full blur-3xl" />
         <div className="absolute bottom-0 right-10 w-96 h-96 bg-[#ffd5c4]/40 rounded-full blur-3xl" />
-        <div className="absolute top-1/3 left-[-8rem] h-64 w-64 rounded-full bg-[#fff0eb]/50 blur-3xl" />
+        <div className="absolute top-1/3 left-[-8rem] h-64 w-64 rounded-full bg-[#f0fdf4]/50 blur-3xl" />
       </div>
 
       <div className="relative mx-auto flex w-full max-w-5xl flex-col gap-12 px-4 py-24 md:px-8">
         {/* Story Section */}
-        <section className="relative overflow-hidden rounded-[2.5rem] border border-[#D9E2EF] bg-gradient-to-b from-[#fff0eb] to-white p-10 shadow-lg md:p-14">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-[#fff0eb]/60 rounded-full blur-3xl -z-10" />
+        <section className="relative overflow-hidden rounded-[2.5rem] border border-[#D9E2EF] bg-gradient-to-b from-[#f0fdf4] to-white p-10 shadow-lg md:p-14">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-[#f0fdf4]/60 rounded-full blur-3xl -z-10" />
           <div className="relative z-10 space-y-10">
             <div className="space-y-4">
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 md:text-5xl">{t.story.title}</h1>
@@ -291,8 +291,8 @@ export default async function AboutPage({ params }: AboutPageProps) {
         {/* Platform Overview */}
         <section className="rounded-2xl border border-[#D9E2EF] bg-white p-10 shadow-lg">
           <div className="mx-auto max-w-3xl text-center mb-10">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#fc3c00]/10 mb-4">
-              <Layers className="h-8 w-8 text-[#fc3c00]" />
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#16a34a]/10 mb-4">
+              <Layers className="h-8 w-8 text-[#16a34a]" />
             </div>
             <h2 className="text-3xl font-bold text-gray-900">{t.platform.title}</h2>
             <p className="mt-3 text-base text-gray-600">{t.platform.subtitle}</p>
@@ -310,13 +310,13 @@ export default async function AboutPage({ params }: AboutPageProps) {
                     <div className="space-y-3">
                       <div className={cn(
                         "mx-auto flex h-12 w-12 items-center justify-center rounded-xl",
-                        color === "primary" && "bg-[#fc3c00]/10",
+                        color === "primary" && "bg-[#16a34a]/10",
                         color === "secondary" && "bg-secondary/15",
                         color === "accent" && "bg-accent/10",
                       )}>
                         <IconComponent className={cn(
                           "h-6 w-6",
-                          color === "primary" && "text-[#fc3c00]",
+                          color === "primary" && "text-[#16a34a]",
                           color === "secondary" && "text-secondary",
                           color === "accent" && "text-accent",
                         )} />
@@ -337,7 +337,7 @@ export default async function AboutPage({ params }: AboutPageProps) {
               {t.userRoles.map((role, index) => (
                 <span
                   key={index}
-                  className="px-4 py-2 bg-[#fff5f0] rounded-full text-sm text-gray-700 border border-[#D9E2EF] hover:border-primary/30 hover:bg-[#fc3c00]/10 transition-colors"
+                  className="px-4 py-2 bg-[#fff5f0] rounded-full text-sm text-gray-700 border border-[#D9E2EF] hover:border-primary/30 hover:bg-[#16a34a]/10 transition-colors"
                 >
                   {role}
                 </span>
@@ -362,13 +362,13 @@ export default async function AboutPage({ params }: AboutPageProps) {
                   <div className="space-y-4">
                     <div className={cn(
                       "mx-auto flex h-14 w-14 items-center justify-center rounded-2xl",
-                      color === "primary" && "bg-[#fc3c00]/10",
+                      color === "primary" && "bg-[#16a34a]/10",
                       color === "secondary" && "bg-secondary/15",
                       color === "accent" && "bg-accent/10",
                     )}>
                       <IconComponent className={cn(
                         "h-6 w-6",
-                        color === "primary" && "text-[#fc3c00]",
+                        color === "primary" && "text-[#16a34a]",
                         color === "secondary" && "text-secondary",
                         color === "accent" && "text-accent",
                       )} />
@@ -383,14 +383,14 @@ export default async function AboutPage({ params }: AboutPageProps) {
         </section>
 
         {/* CTA Section */}
-        <section className="rounded-2xl bg-gradient-to-r from-[#fc3c00] via-[#e03500] to-[#c52d00] p-10 text-center shadow-xl">
+        <section className="rounded-2xl bg-gradient-to-r from-[#16a34a] via-[#15803d] to-[#166534] p-10 text-center shadow-xl">
           <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-white/20 mb-6">
             <GraduationCap className="h-8 w-8 text-white" />
           </div>
           <h2 className="text-2xl font-bold text-white mb-4">{t.ctaSection.title}</h2>
           <p className="text-white/90 mb-8 max-w-xl mx-auto">{t.ctaSection.description}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-[#fc3c00] hover:bg-gray-100 rounded-xl" asChild>
+            <Button size="lg" className="bg-white text-[#16a34a] hover:bg-gray-100 rounded-xl" asChild>
               <Link href={getLocalizedPath("/contact")}>
                 {t.ctaSection.primaryButton}
                 <ArrowRight className="ml-2 h-5 w-5" />

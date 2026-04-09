@@ -34,7 +34,7 @@ export default async function HRPage({ params }: { params: Promise<{ lang: strin
       title: t.feature1Title,
       description: t.feature1Desc,
       badge: extraBadges.core,
-      badgeColor: "bg-[#fc3c00]/10 text-[#fc3c00]",
+      badgeColor: "bg-[#16a34a]/10 text-[#16a34a]",
     },
     {
       icon: Calendar,

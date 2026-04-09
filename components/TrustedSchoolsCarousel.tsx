@@ -58,8 +58,8 @@ export const TrustedSchoolsCarousel = ({ lang = "en" }: TrustedSchoolsCarouselPr
               className="flex-shrink-0 px-4 py-3 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
             >
               <div className="flex items-center gap-3">
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[#fc3c00]/5 overflow-hidden flex-shrink-0 border border-gray-100">
-                  <School className="h-6 w-6 text-[#fc3c00]" />
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[#16a34a]/5 overflow-hidden flex-shrink-0 border border-gray-100">
+                  <School className="h-6 w-6 text-[#16a34a]" />
                 </div>
                 <div className="text-left">
                   <p className="text-sm font-semibold text-gray-900 whitespace-nowrap">

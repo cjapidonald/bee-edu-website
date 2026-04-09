@@ -424,7 +424,7 @@ export default function FeaturesPage({ params }: { params: { lang: Locale } }) {
 
       {/* HERO */}
       <section className="relative pt-16 sm:pt-20 md:pt-24 pb-12 sm:pb-16 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#fff0eb]/50 via-white to-white" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#f0fdf4]/50 via-white to-white" />
         <div className="absolute top-20 left-10 w-72 h-72 bg-[#ffe0d4]/60 rounded-full blur-3xl hidden sm:block" />
         <div className="absolute bottom-0 right-10 w-96 h-96 bg-[#ffd5c4]/60 rounded-full blur-3xl hidden sm:block" />
 
@@ -438,14 +438,14 @@ export default function FeaturesPage({ params }: { params: { lang: Locale } }) {
           }}
         >
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-[#fc3c00]/10 text-[#fc3c00] rounded-full text-sm font-medium">
+            <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-[#16a34a]/10 text-[#16a34a] rounded-full text-sm font-medium">
               <BrainCircuit className="h-4 w-4" />
               <span>{t.badge}</span>
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">
               {t.heroTitle}{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#fc3c00] via-[#ff6b35] to-[#ff8c5a]">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#16a34a] via-[#facc15] to-[#facc15]">
                 {t.heroHighlight}
               </span>
             </h1>
@@ -456,7 +456,7 @@ export default function FeaturesPage({ params }: { params: { lang: Locale } }) {
               <Link href={getLocalizedPath("/pricing")}>
                 <Button
                   size="lg"
-                  className="bg-[#fc3c00] hover:bg-[#e03500] text-white px-8 py-6 text-lg rounded-xl shadow-lg"
+                  className="bg-[#16a34a] hover:bg-[#15803d] text-white px-8 py-6 text-lg rounded-xl shadow-lg"
                 >
                   {t.seePricing}
                   <ArrowRight className="ml-2 h-5 w-5" />
@@ -472,7 +472,7 @@ export default function FeaturesPage({ params }: { params: { lang: Locale } }) {
             <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-gray-500">
               {t.highlights.map((item) => (
                 <div key={item} className="flex items-center gap-2">
-                  <Sparkles className="h-4 w-4 text-[#fc3c00]" />
+                  <Sparkles className="h-4 w-4 text-[#16a34a]" />
                   <span>{item}</span>
                 </div>
               ))}
@@ -508,7 +508,7 @@ export default function FeaturesPage({ params }: { params: { lang: Locale } }) {
           <div className="mt-16 text-center">
             <p className="text-gray-600 mb-4">{t.guidedTitle}</p>
             <Link href={getLocalizedPath("/contact")}>
-              <Button size="lg" className="bg-[#fc3c00] hover:bg-[#e03500] text-white rounded-xl">
+              <Button size="lg" className="bg-[#16a34a] hover:bg-[#15803d] text-white rounded-xl">
                 {t.requestDemo}
               </Button>
             </Link>
@@ -579,7 +579,7 @@ function CategorySection({
               <div className={`p-2.5 ${category.bg} rounded-xl w-fit mb-3`}>
                 <feature.icon className={`h-5 w-5 ${category.text}`} />
               </div>
-              <h4 className="text-base font-bold text-gray-900 mb-1 group-hover:text-[#fc3c00] transition-colors pr-8">
+              <h4 className="text-base font-bold text-gray-900 mb-1 group-hover:text-[#16a34a] transition-colors pr-8">
                 {feature.title}
               </h4>
               <p className="text-gray-600 text-sm leading-snug">{feature.description}</p>

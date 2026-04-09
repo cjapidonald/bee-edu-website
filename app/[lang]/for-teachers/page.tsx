@@ -61,7 +61,7 @@ const contentByLang: Record<
         description:
           "Generate differentiated lesson plans aligned to your curriculum. Just describe what you want to teach.",
         badge: "AI",
-        badgeColor: "bg-[#fc3c00]/10 text-[#fc3c00]",
+        badgeColor: "bg-[#16a34a]/10 text-[#16a34a]",
       },
       {
         icon: FileText,
@@ -83,7 +83,7 @@ const contentByLang: Record<
         description:
           "Award points in real-time during lessons. Monster avatars keep students engaged and parents informed.",
         badge: "FREE",
-        badgeColor: "bg-[#fc3c00]/10 text-[#fc3c00]",
+        badgeColor: "bg-[#16a34a]/10 text-[#16a34a]",
       },
       {
         icon: Calendar,
@@ -166,7 +166,7 @@ const contentByLang: Record<
         title: "AI 課程規劃器",
         description: "生成與課程對齊、可因材施教的教案。只需描述你想教什麼。",
         badge: "AI",
-        badgeColor: "bg-[#fc3c00]/10 text-[#fc3c00]",
+        badgeColor: "bg-[#16a34a]/10 text-[#16a34a]",
       },
       {
         icon: FileText,
@@ -185,7 +185,7 @@ const contentByLang: Record<
         title: "ClassSpark 行為",
         description: "課堂即時加減分，怪獸頭像提升投入度，並可與家長共享。",
         badge: "免費",
-        badgeColor: "bg-[#fc3c00]/10 text-[#fc3c00]",
+        badgeColor: "bg-[#16a34a]/10 text-[#16a34a]",
       },
       {
         icon: Calendar,

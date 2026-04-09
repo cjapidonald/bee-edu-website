@@ -31,7 +31,7 @@ export default async function MarketingPage({ params }: { params: Promise<{ lang
       title: t.feature1Title,
       description: t.feature1Desc,
       badge: common.popular,
-      badgeColor: "bg-[#fc3c00]/10 text-[#fc3c00]",
+      badgeColor: "bg-[#16a34a]/10 text-[#16a34a]",
     },
     {
       icon: Users,

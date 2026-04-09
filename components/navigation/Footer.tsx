@@ -162,7 +162,7 @@ export default function Footer({ lang, dict }: FooterProps) {
                   href={link.href}
                   target={link.href.startsWith("mailto:") ? "_self" : "_blank"}
                   rel={link.href.startsWith("mailto:") ? undefined : "noopener noreferrer"}
-                  className="p-2 bg-gray-100 rounded-full hover:bg-[#fc3c00]/10 hover:text-[#fc3c00] transition-colors"
+                  className="p-2 bg-gray-100 rounded-full hover:bg-[#16a34a]/10 hover:text-[#16a34a] transition-colors"
                   aria-label={link.label}
                 >
                   <link.icon className="h-4 w-4" />
@@ -177,7 +177,7 @@ export default function Footer({ lang, dict }: FooterProps) {
             <ul className="space-y-2 text-sm text-gray-600">
               {featuresLinks.map((link) => (
                 <li key={link.path}>
-                  <Link href={getLocalizedPath(link.path)} className="hover:text-[#fc3c00] transition-colors">
+                  <Link href={getLocalizedPath(link.path)} className="hover:text-[#16a34a] transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -191,7 +191,7 @@ export default function Footer({ lang, dict }: FooterProps) {
             <ul className="space-y-2 text-sm text-gray-600">
               {useCasesLinks.map((link) => (
                 <li key={link.path}>
-                  <Link href={getLocalizedPath(link.path)} className="hover:text-[#fc3c00] transition-colors">
+                  <Link href={getLocalizedPath(link.path)} className="hover:text-[#16a34a] transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -205,7 +205,7 @@ export default function Footer({ lang, dict }: FooterProps) {
             <ul className="space-y-2 text-sm text-gray-600">
               {resourcesLinks.map((link) => (
                 <li key={link.path}>
-                  <Link href={getLocalizedPath(link.path)} className="hover:text-[#fc3c00] transition-colors">
+                  <Link href={getLocalizedPath(link.path)} className="hover:text-[#16a34a] transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -219,7 +219,7 @@ export default function Footer({ lang, dict }: FooterProps) {
             <ul className="space-y-2 text-sm text-gray-600">
               {aboutLinks.map((link) => (
                 <li key={link.path}>
-                  <Link href={getLocalizedPath(link.path)} className="hover:text-[#fc3c00] transition-colors">
+                  <Link href={getLocalizedPath(link.path)} className="hover:text-[#16a34a] transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -273,9 +273,9 @@ export default function Footer({ lang, dict }: FooterProps) {
             &copy; {new Date().getFullYear()} Kiwibee. {(dict.footer.copyright as string) || "All rights reserved."}
           </p>
           <p className="text-sm text-gray-600 mt-2">
-            {getFooterText(dict, 'contact.email', 'Email')}: <a href="mailto:hello@elementals.com" className="hover:text-[#fc3c00]">hello@elementals.com</a>
+            {getFooterText(dict, 'contact.email', 'Email')}: <a href="mailto:hello@elementals.com" className="hover:text-[#16a34a]">hello@elementals.com</a>
             {" | "}
-            {getFooterText(dict, 'contact.whatsapp', 'WhatsApp')}: <a href="https://wa.me/85294954912" className="hover:text-[#fc3c00]">+852 94954912</a>
+            {getFooterText(dict, 'contact.whatsapp', 'WhatsApp')}: <a href="https://wa.me/85294954912" className="hover:text-[#16a34a]">+852 94954912</a>
           </p>
           <p className="text-sm text-gray-600 mt-1">
             {getFooterText(dict, 'contact.address', 'Address')}: {contactAddress}

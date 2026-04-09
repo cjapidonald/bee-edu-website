@@ -364,7 +364,7 @@ export function ChatbotWidget() {
                 borderRadius: "12px",
                 border: "none",
                 background: inputValue.trim()
-                  ? "linear-gradient(135deg, #fc3c00, #e03500)"
+                  ? "linear-gradient(135deg, #16a34a, #15803d)"
                   : "#e5e7eb",
                 color: inputValue.trim() ? "#ffffff" : "#9ca3af",
                 cursor: inputValue.trim() ? "pointer" : "not-allowed",

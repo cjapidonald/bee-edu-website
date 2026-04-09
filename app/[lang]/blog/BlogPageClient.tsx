@@ -452,7 +452,7 @@ function BlogOverlay({
               <header className="space-y-3">
                 <div className="flex flex-wrap gap-2">
                   {categoryLabel && (
-                    <Badge className="bg-[#fc3c00]/10 text-[#fc3c00] px-3 py-1 rounded-full">{categoryLabel}</Badge>
+                    <Badge className="bg-[#16a34a]/10 text-[#16a34a] px-3 py-1 rounded-full">{categoryLabel}</Badge>
                   )}
                   {tags.slice(0, 4).map((tag) => (
                     <Badge key={tag} variant="secondary" className="text-xs px-2 py-0.5 rounded-full">{tag}</Badge>
@@ -475,8 +475,8 @@ function BlogOverlay({
                       className="h-10 w-10 rounded-full object-cover border border-gray-200"
                     />
                   ) : (
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#fc3c00]/10">
-                      <User className="h-5 w-5 text-[#fc3c00]" />
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#16a34a]/10">
+                      <User className="h-5 w-5 text-[#16a34a]" />
                     </div>
                   )}
                   <div>
@@ -814,7 +814,7 @@ export default function BlogPageClient({
                         </div>
                         <div className="flex flex-col gap-4 p-6">
                           <div className="flex flex-wrap items-center gap-2 text-xs">
-                            <Badge variant="outline" className="bg-[#fc3c00]/10 text-[#fc3c00]">
+                            <Badge variant="outline" className="bg-[#16a34a]/10 text-[#16a34a]">
                               {t.featured}
                             </Badge>
                             {featuredPost.category && (
@@ -892,7 +892,7 @@ export default function BlogPageClient({
                                     </Badge>
                                   )}
                                 </div>
-                                <h3 className="text-lg font-semibold line-clamp-2 group-hover:text-[#fc3c00] transition-colors">
+                                <h3 className="text-lg font-semibold line-clamp-2 group-hover:text-[#16a34a] transition-colors">
                                   {post.title}
                                 </h3>
                                 {post.excerpt && <p className="text-sm text-slate-600 line-clamp-3">{post.excerpt}</p>}
@@ -954,7 +954,7 @@ export default function BlogPageClient({
                           className={cn(
                             "flex w-full items-center justify-between rounded-lg px-3 py-2 text-sm transition-colors",
                             activeCategory === value
-                              ? "bg-[#fc3c00]/10 text-[#fc3c00]"
+                              ? "bg-[#16a34a]/10 text-[#16a34a]"
                               : "text-slate-500 hover:bg-slate-100"
                           )}
                           onClick={() => handleCategoryClick(value)}

@@ -36,7 +36,7 @@ export default async function ExamsPage({ params }: { params: Promise<{ lang: st
       title: t.feature2Title,
       description: t.feature2Desc,
       badge: common.popular,
-      badgeColor: "bg-[#fc3c00]/10 text-[#fc3c00]",
+      badgeColor: "bg-[#16a34a]/10 text-[#16a34a]",
     },
     {
       icon: Shield,
