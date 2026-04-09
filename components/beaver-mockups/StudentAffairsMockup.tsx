@@ -79,7 +79,7 @@ export function StudentAffairsMockup({ className = "", lang = "en" }: { classNam
         ].map((k) => (
           <div
             key={k.label}
-            className="rounded-xl bg-gray-900 border border-gray-700/70 p-2.5 shadow-[0_1px_2px_rgba(0,0,0,0.04)]"
+            className="rounded-xl bg-gray-900 border border-gray-700/70 p-2.5 shadow-lg shadow-black/20"
           >
             <div
               className="h-5 w-5 rounded-lg flex items-center justify-center mb-1"

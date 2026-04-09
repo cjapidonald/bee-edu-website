@@ -102,7 +102,7 @@ export function ChatMockup({ className = "", lang = "en" }: { className?: string
 
         {/* RIGHT — Conversation (3/5) */}
         <div className="col-span-3">
-          <div className="rounded-2xl bg-gray-900 border border-gray-700/70 shadow-[0_1px_2px_rgba(0,0,0,0.04)] overflow-hidden flex flex-col h-full">
+          <div className="rounded-2xl bg-gray-900 border border-gray-700/70 shadow-lg shadow-black/20 overflow-hidden flex flex-col h-full">
             {/* Header */}
             <div className="flex items-center justify-between px-3 py-2 border-b border-gray-800 bg-gradient-to-r from-[#FDB714]/5 to-[#E83B5E]/5">
               <div className="flex items-center gap-1.5">
@@ -125,7 +125,7 @@ export function ChatMockup({ className = "", lang = "en" }: { className?: string
             </div>
 
             {/* Messages */}
-            <div className="flex-1 overflow-hidden p-3 space-y-2 bg-gradient-to-b from-gray-900 to-[#fafafa]">
+            <div className="flex-1 overflow-hidden p-3 space-y-2 bg-gradient-to-b from-gray-900 to-gray-950">
               {/* Teacher message */}
               <div className="flex gap-1.5">
                 <MockAvatar name="Ms Nguyen" size={18} gradientFrom="#FDB714" gradientTo="#E83B5E" />

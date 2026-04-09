@@ -58,7 +58,7 @@ export function DashboardShell({
   return (
     <BrowserFrame url={url} tabTitle={tabTitle} accent={accent} className={className}>
       <div
-        className="flex bg-[#fafafa] text-white"
+        className="flex bg-gray-950 text-white"
         style={{ fontFamily: "-apple-system, system-ui, sans-serif" }}
       >
         {/* ================= SIDEBAR ================= */}
@@ -80,7 +80,7 @@ export function DashboardShell({
               key={item.label}
               className={`flex items-center gap-1.5 px-2 py-1.5 rounded-lg ${
                 item.active
-                  ? "bg-[#FDB714]/10 text-[#a16207] font-semibold"
+                  ? "bg-[#FDB714]/15 text-[#FDB714] font-semibold"
                   : "text-gray-500"
               }`}
             >
@@ -125,7 +125,7 @@ export function DashboardShell({
           </div>
 
           {/* Content area */}
-          <div className="p-3 bg-[#fafafa]">{children}</div>
+          <div className="p-3 bg-gray-950">{children}</div>
         </main>
       </div>
     </BrowserFrame>

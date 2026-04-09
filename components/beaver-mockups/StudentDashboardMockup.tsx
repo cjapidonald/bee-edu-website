@@ -204,7 +204,7 @@ export function StudentDashboardMockup({ className = "", lang = "en" }: { classN
                   </span>
                   <div className="flex items-center gap-0.5 shrink-0">
                     <Coins className="h-2 w-2 text-[#FDB714]" />
-                    <span className="text-[9px] font-bold text-[#a16207] tabular-nums">
+                    <span className="text-[9px] font-bold text-[#FDB714] tabular-nums">
                       {s.gems}
                     </span>
                   </div>

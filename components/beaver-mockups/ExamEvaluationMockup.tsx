@@ -29,7 +29,7 @@ const STUDENTS = [
 
 function cellColor(score: number) {
   if (score >= 9) return "bg-emerald-950/50 text-emerald-700";
-  if (score >= 7) return "bg-[#FDB714]/10 text-[#a16207]";
+  if (score >= 7) return "bg-[#FDB714]/10 text-[#FDB714]";
   if (score >= 5) return "bg-amber-950/50 text-amber-700";
   return "bg-rose-950/50 text-rose-700";
 }
@@ -82,7 +82,7 @@ export function ExamEvaluationMockup({ className = "", lang = "en" }: { classNam
           { label: mt("common.graded", lang), value: "4/6", color: "text-emerald-600", bg: "bg-emerald-100", icon: CheckCircle2 },
           { label: lang === "vi" ? "AI đã nháp" : "AI-drafted", value: "1", color: "text-violet-600", bg: "bg-violet-100", icon: Sparkles },
           { label: lang === "vi" ? "Đã gắn cờ" : "Flagged", value: "1", color: "text-rose-600", bg: "bg-rose-100", icon: AlertTriangle },
-          { label: lang === "vi" ? "Điểm TB" : "Avg score", value: "29.7", color: "text-[#a16207]", bg: "bg-[#FDB714]/20", icon: BarChart3 },
+          { label: lang === "vi" ? "Điểm TB" : "Avg score", value: "29.7", color: "text-[#FDB714]", bg: "bg-[#FDB714]/20", icon: BarChart3 },
         ].map((s) => (
           <div
             key={s.label}

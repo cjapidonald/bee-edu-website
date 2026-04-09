@@ -152,7 +152,7 @@ export function GamificationMockup({ className = "", lang = "en" }: { className?
             right={
               <div className="flex items-center gap-0.5 px-1.5 py-0.5 bg-[#FDB714]/15 rounded">
                 <Coins className="h-2.5 w-2.5 text-[#FDB714]" />
-                <span className="text-[9px] font-bold text-[#a16207] tabular-nums">148</span>
+                <span className="text-[9px] font-bold text-[#FDB714] tabular-nums">148</span>
               </div>
             }
           >

@@ -107,7 +107,7 @@ export function IntegrationsMockup({ className = "", lang = "en" }: { className?
 
       {/* Webhook + API stats */}
       <div className="grid grid-cols-3 gap-1.5 mt-2.5">
-        <div className="rounded-xl bg-gray-900 border border-gray-700/70 p-2 shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
+        <div className="rounded-xl bg-gray-900 border border-gray-700/70 p-2 shadow-lg shadow-black/20">
           <div className="flex items-center gap-1 mb-0.5">
             <Webhook className="h-3 w-3 text-[#8b5cf6]" />
             <span className="text-[8px] text-gray-500 font-semibold uppercase">Webhooks</span>
@@ -115,7 +115,7 @@ export function IntegrationsMockup({ className = "", lang = "en" }: { className?
           <div className="text-base font-black text-white tabular-nums">12</div>
           <div className="text-[7px] text-emerald-600">All responding</div>
         </div>
-        <div className="rounded-xl bg-gray-900 border border-gray-700/70 p-2 shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
+        <div className="rounded-xl bg-gray-900 border border-gray-700/70 p-2 shadow-lg shadow-black/20">
           <div className="flex items-center gap-1 mb-0.5">
             <Key className="h-3 w-3 text-[#FDB714]" />
             <span className="text-[8px] text-gray-500 font-semibold uppercase">API Keys</span>
@@ -123,7 +123,7 @@ export function IntegrationsMockup({ className = "", lang = "en" }: { className?
           <div className="text-base font-black text-white tabular-nums">4</div>
           <div className="text-[7px] text-gray-500">2 schools</div>
         </div>
-        <div className="rounded-xl bg-gray-900 border border-gray-700/70 p-2 shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
+        <div className="rounded-xl bg-gray-900 border border-gray-700/70 p-2 shadow-lg shadow-black/20">
           <div className="flex items-center gap-1 mb-0.5">
             <Code className="h-3 w-3 text-[#E83B5E]" />
             <span className="text-[8px] text-gray-500 font-semibold uppercase">API Calls (24h)</span>

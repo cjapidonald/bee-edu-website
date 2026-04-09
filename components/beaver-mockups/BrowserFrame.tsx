@@ -25,7 +25,7 @@ export function BrowserFrame({
       className={`relative rounded-2xl bg-gray-900/50 shadow-2xl shadow-black/20 ring-1 ring-black/10 overflow-hidden ${className}`}
     >
       {/* Top chrome */}
-      <div className="bg-gradient-to-b from-[#fafafa] to-[#f0f0f0] border-b border-black/5">
+      <div className="bg-gradient-to-b from-gray-800 to-gray-850 border-b border-gray-700/50">
         {/* Traffic lights + tabs */}
         <div className="flex items-center gap-3 px-4 pt-3 pb-2">
           {/* Traffic lights */}
@@ -36,7 +36,7 @@ export function BrowserFrame({
           </div>
 
           {/* Tab */}
-          <div className="flex items-center gap-2 px-3 py-1.5 bg-gray-900 rounded-t-lg shadow-sm max-w-[260px] min-w-0">
+          <div className="flex items-center gap-2 px-3 py-1.5 bg-gray-900 rounded-t-lg border border-gray-700/30 border-b-0 max-w-[260px] min-w-0">
             <span
               className="h-4 w-4 rounded-sm shrink-0 flex items-center justify-center text-[10px] font-black text-white"
               style={{ background: accent }}
@@ -50,8 +50,8 @@ export function BrowserFrame({
           </div>
 
           <div className="ml-auto flex items-center gap-1.5 shrink-0">
-            <span className="h-5 w-5 rounded bg-black/5" />
-            <span className="h-5 w-5 rounded bg-black/5" />
+            <span className="h-5 w-5 rounded bg-gray-700/50" />
+            <span className="h-5 w-5 rounded bg-gray-700/50" />
           </div>
         </div>
 
@@ -76,7 +76,7 @@ export function BrowserFrame({
             </button>
           </div>
 
-          <div className="flex-1 flex items-center gap-1.5 bg-gray-900 rounded-md px-3 py-1 border border-black/5 shadow-inner min-w-0">
+          <div className="flex-1 flex items-center gap-1.5 bg-gray-900 rounded-md px-3 py-1 border border-gray-700/50 min-w-0">
             <Lock className="h-3 w-3 text-gray-400 shrink-0" />
             <span className="text-[11px] text-gray-400 truncate">{url}</span>
           </div>

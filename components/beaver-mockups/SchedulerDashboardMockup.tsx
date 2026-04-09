@@ -119,7 +119,7 @@ export function SchedulerDashboardMockup({ className = "", lang = "en" }: { clas
         ].map((s) => (
           <div
             key={s.label}
-            className="rounded-2xl bg-gray-900 border border-gray-700/70 p-2.5 shadow-[0_1px_2px_rgba(0,0,0,0.04)]"
+            className="rounded-2xl bg-gray-900 border border-gray-700/70 p-2.5 shadow-lg shadow-black/20"
           >
             <div className={`h-5 w-5 rounded ${s.bg} mb-1`} />
             <div className="text-[9px] text-gray-500 font-medium">{s.label}</div>

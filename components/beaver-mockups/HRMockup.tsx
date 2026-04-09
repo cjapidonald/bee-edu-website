@@ -121,7 +121,7 @@ export function HRMockup({ className = "", lang = "en" }: { className?: string; 
                       </span>
                     )}
                   </div>
-                  <span className="text-[9px] font-bold text-[#a16207] tabular-nums text-right">★ {s.performance}</span>
+                  <span className="text-[9px] font-bold text-[#FDB714] tabular-nums text-right">★ {s.performance}</span>
                 </div>
               ))}
             </div>

@@ -41,7 +41,7 @@ const STUDENTS: StudentRow[] = [
 function gradeColors(score: Score): { bg: string; text: string; border: string } {
   if (score === null) return { bg: "bg-gray-800/50", text: "text-gray-400", border: "border-gray-700" };
   if (score >= 90) return { bg: "bg-emerald-950/50", text: "text-emerald-700", border: "border-emerald-200" };
-  if (score >= 80) return { bg: "bg-[#FDB714]/10", text: "text-[#a16207]", border: "border-[#FDB714]/30" };
+  if (score >= 80) return { bg: "bg-[#FDB714]/10", text: "text-[#FDB714]", border: "border-[#FDB714]/30" };
   if (score >= 70) return { bg: "bg-amber-950/50", text: "text-amber-700", border: "border-amber-200" };
   return { bg: "bg-rose-950/50", text: "text-rose-700", border: "border-rose-200" };
 }

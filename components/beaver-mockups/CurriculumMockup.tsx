@@ -143,7 +143,7 @@ export function CurriculumMockup({ className = "", lang = "en" }: { className?: 
                             <span
                               className={`text-[8px] font-bold uppercase tracking-wider ${
                                 u.status === "current"
-                                  ? "text-[#a16207]"
+                                  ? "text-[#FDB714]"
                                   : u.status === "done"
                                     ? "text-emerald-700"
                                     : "text-gray-400"
@@ -205,7 +205,7 @@ export function CurriculumMockup({ className = "", lang = "en" }: { className?: 
                         {s.name}
                       </span>
                     </div>
-                    <span className="text-[8px] font-bold text-[#a16207] tabular-nums shrink-0">
+                    <span className="text-[8px] font-bold text-[#FDB714] tabular-nums shrink-0">
                       {s.mastery}%
                     </span>
                   </div>

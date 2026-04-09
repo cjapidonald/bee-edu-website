@@ -82,7 +82,7 @@ export function ProfessionalDevMockup({ className = "", lang = "en" }: { classNa
         ].map((k) => (
           <div
             key={k.label}
-            className="rounded-xl bg-gray-900 border border-gray-700/70 p-2.5 shadow-[0_1px_2px_rgba(0,0,0,0.04)]"
+            className="rounded-xl bg-gray-900 border border-gray-700/70 p-2.5 shadow-lg shadow-black/20"
           >
             <div
               className="h-5 w-5 rounded-lg flex items-center justify-center mb-1"
@@ -169,7 +169,7 @@ export function ProfessionalDevMockup({ className = "", lang = "en" }: { classNa
                     <div className="text-[9px] font-bold text-white">{o.teacher}</div>
                     <div className="flex items-center gap-0.5">
                       <Star className="h-2 w-2 text-[#FDB714] fill-[#FDB714]" />
-                      <span className="text-[8px] font-bold text-[#a16207]">{o.score}</span>
+                      <span className="text-[8px] font-bold text-[#FDB714]">{o.score}</span>
                     </div>
                   </div>
                   <div className="flex items-center gap-1 text-[7px] text-gray-500">
@@ -178,7 +178,7 @@ export function ProfessionalDevMockup({ className = "", lang = "en" }: { classNa
                     <span>·</span>
                     <span>{o.date}</span>
                     <span>·</span>
-                    <span className="text-[#a16207]">{o.focus}</span>
+                    <span className="text-[#FDB714]">{o.focus}</span>
                   </div>
                 </div>
               ))}

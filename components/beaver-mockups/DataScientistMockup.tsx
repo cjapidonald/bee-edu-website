@@ -44,7 +44,7 @@ export function DataScientistMockup({ className = "", lang = "en" }: { className
       <div className="grid grid-cols-5 gap-2.5">
         {/* LEFT — Chat (3/5) */}
         <div className="col-span-3">
-          <div className="rounded-2xl bg-gray-900 border border-gray-700/70 shadow-[0_1px_2px_rgba(0,0,0,0.04)] overflow-hidden flex flex-col" style={{ height: 360 }}>
+          <div className="rounded-2xl bg-gray-900 border border-gray-700/70 shadow-lg shadow-black/20 overflow-hidden flex flex-col" style={{ height: 360 }}>
             {/* Header */}
             <div className="flex items-center justify-between px-3 py-2 border-b border-gray-800 bg-gradient-to-r from-amber-50 to-[#8b5cf6]/5">
               <div className="flex items-center gap-1.5">
@@ -60,7 +60,7 @@ export function DataScientistMockup({ className = "", lang = "en" }: { className
             </div>
 
             {/* Messages */}
-            <div className="flex-1 overflow-hidden p-3 space-y-2 bg-gradient-to-b from-gray-900 to-[#fafafa]">
+            <div className="flex-1 overflow-hidden p-3 space-y-2 bg-gradient-to-b from-gray-900 to-gray-950">
               {/* User query */}
               <div className="flex justify-end">
                 <div className="max-w-[80%] px-2.5 py-1.5 bg-[#8b5cf6] text-white rounded-xl rounded-tr-sm">

@@ -39,7 +39,7 @@ const PIPELINE = {
 const STAGE_COLORS = {
   Lead: { accent: "#9ca3af", text: "text-gray-300", bg: "bg-gray-800" },
   Qualified: { accent: "#3b82f6", text: "text-blue-700", bg: "bg-blue-100" },
-  Proposal: { accent: "#FDB714", text: "text-[#a16207]", bg: "bg-[#FDB714]/15" },
+  Proposal: { accent: "#FDB714", text: "text-[#FDB714]", bg: "bg-[#FDB714]/15" },
   Closed: { accent: "#10b981", text: "text-emerald-700", bg: "bg-emerald-100" },
 };
 
@@ -87,7 +87,7 @@ export function SalesMockup({ className = "", lang = "en" }: { className?: strin
         ].map((k) => (
           <div
             key={k.label}
-            className="rounded-xl bg-gray-900 border border-gray-700/70 p-2.5 shadow-[0_1px_2px_rgba(0,0,0,0.04)]"
+            className="rounded-xl bg-gray-900 border border-gray-700/70 p-2.5 shadow-lg shadow-black/20"
           >
             <div
               className="h-5 w-5 rounded-lg flex items-center justify-center mb-1"

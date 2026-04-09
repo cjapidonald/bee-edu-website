@@ -18,7 +18,7 @@ export const KIWIBEE = {
   pink: "#FF6B9D",
   orange: "#FFA500",
   teal: "#00C9A7",
-  glassBg: "rgba(255, 255, 255, 0.72)",
+  glassBg: "rgba(17, 24, 39, 0.72)",
 } as const;
 
 // ========================================================================
@@ -166,7 +166,7 @@ export function MiniLineChart({
             x2={width - padding.right}
             y1={y}
             y2={y}
-            stroke="#e5e7eb"
+            stroke="#374151"
             strokeWidth={1}
             strokeDasharray="2 4"
           />
@@ -196,7 +196,7 @@ export function MiniLineChart({
           cx={p.x}
           cy={p.y}
           r={2.5}
-          fill="white"
+          fill="#1f2937"
           stroke={color}
           strokeWidth={1.75}
         />
@@ -296,7 +296,7 @@ export function StatCard({
   trend?: string;
 }) {
   return (
-    <div className="rounded-2xl bg-gray-900 border border-gray-700/70 p-3 shadow-[0_1px_2px_rgba(0,0,0,0.04)] flex flex-col justify-between min-w-0">
+    <div className="rounded-2xl bg-gray-900 border border-gray-700/70 p-3 shadow-lg shadow-black/20 flex flex-col justify-between min-w-0">
       <div className="flex items-center justify-between mb-1.5">
         <div className={`h-6 w-6 rounded-lg ${bg} flex items-center justify-center`}>
           <Icon className={`h-3.5 w-3.5 ${color}`} />
@@ -325,13 +325,13 @@ export function MockBadge({
 }) {
   const colors = {
     gray: "bg-gray-800 text-gray-300",
-    emerald: "bg-emerald-950/50 text-emerald-700",
-    amber: "bg-amber-950/50 text-amber-700",
-    rose: "bg-rose-950/50 text-rose-700",
-    blue: "bg-blue-950/50 text-blue-700",
-    violet: "bg-violet-950/50 text-violet-700",
-    yellow: "bg-[#FDB714]/10 text-[#a16207]",
-    pink: "bg-[#E83B5E]/10 text-[#E83B5E]",
+    emerald: "bg-emerald-900/50 text-emerald-400",
+    amber: "bg-amber-900/50 text-amber-400",
+    rose: "bg-rose-900/50 text-rose-400",
+    blue: "bg-blue-900/50 text-blue-400",
+    violet: "bg-violet-900/50 text-violet-400",
+    yellow: "bg-[#FDB714]/15 text-[#FDB714]",
+    pink: "bg-[#E83B5E]/15 text-[#E83B5E]",
   };
   return (
     <span
@@ -360,7 +360,7 @@ export function Panel({
 }) {
   return (
     <div
-      className={`rounded-2xl bg-gray-900 border border-gray-700/70 shadow-[0_1px_2px_rgba(0,0,0,0.04)] overflow-hidden ${className}`}
+      className={`rounded-2xl bg-gray-900 border border-gray-700/70 shadow-lg shadow-black/20 overflow-hidden ${className}`}
     >
       {(title || right) && (
         <div className="flex items-center justify-between px-3.5 pt-3 pb-2">

@@ -94,7 +94,7 @@ export function StoriesMockup({ className = "", lang = "en" }: { className?: str
         {/* LEFT — Stories feed (3/5) */}
         <div className="col-span-3 space-y-2">
           {/* New post composer */}
-          <div className="rounded-2xl bg-gray-900 border border-gray-700/70 p-2.5 shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
+          <div className="rounded-2xl bg-gray-900 border border-gray-700/70 p-2.5 shadow-lg shadow-black/20">
             <div className="flex items-start gap-2">
               <MockAvatar name="Ms Nguyen" size={24} gradientFrom="#FDB714" gradientTo="#E83B5E" />
               <div className="flex-1">
@@ -123,7 +123,7 @@ export function StoriesMockup({ className = "", lang = "en" }: { className?: str
           {STORIES.map((s, i) => (
             <div
               key={i}
-              className="rounded-2xl bg-gray-900 border border-gray-700/70 overflow-hidden shadow-[0_1px_2px_rgba(0,0,0,0.04)]"
+              className="rounded-2xl bg-gray-900 border border-gray-700/70 overflow-hidden shadow-lg shadow-black/20"
             >
               {/* Header */}
               <div className="flex items-center gap-2 px-2.5 py-1.5 border-b border-gray-800">
@@ -213,8 +213,8 @@ export function StoriesMockup({ className = "", lang = "en" }: { className?: str
 
           <div className="rounded-2xl bg-gradient-to-br from-[#FDB714]/10 to-[#E83B5E]/5 border border-[#FDB714]/20 p-2.5">
             <div className="flex items-center gap-1 mb-1">
-              <Users className="h-3 w-3 text-[#a16207]" />
-              <span className="text-[9px] font-bold text-[#a16207] uppercase tracking-wide">
+              <Users className="h-3 w-3 text-[#FDB714]" />
+              <span className="text-[9px] font-bold text-[#FDB714] uppercase tracking-wide">
                 Parents Reached
               </span>
             </div>

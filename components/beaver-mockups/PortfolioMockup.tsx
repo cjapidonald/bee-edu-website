@@ -122,7 +122,7 @@ export function PortfolioMockup({ className = "", lang = "en" }: { className?: s
                           a.score === "Expert"
                             ? "text-emerald-600"
                             : a.score === "Proficient"
-                              ? "text-[#a16207]"
+                              ? "text-[#FDB714]"
                               : "text-amber-600"
                         }`}
                       >

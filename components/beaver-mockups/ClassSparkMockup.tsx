@@ -133,7 +133,7 @@ export function ClassSparkMockup({ className = "", lang = "en" }: { className?: 
                     <div className="text-[9px] font-bold text-white truncate">{m.name}</div>
                     <div className="flex items-center justify-center gap-0.5 mt-0.5">
                       <Coins className="h-2 w-2 text-[#FDB714]" />
-                      <span className="text-[9px] font-black text-[#a16207] tabular-nums">
+                      <span className="text-[9px] font-black text-[#FDB714] tabular-nums">
                         {m.gems}
                       </span>
                       <span className="text-[7px] font-bold text-emerald-600 ml-0.5">
@@ -167,7 +167,7 @@ export function ClassSparkMockup({ className = "", lang = "en" }: { className?: 
                       <span className="font-bold text-white">{e.student}</span> {e.action}
                     </div>
                   </div>
-                  <span className="text-[8px] font-black text-[#a16207] tabular-nums shrink-0">
+                  <span className="text-[8px] font-black text-[#FDB714] tabular-nums shrink-0">
                     {e.gems}
                   </span>
                 </div>

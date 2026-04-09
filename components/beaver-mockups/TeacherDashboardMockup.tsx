@@ -93,7 +93,7 @@ export function TeacherDashboardMockup({ className = "", lang = "en" }: { classN
         <StatCard icon={Users} label={mt("common.students", lang)} value={59} color="text-gray-400" bg="bg-gray-800" />
         <StatCard icon={CheckCircle2} label={lang === "vi" ? "Đã chấm hôm nay" : "Graded today"} value={23} color="text-emerald-600" bg="bg-emerald-100" trend="+8" />
         <StatCard icon={Clock} label={lang === "vi" ? "Chờ chấm" : "Pending"} value={22} color="text-amber-600" bg="bg-amber-100" />
-        <StatCard icon={GraduationCap} label={lang === "vi" ? "Điểm TB" : "Avg grade"} value="84.2" color="text-[#a16207]" bg="bg-[#FDB714]/20" trend="+1.3" />
+        <StatCard icon={GraduationCap} label={lang === "vi" ? "Điểm TB" : "Avg grade"} value="84.2" color="text-[#FDB714]" bg="bg-[#FDB714]/20" trend="+1.3" />
       </div>
 
       {/* 2-col */}

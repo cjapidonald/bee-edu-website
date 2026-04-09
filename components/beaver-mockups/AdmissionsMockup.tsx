@@ -108,7 +108,7 @@ export function AdmissionsMockup({ className = "", lang = "en" }: { className?: 
                           a.stage === "Offer"
                             ? "bg-emerald-950/50 text-emerald-700"
                             : a.stage === "Interview"
-                              ? "bg-[#FDB714]/15 text-[#a16207]"
+                              ? "bg-[#FDB714]/15 text-[#FDB714]"
                               : "bg-blue-950/50 text-blue-700"
                         }`}
                       >

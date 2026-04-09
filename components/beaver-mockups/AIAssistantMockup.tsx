@@ -81,7 +81,7 @@ export function AIAssistantMockup({ className = "", lang = "en" }: { className?:
       <div className="grid grid-cols-5 gap-2.5">
         {/* LEFT — Chat (3/5) */}
         <div className="col-span-3">
-          <div className="rounded-2xl bg-gray-900 border border-gray-700/70 shadow-[0_1px_2px_rgba(0,0,0,0.04)] overflow-hidden flex flex-col" style={{ height: 360 }}>
+          <div className="rounded-2xl bg-gray-900 border border-gray-700/70 shadow-lg shadow-black/20 overflow-hidden flex flex-col" style={{ height: 360 }}>
             {/* Chat header */}
             <div className="flex items-center justify-between px-3 py-2 border-b border-gray-800 bg-gradient-to-r from-[#8b5cf6]/5 to-[#E83B5E]/5">
               <div className="flex items-center gap-1.5">
@@ -97,7 +97,7 @@ export function AIAssistantMockup({ className = "", lang = "en" }: { className?:
             </div>
 
             {/* Messages */}
-            <div className="flex-1 overflow-hidden p-3 space-y-2 bg-gradient-to-b from-gray-900 to-[#fafafa]">
+            <div className="flex-1 overflow-hidden p-3 space-y-2 bg-gradient-to-b from-gray-900 to-gray-950">
               {/* User message */}
               <div className="flex justify-end">
                 <div className="max-w-[75%] px-2.5 py-1.5 bg-[#E83B5E] text-white rounded-xl rounded-tr-sm">
@@ -140,7 +140,7 @@ export function AIAssistantMockup({ className = "", lang = "en" }: { className?:
                     </div>
                     <div className="mt-1.5 pt-1.5 border-t border-gray-700/70 flex items-center gap-1">
                       <span className="text-[7px] font-semibold text-gray-500">{lang === "vi" ? "Dựa trên:" : "Grounded in:"}</span>
-                      <span className="text-[7px] px-1 py-0.5 bg-[#FDB714]/20 rounded text-[#a16207]">{lang === "vi" ? "Bản đồ CT" : "Curriculum map"}</span>
+                      <span className="text-[7px] px-1 py-0.5 bg-[#FDB714]/20 rounded text-[#FDB714]">{lang === "vi" ? "Bản đồ CT" : "Curriculum map"}</span>
                       <span className="text-[7px] px-1 py-0.5 bg-[#3b82f6]/10 rounded text-[#3b82f6]">{lang === "vi" ? "Chuẩn trường" : "School standards"}</span>
                     </div>
                   </div>
@@ -184,7 +184,7 @@ export function AIAssistantMockup({ className = "", lang = "en" }: { className?:
               </div>
               <div className="flex items-center gap-1 mt-1.5 px-1">
                 <span className="text-[7px] text-gray-400">{lang === "vi" ? "Chế độ:" : "Mode:"}</span>
-                <span className="text-[7px] px-1 py-0.5 bg-[#FDB714]/15 text-[#a16207] rounded font-bold">{mt("aiAssistant.fastMode", lang)}</span>
+                <span className="text-[7px] px-1 py-0.5 bg-[#FDB714]/15 text-[#FDB714] rounded font-bold">{mt("aiAssistant.fastMode", lang)}</span>
                 <span className="text-[7px] px-1 py-0.5 bg-[#3b82f6] text-white rounded font-bold">{mt("aiAssistant.balancedMode", lang)}</span>
                 <span className="text-[7px] px-1 py-0.5 bg-gray-800 text-gray-500 rounded font-bold">{mt("aiAssistant.deepMode", lang)}</span>
                 <span className="text-[7px] text-gray-400 ml-auto">{lang === "vi" ? "Dựa trên dữ liệu trường" : "Grounded in school data"}</span>

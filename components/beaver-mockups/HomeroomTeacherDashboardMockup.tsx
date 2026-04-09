@@ -94,7 +94,7 @@ export function HomeroomTeacherDashboardMockup({
       tabTitle={`${mt("homeroomTeacher.title", lang)} — Primary 5A`}
       className={className}
     >
-      <div className="flex bg-[#fafafa] text-white" style={{ fontFamily: "-apple-system, system-ui, sans-serif" }}>
+      <div className="flex bg-gray-950 text-white" style={{ fontFamily: "-apple-system, system-ui, sans-serif" }}>
         {/* ================= SIDEBAR ================= */}
         <aside className="w-[120px] shrink-0 bg-gray-900 border-r border-gray-700/70 py-3 px-2 flex flex-col gap-0.5">
           {/* Brand */}
@@ -124,7 +124,7 @@ export function HomeroomTeacherDashboardMockup({
               key={item.label}
               className={`flex items-center gap-1.5 px-2 py-1.5 rounded-lg ${
                 item.active
-                  ? "bg-[#FDB714]/10 text-[#a16207] font-semibold"
+                  ? "bg-[#FDB714]/10 text-[#FDB714] font-semibold"
                   : "text-gray-500"
               }`}
             >
@@ -165,7 +165,7 @@ export function HomeroomTeacherDashboardMockup({
           </div>
 
           {/* ================= DASHBOARD BODY ================= */}
-          <div className="p-3 bg-[#fafafa] space-y-2.5">
+          <div className="p-3 bg-gray-950 space-y-2.5">
             {/* Greeting row */}
             <div className="flex items-end justify-between">
               <div>
@@ -237,7 +237,7 @@ export function HomeroomTeacherDashboardMockup({
                         <div className="flex items-center gap-1">
                           <div className="flex items-center gap-0.5 px-1 py-0.5 bg-[#FDB714]/10 rounded">
                             <Coins className="h-2 w-2 text-[#FDB714]" />
-                            <span className="text-[9px] font-bold text-[#a16207] tabular-nums">{s.gems}</span>
+                            <span className="text-[9px] font-bold text-[#FDB714] tabular-nums">{s.gems}</span>
                           </div>
                           <span
                             className={`text-[8px] font-semibold ${
@@ -337,7 +337,7 @@ export function HomeroomTeacherDashboardMockup({
               <div className="rounded-2xl bg-gradient-to-br from-[#FDB714]/10 to-[#FF6B9D]/5 border border-[#FDB714]/20 p-2.5">
                 <div className="flex items-center justify-between">
                   <div>
-                    <div className="text-[9px] text-[#a16207] font-semibold uppercase tracking-wide">{mt("classSpark.topPerformer", lang)}</div>
+                    <div className="text-[9px] text-[#FDB714] font-semibold uppercase tracking-wide">{mt("classSpark.topPerformer", lang)}</div>
                     <div className="text-[11px] font-bold text-white mt-0.5">Maya Patel · 92</div>
                   </div>
                   <Star className="h-4 w-4 text-[#FDB714] fill-[#FDB714]" />

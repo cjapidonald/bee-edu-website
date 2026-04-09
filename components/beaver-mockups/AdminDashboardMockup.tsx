@@ -136,7 +136,7 @@ export function AdminDashboardMockup({ className = "", lang = "en" }: { classNam
                       <div className="text-[7px] text-gray-500">{lang === "vi" ? "c.cần" : "attend."}</div>
                     </div>
                     <div className="text-right">
-                      <div className="text-[9px] font-bold text-[#a16207] tabular-nums">{s.grade}</div>
+                      <div className="text-[9px] font-bold text-[#FDB714] tabular-nums">{s.grade}</div>
                       <div className="text-[7px] text-gray-500">{lang === "vi" ? "TB" : "avg"}</div>
                     </div>
                     <Sparkline data={s.trend} color="#3b82f6" width={40} height={16} />

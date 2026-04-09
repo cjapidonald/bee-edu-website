@@ -47,7 +47,7 @@ const PIPELINE = {
 const COLUMN_COLORS = {
   Applied: { bg: "bg-gray-800", text: "text-gray-300", accent: "#9ca3af" },
   Screen: { bg: "bg-blue-100", text: "text-blue-700", accent: "#3b82f6" },
-  Interview: { bg: "bg-[#FDB714]/15", text: "text-[#a16207]", accent: "#FDB714" },
+  Interview: { bg: "bg-[#FDB714]/15", text: "text-[#FDB714]", accent: "#FDB714" },
   Offer: { bg: "bg-emerald-100", text: "text-emerald-700", accent: "#10b981" },
 };
 
@@ -93,7 +93,7 @@ export function RecruitmentMockup({ className = "", lang = "en" }: { className?:
         {JOBS.map((j) => (
           <div
             key={j.title}
-            className="rounded-xl bg-gray-900 border border-gray-700/70 p-2 shadow-[0_1px_2px_rgba(0,0,0,0.04)]"
+            className="rounded-xl bg-gray-900 border border-gray-700/70 p-2 shadow-lg shadow-black/20"
           >
             <div className="flex items-center gap-1 mb-1">
               <div
@@ -114,7 +114,7 @@ export function RecruitmentMockup({ className = "", lang = "en" }: { className?:
                   j.status === "Open"
                     ? "bg-emerald-950/50 text-emerald-700"
                     : j.status === "Interviewing"
-                      ? "bg-[#FDB714]/15 text-[#a16207]"
+                      ? "bg-[#FDB714]/15 text-[#FDB714]"
                       : "bg-blue-950/50 text-blue-700"
                 }`}
               >

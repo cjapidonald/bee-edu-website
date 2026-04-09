@@ -75,7 +75,7 @@ export function PolicyMockup({ className = "", lang = "en" }: { className?: stri
           return (
             <div
               key={c.name}
-              className="rounded-xl bg-gray-900 border border-gray-700/70 p-2 shadow-[0_1px_2px_rgba(0,0,0,0.04)]"
+              className="rounded-xl bg-gray-900 border border-gray-700/70 p-2 shadow-lg shadow-black/20"
             >
               <div
                 className="h-5 w-5 rounded-lg flex items-center justify-center mb-1"

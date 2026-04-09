@@ -80,7 +80,7 @@ export function ParentDashboardMockup({ className = "", lang = "en" }: { classNa
               </div>
               <div className="flex items-center gap-0.5 px-1.5 py-0.5 bg-[#FDB714]/10 rounded">
                 <Coins className="h-2 w-2 text-[#FDB714]" />
-                <span className="text-[8px] font-bold text-[#a16207]">{lang === "vi" ? "148 đá quý" : "148 gems"}</span>
+                <span className="text-[8px] font-bold text-[#FDB714]">{lang === "vi" ? "148 đá quý" : "148 gems"}</span>
               </div>
             </div>
           </div>
@@ -190,7 +190,7 @@ export function ParentDashboardMockup({ className = "", lang = "en" }: { classNa
 
           <div className="rounded-2xl bg-gradient-to-br from-[#FDB714]/10 to-[#FF6B9D]/5 border border-[#FDB714]/20 p-2.5">
             <div className="flex items-center justify-between mb-1">
-              <div className="text-[9px] font-bold text-[#a16207] uppercase tracking-wide">
+              <div className="text-[9px] font-bold text-[#FDB714] uppercase tracking-wide">
                 {lang === "vi" ? "Sự kiện kế tiếp" : "Next Event"}
               </div>
               <Calendar className="h-3 w-3 text-[#FDB714]" />

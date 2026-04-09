@@ -89,7 +89,7 @@ export function TeamLeaderDashboardMockup({ className = "", lang = "en" }: { cla
         ].map((k) => (
           <div
             key={k.label}
-            className="rounded-2xl bg-gray-900 border border-gray-700/70 p-2.5 shadow-[0_1px_2px_rgba(0,0,0,0.04)]"
+            className="rounded-2xl bg-gray-900 border border-gray-700/70 p-2.5 shadow-lg shadow-black/20"
           >
             <div className="flex items-center justify-between mb-1">
               <div
@@ -186,7 +186,7 @@ export function TeamLeaderDashboardMockup({ className = "", lang = "en" }: { cla
                     <div className="text-[7px] text-gray-500">{mt(`subjects.${t.subjectKey}`, lang)}</div>
                   </div>
                   <div className="text-right shrink-0">
-                    <div className="text-[9px] font-bold text-[#a16207] tabular-nums">★ {t.rating}</div>
+                    <div className="text-[9px] font-bold text-[#FDB714] tabular-nums">★ {t.rating}</div>
                     <div className="text-[7px] text-gray-500">{t.lessons} {lang === "vi" ? "tiết" : "lessons"}</div>
                   </div>
                 </div>

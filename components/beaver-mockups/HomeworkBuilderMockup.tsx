@@ -121,7 +121,7 @@ export function HomeworkBuilderMockup({ className = "", lang = "en" }: { classNa
                     key={t.label}
                     className="flex items-center gap-1 p-1 rounded hover:bg-gray-800/50 cursor-pointer"
                   >
-                    <t.icon className="h-2.5 w-2.5 text-[#a16207] shrink-0" />
+                    <t.icon className="h-2.5 w-2.5 text-[#FDB714] shrink-0" />
                     <span className="text-[8px] text-gray-300">{t.label}</span>
                   </div>
                 ))}
@@ -132,7 +132,7 @@ export function HomeworkBuilderMockup({ className = "", lang = "en" }: { classNa
 
         {/* CENTER — AI conversation */}
         <div className="col-span-2">
-          <div className="rounded-2xl bg-gray-900 border border-gray-700/70 shadow-[0_1px_2px_rgba(0,0,0,0.04)] overflow-hidden flex flex-col h-full">
+          <div className="rounded-2xl bg-gray-900 border border-gray-700/70 shadow-lg shadow-black/20 overflow-hidden flex flex-col h-full">
             {/* Header */}
             <div className="flex items-center justify-between px-3 py-2 border-b border-gray-800 bg-gradient-to-r from-[#8b5cf6]/5 to-[#E83B5E]/5">
               <div className="flex items-center gap-1.5">
@@ -145,7 +145,7 @@ export function HomeworkBuilderMockup({ className = "", lang = "en" }: { classNa
             </div>
 
             {/* Messages */}
-            <div className="flex-1 overflow-hidden p-3 space-y-2 bg-gradient-to-b from-gray-900 to-[#fafafa]">
+            <div className="flex-1 overflow-hidden p-3 space-y-2 bg-gradient-to-b from-gray-900 to-gray-950">
               <div className="flex justify-end">
                 <div className="max-w-[85%] px-2.5 py-1.5 bg-[#E83B5E] text-white rounded-xl rounded-tr-sm">
                   <div className="text-[9px]">
@@ -200,7 +200,7 @@ export function HomeworkBuilderMockup({ className = "", lang = "en" }: { classNa
 
         {/* RIGHT — Preview */}
         <div className="col-span-2">
-          <div className="rounded-2xl bg-gray-900 border border-gray-700/70 shadow-[0_1px_2px_rgba(0,0,0,0.04)] overflow-hidden h-full flex flex-col">
+          <div className="rounded-2xl bg-gray-900 border border-gray-700/70 shadow-lg shadow-black/20 overflow-hidden h-full flex flex-col">
             <div className="flex items-center justify-between px-3 py-2 border-b border-gray-800">
               <div className="text-[9px] font-bold text-white">{lang === "vi" ? "Xem trước Trực tiếp" : "Live Preview"}</div>
               <div className="flex gap-1">
@@ -211,7 +211,7 @@ export function HomeworkBuilderMockup({ className = "", lang = "en" }: { classNa
               </div>
             </div>
 
-            <div className="flex-1 overflow-hidden p-3 bg-gradient-to-b from-[#fafafa] to-gray-950">
+            <div className="flex-1 overflow-hidden p-3 bg-gradient-to-b from-gray-950 to-gray-950">
               <div className="bg-gray-900 rounded-lg border border-gray-700 shadow-sm p-3">
                 <div className="text-[10px] font-bold text-white mb-1">
                   {lang === "vi" ? "Bài tập Chủ đề 4: Ngôn ngữ Hình tượng" : "Unit 4 Homework: Figurative Language"}
