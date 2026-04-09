@@ -108,7 +108,7 @@ function SpotlightCard({ item, dimmed, onHoverStart, onHoverEnd }: CardProps) {
       {/* Text */}
       <div className="relative z-10 flex flex-col gap-2">
         <div className="flex items-center gap-2">
-          <h3 className="font-semibold text-[14px] text-white tracking-tight">
+          <h3 className="font-semibold text-[15px] tracking-tight" style={{ color: item.color }}>
             {item.title}
           </h3>
           {item.badge && (
@@ -120,7 +120,7 @@ function SpotlightCard({ item, dimmed, onHoverStart, onHoverEnd }: CardProps) {
             </span>
           )}
         </div>
-        <p className="text-[12.5px] text-white/40 leading-relaxed">
+        <p className="text-[13px] text-gray-300 leading-relaxed">
           {item.description}
         </p>
       </div>
