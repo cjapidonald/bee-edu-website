@@ -4,7 +4,7 @@ import { buildPageMetadata } from "@/lib/seo/metadata";
 import FeaturesPageClient from "./FeaturesPageClient";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
-  const lang = (await params).lang === "zh-HK" ? "zh-HK" : "en";
+  const lang = (await params).lang === "zh-HK" ? "zh-HK" : (await params).lang === "vi" ? "vi" : "en";
 
   const titles: Record<string, string> = {
     en: "KiwiBee Features | School Management Platform",
@@ -25,6 +25,6 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 }
 
 export default async function FeaturesPage({ params }: { params: Promise<{ lang: string }> }) {
-  const lang = (await params).lang === "zh-HK" ? "zh-HK" : "en";
+  const lang = (await params).lang === "zh-HK" ? "zh-HK" : (await params).lang === "vi" ? "vi" : "en";
   return <FeaturesPageClient params={{ lang }} />;
 }

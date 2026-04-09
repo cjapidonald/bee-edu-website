@@ -71,9 +71,9 @@ export default function Footer({ lang, dict }: FooterProps) {
   const [emailError, setEmailError] = useState("");
   const [isSubscribing, setIsSubscribing] = useState(false);
 
+  const slug = lang === "vi" ? "vn" : "en";
   const getLocalizedPath = (path: string) => {
-    if (lang === "en") return path;
-    return `/${lang}${path}`;
+    return `/${slug}${path === "/" ? "" : path}`;
   };
 
   // Get translated links

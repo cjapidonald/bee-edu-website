@@ -177,8 +177,8 @@ const contentByLang: Record<
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const rawLang = (await params).lang;
-  const lang = rawLang === "zh-HK" ? "zh-HK" : "en";
-  const t = contentByLang[lang] ?? contentByLang.en;
+  const lang = rawLang === "vi" ? "vi" : "en";
+  const t = contentByLang[lang as keyof typeof contentByLang] ?? contentByLang.en;
   const title = `${t.badge}: ${t.title} ${t.highlight} | KiwiBee`;
   const description = t.description;
   return buildPageMetadata({ lang, path: "/for-team-leaders", title, description });
@@ -186,9 +186,9 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 
 export default async function ForTeamLeadersPage({ params }: { params: Promise<{ lang: string }> }) {
   const rawLang = (await params).lang;
-  const lang: Locale = rawLang === "zh-HK" ? "zh-HK" : rawLang === "vi" ? "vi" : "en";
-  const contentLang = lang === "zh-HK" ? "zh-HK" : "en";
-  const t = contentByLang[contentLang] ?? contentByLang.en;
+  const lang: Locale = rawLang === "vi" ? "vi" : "en";
+  const contentLang = lang === "vi" ? "vi" : "en";
+  const t = contentByLang[contentLang as keyof typeof contentByLang] ?? contentByLang.en;
 
   return (
     <RolePageTemplate

@@ -34,13 +34,13 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://kiwibee.io";
 const includeSampleContent = true;
 
 const getLocalizedPath = (lang: string, path: string) => {
-  if (lang === "en") return path;
-  return `/${lang}${path}`;
+  const slug = lang === "vi" ? "vn" : "en";
+  return `/${slug}${path === "/" ? "" : path}`;
 };
 
-type SupportedLang = "en" | "zh-HK";
+type SupportedLang = "en" | "vi";
 
-const getSupportedLang = (lang: string): SupportedLang => (lang === "zh-HK" ? "zh-HK" : "en");
+const getSupportedLang = (lang: string): SupportedLang => (lang === "vi" ? "vi" : "en");
 
 const normalizePostLanguage = (value: string | null | undefined): SupportedLang | "other" | null => {
   if (!value) return null;
@@ -49,13 +49,13 @@ const normalizePostLanguage = (value: string | null | undefined): SupportedLang 
   const lower = trimmed.toLowerCase();
 
   if (lower === "en" || lower.startsWith("en-")) return "en";
-  if (lower === "zh-hk" || lower === "zh_hk" || lower.startsWith("zh")) return "zh-HK";
+  if (lower === "vi" || lower.startsWith("vi-")) return "vi";
 
   return "other";
 };
 
 const getPostLangKey = (language: string | null | undefined): SupportedLang =>
-  normalizePostLanguage(language) === "zh-HK" ? "zh-HK" : "en";
+  normalizePostLanguage(language) === "vi" ? "vi" : "en";
 
 const dedupePosts = (posts: BlogPost[]) => {
   const seen = new Set<string>();
@@ -74,11 +74,11 @@ const dedupePosts = (posts: BlogPost[]) => {
 
 const filterPostsForLang = (posts: BlogPost[], lang: string): BlogPost[] => {
   const supportedLang = getSupportedLang(lang);
-  if (supportedLang === "zh-HK") {
-    return posts.filter((post) => normalizePostLanguage(post.language) === "zh-HK");
+  if (supportedLang === "vi") {
+    return posts.filter((post) => normalizePostLanguage(post.language) === "vi");
   }
 
-  return posts.filter((post) => normalizePostLanguage(post.language) !== "zh-HK");
+  return posts.filter((post) => normalizePostLanguage(post.language) !== "vi");
 };
 
 // Filter out test/garbage posts with placeholder content
@@ -152,12 +152,12 @@ export async function generateMetadata({
 }: {
   params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
-  const lang = (await params).lang === "zh-HK" ? "zh-HK" : "en";
-  const locale: Locale = lang === "zh-HK" ? "zh-HK" : "en";
-  const isZh = locale === "zh-HK";
-  const title = isZh ? "KiwiBee 博客" : "KiwiBee Blog";
-  const description = isZh
-    ? "面向 K-12 教育者的理念、研究、教學技巧與資源。"
+  const lang = (await params).lang === "zh-HK" ? "zh-HK" : (await params).lang === "vi" ? "vi" : "en";
+  const locale: Locale = lang === "vi" ? "vi" : "en";
+  const isVi = locale === "vi";
+  const title = isVi ? "KiwiBee Blog" : "KiwiBee Blog";
+  const description = isVi
+    ? "Ý tưởng, nghiên cứu, kỹ thuật giảng dạy và tài nguyên cho giáo viên K-12."
     : "Ideas, research, teaching techniques, and resources for K-12 educators.";
   const ogImageUrl = new URL("/og-default.png", siteUrl);
 
@@ -171,8 +171,8 @@ export async function generateMetadata({
     alternates: {
       canonical: canonicalPath,
       languages: {
-        en: "/blog",
-        "zh-HK": "/zh-HK/blog",
+        en: "/en/blog",
+        vi: "/vn/blog",
       },
     },
     openGraph: {
@@ -197,7 +197,7 @@ export default async function BlogPage({
 }: {
   params: Promise<{ lang: string }>;
 }) {
-  const lang = (await params).lang === "zh-HK" ? "zh-HK" : "en";
+  const lang = (await params).lang === "zh-HK" ? "zh-HK" : (await params).lang === "vi" ? "vi" : "en";
   const posts = await fetchPosts(lang);
 
   return <BlogPageClient lang={lang} posts={posts} />;

@@ -47,9 +47,9 @@ interface BlogPost {
   content_md?: string | null;
 }
 
-type SupportedLang = "en" | "zh-HK";
+type SupportedLang = "en" | "vi";
 
-const getSupportedLang = (lang: string): SupportedLang => (lang === "zh-HK" ? "zh-HK" : "en");
+const getSupportedLang = (lang: string): SupportedLang => (lang === "vi" ? "vi" : "en");
 
 const UI_TEXTS: Record<SupportedLang, {
   badge: string;
@@ -93,26 +93,26 @@ const UI_TEXTS: Record<SupportedLang, {
     formatPostCount: (count) => `${count} ${count === 1 ? "post" : "posts"}`,
     formatReadTime: (minutes) => `${minutes} min read`,
   },
-  "zh-HK": {
-    badge: "教育社群",
-    title: "教育工作者社群",
-    subtitle: "面向 K-12 教育者的理念、研究、教學技巧與資源。",
-    searchPlaceholder: "搜尋文章…",
-    emptyTitle: "找不到文章",
-    emptySubtitle: "請嘗試調整搜尋或分類篩選。",
-    featured: "精選",
-    latestTitle: "最新文章",
-    latestSubtitle: "最新教學分享、反思與實用資源。",
-    pinned: "置頂",
-    topics: "分類",
-    allTopics: "全部",
-    popularTags: "熱門標籤",
-    popularPosts: "熱門文章",
-    noPopularPosts: "目前還沒有熱門文章。發佈第一篇文章，開始建立你的博客內容。",
-    draft: "草稿",
-    defaultAuthor: "KiwiBee 團隊",
-    formatPostCount: (count) => `${count} 篇文章`,
-    formatReadTime: (minutes) => `${minutes} 分鐘閱讀`,
+  vi: {
+    badge: "Cộng đồng Giáo dục",
+    title: "Cộng đồng Nhà giáo",
+    subtitle: "Ý tưởng, nghiên cứu, kỹ thuật giảng dạy và tài nguyên cho giáo viên K-12.",
+    searchPlaceholder: "Tìm kiếm bài viết…",
+    emptyTitle: "Không tìm thấy bài viết",
+    emptySubtitle: "Vui lòng thử điều chỉnh tìm kiếm hoặc bộ lọc.",
+    featured: "Nổi bật",
+    latestTitle: "Bài viết mới nhất",
+    latestSubtitle: "Chia sẻ, suy ngẫm và tài nguyên giảng dạy mới nhất.",
+    pinned: "Ghim",
+    topics: "Chủ đề",
+    allTopics: "Tất cả",
+    popularTags: "Thẻ phổ biến",
+    popularPosts: "Bài viết phổ biến",
+    noPopularPosts: "Chưa có bài viết phổ biến nào. Hãy đăng bài đầu tiên để xây dựng nội dung blog.",
+    draft: "Bản nháp",
+    defaultAuthor: "Đội ngũ KiwiBee",
+    formatPostCount: (count) => `${count} bài viết`,
+    formatReadTime: (minutes) => `${minutes} phút đọc`,
   },
 };
 
@@ -300,7 +300,7 @@ function BlogOverlay({
   const [copied, setCopied] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
-  const supportedLang: SupportedLang = lang === "zh-HK" ? "zh-HK" : "en";
+  const supportedLang: SupportedLang = lang === "vi" ? "vi" : "en";
   const t = UI_TEXTS[supportedLang];
 
   const authorName = getAuthorName(post, t.defaultAuthor);
@@ -327,7 +327,7 @@ function BlogOverlay({
     if (!dateString) return "";
     const date = new Date(dateString);
     if (Number.isNaN(date.getTime())) return "";
-    return date.toLocaleDateString(supportedLang === "zh-HK" ? "zh-HK" : "en-US", {
+    return date.toLocaleDateString(supportedLang === "vi" ? "vi" : "en-US", {
       month: "long",
       day: "numeric",
       year: "numeric",
@@ -507,9 +507,9 @@ function BlogOverlay({
                   className="gap-2 rounded-lg text-xs"
                 >
                   {copied ? (
-                    <><Check className="h-3.5 w-3.5 text-green-600" /><span className="text-green-600">{supportedLang === "zh-HK" ? "已複製" : "Copied!"}</span></>
+                    <><Check className="h-3.5 w-3.5 text-green-600" /><span className="text-green-600">{supportedLang === "vi" ? "已複製" : "Copied!"}</span></>
                   ) : (
-                    <><Share2 className="h-3.5 w-3.5" />{supportedLang === "zh-HK" ? "分享" : "Share"}</>
+                    <><Share2 className="h-3.5 w-3.5" />{supportedLang === "vi" ? "分享" : "Share"}</>
                   )}
                 </Button>
                 <Button
@@ -519,7 +519,7 @@ function BlogOverlay({
                   className="gap-1.5 rounded-lg text-xs text-gray-500"
                 >
                   <ArrowLeft className="h-3.5 w-3.5" />
-                  {supportedLang === "zh-HK" ? "返回" : "Back"}
+                  {supportedLang === "vi" ? "返回" : "Back"}
                 </Button>
               </div>
             </div>
@@ -571,7 +571,7 @@ export default function BlogPageClient({
       if (!dateString) return "";
       const date = new Date(dateString);
       if (Number.isNaN(date.getTime())) return "";
-      return date.toLocaleDateString(supportedLang === "zh-HK" ? "zh-HK" : "en-US", {
+      return date.toLocaleDateString(supportedLang === "vi" ? "vi" : "en-US", {
         month: "short",
         day: "numeric",
         year: "numeric",

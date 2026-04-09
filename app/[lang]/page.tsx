@@ -18,32 +18,28 @@ export async function generateMetadata({
 }: {
   params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
-  const lang = (await params).lang === "zh-HK" ? "zh-HK" : "en";
+  const lang = (await params).lang === "zh-HK" ? "zh-HK" : (await params).lang === "vi" ? "vi" : "en";
 
   const title =
-    lang === "zh-HK"
-      ? "KiwiBee- AI 原生學校管理平台"
+    lang === "vi"
+      ? "KiwiBee - Nền tảng Quản lý Trường học AI"
       : "KiwiBee - AI-Native School Management Platform";
   const description =
-    lang === "zh-HK"
-      ? "KiwiBee提供一站式學校管理：課程、排課、行為追蹤、成績冊與 AI 智能分析。"
+    lang === "vi"
+      ? "KiwiBee cung cấp quản lý trường học toàn diện: chương trình, lịch học, theo dõi hành vi, sổ điểm và phân tích AI."
       : "KiwiBee is an AI-native school management platform for curriculum, scheduling, behavior tracking, gradebook, and AI-powered insights.";
   const canonical = getLocalizedPath(lang, "/");
   const ogImageUrl = new URL("/og-default.png", siteUrl);
   const keywords =
-    lang === "zh-HK"
+    lang === "vi"
       ? [
           "KiwiBee",
-          "KiwiBee",
-          "KiwiBee",
-          "學校管理系統",
+          "hệ thống quản lý trường học",
           "SIS",
           "LMS",
-          "AI 學校管理",
+          "quản lý trường học AI",
         ]
       : [
-          "KiwiBee",
-          "KiwiBee",
           "KiwiBee",
           "school management system",
           "SIS",
@@ -59,8 +55,8 @@ export async function generateMetadata({
     alternates: {
       canonical,
       languages: {
-        en: "/",
-        "zh-HK": "/zh-HK",
+        en: "/en",
+        vi: "/vn",
       },
     },
     openGraph: {
@@ -85,12 +81,12 @@ export default async function LandingPage({
 }: {
   params: Promise<{ lang: string }>;
 }) {
-  const lang = (await params).lang === "zh-HK" ? "zh-HK" : "en";
+  const lang = (await params).lang === "zh-HK" ? "zh-HK" : (await params).lang === "vi" ? "vi" : "en";
   const dict = await loadDictionary(lang);
   const localizedHomeUrl = new URL(getLocalizedPath(lang, "/"), siteUrl).toString();
   const orgDescription =
-    lang === "zh-HK"
-      ? "KiwiBee是一個 AI 原生學校管理平台。"
+    lang === "vi"
+      ? "KiwiBee là nền tảng quản lý trường học AI."
       : "KiwiBee is an AI-native school management platform.";
 
   const structuredData = {

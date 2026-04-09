@@ -4,7 +4,7 @@ import { buildPageMetadata } from "@/lib/seo/metadata";
 import PricingPageClient from "./PricingPageClient";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
-  const lang = (await params).lang === "zh-HK" ? "zh-HK" : "en";
+  const lang = (await params).lang === "zh-HK" ? "zh-HK" : (await params).lang === "vi" ? "vi" : "en";
 
   const titles: Record<string, string> = {
     en: "Pricing | KiwiBee",

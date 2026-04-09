@@ -5,7 +5,7 @@ interface CookiesPageProps {
 }
 
 export default async function CookiesPage({ params }: CookiesPageProps) {
-  const lang = (await params).lang === "zh-HK" ? "zh-HK" : "en";
+  const lang = (await params).lang === "zh-HK" ? "zh-HK" : (await params).lang === "vi" ? "vi" : "en";
   const target = lang === "en" ? "/privacy#cookie-settings" : `/${lang}/privacy#cookie-settings`;
   redirect(target);
 }

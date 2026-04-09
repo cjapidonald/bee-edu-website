@@ -1,8 +1,8 @@
 import { type ColorTheme } from "@/lib/marketing/colors";
 
-export type BlogLang = "en" | "zh-HK";
+export type BlogLang = "en" | "vi" | "zh-HK";
 
-export const getSupportedLang = (lang: string): BlogLang => (lang === "zh-HK" ? "zh-HK" : "en");
+export const getSupportedLang = (lang: string): BlogLang => (lang === "zh-HK" ? "zh-HK" : lang === "vi" ? "vi" : "en");
 
 // Category color mapping for consistent styling
 const CATEGORY_COLORS: Record<string, ColorTheme> = {
@@ -39,9 +39,25 @@ export const CATEGORY_LABELS_BY_LANG: Record<BlogLang, Record<string, string>> =
     schoolDesign: "School Design",
     teacher_blog: "Teacher Blog",
   },
+  vi: {
+    eduTech: "Công nghệ Giáo dục",
+    tutorials: "Hướng dẫn",
+    teachingTechniques: "Kỹ thuật Giảng dạy",
+    classActivity: "Hoạt động Lớp học",
+    teacherReflection: "Suy ngẫm Giáo viên",
+    tips: "Mẹo hay",
+    shop: "Cửa hàng",
+    caseStudy: "Nghiên cứu Tình huống",
+    research: "Nghiên cứu",
+    researchQuestion: "Câu hỏi Nghiên cứu",
+    teacherStories: "Câu chuyện Giáo viên",
+    studentWellbeing: "Sức khỏe Học sinh",
+    schoolDesign: "Thiết kế Trường học",
+    teacher_blog: "Blog Giáo viên",
+  },
   "zh-HK": {
     eduTech: "教育科技",
-    tutorials: "教學指南",
+    tutorials: "教程",
     teachingTechniques: "教學技巧",
     classActivity: "課堂活動",
     teacherReflection: "教師反思",
@@ -51,7 +67,7 @@ export const CATEGORY_LABELS_BY_LANG: Record<BlogLang, Record<string, string>> =
     research: "研究",
     researchQuestion: "研究問題",
     teacherStories: "教師故事",
-    studentWellbeing: "學生福祉",
+    studentWellbeing: "學生健康",
     schoolDesign: "學校設計",
     teacher_blog: "教師博客",
   },

@@ -157,9 +157,9 @@ export default function Header({ lang, dict }: HeaderProps) {
     }, 150);
   };
 
+  const slug = lang === "vi" ? "vn" : "en";
   const getLocalizedPath = (path: string) => {
-    if (lang === "en") return path;
-    return `/${lang}${path}`;
+    return `/${slug}${path === "/" ? "" : path}`;
   };
 
   // Get translated links
@@ -396,29 +396,25 @@ export default function Header({ lang, dict }: HeaderProps) {
             <select
               id="language-select"
               suppressHydrationWarning
-              value={lang}
+              value={slug}
               onChange={(e) => {
-                const newLang = e.target.value;
-                // Strip ANY existing locale prefix (vi is default/unprefixed, but
-                // handle /vi defensively in case it ever appears).
+                const newSlug = e.target.value;
+                // Strip existing locale slug from path
                 const pathWithoutLang =
-                  pathname?.replace(/^\/(vi|en|zh-HK)(?=\/|$)/, "") || "";
+                  pathname?.replace(/^\/(vn|en)(?=\/|$)/, "") || "";
                 const basePath = pathWithoutLang === "" ? "/" : pathWithoutLang;
-                // vi is the default locale — it has NO URL prefix.
-                const newPath =
-                  newLang === "vi" ? basePath : `/${newLang}${basePath === "/" ? "" : basePath}`;
+                const newPath = `/${newSlug}${basePath === "/" ? "" : basePath}`;
                 const query = searchParams?.toString();
-                const nextHref = query ? `${newPath || "/"}?${query}` : newPath || "/";
+                const nextHref = query ? `${newPath}?${query}` : newPath;
                 // Persist the choice so middleware honors it on subsequent requests.
-                document.cookie = `NEXT_LOCALE=${newLang}; path=/; max-age=31536000; samesite=lax`;
+                document.cookie = `NEXT_LOCALE=${newSlug}; path=/; max-age=31536000; samesite=lax`;
                 router.replace(nextHref);
                 router.refresh();
               }}
               className="text-sm bg-transparent border-none outline-none cursor-pointer text-[#16a34a]"
             >
-              <option value="vi">Tiếng Việt</option>
+              <option value="vn">Tiếng Việt</option>
               <option value="en">English</option>
-              <option value="zh-HK">繁體中文</option>
             </select>
           </div>
 

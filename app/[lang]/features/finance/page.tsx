@@ -10,7 +10,7 @@ import { buildPageMetadata } from "@/lib/seo/metadata";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const rawLang = (await params).lang;
-  const lang = rawLang === "zh-HK" ? "zh-HK" : "en";
+  const lang = rawLang === "vi" ? "vi" : "en";
   const copy = marketingCopy[lang] ?? marketingCopy.en;
   const t = copy.featurePages.finance;
   const title = t.seoTitle || `${t.title} ${t.highlight} | KiwiBee`;
@@ -20,8 +20,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 
 export default async function FinancePage({ params }: { params: Promise<{ lang: string }> }) {
   const rawLang = (await params).lang;
-  const lang: Locale = rawLang === "zh-HK" ? "zh-HK" : rawLang === "vi" ? "vi" : "en";
-  const contentLang = lang === "zh-HK" ? "zh-HK" : "en";
+  const lang: Locale = rawLang === "vi" ? "vi" : "en";
+  const contentLang = lang === "vi" ? "vi" : "en";
   const copy = marketingCopy[lang] ?? marketingCopy.en;
   const t = copy.featurePages.finance;
   const common = copy.featurePages.common;

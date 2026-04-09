@@ -1,8 +1,13 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
-const defaultLocale = 'vi';
-const locales = ['vi', 'en', 'zh-HK'];
+// URL slugs visible in the browser (vn, en)
+const urlSlugs = ['vn', 'en'];
+// Map URL slug → internal locale used by [lang] folder
+const slugToLocale: Record<string, string> = { vn: 'vi', en: 'en' };
+// Legacy prefixes that need redirects
+const legacySlugs: Record<string, string> = { vi: 'vn', 'zh-HK': 'en' };
+const defaultSlug = 'en';
 
 const WRITE_METHODS = ['POST', 'PUT', 'PATCH', 'DELETE'];
 
@@ -31,12 +36,12 @@ function buildCspHeader(reportOnly: boolean): string {
   return directives.join('; ');
 }
 
-function getLocale(request: NextRequest): string {
-  const cookieLocale = request.cookies.get('NEXT_LOCALE')?.value;
-  if (cookieLocale && locales.indexOf(cookieLocale) !== -1) {
-    return cookieLocale;
+function getPreferredSlug(request: NextRequest): string {
+  const cookieSlug = request.cookies.get('NEXT_LOCALE')?.value;
+  if (cookieSlug && urlSlugs.indexOf(cookieSlug) !== -1) {
+    return cookieSlug;
   }
-  return defaultLocale;
+  return defaultSlug;
 }
 
 function getOriginCandidate(request: NextRequest): string | null {
@@ -51,6 +56,24 @@ function getOriginCandidate(request: NextRequest): string | null {
   } catch {
     return null;
   }
+}
+
+function getSlugFromPath(pathname: string): string | null {
+  for (const slug of urlSlugs) {
+    if (pathname === '/' + slug || pathname.startsWith('/' + slug + '/')) {
+      return slug;
+    }
+  }
+  return null;
+}
+
+function getLegacySlugFromPath(pathname: string): { oldSlug: string; newSlug: string } | null {
+  for (const [old, replacement] of Object.entries(legacySlugs)) {
+    if (pathname === '/' + old || pathname.startsWith('/' + old + '/')) {
+      return { oldSlug: old, newSlug: replacement };
+    }
+  }
+  return null;
 }
 
 export function middleware(request: NextRequest) {
@@ -93,45 +116,37 @@ export function middleware(request: NextRequest) {
     return response;
   }
 
-  // Check if the pathname already has a locale
-  let pathnameHasLocale = false;
-  for (let i = 0; i < locales.length; i++) {
-    const loc = locales[i];
-    if (pathname === '/' + loc || pathname.startsWith('/' + loc + '/')) {
-      pathnameHasLocale = true;
-      break;
-    }
+  // --- Handle legacy locale prefixes (/vi → /vn, /zh-HK → /en) ---
+  const legacy = getLegacySlugFromPath(pathname);
+  if (legacy && isSafeMethod) {
+    const url = request.nextUrl.clone();
+    const rest = pathname === '/' + legacy.oldSlug
+      ? ''
+      : pathname.substring(legacy.oldSlug.length + 1);
+    url.pathname = '/' + legacy.newSlug + rest;
+    return withCsp(NextResponse.redirect(url, 308));
   }
 
-  if (pathnameHasLocale) {
-    if (pathname === '/' + defaultLocale || pathname.startsWith('/' + defaultLocale + '/')) {
-      if (!isSafeMethod) {
-        return withCsp(NextResponse.next());
-      }
+  // --- Handle known URL slugs (/vn/..., /en/...) ---
+  const slug = getSlugFromPath(pathname);
+  if (slug) {
+    const locale = slugToLocale[slug];
+    if (locale !== slug) {
+      // Rewrite /vn/... → /vi/... internally (URL stays /vn/...)
       const url = request.nextUrl.clone();
-      let withoutLocale = pathname;
-      if (pathname === '/' + defaultLocale) {
-        withoutLocale = '/';
-      } else {
-        withoutLocale = pathname.substring(defaultLocale.length + 1);
-      }
-      url.pathname = withoutLocale || '/';
-      return withCsp(NextResponse.redirect(url, 308));
+      const rest = pathname === '/' + slug
+        ? ''
+        : pathname.substring(slug.length + 1);
+      url.pathname = '/' + locale + rest;
+      return withCsp(NextResponse.rewrite(url));
     }
-
+    // /en/... → [lang]=en, no rewrite needed
     return withCsp(NextResponse.next());
   }
 
-  // Redirect to locale-prefixed path
-  const locale = getLocale(request);
-
-  if (locale === defaultLocale) {
-    const url = new URL('/' + locale + pathname, request.url);
-    url.search = request.nextUrl.search;
-    return withCsp(NextResponse.rewrite(url));
-  }
-
-  const url = new URL('/' + locale + pathname, request.url);
+  // --- No locale slug in path: redirect to preferred slug ---
+  const preferred = getPreferredSlug(request);
+  const url = new URL('/' + preferred + pathname, request.url);
   url.search = request.nextUrl.search;
   if (!isSafeMethod) {
     return withCsp(NextResponse.rewrite(url));

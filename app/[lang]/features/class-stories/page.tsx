@@ -104,8 +104,8 @@ const texts = {
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const rawLang = (await params).lang;
-  const lang = rawLang === "zh-HK" ? "zh-HK" : "en";
-  const t = texts[lang] ?? texts.en;
+  const lang = rawLang === "vi" ? "vi" : "en";
+  const t = texts[lang as keyof typeof texts] ?? texts.en;
   return buildPageMetadata({
     lang,
     path: "/features/class-stories",
@@ -116,9 +116,9 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 
 export default async function ClassStoriesPage({ params }: { params: Promise<{ lang: string }> }) {
   const rawLang = (await params).lang;
-  const lang: Locale = rawLang === "zh-HK" ? "zh-HK" : rawLang === "vi" ? "vi" : "en";
-  const contentLang = lang === "zh-HK" ? "zh-HK" : "en";
-  const t = texts[contentLang] ?? texts.en;
+  const lang: Locale = rawLang === "vi" ? "vi" : "en";
+  const contentLang = lang === "vi" ? "vi" : "en";
+  const t = texts[contentLang as keyof typeof texts] ?? texts.en;
 
   return (
     <FeaturePageTemplate

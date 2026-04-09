@@ -101,7 +101,7 @@ const texts = {
 };
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
-  const lang = (await params).lang === "zh-HK" ? "zh-HK" : "en";
+  const lang = (await params).lang === "zh-HK" ? "zh-HK" : (await params).lang === "vi" ? "vi" : "en";
   const isZh = lang === "zh-HK";
   const title = isZh ? "服務條款 | KiwiBee" : "Terms of Service | KiwiBee";
   const t = texts[lang as keyof typeof texts] || texts.en;
@@ -114,7 +114,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 }
 
 export default async function TermsPage({ params }: TermsPageProps) {
-  const lang = (await params).lang === "zh-HK" ? "zh-HK" : "en";
+  const lang = (await params).lang === "zh-HK" ? "zh-HK" : (await params).lang === "vi" ? "vi" : "en";
   const t = texts[lang as keyof typeof texts] || texts.en;
   const lastUpdated = new Date().toISOString().split("T")[0];
 

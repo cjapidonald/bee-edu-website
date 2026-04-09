@@ -29,7 +29,7 @@ const coreModuleIcons = [Target, BarChart3, Calendar, FileText, BookOpen, Users,
 const coreModuleColors = ["primary", "secondary", "accent", "primary", "accent", "secondary", "primary", "accent", "secondary", "accent"];
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
-  const lang = (await params).lang === "zh-HK" ? "zh-HK" : "en";
+  const lang = (await params).lang === "zh-HK" ? "zh-HK" : (await params).lang === "vi" ? "vi" : "en";
   const titles: Record<string, string> = {
     en: "About KiwiBee | KiwiBee",
     "zh-HK": "關於 KiwiBee | KiwiBee",
@@ -47,7 +47,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 }
 
 export default async function AboutPage({ params }: AboutPageProps) {
-  const lang = (await params).lang === "zh-HK" ? "zh-HK" : "en";
+  const lang = (await params).lang === "zh-HK" ? "zh-HK" : (await params).lang === "vi" ? "vi" : "en";
 
   const getLocalizedPath = (path: string) => {
     if (lang === "en") return path;

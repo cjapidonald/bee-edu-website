@@ -69,7 +69,7 @@ const fetchFaqs = cache(async (lang: Locale): Promise<FAQItem[]> => {
 });
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
-  const lang = (await params).lang === "zh-HK" ? "zh-HK" : "en";
+  const lang = (await params).lang === "zh-HK" ? "zh-HK" : (await params).lang === "vi" ? "vi" : "en";
 
   const titles: Record<string, string> = {
     en: "FAQ | KiwiBee",
@@ -90,7 +90,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 }
 
 export default async function FAQPage({ params }: { params: Promise<{ lang: string }> }) {
-  const lang = (await params).lang === "zh-HK" ? "zh-HK" : "en";
+  const lang = (await params).lang === "zh-HK" ? "zh-HK" : (await params).lang === "vi" ? "vi" : "en";
   const faqs = await fetchFaqs(lang);
 
   return <FAQPageClient lang={lang} faqs={faqs} />;

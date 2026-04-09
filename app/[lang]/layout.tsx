@@ -30,16 +30,16 @@ export async function generateMetadata({
 }: {
   params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
-  const lang = (await params).lang === "zh-HK" ? "zh-HK" : "en";
+  const lang = (await params).lang === "zh-HK" ? "zh-HK" : (await params).lang === "vi" ? "vi" : "en";
 
   const titles: Record<string, string> = {
     en: 'KiwiBee - AI-Native School Management Platform',
-    'zh-HK': 'KiwiBee- AI 原生學校管理平台',
+    vi: 'KiwiBee - Nền tảng Quản lý Trường học AI',
   };
 
   const descriptions: Record<string, string> = {
     en: 'Transform education with KiwiBee. One platform for curriculum, scheduling, behavior tracking, gradebook, and AI-powered insights.',
-    'zh-HK': '透過 KiwiBee轉型教育。一個平台整合課程、排課、行為追蹤、成績冊及 AI 智能分析。',
+    vi: 'Chuyển đổi giáo dục với KiwiBee. Một nền tảng cho chương trình, lịch học, theo dõi hành vi, sổ điểm và phân tích AI.',
   };
 
   return {
@@ -62,7 +62,7 @@ export default async function LangLayout({
   children: React.ReactNode;
   params: Promise<{ lang: string }>;
 }) {
-  const lang = (await params).lang === "zh-HK" ? "zh-HK" : "en";
+  const lang = (await params).lang === "zh-HK" ? "zh-HK" : (await params).lang === "vi" ? "vi" : "en";
   const htmlLang = htmlLangMap[lang];
   const dict = await getDictionary(lang);
 

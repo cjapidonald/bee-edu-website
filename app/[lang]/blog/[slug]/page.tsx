@@ -62,13 +62,13 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://kiwibee.io";
 const includeSampleContent = true;
 
 const getLocalizedPath = (lang: string, path: string) => {
-  if (lang === "en") return path;
-  return `/${lang}${path}`;
+  const slug = lang === "vi" ? "vn" : "en";
+  return `/${slug}${path === "/" ? "" : path}`;
 };
 
-type SupportedLang = "en" | "zh-HK";
+type SupportedLang = "en" | "vi" | "zh-HK";
 
-const getSupportedLang = (lang: string): SupportedLang => (lang === "zh-HK" ? "zh-HK" : "en");
+const getSupportedLang = (lang: string): SupportedLang => (lang === "zh-HK" ? "zh-HK" : lang === "vi" ? "vi" : "en");
 
 const normalizePostLanguage = (value: string | null | undefined): SupportedLang | "other" | null => {
   if (!value) return null;
@@ -77,7 +77,7 @@ const normalizePostLanguage = (value: string | null | undefined): SupportedLang 
   const lower = trimmed.toLowerCase();
 
   if (lower === "en" || lower.startsWith("en-")) return "en";
-  if (lower === "zh-hk" || lower === "zh_hk" || lower.startsWith("zh")) return "zh-HK";
+  if (lower === "vi" || lower.startsWith("vi-")) return "vi";
 
   return "other";
 };
@@ -145,8 +145,8 @@ const hasLocalizedSlugVariant = cache(async (lang: SupportedLang, slug: string):
     const identifier = post.slug?.trim() || post.id;
     if (identifier !== slug) return false;
     const normalized = normalizePostLanguage(post.language);
-    if (lang === "zh-HK") return normalized === "zh-HK";
-    return normalized !== "zh-HK";
+    if (lang === "vi") return normalized === "vi";
+    return normalized !== "vi";
   });
 
   if (matchesSample) return true;
@@ -177,8 +177,8 @@ const hasLocalizedSlugVariant = cache(async (lang: SupportedLang, slug: string):
 
     return rows.some((row) => {
       const normalized = normalizePostLanguage(row.language ?? null);
-      if (lang === "zh-HK") return normalized === "zh-HK";
-      return normalized !== "zh-HK";
+      if (lang === "vi") return normalized === "vi";
+      return normalized !== "vi";
     });
   } catch (err) {
     console.error("Failed to check blog slug variant", err);
@@ -191,7 +191,7 @@ const getReadTimeLabel = (
   readTime?: number | string | null,
   timeRequired?: string | null
 ): string | null => {
-  const isZh = lang === "zh-HK";
+  const isZh = lang === "vi";
   const formatMinutes = (minutes: number) => (isZh ? `${minutes} 分鐘閱讀` : `${minutes} min read`);
 
   if (readTime !== null && readTime !== undefined && readTime !== "") {
@@ -258,7 +258,7 @@ const formatDate = (lang: string, dateString: string | null | undefined) => {
   if (!dateString) return "";
   const date = new Date(dateString);
   if (Number.isNaN(date.getTime())) return "";
-  return date.toLocaleDateString(lang === "zh-HK" ? "zh-HK" : "en-US", {
+  return date.toLocaleDateString(lang === "vi" ? "vi-VN" : "en-US", {
     month: "long",
     day: "numeric",
     year: "numeric",
@@ -404,7 +404,7 @@ const labels = {
     copied: "Copied!",
     defaultAuthor: "KiwiBee Team",
   },
-  "zh-HK": {
+  "vi": {
     back: "返回博客",
     share: "分享",
     copied: "已複製！",
@@ -417,7 +417,7 @@ export async function generateMetadata({
 }: {
   params: Promise<{ lang: string; slug: string }>;
 }): Promise<Metadata> {
-  const lang = (await params).lang === "zh-HK" ? "zh-HK" : "en";
+  const lang = (await params).lang === "zh-HK" ? "zh-HK" : (await params).lang === "vi" ? "vi" : "en";
   const post = await fetchPost(lang, (await params).slug);
 
   if (!post) {
@@ -428,7 +428,7 @@ export async function generateMetadata({
     };
   }
 
-  const locale: Locale = lang === "zh-HK" ? "zh-HK" : "en";
+  const locale: Locale = lang === "en" ? "en" : "vi";
 
   const identifier = post.slug?.trim() || post.id;
   const canonicalPath = getLocalizedPath(lang, `/blog/${identifier}`);
@@ -448,15 +448,15 @@ export async function generateMetadata({
 
     const [hasEn, hasZhSuffix, hasZhBase] = await Promise.all([
       hasLocalizedSlugVariant("en", enSlug),
-      hasLocalizedSlugVariant("zh-HK", zhSlugWithSuffix),
-      hasLocalizedSlugVariant("zh-HK", baseSlug),
+      hasLocalizedSlugVariant("vi", zhSlugWithSuffix),
+      hasLocalizedSlugVariant("vi", baseSlug),
     ]);
 
     if (hasEn) alternatesLanguages.en = `/blog/${enSlug}`;
     if (hasZhSuffix) {
-      alternatesLanguages["zh-HK"] = `/zh-HK/blog/${zhSlugWithSuffix}`;
+      alternatesLanguages["vi"] = `/vi/blog/${zhSlugWithSuffix}`;
     } else if (hasZhBase) {
-      alternatesLanguages["zh-HK"] = `/zh-HK/blog/${baseSlug}`;
+      alternatesLanguages["vi"] = `/vi/blog/${baseSlug}`;
     }
   }
 
@@ -540,7 +540,7 @@ export default async function BlogPostPage({
 }: {
   params: Promise<{ lang: string; slug: string }>;
 }) {
-  const lang = (await params).lang === "zh-HK" ? "zh-HK" : "en";
+  const lang = (await params).lang === "zh-HK" ? "zh-HK" : (await params).lang === "vi" ? "vi" : "en";
   const labelSet = labels[lang as keyof typeof labels] || labels.en;
   const post = await fetchPost(lang, (await params).slug);
 
@@ -567,7 +567,7 @@ export default async function BlogPostPage({
     "@type": "BlogPosting",
     headline: post.title,
     description: post.meta_description?.trim() || post.excerpt || post.subtitle || "",
-    inLanguage: lang === "zh-HK" ? "zh-Hant-HK" : "en",
+    inLanguage: lang === "vi" ? "vi" : "en",
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": canonicalUrl,
