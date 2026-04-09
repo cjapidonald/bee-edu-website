@@ -61,7 +61,7 @@ export const SAMPLE_FAQS: Record<string, SampleFaqItem[]> = {
       display_order: 6,
       question: "How can I contact support?",
       answer:
-        "Email hello@elementals.com or message us on WhatsApp. You can also use the Contact page to book a demo.",
+        "Email hello@kiwibee.io or message us on WhatsApp. You can also use the Contact page to book a demo.",
     },
   ],
   "zh-HK": [
@@ -111,7 +111,7 @@ export const SAMPLE_FAQS: Record<string, SampleFaqItem[]> = {
       display_order: 6,
       question: "如何聯絡支援？",
       answer:
-        "你可以電郵至 hello@elementals.com 或透過 WhatsApp 聯絡我們；亦可在聯絡頁面預約演示。",
+        "你可以電郵至 hello@kiwibee.io 或透過 WhatsApp 聯絡我們；亦可在聯絡頁面預約演示。",
     },
   ],
 };

@@ -2,7 +2,7 @@ import { Megaphone, Mail, BarChart3, Users, Calendar, Globe } from "lucide-react
 import type { Locale } from "@/lib/i18n/config";
 import { marketingCopy } from "@/lib/marketing/marketing-copy";
 import { FeaturePageTemplate } from "@/components/pages/FeaturePageTemplate";
-import { StoriesMockup } from "@/components/beaver-mockups";
+import { StoriesMockup } from "@/components/mockups";
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 

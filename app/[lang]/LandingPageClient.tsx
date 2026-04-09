@@ -51,7 +51,7 @@ import {
   HomeroomTeacherDashboardMockup,
   AIAssistantMockup,
   ClassSparkMockup,
-} from '@/components/beaver-mockups';
+} from '@/components/mockups';
 import { useInView } from '@/hooks/useInView';
 import { useCountUp } from '@/hooks/useCountUp';
 import type { Locale } from '@/lib/i18n/config';
@@ -353,9 +353,9 @@ const FeaturesSection = memo(function FeaturesSection({ dict, lang }: { dict: Di
 // Social links
 const socialLinks = [
   { href: "https://web.facebook.com/profile.php?id=61578235291840", icon: Facebook, label: "Facebook" },
-  { href: "https://www.instagram.com/elementals/", icon: Instagram, label: "Instagram" },
-  { href: "https://www.linkedin.com/company/elementals", icon: Linkedin, label: "LinkedIn" },
-  { href: "mailto:hello@elementals.com", icon: Mail, label: "Email" },
+  { href: "https://www.instagram.com/kiwibee.io/", icon: Instagram, label: "Instagram" },
+  { href: "https://www.linkedin.com/company/kiwibee", icon: Linkedin, label: "LinkedIn" },
+  { href: "mailto:hello@kiwibee.io", icon: Mail, label: "Email" },
 ];
 
 // Main Landing Page Component
@@ -648,7 +648,7 @@ export default function LandingPageClient({
                 </div>
               </div>
 
-              {/* Right Column — Beaver Dashboard Mockup */}
+              {/* Right Column — Dashboard Mockup */}
               <div className="lg:col-span-7 w-full">
                 <div className="relative w-full">
                   {/* Decorative glow */}

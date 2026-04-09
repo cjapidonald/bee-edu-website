@@ -1,7 +1,7 @@
 import { GraduationCap, Brain, FileText, BarChart3, Calendar, Target, Clock, Check, BookOpen } from "lucide-react";
 import type { Locale } from "@/lib/i18n/config";
 import { RolePageTemplate } from "@/components/pages/RolePageTemplate";
-import { TeacherDashboardMockup } from "@/components/beaver-mockups";
+import { TeacherDashboardMockup } from "@/components/mockups";
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 

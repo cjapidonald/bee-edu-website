@@ -1,7 +1,7 @@
 import { Building2, Globe, BarChart3, Shield, Users, Settings } from "lucide-react";
 import type { Locale } from "@/lib/i18n/config";
 import { RolePageTemplate } from "@/components/pages/RolePageTemplate";
-import { AdminDashboardMockup } from "@/components/beaver-mockups";
+import { AdminDashboardMockup } from "@/components/mockups";
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 

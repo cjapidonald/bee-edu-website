@@ -172,7 +172,7 @@
     "communication": {
       "badge": "Luôn Kết nối",
       "title": "Giữ cho trường học của bạn luôn kết nối",
-      "subtitle": "Nhắn tin, gọi video và các tính năng mạng xã hội tích hợp giúp giáo viên, học sinh và phụ huynh gần nhau hơn. Chia sẻ cập nhật, cùng nhau ăn mừng thành tích, và phối hợp giữa các lớp học trong một không gian bảo mật do nhà trường sở hữu — không còn phải loay hoay với các ứng dụng bên thứ ba, số điện thoại cá nhân, hay những chuỗi email thất lạc. Mọi cuộc trò chuyện, thông báo và tài nguyên chia sẻ đều nằm bên trong Elementals, để toàn bộ cộng đồng của bạn luôn được thông tin và đồng bộ.",
+      "subtitle": "Nhắn tin, gọi video và các tính năng mạng xã hội tích hợp giúp giáo viên, học sinh và phụ huynh gần nhau hơn. Chia sẻ cập nhật, cùng nhau ăn mừng thành tích, và phối hợp giữa các lớp học trong một không gian bảo mật do nhà trường sở hữu — không còn phải loay hoay với các ứng dụng bên thứ ba, số điện thoại cá nhân, hay những chuỗi email thất lạc. Mọi cuộc trò chuyện, thông báo và tài nguyên chia sẻ đều nằm bên trong KiwiBee, để toàn bộ cộng đồng của bạn luôn được thông tin và đồng bộ.",
       "messaging": {
         "title": "Nhắn tin Nội bộ",
         "description": "Trò chuyện kiểu Discord với tin nhắn trực tiếp, kênh nhóm và chia sẻ tệp. Sắp xếp cuộc trò chuyện theo lớp, tổ bộ môn hoặc dự án — cùng với chuỗi trả lời, biểu cảm, thông báo ghim và lịch sử có thể tìm kiếm. Giữ toàn bộ cộng đồng nhà trường kết nối trong một không gian an toàn do chính trường sở hữu.",
@@ -290,7 +290,7 @@
     },
     "cta": {
       "title": "Sẵn sàng chuyển đổi trường học của bạn?",
-      "subtitle": "Tham gia cùng hàng nghìn nhà giáo đang sử dụng Elementals để làm việc thông minh hơn, chứ không vất vả hơn.",
+      "subtitle": "Tham gia cùng hàng nghìn nhà giáo đang sử dụng KiwiBee để làm việc thông minh hơn, chứ không vất vả hơn.",
       "getStarted": "Liên hệ Tư vấn",
       "viewPricing": "Bảng giá Trường học",
       "connectWithUs": "Kết nối với chúng tôi"
@@ -298,7 +298,7 @@
   },
   "cta": {
     "title": "Sẵn sàng chuyển đổi trường học của bạn?",
-    "subtitle": "Tham gia cùng hàng nghìn nhà giáo đang sử dụng Elementals",
+    "subtitle": "Tham gia cùng hàng nghìn nhà giáo đang sử dụng KiwiBee",
     "getStarted": "Liên hệ Tư vấn",
     "talkToSales": "Trò chuyện với Đội ngũ của chúng tôi"
   },
@@ -356,8 +356,8 @@
     }
   },
   "seo": {
-    "defaultTitle": "Elementals - Nền tảng Quản lý Trường học Tích hợp AI",
-    "defaultDescription": "Cách thông minh hơn để vận hành trường học của bạn với Elementals. Một nền tảng duy nhất cho chương trình giảng dạy, lịch học, theo dõi hành vi, sổ điểm và phân tích AI."
+    "defaultTitle": "KiwiBee - Nền tảng Quản lý Trường học Tích hợp AI",
+    "defaultDescription": "Cách thông minh hơn để vận hành trường học của bạn với KiwiBee. Một nền tảng duy nhất cho chương trình giảng dạy, lịch học, theo dõi hành vi, sổ điểm và phân tích AI."
   },
   "mockups": {
     "common": {

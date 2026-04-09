@@ -134,15 +134,15 @@ const nextConfig = {
       { source: '/features/teaching-assistant', destination: '/features/teaching-assistants' },
       { source: '/features/classdojo', destination: '/features/classspark' },
 
-      // Legacy app-like routes (now on app.elementals.com)
-      { source: '/auth', destination: 'https://app.elementals.com/login' },
-      { source: '/account/:path*', destination: 'https://app.elementals.com/login' },
-      { source: '/teacher/:path*', destination: 'https://app.elementals.com/login' },
-      { source: '/student/:path*', destination: 'https://app.elementals.com/login' },
-      { source: '/dashboard/:path*', destination: 'https://app.elementals.com/login' },
-      { source: '/lesson-builder/:path*', destination: 'https://app.elementals.com/login' },
-      { source: '/my-profile', destination: 'https://app.elementals.com/login' },
-      { source: '/profile', destination: 'https://app.elementals.com/login' },
+      // Legacy app-like routes (now on app.kiwibee.io)
+      { source: '/auth', destination: 'https://app.kiwibee.io/login' },
+      { source: '/account/:path*', destination: 'https://app.kiwibee.io/login' },
+      { source: '/teacher/:path*', destination: 'https://app.kiwibee.io/login' },
+      { source: '/student/:path*', destination: 'https://app.kiwibee.io/login' },
+      { source: '/dashboard/:path*', destination: 'https://app.kiwibee.io/login' },
+      { source: '/lesson-builder/:path*', destination: 'https://app.kiwibee.io/login' },
+      { source: '/my-profile', destination: 'https://app.kiwibee.io/login' },
+      { source: '/profile', destination: 'https://app.kiwibee.io/login' },
 
       // Legacy marketing routes that were removed
       { source: '/events', destination: '/blog' },

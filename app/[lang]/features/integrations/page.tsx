@@ -3,7 +3,7 @@ import { Plug, RefreshCw, Shield, Zap, Code, Database } from "lucide-react";
 import type { Locale } from "@/lib/i18n/config";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { FeaturePageTemplate } from "@/components/pages/FeaturePageTemplate";
-import { IntegrationsMockup } from "@/components/beaver-mockups";
+import { IntegrationsMockup } from "@/components/mockups";
 
 const contentByLang: Record<
   string,

@@ -1,7 +1,7 @@
 import { Users, BookOpen, Target, Trophy, Calendar, BarChart3 } from "lucide-react";
 import type { Locale } from "@/lib/i18n/config";
 import { RolePageTemplate } from "@/components/pages/RolePageTemplate";
-import { StudentDashboardMockup } from "@/components/beaver-mockups";
+import { StudentDashboardMockup } from "@/components/mockups";
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 

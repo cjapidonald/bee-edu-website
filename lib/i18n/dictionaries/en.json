@@ -172,7 +172,7 @@
     "communication": {
       "badge": "Stay Connected",
       "title": "Keep your school connected",
-      "subtitle": "Built-in messaging, video calls, and social features that bring teachers, students, and parents together. Share updates, celebrate wins, and coordinate across classrooms in one secure, school-owned space — no more juggling third-party apps, private phone numbers, or lost email threads. Every conversation, announcement, and shared resource lives inside Elementals, so your whole community stays informed and aligned.",
+      "subtitle": "Built-in messaging, video calls, and social features that bring teachers, students, and parents together. Share updates, celebrate wins, and coordinate across classrooms in one secure, school-owned space — no more juggling third-party apps, private phone numbers, or lost email threads. Every conversation, announcement, and shared resource lives inside KiwiBee, so your whole community stays informed and aligned.",
       "messaging": {
         "title": "Internal Messaging",
         "description": "Discord-style chat with direct messages, group channels, and file sharing. Organize conversations by class, department, or project — with threaded replies, reactions, pinned announcements, and searchable history. Keep your entire school community connected in one secure, school-owned space.",
@@ -290,7 +290,7 @@
     },
     "cta": {
       "title": "Ready to transform your school?",
-      "subtitle": "Join thousands of educators using Elementals to work smarter, not harder.",
+      "subtitle": "Join thousands of educators using KiwiBee to work smarter, not harder.",
       "getStarted": "Contact Sales",
       "viewPricing": "School Pricing",
       "connectWithUs": "Connect with us"
@@ -298,7 +298,7 @@
   },
   "cta": {
     "title": "Ready to transform your school?",
-    "subtitle": "Join thousands of educators using Elementals",
+    "subtitle": "Join thousands of educators using KiwiBee",
     "getStarted": "Contact Sales",
     "talkToSales": "Chat with Our Team"
   },
@@ -356,8 +356,8 @@
     }
   },
   "seo": {
-    "defaultTitle": "Elementals (Elementals) - AI-Native School Management Platform",
-    "defaultDescription": "The smarter way to run your school with Elementals (also searched as Elementals). One platform for curriculum, scheduling, behavior tracking, gradebook, and AI-powered insights."
+    "defaultTitle": "KiwiBee (KiwiBee) - AI-Native School Management Platform",
+    "defaultDescription": "The smarter way to run your school with KiwiBee (also searched as KiwiBee). One platform for curriculum, scheduling, behavior tracking, gradebook, and AI-powered insights."
   },
   "mockups": {
     "common": {

@@ -1,7 +1,7 @@
 {
-  "name": "Elementals",
-  "short_name": "Elementals",
-  "description": "Elementals (Elementals) is an AI-powered school management platform for educators, students, and families",
+  "name": "KiwiBee",
+  "short_name": "KiwiBee",
+  "description": "KiwiBee is an AI-powered school management platform for educators, students, and families",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",

@@ -2,7 +2,7 @@ import { ClipboardList, BarChart3, Users, Bell, CheckCircle, TrendingUp } from "
 import type { Locale } from "@/lib/i18n/config";
 import { marketingCopy } from "@/lib/marketing/marketing-copy";
 import { FeaturePageTemplate } from "@/components/pages/FeaturePageTemplate";
-import { DataScientistMockup } from "@/components/beaver-mockups";
+import { DataScientistMockup } from "@/components/mockups";
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 

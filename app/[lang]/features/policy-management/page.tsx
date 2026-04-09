@@ -3,7 +3,7 @@ import type { Locale } from "@/lib/i18n/config";
 import { marketingCopy } from "@/lib/marketing/marketing-copy";
 import { marketingBadgeLabels } from "@/lib/marketing/badge-labels";
 import { FeaturePageTemplate } from "@/components/pages/FeaturePageTemplate";
-import { PolicyMockup } from "@/components/beaver-mockups";
+import { PolicyMockup } from "@/components/mockups";
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 

@@ -595,8 +595,8 @@ export default function ContactPage({
                       </div>
                       <div>
                         <p className="text-sm text-gray-500">{t.email}</p>
-                        <a href="mailto:hello@elementals.com" className="text-[#16a34a] font-medium hover:underline">
-                          hello@elementals.com
+                        <a href="mailto:hello@kiwibee.io" className="text-[#16a34a] font-medium hover:underline">
+                          hello@kiwibee.io
                         </a>
                       </div>
                     </div>
@@ -1035,7 +1035,7 @@ export default function ContactPage({
             <p className="text-lg text-white/90 mb-8">
               {t.ctaSubtitle}
             </p>
-            <a href="mailto:hello@elementals.com?subject=School%20Pricing%20Inquiry">
+            <a href="mailto:hello@kiwibee.io?subject=School%20Pricing%20Inquiry">
               <Button size="lg" className="bg-gray-900 text-[#16a34a] hover:bg-gray-800 px-8 py-6 text-lg rounded-xl">
                 {t.startFreeTrial}
                 <Sparkles className="ml-2 h-5 w-5" />

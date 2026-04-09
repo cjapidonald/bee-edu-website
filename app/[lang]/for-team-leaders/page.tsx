@@ -1,7 +1,7 @@
 import { Target, Users, BarChart3, FileText, Eye, CheckCircle, MessageSquare } from "lucide-react";
 import type { Locale } from "@/lib/i18n/config";
 import { RolePageTemplate } from "@/components/pages/RolePageTemplate";
-import { TeamLeaderDashboardMockup } from "@/components/beaver-mockups";
+import { TeamLeaderDashboardMockup } from "@/components/mockups";
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 

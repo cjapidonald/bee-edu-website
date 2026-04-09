@@ -1,7 +1,7 @@
 /**
  * Mockup i18n helper.
  *
- * Small, self-contained string table for the beaver-mockups so each mockup
+ * Small, self-contained string table for the mockups so each mockup
  * component doesn't need to thread the full `dict` prop through it.
  *
  * Usage:

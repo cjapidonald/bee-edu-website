@@ -33,9 +33,9 @@ const getFooterText = (dict: FooterDict, key: string, fallback: string): string 
 
 const socialLinks = [
   { href: "https://web.facebook.com/profile.php?id=61578235291840", icon: Facebook, label: "Facebook" },
-  { href: "https://www.instagram.com/elementals/", icon: Instagram, label: "Instagram" },
-  { href: "https://www.linkedin.com/company/elementals", icon: Linkedin, label: "LinkedIn" },
-  { href: "mailto:hello@elementals.com", icon: Mail, label: "Email" },
+  { href: "https://www.instagram.com/kiwibee.io/", icon: Instagram, label: "Instagram" },
+  { href: "https://www.linkedin.com/company/kiwibee", icon: Linkedin, label: "LinkedIn" },
+  { href: "mailto:hello@kiwibee.io", icon: Mail, label: "Email" },
 ];
 
 const getFeaturesLinks = (dict: FooterDict) => [
@@ -274,7 +274,7 @@ export default function Footer({ lang, dict }: FooterProps) {
             &copy; {new Date().getFullYear()} Kiwibee. {(dict.footer.copyright as string) || "All rights reserved."}
           </p>
           <p className="text-sm text-gray-400 mt-2">
-            {getFooterText(dict, 'contact.email', 'Email')}: <a href="mailto:hello@elementals.com" className="hover:text-[#16a34a]">hello@elementals.com</a>
+            {getFooterText(dict, 'contact.email', 'Email')}: <a href="mailto:hello@kiwibee.io" className="hover:text-[#16a34a]">hello@kiwibee.io</a>
             {" | "}
             {getFooterText(dict, 'contact.whatsapp', 'WhatsApp')}: <a href="https://wa.me/85294954912" className="hover:text-[#16a34a]">+852 94954912</a>
           </p>

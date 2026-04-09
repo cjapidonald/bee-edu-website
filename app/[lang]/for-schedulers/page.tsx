@@ -1,7 +1,7 @@
 import { Calendar, Magnet, Clock, Users, AlertTriangle, RefreshCw } from "lucide-react";
 import type { Locale } from "@/lib/i18n/config";
 import { RolePageTemplate } from "@/components/pages/RolePageTemplate";
-import { SchedulerDashboardMockup } from "@/components/beaver-mockups";
+import { SchedulerDashboardMockup } from "@/components/mockups";
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 

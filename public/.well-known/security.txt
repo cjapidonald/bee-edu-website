@@ -1,5 +1,5 @@
-Contact: mailto:security@elementals.com
+Contact: mailto:security@kiwibee.io
 Expires: 2027-02-27T00:00:00.000Z
 Preferred-Languages: en
-Canonical: https://elementals.com/.well-known/security.txt
-Policy: https://elementals.com/terms
+Canonical: https://kiwibee.io/.well-known/security.txt
+Policy: https://kiwibee.io/terms

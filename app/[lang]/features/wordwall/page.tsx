@@ -3,7 +3,7 @@ import type { Locale } from "@/lib/i18n/config";
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { FeaturePageTemplate } from "@/components/pages/FeaturePageTemplate";
-import { GamificationMockup } from "@/components/beaver-mockups";
+import { GamificationMockup } from "@/components/mockups";
 
 const texts = {
   en: {

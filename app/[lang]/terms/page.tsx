@@ -10,7 +10,7 @@ interface TermsPageProps {
   params: Promise<{ lang: string }>;
 }
 
-const contactEmail = "hello@elementals.com";
+const contactEmail = "hello@kiwibee.io";
 
 const texts = {
   en: {

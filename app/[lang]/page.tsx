@@ -102,8 +102,8 @@ export default async function LandingPage({
         description: orgDescription,
         sameAs: [
           "https://www.facebook.com/profile.php?id=61578235291840",
-          "https://www.instagram.com/elementals/",
-          "https://www.linkedin.com/company/elementals",
+          "https://www.instagram.com/kiwibee.io/",
+          "https://www.linkedin.com/company/kiwibee",
         ],
       },
       {

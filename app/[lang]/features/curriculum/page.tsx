@@ -2,7 +2,7 @@ import { BookOpen, Target, Layers, GitBranch, FileText, Users } from "lucide-rea
 import type { Locale } from "@/lib/i18n/config";
 import { marketingCopy } from "@/lib/marketing/marketing-copy";
 import { FeaturePageTemplate } from "@/components/pages/FeaturePageTemplate";
-import { CurriculumMockup } from "@/components/beaver-mockups";
+import { CurriculumMockup } from "@/components/mockups";
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 

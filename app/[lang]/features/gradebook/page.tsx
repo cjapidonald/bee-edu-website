@@ -2,7 +2,7 @@ import { BarChart3, Target, Palette, TrendingUp, FileText, Users, Brain } from "
 import type { Locale } from "@/lib/i18n/config";
 import { marketingCopy } from "@/lib/marketing/marketing-copy";
 import { FeaturePageTemplate } from "@/components/pages/FeaturePageTemplate";
-import { GradebookMockup } from "@/components/beaver-mockups";
+import { GradebookMockup } from "@/components/mockups";
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 

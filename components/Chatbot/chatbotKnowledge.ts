@@ -20,7 +20,7 @@ const getSupportedLang = (lang?: string): SupportedLang => (lang === "zh-HK" ? "
 
 export const knowledgeBase: KnowledgeEntry[] = [
   {
-    keywords: ["what", "elementals", "platform", "about", "do", "is"],
+    keywords: ["what", "kiwibee", "platform", "about", "do", "is"],
     question: "What is KiwiBee?",
     answer:
       "KiwiBee is an all-in-one school management platform designed to replace disconnected tools across teaching, operations, and communication. With **16+ specialized user roles** and **20+ integrated modules**, we cover everything from classroom behavior and gradebooks to scheduling, exams, curriculum, document workflows, HR, finance, and reporting.\n\nOur AI offers simple modes—**Fast / Balanced / Deep**—plus **Safe Mode** for student-facing use.",
@@ -114,7 +114,7 @@ export const knowledgeBase: KnowledgeEntry[] = [
     keywords: ["contact", "support", "help", "talk", "human"],
     question: "How can I get support?",
     answer:
-      "**We're here to help!**\n\n**Contact Options:**\n• Email: hello@elementals.com\n• WhatsApp: +852 94954912\n• Address: 721-725 Nathan Road, Belgian Bank Building, Mongkok, Hong Kong\n\n**Self-Service:**\n• Documentation & tutorials\n• FAQ section\n• In-app guides\n\n**For Schools:**\n• Dedicated success manager\n• On-site training",
+      "**We're here to help!**\n\n**Contact Options:**\n• Email: hello@kiwibee.io\n• WhatsApp: +852 94954912\n• Address: 721-725 Nathan Road, Belgian Bank Building, Mongkok, Hong Kong\n\n**Self-Service:**\n• Documentation & tutorials\n• FAQ section\n• In-app guides\n\n**For Schools:**\n• Dedicated success manager\n• On-site training",
     category: "support",
     priority: 7,
     pageLink: "/contact",
@@ -242,7 +242,7 @@ export const knowledgeBase: KnowledgeEntry[] = [
 
 export const knowledgeBaseZhHK: KnowledgeEntry[] = [
   {
-    keywords: ["elementals", "平台", "介紹", "做什麼", "是什麼", "甚麼", "what", "about"],
+    keywords: ["kiwibee", "平台", "介紹", "做什麼", "是什麼", "甚麼", "what", "about"],
     question: "KiwiBee 是什麼？",
     answer: `KiwiBee 是一個一站式的 AI 原生學校管理平台，旨在取代教學、營運與溝通中分散的工具。透過 **16+ 個專業用戶角色** 及 **20+ 個整合模組**，我們涵蓋：行為追蹤、成績冊、排課、考試、課程規劃、文件流程、人力資源、財務、溝通與報告等。
 
@@ -310,7 +310,7 @@ AI 亦提供 **Fast / Balanced / Deep** 模式，以及面向學生使用的 **S
     answer: `**我們很樂意協助！**
 
 **聯絡方式：**
-• 電郵：hello@elementals.com
+• 電郵：hello@kiwibee.io
 • WhatsApp：+852 94954912
 • 地址：721-725 Nathan Road, Belgian Bank Building, Mongkok, Hong Kong
 

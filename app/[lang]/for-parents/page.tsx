@@ -1,7 +1,7 @@
 import { Users, Bell, BarChart3, MessageSquare, Calendar, Camera } from "lucide-react";
 import type { Locale } from "@/lib/i18n/config";
 import { RolePageTemplate } from "@/components/pages/RolePageTemplate";
-import { ParentDashboardMockup } from "@/components/beaver-mockups";
+import { ParentDashboardMockup } from "@/components/mockups";
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 
