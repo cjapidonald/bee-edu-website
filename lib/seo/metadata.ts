@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import type { Locale } from "@/lib/i18n/config";
 import { ogLocaleMap } from "@/lib/i18n/config";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://kiwibee.io";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.kiwibee.io";
 const defaultOgImage = "/og-default.png";
 
 export function toLocalizedPath(lang: Locale, path: string) {

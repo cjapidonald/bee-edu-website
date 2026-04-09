@@ -30,7 +30,7 @@ interface BlogPost {
   language?: string | null;
 }
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://kiwibee.io";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.kiwibee.io";
 const includeSampleContent = true;
 
 const getLocalizedPath = (lang: string, path: string) => {
