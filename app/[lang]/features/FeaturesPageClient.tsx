@@ -393,7 +393,7 @@ export default function FeaturesPage({ params }: { params: { lang: Locale } }) {
   const features = FEATURE_SETS[lang] ?? FEATURE_SETS.en;
   const categories = CATEGORY_META[lang] ?? CATEGORY_META.en;
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.kiwibee.io";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://kiwibee.io";
 
   const getLocalizedPath = (path: string) => {
     if (lang === "en") return path;

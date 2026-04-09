@@ -207,7 +207,7 @@ export default function SitemapPage({ params }: SitemapPageProps) {
                 rel="noopener noreferrer"
                 className="text-[#16a34a] hover:underline"
               >
-                https://www.kiwibee.io/sitemap.xml
+                https://kiwibee.io/sitemap.xml
               </a>
             </CardContent>
           </Card>
