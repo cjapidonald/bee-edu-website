@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
@@ -198,7 +199,7 @@ export default function Header({ lang, dict }: HeaderProps) {
       <nav className="container flex h-16 items-center justify-between px-4">
         {/* Logo */}
         <Link href={getLocalizedPath("/")} className="flex items-center">
-          <span className="text-2xl font-bold"><span className="text-green-500">Kiwi</span><span className="text-yellow-400">Bee</span></span>
+          <Image src="/kiwibee-logo.png" alt="KiwiBee" width={140} height={40} className="h-10 w-auto" priority />
         </Link>
 
         {/* Desktop Navigation */}
@@ -206,7 +207,7 @@ export default function Header({ lang, dict }: HeaderProps) {
           {/* Home */}
           <Link
             href={getLocalizedPath("/")}
-            className="px-3.5 py-2 text-sm font-medium text-[#16a34a] hover:text-[#15803d] hover:bg-[#16a34a]/10 rounded-md transition-colors"
+            className="px-3.5 py-2 text-sm font-medium text-white hover:text-[#16a34a] hover:bg-[#16a34a]/10 rounded-md transition-colors"
           >
             {(dict.nav.home as string) || "Home"}
           </Link>
@@ -218,7 +219,7 @@ export default function Header({ lang, dict }: HeaderProps) {
             onMouseLeave={scheduleCloseFeaturesMenu}
           >
             <button
-              className="flex items-center gap-1 px-3.5 py-2 text-sm font-medium text-[#16a34a] hover:text-[#15803d] hover:bg-[#16a34a]/10 rounded-md transition-colors"
+              className="flex items-center gap-1 px-3.5 py-2 text-sm font-medium text-white hover:text-[#16a34a] hover:bg-[#16a34a]/10 rounded-md transition-colors"
             >
               {(dict.nav.features as string) || "Platform"}
               <ChevronDown className="h-3.5 w-3.5" />
@@ -324,7 +325,7 @@ export default function Header({ lang, dict }: HeaderProps) {
             onMouseLeave={scheduleCloseSolutionsMenu}
           >
             <button
-              className="flex items-center gap-1 px-3.5 py-2 text-sm font-medium text-[#16a34a] hover:text-[#15803d] hover:bg-[#16a34a]/10 rounded-md transition-colors"
+              className="flex items-center gap-1 px-3.5 py-2 text-sm font-medium text-white hover:text-[#16a34a] hover:bg-[#16a34a]/10 rounded-md transition-colors"
             >
               {(dict.nav.solutions as string) || "Who It's For"}
               <ChevronDown className="h-3.5 w-3.5" />
@@ -363,7 +364,7 @@ export default function Header({ lang, dict }: HeaderProps) {
           {/* Pricing */}
           <Link
             href={getLocalizedPath("/pricing")}
-            className="px-3.5 py-2 text-sm font-medium text-[#16a34a] hover:text-[#15803d] hover:bg-[#16a34a]/10 rounded-md transition-colors"
+            className="px-3.5 py-2 text-sm font-medium text-white hover:text-[#16a34a] hover:bg-[#16a34a]/10 rounded-md transition-colors"
           >
             {(dict.nav.pricing as string) || "School Pricing"}
           </Link>
@@ -371,7 +372,7 @@ export default function Header({ lang, dict }: HeaderProps) {
           {/* Community */}
           <Link
             href={getLocalizedPath("/blog")}
-            className="px-3.5 py-2 text-sm font-medium text-[#16a34a] hover:text-[#15803d] hover:bg-[#16a34a]/10 rounded-md transition-colors"
+            className="px-3.5 py-2 text-sm font-medium text-white hover:text-[#16a34a] hover:bg-[#16a34a]/10 rounded-md transition-colors"
           >
             {(dict.nav.blog as string) || "Community"}
           </Link>
@@ -379,7 +380,7 @@ export default function Header({ lang, dict }: HeaderProps) {
           {/* Let's Connect */}
           <Link
             href={getLocalizedPath("/contact")}
-            className="px-3.5 py-2 text-sm font-medium text-[#16a34a] hover:text-[#15803d] hover:bg-[#16a34a]/10 rounded-md transition-colors"
+            className="px-3.5 py-2 text-sm font-medium text-white hover:text-[#16a34a] hover:bg-[#16a34a]/10 rounded-md transition-colors"
           >
             {(dict.nav.contactUs as string) || "Let's Connect"}
           </Link>
@@ -388,8 +389,8 @@ export default function Header({ lang, dict }: HeaderProps) {
         {/* Right Side - Language & Auth */}
         <div className="hidden lg:flex items-center gap-3">
           {/* Language Switcher */}
-          <div className="flex items-center gap-1 px-2 py-1 border border-[#16a34a]/30 rounded-lg">
-            <Globe className="h-4 w-4 text-[#16a34a]" />
+          <div className="flex items-center gap-1 px-2 py-1 border border-gray-600 rounded-lg">
+            <Globe className="h-4 w-4 text-gray-300" />
             <label htmlFor="language-select" className="sr-only">
               Language
             </label>
@@ -411,7 +412,7 @@ export default function Header({ lang, dict }: HeaderProps) {
                 router.replace(nextHref);
                 router.refresh();
               }}
-              className="text-sm bg-transparent border-none outline-none cursor-pointer text-[#16a34a]"
+              className="text-sm bg-transparent border-none outline-none cursor-pointer text-gray-300"
             >
               <option value="vn">Tiếng Việt</option>
               <option value="en">English</option>
@@ -423,9 +424,9 @@ export default function Header({ lang, dict }: HeaderProps) {
             <Button
               variant="ghost"
               size="sm"
-              className="flex items-center gap-1.5 text-[#16a34a] hover:text-[#15803d] hover:bg-[#16a34a]/10"
+              className="flex items-center gap-1.5 text-white hover:text-[#16a34a] hover:bg-[#16a34a]/10"
             >
-              <LogIn className="h-4 w-4 text-[#16a34a]" />
+              <LogIn className="h-4 w-4" />
               {(dict.nav.signIn as string) || "Access Portal"}
             </Button>
           </a>
@@ -441,9 +442,9 @@ export default function Header({ lang, dict }: HeaderProps) {
           type="button"
         >
           {mobileMenuOpen ? (
-            <X className="h-6 w-6 text-[#16a34a]" />
+            <X className="h-6 w-6 text-white" />
           ) : (
-            <Menu className="h-6 w-6 text-[#16a34a]" />
+            <Menu className="h-6 w-6 text-white" />
           )}
         </button>
       </nav>

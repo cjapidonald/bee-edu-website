@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { Facebook, Instagram, Linkedin, Mail } from "lucide-react";
@@ -150,7 +151,7 @@ export default function Footer({ lang, dict }: FooterProps) {
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <Link href={getLocalizedPath("/")} className="flex items-center mb-3">
-              <span className="text-xl font-bold"><span className="text-green-500">Kiwi</span><span className="text-yellow-400">Bee</span></span>
+              <Image src="/kiwibee-logo.png" alt="KiwiBee" width={120} height={35} className="h-9 w-auto" />
             </Link>
             <p className="text-sm text-gray-400 mb-4">
               {(dict.footer.description as string) || "AI-powered school management for modern educators."}
