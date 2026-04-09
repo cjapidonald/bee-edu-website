@@ -1,95 +1,89 @@
-import { Presentation, ArrowRight } from "lucide-react";
+import { FolderOpen, Share2, Award, TrendingUp, Camera, Mic, FileText } from "lucide-react";
 import type { Locale } from "@/lib/i18n/config";
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo/metadata";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import { FeaturePageTemplate } from "@/components/pages/FeaturePageTemplate";
+import { PortfolioMockup } from "@/components/beaver-mockups";
 
 const texts = {
   en: {
-    badge: "Coming Soon",
-    title: "Digital Portfolios",
-    highlight: "Showcase Student Work",
-    description: "Beautiful, shareable digital portfolios that showcase student achievements, projects, and growth over time. Perfect for parent conferences, college applications, and celebrating student success.",
-    feature1: "Public shareable portfolio links",
-    feature2: "Curated work samples and projects",
-    feature3: "Skills and achievement badges",
-    feature4: "Timeline view of student growth",
-    cta: "Contact Us to Learn More",
-    backToFeatures: "Back to Features",
+    badge: "Teaching & Learning",
+    title: "Student Portfolios",
+    highlight: "Evidence of growth",
+    description:
+      "Shareable portfolios with evidence artifacts — photos, audio, video, and documents — tied to skills and learning objectives. Perfect for parent conferences, college apps, and celebrating growth.",
+    trustIndicator1: "Multi-media evidence",
+    trustIndicator2: "Skill-tagged artifacts",
+    trustIndicator3: "Shareable public links",
+    features: [
+      { icon: FolderOpen, title: "Evidence artifacts", description: "Collect photos, audio, video, and documents in one portfolio per student." },
+      { icon: Award, title: "Skill-tagged", description: "Every artifact is tagged to specific skills — see mastery grow over time." },
+      { icon: Share2, title: "Shareable links", description: "Generate public portfolio links for parents, colleges, and interviews." },
+      { icon: Camera, title: "Capture in-class", description: "Teachers capture student work directly from ClassSpark during live lessons." },
+      { icon: Mic, title: "Audio & video", description: "Record speaking tasks, performances, and reflections alongside written work." },
+      { icon: TrendingUp, title: "Growth timeline", description: "Visual timeline of mastery across terms — see progression at a glance." },
+    ],
+    howItWorks: [
+      { step: 1, title: "Capture evidence", description: "Teachers add artifacts from lessons, homework, or classroom moments." },
+      { step: 2, title: "Tag to skills", description: "Each artifact is linked to skills in your curriculum." },
+      { step: 3, title: "Share with families", description: "Generate a public link parents can view anytime." },
+    ],
   },
   "zh-HK": {
-    badge: "即將推出",
-    title: "數碼作品集",
-    highlight: "展示學生作品",
-    description: "精美、可分享的數碼作品集，展示學生的成就、項目和成長歷程。非常適合家長會議、大學申請和慶祝學生成功。",
-    feature1: "公開可分享的作品集連結",
-    feature2: "精選作品樣本和項目",
-    feature3: "技能和成就徽章",
-    feature4: "學生成長時間軸視圖",
-    cta: "聯絡我們了解更多",
-    backToFeatures: "返回功能頁面",
+    badge: "教學與學習",
+    title: "學生作品集",
+    highlight: "成長的證據",
+    description:
+      "可分享的作品集，配合證據檔案——照片、音訊、影片與文件——連結到技能與學習目標。最適合家長會議、大學申請與慶祝成長。",
+    trustIndicator1: "多媒體證據",
+    trustIndicator2: "技能標籤檔案",
+    trustIndicator3: "可分享公開連結",
+    features: [
+      { icon: FolderOpen, title: "證據檔案", description: "在每位學生的作品集中收集照片、音訊、影片與文件。" },
+      { icon: Award, title: "技能標籤", description: "每個檔案都標記到具體技能——隨時間見證精通程度。" },
+      { icon: Share2, title: "可分享連結", description: "生成公開作品集連結給家長、大學與面試使用。" },
+      { icon: Camera, title: "課堂即時擷取", description: "教師在 ClassSpark 直接從課堂擷取學生作品。" },
+      { icon: Mic, title: "音訊與影片", description: "記錄口語任務、表演與反思，與書面作品並列。" },
+      { icon: TrendingUp, title: "成長時間軸", description: "跨學期的精通程度可視化——一眼看見進度。" },
+    ],
+    howItWorks: [
+      { step: 1, title: "擷取證據", description: "教師從課堂、功課或課室時刻新增檔案。" },
+      { step: 2, title: "標籤技能", description: "每個檔案連結到課程中的技能。" },
+      { step: 3, title: "與家庭分享", description: "生成公開連結，家長可隨時查看。" },
+    ],
   },
 };
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
-  const lang = (await params).lang === "zh-HK" ? "zh-HK" : "en";
+  const rawLang = (await params).lang;
+  const lang = rawLang === "zh-HK" ? "zh-HK" : "en";
   const t = texts[lang] ?? texts.en;
   return buildPageMetadata({
     lang,
     path: "/features/portfolios",
-    title: `${t.title} - ${t.highlight} | Elementals`,
+    title: `${t.title} — ${t.highlight} | Elementals`,
     description: t.description,
   });
 }
 
 export default async function PortfoliosPage({ params }: { params: Promise<{ lang: string }> }) {
-  const lang = (await params).lang === "zh-HK" ? "zh-HK" : "en";
-  const t = texts[lang] ?? texts.en;
+  const rawLang = (await params).lang;
+  const lang: Locale = rawLang === "zh-HK" ? "zh-HK" : rawLang === "vi" ? "vi" : "en";
+  const contentLang = lang === "zh-HK" ? "zh-HK" : "en";
+  const t = texts[contentLang] ?? texts.en;
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#fff0eb] to-white">
-      <div className="max-w-4xl mx-auto px-4 py-20 text-center">
-        <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#fc3c00]/10 text-[#fc3c00] rounded-full text-sm font-medium mb-6">
-          <Presentation className="h-4 w-4" />
-          {t.badge}
-        </div>
-
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-          {t.title} <span className="text-[#fc3c00]">{t.highlight}</span>
-        </h1>
-
-        <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-          {t.description}
-        </p>
-
-        <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
-          <ul className="text-left space-y-4">
-            {[t.feature1, t.feature2, t.feature3, t.feature4].map((feature, i) => (
-              <li key={i} className="flex items-start gap-3">
-                <div className="w-6 h-6 rounded-full bg-[#fc3c00]/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <span className="text-[#fc3c00] text-sm font-bold">{i + 1}</span>
-                </div>
-                <span className="text-gray-700">{feature}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link href={`/${lang}/contact`}>
-            <Button size="lg" className="bg-[#fc3c00] hover:bg-[#e03500] text-white px-8">
-              {t.cta}
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-          </Link>
-          <Link href={`/${lang}/features`}>
-            <Button size="lg" variant="outline" className="px-8">
-              {t.backToFeatures}
-            </Button>
-          </Link>
-        </div>
-      </div>
-    </div>
+    <FeaturePageTemplate
+      badge={t.badge}
+      badgeIcon={FolderOpen}
+      title={t.title}
+      highlight={t.highlight}
+      description={t.description}
+      features={t.features}
+      howItWorks={t.howItWorks}
+      trustIndicators={[t.trustIndicator1, t.trustIndicator2, t.trustIndicator3]}
+      lang={lang}
+      mockup={<PortfolioMockup lang={lang} />}
+    />
   );
 }

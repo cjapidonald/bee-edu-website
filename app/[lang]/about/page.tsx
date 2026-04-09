@@ -103,7 +103,7 @@ export default async function AboutPage({ params }: AboutPageProps) {
         "Academics",
         "Librarian",
         "Student Affairs",
-        "QA & Accreditation",
+        "Customer Service",
         "HR Manager",
         "Marketing",
         "IT Manager",

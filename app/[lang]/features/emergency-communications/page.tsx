@@ -1,95 +1,89 @@
-import { AlertTriangle, ArrowRight } from "lucide-react";
+import { AlertTriangle, Bell, MessageSquare, Users, Smartphone, Mail, Shield } from "lucide-react";
 import type { Locale } from "@/lib/i18n/config";
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo/metadata";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import { FeaturePageTemplate } from "@/components/pages/FeaturePageTemplate";
+import { ChatMockup } from "@/components/beaver-mockups";
 
 const texts = {
   en: {
-    badge: "Coming Soon",
+    badge: "Communication",
     title: "Emergency Communications",
-    highlight: "Rapid School-Wide Alerts",
-    description: "Instant communication system for emergencies, drills, and urgent announcements. Reach parents, staff, and students through multiple channels simultaneously with delivery confirmation.",
-    feature1: "Multi-channel alerts (SMS, email, push, in-app)",
-    feature2: "Pre-built emergency templates",
-    feature3: "Delivery tracking and read receipts",
-    feature4: "Drill mode for practice scenarios",
-    cta: "Contact Us to Learn More",
-    backToFeatures: "Back to Features",
+    highlight: "Instant, reliable, everywhere",
+    description:
+      "Mass notification for drills, closures, and urgent updates — across SMS, push, email, and in-app. Target by role, school, or class. Track delivery and read receipts in real time.",
+    trustIndicator1: "Multi-channel delivery",
+    trustIndicator2: "Real-time read receipts",
+    trustIndicator3: "Drill mode for practice",
+    features: [
+      { icon: Bell, title: "Instant mass alerts", description: "Push to every parent, student, and staff member in seconds." },
+      { icon: Smartphone, title: "SMS + Push + Email", description: "Reach everyone via the channel they prefer — automatically." },
+      { icon: Users, title: "Targeted delivery", description: "Send to a single class, a whole school, or every family at once." },
+      { icon: Shield, title: "Drill mode", description: "Run practice drills without alarming parents — test your system safely." },
+      { icon: MessageSquare, title: "Read receipts", description: "See who received and acknowledged each alert in real time." },
+      { icon: AlertTriangle, title: "Severity levels", description: "Info, advisory, warning, emergency — the right tone for the right moment." },
+    ],
+    howItWorks: [
+      { step: 1, title: "Pick audience", description: "Select roles, schools, or classes to notify." },
+      { step: 2, title: "Choose channels", description: "SMS, push, email — or all at once." },
+      { step: 3, title: "Send & track", description: "One tap to send, real-time delivery tracking." },
+    ],
   },
   "zh-HK": {
-    badge: "即將推出",
+    badge: "溝通",
     title: "緊急通訊",
-    highlight: "快速全校警報",
-    description: "用於緊急情況、演習和緊急公告的即時通訊系統。通過多個渠道同時聯繫家長、員工和學生，並確認送達。",
-    feature1: "多渠道警報（短信、電郵、推送、應用內）",
-    feature2: "預建緊急模板",
-    feature3: "送達追蹤和已讀回執",
-    feature4: "演習模式用於練習場景",
-    cta: "聯絡我們了解更多",
-    backToFeatures: "返回功能頁面",
+    highlight: "即時、可靠、無處不在",
+    description:
+      "針對演習、停課與緊急情況即時發送大規模通知——跨 SMS、推播、電郵與應用內。按角色、學校或班級目標投放。即時追蹤送達與已讀回條。",
+    trustIndicator1: "多渠道送達",
+    trustIndicator2: "即時已讀回條",
+    trustIndicator3: "演習模式",
+    features: [
+      { icon: Bell, title: "即時大規模警示", description: "秒速推送至每位家長、學生與教職員。" },
+      { icon: Smartphone, title: "SMS + 推播 + 電郵", description: "透過每個人喜好的渠道自動送達。" },
+      { icon: Users, title: "目標投放", description: "發送給單一班級、整間學校或所有家庭。" },
+      { icon: Shield, title: "演習模式", description: "不驚動家長進行演習——安全測試系統。" },
+      { icon: MessageSquare, title: "已讀回條", description: "即時查看誰收到並確認每則警示。" },
+      { icon: AlertTriangle, title: "嚴重程度分級", description: "資訊、建議、警告、緊急——適切的語調配對情境。" },
+    ],
+    howItWorks: [
+      { step: 1, title: "選擇受眾", description: "選擇要通知的角色、學校或班級。" },
+      { step: 2, title: "選擇渠道", description: "SMS、推播、電郵——或全部。" },
+      { step: 3, title: "發送與追蹤", description: "一鍵發送，即時送達追蹤。" },
+    ],
   },
 };
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
-  const lang = (await params).lang === "zh-HK" ? "zh-HK" : "en";
+  const rawLang = (await params).lang;
+  const lang = rawLang === "zh-HK" ? "zh-HK" : "en";
   const t = texts[lang] ?? texts.en;
   return buildPageMetadata({
     lang,
     path: "/features/emergency-communications",
-    title: `${t.title} - ${t.highlight} | Elementals`,
+    title: `${t.title} — ${t.highlight} | Elementals`,
     description: t.description,
   });
 }
 
 export default async function EmergencyCommunicationsPage({ params }: { params: Promise<{ lang: string }> }) {
-  const lang = (await params).lang === "zh-HK" ? "zh-HK" : "en";
-  const t = texts[lang] ?? texts.en;
+  const rawLang = (await params).lang;
+  const lang: Locale = rawLang === "zh-HK" ? "zh-HK" : rawLang === "vi" ? "vi" : "en";
+  const contentLang = lang === "zh-HK" ? "zh-HK" : "en";
+  const t = texts[contentLang] ?? texts.en;
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#fff0eb] to-white">
-      <div className="max-w-4xl mx-auto px-4 py-20 text-center">
-        <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#fc3c00]/10 text-[#fc3c00] rounded-full text-sm font-medium mb-6">
-          <AlertTriangle className="h-4 w-4" />
-          {t.badge}
-        </div>
-
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-          {t.title} <span className="text-[#fc3c00]">{t.highlight}</span>
-        </h1>
-
-        <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-          {t.description}
-        </p>
-
-        <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
-          <ul className="text-left space-y-4">
-            {[t.feature1, t.feature2, t.feature3, t.feature4].map((feature, i) => (
-              <li key={i} className="flex items-start gap-3">
-                <div className="w-6 h-6 rounded-full bg-[#fc3c00]/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <span className="text-[#fc3c00] text-sm font-bold">{i + 1}</span>
-                </div>
-                <span className="text-gray-700">{feature}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link href={`/${lang}/contact`}>
-            <Button size="lg" className="bg-[#fc3c00] hover:bg-[#e03500] text-white px-8">
-              {t.cta}
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-          </Link>
-          <Link href={`/${lang}/features`}>
-            <Button size="lg" variant="outline" className="px-8">
-              {t.backToFeatures}
-            </Button>
-          </Link>
-        </div>
-      </div>
-    </div>
+    <FeaturePageTemplate
+      badge={t.badge}
+      badgeIcon={AlertTriangle}
+      title={t.title}
+      highlight={t.highlight}
+      description={t.description}
+      features={t.features}
+      howItWorks={t.howItWorks}
+      trustIndicators={[t.trustIndicator1, t.trustIndicator2, t.trustIndicator3]}
+      lang={lang}
+      mockup={<ChatMockup lang={lang} />}
+    />
   );
 }

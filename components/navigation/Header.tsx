@@ -71,7 +71,7 @@ const getTeachingLearningLinks = (dict: NavDict) => [
 const getSchoolOperationsLinks = (dict: NavDict) => [
   { name: getNavText(dict, 'magneticScheduling', 'Magnetic Scheduling'), path: "/features/scheduling", icon: Calendar },
   { name: getNavText(dict, 'featureLinks.integrations', 'Integrations'), path: "/features/integrations", icon: Plug },
-  { name: getNavText(dict, 'featureLinks.documentHub', 'Document Hub'), path: "/features/document-hub", icon: FolderOpen, badge: getNavText(dict, 'new', 'NEW') },
+  { name: getNavText(dict, 'featureLinks.classStories', 'Class Stories'), path: "/features/school-news", icon: FolderOpen },
 ];
 
 const getPeopleHRLinks = (dict: NavDict) => [
@@ -86,7 +86,6 @@ const getFinanceAdmissionsLinks = (dict: NavDict) => [
 ];
 
 const getQualityComplianceLinks = (dict: NavDict) => [
-  { name: getNavText(dict, 'featureLinks.qaAccreditation', 'QA & Accreditation'), path: "/features/qa-accreditation", icon: ShieldCheck },
   { name: getNavText(dict, 'featureLinks.policyManagement', 'Policy Management'), path: "/features/policy-management", icon: FileCheck },
   { name: getNavText(dict, 'featureLinks.studentAffairs', 'Student Affairs'), path: "/features/student-affairs", icon: HeartHandshake },
 ];
@@ -409,11 +408,20 @@ export default function Header({ lang, dict }: HeaderProps) {
               value={lang}
               onChange={(e) => {
                 const newLang = e.target.value;
-                const pathWithoutLang = pathname?.replace(/^\/(en|zh-HK)/, "") || "/";
-                const newPath = newLang === "en" ? pathWithoutLang : `/${newLang}${pathWithoutLang}`;
+                // Strip ANY existing locale prefix (vi is default/unprefixed, but
+                // handle /vi defensively in case it ever appears).
+                const pathWithoutLang =
+                  pathname?.replace(/^\/(vi|en|zh-HK)(?=\/|$)/, "") || "";
+                const basePath = pathWithoutLang === "" ? "/" : pathWithoutLang;
+                // vi is the default locale — it has NO URL prefix.
+                const newPath =
+                  newLang === "vi" ? basePath : `/${newLang}${basePath === "/" ? "" : basePath}`;
                 const query = searchParams?.toString();
-                const nextHref = query ? `${newPath}?${query}` : newPath;
-                router.push(nextHref);
+                const nextHref = query ? `${newPath || "/"}?${query}` : newPath || "/";
+                // Persist the choice so middleware honors it on subsequent requests.
+                document.cookie = `NEXT_LOCALE=${newLang}; path=/; max-age=31536000; samesite=lax`;
+                router.replace(nextHref);
+                router.refresh();
               }}
               className="text-sm bg-transparent border-none outline-none cursor-pointer text-[#fc3c00]"
             >

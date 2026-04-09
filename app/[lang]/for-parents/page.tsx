@@ -1,6 +1,7 @@
 import { Users, Bell, BarChart3, MessageSquare, Calendar, Camera } from "lucide-react";
 import type { Locale } from "@/lib/i18n/config";
 import { RolePageTemplate } from "@/components/pages/RolePageTemplate";
+import { ParentDashboardMockup } from "@/components/beaver-mockups";
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 
@@ -160,7 +161,8 @@ const contentByLang: Record<
 };
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
-  const lang = (await params).lang === "zh-HK" ? "zh-HK" : "en";
+  const rawLang = (await params).lang;
+  const lang = rawLang === "zh-HK" ? "zh-HK" : "en";
   const t = contentByLang[lang] ?? contentByLang.en;
   const title = `${t.badge}: ${t.title} ${t.highlight} | Elementals`;
   const description = t.description;
@@ -168,8 +170,10 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 }
 
 export default async function ForParentsPage({ params }: { params: Promise<{ lang: string }> }) {
-  const lang = (await params).lang === "zh-HK" ? "zh-HK" : "en";
-  const t = contentByLang[lang] ?? contentByLang.en;
+  const rawLang = (await params).lang;
+  const lang: Locale = rawLang === "zh-HK" ? "zh-HK" : rawLang === "vi" ? "vi" : "en";
+  const contentLang = lang === "zh-HK" ? "zh-HK" : "en";
+  const t = contentByLang[contentLang] ?? contentByLang.en;
 
   return (
     <RolePageTemplate
@@ -182,6 +186,7 @@ export default async function ForParentsPage({ params }: { params: Promise<{ lan
       features={t.features}
       trustIndicators={t.trustIndicators}
       lang={lang}
+      mockup={<ParentDashboardMockup lang={lang} />}
     />
   );
 }

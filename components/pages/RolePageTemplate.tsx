@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import Link from "next/link";
 import { ArrowRight, Check, type LucideIcon } from "lucide-react";
 import type { Locale } from "@/lib/i18n/config";
@@ -36,6 +37,8 @@ interface RolePageProps {
   workflow?: WorkflowItem[];
   trustIndicators?: string[];
   lang: Locale;
+  /** Optional product mockup rendered in the hero. When present, hero becomes a 2-col layout. */
+  mockup?: ReactNode;
 }
 
 const hasText = (value: string | null | undefined): value is string =>
@@ -52,6 +55,7 @@ export function RolePageTemplate({
   workflow,
   trustIndicators,
   lang,
+  mockup,
 }: RolePageProps) {
   const uiText: Record<
   string,
@@ -122,46 +126,106 @@ export function RolePageTemplate({
         <div className="absolute bottom-0 right-10 w-96 h-96 bg-[#ffd5c4]/40 rounded-full blur-3xl hidden sm:block" />
 
         <div className="container px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-[#fc3c00]/10 text-[#fc3c00] rounded-full text-sm font-medium">
-              <BadgeIcon className="h-4 w-4" />
-              <span>{badge}</span>
-            </div>
+          {mockup ? (
+            // 2-col layout with product mockup on the right
+            <div className="max-w-7xl mx-auto">
+              <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+                {/* Text column */}
+                <div className="text-center lg:text-left lg:col-span-5">
+                  <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-[#fc3c00]/10 text-[#fc3c00] rounded-full text-sm font-medium">
+                    <BadgeIcon className="h-4 w-4" />
+                    <span>{badge}</span>
+                  </div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-              {title}{" "}
-              <span className="bg-gradient-to-r from-[#fc3c00] to-[#c52d00] bg-clip-text text-transparent">
-                {highlight}
-              </span>
-            </h1>
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                    {title}{" "}
+                    <span className="bg-gradient-to-r from-[#fc3c00] to-[#c52d00] bg-clip-text text-transparent">
+                      {highlight}
+                    </span>
+                  </h1>
 
-            <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">{description}</p>
+                  <p className="text-lg sm:text-xl text-gray-600 mb-8">{description}</p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Link href={getLocalizedPath("/contact")}>
-                <Button size="lg" className="px-8 py-6 text-lg rounded-xl bg-[#fc3c00] hover:bg-[#fc3c00]/90">
-                  {t.startFree}
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
-              <Link href={getLocalizedPath("/pricing")}>
-                <Button variant="outline" size="lg" className="px-8 py-6 text-lg rounded-xl">
-                  {t.seePricing}
-                </Button>
-              </Link>
-            </div>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
+                    <Link href={getLocalizedPath("/contact")}>
+                      <Button size="lg" className="px-8 py-6 text-lg rounded-xl bg-[#fc3c00] hover:bg-[#fc3c00]/90">
+                        {t.startFree}
+                        <ArrowRight className="ml-2 h-5 w-5" />
+                      </Button>
+                    </Link>
+                    <Link href={getLocalizedPath("/pricing")}>
+                      <Button variant="outline" size="lg" className="px-8 py-6 text-lg rounded-xl">
+                        {t.seePricing}
+                      </Button>
+                    </Link>
+                  </div>
 
-            {safeTrustIndicators.length > 0 && (
-              <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-600">
-                {safeTrustIndicators.map((indicator) => (
-                  <span key={indicator} className="flex items-center gap-2">
-                    <Check className="h-4 w-4 text-green-500" />
-                    {indicator}
-                  </span>
-                ))}
+                  {safeTrustIndicators.length > 0 && (
+                    <div className="flex flex-wrap justify-center lg:justify-start gap-4 text-sm text-gray-600">
+                      {safeTrustIndicators.map((indicator) => (
+                        <span key={indicator} className="flex items-center gap-2">
+                          <Check className="h-4 w-4 text-green-500" />
+                          {indicator}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </div>
+
+                {/* Mockup column */}
+                <div className="lg:col-span-7 w-full">
+                  <div className="relative w-full">
+                    <div className="absolute -inset-4 bg-gradient-to-br from-[#fc3c00]/20 via-[#ff8c5a]/10 to-transparent rounded-[32px] blur-2xl pointer-events-none" />
+                    <div className="relative lg:rotate-[0.5deg] lg:hover:rotate-0 transition-transform duration-500 ease-out">
+                      {mockup}
+                    </div>
+                  </div>
+                </div>
               </div>
-            )}
-          </div>
+            </div>
+          ) : (
+            // Original centered layout
+            <div className="max-w-4xl mx-auto text-center">
+              <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-[#fc3c00]/10 text-[#fc3c00] rounded-full text-sm font-medium">
+                <BadgeIcon className="h-4 w-4" />
+                <span>{badge}</span>
+              </div>
+
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                {title}{" "}
+                <span className="bg-gradient-to-r from-[#fc3c00] to-[#c52d00] bg-clip-text text-transparent">
+                  {highlight}
+                </span>
+              </h1>
+
+              <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">{description}</p>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                <Link href={getLocalizedPath("/contact")}>
+                  <Button size="lg" className="px-8 py-6 text-lg rounded-xl bg-[#fc3c00] hover:bg-[#fc3c00]/90">
+                    {t.startFree}
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </Link>
+                <Link href={getLocalizedPath("/pricing")}>
+                  <Button variant="outline" size="lg" className="px-8 py-6 text-lg rounded-xl">
+                    {t.seePricing}
+                  </Button>
+                </Link>
+              </div>
+
+              {safeTrustIndicators.length > 0 && (
+                <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-600">
+                  {safeTrustIndicators.map((indicator) => (
+                    <span key={indicator} className="flex items-center gap-2">
+                      <Check className="h-4 w-4 text-green-500" />
+                      {indicator}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
         </div>
       </section>
 

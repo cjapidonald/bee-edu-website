@@ -1,6 +1,7 @@
 import { GraduationCap, Brain, FileText, BarChart3, Calendar, Target, Clock, Check, BookOpen } from "lucide-react";
 import type { Locale } from "@/lib/i18n/config";
 import { RolePageTemplate } from "@/components/pages/RolePageTemplate";
+import { TeacherDashboardMockup } from "@/components/beaver-mockups";
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 
@@ -240,8 +241,10 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 }
 
 export default async function ForTeachersPage({ params }: { params: Promise<{ lang: string }> }) {
-  const lang = (await params).lang === "zh-HK" ? "zh-HK" : "en";
-  const t = contentByLang[lang] ?? contentByLang.en;
+  const rawLang = (await params).lang;
+  const lang: Locale = rawLang === "zh-HK" ? "zh-HK" : rawLang === "vi" ? "vi" : "en";
+  const contentLang = lang === "zh-HK" ? "zh-HK" : "en";
+  const t = contentByLang[contentLang] ?? contentByLang.en;
 
   return (
     <RolePageTemplate
@@ -255,6 +258,7 @@ export default async function ForTeachersPage({ params }: { params: Promise<{ la
       workflow={t.workflow}
       trustIndicators={t.trustIndicators}
       lang={lang}
+      mockup={<TeacherDashboardMockup lang={lang} />}
     />
   );
 }

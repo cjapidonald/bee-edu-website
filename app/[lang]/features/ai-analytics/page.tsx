@@ -1,95 +1,89 @@
-import { LineChart, ArrowRight } from "lucide-react";
+import { Brain, LineChart, Sparkles, AlertCircle, TrendingUp, Database, BarChart3 } from "lucide-react";
 import type { Locale } from "@/lib/i18n/config";
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo/metadata";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import { FeaturePageTemplate } from "@/components/pages/FeaturePageTemplate";
+import { DataScientistMockup } from "@/components/beaver-mockups";
 
 const texts = {
   en: {
-    badge: "Coming Soon",
-    title: "AI Analytics Hub",
-    highlight: "Student 360 & Insights",
-    description: "Unified analytics dashboard with Student 360 profiles, risk detection, and AI-powered oversight. Get a complete view of every student's academic journey, behavior patterns, and early warning indicators.",
-    feature1: "Student 360 profiles with complete history",
-    feature2: "AI-powered risk detection and alerts",
-    feature3: "Cross-module insights and correlations",
-    feature4: "Customizable analytics dashboards",
-    cta: "Contact Us to Learn More",
-    backToFeatures: "Back to Features",
+    badge: "Analytics & Insights",
+    title: "Data Scientist AI",
+    highlight: "Ask anything about your data",
+    description:
+      "Natural-language analytics grounded in your school's real data. Ask questions in plain English, get charts, insights, and recommendations in seconds — without writing a single query.",
+    trustIndicator1: "Grounded in school data",
+    trustIndicator2: "Fast, Balanced, Deep modes",
+    trustIndicator3: "Zero SQL required",
+    features: [
+      { icon: Brain, title: "Natural language queries", description: "Ask 'Which grade has the biggest drop in attendance?' and get a chart instantly." },
+      { icon: Database, title: "Grounded in your data", description: "Every answer comes from your live school data — no hallucinations, full auditability." },
+      { icon: AlertCircle, title: "Risk detection", description: "Proactive alerts for attendance drops, grade slides, and wellbeing concerns." },
+      { icon: TrendingUp, title: "Student 360", description: "Complete view of every student's academic journey, behavior patterns, and early warning indicators." },
+      { icon: BarChart3, title: "Cross-module insights", description: "Correlate grades, behavior, attendance, and homework in one view." },
+      { icon: Sparkles, title: "Suggested prompts", description: "One-click insights: top performers, at-risk students, revenue trends, and more." },
+    ],
+    howItWorks: [
+      { step: 1, title: "Ask a question", description: "Type a plain-English question about any aspect of your school." },
+      { step: 2, title: "AI generates the answer", description: "Charts, tables, and insights grounded in real data — in seconds." },
+      { step: 3, title: "Act on insights", description: "Export to PDF, set alerts, or share with team." },
+    ],
   },
   "zh-HK": {
-    badge: "即將推出",
-    title: "AI 分析中心",
-    highlight: "學生全方位檢視與洞察",
-    description: "統一分析儀表板，包含學生 360 度檔案、風險檢測和 AI 驅動的監督功能。全面了解每位學生的學業歷程、行為模式和預警指標。",
-    feature1: "學生 360 度檔案及完整歷史",
-    feature2: "AI 驅動的風險檢測和預警",
-    feature3: "跨模組洞察和關聯分析",
-    feature4: "可自訂分析儀表板",
-    cta: "聯絡我們了解更多",
-    backToFeatures: "返回功能頁面",
+    badge: "分析與洞察",
+    title: "數據科學家 AI",
+    highlight: "以自然語言查詢你的資料",
+    description:
+      "以自然語言為基礎的分析，建基於你學校的真實資料。以淺白英語提問，秒速獲取圖表、洞察與建議——無須撰寫任何查詢。",
+    trustIndicator1: "以學校資料為基礎",
+    trustIndicator2: "快速、平衡、深度三種模式",
+    trustIndicator3: "無須 SQL",
+    features: [
+      { icon: Brain, title: "自然語言查詢", description: "問「哪個年級出勤率下降最多？」即時獲取圖表。" },
+      { icon: Database, title: "以你的資料為基礎", description: "每個答案都來自你的即時學校資料——無幻覺、完全可審計。" },
+      { icon: AlertCircle, title: "風險檢測", description: "主動警示出勤下降、成績滑落與身心健康問題。" },
+      { icon: TrendingUp, title: "學生 360 度檔案", description: "全面掌握每位學生的學業歷程、行為模式與預警指標。" },
+      { icon: BarChart3, title: "跨模組洞察", description: "在同一視圖中關聯成績、行為、出勤與功課。" },
+      { icon: Sparkles, title: "建議提問", description: "一鍵洞察：頂尖學生、風險學生、收入趨勢等。" },
+    ],
+    howItWorks: [
+      { step: 1, title: "提問", description: "以淺白語言提問學校任何方面。" },
+      { step: 2, title: "AI 生成答案", description: "圖表、表格與洞察，建基於真實資料——秒速完成。" },
+      { step: 3, title: "依洞察行動", description: "匯出 PDF、設定警示或分享給團隊。" },
+    ],
   },
 };
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
-  const lang = (await params).lang === "zh-HK" ? "zh-HK" : "en";
+  const rawLang = (await params).lang;
+  const lang = rawLang === "zh-HK" ? "zh-HK" : "en";
   const t = texts[lang] ?? texts.en;
   return buildPageMetadata({
     lang,
     path: "/features/ai-analytics",
-    title: `${t.title} - ${t.highlight} | Elementals`,
+    title: `${t.title} — ${t.highlight} | Elementals`,
     description: t.description,
   });
 }
 
 export default async function AIAnalyticsPage({ params }: { params: Promise<{ lang: string }> }) {
-  const lang = (await params).lang === "zh-HK" ? "zh-HK" : "en";
-  const t = texts[lang] ?? texts.en;
+  const rawLang = (await params).lang;
+  const lang: Locale = rawLang === "zh-HK" ? "zh-HK" : rawLang === "vi" ? "vi" : "en";
+  const contentLang = lang === "zh-HK" ? "zh-HK" : "en";
+  const t = texts[contentLang] ?? texts.en;
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#fff0eb] to-white">
-      <div className="max-w-4xl mx-auto px-4 py-20 text-center">
-        <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#fc3c00]/10 text-[#fc3c00] rounded-full text-sm font-medium mb-6">
-          <LineChart className="h-4 w-4" />
-          {t.badge}
-        </div>
-
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-          {t.title} <span className="text-[#fc3c00]">{t.highlight}</span>
-        </h1>
-
-        <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-          {t.description}
-        </p>
-
-        <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
-          <ul className="text-left space-y-4">
-            {[t.feature1, t.feature2, t.feature3, t.feature4].map((feature, i) => (
-              <li key={i} className="flex items-start gap-3">
-                <div className="w-6 h-6 rounded-full bg-[#fc3c00]/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <span className="text-[#fc3c00] text-sm font-bold">{i + 1}</span>
-                </div>
-                <span className="text-gray-700">{feature}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link href={`/${lang}/contact`}>
-            <Button size="lg" className="bg-[#fc3c00] hover:bg-[#e03500] text-white px-8">
-              {t.cta}
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-          </Link>
-          <Link href={`/${lang}/features`}>
-            <Button size="lg" variant="outline" className="px-8">
-              {t.backToFeatures}
-            </Button>
-          </Link>
-        </div>
-      </div>
-    </div>
+    <FeaturePageTemplate
+      badge={t.badge}
+      badgeIcon={Brain}
+      title={t.title}
+      highlight={t.highlight}
+      description={t.description}
+      features={t.features}
+      howItWorks={t.howItWorks}
+      trustIndicators={[t.trustIndicator1, t.trustIndicator2, t.trustIndicator3]}
+      lang={lang}
+      mockup={<DataScientistMockup lang={lang} />}
+    />
   );
 }

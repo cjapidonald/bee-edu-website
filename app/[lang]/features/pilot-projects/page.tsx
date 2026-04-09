@@ -2,12 +2,14 @@ import { FlaskConical, Target, BarChart3, Users, Clock, CheckCircle } from "luci
 import type { Locale } from "@/lib/i18n/config";
 import { marketingCopy } from "@/lib/marketing/marketing-copy";
 import { FeaturePageTemplate } from "@/components/pages/FeaturePageTemplate";
+import { AdminDashboardMockup } from "@/components/beaver-mockups";
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
-  const lang = (await params).lang === "zh-HK" ? "zh-HK" : "en";
+  const rawLang = (await params).lang;
+  const lang = rawLang === "zh-HK" ? "zh-HK" : "en";
   const copy = marketingCopy[lang] ?? marketingCopy.en;
   const t = copy.featurePages.pilotProjects;
   const title = t.seoTitle || `${t.title} ${t.highlight} | Elementals`;
@@ -16,7 +18,9 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 }
 
 export default async function PilotProjectsPage({ params }: { params: Promise<{ lang: string }> }) {
-  const lang = (await params).lang === "zh-HK" ? "zh-HK" : "en";
+  const rawLang = (await params).lang;
+  const lang: Locale = rawLang === "zh-HK" ? "zh-HK" : rawLang === "vi" ? "vi" : "en";
+  const contentLang = lang === "zh-HK" ? "zh-HK" : "en";
   const copy = marketingCopy[lang] ?? marketingCopy.en;
   const t = copy.featurePages.pilotProjects;
   const common = copy.featurePages.common;
@@ -114,6 +118,7 @@ export default async function PilotProjectsPage({ params }: { params: Promise<{ 
       comparison={comparison}
       trustIndicators={[t.trustIndicator1, t.trustIndicator2, t.trustIndicator3]}
       lang={lang}
+      mockup={<AdminDashboardMockup lang={lang} />}
     />
   );
 }

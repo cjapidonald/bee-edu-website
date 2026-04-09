@@ -45,7 +45,7 @@ export const knowledgeBase: KnowledgeEntry[] = [
     keywords: ["feature", "features", "can", "capabilities", "tools", "modules"],
     question: "What features do you offer?",
     answer:
-      "Our platform includes **20+ integrated modules**. Key ones include:\n\n**1. Behavior Tracking** - ClassSpark points (included)\n**2. Skills Gradebook** - Mastery tracking with heatmaps\n**3. Scheduling** - AI-powered timetables\n**4. Exams & Marking** - Complete assessment lifecycle\n**5. Curriculum & Skills** - Standards alignment\n**6. TeacherLab & AI** - Planning, reports, and teaching workflows\n**7. Document Hub** - Centralized documents and policies\n**8. HR & Onboarding** - Recruitment, contracts, and workflows\n**9. Finance & Billing** - Payroll, fees, and approvals\n**10. Insights & Reports** - Analytics dashboards",
+      "Our platform includes **20+ integrated modules**. Key ones include:\n\n**1. ClassSpark Behavior** - Real-time gamified behavior tracking\n**2. Skills Gradebook** - Mastery tracking with heatmaps\n**3. Magnetic Scheduling** - AI-powered timetables\n**4. Exam Platform** - Full assessment lifecycle\n**5. Curriculum Planning** - Skills mapping and standards alignment\n**6. TeacherLab & AI** - Lesson planning, homework builder, AI reports\n**7. Homework System** - 3-panel Resources Factory for assignment creation\n**8. HR & Recruitment** - Staff directory, contracts, job postings\n**9. Finance & Admissions** - Invoices, fees, enrollment pipelines\n**10. Data Scientist AI** - Natural-language analytics across your data",
     category: "features",
     followUp: ["Tell me about AI features", "How does the gradebook work?"],
     priority: 10,
@@ -179,14 +179,14 @@ export const knowledgeBase: KnowledgeEntry[] = [
     pageLinkText: "Learn about AI Analytics",
   },
   {
-    keywords: ["document", "documents", "files", "google drive", "smart lists", "policies"],
-    question: "How does Document Hub work?",
+    keywords: ["homework", "homework builder", "resources factory", "assignments", "ai homework"],
+    question: "How does the Homework System work?",
     answer:
-      "Our **Document Hub** centralizes school documents:\n\n**Smart Lists:**\n• Auto-categorized documents\n• Quick search and filters\n• Version control\n\n**Google Integration:**\n• Sync with Google Drive\n• Shared Drives support\n• Real-time collaboration\n\n**Policy Management:**\n• Store and distribute policies\n• Track acknowledgments\n• Audit trails",
+      "Our **Homework System** is a 3-panel Resources Factory:\n\n**Chat History (left):**\n• All your past homework conversations\n• Templates and saved drafts\n\n**AI Conversation (center):**\n• Describe what you want to teach\n• AI generates differentiated homework in seconds\n• Grounded in your curriculum and skills\n\n**Preview (right):**\n• Live preview of the assignment\n• One-click publish to ClassShop\n• Automatic student delivery",
     category: "features",
     priority: 6,
-    pageLink: "/features/document-hub",
-    pageLinkText: "Explore Document Hub",
+    pageLink: "/features/homework",
+    pageLinkText: "Explore Homework System",
   },
   {
     keywords: ["portfolio", "portfolios", "showcase", "student work", "achievements"],
@@ -232,7 +232,7 @@ export const knowledgeBase: KnowledgeEntry[] = [
     keywords: ["new", "latest", "recent", "updates", "coming soon", "roadmap"],
     question: "What's new in Elementals?",
     answer:
-      "**Recent & Upcoming Features:**\n\n**Now Available:**\n• AI Analytics Hub with Student 360\n• Document Hub with Google Drive sync\n• Digital Portfolios for students\n• Emergency Communications system\n• Wordwall interactive games\n• Gamification with XP & badges\n\n**Coming Soon:**\n• AI Tutor for students\n• Microcredentials & digital badges\n• Enhanced mobile experience",
+      "**Recent & Upcoming Features:**\n\n**Now Available:**\n• Data Scientist AI with Student 360\n• Homework System (Resources Factory 3-panel AI workspace)\n• Digital Portfolios for students\n• Emergency Communications system\n• Gamification with XP, gems & monster avatars\n• Chat & Parent Portal\n• Recruitment & Admissions pipelines\n\n**Coming Soon:**\n• AI Tutor for students\n• Microcredentials & digital badges\n• Enhanced mobile experience",
     category: "general",
     priority: 7,
     followUp: ["Tell me about AI Analytics", "What is Wordwall?"],
@@ -376,23 +376,27 @@ AI 亦提供 **Fast / Balanced / Deep** 模式，以及面向學生使用的 **S
     pageLinkText: "了解 AI 分析中心",
   },
   {
-    keywords: ["文件", "文檔", "document", "google", "雲端", "政策"],
-    question: "文件中心如何運作？",
-    answer: `**文件中心**集中管理學校文件：
+    keywords: ["功課", "作業", "homework", "資源工廠", "resources factory", "AI 功課"],
+    question: "功課系統如何運作？",
+    answer: `**功課系統**是一個三欄式資源工廠：
 
-**智能清單：**
-• 自動分類文件
-• 快速搜索和篩選
-• 版本控制
+**對話記錄（左）：**
+• 所有過往功課對話
+• 範本與已儲存的草稿
 
-**Google 整合：**
-• 與 Google 雲端硬碟同步
-• 支援共用雲端硬碟
-• 即時協作`,
+**AI 對話（中）：**
+• 描述想要教甚麼
+• AI 秒速生成差異化功課
+• 以課程與技能為基礎
+
+**預覽（右）：**
+• 即時預覽作業
+• 一鍵發佈至 ClassShop
+• 自動派發給學生`,
     category: "features",
     priority: 6,
-    pageLink: "/features/document-hub",
-    pageLinkText: "探索文件中心",
+    pageLink: "/features/homework",
+    pageLinkText: "探索功課系統",
   },
   {
     keywords: ["作品集", "portfolio", "展示", "學生作品", "成就"],

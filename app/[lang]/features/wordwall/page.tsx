@@ -1,95 +1,89 @@
-import { LayoutGrid, ArrowRight } from "lucide-react";
+import { Gamepad2, Trophy, Zap, Target, Sparkles, Play, Users } from "lucide-react";
 import type { Locale } from "@/lib/i18n/config";
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo/metadata";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import { FeaturePageTemplate } from "@/components/pages/FeaturePageTemplate";
+import { GamificationMockup } from "@/components/beaver-mockups";
 
 const texts = {
   en: {
-    badge: "Coming Soon",
-    title: "Wordwall",
-    highlight: "Interactive Learning Games",
-    description: "Create engaging interactive activities and games for your classroom. Quizzes, matching games, word searches, and more—all integrated with your curriculum and gradebook.",
-    feature1: "Multiple game templates and formats",
-    feature2: "Auto-generate from lesson content",
-    feature3: "Real-time multiplayer classroom games",
-    feature4: "Results sync to gradebook automatically",
-    cta: "Contact Us to Learn More",
-    backToFeatures: "Back to Features",
+    badge: "Teaching & Learning",
+    title: "Games Library",
+    highlight: "Curriculum-linked learning games",
+    description:
+      "Quiz Battle, Writing Race, Matching Pairs, Word Builder — interactive games scoped to subjects and curriculum. Students play, learn, and earn gems that unlock rewards in the ClassShop.",
+    trustIndicator1: "Subject-scoped",
+    trustIndicator2: "Live or async play",
+    trustIndicator3: "Integrated with gamification",
+    features: [
+      { icon: Gamepad2, title: "Games Library", description: "Quiz Battle, Writing Race, Matching Pairs, and more — all subject-scoped." },
+      { icon: Target, title: "Curriculum-linked", description: "Every game ties to skills in your curriculum — learning stays on track." },
+      { icon: Play, title: "Live & async", description: "Play live in class (whole-class start line) or set as homework." },
+      { icon: Trophy, title: "Leaderboards", description: "Class rankings and weekly challenges keep students motivated." },
+      { icon: Sparkles, title: "AI-generated content", description: "Teachers describe the topic; AI generates questions instantly." },
+      { icon: Zap, title: "Gem rewards", description: "Winners earn gems they spend in the ClassShop on avatars and perks." },
+    ],
+    howItWorks: [
+      { step: 1, title: "Pick a template", description: "Choose from Quiz, Writing Race, Matching Pairs, and more." },
+      { step: 2, title: "Link to curriculum", description: "AI generates content from your curriculum skills." },
+      { step: 3, title: "Students play & earn", description: "Play live or async, earn gems, climb the leaderboard." },
+    ],
   },
   "zh-HK": {
-    badge: "即將推出",
-    title: "Wordwall",
-    highlight: "互動學習遊戲",
-    description: "為您的課堂創建引人入勝的互動活動和遊戲。測驗、配對遊戲、文字搜索等——全部與您的課程和成績冊整合。",
-    feature1: "多種遊戲模板和格式",
-    feature2: "從課程內容自動生成",
-    feature3: "即時多人課堂遊戲",
-    feature4: "結果自動同步到成績冊",
-    cta: "聯絡我們了解更多",
-    backToFeatures: "返回功能頁面",
+    badge: "教學與學習",
+    title: "遊戲庫",
+    highlight: "連結課程的學習遊戲",
+    description:
+      "知識對戰、寫作競速、配對遊戲、單字建構——以科目與課程為範圍的互動遊戲。學生遊玩、學習並獲得寶石，可於 ClassShop 兌換獎勵。",
+    trustIndicator1: "科目範圍",
+    trustIndicator2: "即時或非同步遊玩",
+    trustIndicator3: "整合遊戲化系統",
+    features: [
+      { icon: Gamepad2, title: "遊戲庫", description: "知識對戰、寫作競速、配對遊戲等——全部以科目為範圍。" },
+      { icon: Target, title: "連結課程", description: "每個遊戲都連結到課程技能——保持學習重點。" },
+      { icon: Play, title: "即時與非同步", description: "課堂上即時遊玩（全班開始線）或設為功課。" },
+      { icon: Trophy, title: "排行榜", description: "班級排名與每週挑戰激勵學生。" },
+      { icon: Sparkles, title: "AI 生成內容", description: "教師描述主題，AI 即時生成題目。" },
+      { icon: Zap, title: "寶石獎勵", description: "勝利者獲得寶石，可於 ClassShop 兌換角色與特權。" },
+    ],
+    howItWorks: [
+      { step: 1, title: "選擇範本", description: "從知識對戰、寫作競速、配對遊戲等選擇。" },
+      { step: 2, title: "連結到課程", description: "AI 根據你的課程技能生成內容。" },
+      { step: 3, title: "學生遊玩與獲獎", description: "即時或非同步遊玩、獲得寶石、攀登排行榜。" },
+    ],
   },
 };
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
-  const lang = (await params).lang === "zh-HK" ? "zh-HK" : "en";
+  const rawLang = (await params).lang;
+  const lang = rawLang === "zh-HK" ? "zh-HK" : "en";
   const t = texts[lang] ?? texts.en;
   return buildPageMetadata({
     lang,
     path: "/features/wordwall",
-    title: `${t.title} - ${t.highlight} | Elementals`,
+    title: `${t.title} — ${t.highlight} | Elementals`,
     description: t.description,
   });
 }
 
 export default async function WordwallPage({ params }: { params: Promise<{ lang: string }> }) {
-  const lang = (await params).lang === "zh-HK" ? "zh-HK" : "en";
-  const t = texts[lang] ?? texts.en;
+  const rawLang = (await params).lang;
+  const lang: Locale = rawLang === "zh-HK" ? "zh-HK" : rawLang === "vi" ? "vi" : "en";
+  const contentLang = lang === "zh-HK" ? "zh-HK" : "en";
+  const t = texts[contentLang] ?? texts.en;
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#fff0eb] to-white">
-      <div className="max-w-4xl mx-auto px-4 py-20 text-center">
-        <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#fc3c00]/10 text-[#fc3c00] rounded-full text-sm font-medium mb-6">
-          <LayoutGrid className="h-4 w-4" />
-          {t.badge}
-        </div>
-
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-          {t.title} <span className="text-[#fc3c00]">{t.highlight}</span>
-        </h1>
-
-        <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-          {t.description}
-        </p>
-
-        <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
-          <ul className="text-left space-y-4">
-            {[t.feature1, t.feature2, t.feature3, t.feature4].map((feature, i) => (
-              <li key={i} className="flex items-start gap-3">
-                <div className="w-6 h-6 rounded-full bg-[#fc3c00]/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <span className="text-[#fc3c00] text-sm font-bold">{i + 1}</span>
-                </div>
-                <span className="text-gray-700">{feature}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link href={`/${lang}/contact`}>
-            <Button size="lg" className="bg-[#fc3c00] hover:bg-[#e03500] text-white px-8">
-              {t.cta}
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-          </Link>
-          <Link href={`/${lang}/features`}>
-            <Button size="lg" variant="outline" className="px-8">
-              {t.backToFeatures}
-            </Button>
-          </Link>
-        </div>
-      </div>
-    </div>
+    <FeaturePageTemplate
+      badge={t.badge}
+      badgeIcon={Gamepad2}
+      title={t.title}
+      highlight={t.highlight}
+      description={t.description}
+      features={t.features}
+      howItWorks={t.howItWorks}
+      trustIndicators={[t.trustIndicator1, t.trustIndicator2, t.trustIndicator3]}
+      lang={lang}
+      mockup={<GamificationMockup lang={lang} />}
+    />
   );
 }
