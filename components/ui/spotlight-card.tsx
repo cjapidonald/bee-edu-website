@@ -1,13 +1,8 @@
 "use client";
 
 import type { LucideIcon } from "lucide-react";
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { useRef, useState } from "react";
+import { useRef, useState, useCallback } from "react";
 import { cn } from "@/lib/utils";
-
-const TILT_MAX = 9;
-const TILT_SPRING = { stiffness: 300, damping: 28 } as const;
-const GLOW_SPRING = { stiffness: 180, damping: 22 } as const;
 
 export interface SpotlightItem {
   icon: LucideIcon;
@@ -28,59 +23,51 @@ interface CardProps {
 function SpotlightCard({ item, dimmed, onHoverStart, onHoverEnd }: CardProps) {
   const Icon = item.icon;
   const cardRef = useRef<HTMLDivElement>(null);
+  const [tilt, setTilt] = useState({ rotateX: 0, rotateY: 0 });
+  const [glowPos, setGlowPos] = useState({ x: 50, y: 50 });
+  const [isHovered, setIsHovered] = useState(false);
 
-  const normX = useMotionValue(0.5);
-  const normY = useMotionValue(0.5);
-
-  const rawRotateX = useTransform(normY, [0, 1], [TILT_MAX, -TILT_MAX]);
-  const rawRotateY = useTransform(normX, [0, 1], [-TILT_MAX, TILT_MAX]);
-
-  const rotateX = useSpring(rawRotateX, TILT_SPRING);
-  const rotateY = useSpring(rawRotateY, TILT_SPRING);
-  const glowOpacity = useSpring(0, GLOW_SPRING);
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+  const handleMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
     const el = cardRef.current;
     if (!el) return;
     const rect = el.getBoundingClientRect();
-    normX.set((e.clientX - rect.left) / rect.width);
-    normY.set((e.clientY - rect.top) / rect.height);
-  };
+    const normX = (e.clientX - rect.left) / rect.width;
+    const normY = (e.clientY - rect.top) / rect.height;
+    setTilt({
+      rotateX: (normY - 0.5) * -18,
+      rotateY: (normX - 0.5) * 18,
+    });
+    setGlowPos({ x: normX * 100, y: normY * 100 });
+  }, []);
 
-  const handleMouseEnter = () => {
-    glowOpacity.set(1);
+  const handleMouseEnter = useCallback(() => {
+    setIsHovered(true);
     onHoverStart();
-  };
+  }, [onHoverStart]);
 
-  const handleMouseLeave = () => {
-    normX.set(0.5);
-    normY.set(0.5);
-    glowOpacity.set(0);
+  const handleMouseLeave = useCallback(() => {
+    setTilt({ rotateX: 0, rotateY: 0 });
+    setIsHovered(false);
     onHoverEnd();
-  };
+  }, [onHoverEnd]);
 
   return (
-    <motion.div
-      animate={{
-        scale: dimmed ? 0.96 : 1,
-        opacity: dimmed ? 0.5 : 1,
-      }}
+    <div
       className={cn(
         "group relative flex flex-col gap-5 overflow-hidden rounded-2xl border p-6",
-        "border-white/[0.06] bg-white/[0.03] shadow-none",
-        "transition-[border-color] duration-300",
-        "hover:border-white/[0.14]"
+        "border-white/[0.06] bg-white/[0.03]",
+        "transition-all duration-300 ease-out",
+        "hover:border-white/[0.14]",
+        dimmed && "scale-[0.96] opacity-50",
       )}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onMouseMove={handleMouseMove}
       ref={cardRef}
       style={{
-        rotateX,
-        rotateY,
-        transformPerspective: 900,
+        transform: `perspective(900px) rotateX(${tilt.rotateX}deg) rotateY(${tilt.rotateY}deg)${dimmed ? ' scale(0.96)' : ''}`,
+        transition: isHovered ? 'transform 0.1s ease-out, opacity 0.3s, border-color 0.3s' : 'transform 0.4s ease-out, opacity 0.3s, border-color 0.3s',
       }}
-      transition={{ duration: 0.18, ease: "easeOut" }}
     >
       {/* Static accent tint */}
       <div
@@ -91,13 +78,13 @@ function SpotlightCard({ item, dimmed, onHoverStart, onHoverEnd }: CardProps) {
         }}
       />
 
-      {/* Hover glow layer */}
-      <motion.div
+      {/* Hover glow layer — follows cursor */}
+      <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 rounded-2xl"
+        className="pointer-events-none absolute inset-0 rounded-2xl transition-opacity duration-300"
         style={{
-          opacity: glowOpacity,
-          background: `radial-gradient(ellipse at 20% 20%, ${item.color}2e, transparent 65%)`,
+          opacity: isHovered ? 1 : 0,
+          background: `radial-gradient(ellipse at ${glowPos.x}% ${glowPos.y}%, ${item.color}2e, transparent 65%)`,
         }}
       />
 
@@ -146,7 +133,7 @@ function SpotlightCard({ item, dimmed, onHoverStart, onHoverEnd }: CardProps) {
           background: `linear-gradient(to right, ${item.color}80, transparent)`,
         }}
       />
-    </motion.div>
+    </div>
   );
 }
 
