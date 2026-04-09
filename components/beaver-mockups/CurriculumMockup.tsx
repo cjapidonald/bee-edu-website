@@ -56,7 +56,7 @@ export function CurriculumMockup({ className = "", lang = "en" }: { className?: 
   const SKILLS_IN_CURRENT = lang === "vi" ? SKILLS_VI : SKILLS_EN;
   return (
     <DashboardShell
-      url="app.elementals.vn/team-leader/curriculum"
+      url="www.kiwibee.com/team-leader/curriculum"
       tabTitle={lang === "vi" ? "Thiết kế Chương trình" : "Curriculum Developer"}
       breadcrumb={lang === "vi" ? "Chương trình · Tiếng Anh Lớp 5" : "Curriculum · English Primary 5"}
       userName="Dr Vu"
@@ -78,7 +78,7 @@ export function CurriculumMockup({ className = "", lang = "en" }: { className?: 
     >
       <div className="flex items-end justify-between mb-2.5">
         <div>
-          <div className="text-[14px] font-bold text-gray-900 leading-tight">
+          <div className="text-[14px] font-bold text-white leading-tight">
             {lang === "vi" ? "Tiếng Anh Lớp 5 — Bản đồ Chương trình" : "English Primary 5 — Curriculum Map"}
           </div>
           <div className="text-[10px] text-gray-500">
@@ -111,7 +111,7 @@ export function CurriculumMockup({ className = "", lang = "en" }: { className?: 
                       <div
                         className={`h-9 w-9 rounded-full flex items-center justify-center border-4 border-white ${
                           u.status === "done"
-                            ? "bg-emerald-500"
+                            ? "bg-emerald-950/500"
                             : u.status === "current"
                               ? "bg-[#FDB714]"
                               : "bg-gray-300"
@@ -133,8 +133,8 @@ export function CurriculumMockup({ className = "", lang = "en" }: { className?: 
                         u.status === "current"
                           ? "bg-[#FDB714]/5 border-[#FDB714]/30 shadow-sm"
                           : u.status === "done"
-                            ? "bg-emerald-50/50 border-emerald-100"
-                            : "bg-white border-gray-100"
+                            ? "bg-emerald-950/50/50 border-emerald-100"
+                            : "bg-gray-900 border-gray-800"
                       }`}
                     >
                       <div className="flex items-center justify-between">
@@ -157,12 +157,12 @@ export function CurriculumMockup({ className = "", lang = "en" }: { className?: 
                               </span>
                             )}
                           </div>
-                          <div className="text-[10px] font-bold text-gray-900 truncate">
+                          <div className="text-[10px] font-bold text-white truncate">
                             {u.title}
                           </div>
                         </div>
                         <div className="shrink-0 text-right">
-                          <div className="text-[9px] font-bold text-gray-700 tabular-nums">
+                          <div className="text-[9px] font-bold text-gray-300 tabular-nums">
                             {u.skills}
                           </div>
                           <div className="text-[7px] text-gray-500">{mt("gradebook.skills", lang).toLowerCase()}</div>
@@ -201,7 +201,7 @@ export function CurriculumMockup({ className = "", lang = "en" }: { className?: 
                   <div className="flex items-center justify-between mb-0.5">
                     <div className="flex items-center gap-1 min-w-0">
                       <GitBranch className="h-2.5 w-2.5 text-[#FDB714] shrink-0" />
-                      <span className="text-[9px] font-semibold text-gray-900 truncate">
+                      <span className="text-[9px] font-semibold text-white truncate">
                         {s.name}
                       </span>
                     </div>
@@ -235,10 +235,10 @@ export function CurriculumMockup({ className = "", lang = "en" }: { className?: 
                 {mt("curriculum.standards", lang)}
               </span>
             </div>
-            <div className="text-[9px] text-gray-800 font-semibold mb-0.5">
+            <div className="text-[9px] text-gray-100 font-semibold mb-0.5">
               {lang === "vi" ? "Đồng bộ CEFR A2 + Bộ GD&ĐT" : "Aligned with CEFR A2 + local MoET"}
             </div>
-            <div className="text-[8px] text-gray-600">
+            <div className="text-[8px] text-gray-400">
               {lang === "vi" ? "42/48 chuẩn · Độ phủ 88%" : "42 of 48 curriculum standards met · 88% coverage"}
             </div>
           </div>

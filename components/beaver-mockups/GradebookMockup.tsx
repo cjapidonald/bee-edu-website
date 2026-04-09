@@ -39,18 +39,18 @@ const STUDENTS: StudentRow[] = [
 ];
 
 function gradeColors(score: Score): { bg: string; text: string; border: string } {
-  if (score === null) return { bg: "bg-gray-50", text: "text-gray-400", border: "border-gray-200" };
-  if (score >= 90) return { bg: "bg-emerald-50", text: "text-emerald-700", border: "border-emerald-200" };
+  if (score === null) return { bg: "bg-gray-800/50", text: "text-gray-400", border: "border-gray-700" };
+  if (score >= 90) return { bg: "bg-emerald-950/50", text: "text-emerald-700", border: "border-emerald-200" };
   if (score >= 80) return { bg: "bg-[#FDB714]/10", text: "text-[#a16207]", border: "border-[#FDB714]/30" };
-  if (score >= 70) return { bg: "bg-amber-50", text: "text-amber-700", border: "border-amber-200" };
-  return { bg: "bg-rose-50", text: "text-rose-700", border: "border-rose-200" };
+  if (score >= 70) return { bg: "bg-amber-950/50", text: "text-amber-700", border: "border-amber-200" };
+  return { bg: "bg-rose-950/50", text: "text-rose-700", border: "border-rose-200" };
 }
 
 export function GradebookMockup({ className = "", lang = "en" }: { className?: string; lang?: Locale }) {
   const SUBJECTS = SUBJECT_KEYS.map((k) => mt(`subjects.${k}`, lang));
   return (
     <DashboardShell
-      url="app.elementals.vn/teacher/grades"
+      url="www.kiwibee.com/teacher/grades"
       tabTitle={lang === "vi" ? "Sổ điểm — Lớp 5A" : "Gradebook — Primary 5A"}
       breadcrumb={lang === "vi" ? "Sổ điểm · Lớp 5A · Học kỳ 1" : "Gradebook · Primary 5A · Term 1"}
       userName="Ms Nguyen"
@@ -72,7 +72,7 @@ export function GradebookMockup({ className = "", lang = "en" }: { className?: s
       {/* Header */}
       <div className="flex items-end justify-between mb-2.5">
         <div>
-          <div className="text-[14px] font-bold text-gray-900 leading-tight">
+          <div className="text-[14px] font-bold text-white leading-tight">
             {lang === "vi" ? "Sổ điểm Dựa trên Kỹ năng" : "Skills-Based Gradebook"}
           </div>
           <div className="text-[10px] text-gray-500">
@@ -80,7 +80,7 @@ export function GradebookMockup({ className = "", lang = "en" }: { className?: s
           </div>
         </div>
         <div className="flex gap-1">
-          <button className="flex items-center gap-1 px-2 py-1 bg-white border border-gray-200 text-gray-700 rounded-lg text-[9px] font-semibold">
+          <button className="flex items-center gap-1 px-2 py-1 bg-gray-900 border border-gray-700 text-gray-300 rounded-lg text-[9px] font-semibold">
             <Filter className="h-2.5 w-2.5" />
             {mt("common.filter", lang)}
           </button>
@@ -99,16 +99,16 @@ export function GradebookMockup({ className = "", lang = "en" }: { className?: s
           return (
             <div
               key={s}
-              className="rounded-xl bg-white border border-gray-200/70 p-2"
+              className="rounded-xl bg-gray-900 border border-gray-700/70 p-2"
             >
               <div className="flex items-center gap-1 mb-0.5">
                 <div
                   className="h-1.5 w-1.5 rounded-full"
                   style={{ background: colors[i] }}
                 />
-                <span className="text-[8px] font-semibold text-gray-700 truncate">{s}</span>
+                <span className="text-[8px] font-semibold text-gray-300 truncate">{s}</span>
               </div>
-              <div className="text-base font-black text-gray-900 tabular-nums leading-none">
+              <div className="text-base font-black text-white tabular-nums leading-none">
                 {avgs[i]}
               </div>
               <div className="text-[7px] text-emerald-600 font-bold">+2.3</div>
@@ -125,7 +125,7 @@ export function GradebookMockup({ className = "", lang = "en" }: { className?: s
       >
         <div className="overflow-hidden">
           {/* Header row */}
-          <div className="grid grid-cols-[1.3fr_repeat(5,1fr)_0.8fr] gap-1 pb-1.5 border-b border-gray-100">
+          <div className="grid grid-cols-[1.3fr_repeat(5,1fr)_0.8fr] gap-1 pb-1.5 border-b border-gray-800">
             <div className="text-[8px] font-semibold text-gray-400 uppercase tracking-wider flex items-center gap-0.5">
               {mt("common.student", lang)} <ArrowUpDown className="h-2 w-2" />
             </div>
@@ -157,7 +157,7 @@ export function GradebookMockup({ className = "", lang = "en" }: { className?: s
                     gradientFrom={s.avatar[0]}
                     gradientTo={s.avatar[1]}
                   />
-                  <span className="text-[9px] font-semibold text-gray-900 truncate">
+                  <span className="text-[9px] font-semibold text-white truncate">
                     {s.name}
                   </span>
                 </div>
@@ -179,10 +179,10 @@ export function GradebookMockup({ className = "", lang = "en" }: { className?: s
                   <div
                     className={`h-6 px-1 min-w-[32px] rounded-lg flex items-center justify-center font-black text-[9px] tabular-nums ${
                       s.avg >= 85
-                        ? "bg-emerald-500 text-white"
+                        ? "bg-emerald-950/500 text-white"
                         : s.avg >= 75
                           ? "bg-[#FDB714] text-[#7a4e00]"
-                          : "bg-rose-500 text-white"
+                          : "bg-rose-950/500 text-white"
                     }`}
                   >
                     {s.avg.toFixed(1)}

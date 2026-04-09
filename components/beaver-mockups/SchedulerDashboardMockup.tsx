@@ -76,7 +76,7 @@ export function SchedulerDashboardMockup({ className = "", lang = "en" }: { clas
   const DAYS = [mt("common.monday", lang), mt("common.tuesday", lang), mt("common.wednesday", lang), mt("common.thursday", lang), mt("common.friday", lang)];
   return (
     <DashboardShell
-      url="app.elementals.vn/scheduler"
+      url="www.kiwibee.com/scheduler"
       tabTitle={lang === "vi" ? "Lập lịch — Tuần 12" : "Scheduler — Week 12"}
       breadcrumb={lang === "vi" ? "Lập lịch · Tuần 12 · Lớp 5A" : "Scheduler · Week 12 · Primary 5A"}
       userName="Mr Le"
@@ -100,7 +100,7 @@ export function SchedulerDashboardMockup({ className = "", lang = "en" }: { clas
       {/* Header */}
       <div className="flex items-end justify-between mb-2.5">
         <div>
-          <div className="text-[14px] font-bold text-gray-900 leading-tight">{lang === "vi" ? "Thời khóa biểu Thông minh" : "Magnetic Timetable"}</div>
+          <div className="text-[14px] font-bold text-white leading-tight">{lang === "vi" ? "Thời khóa biểu Thông minh" : "Magnetic Timetable"}</div>
           <div className="text-[10px] text-gray-500">{lang === "vi" ? "Tuần 12 · 14–18/10 · 30 tiết" : "Week 12 · Oct 14–18 · 30 lessons"}</div>
         </div>
         <button className="flex items-center gap-1 px-2 py-1 bg-gradient-to-r from-[#8b5cf6] to-[#E83B5E] text-white rounded-lg text-[10px] font-semibold shadow-sm">
@@ -119,7 +119,7 @@ export function SchedulerDashboardMockup({ className = "", lang = "en" }: { clas
         ].map((s) => (
           <div
             key={s.label}
-            className="rounded-2xl bg-white border border-gray-200/70 p-2.5 shadow-[0_1px_2px_rgba(0,0,0,0.04)]"
+            className="rounded-2xl bg-gray-900 border border-gray-700/70 p-2.5 shadow-[0_1px_2px_rgba(0,0,0,0.04)]"
           >
             <div className={`h-5 w-5 rounded ${s.bg} mb-1`} />
             <div className="text-[9px] text-gray-500 font-medium">{s.label}</div>
@@ -142,7 +142,7 @@ export function SchedulerDashboardMockup({ className = "", lang = "en" }: { clas
               <div
                 key={d}
                 className={`text-center py-1 rounded-md text-[9px] font-bold ${
-                  i === 0 ? "bg-[#8b5cf6]/10 text-[#8b5cf6]" : "text-gray-600"
+                  i === 0 ? "bg-[#8b5cf6]/10 text-[#8b5cf6]" : "text-gray-400"
                 }`}
               >
                 {d}
@@ -162,7 +162,7 @@ export function SchedulerDashboardMockup({ className = "", lang = "en" }: { clas
                   return (
                     <div
                       key={`${day}-${time}`}
-                      className="h-8 rounded-md bg-gray-50 border border-dashed border-gray-200"
+                      className="h-8 rounded-md bg-gray-800/50 border border-dashed border-gray-700"
                     />
                   );
                 }

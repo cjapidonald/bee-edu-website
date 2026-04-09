@@ -537,10 +537,10 @@ export default function ContactPage({
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gray-900">
       {/* Hero Section */}
       <section className="relative pt-16 sm:pt-20 md:pt-24 pb-12 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#f0fdf4]/50 via-white to-white" />
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-900/50 via-gray-950 to-gray-950" />
         <div className="absolute top-20 left-10 w-72 h-72 bg-[#ffe0d4]/60 rounded-full blur-3xl hidden sm:block" />
         <div className="absolute bottom-0 right-10 w-96 h-96 bg-[#ffd5c4]/60 rounded-full blur-3xl hidden sm:block" />
 
@@ -559,14 +559,14 @@ export default function ContactPage({
               <span>{t.badge}</span>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
               {t.heroTitle1}{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#16a34a] via-[#facc15] to-[#facc15]">
                 {t.heroTitle2}
               </span>
             </h1>
 
-            <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
               {t.heroSubtitle}
             </p>
 
@@ -578,15 +578,15 @@ export default function ContactPage({
       </section>
 
       {/* Contact Section */}
-      <section className="py-12 bg-white">
+      <section className="py-12 bg-gray-900">
         <div className="container px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-3 gap-8">
               {/* Contact Info Cards */}
               <div className="space-y-6">
                 {/* Quick Contact */}
-                <Card className="p-6 rounded-2xl border border-gray-200 hover:shadow-lg transition-all">
-                  <h3 className="font-semibold text-gray-900 mb-4">{t.quickContact}</h3>
+                <Card className="p-6 rounded-2xl border border-gray-700 hover:shadow-lg transition-all">
+                  <h3 className="font-semibold text-white mb-4">{t.quickContact}</h3>
 
                   <div className="space-y-4">
                     <div className="flex items-start gap-3">
@@ -602,14 +602,14 @@ export default function ContactPage({
                     </div>
 
                     <div className="flex items-start gap-3">
-                      <div className="p-2 bg-[#f0fdf4] rounded-lg">
+                      <div className="p-2 bg-gray-900 rounded-lg">
                         <Phone className="h-5 w-5 text-[#16a34a]" />
                       </div>
                       <div>
                         <p className="text-sm text-gray-500">{t.whatsApp}</p>
                         <a
                           href="https://wa.me/85294954912"
-                          className="text-gray-900 font-medium hover:underline"
+                          className="text-white font-medium hover:underline"
                         >
                           +852 94954912
                         </a>
@@ -617,12 +617,12 @@ export default function ContactPage({
                     </div>
 
                     <div className="flex items-start gap-3">
-                      <div className="p-2 bg-[#f0fdf4] rounded-lg">
+                      <div className="p-2 bg-gray-900 rounded-lg">
                         <MapPin className="h-5 w-5 text-[#16a34a]" />
                       </div>
                       <div>
                         <p className="text-sm text-gray-500">{t.address}</p>
-                        <p className="text-gray-900 font-medium">
+                        <p className="text-white font-medium">
                           {t.addressValue}
                         </p>
                       </div>
@@ -631,17 +631,17 @@ export default function ContactPage({
                 </Card>
 
                 {/* Office Hours */}
-                <Card className="p-6 rounded-2xl border border-gray-200 hover:shadow-lg transition-all">
+                <Card className="p-6 rounded-2xl border border-gray-700 hover:shadow-lg transition-all">
                   <div className="flex items-start gap-4">
-                    <div className="p-3 bg-[#f0fdf4] rounded-xl">
+                    <div className="p-3 bg-gray-900 rounded-xl">
                       <Clock className="h-6 w-6 text-[#15803d]" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-900 mb-2">{t.officeHours}</h3>
+                      <h3 className="font-semibold text-white mb-2">{t.officeHours}</h3>
                       <div className="space-y-1 text-sm">
-                        <p className="text-gray-600">{t.mondayFriday}: <span className="text-gray-900 font-medium">9:00 AM - 6:00 PM HKT</span></p>
-                        <p className="text-gray-600">{t.saturday}: <span className="text-gray-900 font-medium">10:00 AM - 2:00 PM HKT</span></p>
-                        <p className="text-gray-600">{t.sunday}: <span className="text-gray-500">{t.closed}</span></p>
+                        <p className="text-gray-400">{t.mondayFriday}: <span className="text-white font-medium">9:00 AM - 6:00 PM HKT</span></p>
+                        <p className="text-gray-400">{t.saturday}: <span className="text-white font-medium">10:00 AM - 2:00 PM HKT</span></p>
+                        <p className="text-gray-400">{t.sunday}: <span className="text-gray-500">{t.closed}</span></p>
                       </div>
                     </div>
                   </div>
@@ -649,15 +649,15 @@ export default function ContactPage({
 
                 {/* Response Time - shown on Talk to Sales tab */}
                 {activeTab === "talk-to-sales" && (
-                  <Card className="p-6 rounded-2xl border border-gray-200 hover:shadow-lg transition-all">
+                  <Card className="p-6 rounded-2xl border border-gray-700 hover:shadow-lg transition-all">
                     <div className="flex items-start gap-4">
-                      <div className="p-3 bg-[#f0fdf4] rounded-xl">
+                      <div className="p-3 bg-gray-900 rounded-xl">
                         <MessageSquare className="h-6 w-6 text-[#16a34a]" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-gray-900 mb-1">{t.responseTime}</h3>
-                        <p className="text-gray-600 text-sm mb-2">{t.avgResponse}</p>
-                        <p className="text-gray-900 font-medium">{t.under4Hours}</p>
+                        <h3 className="font-semibold text-white mb-1">{t.responseTime}</h3>
+                        <p className="text-gray-400 text-sm mb-2">{t.avgResponse}</p>
+                        <p className="text-white font-medium">{t.under4Hours}</p>
                       </div>
                     </div>
                   </Card>
@@ -665,14 +665,14 @@ export default function ContactPage({
 
                 {/* Book a Demo card - shown on Demo tab */}
                 {activeTab === "book-demo" && (
-                  <Card className="p-6 rounded-2xl border border-gray-200 hover:shadow-lg transition-all bg-gradient-to-br from-primary/5 to-primary/10">
+                  <Card className="p-6 rounded-2xl border border-gray-700 hover:shadow-lg transition-all bg-gradient-to-br from-primary/5 to-primary/10">
                     <div className="flex items-start gap-4">
                       <div className="p-3 bg-[#16a34a]/20 rounded-xl">
                         <Calendar className="h-6 w-6 text-[#16a34a]" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-gray-900 mb-1">{t.bookDemo}</h3>
-                        <p className="text-gray-600 text-sm mb-3">{t.demoSubtitle}</p>
+                        <h3 className="font-semibold text-white mb-1">{t.bookDemo}</h3>
+                        <p className="text-gray-400 text-sm mb-3">{t.demoSubtitle}</p>
                         <Badge className="bg-[#16a34a]/10 text-[#16a34a]">{t.thirtyMin}</Badge>
                       </div>
                     </div>
@@ -682,23 +682,23 @@ export default function ContactPage({
 
               {/* Form Area */}
               <div className="lg:col-span-2">
-                <Card className="p-8 rounded-2xl border border-gray-200 shadow-lg">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                <Card className="p-8 rounded-2xl border border-gray-700 shadow-lg">
+                  <h2 className="text-2xl font-bold text-white mb-2">
                     {activeTab === "talk-to-sales" ? t.formTitle : t.demoFormTitle}
                   </h2>
-                  <p className="text-gray-600 mb-6">
+                  <p className="text-gray-400 mb-6">
                     {activeTab === "talk-to-sales" ? t.formSubtitle : t.demoFormSubtitle}
                   </p>
 
                   {submitSuccess ? (
                     <div className="text-center py-12">
-                      <div className="inline-flex items-center justify-center w-16 h-16 bg-[#f0fdf4] rounded-full mb-4">
+                      <div className="inline-flex items-center justify-center w-16 h-16 bg-gray-900 rounded-full mb-4">
                         <Check className="h-8 w-8 text-[#16a34a]" />
                       </div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                      <h3 className="text-xl font-semibold text-white mb-2">
                         {activeTab === "talk-to-sales" ? t.messageSent : t.demoBooked}
                       </h3>
-                      <p className="text-gray-600">
+                      <p className="text-gray-400">
                         {activeTab === "talk-to-sales" ? t.successMessage : t.demoSuccessMessage}
                       </p>
                     </div>
@@ -719,7 +719,7 @@ export default function ContactPage({
 
                       <div className="grid sm:grid-cols-2 gap-6">
                         <div>
-                          <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                          <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                             {t.yourName} *
                           </label>
                           <Input
@@ -734,7 +734,7 @@ export default function ContactPage({
                           {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
                         </div>
                         <div>
-                          <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                          <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                             {t.emailAddress} *
                           </label>
                           <Input
@@ -753,7 +753,7 @@ export default function ContactPage({
 
                       <div className="grid sm:grid-cols-2 gap-6">
                         <div>
-                          <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                          <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
                             {t.phoneNumber}
                           </label>
                           <Input
@@ -769,7 +769,7 @@ export default function ContactPage({
                           {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
                         </div>
                         <div>
-                          <label htmlFor="school" className="block text-sm font-medium text-gray-700 mb-2">
+                          <label htmlFor="school" className="block text-sm font-medium text-gray-300 mb-2">
                             {t.schoolOrg}
                           </label>
                           <Input
@@ -787,7 +787,7 @@ export default function ContactPage({
                       {/* Topic selector - only on Talk to Sales */}
                       {activeTab === "talk-to-sales" && (
                         <div>
-                          <label htmlFor="topic" className="block text-sm font-medium text-gray-700 mb-2">
+                          <label htmlFor="topic" className="block text-sm font-medium text-gray-300 mb-2">
                             {t.howCanWeHelp}
                           </label>
                           <select
@@ -795,7 +795,7 @@ export default function ContactPage({
                             name="topic"
                             value={formData.topic}
                             onChange={handleChange}
-                            className="w-full px-4 py-3 border border-gray-200 rounded-xl bg-white text-gray-700"
+                            className="w-full px-4 py-3 border border-gray-700 rounded-xl bg-gray-900 text-gray-300"
                           >
                             <option value="">{t.selectTopic}</option>
                             <option value="pricing">{t.topicPricing}</option>
@@ -809,7 +809,7 @@ export default function ContactPage({
                       {/* Calendar Slot Selection - only on Book Demo */}
                       {activeTab === "book-demo" && (
                         <div>
-                          <label className="block text-sm font-medium text-gray-700 mb-3">
+                          <label className="block text-sm font-medium text-gray-300 mb-3">
                             {t.selectTimeSlot} *
                           </label>
 
@@ -821,9 +821,9 @@ export default function ContactPage({
                           ) : slots.length === 0 ? (
                             <p className="text-sm text-gray-500 py-4">{t.noSlotsAvailable}</p>
                           ) : (
-                            <div className="border border-gray-200 rounded-xl overflow-hidden">
+                            <div className="border border-gray-700 rounded-xl overflow-hidden">
                               {/* Calendar Header - month + navigation */}
-                              <div className="flex items-center justify-between px-4 py-3 bg-gray-50 border-b border-gray-200">
+                              <div className="flex items-center justify-between px-4 py-3 bg-gray-800/50 border-b border-gray-700">
                                 <button
                                   type="button"
                                   onClick={() => setWeekOffset((w) => Math.max(0, w - 1))}
@@ -832,12 +832,12 @@ export default function ContactPage({
                                     "p-1.5 rounded-lg transition-colors",
                                     weekOffset === 0
                                       ? "text-gray-300 cursor-not-allowed"
-                                      : "text-gray-600 hover:bg-gray-200"
+                                      : "text-gray-400 hover:bg-gray-200"
                                   )}
                                 >
                                   <ChevronLeft className="h-4 w-4" />
                                 </button>
-                                <span className="text-sm font-semibold text-gray-800">
+                                <span className="text-sm font-semibold text-gray-100">
                                   {calendarData.monthLabel}
                                 </span>
                                 <button
@@ -848,7 +848,7 @@ export default function ContactPage({
                                     "p-1.5 rounded-lg transition-colors",
                                     !hasNextWeekSlots
                                       ? "text-gray-300 cursor-not-allowed"
-                                      : "text-gray-600 hover:bg-gray-200"
+                                      : "text-gray-400 hover:bg-gray-200"
                                   )}
                                 >
                                   <ChevronRight className="h-4 w-4" />
@@ -868,7 +868,7 @@ export default function ContactPage({
                                       {/* Day Header */}
                                       <div
                                         className={cn(
-                                          "px-1 py-2 text-center border-b border-gray-100",
+                                          "px-1 py-2 text-center border-b border-gray-800",
                                           isToday && "bg-[#16a34a]/5"
                                         )}
                                       >
@@ -880,7 +880,7 @@ export default function ContactPage({
                                             "text-sm font-semibold mt-0.5 w-7 h-7 mx-auto flex items-center justify-center rounded-full",
                                             isToday && "bg-[#16a34a] text-white",
                                             isPast && !isToday && "text-gray-300",
-                                            !isToday && !isPast && "text-gray-700"
+                                            !isToday && !isPast && "text-gray-300"
                                           )}
                                         >
                                           {day.getDate()}
@@ -911,8 +911,8 @@ export default function ContactPage({
                                                 }}
                                                 className={cn(
                                                   "w-full text-left px-1.5 py-1.5 rounded-md text-[11px] leading-tight transition-all",
-                                                  isBooked && "bg-gray-100 text-gray-400 cursor-not-allowed line-through",
-                                                  !isBooked && !isSelected && "bg-[#f0fdf4] text-[#15803d] hover:bg-[#ffe0d4] cursor-pointer border border-[#16a34a]/20",
+                                                  isBooked && "bg-gray-800 text-gray-400 cursor-not-allowed line-through",
+                                                  !isBooked && !isSelected && "bg-gray-900 text-[#15803d] hover:bg-[#ffe0d4] cursor-pointer border border-[#16a34a]/20",
                                                   isSelected && "bg-[#16a34a] text-white border border-[#16a34a] shadow-sm"
                                                 )}
                                                 title={isBooked ? t.booked : `${slot.startTime} - ${slot.endTime}`}
@@ -970,7 +970,7 @@ export default function ContactPage({
                       )}
 
                       <div>
-                        <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                        <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                           {t.message}
                         </label>
                         <Textarea
@@ -1036,7 +1036,7 @@ export default function ContactPage({
               {t.ctaSubtitle}
             </p>
             <a href="mailto:hello@elementals.com?subject=School%20Pricing%20Inquiry">
-              <Button size="lg" className="bg-white text-[#16a34a] hover:bg-gray-100 px-8 py-6 text-lg rounded-xl">
+              <Button size="lg" className="bg-gray-900 text-[#16a34a] hover:bg-gray-800 px-8 py-6 text-lg rounded-xl">
                 {t.startFreeTrial}
                 <Sparkles className="ml-2 h-5 w-5" />
               </Button>

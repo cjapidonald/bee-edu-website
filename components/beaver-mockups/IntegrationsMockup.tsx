@@ -31,7 +31,7 @@ const INTEGRATIONS = [
 export function IntegrationsMockup({ className = "", lang = "en" }: { className?: string; lang?: Locale }) {
   return (
     <DashboardShell
-      url="app.elementals.vn/admin/integrations"
+      url="www.kiwibee.com/admin/integrations"
       tabTitle="Integrations & API"
       breadcrumb="Integrations · API Keys"
       userName="Mr Le (IT)"
@@ -52,7 +52,7 @@ export function IntegrationsMockup({ className = "", lang = "en" }: { className?
     >
       <div className="flex items-end justify-between mb-2.5">
         <div>
-          <div className="text-[14px] font-bold text-gray-900 leading-tight">Integrations & API</div>
+          <div className="text-[14px] font-bold text-white leading-tight">Integrations & API</div>
           <div className="text-[10px] text-gray-500">6 connected · 2 available · 4.2k events today</div>
         </div>
         <button className="flex items-center gap-1 px-2 py-1 bg-[#8b5cf6] text-white rounded-lg text-[10px] font-semibold shadow-sm">
@@ -72,8 +72,8 @@ export function IntegrationsMockup({ className = "", lang = "en" }: { className?
               key={i.name}
               className={`rounded-xl border p-2 cursor-pointer transition-all ${
                 i.status === "connected"
-                  ? "bg-white border-gray-200 hover:shadow-md"
-                  : "bg-gray-50 border-dashed border-gray-200 opacity-70"
+                  ? "bg-gray-900 border-gray-700 hover:shadow-md"
+                  : "bg-gray-800/50 border-dashed border-gray-700 opacity-70"
               }`}
             >
               <div className="flex items-center justify-between mb-1">
@@ -89,10 +89,10 @@ export function IntegrationsMockup({ className = "", lang = "en" }: { className?
                   <Plus className="h-3 w-3 text-gray-400" />
                 )}
               </div>
-              <div className="text-[9px] font-bold text-gray-900 truncate">{i.name}</div>
+              <div className="text-[9px] font-bold text-white truncate">{i.name}</div>
               <div className="text-[7px] text-gray-500">{i.category}</div>
               {i.status === "connected" && (
-                <div className="mt-1 pt-1 border-t border-gray-100 flex items-center justify-between">
+                <div className="mt-1 pt-1 border-t border-gray-800 flex items-center justify-between">
                   <div className="flex items-center gap-0.5">
                     <RefreshCcw className="h-2 w-2 text-emerald-500" />
                     <span className="text-[7px] text-gray-500">{i.events}</span>
@@ -107,28 +107,28 @@ export function IntegrationsMockup({ className = "", lang = "en" }: { className?
 
       {/* Webhook + API stats */}
       <div className="grid grid-cols-3 gap-1.5 mt-2.5">
-        <div className="rounded-xl bg-white border border-gray-200/70 p-2 shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
+        <div className="rounded-xl bg-gray-900 border border-gray-700/70 p-2 shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
           <div className="flex items-center gap-1 mb-0.5">
             <Webhook className="h-3 w-3 text-[#8b5cf6]" />
             <span className="text-[8px] text-gray-500 font-semibold uppercase">Webhooks</span>
           </div>
-          <div className="text-base font-black text-gray-900 tabular-nums">12</div>
+          <div className="text-base font-black text-white tabular-nums">12</div>
           <div className="text-[7px] text-emerald-600">All responding</div>
         </div>
-        <div className="rounded-xl bg-white border border-gray-200/70 p-2 shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
+        <div className="rounded-xl bg-gray-900 border border-gray-700/70 p-2 shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
           <div className="flex items-center gap-1 mb-0.5">
             <Key className="h-3 w-3 text-[#FDB714]" />
             <span className="text-[8px] text-gray-500 font-semibold uppercase">API Keys</span>
           </div>
-          <div className="text-base font-black text-gray-900 tabular-nums">4</div>
+          <div className="text-base font-black text-white tabular-nums">4</div>
           <div className="text-[7px] text-gray-500">2 schools</div>
         </div>
-        <div className="rounded-xl bg-white border border-gray-200/70 p-2 shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
+        <div className="rounded-xl bg-gray-900 border border-gray-700/70 p-2 shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
           <div className="flex items-center gap-1 mb-0.5">
             <Code className="h-3 w-3 text-[#E83B5E]" />
             <span className="text-[8px] text-gray-500 font-semibold uppercase">API Calls (24h)</span>
           </div>
-          <div className="text-base font-black text-gray-900 tabular-nums">42k</div>
+          <div className="text-base font-black text-white tabular-nums">42k</div>
           <div className="text-[7px] text-emerald-600">+12%</div>
         </div>
       </div>

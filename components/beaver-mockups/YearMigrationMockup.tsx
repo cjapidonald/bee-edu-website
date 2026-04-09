@@ -36,7 +36,7 @@ const MAPPINGS = [
 export function YearMigrationMockup({ className = "", lang = "en" }: { className?: string; lang?: Locale }) {
   return (
     <DashboardShell
-      url="app.elementals.vn/admin/year-migration"
+      url="www.kiwibee.com/admin/year-migration"
       tabTitle="Year Migration — 2025→2026"
       breadcrumb="Year Migration · AY 2025→2026"
       userName="Dr Pham"
@@ -57,7 +57,7 @@ export function YearMigrationMockup({ className = "", lang = "en" }: { className
     >
       <div className="flex items-end justify-between mb-2.5">
         <div>
-          <div className="text-[14px] font-bold text-gray-900 leading-tight">
+          <div className="text-[14px] font-bold text-white leading-tight">
             Academic Year Migration
           </div>
           <div className="text-[10px] text-gray-500">
@@ -81,7 +81,7 @@ export function YearMigrationMockup({ className = "", lang = "en" }: { className
             <div key={step.title} className="flex items-center gap-2">
               <div className="shrink-0">
                 {step.status === "done" ? (
-                  <div className="h-5 w-5 rounded-full bg-emerald-500 flex items-center justify-center">
+                  <div className="h-5 w-5 rounded-full bg-emerald-950/500 flex items-center justify-center">
                     <CheckCircle2 className="h-3 w-3 text-white" />
                   </div>
                 ) : step.status === "current" ? (
@@ -128,7 +128,7 @@ export function YearMigrationMockup({ className = "", lang = "en" }: { className
             {MAPPINGS.map((m) => (
               <div
                 key={m.from}
-                className="flex items-center gap-2 p-2 rounded-lg bg-gray-50/80 border border-gray-100"
+                className="flex items-center gap-2 p-2 rounded-lg bg-gray-800/50/80 border border-gray-800"
               >
                 {/* From */}
                 <div className="flex items-center gap-1.5 min-w-0 flex-1">
@@ -136,7 +136,7 @@ export function YearMigrationMockup({ className = "", lang = "en" }: { className
                     {m.avatar}
                   </div>
                   <div className="min-w-0">
-                    <div className="text-[9px] font-bold text-gray-900 truncate">{m.from}</div>
+                    <div className="text-[9px] font-bold text-white truncate">{m.from}</div>
                     <div className="text-[7px] text-gray-500">AY 2025</div>
                   </div>
                 </div>

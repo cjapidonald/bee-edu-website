@@ -8,9 +8,9 @@ export default function FAQPageClient({ lang, faqs }: { lang: Locale; faqs: FAQI
       <h1 className="text-4xl font-bold mb-12 text-center">{titles[lang] || titles.en}</h1>
       <div className="space-y-6">
         {faqs.map((faq) => (
-          <details key={faq.id} className="group rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-6">
+          <details key={faq.id} className="group rounded-2xl border border-gray-700 dark:border-white/10 bg-gray-900 dark:bg-gray-900/5 p-6">
             <summary className="cursor-pointer text-lg font-semibold list-none flex items-center justify-between">{faq.question}<span className="ml-4 text-gray-400 group-open:rotate-180 transition-transform">▾</span></summary>
-            <p className="mt-4 text-gray-600 dark:text-gray-300 leading-relaxed">{faq.answer}</p>
+            <p className="mt-4 text-gray-400 dark:text-gray-300 leading-relaxed">{faq.answer}</p>
           </details>
         ))}
       </div>

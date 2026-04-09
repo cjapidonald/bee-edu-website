@@ -7,9 +7,9 @@ export default function ServicesPageClient({ params }: { params: { lang: string 
   const d = c[params.lang] || c.en;
   return (
     <div className="container mx-auto px-4 py-16 max-w-5xl">
-      <div className="text-center mb-16"><h1 className="text-4xl font-bold mb-4">{d.title}</h1><p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">{d.subtitle}</p></div>
+      <div className="text-center mb-16"><h1 className="text-4xl font-bold mb-4">{d.title}</h1><p className="text-lg text-gray-400 dark:text-gray-300 max-w-2xl mx-auto">{d.subtitle}</p></div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {d.items.map((s) => (<div key={s.title} className="rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-8"><h3 className="text-xl font-semibold mb-3">{s.title}</h3><p className="text-gray-600 dark:text-gray-300">{s.desc}</p></div>))}
+        {d.items.map((s) => (<div key={s.title} className="rounded-2xl border border-gray-700 dark:border-white/10 bg-gray-900 dark:bg-gray-900/5 p-8"><h3 className="text-xl font-semibold mb-3">{s.title}</h3><p className="text-gray-400 dark:text-gray-300">{s.desc}</p></div>))}
       </div>
     </div>
   );

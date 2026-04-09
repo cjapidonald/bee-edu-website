@@ -144,7 +144,7 @@ export default function Footer({ lang, dict }: FooterProps) {
   };
 
   return (
-    <footer className="border-t bg-gray-50">
+    <footer className="border-t border-gray-800/50 bg-gray-950">
       <div className="container px-4 py-12">
         <div className="grid grid-cols-2 md:grid-cols-6 gap-8">
           {/* Brand */}
@@ -152,7 +152,7 @@ export default function Footer({ lang, dict }: FooterProps) {
             <Link href={getLocalizedPath("/")} className="flex items-center mb-3">
               <span className="text-xl font-bold"><span className="text-green-500">Kiwi</span><span className="text-yellow-400">Bee</span></span>
             </Link>
-            <p className="text-sm text-gray-600 mb-4">
+            <p className="text-sm text-gray-400 mb-4">
               {(dict.footer.description as string) || "AI-powered school management for modern educators."}
             </p>
             <div className="flex gap-2">
@@ -162,7 +162,7 @@ export default function Footer({ lang, dict }: FooterProps) {
                   href={link.href}
                   target={link.href.startsWith("mailto:") ? "_self" : "_blank"}
                   rel={link.href.startsWith("mailto:") ? undefined : "noopener noreferrer"}
-                  className="p-2 bg-gray-100 rounded-full hover:bg-[#16a34a]/10 hover:text-[#16a34a] transition-colors"
+                  className="p-2 bg-gray-800 rounded-full hover:bg-[#16a34a]/10 hover:text-[#16a34a] transition-colors"
                   aria-label={link.label}
                 >
                   <link.icon className="h-4 w-4" />
@@ -174,7 +174,7 @@ export default function Footer({ lang, dict }: FooterProps) {
           {/* Features */}
           <div>
             <h3 className="font-semibold text-sm mb-3">{sectionFeatures}</h3>
-            <ul className="space-y-2 text-sm text-gray-600">
+            <ul className="space-y-2 text-sm text-gray-400">
               {featuresLinks.map((link) => (
                 <li key={link.path}>
                   <Link href={getLocalizedPath(link.path)} className="hover:text-[#16a34a] transition-colors">
@@ -188,7 +188,7 @@ export default function Footer({ lang, dict }: FooterProps) {
           {/* Use Cases */}
           <div>
             <h3 className="font-semibold text-sm mb-3">{sectionUseCases}</h3>
-            <ul className="space-y-2 text-sm text-gray-600">
+            <ul className="space-y-2 text-sm text-gray-400">
               {useCasesLinks.map((link) => (
                 <li key={link.path}>
                   <Link href={getLocalizedPath(link.path)} className="hover:text-[#16a34a] transition-colors">
@@ -202,7 +202,7 @@ export default function Footer({ lang, dict }: FooterProps) {
           {/* Resources */}
           <div>
             <h3 className="font-semibold text-sm mb-3">{sectionResources}</h3>
-            <ul className="space-y-2 text-sm text-gray-600">
+            <ul className="space-y-2 text-sm text-gray-400">
               {resourcesLinks.map((link) => (
                 <li key={link.path}>
                   <Link href={getLocalizedPath(link.path)} className="hover:text-[#16a34a] transition-colors">
@@ -216,7 +216,7 @@ export default function Footer({ lang, dict }: FooterProps) {
           {/* About */}
           <div>
             <h3 className="font-semibold text-sm mb-3">{sectionAbout}</h3>
-            <ul className="space-y-2 text-sm text-gray-600">
+            <ul className="space-y-2 text-sm text-gray-400">
               {aboutLinks.map((link) => (
                 <li key={link.path}>
                   <Link href={getLocalizedPath(link.path)} className="hover:text-[#16a34a] transition-colors">
@@ -230,7 +230,7 @@ export default function Footer({ lang, dict }: FooterProps) {
           {/* Newsletter */}
           <div className="col-span-2 md:col-span-1">
             <h3 className="font-semibold text-sm mb-3">{newsletterTitle}</h3>
-            <p className="text-sm text-gray-600 mb-3">
+            <p className="text-sm text-gray-400 mb-3">
               {newsletterSubtitle}
             </p>
             {subscribed ? (
@@ -269,15 +269,15 @@ export default function Footer({ lang, dict }: FooterProps) {
 
         {/* Bottom Section */}
         <div className="border-t mt-10 pt-6 text-center">
-          <p className="text-sm text-gray-600">
+          <p className="text-sm text-gray-400">
             &copy; {new Date().getFullYear()} Kiwibee. {(dict.footer.copyright as string) || "All rights reserved."}
           </p>
-          <p className="text-sm text-gray-600 mt-2">
+          <p className="text-sm text-gray-400 mt-2">
             {getFooterText(dict, 'contact.email', 'Email')}: <a href="mailto:hello@elementals.com" className="hover:text-[#16a34a]">hello@elementals.com</a>
             {" | "}
             {getFooterText(dict, 'contact.whatsapp', 'WhatsApp')}: <a href="https://wa.me/85294954912" className="hover:text-[#16a34a]">+852 94954912</a>
           </p>
-          <p className="text-sm text-gray-600 mt-1">
+          <p className="text-sm text-gray-400 mt-1">
             {getFooterText(dict, 'contact.address', 'Address')}: {contactAddress}
           </p>
           <p className="text-xs text-gray-500 mt-2">

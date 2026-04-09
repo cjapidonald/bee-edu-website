@@ -37,7 +37,7 @@ const PIPELINE = {
 };
 
 const STAGE_COLORS = {
-  Lead: { accent: "#9ca3af", text: "text-gray-700", bg: "bg-gray-100" },
+  Lead: { accent: "#9ca3af", text: "text-gray-300", bg: "bg-gray-800" },
   Qualified: { accent: "#3b82f6", text: "text-blue-700", bg: "bg-blue-100" },
   Proposal: { accent: "#FDB714", text: "text-[#a16207]", bg: "bg-[#FDB714]/15" },
   Closed: { accent: "#10b981", text: "text-emerald-700", bg: "bg-emerald-100" },
@@ -46,7 +46,7 @@ const STAGE_COLORS = {
 export function SalesMockup({ className = "", lang = "en" }: { className?: string; lang?: Locale }) {
   return (
     <DashboardShell
-      url="app.elementals.vn/sales"
+      url="www.kiwibee.com/sales"
       tabTitle="Sales Admin — Pipeline"
       breadcrumb="Sales · Platform Admin"
       userName="Mr Dao"
@@ -68,7 +68,7 @@ export function SalesMockup({ className = "", lang = "en" }: { className?: strin
     >
       <div className="flex items-end justify-between mb-2.5">
         <div>
-          <div className="text-[14px] font-bold text-gray-900 leading-tight">Sales Pipeline</div>
+          <div className="text-[14px] font-bold text-white leading-tight">Sales Pipeline</div>
           <div className="text-[10px] text-gray-500">Q4 2025 · $416k pipeline · 6 active deals</div>
         </div>
         <button className="flex items-center gap-1 px-2 py-1 bg-[#3b82f6] text-white rounded-lg text-[10px] font-semibold shadow-sm">
@@ -87,7 +87,7 @@ export function SalesMockup({ className = "", lang = "en" }: { className?: strin
         ].map((k) => (
           <div
             key={k.label}
-            className="rounded-xl bg-white border border-gray-200/70 p-2.5 shadow-[0_1px_2px_rgba(0,0,0,0.04)]"
+            className="rounded-xl bg-gray-900 border border-gray-700/70 p-2.5 shadow-[0_1px_2px_rgba(0,0,0,0.04)]"
           >
             <div
               className="h-5 w-5 rounded-lg flex items-center justify-center mb-1"
@@ -96,7 +96,7 @@ export function SalesMockup({ className = "", lang = "en" }: { className?: strin
               <k.icon className="h-3 w-3" style={{ color: k.color }} />
             </div>
             <div className="text-[9px] text-gray-500">{k.label}</div>
-            <div className="text-lg font-black text-gray-900 tabular-nums leading-none">
+            <div className="text-lg font-black text-white tabular-nums leading-none">
               {k.value}
             </div>
           </div>
@@ -120,7 +120,7 @@ export function SalesMockup({ className = "", lang = "en" }: { className?: strin
                   0
                 );
                 return (
-                  <div key={stage} className="rounded-lg bg-gray-50 p-1.5">
+                  <div key={stage} className="rounded-lg bg-gray-800/50 p-1.5">
                     <div className="flex items-center justify-between mb-1.5 px-0.5">
                       <div className="flex items-center gap-1">
                         <div
@@ -139,9 +139,9 @@ export function SalesMockup({ className = "", lang = "en" }: { className?: strin
                       {deals.map((d, i) => (
                         <div
                           key={i}
-                          className="rounded bg-white border border-gray-200/70 p-1.5 shadow-sm cursor-move"
+                          className="rounded bg-gray-900 border border-gray-700/70 p-1.5 shadow-sm cursor-move"
                         >
-                          <div className="text-[8px] font-bold text-gray-900 truncate leading-tight mb-0.5">
+                          <div className="text-[8px] font-bold text-white truncate leading-tight mb-0.5">
                             {d.school}
                           </div>
                           <div className="text-[10px] font-black tabular-nums leading-none mb-1" style={{ color: colors.accent }}>
@@ -169,7 +169,7 @@ export function SalesMockup({ className = "", lang = "en" }: { className?: strin
         {/* RIGHT — Growth (1/5) */}
         <div className="col-span-1">
           <Panel title="Growth" subtitle="Revenue">
-            <div className="text-base font-black text-gray-900 tabular-nums leading-none mb-1">
+            <div className="text-base font-black text-white tabular-nums leading-none mb-1">
               $96k
             </div>
             <div className="text-[8px] text-emerald-600 font-bold mb-2">+24%</div>

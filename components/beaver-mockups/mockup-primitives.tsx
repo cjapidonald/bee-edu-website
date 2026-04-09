@@ -3,15 +3,15 @@
 import { ReactNode } from "react";
 
 /**
- * Shared primitives for Beaver dashboard mockups.
- * Mirrors the look of Beaver's real app: Apple-inspired minimal cards,
+ * Shared primitives for KiwiBee dashboard mockups.
+ * Mirrors the look of KiwiBee's real app: Apple-inspired minimal cards,
  * semantic colors per status, rounded-2xl, subtle borders and shadows.
  */
 
 // ========================================================================
-// BEAVER BRAND TOKENS (from beaver/src/styles/global.css)
+// KIWIBEE BRAND TOKENS
 // ========================================================================
-export const BEAVER = {
+export const KIWIBEE = {
   primary: "#FDB714", // bright yellow
   primaryFg: "#7a4e00",
   secondary: "#E83B5E", // pink-red
@@ -284,8 +284,8 @@ export function StatCard({
   icon: Icon,
   label,
   value,
-  color = "text-gray-600",
-  bg = "bg-gray-100",
+  color = "text-gray-400",
+  bg = "bg-gray-800",
   trend,
 }: {
   icon: React.ElementType;
@@ -296,7 +296,7 @@ export function StatCard({
   trend?: string;
 }) {
   return (
-    <div className="rounded-2xl bg-white border border-gray-200/70 p-3 shadow-[0_1px_2px_rgba(0,0,0,0.04)] flex flex-col justify-between min-w-0">
+    <div className="rounded-2xl bg-gray-900 border border-gray-700/70 p-3 shadow-[0_1px_2px_rgba(0,0,0,0.04)] flex flex-col justify-between min-w-0">
       <div className="flex items-center justify-between mb-1.5">
         <div className={`h-6 w-6 rounded-lg ${bg} flex items-center justify-center`}>
           <Icon className={`h-3.5 w-3.5 ${color}`} />
@@ -306,7 +306,7 @@ export function StatCard({
         )}
       </div>
       <div>
-        <div className="text-base font-bold text-gray-900 leading-none tabular-nums">{value}</div>
+        <div className="text-base font-bold text-white leading-none tabular-nums">{value}</div>
         <div className="text-[10px] text-gray-500 mt-0.5 truncate">{label}</div>
       </div>
     </div>
@@ -324,12 +324,12 @@ export function MockBadge({
   color?: "gray" | "emerald" | "amber" | "rose" | "blue" | "violet" | "yellow" | "pink";
 }) {
   const colors = {
-    gray: "bg-gray-100 text-gray-700",
-    emerald: "bg-emerald-50 text-emerald-700",
-    amber: "bg-amber-50 text-amber-700",
-    rose: "bg-rose-50 text-rose-700",
-    blue: "bg-blue-50 text-blue-700",
-    violet: "bg-violet-50 text-violet-700",
+    gray: "bg-gray-800 text-gray-300",
+    emerald: "bg-emerald-950/50 text-emerald-700",
+    amber: "bg-amber-950/50 text-amber-700",
+    rose: "bg-rose-950/50 text-rose-700",
+    blue: "bg-blue-950/50 text-blue-700",
+    violet: "bg-violet-950/50 text-violet-700",
     yellow: "bg-[#FDB714]/10 text-[#a16207]",
     pink: "bg-[#E83B5E]/10 text-[#E83B5E]",
   };
@@ -360,13 +360,13 @@ export function Panel({
 }) {
   return (
     <div
-      className={`rounded-2xl bg-white border border-gray-200/70 shadow-[0_1px_2px_rgba(0,0,0,0.04)] overflow-hidden ${className}`}
+      className={`rounded-2xl bg-gray-900 border border-gray-700/70 shadow-[0_1px_2px_rgba(0,0,0,0.04)] overflow-hidden ${className}`}
     >
       {(title || right) && (
         <div className="flex items-center justify-between px-3.5 pt-3 pb-2">
           <div>
             {title && (
-              <div className="text-[11px] font-bold text-gray-900 leading-tight">
+              <div className="text-[11px] font-bold text-white leading-tight">
                 {title}
               </div>
             )}

@@ -36,7 +36,7 @@ const WELLBEING = [
 export function StudentAffairsMockup({ className = "", lang = "en" }: { className?: string; lang?: Locale }) {
   return (
     <DashboardShell
-      url="app.elementals.vn/student-affairs"
+      url="www.kiwibee.com/student-affairs"
       tabTitle="Student Affairs — Wellbeing"
       breadcrumb="Student Affairs · Primary 5A"
       userName="Ms Kim"
@@ -58,7 +58,7 @@ export function StudentAffairsMockup({ className = "", lang = "en" }: { classNam
     >
       <div className="flex items-end justify-between mb-2.5">
         <div>
-          <div className="text-[14px] font-bold text-gray-900 leading-tight">Student Affairs</div>
+          <div className="text-[14px] font-bold text-white leading-tight">Student Affairs</div>
           <div className="text-[10px] text-gray-500">
             3 open incidents · 1 active support case · 96% positive wellbeing
           </div>
@@ -79,7 +79,7 @@ export function StudentAffairsMockup({ className = "", lang = "en" }: { classNam
         ].map((k) => (
           <div
             key={k.label}
-            className="rounded-xl bg-white border border-gray-200/70 p-2.5 shadow-[0_1px_2px_rgba(0,0,0,0.04)]"
+            className="rounded-xl bg-gray-900 border border-gray-700/70 p-2.5 shadow-[0_1px_2px_rgba(0,0,0,0.04)]"
           >
             <div
               className="h-5 w-5 rounded-lg flex items-center justify-center mb-1"
@@ -88,7 +88,7 @@ export function StudentAffairsMockup({ className = "", lang = "en" }: { classNam
               <k.icon className="h-3 w-3" style={{ color: k.color }} />
             </div>
             <div className="text-[9px] text-gray-500">{k.label}</div>
-            <div className="text-base font-black text-gray-900 tabular-nums leading-none">
+            <div className="text-base font-black text-white tabular-nums leading-none">
               {k.value}
             </div>
           </div>
@@ -107,7 +107,7 @@ export function StudentAffairsMockup({ className = "", lang = "en" }: { classNam
               {INCIDENTS.map((inc) => (
                 <div
                   key={inc.id}
-                  className="rounded-lg bg-gray-50/80 border border-gray-100 p-1.5"
+                  className="rounded-lg bg-gray-800/50/80 border border-gray-800 p-1.5"
                 >
                   <div className="flex items-center gap-2">
                     <MockAvatar
@@ -119,20 +119,20 @@ export function StudentAffairsMockup({ className = "", lang = "en" }: { classNam
                     <div className="min-w-0 flex-1">
                       <div className="flex items-center gap-1">
                         <span className="text-[7px] font-mono text-gray-400">{inc.id}</span>
-                        <span className="text-[9px] font-bold text-gray-900 truncate">
+                        <span className="text-[9px] font-bold text-white truncate">
                           {inc.student}
                         </span>
                       </div>
-                      <div className="text-[8px] text-gray-600">{inc.type}</div>
+                      <div className="text-[8px] text-gray-400">{inc.type}</div>
                     </div>
                     <div className="flex flex-col items-end gap-0.5 shrink-0">
                       <span
                         className={`text-[7px] font-bold px-1 py-0.5 rounded ${
                           inc.severity === "high"
-                            ? "bg-rose-50 text-rose-700"
+                            ? "bg-rose-950/50 text-rose-700"
                             : inc.severity === "medium"
-                              ? "bg-amber-50 text-amber-700"
-                              : "bg-gray-100 text-gray-600"
+                              ? "bg-amber-950/50 text-amber-700"
+                              : "bg-gray-800 text-gray-400"
                         }`}
                       >
                         {inc.severity}
@@ -157,7 +157,7 @@ export function StudentAffairsMockup({ className = "", lang = "en" }: { classNam
               {WELLBEING.map((w) => (
                 <div
                   key={w.name}
-                  className="flex items-center gap-1.5 p-1 rounded-md hover:bg-gray-50"
+                  className="flex items-center gap-1.5 p-1 rounded-md hover:bg-gray-800/50"
                 >
                   <MockAvatar
                     name={w.name}
@@ -165,7 +165,7 @@ export function StudentAffairsMockup({ className = "", lang = "en" }: { classNam
                     gradientFrom={w.avatar[0]}
                     gradientTo={w.avatar[1]}
                   />
-                  <span className="text-[9px] font-semibold text-gray-900 flex-1 truncate">
+                  <span className="text-[9px] font-semibold text-white flex-1 truncate">
                     {w.name}
                   </span>
                   {w.mood === "positive" ? (
@@ -187,10 +187,10 @@ export function StudentAffairsMockup({ className = "", lang = "en" }: { classNam
                 Active Alert
               </span>
             </div>
-            <div className="text-[10px] font-bold text-gray-900">
+            <div className="text-[10px] font-bold text-white">
               Ethan Kim — wellbeing trend down
             </div>
-            <div className="text-[8px] text-gray-600 mt-0.5">
+            <div className="text-[8px] text-gray-400 mt-0.5">
               Counselor notified · Support plan active
             </div>
           </div>

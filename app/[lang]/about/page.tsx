@@ -228,31 +228,31 @@ export default async function AboutPage({ params }: AboutPageProps) {
   const missionColors = ["primary", "secondary", "accent"];
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-white text-gray-900">
+    <div className="relative min-h-screen overflow-hidden bg-gray-900 text-white">
       {/* Subtle gradient background */}
       <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#f0fdf4]/70 via-white to-white" />
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-900/70 via-gray-950 to-gray-950" />
         <div className="absolute top-20 left-10 w-72 h-72 bg-[#ffe0d4]/60 rounded-full blur-3xl" />
         <div className="absolute bottom-0 right-10 w-96 h-96 bg-[#ffd5c4]/40 rounded-full blur-3xl" />
-        <div className="absolute top-1/3 left-[-8rem] h-64 w-64 rounded-full bg-[#f0fdf4]/50 blur-3xl" />
+        <div className="absolute top-1/3 left-[-8rem] h-64 w-64 rounded-full bg-gray-900/50 blur-3xl" />
       </div>
 
       <div className="relative mx-auto flex w-full max-w-5xl flex-col gap-12 px-4 py-24 md:px-8">
         {/* Story Section */}
-        <section className="relative overflow-hidden rounded-[2.5rem] border border-[#D9E2EF] bg-gradient-to-b from-[#f0fdf4] to-white p-10 shadow-lg md:p-14">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-[#f0fdf4]/60 rounded-full blur-3xl -z-10" />
+        <section className="relative overflow-hidden rounded-[2.5rem] border border-gray-800 bg-gradient-to-b from-gray-900 to-gray-950 p-10 shadow-lg md:p-14">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-gray-900/60 rounded-full blur-3xl -z-10" />
           <div className="relative z-10 space-y-10">
             <div className="space-y-4">
-              <h1 className="text-4xl font-bold tracking-tight text-gray-900 md:text-5xl">{t.story.title}</h1>
-              <div className="space-y-4 text-lg text-gray-600">
+              <h1 className="text-4xl font-bold tracking-tight text-white md:text-5xl">{t.story.title}</h1>
+              <div className="space-y-4 text-lg text-gray-400">
                 {t.story.paragraphs.map((paragraph, index) => (
                   <p key={index}>{paragraph}</p>
                 ))}
                 <p>
                   {t.platform.todayText}
-                  {" "}<strong className="text-gray-900">{t.platform.rolesHighlight}</strong>{" "}
+                  {" "}<strong className="text-white">{t.platform.rolesHighlight}</strong>{" "}
                   {t.platform.andText}
-                  <strong className="text-gray-900"> {t.platform.modulesHighlight}</strong>{" "}
+                  <strong className="text-white"> {t.platform.modulesHighlight}</strong>{" "}
                   {t.platform.coverText}
                 </p>
               </div>
@@ -260,9 +260,9 @@ export default async function AboutPage({ params }: AboutPageProps) {
 
             {/* Leadership */}
             <div className="space-y-6">
-              <div className="flex flex-col gap-6 rounded-2xl border border-[#D9E2EF] bg-[#fff5f0] p-8 text-gray-600 md:flex-row md:items-start">
+              <div className="flex flex-col gap-6 rounded-2xl border border-gray-800 bg-[#fff5f0] p-8 text-gray-400 md:flex-row md:items-start">
                 <div className="flex items-center gap-5 md:w-56 md:flex-col md:items-start md:gap-4">
-                  <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-full border border-[#D9E2EF] bg-white shadow-lg">
+                  <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-full border border-gray-800 bg-gray-900 shadow-lg">
                     <Image
                       src="/lovable-uploads/96483919-4154-4163-b949-8ebebd6fb820.png"
                       alt="Donald Cjapi - Chief Executive Officer"
@@ -272,8 +272,8 @@ export default async function AboutPage({ params }: AboutPageProps) {
                     />
                   </div>
                   <div>
-                    <h2 className="text-xl font-semibold text-gray-900">{t.ceo.title}</h2>
-                    <p className="font-medium text-gray-700 text-sm mt-1">{t.ceo.signature}</p>
+                    <h2 className="text-xl font-semibold text-white">{t.ceo.title}</h2>
+                    <p className="font-medium text-gray-300 text-sm mt-1">{t.ceo.signature}</p>
                   </div>
                 </div>
                 <p className="leading-relaxed text-base md:text-[17px]">{t.ceo.message}</p>
@@ -281,32 +281,32 @@ export default async function AboutPage({ params }: AboutPageProps) {
             </div>
 
             {/* Mission */}
-            <div className="rounded-2xl border border-[#D9E2EF] bg-[#fff5f0] p-8 text-gray-600">
-              <h2 className="text-2xl font-semibold text-gray-900">{t.story.mission.title}</h2>
+            <div className="rounded-2xl border border-gray-800 bg-[#fff5f0] p-8 text-gray-400">
+              <h2 className="text-2xl font-semibold text-white">{t.story.mission.title}</h2>
               <p className="mt-3 leading-relaxed">{t.story.mission.description}</p>
             </div>
           </div>
         </section>
 
         {/* Platform Overview */}
-        <section className="rounded-2xl border border-[#D9E2EF] bg-white p-10 shadow-lg">
+        <section className="rounded-2xl border border-gray-800 bg-gray-900 p-10 shadow-lg">
           <div className="mx-auto max-w-3xl text-center mb-10">
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#16a34a]/10 mb-4">
               <Layers className="h-8 w-8 text-[#16a34a]" />
             </div>
-            <h2 className="text-3xl font-bold text-gray-900">{t.platform.title}</h2>
-            <p className="mt-3 text-base text-gray-600">{t.platform.subtitle}</p>
+            <h2 className="text-3xl font-bold text-white">{t.platform.title}</h2>
+            <p className="mt-3 text-base text-gray-400">{t.platform.subtitle}</p>
           </div>
 
           {/* Core Modules */}
           <div className="mb-12">
-            <h3 className="text-xl font-semibold text-gray-900 mb-6 text-center">{t.platform.modulesTitle}</h3>
+            <h3 className="text-xl font-semibold text-white mb-6 text-center">{t.platform.modulesTitle}</h3>
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-5">
               {t.coreModules.map((module, index) => {
                 const IconComponent = coreModuleIcons[index] ?? Target;
                 const color = coreModuleColors[index] ?? "primary";
                 return (
-                  <Card key={index} className="p-4 text-center border border-[#D9E2EF] bg-white hover:border-primary/30 hover:shadow-md transition-all rounded-xl">
+                  <Card key={index} className="p-4 text-center border border-gray-800 bg-gray-900 hover:border-primary/30 hover:shadow-md transition-all rounded-xl">
                     <div className="space-y-3">
                       <div className={cn(
                         "mx-auto flex h-12 w-12 items-center justify-center rounded-xl",
@@ -321,7 +321,7 @@ export default async function AboutPage({ params }: AboutPageProps) {
                           color === "accent" && "text-accent",
                         )} />
                       </div>
-                      <h4 className="text-sm font-medium text-gray-900">{module.name}</h4>
+                      <h4 className="text-sm font-medium text-white">{module.name}</h4>
                       <p className="text-xs text-gray-500">{module.description}</p>
                     </div>
                   </Card>
@@ -332,12 +332,12 @@ export default async function AboutPage({ params }: AboutPageProps) {
 
           {/* 13 User Roles */}
           <div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-6 text-center">{t.platform.rolesTitle}</h3>
+            <h3 className="text-xl font-semibold text-white mb-6 text-center">{t.platform.rolesTitle}</h3>
             <div className="flex flex-wrap justify-center gap-3">
               {t.userRoles.map((role, index) => (
                 <span
                   key={index}
-                  className="px-4 py-2 bg-[#fff5f0] rounded-full text-sm text-gray-700 border border-[#D9E2EF] hover:border-primary/30 hover:bg-[#16a34a]/10 transition-colors"
+                  className="px-4 py-2 bg-[#fff5f0] rounded-full text-sm text-gray-300 border border-gray-800 hover:border-primary/30 hover:bg-[#16a34a]/10 transition-colors"
                 >
                   {role}
                 </span>
@@ -347,10 +347,10 @@ export default async function AboutPage({ params }: AboutPageProps) {
         </section>
 
         {/* Values Section */}
-        <section className="rounded-2xl border border-[#D9E2EF] bg-white p-10 shadow-lg">
+        <section className="rounded-2xl border border-gray-800 bg-gray-900 p-10 shadow-lg">
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-3xl font-bold text-gray-900">{t.values.title}</h2>
-            {t.values.subtitle && <p className="mt-3 text-base text-gray-600">{t.values.subtitle}</p>}
+            <h2 className="text-3xl font-bold text-white">{t.values.title}</h2>
+            {t.values.subtitle && <p className="mt-3 text-base text-gray-400">{t.values.subtitle}</p>}
           </div>
 
           <div className="mt-10 grid gap-6 md:grid-cols-3">
@@ -358,7 +358,7 @@ export default async function AboutPage({ params }: AboutPageProps) {
               const IconComponent = missionIcons[index] ?? Target;
               const color = missionColors[index] ?? "primary";
               return (
-                <Card key={index} className="p-6 text-center border border-[#D9E2EF] bg-white hover:border-primary/30 hover:shadow-md transition-all rounded-xl">
+                <Card key={index} className="p-6 text-center border border-gray-800 bg-gray-900 hover:border-primary/30 hover:shadow-md transition-all rounded-xl">
                   <div className="space-y-4">
                     <div className={cn(
                       "mx-auto flex h-14 w-14 items-center justify-center rounded-2xl",
@@ -373,8 +373,8 @@ export default async function AboutPage({ params }: AboutPageProps) {
                         color === "accent" && "text-accent",
                       )} />
                     </div>
-                    <h3 className="text-lg font-semibold text-gray-900">{item.title}</h3>
-                    <p className="text-sm text-gray-600">{item.description}</p>
+                    <h3 className="text-lg font-semibold text-white">{item.title}</h3>
+                    <p className="text-sm text-gray-400">{item.description}</p>
                   </div>
                 </Card>
               );
@@ -384,19 +384,19 @@ export default async function AboutPage({ params }: AboutPageProps) {
 
         {/* CTA Section */}
         <section className="rounded-2xl bg-gradient-to-r from-[#16a34a] via-[#15803d] to-[#166534] p-10 text-center shadow-xl">
-          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-white/20 mb-6">
+          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gray-900/20 mb-6">
             <GraduationCap className="h-8 w-8 text-white" />
           </div>
           <h2 className="text-2xl font-bold text-white mb-4">{t.ctaSection.title}</h2>
           <p className="text-white/90 mb-8 max-w-xl mx-auto">{t.ctaSection.description}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-[#16a34a] hover:bg-gray-100 rounded-xl" asChild>
+            <Button size="lg" className="bg-gray-900 text-[#16a34a] hover:bg-gray-800 rounded-xl" asChild>
               <Link href={getLocalizedPath("/contact")}>
                 {t.ctaSection.primaryButton}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button size="lg" variant="outline" className="border-white bg-white/20 text-white hover:bg-white/30 rounded-xl" asChild>
+            <Button size="lg" variant="outline" className="border-white bg-gray-900/20 text-white hover:bg-gray-900/30 rounded-xl" asChild>
               <Link href={getLocalizedPath("/pricing")}>{t.ctaSection.secondaryButton}</Link>
             </Button>
           </div>

@@ -5,11 +5,11 @@ import { Lock } from "lucide-react";
 
 /**
  * Mac/Safari-style browser chrome for wrapping dashboard mockups.
- * Matches Beaver's production look when visitors see the app.
+ * Matches KiwiBee's production look when visitors see the app.
  */
 export function BrowserFrame({
-  url = "app.elementals.vn/homeroom",
-  tabTitle = "Beaver — Homeroom Dashboard",
+  url = "www.kiwibee.com/homeroom",
+  tabTitle = "KiwiBee — Homeroom Dashboard",
   children,
   className = "",
   accent = "#FDB714",
@@ -22,7 +22,7 @@ export function BrowserFrame({
 }) {
   return (
     <div
-      className={`relative rounded-2xl bg-[#f4f4f5] shadow-2xl shadow-black/20 ring-1 ring-black/10 overflow-hidden ${className}`}
+      className={`relative rounded-2xl bg-gray-900/50 shadow-2xl shadow-black/20 ring-1 ring-black/10 overflow-hidden ${className}`}
     >
       {/* Top chrome */}
       <div className="bg-gradient-to-b from-[#fafafa] to-[#f0f0f0] border-b border-black/5">
@@ -36,14 +36,14 @@ export function BrowserFrame({
           </div>
 
           {/* Tab */}
-          <div className="flex items-center gap-2 px-3 py-1.5 bg-white rounded-t-lg shadow-sm max-w-[260px] min-w-0">
+          <div className="flex items-center gap-2 px-3 py-1.5 bg-gray-900 rounded-t-lg shadow-sm max-w-[260px] min-w-0">
             <span
               className="h-4 w-4 rounded-sm shrink-0 flex items-center justify-center text-[10px] font-black text-white"
               style={{ background: accent }}
             >
-              B
+              K
             </span>
-            <span className="text-[11px] text-gray-700 truncate font-medium">
+            <span className="text-[11px] text-gray-300 truncate font-medium">
               {tabTitle}
             </span>
             <span className="ml-auto text-gray-400 text-xs leading-none">×</span>
@@ -76,15 +76,15 @@ export function BrowserFrame({
             </button>
           </div>
 
-          <div className="flex-1 flex items-center gap-1.5 bg-white rounded-md px-3 py-1 border border-black/5 shadow-inner min-w-0">
+          <div className="flex-1 flex items-center gap-1.5 bg-gray-900 rounded-md px-3 py-1 border border-black/5 shadow-inner min-w-0">
             <Lock className="h-3 w-3 text-gray-400 shrink-0" />
-            <span className="text-[11px] text-gray-600 truncate">{url}</span>
+            <span className="text-[11px] text-gray-400 truncate">{url}</span>
           </div>
         </div>
       </div>
 
       {/* Content viewport */}
-      <div className="relative bg-white">{children}</div>
+      <div className="relative bg-gray-900">{children}</div>
     </div>
   );
 }

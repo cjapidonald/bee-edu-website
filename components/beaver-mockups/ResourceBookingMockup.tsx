@@ -46,7 +46,7 @@ const BOOKINGS: boolean[][] = [
 export function ResourceBookingMockup({ className = "", lang = "en" }: { className?: string; lang?: Locale }) {
   return (
     <DashboardShell
-      url="app.elementals.vn/resource-booking"
+      url="www.kiwibee.com/resource-booking"
       tabTitle="Resource Booking"
       breadcrumb="Resource Booking · Rooms & Equipment"
       userName="Mr Le"
@@ -66,7 +66,7 @@ export function ResourceBookingMockup({ className = "", lang = "en" }: { classNa
     >
       <div className="flex items-end justify-between mb-2.5">
         <div>
-          <div className="text-[14px] font-bold text-gray-900 leading-tight">Resource Booking</div>
+          <div className="text-[14px] font-bold text-white leading-tight">Resource Booking</div>
           <div className="text-[10px] text-gray-500">
             Week 12 · 15 rooms · 24 equipment items · 42 bookings this week
           </div>
@@ -101,7 +101,7 @@ export function ResourceBookingMockup({ className = "", lang = "en" }: { classNa
               {/* Rows */}
               {DAYS.map((d, dIdx) => (
                 <div key={d} className="grid grid-cols-[28px_repeat(7,1fr)] gap-0.5 mb-0.5">
-                  <div className="text-[8px] font-bold text-gray-600 flex items-center">
+                  <div className="text-[8px] font-bold text-gray-400 flex items-center">
                     {d}
                   </div>
                   {HOURS.map((_, hIdx) => {
@@ -112,7 +112,7 @@ export function ResourceBookingMockup({ className = "", lang = "en" }: { classNa
                         className={`h-5 rounded ${
                           booked
                             ? "bg-[#00C9A7]/80 border border-[#00C9A7]"
-                            : "bg-gray-50 border border-dashed border-gray-200"
+                            : "bg-gray-800/50 border border-dashed border-gray-700"
                         }`}
                       />
                     );
@@ -136,10 +136,10 @@ export function ResourceBookingMockup({ className = "", lang = "en" }: { classNa
                     <MapPin className="h-3 w-3" style={{ color: r.color }} />
                   </div>
                   <div className="min-w-0 flex-1">
-                    <div className="text-[9px] font-bold text-gray-900 truncate">{r.name}</div>
+                    <div className="text-[9px] font-bold text-white truncate">{r.name}</div>
                     <div className="text-[7px] text-gray-500">{r.type}</div>
                   </div>
-                  <span className="text-[9px] font-bold text-gray-700 tabular-nums">
+                  <span className="text-[9px] font-bold text-gray-300 tabular-nums">
                     {r.bookings}
                   </span>
                 </div>
@@ -161,7 +161,7 @@ export function ResourceBookingMockup({ className = "", lang = "en" }: { classNa
                     )}
                   </div>
                   <div className="min-w-0 flex-1">
-                    <div className="text-[9px] font-semibold text-gray-900 truncate">{e.name}</div>
+                    <div className="text-[9px] font-semibold text-white truncate">{e.name}</div>
                     <div className="text-[7px] text-gray-500">{e.nextBooking}</div>
                   </div>
                 </div>

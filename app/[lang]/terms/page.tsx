@@ -124,13 +124,13 @@ export default async function TermsPage({ params }: TermsPageProps) {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gray-900">
       <div className="container px-4 py-12">
         <div className="mx-auto max-w-3xl space-y-6">
           <div className="space-y-2 text-center">
             <p className="text-xs uppercase tracking-[0.2em] text-gray-500">{t.badge}</p>
-            <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl">{t.title}</h1>
-            <p className="text-sm text-gray-600">{t.description}</p>
+            <h1 className="text-3xl font-bold text-white sm:text-4xl">{t.title}</h1>
+            <p className="text-sm text-gray-400">{t.description}</p>
             <div className="mt-4 flex flex-col items-center justify-center gap-2 sm:flex-row">
               <Button asChild variant="outline" className="rounded-xl border-[#16a34a]">
                 <Link href={getLocalizedPath("/privacy")}>{t.primaryCta}</Link>
@@ -141,7 +141,7 @@ export default async function TermsPage({ params }: TermsPageProps) {
             </div>
           </div>
 
-          <Card className="rounded-2xl border-[#D9E2EF] bg-white">
+          <Card className="rounded-2xl border-gray-800 bg-gray-900">
             <div className="p-6 sm:p-8">
               <p className="text-xs text-slate-500">
                 {t.lastUpdatedLabel}: {lastUpdated}
@@ -151,7 +151,7 @@ export default async function TermsPage({ params }: TermsPageProps) {
             </div>
           </Card>
 
-          <Card className="rounded-2xl border-[#D9E2EF] bg-white">
+          <Card className="rounded-2xl border-gray-800 bg-gray-900">
             <div className="p-6 sm:p-8">
               <h2 className="text-xl font-semibold text-[#0B1F3A]">{t.sections.accounts.title}</h2>
               <ul className="mt-3 space-y-2 text-sm text-slate-600 list-disc pl-5">
@@ -162,7 +162,7 @@ export default async function TermsPage({ params }: TermsPageProps) {
             </div>
           </Card>
 
-          <Card className="rounded-2xl border-[#D9E2EF] bg-white">
+          <Card className="rounded-2xl border-gray-800 bg-gray-900">
             <div className="p-6 sm:p-8">
               <h2 className="text-xl font-semibold text-[#0B1F3A]">{t.sections.acceptableUse.title}</h2>
               <ul className="mt-3 space-y-2 text-sm text-slate-600 list-disc pl-5">
@@ -173,14 +173,14 @@ export default async function TermsPage({ params }: TermsPageProps) {
             </div>
           </Card>
 
-          <Card className="rounded-2xl border-[#D9E2EF] bg-white">
+          <Card className="rounded-2xl border-gray-800 bg-gray-900">
             <div className="p-6 sm:p-8">
               <h2 className="text-xl font-semibold text-[#0B1F3A]">{t.sections.availability.title}</h2>
               <p className="mt-3 text-sm text-slate-600 leading-relaxed">{t.sections.availability.body}</p>
             </div>
           </Card>
 
-          <Card className="rounded-2xl border-[#D9E2EF] bg-white">
+          <Card className="rounded-2xl border-gray-800 bg-gray-900">
             <div className="p-6 sm:p-8">
               <h2 className="text-xl font-semibold text-[#0B1F3A]">{t.sections.contact.title}</h2>
               <p className="mt-3 text-sm text-slate-600 leading-relaxed">

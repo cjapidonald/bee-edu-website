@@ -255,7 +255,7 @@ function RenderContent({ content }: { content: ContentBlock[] }) {
           const level = Math.min(Math.max(block.level || 2, 2), 4);
           const HeadingTag = `h${level}` as keyof JSX.IntrinsicElements;
           return (
-            <HeadingTag key={index} className="text-gray-900 font-semibold mt-8 mb-4">
+            <HeadingTag key={index} className="text-white font-semibold mt-8 mb-4">
               {text}
             </HeadingTag>
           );
@@ -263,7 +263,7 @@ function RenderContent({ content }: { content: ContentBlock[] }) {
         if (block.type === "paragraph") {
           const text = block.children?.map((c) => c.text).join("") || "";
           return (
-            <p key={index} className="text-gray-700 leading-relaxed mb-4">
+            <p key={index} className="text-gray-300 leading-relaxed mb-4">
               {text}
             </p>
           );
@@ -398,7 +398,7 @@ function BlogOverlay({
       {/* Centered panel with Netflix scale-up effect */}
       <div
         ref={overlayRef}
-        className={`relative w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-2xl bg-white shadow-[0_25px_60px_-15px_rgba(0,0,0,0.5)] transition-all duration-500 ${panelClass}`}
+        className={`relative w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-2xl bg-gray-900 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.5)] transition-all duration-500 ${panelClass}`}
         style={{
           transformOrigin: "center center",
           transitionTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)",
@@ -426,10 +426,10 @@ function BlogOverlay({
             <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
               <div className="flex flex-wrap gap-2 mb-3">
                 {categoryLabel && (
-                  <Badge className="bg-white/20 text-white border-white/30 px-3 py-1 rounded-full backdrop-blur-sm">{categoryLabel}</Badge>
+                  <Badge className="bg-gray-900/20 text-white border-white/30 px-3 py-1 rounded-full backdrop-blur-sm">{categoryLabel}</Badge>
                 )}
                 {tags.slice(0, 3).map((tag) => (
-                  <Badge key={tag} className="bg-white/15 text-white/90 border-white/20 text-xs px-2 py-0.5 rounded-full backdrop-blur-sm">
+                  <Badge key={tag} className="bg-gray-900/15 text-white/90 border-white/20 text-xs px-2 py-0.5 rounded-full backdrop-blur-sm">
                     {tag}
                   </Badge>
                 ))}
@@ -458,21 +458,21 @@ function BlogOverlay({
                     <Badge key={tag} variant="secondary" className="text-xs px-2 py-0.5 rounded-full">{tag}</Badge>
                   ))}
                 </div>
-                <h1 className="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl">{post.title}</h1>
-                {post.subtitle && <p className="text-xl text-gray-600">{post.subtitle}</p>}
+                <h1 className="text-3xl font-bold leading-tight text-white sm:text-4xl">{post.title}</h1>
+                {post.subtitle && <p className="text-xl text-gray-400">{post.subtitle}</p>}
               </header>
             )}
 
             {/* Author & meta bar */}
-            <div className="flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-gray-100">
-              <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600">
+            <div className="flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-gray-800">
+              <div className="flex flex-wrap items-center gap-4 text-sm text-gray-400">
                 <div className="flex items-center gap-2">
                   {safeImageUrl(post.author_image) ? (
                     /* eslint-disable-next-line @next/next/no-img-element */
                     <img
                       src={safeImageUrl(post.author_image)!}
                       alt={authorName}
-                      className="h-10 w-10 rounded-full object-cover border border-gray-200"
+                      className="h-10 w-10 rounded-full object-cover border border-gray-700"
                     />
                   ) : (
                     <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#16a34a]/10">
@@ -480,7 +480,7 @@ function BlogOverlay({
                     </div>
                   )}
                   <div>
-                    <span className="font-medium text-gray-900">{authorName}</span>
+                    <span className="font-medium text-white">{authorName}</span>
                     {authorJobTitle && (
                       <span className="ml-2 text-xs text-gray-500">• {authorJobTitle}</span>
                     )}
@@ -528,7 +528,7 @@ function BlogOverlay({
             <article>
               {resolvedContent && <RenderContent content={resolvedContent} />}
               {!resolvedContent && post.excerpt && (
-                <p className="text-gray-700 leading-relaxed text-lg">{post.excerpt}</p>
+                <p className="text-gray-300 leading-relaxed text-lg">{post.excerpt}</p>
               )}
             </article>
 
@@ -756,11 +756,11 @@ export default function BlogPageClient({
   }, []);
 
   return (
-    <div className="min-h-screen bg-white text-slate-900">
+    <div className="min-h-screen bg-gray-900 text-slate-900">
       <div className="mx-auto max-w-6xl px-4 py-10 sm:py-12">
         <div className="space-y-8">
           {/* Hero/Search Section */}
-          <section className="relative overflow-hidden rounded-2xl border border-[#D9E2EF] bg-white p-6 shadow-sm md:p-8">
+          <section className="relative overflow-hidden rounded-2xl border border-gray-800 bg-gray-900 p-6 shadow-sm md:p-8">
             <div className="absolute -right-24 -top-24 h-48 w-48 rounded-full bg-[#ffd5c4]/70 blur-3xl" />
             <div className="absolute -left-20 bottom-0 h-32 w-32 rounded-full bg-[#E3F8FF]/60 blur-2xl" />
             <div className="relative space-y-6">
@@ -777,14 +777,14 @@ export default function BlogPageClient({
                   value={searchValue}
                   onChange={(event) => setSearchValue(event.target.value)}
                   placeholder={t.searchPlaceholder}
-                  className="h-11 rounded-xl border-[#D9E2EF] bg-[#F5F8FF] pl-9 text-sm focus-visible:ring-primary/40"
+                  className="h-11 rounded-xl border-gray-800 bg-[#F5F8FF] pl-9 text-sm focus-visible:ring-primary/40"
                 />
               </div>
             </div>
           </section>
 
           {sortedPosts.length === 0 ? (
-            <Card className="rounded-2xl border-dashed border-slate-300 bg-white">
+            <Card className="rounded-2xl border-dashed border-slate-300 bg-gray-900">
               <CardContent className="py-16 text-center">
                 <Bookmark className="mx-auto h-10 w-10 text-slate-400" />
                 <h2 className="mt-4 text-xl font-semibold text-slate-900">{t.emptyTitle}</h2>
@@ -798,7 +798,7 @@ export default function BlogPageClient({
                 {/* Featured Post */}
                 {featuredPost && (
                   <button type="button" onClick={() => openPost(featuredPost)} className="group block w-full text-left">
-                    <Card className="overflow-hidden rounded-2xl border-[#D9E2EF] bg-white shadow-sm transition-all duration-300 hover:border-primary/30 hover:shadow-lg cursor-pointer">
+                    <Card className="overflow-hidden rounded-2xl border-gray-800 bg-gray-900 border border-gray-800/50 transition-all duration-300 hover:border-primary/30 hover:shadow-lg cursor-pointer">
                       <div className="grid md:grid-cols-[1.3fr_1fr]">
                         <div className="relative h-56 md:h-full">
                           {safeImageUrl(featuredPost.featured_image) ? (
@@ -867,7 +867,7 @@ export default function BlogPageClient({
                       return (
                         <article key={post.id}>
                           <button type="button" onClick={() => openPost(post)} className="group block h-full w-full text-left">
-                            <Card className="h-full overflow-hidden rounded-xl border-[#D9E2EF] bg-white shadow-sm transition-all duration-300 hover:border-primary/30 hover:shadow-md cursor-pointer">
+                            <Card className="h-full overflow-hidden rounded-xl border-gray-800 bg-gray-900 border border-gray-800/50 transition-all duration-300 hover:border-primary/30 hover:shadow-md cursor-pointer">
                               {safeImageUrl(post.featured_image) && (
                                 <div className="relative h-48 overflow-hidden">
                                   {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -943,7 +943,7 @@ export default function BlogPageClient({
               {/* Sidebar */}
               <aside className="space-y-6">
                 {/* Topics */}
-                <Card className="rounded-2xl border-[#D9E2EF] bg-white shadow-sm">
+                <Card className="rounded-2xl border-gray-800 bg-gray-900 border border-gray-800/50">
                   <CardContent className="space-y-3 p-5">
                     <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-500">{t.topics}</h3>
                     <div className="space-y-2">
@@ -969,7 +969,7 @@ export default function BlogPageClient({
 
                 {/* Popular Tags */}
                 {popularTags.length > 0 && (
-                  <Card className="rounded-2xl border-[#D9E2EF] bg-white shadow-sm">
+                  <Card className="rounded-2xl border-gray-800 bg-gray-900 border border-gray-800/50">
                     <CardContent className="space-y-3 p-5">
                       <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-500">{t.popularTags}</h3>
                       <div className="flex flex-wrap gap-2">
@@ -985,7 +985,7 @@ export default function BlogPageClient({
                 )}
 
                 {/* Popular Posts */}
-                <Card className="rounded-2xl border-[#D9E2EF] bg-white shadow-sm">
+                <Card className="rounded-2xl border-gray-800 bg-gray-900 border border-gray-800/50">
                   <CardContent className="space-y-3 p-5">
                     <div className="flex items-center justify-between">
                       <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-500">{t.popularPosts}</h3>
@@ -1002,7 +1002,7 @@ export default function BlogPageClient({
                               type="button"
                               key={post.id}
                               onClick={() => openPost(post)}
-                              className="block w-full text-left rounded-lg border border-[#D9E2EF] px-3 py-2 transition-colors hover:bg-[#F5F8FF] cursor-pointer"
+                              className="block w-full text-left rounded-lg border border-gray-800 px-3 py-2 transition-colors hover:bg-[#F5F8FF] cursor-pointer"
                             >
                               <p className="text-sm font-medium line-clamp-2">{post.title}</p>
                               <p className="mt-1 text-xs text-slate-500">

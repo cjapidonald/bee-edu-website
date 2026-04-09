@@ -38,15 +38,15 @@ import type { Locale } from "@/lib/i18n/config";
 /**
  * HomeroomTeacherDashboardMockup
  *
- * A static, self-contained recreation of Beaver's Homeroom Teacher Dashboard
+ * A static, self-contained recreation of KiwiBee's Homeroom Teacher Dashboard
  * (src/pages/HomeroomTeacherDashboard.tsx) — used as a product visual in the
  * KiwiBee marketing site.
  *
- * Data is hardcoded to match Beaver's demo seed: Primary 5A class, English/Math/
+ * Data is hardcoded to match KiwiBee's demo seed: Primary 5A class, English/Math/
  * Science/Vietnamese subjects, ~5 students.
  */
 
-// Seeded demo data matching Beaver's demo-organization provisioner
+// Seeded demo data matching KiwiBee's demo-organization provisioner
 const STUDENTS = [
   { name: "Alex Chen", gems: 48, trend: "+12%", avg: 87, status: "present", gradient: ["#FDB714", "#FF6B9D"] as const },
   { name: "Maya Patel", gems: 52, trend: "+8%", avg: 92, status: "present", gradient: ["#00C9A7", "#22d3ee"] as const },
@@ -60,17 +60,17 @@ const TREND_LABELS = ["M", "T", "W", "T", "F", "M", "T", "W", "T", "F"];
 
 const SCHEDULE = [
   { time: "08:00", subjectKey: "english", teacher: "Ms. Nguyen", roomKey: "Room 5A", color: "#FDB714", dot: "bg-yellow-400" },
-  { time: "09:00", subjectKey: "math", teacher: "Mr. Tran", roomKey: "Room 5A", color: "#3b82f6", dot: "bg-blue-500" },
-  { time: "10:15", subjectKey: "science", teacher: "Ms. Le", roomKey: "Lab 2", color: "#00C9A7", dot: "bg-emerald-500" },
-  { time: "11:15", subjectKey: "vietnamese", teacher: "Ms. Pham", roomKey: "Room 5A", color: "#E83B5E", dot: "bg-rose-500" },
+  { time: "09:00", subjectKey: "math", teacher: "Mr. Tran", roomKey: "Room 5A", color: "#3b82f6", dot: "bg-blue-950/500" },
+  { time: "10:15", subjectKey: "science", teacher: "Ms. Le", roomKey: "Lab 2", color: "#00C9A7", dot: "bg-emerald-950/500" },
+  { time: "11:15", subjectKey: "vietnamese", teacher: "Ms. Pham", roomKey: "Room 5A", color: "#E83B5E", dot: "bg-rose-950/500" },
 ];
 
 function StatusDot({ status }: { status: string }) {
   const colors = {
-    present: "bg-emerald-500",
-    late: "bg-amber-500",
-    absent: "bg-red-500",
-    excused: "bg-blue-500",
+    present: "bg-emerald-950/500",
+    late: "bg-amber-950/500",
+    absent: "bg-red-950/500",
+    excused: "bg-blue-950/500",
   } as const;
   return (
     <span
@@ -90,22 +90,22 @@ export function HomeroomTeacherDashboardMockup({
 }) {
   return (
     <BrowserFrame
-      url="app.elementals.vn/homeroom/5a"
+      url="www.kiwibee.com/homeroom/5a"
       tabTitle={`${mt("homeroomTeacher.title", lang)} — Primary 5A`}
       className={className}
     >
-      <div className="flex bg-[#fafafa] text-gray-900" style={{ fontFamily: "-apple-system, system-ui, sans-serif" }}>
+      <div className="flex bg-[#fafafa] text-white" style={{ fontFamily: "-apple-system, system-ui, sans-serif" }}>
         {/* ================= SIDEBAR ================= */}
-        <aside className="w-[120px] shrink-0 bg-white border-r border-gray-200/70 py-3 px-2 flex flex-col gap-0.5">
+        <aside className="w-[120px] shrink-0 bg-gray-900 border-r border-gray-700/70 py-3 px-2 flex flex-col gap-0.5">
           {/* Brand */}
-          <div className="flex items-center gap-1.5 px-2 pb-3 mb-1 border-b border-gray-100">
+          <div className="flex items-center gap-1.5 px-2 pb-3 mb-1 border-b border-gray-800">
             <div
               className="h-5 w-5 rounded-md flex items-center justify-center text-white font-black text-[9px]"
-              style={{ background: "linear-gradient(135deg, #FDB714, #E83B5E)" }}
+              style={{ background: "linear-gradient(135deg, #16a34a, #FDB714)" }}
             >
-              B
+              K
             </div>
-            <span className="text-[10px] font-bold text-gray-900">Beaver</span>
+            <span className="text-[10px] font-bold text-white">KiwiBee</span>
           </div>
 
           {/* Nav items */}
@@ -137,9 +137,9 @@ export function HomeroomTeacherDashboardMockup({
         {/* ================= MAIN CONTENT ================= */}
         <main className="flex-1 min-w-0 overflow-hidden">
           {/* Top bar */}
-          <div className="flex items-center justify-between px-4 py-2.5 bg-white border-b border-gray-200/70">
+          <div className="flex items-center justify-between px-4 py-2.5 bg-gray-900 border-b border-gray-700/70">
             <div className="flex items-center gap-2 min-w-0">
-              <div className="text-[11px] font-semibold text-gray-900">{mt("homeroomTeacher.title", lang)} · Primary 5A</div>
+              <div className="text-[11px] font-semibold text-white">{mt("homeroomTeacher.title", lang)} · Primary 5A</div>
               <MockBadge color="yellow">
                 <Sun className="h-2 w-2" />
                 {mt("common.monday", lang)}
@@ -147,14 +147,14 @@ export function HomeroomTeacherDashboardMockup({
             </div>
             <div className="flex items-center gap-2 shrink-0">
               {/* Search */}
-              <div className="hidden md:flex items-center gap-1 px-2 py-1 bg-gray-100 rounded-md w-[120px]">
+              <div className="hidden md:flex items-center gap-1 px-2 py-1 bg-gray-800 rounded-md w-[120px]">
                 <Search className="h-2.5 w-2.5 text-gray-400" />
                 <span className="text-[9px] text-gray-400">{mt("common.search", lang)}</span>
               </div>
               {/* Notification */}
               <div className="relative">
                 <Bell className="h-3 w-3 text-gray-500" />
-                <span className="absolute -top-0.5 -right-0.5 h-1.5 w-1.5 bg-red-500 rounded-full" />
+                <span className="absolute -top-0.5 -right-0.5 h-1.5 w-1.5 bg-red-950/500 rounded-full" />
               </div>
               {/* Avatar */}
               <div className="flex items-center gap-1">
@@ -169,7 +169,7 @@ export function HomeroomTeacherDashboardMockup({
             {/* Greeting row */}
             <div className="flex items-end justify-between">
               <div>
-                <div className="text-[14px] font-bold text-gray-900 leading-tight">{mt("common.greeting", lang)}, Ms. Nguyen</div>
+                <div className="text-[14px] font-bold text-white leading-tight">{mt("common.greeting", lang)}, Ms. Nguyen</div>
                 <div className="text-[10px] text-gray-500">{mt("common.mondayFull", lang)} · 18 {mt("common.students", lang).toLowerCase()}</div>
               </div>
               <button
@@ -182,7 +182,7 @@ export function HomeroomTeacherDashboardMockup({
 
             {/* Attendance summary — 6 up */}
             <div className="grid grid-cols-6 gap-1.5">
-              <StatCard icon={Users} label={lang === "vi" ? "Tổng" : "Total"} value={18} color="text-gray-600" bg="bg-gray-100" />
+              <StatCard icon={Users} label={lang === "vi" ? "Tổng" : "Total"} value={18} color="text-gray-400" bg="bg-gray-800" />
               <StatCard icon={CheckCircle2} label={mt("common.present", lang)} value={15} color="text-emerald-600" bg="bg-emerald-100" trend="+2" />
               <StatCard icon={Clock} label={mt("common.late", lang)} value={1} color="text-amber-600" bg="bg-amber-100" />
               <StatCard icon={XCircle} label={mt("common.absent", lang)} value={1} color="text-red-600" bg="bg-red-100" />
@@ -205,7 +205,7 @@ export function HomeroomTeacherDashboardMockup({
                   }
                 >
                   {/* Table header */}
-                  <div className="grid grid-cols-[1.3fr_0.6fr_0.9fr_0.9fr] gap-1 px-1 pb-1.5 border-b border-gray-100">
+                  <div className="grid grid-cols-[1.3fr_0.6fr_0.9fr_0.9fr] gap-1 px-1 pb-1.5 border-b border-gray-800">
                     <div className="text-[8px] font-semibold text-gray-400 uppercase tracking-wider">{lang === "vi" ? "Tên" : "Name"}</div>
                     <div className="text-[8px] font-semibold text-gray-400 uppercase tracking-wider">{mt("common.status", lang)}</div>
                     <div className="text-[8px] font-semibold text-gray-400 uppercase tracking-wider">ClassSpark</div>
@@ -226,13 +226,13 @@ export function HomeroomTeacherDashboardMockup({
                             gradientFrom={s.gradient[0]}
                             gradientTo={s.gradient[1]}
                           />
-                          <span className="text-[10px] font-medium text-gray-900 truncate">
+                          <span className="text-[10px] font-medium text-white truncate">
                             {s.name}
                           </span>
                         </div>
                         <div className="flex items-center gap-1">
                           <StatusDot status={s.status} />
-                          <span className="text-[9px] text-gray-600 capitalize">{mt(`common.${s.status}`, lang)}</span>
+                          <span className="text-[9px] text-gray-400 capitalize">{mt(`common.${s.status}`, lang)}</span>
                         </div>
                         <div className="flex items-center gap-1">
                           <div className="flex items-center gap-0.5 px-1 py-0.5 bg-[#FDB714]/10 rounded">
@@ -255,7 +255,7 @@ export function HomeroomTeacherDashboardMockup({
                           >
                             <div
                               className={`h-full rounded-full ${
-                                s.avg >= 85 ? "bg-emerald-500" : s.avg >= 75 ? "bg-amber-500" : "bg-red-500"
+                                s.avg >= 85 ? "bg-emerald-950/500" : s.avg >= 75 ? "bg-amber-950/500" : "bg-red-950/500"
                               }`}
                               style={{ width: `${s.avg}%` }}
                             />
@@ -282,7 +282,7 @@ export function HomeroomTeacherDashboardMockup({
                   subtitle={lang === "vi" ? "Đá quý · 10 ngày qua" : "Gems earned · last 10 days"}
                   right={
                     <div className="flex items-baseline gap-1">
-                      <span className="text-[13px] font-bold text-gray-900 tabular-nums">+127</span>
+                      <span className="text-[13px] font-bold text-white tabular-nums">+127</span>
                       <span className="text-[9px] text-emerald-600 font-semibold">+24%</span>
                     </div>
                   }
@@ -305,7 +305,7 @@ export function HomeroomTeacherDashboardMockup({
                     {SCHEDULE.map((s, i) => (
                       <div
                         key={s.time}
-                        className="flex items-center gap-2 py-1 px-1.5 rounded-lg hover:bg-gray-50"
+                        className="flex items-center gap-2 py-1 px-1.5 rounded-lg hover:bg-gray-800/50"
                       >
                         <div className="text-[9px] font-bold text-gray-500 tabular-nums w-7 shrink-0">
                           {s.time}
@@ -315,13 +315,13 @@ export function HomeroomTeacherDashboardMockup({
                           style={{ background: s.color }}
                         />
                         <div className="min-w-0 flex-1">
-                          <div className="text-[10px] font-semibold text-gray-900 truncate">
+                          <div className="text-[10px] font-semibold text-white truncate">
                             {mt(`subjects.${s.subjectKey}`, lang)}
                           </div>
                           <div className="text-[8px] text-gray-500 truncate">{s.roomKey}</div>
                         </div>
                         {i === 0 && (
-                          <span className="text-[8px] font-bold text-emerald-600 px-1 py-0.5 bg-emerald-50 rounded">
+                          <span className="text-[8px] font-bold text-emerald-600 px-1 py-0.5 bg-emerald-950/50 rounded">
                             {lang === "vi" ? "NGAY" : "NOW"}
                           </span>
                         )}
@@ -338,7 +338,7 @@ export function HomeroomTeacherDashboardMockup({
                 <div className="flex items-center justify-between">
                   <div>
                     <div className="text-[9px] text-[#a16207] font-semibold uppercase tracking-wide">{mt("classSpark.topPerformer", lang)}</div>
-                    <div className="text-[11px] font-bold text-gray-900 mt-0.5">Maya Patel · 92</div>
+                    <div className="text-[11px] font-bold text-white mt-0.5">Maya Patel · 92</div>
                   </div>
                   <Star className="h-4 w-4 text-[#FDB714] fill-[#FDB714]" />
                 </div>
@@ -347,7 +347,7 @@ export function HomeroomTeacherDashboardMockup({
                 <div className="flex items-center justify-between">
                   <div>
                     <div className="text-[9px] text-emerald-700 font-semibold uppercase tracking-wide">{mt("gradebook.classAverage", lang)}</div>
-                    <div className="text-[11px] font-bold text-gray-900 mt-0.5">82.6 · {lang === "vi" ? "Trên mục tiêu" : "Above target"}</div>
+                    <div className="text-[11px] font-bold text-white mt-0.5">82.6 · {lang === "vi" ? "Trên mục tiêu" : "Above target"}</div>
                   </div>
                   <Sparkline data={[72, 74, 78, 80, 82, 83]} color="#10b981" width={40} height={18} />
                 </div>
@@ -356,7 +356,7 @@ export function HomeroomTeacherDashboardMockup({
                 <div className="flex items-center justify-between">
                   <div>
                     <div className="text-[9px] text-[#E83B5E] font-semibold uppercase tracking-wide">{mt("gradebook.needsSupport", lang)}</div>
-                    <div className="text-[11px] font-bold text-gray-900 mt-0.5">Ethan Kim · 72</div>
+                    <div className="text-[11px] font-bold text-white mt-0.5">Ethan Kim · 72</div>
                   </div>
                   <Heart className="h-4 w-4 text-[#E83B5E]" />
                 </div>

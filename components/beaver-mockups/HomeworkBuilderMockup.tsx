@@ -26,7 +26,7 @@ import type { Locale } from "@/lib/i18n/config";
  * HomeworkBuilderMockup — 3-panel Resources Factory layout
  * (chat history left, AI conversation center, homework preview right)
  *
- * Mirrors Beaver's src/components/homework-builder and Resources Factory pattern.
+ * Mirrors KiwiBee's homework-builder and Resources Factory pattern.
  */
 
 const CHAT_HISTORY_EN = [
@@ -62,7 +62,7 @@ export function HomeworkBuilderMockup({ className = "", lang = "en" }: { classNa
   const TEMPLATES = lang === "vi" ? TEMPLATES_VI : TEMPLATES_EN;
   return (
     <DashboardShell
-      url="app.elementals.vn/teacher/homework-builder"
+      url="www.kiwibee.com/teacher/homework-builder"
       tabTitle={lang === "vi" ? "Trình tạo Bài tập — Xưởng Tài nguyên" : "Homework Builder — Resources Factory"}
       breadcrumb={lang === "vi" ? "Trình tạo Bài tập · Lớp 5A" : "Homework Builder · Primary 5A"}
       userName="Ms Tran"
@@ -93,7 +93,7 @@ export function HomeworkBuilderMockup({ className = "", lang = "en" }: { classNa
                   className={`flex items-start gap-1.5 p-1.5 rounded-md cursor-pointer ${
                     c.active
                       ? "bg-[#E83B5E]/10 border-l-2 border-[#E83B5E]"
-                      : "hover:bg-gray-50"
+                      : "hover:bg-gray-800/50"
                   }`}
                 >
                   <MessageSquare
@@ -102,7 +102,7 @@ export function HomeworkBuilderMockup({ className = "", lang = "en" }: { classNa
                     }`}
                   />
                   <div className="min-w-0 flex-1">
-                    <div className="text-[9px] font-semibold text-gray-900 truncate leading-tight">
+                    <div className="text-[9px] font-semibold text-white truncate leading-tight">
                       {c.title}
                     </div>
                     <div className="text-[7px] text-gray-500">{c.time}</div>
@@ -111,7 +111,7 @@ export function HomeworkBuilderMockup({ className = "", lang = "en" }: { classNa
               ))}
             </div>
 
-            <div className="pt-2 mt-1 border-t border-gray-100">
+            <div className="pt-2 mt-1 border-t border-gray-800">
               <div className="text-[8px] font-bold text-gray-400 uppercase tracking-wider mb-1">
                 {lang === "vi" ? "Mẫu" : "Templates"}
               </div>
@@ -119,10 +119,10 @@ export function HomeworkBuilderMockup({ className = "", lang = "en" }: { classNa
                 {TEMPLATES.map((t) => (
                   <div
                     key={t.label}
-                    className="flex items-center gap-1 p-1 rounded hover:bg-gray-50 cursor-pointer"
+                    className="flex items-center gap-1 p-1 rounded hover:bg-gray-800/50 cursor-pointer"
                   >
                     <t.icon className="h-2.5 w-2.5 text-[#a16207] shrink-0" />
-                    <span className="text-[8px] text-gray-700">{t.label}</span>
+                    <span className="text-[8px] text-gray-300">{t.label}</span>
                   </div>
                 ))}
               </div>
@@ -132,20 +132,20 @@ export function HomeworkBuilderMockup({ className = "", lang = "en" }: { classNa
 
         {/* CENTER — AI conversation */}
         <div className="col-span-2">
-          <div className="rounded-2xl bg-white border border-gray-200/70 shadow-[0_1px_2px_rgba(0,0,0,0.04)] overflow-hidden flex flex-col h-full">
+          <div className="rounded-2xl bg-gray-900 border border-gray-700/70 shadow-[0_1px_2px_rgba(0,0,0,0.04)] overflow-hidden flex flex-col h-full">
             {/* Header */}
-            <div className="flex items-center justify-between px-3 py-2 border-b border-gray-100 bg-gradient-to-r from-[#8b5cf6]/5 to-[#E83B5E]/5">
+            <div className="flex items-center justify-between px-3 py-2 border-b border-gray-800 bg-gradient-to-r from-[#8b5cf6]/5 to-[#E83B5E]/5">
               <div className="flex items-center gap-1.5">
                 <div className="h-5 w-5 rounded-full bg-gradient-to-br from-[#8b5cf6] to-[#E83B5E] flex items-center justify-center">
                   <Sparkles className="h-2.5 w-2.5 text-white" />
                 </div>
-                <div className="text-[9px] font-bold text-gray-900">{lang === "vi" ? "Trình tạo AI" : "AI Builder"}</div>
+                <div className="text-[9px] font-bold text-white">{lang === "vi" ? "Trình tạo AI" : "AI Builder"}</div>
               </div>
               <MockBadge color="emerald">{lang === "vi" ? "Có căn cứ" : "Grounded"}</MockBadge>
             </div>
 
             {/* Messages */}
-            <div className="flex-1 overflow-hidden p-3 space-y-2 bg-gradient-to-b from-white to-[#fafafa]">
+            <div className="flex-1 overflow-hidden p-3 space-y-2 bg-gradient-to-b from-gray-900 to-[#fafafa]">
               <div className="flex justify-end">
                 <div className="max-w-[85%] px-2.5 py-1.5 bg-[#E83B5E] text-white rounded-xl rounded-tr-sm">
                   <div className="text-[9px]">
@@ -157,11 +157,11 @@ export function HomeworkBuilderMockup({ className = "", lang = "en" }: { classNa
                 <div className="h-5 w-5 rounded-full bg-gradient-to-br from-[#8b5cf6] to-[#E83B5E] flex items-center justify-center shrink-0">
                   <Sparkles className="h-2 w-2 text-white" />
                 </div>
-                <div className="max-w-[85%] px-2.5 py-1.5 bg-gray-100 rounded-xl rounded-tl-sm">
-                  <div className="text-[9px] text-gray-900 font-semibold mb-1">
+                <div className="max-w-[85%] px-2.5 py-1.5 bg-gray-800 rounded-xl rounded-tl-sm">
+                  <div className="text-[9px] text-white font-semibold mb-1">
                     {lang === "vi" ? "Chủ đề 4: Ngôn ngữ Hình tượng" : "Unit 4: Figurative Language"}
                   </div>
-                  <div className="text-[8px] text-gray-700 space-y-0.5">
+                  <div className="text-[8px] text-gray-300 space-y-0.5">
                     <div className="flex items-center gap-1">
                       <Check className="h-2 w-2 text-emerald-600" />
                       {lang === "vi" ? "Đã tạo 10 câu hỏi" : "10 questions generated"}
@@ -185,8 +185,8 @@ export function HomeworkBuilderMockup({ className = "", lang = "en" }: { classNa
             </div>
 
             {/* Input */}
-            <div className="border-t border-gray-100 p-2">
-              <div className="flex items-center gap-1.5 px-2 py-1.5 bg-gray-50 rounded-lg">
+            <div className="border-t border-gray-800 p-2">
+              <div className="flex items-center gap-1.5 px-2 py-1.5 bg-gray-800/50 rounded-lg">
                 <Paperclip className="h-3 w-3 text-gray-400 shrink-0" />
                 <ImageIcon className="h-3 w-3 text-gray-400 shrink-0" />
                 <span className="text-[9px] text-gray-400 flex-1">{lang === "vi" ? "Tinh chỉnh bài tập…" : "Refine the assignment…"}</span>
@@ -200,9 +200,9 @@ export function HomeworkBuilderMockup({ className = "", lang = "en" }: { classNa
 
         {/* RIGHT — Preview */}
         <div className="col-span-2">
-          <div className="rounded-2xl bg-white border border-gray-200/70 shadow-[0_1px_2px_rgba(0,0,0,0.04)] overflow-hidden h-full flex flex-col">
-            <div className="flex items-center justify-between px-3 py-2 border-b border-gray-100">
-              <div className="text-[9px] font-bold text-gray-900">{lang === "vi" ? "Xem trước Trực tiếp" : "Live Preview"}</div>
+          <div className="rounded-2xl bg-gray-900 border border-gray-700/70 shadow-[0_1px_2px_rgba(0,0,0,0.04)] overflow-hidden h-full flex flex-col">
+            <div className="flex items-center justify-between px-3 py-2 border-b border-gray-800">
+              <div className="text-[9px] font-bold text-white">{lang === "vi" ? "Xem trước Trực tiếp" : "Live Preview"}</div>
               <div className="flex gap-1">
                 <MockBadge color="yellow">{lang === "vi" ? "Cấp 2" : "Level 2"}</MockBadge>
                 <button className="px-2 py-0.5 bg-[#FDB714] text-[#7a4e00] text-[8px] font-bold rounded">
@@ -211,21 +211,21 @@ export function HomeworkBuilderMockup({ className = "", lang = "en" }: { classNa
               </div>
             </div>
 
-            <div className="flex-1 overflow-hidden p-3 bg-gradient-to-b from-[#fafafa] to-white">
-              <div className="bg-white rounded-lg border border-gray-200 shadow-sm p-3">
-                <div className="text-[10px] font-bold text-gray-900 mb-1">
+            <div className="flex-1 overflow-hidden p-3 bg-gradient-to-b from-[#fafafa] to-gray-950">
+              <div className="bg-gray-900 rounded-lg border border-gray-700 shadow-sm p-3">
+                <div className="text-[10px] font-bold text-white mb-1">
                   {lang === "vi" ? "Bài tập Chủ đề 4: Ngôn ngữ Hình tượng" : "Unit 4 Homework: Figurative Language"}
                 </div>
-                <div className="text-[7px] text-gray-500 mb-2 pb-2 border-b border-gray-100">
+                <div className="text-[7px] text-gray-500 mb-2 pb-2 border-b border-gray-800">
                   {lang === "vi" ? "Lớp 5A · Tiếng Anh · Cô Trần · Hạn: Thứ Sáu" : "Primary 5A · English · Ms. Tran · Due: Friday"}
                 </div>
 
                 <div className="space-y-1.5">
                   <div>
-                    <div className="text-[8px] font-bold text-gray-700 mb-0.5">
+                    <div className="text-[8px] font-bold text-gray-300 mb-0.5">
                       {lang === "vi" ? "1. Nhận diện ẩn dụ" : "1. Identify the metaphor"}
                     </div>
-                    <div className="text-[7px] text-gray-600 mb-1">
+                    <div className="text-[7px] text-gray-400 mb-1">
                       {lang === "vi" ? "\"Thế giới là một sân khấu.\" Điều gì đang được so sánh?" : "\u201CThe world is a stage.\u201D What is being compared?"}
                     </div>
                     <div className="flex flex-col gap-0.5">
@@ -240,11 +240,11 @@ export function HomeworkBuilderMockup({ className = "", lang = "en" }: { classNa
                       ]).map((opt, i) => (
                         <div
                           key={i}
-                          className="flex items-center gap-1 text-[7px] text-gray-700"
+                          className="flex items-center gap-1 text-[7px] text-gray-300"
                         >
                           <div
                             className={`h-2 w-2 rounded-full border ${
-                              opt.correct ? "border-emerald-500 bg-emerald-500" : "border-gray-300"
+                              opt.correct ? "border-emerald-500 bg-emerald-950/500" : "border-gray-300"
                             }`}
                           />
                           {opt.label}
@@ -253,15 +253,15 @@ export function HomeworkBuilderMockup({ className = "", lang = "en" }: { classNa
                     </div>
                   </div>
 
-                  <div className="pt-1.5 border-t border-gray-100">
-                    <div className="text-[8px] font-bold text-gray-700 mb-0.5">
+                  <div className="pt-1.5 border-t border-gray-800">
+                    <div className="text-[8px] font-bold text-gray-300 mb-0.5">
                       {lang === "vi" ? "2. Viết một câu so sánh về trường" : "2. Write a simile about school"}
                     </div>
-                    <div className="h-5 bg-gray-50 rounded border border-dashed border-gray-200" />
+                    <div className="h-5 bg-gray-800/50 rounded border border-dashed border-gray-700" />
                   </div>
 
-                  <div className="pt-1.5 border-t border-gray-100">
-                    <div className="flex items-center gap-1 text-[8px] font-bold text-gray-700 mb-0.5">
+                  <div className="pt-1.5 border-t border-gray-800">
+                    <div className="flex items-center gap-1 text-[8px] font-bold text-gray-300 mb-0.5">
                       <Mic className="h-2 w-2 text-[#E83B5E]" /> {lang === "vi" ? "3. Ghi âm bài đọc thơ của em" : "3. Record your poem reading"}
                     </div>
                     <div className="flex items-center gap-1 p-1 bg-[#E83B5E]/5 rounded border border-[#E83B5E]/20">

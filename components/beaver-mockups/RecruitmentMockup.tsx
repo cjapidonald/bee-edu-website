@@ -45,7 +45,7 @@ const PIPELINE = {
 };
 
 const COLUMN_COLORS = {
-  Applied: { bg: "bg-gray-100", text: "text-gray-700", accent: "#9ca3af" },
+  Applied: { bg: "bg-gray-800", text: "text-gray-300", accent: "#9ca3af" },
   Screen: { bg: "bg-blue-100", text: "text-blue-700", accent: "#3b82f6" },
   Interview: { bg: "bg-[#FDB714]/15", text: "text-[#a16207]", accent: "#FDB714" },
   Offer: { bg: "bg-emerald-100", text: "text-emerald-700", accent: "#10b981" },
@@ -54,7 +54,7 @@ const COLUMN_COLORS = {
 export function RecruitmentMockup({ className = "", lang = "en" }: { className?: string; lang?: Locale }) {
   return (
     <DashboardShell
-      url="app.elementals.vn/hr/recruitment"
+      url="www.kiwibee.com/hr/recruitment"
       tabTitle="Recruitment — Jobs & Pipeline"
       breadcrumb="HR · Recruitment"
       userName="Ms Hoang"
@@ -75,7 +75,7 @@ export function RecruitmentMockup({ className = "", lang = "en" }: { className?:
     >
       <div className="flex items-end justify-between mb-2.5">
         <div>
-          <div className="text-[14px] font-bold text-gray-900 leading-tight">
+          <div className="text-[14px] font-bold text-white leading-tight">
             Recruitment Pipeline
           </div>
           <div className="text-[10px] text-gray-500">
@@ -93,7 +93,7 @@ export function RecruitmentMockup({ className = "", lang = "en" }: { className?:
         {JOBS.map((j) => (
           <div
             key={j.title}
-            className="rounded-xl bg-white border border-gray-200/70 p-2 shadow-[0_1px_2px_rgba(0,0,0,0.04)]"
+            className="rounded-xl bg-gray-900 border border-gray-700/70 p-2 shadow-[0_1px_2px_rgba(0,0,0,0.04)]"
           >
             <div className="flex items-center gap-1 mb-1">
               <div
@@ -102,20 +102,20 @@ export function RecruitmentMockup({ className = "", lang = "en" }: { className?:
               />
               <span className="text-[8px] text-gray-500">Posted {j.posted}</span>
             </div>
-            <div className="text-[10px] font-bold text-gray-900 truncate mb-0.5">
+            <div className="text-[10px] font-bold text-white truncate mb-0.5">
               {j.title}
             </div>
             <div className="flex items-center justify-between">
-              <div className="text-[8px] text-gray-600">
+              <div className="text-[8px] text-gray-400">
                 <span className="font-bold">{j.applicants}</span> applicants
               </div>
               <span
                 className={`text-[7px] font-bold px-1 py-0.5 rounded ${
                   j.status === "Open"
-                    ? "bg-emerald-50 text-emerald-700"
+                    ? "bg-emerald-950/50 text-emerald-700"
                     : j.status === "Interviewing"
                       ? "bg-[#FDB714]/15 text-[#a16207]"
-                      : "bg-blue-50 text-blue-700"
+                      : "bg-blue-950/50 text-blue-700"
                 }`}
               >
                 {j.status}
@@ -136,7 +136,7 @@ export function RecruitmentMockup({ className = "", lang = "en" }: { className?:
             const colors = COLUMN_COLORS[stage];
             const candidates = PIPELINE[stage];
             return (
-              <div key={stage} className="rounded-lg bg-gray-50 p-1.5">
+              <div key={stage} className="rounded-lg bg-gray-800/50 p-1.5">
                 <div className="flex items-center justify-between mb-1.5 px-0.5">
                   <div className="flex items-center gap-1">
                     <div
@@ -157,7 +157,7 @@ export function RecruitmentMockup({ className = "", lang = "en" }: { className?:
                   {candidates.map((c, i) => (
                     <div
                       key={i}
-                      className="rounded bg-white border border-gray-200/70 p-1.5 shadow-sm cursor-move"
+                      className="rounded bg-gray-900 border border-gray-700/70 p-1.5 shadow-sm cursor-move"
                     >
                       <div className="flex items-center gap-1">
                         <MockAvatar
@@ -167,7 +167,7 @@ export function RecruitmentMockup({ className = "", lang = "en" }: { className?:
                           gradientTo={c.avatar[1]}
                         />
                         <div className="min-w-0 flex-1">
-                          <div className="text-[8px] font-bold text-gray-900 truncate">
+                          <div className="text-[8px] font-bold text-white truncate">
                             {c.name}
                           </div>
                           <div className="text-[7px] text-gray-500 truncate">{c.role}</div>
@@ -186,7 +186,7 @@ export function RecruitmentMockup({ className = "", lang = "en" }: { className?:
                     </div>
                   ))}
                   {candidates.length === 0 && (
-                    <div className="h-8 rounded bg-white/50 border border-dashed border-gray-200" />
+                    <div className="h-8 rounded bg-gray-900/50 border border-dashed border-gray-700" />
                   )}
                 </div>
               </div>

@@ -121,10 +121,10 @@ export function FeaturePageTemplate({
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gray-900">
       {/* Hero Section */}
       <section className="relative pt-16 sm:pt-20 md:pt-24 pb-16 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#f0fdf4]/70 via-white to-white" />
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-900/70 via-gray-950 to-gray-950" />
         <div className="absolute top-20 left-10 w-72 h-72 bg-[#ffe0d4]/60 rounded-full blur-3xl hidden sm:block" />
         <div className="absolute bottom-0 right-10 w-96 h-96 bg-[#ffd5c4]/40 rounded-full blur-3xl hidden sm:block" />
 
@@ -139,14 +139,14 @@ export function FeaturePageTemplate({
                     <span>{badge}</span>
                   </div>
 
-                  <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
                     {title}{" "}
                     <span className="bg-gradient-to-r from-[#16a34a] to-[#166534] bg-clip-text text-transparent">
                       {highlight}
                     </span>
                   </h1>
 
-                  <p className="text-lg sm:text-xl text-gray-600 mb-8">{description}</p>
+                  <p className="text-lg sm:text-xl text-gray-400 mb-8">{description}</p>
 
                   <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
                     <Link href={getLocalizedPath("/contact")}>
@@ -163,7 +163,7 @@ export function FeaturePageTemplate({
                   </div>
 
                   {safeTrustIndicators.length > 0 && (
-                    <div className="flex flex-wrap justify-center lg:justify-start gap-4 text-sm text-gray-600">
+                    <div className="flex flex-wrap justify-center lg:justify-start gap-4 text-sm text-gray-400">
                       {safeTrustIndicators.map((indicator) => (
                         <span key={indicator} className="flex items-center gap-2">
                           <Check className="h-4 w-4 text-green-500" />
@@ -192,14 +192,14 @@ export function FeaturePageTemplate({
                 <span>{badge}</span>
               </div>
 
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
                 {title}{" "}
                 <span className="bg-gradient-to-r from-[#16a34a] to-[#166534] bg-clip-text text-transparent">
                   {highlight}
                 </span>
               </h1>
 
-              <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">{description}</p>
+              <p className="text-lg sm:text-xl text-gray-400 mb-8 max-w-2xl mx-auto">{description}</p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                 <Link href={getLocalizedPath("/contact")}>
@@ -216,7 +216,7 @@ export function FeaturePageTemplate({
               </div>
 
               {safeTrustIndicators.length > 0 && (
-                <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-600">
+                <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400">
                   {safeTrustIndicators.map((indicator) => (
                     <span key={indicator} className="flex items-center gap-2">
                       <Check className="h-4 w-4 text-green-500" />
@@ -253,15 +253,15 @@ export function FeaturePageTemplate({
 
         <div className="container relative px-4">
           <div className="text-center mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">{t.keyFeaturesTitle}</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">{t.keyFeaturesSubtitle}</p>
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">{t.keyFeaturesTitle}</h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">{t.keyFeaturesSubtitle}</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {safeFeatures.map((feature) => (
               <Card
                 key={feature.title}
-                className="p-6 bg-gradient-to-br from-white via-[#fffaf6] to-[#fff0e6] border border-[#16a34a]/15 rounded-2xl shadow-[0_1px_0_rgba(255,255,255,0.8)_inset,0_10px_30px_-20px_rgba(252,60,0,0.25)] hover:shadow-[0_1px_0_rgba(255,255,255,0.8)_inset,0_20px_40px_-18px_rgba(252,60,0,0.45)] hover:-translate-y-0.5 hover:border-[#16a34a]/30 transition-all duration-300"
+                className="p-6 bg-gradient-to-br from-gray-900 via-gray-800/50 to-gray-800/30 border border-[#16a34a]/15 rounded-2xl shadow-[0_1px_0_rgba(255,255,255,0.8)_inset,0_10px_30px_-20px_rgba(252,60,0,0.25)] hover:shadow-[0_1px_0_rgba(255,255,255,0.8)_inset,0_20px_40px_-18px_rgba(252,60,0,0.45)] hover:-translate-y-0.5 hover:border-[#16a34a]/30 transition-all duration-300"
               >
                 <div className="flex items-start gap-4">
                   <div className="p-3 bg-gradient-to-br from-[#16a34a]/15 to-[#16a34a]/5 rounded-xl ring-1 ring-[#16a34a]/10">
@@ -269,12 +269,12 @@ export function FeaturePageTemplate({
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
-                      <h3 className="font-semibold text-gray-900">{feature.title}</h3>
+                      <h3 className="font-semibold text-white">{feature.title}</h3>
                       {feature.badge && (
                         <span className={`inline-flex items-center rounded-full border-0 px-2.5 py-0.5 text-xs font-semibold ${feature.badgeColor || "bg-[#16a34a]/10 text-[#16a34a]"}`}>{feature.badge}</span>
                       )}
                     </div>
-                    <p className="text-sm text-gray-600">{feature.description}</p>
+                    <p className="text-sm text-gray-400">{feature.description}</p>
                   </div>
                 </div>
               </Card>
@@ -316,7 +316,7 @@ export function FeaturePageTemplate({
                   {t.howItWorksTitle}
                 </h2>
               </div>
-              <p className="text-gray-600 max-w-sm text-base leading-relaxed md:text-right">
+              <p className="text-gray-400 max-w-sm text-base leading-relaxed md:text-right">
                 {t.howItWorksSubtitle}
               </p>
             </div>
@@ -354,7 +354,7 @@ export function FeaturePageTemplate({
                       className={`relative group ${idx % 2 === 1 ? "lg:mt-20" : ""}`}
                     >
                       {/* Card */}
-                      <div className="relative h-full bg-white border border-[#1a0f08]/10 p-7 pt-6 shadow-[0_1px_0_rgba(0,0,0,0.04),0_24px_50px_-30px_rgba(252,60,0,0.35)] transition-all duration-500 ease-out hover:-translate-y-1.5 hover:shadow-[0_1px_0_rgba(0,0,0,0.04),0_36px_70px_-24px_rgba(252,60,0,0.5)] hover:border-[#16a34a]/30">
+                      <div className="relative h-full bg-gray-900 border border-[#1a0f08]/10 p-7 pt-6 shadow-[0_1px_0_rgba(0,0,0,0.04),0_24px_50px_-30px_rgba(252,60,0,0.35)] transition-all duration-500 ease-out hover:-translate-y-1.5 hover:shadow-[0_1px_0_rgba(0,0,0,0.04),0_36px_70px_-24px_rgba(252,60,0,0.5)] hover:border-[#16a34a]/30">
                         {/* Crop marks */}
                         <span aria-hidden className="absolute top-1.5 left-1.5 w-2.5 h-px bg-[#16a34a]" />
                         <span aria-hidden className="absolute top-1.5 left-1.5 w-px h-2.5 bg-[#16a34a]" />
@@ -385,7 +385,7 @@ export function FeaturePageTemplate({
                         <h3 className="font-heading text-2xl font-bold text-[#1a0f08] leading-[1.1] tracking-tight mb-3">
                           {step.title}
                         </h3>
-                        <p className="text-sm text-gray-600 leading-relaxed">
+                        <p className="text-sm text-gray-400 leading-relaxed">
                           {step.description}
                         </p>
 
@@ -420,7 +420,7 @@ export function FeaturePageTemplate({
 
       {/* Before/After Comparison — split panel */}
       {safeComparison.length > 0 && (
-        <section className="relative py-24 overflow-hidden bg-white">
+        <section className="relative py-24 overflow-hidden bg-gray-900">
           <div
             aria-hidden
             className="absolute inset-0 opacity-[0.035] pointer-events-none"
@@ -453,25 +453,25 @@ export function FeaturePageTemplate({
               <h2 className="font-heading text-4xl sm:text-5xl font-bold text-[#1a0f08] leading-[0.95] tracking-tight mb-4">
                 {t.beforeAfterTitle}
               </h2>
-              <p className="text-gray-600 text-base leading-relaxed">
+              <p className="text-gray-400 text-base leading-relaxed">
                 {t.beforeAfterSubtitle}
               </p>
             </div>
 
             {/* Split comparison panel */}
             <div className="relative max-w-5xl mx-auto">
-              <div className="relative grid grid-cols-1 md:grid-cols-2 bg-white border border-[#1a0f08]/10 rounded-3xl overflow-hidden shadow-[0_1px_0_rgba(255,255,255,0.8)_inset,0_40px_80px_-40px_rgba(252,60,0,0.35)]">
+              <div className="relative grid grid-cols-1 md:grid-cols-2 bg-gray-900 border border-[#1a0f08]/10 rounded-3xl overflow-hidden shadow-[0_1px_0_rgba(255,255,255,0.8)_inset,0_40px_80px_-40px_rgba(252,60,0,0.35)]">
                 {/* LEFT — WITHOUT (muted) */}
                 <div className="relative bg-gradient-to-br from-gray-50 via-gray-50 to-gray-100/80 p-8 sm:p-10 md:pr-14">
                   <div className="flex items-center gap-3 mb-8 pb-6 border-b border-dashed border-gray-300/70">
-                    <span className="flex items-center justify-center w-10 h-10 rounded-full bg-red-50 text-red-500 ring-1 ring-red-200">
+                    <span className="flex items-center justify-center w-10 h-10 rounded-full bg-red-950/50 text-red-500 ring-1 ring-red-200">
                       <X className="w-4 h-4" strokeWidth={3} />
                     </span>
                     <div>
                       <div className="text-[10px] font-semibold tracking-[0.2em] uppercase text-gray-400">
                         — before
                       </div>
-                      <div className="font-heading text-lg font-bold text-gray-700">
+                      <div className="font-heading text-lg font-bold text-gray-300">
                         {t.without}
                       </div>
                     </div>
@@ -482,7 +482,7 @@ export function FeaturePageTemplate({
                         key={`before-${item.before}`}
                         className="flex items-start gap-3 text-sm"
                       >
-                        <span className="mt-0.5 flex-shrink-0 flex items-center justify-center w-5 h-5 rounded-full bg-red-500/10 text-red-500">
+                        <span className="mt-0.5 flex-shrink-0 flex items-center justify-center w-5 h-5 rounded-full bg-red-950/500/10 text-red-500">
                           <X className="w-3 h-3" strokeWidth={3.5} />
                         </span>
                         <span className="text-gray-500 line-through decoration-gray-300/80 decoration-1">
@@ -538,7 +538,7 @@ export function FeaturePageTemplate({
                 />
 
                 {/* VS badge (desktop) */}
-                <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 items-center justify-center w-14 h-14 rounded-full bg-white ring-1 ring-[#1a0f08]/10 shadow-[0_20px_40px_-15px_rgba(252,60,0,0.4)]">
+                <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 items-center justify-center w-14 h-14 rounded-full bg-gray-900 ring-1 ring-[#1a0f08]/10 shadow-[0_20px_40px_-15px_rgba(252,60,0,0.4)]">
                   <span className="font-heading text-xs font-bold italic text-[#16a34a] tracking-[0.15em]">
                     VS
                   </span>
@@ -550,7 +550,7 @@ export function FeaturePageTemplate({
       )}
 
       {/* CTA Section */}
-      <section className="relative py-20 overflow-hidden bg-gradient-to-br from-orange-50 via-amber-50 to-white">
+      <section className="relative py-20 overflow-hidden bg-gradient-to-br from-gray-900 via-gray-900/50 to-gray-950">
         {/* Decorative blurs */}
         <div
           aria-hidden
@@ -577,7 +577,7 @@ export function FeaturePageTemplate({
             <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-[#16a34a] via-[#facc15] to-[#FDB714] bg-clip-text text-transparent">
               {t.ctaTitle}
             </h2>
-            <p className="text-lg text-gray-700 mb-8">{t.ctaSubtitle}</p>
+            <p className="text-lg text-gray-300 mb-8">{t.ctaSubtitle}</p>
             <div className="flex justify-center">
               <Link href={getLocalizedPath("/contact")}>
                 <Button

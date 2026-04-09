@@ -42,7 +42,7 @@ export function AdmissionsMockup({ className = "", lang = "en" }: { className?: 
 
   return (
     <DashboardShell
-      url="app.elementals.vn/admissions"
+      url="www.kiwibee.com/admissions"
       tabTitle="Admissions — Applications"
       breadcrumb="Admissions · Demo Primary School"
       userName="Ms Vo"
@@ -64,7 +64,7 @@ export function AdmissionsMockup({ className = "", lang = "en" }: { className?: 
     >
       <div className="flex items-end justify-between mb-2.5">
         <div>
-          <div className="text-[14px] font-bold text-gray-900 leading-tight">Admissions Funnel</div>
+          <div className="text-[14px] font-bold text-white leading-tight">Admissions Funnel</div>
           <div className="text-[10px] text-gray-500">
             Fall 2026 intake · 142 inquiries · 18 enrolled
           </div>
@@ -87,7 +87,7 @@ export function AdmissionsMockup({ className = "", lang = "en" }: { className?: 
               {APPLICATIONS.map((a) => (
                 <div
                   key={a.name}
-                  className="rounded-lg bg-gray-50/80 border border-gray-100 p-1.5"
+                  className="rounded-lg bg-gray-800/50/80 border border-gray-800 p-1.5"
                 >
                   <div className="flex items-center gap-2">
                     <MockAvatar
@@ -97,7 +97,7 @@ export function AdmissionsMockup({ className = "", lang = "en" }: { className?: 
                       gradientTo={a.avatar[1]}
                     />
                     <div className="min-w-0 flex-1">
-                      <div className="text-[10px] font-bold text-gray-900 truncate">
+                      <div className="text-[10px] font-bold text-white truncate">
                         {a.name}
                       </div>
                       <div className="text-[8px] text-gray-500">{a.grade}</div>
@@ -106,10 +106,10 @@ export function AdmissionsMockup({ className = "", lang = "en" }: { className?: 
                       <span
                         className={`text-[7px] font-bold px-1 py-0.5 rounded ${
                           a.stage === "Offer"
-                            ? "bg-emerald-50 text-emerald-700"
+                            ? "bg-emerald-950/50 text-emerald-700"
                             : a.stage === "Interview"
                               ? "bg-[#FDB714]/15 text-[#a16207]"
-                              : "bg-blue-50 text-blue-700"
+                              : "bg-blue-950/50 text-blue-700"
                         }`}
                       >
                         {a.stage}
@@ -148,7 +148,7 @@ export function AdmissionsMockup({ className = "", lang = "en" }: { className?: 
                 return (
                   <div key={f.stage} className="relative">
                     <div className="flex items-center justify-between mb-0.5">
-                      <span className="text-[9px] font-bold text-gray-700">{f.stage}</span>
+                      <span className="text-[9px] font-bold text-gray-300">{f.stage}</span>
                       <span
                         className="text-[9px] font-black tabular-nums"
                         style={{ color: f.color }}
@@ -156,7 +156,7 @@ export function AdmissionsMockup({ className = "", lang = "en" }: { className?: 
                         {f.count}
                       </span>
                     </div>
-                    <div className="h-3 rounded-md overflow-hidden bg-gray-100">
+                    <div className="h-3 rounded-md overflow-hidden bg-gray-800">
                       <div
                         className="h-full rounded-md flex items-center justify-end pr-1.5 text-[7px] font-bold text-white"
                         style={{
@@ -172,19 +172,19 @@ export function AdmissionsMockup({ className = "", lang = "en" }: { className?: 
               })}
             </div>
 
-            <div className="mt-2 pt-2 border-t border-gray-100 grid grid-cols-2 gap-1">
+            <div className="mt-2 pt-2 border-t border-gray-800 grid grid-cols-2 gap-1">
               <div className="flex items-center gap-1">
                 <Upload className="h-2.5 w-2.5 text-[#3b82f6]" />
                 <div>
                   <div className="text-[7px] text-gray-500">Avg docs</div>
-                  <div className="text-[9px] font-bold text-gray-900">4.2 / 5</div>
+                  <div className="text-[9px] font-bold text-white">4.2 / 5</div>
                 </div>
               </div>
               <div className="flex items-center gap-1">
                 <Clock className="h-2.5 w-2.5 text-[#FDB714]" />
                 <div>
                   <div className="text-[7px] text-gray-500">Avg cycle</div>
-                  <div className="text-[9px] font-bold text-gray-900">12 days</div>
+                  <div className="text-[9px] font-bold text-white">12 days</div>
                 </div>
               </div>
             </div>

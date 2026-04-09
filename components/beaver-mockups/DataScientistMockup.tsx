@@ -22,7 +22,7 @@ import type { Locale } from "@/lib/i18n/config";
 export function DataScientistMockup({ className = "", lang = "en" }: { className?: string; lang?: Locale }) {
   return (
     <DashboardShell
-      url="app.elementals.vn/admin/insights"
+      url="www.kiwibee.com/admin/insights"
       tabTitle="Data Scientist AI"
       breadcrumb="Data Scientist · AI Insights"
       userName="Dr Pham"
@@ -44,15 +44,15 @@ export function DataScientistMockup({ className = "", lang = "en" }: { className
       <div className="grid grid-cols-5 gap-2.5">
         {/* LEFT — Chat (3/5) */}
         <div className="col-span-3">
-          <div className="rounded-2xl bg-white border border-gray-200/70 shadow-[0_1px_2px_rgba(0,0,0,0.04)] overflow-hidden flex flex-col" style={{ height: 360 }}>
+          <div className="rounded-2xl bg-gray-900 border border-gray-700/70 shadow-[0_1px_2px_rgba(0,0,0,0.04)] overflow-hidden flex flex-col" style={{ height: 360 }}>
             {/* Header */}
-            <div className="flex items-center justify-between px-3 py-2 border-b border-gray-100 bg-gradient-to-r from-amber-50 to-[#8b5cf6]/5">
+            <div className="flex items-center justify-between px-3 py-2 border-b border-gray-800 bg-gradient-to-r from-amber-50 to-[#8b5cf6]/5">
               <div className="flex items-center gap-1.5">
                 <div className="h-5 w-5 rounded-full bg-gradient-to-br from-amber-500 to-[#8b5cf6] flex items-center justify-center">
                   <Brain className="h-2.5 w-2.5 text-white" />
                 </div>
                 <div>
-                  <div className="text-[10px] font-bold text-gray-900 leading-tight">Data Scientist</div>
+                  <div className="text-[10px] font-bold text-white leading-tight">Data Scientist</div>
                   <div className="text-[8px] text-gray-500">Grounded · Oct 2025 data</div>
                 </div>
               </div>
@@ -60,7 +60,7 @@ export function DataScientistMockup({ className = "", lang = "en" }: { className
             </div>
 
             {/* Messages */}
-            <div className="flex-1 overflow-hidden p-3 space-y-2 bg-gradient-to-b from-white to-[#fafafa]">
+            <div className="flex-1 overflow-hidden p-3 space-y-2 bg-gradient-to-b from-gray-900 to-[#fafafa]">
               {/* User query */}
               <div className="flex justify-end">
                 <div className="max-w-[80%] px-2.5 py-1.5 bg-[#8b5cf6] text-white rounded-xl rounded-tr-sm">
@@ -76,14 +76,14 @@ export function DataScientistMockup({ className = "", lang = "en" }: { className
                   <Brain className="h-2 w-2 text-white" />
                 </div>
                 <div className="max-w-[85%]">
-                  <div className="px-2.5 py-2 bg-gray-100 rounded-xl rounded-tl-sm">
-                    <div className="text-[9px] text-gray-900 mb-1.5">
+                  <div className="px-2.5 py-2 bg-gray-800 rounded-xl rounded-tl-sm">
+                    <div className="text-[9px] text-white mb-1.5">
                       <span className="font-bold">Secondary 7A</span> dropped from{" "}
                       <span className="font-bold text-rose-600">94%→86%</span> this month — the biggest decline.
                     </div>
 
                     {/* Inline chart */}
-                    <div className="bg-white rounded-md p-1.5 border border-gray-200 mb-1.5">
+                    <div className="bg-gray-900 rounded-md p-1.5 border border-gray-700 mb-1.5">
                       <div className="text-[7px] text-gray-500 font-semibold mb-0.5">
                         Attendance by class — Oct 2025
                       </div>
@@ -96,7 +96,7 @@ export function DataScientistMockup({ className = "", lang = "en" }: { className
                       />
                     </div>
 
-                    <div className="text-[8px] text-gray-700 space-y-0.5">
+                    <div className="text-[8px] text-gray-300 space-y-0.5">
                       <div>• 3 students with consecutive absences</div>
                       <div>• Correlates with recent schedule change</div>
                       <div className="text-[#8b5cf6] font-semibold mt-0.5">
@@ -124,8 +124,8 @@ export function DataScientistMockup({ className = "", lang = "en" }: { className
             </div>
 
             {/* Input */}
-            <div className="border-t border-gray-100 p-2">
-              <div className="flex items-center gap-1.5 px-2 py-1.5 bg-gray-50 rounded-lg">
+            <div className="border-t border-gray-800 p-2">
+              <div className="flex items-center gap-1.5 px-2 py-1.5 bg-gray-800/50 rounded-lg">
                 <Paperclip className="h-3 w-3 text-gray-400 shrink-0" />
                 <span className="text-[9px] text-gray-400 flex-1">Ask anything about your school data…</span>
                 <button className="h-5 w-5 rounded-md bg-[#8b5cf6] flex items-center justify-center shrink-0">
@@ -156,10 +156,10 @@ export function DataScientistMockup({ className = "", lang = "en" }: { className
               ].map((p) => (
                 <div
                   key={p}
-                  className="flex items-center gap-1 p-1.5 rounded-md bg-gray-50 hover:bg-amber-50 cursor-pointer"
+                  className="flex items-center gap-1 p-1.5 rounded-md bg-gray-800/50 hover:bg-amber-950/50 cursor-pointer"
                 >
                   <Sparkles className="h-2.5 w-2.5 text-amber-600 shrink-0" />
-                  <span className="text-[9px] text-gray-700">{p}</span>
+                  <span className="text-[9px] text-gray-300">{p}</span>
                 </div>
               ))}
             </div>
@@ -173,9 +173,9 @@ export function DataScientistMockup({ className = "", lang = "en" }: { className
                 { label: "Enrollment", value: "557", trend: "+24", color: "#3b82f6" },
                 { label: "NPS", value: "+62", trend: "+8", color: "#8b5cf6" },
               ].map((k) => (
-                <div key={k.label} className="p-1.5 rounded-md bg-gray-50">
+                <div key={k.label} className="p-1.5 rounded-md bg-gray-800/50">
                   <div className="text-[7px] text-gray-500 uppercase font-semibold">{k.label}</div>
-                  <div className="text-sm font-black text-gray-900 leading-none tabular-nums mt-0.5">
+                  <div className="text-sm font-black text-white leading-none tabular-nums mt-0.5">
                     {k.value}
                   </div>
                   <div className="text-[7px] font-bold text-emerald-600 mt-0.5">{k.trend}</div>

@@ -43,7 +43,7 @@ export function ParentDashboardMockup({ className = "", lang = "en" }: { classNa
   const MESSAGES = lang === "vi" ? MESSAGES_VI : MESSAGES_EN;
   return (
     <DashboardShell
-      url="app.elementals.vn/parent"
+      url="www.kiwibee.com/parent"
       tabTitle={lang === "vi" ? "Phụ huynh — Alex Chen" : "Parent — Alex Chen"}
       breadcrumb={lang === "vi" ? "Phụ huynh · Bà Chen" : "Parent · Mrs Chen"}
       userName="Mrs Chen"
@@ -65,16 +65,16 @@ export function ParentDashboardMockup({ className = "", lang = "en" }: { classNa
       ]}
     >
       {/* Hero child card */}
-      <div className="rounded-2xl bg-gradient-to-br from-[#00C9A7]/15 via-white to-[#3b82f6]/10 border border-[#00C9A7]/20 p-3 mb-2.5 relative overflow-hidden">
+      <div className="rounded-2xl bg-gradient-to-br from-[#00C9A7]/15 via-gray-950 to-[#3b82f6]/10 border border-[#00C9A7]/20 p-3 mb-2.5 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-32 h-32 rounded-full bg-[#00C9A7]/10 blur-2xl" />
         <div className="relative flex items-center gap-3">
           <MockAvatar name="Alex Chen" size={48} gradientFrom="#E83B5E" gradientTo="#8b5cf6" />
           <div className="flex-1 min-w-0">
             <div className="text-[9px] uppercase tracking-wider text-gray-500 font-semibold">{lang === "vi" ? "Con bạn" : "Your child"}</div>
-            <div className="text-[14px] font-bold text-gray-900 leading-tight">Alex Chen</div>
-            <div className="text-[9px] text-gray-600">{lang === "vi" ? "Lớp 5A · Trường Tiểu học Demo" : "Primary 5A · Demo Primary School"}</div>
+            <div className="text-[14px] font-bold text-white leading-tight">Alex Chen</div>
+            <div className="text-[9px] text-gray-400">{lang === "vi" ? "Lớp 5A · Trường Tiểu học Demo" : "Primary 5A · Demo Primary School"}</div>
             <div className="flex items-center gap-2 mt-1">
-              <div className="flex items-center gap-0.5 px-1.5 py-0.5 bg-emerald-50 rounded">
+              <div className="flex items-center gap-0.5 px-1.5 py-0.5 bg-emerald-950/50 rounded">
                 <CheckCircle2 className="h-2 w-2 text-emerald-600" />
                 <span className="text-[8px] font-bold text-emerald-700">{lang === "vi" ? "Có mặt hôm nay" : "Present today"}</span>
               </div>
@@ -86,7 +86,7 @@ export function ParentDashboardMockup({ className = "", lang = "en" }: { classNa
           </div>
           <div className="text-right shrink-0">
             <div className="text-[8px] text-gray-500 uppercase tracking-wide font-semibold">{lang === "vi" ? "Tổng" : "Overall"}</div>
-            <div className="text-2xl font-black text-gray-900 leading-none tabular-nums">85.3</div>
+            <div className="text-2xl font-black text-white leading-none tabular-nums">85.3</div>
             <div className="text-[8px] text-emerald-600 font-bold">{lang === "vi" ? "+2.1 học kỳ này" : "+2.1 this term"}</div>
           </div>
         </div>
@@ -105,7 +105,7 @@ export function ParentDashboardMockup({ className = "", lang = "en" }: { classNa
               {GRADES.map((g) => (
                 <div
                   key={g.subjectKey}
-                  className="rounded-lg bg-gray-50/80 border border-gray-100 p-2"
+                  className="rounded-lg bg-gray-800/50/80 border border-gray-800 p-2"
                 >
                   <div className="flex items-center justify-between mb-1">
                     <div className="flex items-center gap-1.5">
@@ -113,7 +113,7 @@ export function ParentDashboardMockup({ className = "", lang = "en" }: { classNa
                         className="h-2 w-2 rounded-full"
                         style={{ background: g.color }}
                       />
-                      <span className="text-[9px] font-semibold text-gray-900">{mt(`subjects.${g.subjectKey}`, lang)}</span>
+                      <span className="text-[9px] font-semibold text-white">{mt(`subjects.${g.subjectKey}`, lang)}</span>
                     </div>
                     <span
                       className={`text-[8px] font-bold ${
@@ -178,10 +178,10 @@ export function ParentDashboardMockup({ className = "", lang = "en" }: { classNa
                   />
                   <div className="min-w-0 flex-1">
                     <div className="flex items-center gap-1">
-                      <span className="text-[9px] font-bold text-gray-900 truncate">{m.from}</span>
+                      <span className="text-[9px] font-bold text-white truncate">{m.from}</span>
                       <span className="text-[7px] text-gray-400 shrink-0">· {m.time}</span>
                     </div>
-                    <div className="text-[8px] text-gray-600 truncate">{m.preview}</div>
+                    <div className="text-[8px] text-gray-400 truncate">{m.preview}</div>
                   </div>
                 </div>
               ))}
@@ -195,8 +195,8 @@ export function ParentDashboardMockup({ className = "", lang = "en" }: { classNa
               </div>
               <Calendar className="h-3 w-3 text-[#FDB714]" />
             </div>
-            <div className="text-[10px] font-bold text-gray-900">{lang === "vi" ? "Họp Phụ huynh" : "Parent-Teacher Meeting"}</div>
-            <div className="text-[8px] text-gray-600">{lang === "vi" ? "T6, 18/10 · 15:00 · Phòng 5A" : "Fri, Oct 18 · 15:00 · Room 5A"}</div>
+            <div className="text-[10px] font-bold text-white">{lang === "vi" ? "Họp Phụ huynh" : "Parent-Teacher Meeting"}</div>
+            <div className="text-[8px] text-gray-400">{lang === "vi" ? "T6, 18/10 · 15:00 · Phòng 5A" : "Fri, Oct 18 · 15:00 · Room 5A"}</div>
           </div>
         </div>
       </div>

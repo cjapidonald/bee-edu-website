@@ -419,12 +419,12 @@ export default function FeaturesPage({ params }: { params: { lang: Locale } }) {
   const structuredDataJson = JSON.stringify(structuredData).replace(/</g, "\\u003c");
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gray-900">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: structuredDataJson }} />
 
       {/* HERO */}
       <section className="relative pt-16 sm:pt-20 md:pt-24 pb-12 sm:pb-16 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#f0fdf4]/50 via-white to-white" />
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-900/50 via-gray-950 to-gray-950" />
         <div className="absolute top-20 left-10 w-72 h-72 bg-[#ffe0d4]/60 rounded-full blur-3xl hidden sm:block" />
         <div className="absolute bottom-0 right-10 w-96 h-96 bg-[#ffd5c4]/60 rounded-full blur-3xl hidden sm:block" />
 
@@ -443,14 +443,14 @@ export default function FeaturesPage({ params }: { params: { lang: Locale } }) {
               <span>{t.badge}</span>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight tracking-tight">
               {t.heroTitle}{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#16a34a] via-[#facc15] to-[#facc15]">
                 {t.heroHighlight}
               </span>
             </h1>
 
-            <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">{t.heroSubtitle}</p>
+            <p className="text-lg sm:text-xl text-gray-400 mb-8 max-w-2xl mx-auto">{t.heroSubtitle}</p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Link href={getLocalizedPath("/pricing")}>
@@ -482,11 +482,11 @@ export default function FeaturesPage({ params }: { params: { lang: Locale } }) {
       </section>
 
       {/* CATEGORIES */}
-      <section className="py-12 sm:py-16 md:py-20 bg-white/80">
+      <section className="py-12 sm:py-16 md:py-20 bg-gray-900/80">
         <div className="container px-4">
           <div className="text-center mb-12">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 tracking-tight">{t.exploreTitle}</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">{t.exploreSubtitle}</p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">{t.exploreTitle}</h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">{t.exploreSubtitle}</p>
           </div>
 
           <div className="max-w-6xl mx-auto space-y-14">
@@ -506,7 +506,7 @@ export default function FeaturesPage({ params }: { params: { lang: Locale } }) {
           </div>
 
           <div className="mt-16 text-center">
-            <p className="text-gray-600 mb-4">{t.guidedTitle}</p>
+            <p className="text-gray-400 mb-4">{t.guidedTitle}</p>
             <Link href={getLocalizedPath("/contact")}>
               <Button size="lg" className="bg-[#16a34a] hover:bg-[#15803d] text-white rounded-xl">
                 {t.requestDemo}
@@ -549,7 +549,7 @@ function CategorySection({
         </div>
         <div className="min-w-0 flex-1">
           <div className="flex items-center gap-3 mb-1">
-            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 tracking-tight">{category.title}</h3>
+            <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight">{category.title}</h3>
             <span
               className="hidden sm:inline-block text-xs font-bold px-2 py-0.5 rounded-full text-white"
               style={{ background: category.accent }}
@@ -557,7 +557,7 @@ function CategorySection({
               {features.length}
             </span>
           </div>
-          <p className="text-sm sm:text-base text-gray-600">{category.subtitle}</p>
+          <p className="text-sm sm:text-base text-gray-400">{category.subtitle}</p>
         </div>
       </div>
 
@@ -566,7 +566,7 @@ function CategorySection({
         {features.map((feature) => (
           <Link key={feature.path} href={getLocalizedPath(feature.path)} className="block h-full">
             <Card
-              className={`group relative h-full p-5 bg-white border border-gray-200 rounded-2xl ${category.border} hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300`}
+              className={`group relative h-full p-5 bg-gray-900 border border-gray-700 rounded-2xl ${category.border} hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300`}
             >
               {feature.isNew && (
                 <span
@@ -579,10 +579,10 @@ function CategorySection({
               <div className={`p-2.5 ${category.bg} rounded-xl w-fit mb-3`}>
                 <feature.icon className={`h-5 w-5 ${category.text}`} />
               </div>
-              <h4 className="text-base font-bold text-gray-900 mb-1 group-hover:text-[#16a34a] transition-colors pr-8">
+              <h4 className="text-base font-bold text-white mb-1 group-hover:text-[#16a34a] transition-colors pr-8">
                 {feature.title}
               </h4>
-              <p className="text-gray-600 text-sm leading-snug">{feature.description}</p>
+              <p className="text-gray-400 text-sm leading-snug">{feature.description}</p>
             </Card>
           </Link>
         ))}

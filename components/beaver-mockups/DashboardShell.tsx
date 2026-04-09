@@ -20,7 +20,7 @@ export interface NavItem {
 }
 
 /**
- * Shared shell for all Beaver dashboard mockups.
+ * Shared shell for all KiwiBee dashboard mockups.
  * Provides browser frame + sidebar + top bar + content area.
  * Each mockup composition just supplies its nav items, breadcrumb, and main content.
  */
@@ -36,8 +36,8 @@ export function DashboardShell({
   children,
   className = "",
   accent = "#FDB714",
-  brandLetter = "B",
-  brandName = "Beaver",
+  brandLetter = "K",
+  brandName = "KiwiBee",
   lang = "en",
 }: {
   url: string;
@@ -58,20 +58,20 @@ export function DashboardShell({
   return (
     <BrowserFrame url={url} tabTitle={tabTitle} accent={accent} className={className}>
       <div
-        className="flex bg-[#fafafa] text-gray-900"
+        className="flex bg-[#fafafa] text-white"
         style={{ fontFamily: "-apple-system, system-ui, sans-serif" }}
       >
         {/* ================= SIDEBAR ================= */}
-        <aside className="w-[120px] shrink-0 bg-white border-r border-gray-200/70 py-3 px-2 flex flex-col gap-0.5">
+        <aside className="w-[120px] shrink-0 bg-gray-900 border-r border-gray-700/70 py-3 px-2 flex flex-col gap-0.5">
           {/* Brand */}
-          <div className="flex items-center gap-1.5 px-2 pb-3 mb-1 border-b border-gray-100">
+          <div className="flex items-center gap-1.5 px-2 pb-3 mb-1 border-b border-gray-800">
             <div
               className="h-5 w-5 rounded-md flex items-center justify-center text-white font-black text-[9px]"
-              style={{ background: "linear-gradient(135deg, #FDB714, #E83B5E)" }}
+              style={{ background: "linear-gradient(135deg, #16a34a, #FDB714)" }}
             >
               {brandLetter}
             </div>
-            <span className="text-[10px] font-bold text-gray-900">{brandName}</span>
+            <span className="text-[10px] font-bold text-white">{brandName}</span>
           </div>
 
           {/* Nav items */}
@@ -93,9 +93,9 @@ export function DashboardShell({
         {/* ================= MAIN ================= */}
         <main className="flex-1 min-w-0 overflow-hidden">
           {/* Top bar */}
-          <div className="flex items-center justify-between px-4 py-2.5 bg-white border-b border-gray-200/70">
+          <div className="flex items-center justify-between px-4 py-2.5 bg-gray-900 border-b border-gray-700/70">
             <div className="flex items-center gap-2 min-w-0">
-              <div className="text-[11px] font-semibold text-gray-900 truncate">
+              <div className="text-[11px] font-semibold text-white truncate">
                 {breadcrumb}
               </div>
               <MockBadge color={dayBadgeColor}>
@@ -104,13 +104,13 @@ export function DashboardShell({
               </MockBadge>
             </div>
             <div className="flex items-center gap-2 shrink-0">
-              <div className="hidden md:flex items-center gap-1 px-2 py-1 bg-gray-100 rounded-md w-[120px]">
+              <div className="hidden md:flex items-center gap-1 px-2 py-1 bg-gray-800 rounded-md w-[120px]">
                 <Search className="h-2.5 w-2.5 text-gray-400" />
                 <span className="text-[9px] text-gray-400">{mt("common.search", lang)}</span>
               </div>
               <div className="relative">
                 <Bell className="h-3 w-3 text-gray-500" />
-                <span className="absolute -top-0.5 -right-0.5 h-1.5 w-1.5 bg-red-500 rounded-full" />
+                <span className="absolute -top-0.5 -right-0.5 h-1.5 w-1.5 bg-red-950/500 rounded-full" />
               </div>
               <div className="flex items-center gap-1">
                 <MockAvatar

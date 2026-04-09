@@ -69,10 +69,10 @@ export default async function LangLayout({
   return (
     <html
       lang={htmlLang}
-      className={`${ibmPlexSans.variable} ${fraunces.variable} light`}
+      className={`${ibmPlexSans.variable} ${fraunces.variable} dark`}
       suppressHydrationWarning
     >
-      <body className="min-h-screen bg-background font-body antialiased">
+      <body className="min-h-screen bg-gray-950 text-gray-100 font-body antialiased">
         <Suspense fallback={null}>
           <Header lang={lang} dict={dict} />
         </Suspense>

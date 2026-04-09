@@ -8,7 +8,7 @@ export {
   StatCard,
   MockBadge,
   Panel,
-  BEAVER,
+  KIWIBEE,
 } from "./mockup-primitives";
 
 // Role dashboards

@@ -59,7 +59,7 @@ const STORIES = [
 export function StoriesMockup({ className = "", lang = "en" }: { className?: string; lang?: Locale }) {
   return (
     <DashboardShell
-      url="app.elementals.vn/class-stories"
+      url="www.kiwibee.com/class-stories"
       tabTitle="Class Stories — Primary 5A"
       breadcrumb="Class Stories · Primary 5A"
       userName="Ms Nguyen"
@@ -79,7 +79,7 @@ export function StoriesMockup({ className = "", lang = "en" }: { className?: str
     >
       <div className="flex items-end justify-between mb-2.5">
         <div>
-          <div className="text-[14px] font-bold text-gray-900 leading-tight">Class Stories</div>
+          <div className="text-[14px] font-bold text-white leading-tight">Class Stories</div>
           <div className="text-[10px] text-gray-500">
             Primary 5A · 28 posts this month · 142 parent views
           </div>
@@ -94,11 +94,11 @@ export function StoriesMockup({ className = "", lang = "en" }: { className?: str
         {/* LEFT — Stories feed (3/5) */}
         <div className="col-span-3 space-y-2">
           {/* New post composer */}
-          <div className="rounded-2xl bg-white border border-gray-200/70 p-2.5 shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
+          <div className="rounded-2xl bg-gray-900 border border-gray-700/70 p-2.5 shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
             <div className="flex items-start gap-2">
               <MockAvatar name="Ms Nguyen" size={24} gradientFrom="#FDB714" gradientTo="#E83B5E" />
               <div className="flex-1">
-                <div className="px-2 py-1.5 bg-gray-50 rounded-lg text-[9px] text-gray-400">
+                <div className="px-2 py-1.5 bg-gray-800/50 rounded-lg text-[9px] text-gray-400">
                   Share a moment with Primary 5A families…
                 </div>
                 <div className="flex items-center gap-1 mt-1.5">
@@ -123,10 +123,10 @@ export function StoriesMockup({ className = "", lang = "en" }: { className?: str
           {STORIES.map((s, i) => (
             <div
               key={i}
-              className="rounded-2xl bg-white border border-gray-200/70 overflow-hidden shadow-[0_1px_2px_rgba(0,0,0,0.04)]"
+              className="rounded-2xl bg-gray-900 border border-gray-700/70 overflow-hidden shadow-[0_1px_2px_rgba(0,0,0,0.04)]"
             >
               {/* Header */}
-              <div className="flex items-center gap-2 px-2.5 py-1.5 border-b border-gray-100">
+              <div className="flex items-center gap-2 px-2.5 py-1.5 border-b border-gray-800">
                 <MockAvatar
                   name={s.teacher}
                   size={22}
@@ -134,7 +134,7 @@ export function StoriesMockup({ className = "", lang = "en" }: { className?: str
                   gradientTo={s.teacherGradient[1]}
                 />
                 <div className="flex-1 min-w-0">
-                  <div className="text-[9px] font-bold text-gray-900 truncate">{s.teacher}</div>
+                  <div className="text-[9px] font-bold text-white truncate">{s.teacher}</div>
                   <div className="text-[7px] text-gray-500">
                     {s.class} · {s.time}
                   </div>
@@ -162,20 +162,20 @@ export function StoriesMockup({ className = "", lang = "en" }: { className?: str
 
               {/* Caption */}
               <div className="px-2.5 py-1.5">
-                <div className="text-[9px] text-gray-700 leading-snug">{s.text}</div>
+                <div className="text-[9px] text-gray-300 leading-snug">{s.text}</div>
               </div>
 
               {/* Actions */}
-              <div className="flex items-center gap-3 px-2.5 py-1.5 border-t border-gray-100">
-                <div className="flex items-center gap-1 text-[8px] text-gray-600">
+              <div className="flex items-center gap-3 px-2.5 py-1.5 border-t border-gray-800">
+                <div className="flex items-center gap-1 text-[8px] text-gray-400">
                   <Heart className="h-3 w-3 text-[#E83B5E] fill-[#E83B5E]" />
                   <span className="font-bold">{s.hearts}</span>
                 </div>
-                <div className="flex items-center gap-1 text-[8px] text-gray-600">
+                <div className="flex items-center gap-1 text-[8px] text-gray-400">
                   <MessageSquare className="h-3 w-3 text-gray-400" />
                   <span>{s.comments}</span>
                 </div>
-                <div className="flex items-center gap-1 text-[8px] text-gray-600 ml-auto">
+                <div className="flex items-center gap-1 text-[8px] text-gray-400 ml-auto">
                   <Share2 className="h-3 w-3 text-gray-400" />
                 </div>
               </div>
@@ -202,7 +202,7 @@ export function StoriesMockup({ className = "", lang = "en" }: { className?: str
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="text-[9px] text-gray-500">{s.label}</div>
-                    <div className="text-sm font-black text-gray-900 tabular-nums leading-none">
+                    <div className="text-sm font-black text-white tabular-nums leading-none">
                       {s.value}
                     </div>
                   </div>
@@ -218,8 +218,8 @@ export function StoriesMockup({ className = "", lang = "en" }: { className?: str
                 Parents Reached
               </span>
             </div>
-            <div className="text-[11px] font-bold text-gray-900">18 of 18 families · 100%</div>
-            <div className="text-[8px] text-gray-600 mt-0.5">
+            <div className="text-[11px] font-bold text-white">18 of 18 families · 100%</div>
+            <div className="text-[8px] text-gray-400 mt-0.5">
               All parents subscribed to this class
             </div>
           </div>

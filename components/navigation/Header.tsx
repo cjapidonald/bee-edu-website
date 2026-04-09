@@ -181,7 +181,7 @@ export default function Header({ lang, dict }: HeaderProps) {
   const FeatureLinkItem = ({ link }: { link: { name: string; path: string; icon: LucideIcon; badge?: string } }) => (
     <Link
       href={getLocalizedPath(link.path)}
-      className="flex items-center gap-1.5 px-2 py-1 text-xs text-gray-700 hover:text-[#16a34a] hover:bg-[#f0fdf4] rounded transition-colors"
+      className="flex items-center gap-1.5 px-2 py-1 text-xs text-gray-300 hover:text-[#16a34a] hover:bg-gray-900 rounded transition-colors"
     >
       <link.icon className="h-3.5 w-3.5 text-[#16a34a] flex-shrink-0" />
       <span className="truncate">{link.name}</span>
@@ -194,7 +194,7 @@ export default function Header({ lang, dict }: HeaderProps) {
   );
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white shadow-sm">
+    <header className="sticky top-0 z-50 w-full bg-gray-950/80 backdrop-blur-xl border-b border-gray-800/50">
       <nav className="container flex h-16 items-center justify-between px-4">
         {/* Logo */}
         <Link href={getLocalizedPath("/")} className="flex items-center">
@@ -234,7 +234,7 @@ export default function Header({ lang, dict }: HeaderProps) {
               onMouseEnter={openFeaturesMenu}
               onMouseLeave={scheduleCloseFeaturesMenu}
               className={cn(
-                "fixed top-[72px] left-1/2 -translate-x-1/2 bg-white border border-gray-200 rounded-xl shadow-xl p-3 transition-all duration-200 z-50",
+                "fixed top-[72px] left-1/2 -translate-x-1/2 bg-gray-900 border border-gray-700 rounded-xl shadow-xl p-3 transition-all duration-200 z-50",
                 featuresOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
               )}
             >
@@ -306,10 +306,10 @@ export default function Header({ lang, dict }: HeaderProps) {
               </div>
 
               {/* View All Features Link */}
-              <div className="border-t border-gray-100 mt-2 pt-2">
+              <div className="border-t border-gray-800 mt-2 pt-2">
                 <Link
                   href={getLocalizedPath("/features")}
-                  className="flex items-center justify-center gap-1.5 px-2 py-1.5 text-xs font-medium text-[#16a34a] hover:bg-[#f0fdf4] rounded transition-colors"
+                  className="flex items-center justify-center gap-1.5 px-2 py-1.5 text-xs font-medium text-[#16a34a] hover:bg-gray-900 rounded transition-colors"
                 >
                   {viewAllFeatures}
                 </Link>
@@ -340,7 +340,7 @@ export default function Header({ lang, dict }: HeaderProps) {
               onMouseEnter={openSolutionsMenu}
               onMouseLeave={scheduleCloseSolutionsMenu}
               className={cn(
-                "absolute top-full left-0 mt-1 w-72 bg-white border border-gray-200 rounded-xl shadow-lg p-2 transition-all duration-200",
+                "absolute top-full left-0 mt-1 w-72 bg-gray-900 border border-gray-700 rounded-xl shadow-lg p-2 transition-all duration-200",
                 solutionsOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
               )}
             >
@@ -348,7 +348,7 @@ export default function Header({ lang, dict }: HeaderProps) {
                 <Link
                   key={`${link.path}-${index}`}
                   href={getLocalizedPath(link.path)}
-                  className="flex items-center gap-3 px-3 py-2.5 text-gray-700 hover:text-[#16a34a] hover:bg-[#f0fdf4] rounded-lg transition-colors"
+                  className="flex items-center gap-3 px-3 py-2.5 text-gray-300 hover:text-[#16a34a] hover:bg-gray-900 rounded-lg transition-colors"
                 >
                   <link.icon className="h-5 w-5 text-[#16a34a]" />
                   <div>
@@ -454,24 +454,24 @@ export default function Header({ lang, dict }: HeaderProps) {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div id="mobile-menu" className="lg:hidden border-t border-gray-200 bg-white max-h-[80vh] overflow-y-auto">
+        <div id="mobile-menu" className="lg:hidden border-t border-gray-700 bg-gray-900 max-h-[80vh] overflow-y-auto">
           <div className="container px-4 py-4 space-y-2">
             <Link
               href={getLocalizedPath("/")}
-              className="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md"
+              className="block px-4 py-2 text-sm font-medium text-gray-300 hover:bg-gray-800 rounded-md"
               onClick={() => setMobileMenuOpen(false)}
             >
               {(dict.nav.home as string) || "Home"}
             </Link>
 
             {/* Mobile Features Section */}
-            <div className="border-t border-gray-100 pt-2">
+            <div className="border-t border-gray-800 pt-2">
               <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase">{sectionTeachingLearning}</div>
               {teachingLearningLinks.map((link, index) => (
                 <Link
                   key={`${link.path}-${index}`}
                   href={getLocalizedPath(link.path)}
-                  className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
+                  className="flex items-center gap-2 px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 rounded-md"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   <link.icon className="h-4 w-4 text-[#16a34a]" />
@@ -480,13 +480,13 @@ export default function Header({ lang, dict }: HeaderProps) {
               ))}
             </div>
 
-            <div className="border-t border-gray-100 pt-2">
+            <div className="border-t border-gray-800 pt-2">
               <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase">{sectionSchoolOperations}</div>
               {schoolOperationsLinks.map((link, index) => (
                 <Link
                   key={`${link.path}-${index}`}
                   href={getLocalizedPath(link.path)}
-                  className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
+                  className="flex items-center gap-2 px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 rounded-md"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   <link.icon className="h-4 w-4 text-[#16a34a]" />
@@ -495,13 +495,13 @@ export default function Header({ lang, dict }: HeaderProps) {
               ))}
             </div>
 
-            <div className="border-t border-gray-100 pt-2">
+            <div className="border-t border-gray-800 pt-2">
               <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase">{sectionPeopleHR}</div>
               {peopleHRLinks.map((link, index) => (
                 <Link
                   key={`${link.path}-${index}`}
                   href={getLocalizedPath(link.path)}
-                  className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
+                  className="flex items-center gap-2 px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 rounded-md"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   <link.icon className="h-4 w-4 text-[#16a34a]" />
@@ -510,13 +510,13 @@ export default function Header({ lang, dict }: HeaderProps) {
               ))}
             </div>
 
-            <div className="border-t border-gray-100 pt-2">
+            <div className="border-t border-gray-800 pt-2">
               <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase">{sectionFinanceAdmissions}</div>
               {financeAdmissionsLinks.map((link, index) => (
                 <Link
                   key={`${link.path}-${index}`}
                   href={getLocalizedPath(link.path)}
-                  className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
+                  className="flex items-center gap-2 px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 rounded-md"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   <link.icon className="h-4 w-4 text-[#16a34a]" />
@@ -525,13 +525,13 @@ export default function Header({ lang, dict }: HeaderProps) {
               ))}
             </div>
 
-            <div className="border-t border-gray-100 pt-2">
+            <div className="border-t border-gray-800 pt-2">
               <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase">{sectionQualityCompliance}</div>
               {qualityComplianceLinks.map((link, index) => (
                 <Link
                   key={`${link.path}-${index}`}
                   href={getLocalizedPath(link.path)}
-                  className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
+                  className="flex items-center gap-2 px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 rounded-md"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   <link.icon className="h-4 w-4 text-[#16a34a]" />
@@ -541,13 +541,13 @@ export default function Header({ lang, dict }: HeaderProps) {
             </div>
 
             {/* Mobile Solutions Section */}
-            <div className="border-t border-gray-100 pt-2">
+            <div className="border-t border-gray-800 pt-2">
               <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase">{(dict.nav.solutions as string) || "Who It's For"}</div>
               {solutionLinks.map((link, index) => (
                 <Link
                   key={`${link.path}-${index}`}
                   href={getLocalizedPath(link.path)}
-                  className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
+                  className="flex items-center gap-2 px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 rounded-md"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   <link.icon className="h-4 w-4 text-[#16a34a]" />
@@ -556,24 +556,24 @@ export default function Header({ lang, dict }: HeaderProps) {
               ))}
             </div>
 
-            <div className="border-t border-gray-100 pt-2">
+            <div className="border-t border-gray-800 pt-2">
               <Link
                 href={getLocalizedPath("/pricing")}
-                className="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md"
+                className="block px-4 py-2 text-sm font-medium text-gray-300 hover:bg-gray-800 rounded-md"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {(dict.nav.pricing as string) || "School Pricing"}
               </Link>
               <Link
                 href={getLocalizedPath("/blog")}
-                className="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md"
+                className="block px-4 py-2 text-sm font-medium text-gray-300 hover:bg-gray-800 rounded-md"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {(dict.nav.blog as string) || "Community"}
               </Link>
               <Link
                 href={getLocalizedPath("/contact")}
-                className="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md"
+                className="block px-4 py-2 text-sm font-medium text-gray-300 hover:bg-gray-800 rounded-md"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {(dict.nav.contactUs as string) || "Let's Connect"}
@@ -581,7 +581,7 @@ export default function Header({ lang, dict }: HeaderProps) {
             </div>
 
             {/* Mobile Access Portal Link */}
-            <div className="border-t border-gray-200 pt-3 mt-2 px-4 pb-2">
+            <div className="border-t border-gray-700 pt-3 mt-2 px-4 pb-2">
               <a
                 href={appUrl}
                 className="flex items-center justify-center gap-2 w-full px-4 py-2.5 bg-[#16a34a] hover:bg-[#15803d] text-white rounded-lg text-sm font-medium transition-colors"

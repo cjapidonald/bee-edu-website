@@ -186,11 +186,11 @@ export default function PricingPage({
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gray-900">
       <section className="relative pt-16 sm:pt-20 md:pt-24 pb-12 sm:pb-16 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#f0fdf4]/50 via-white to-white" />
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-900/50 via-gray-950 to-gray-950" />
         <div className="absolute top-20 left-10 w-72 h-72 bg-[#ffe0d4]/60 rounded-full blur-3xl hidden sm:block" />
-        <div className="absolute bottom-0 right-10 w-96 h-96 bg-[#f0fdf4]/60 rounded-full blur-3xl hidden sm:block" />
+        <div className="absolute bottom-0 right-10 w-96 h-96 bg-gray-900/60 rounded-full blur-3xl hidden sm:block" />
 
         <div
           ref={heroRef}
@@ -202,25 +202,25 @@ export default function PricingPage({
           }}
         >
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-gradient-to-r from-[#f0fdf4] to-[#ffe0d4] text-[#15803d] rounded-full text-sm font-semibold">
+            <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-gradient-to-r from-gray-900 to-[#ffe0d4] text-[#15803d] rounded-full text-sm font-semibold">
               <Sparkles className="h-4 w-4 text-[#f0fdf4]0" />
               <span>{t.badge}</span>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
               {t.heroTitle1}{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#16a34a] via-[#f0fdf4]0 to-[#16a34a]">
                 {t.heroTitle2}
               </span>
             </h1>
 
-            <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">{t.heroSubtitle}</p>
+            <p className="text-lg sm:text-xl text-gray-400 mb-8 max-w-2xl mx-auto">{t.heroSubtitle}</p>
 
             <div className="flex flex-wrap items-center justify-center gap-4">
               {["FERPA", "COPPA", "GDPR", "SOC 2"].map((badge) => (
-                <div key={badge} className="flex items-center gap-2 px-3 py-2 bg-white/60 backdrop-blur-sm rounded-full border border-gray-200/50 shadow-sm">
+                <div key={badge} className="flex items-center gap-2 px-3 py-2 bg-gray-900/60 backdrop-blur-sm rounded-full border border-gray-700/50 shadow-sm">
                   <Shield className="w-4 h-4 text-[#f0fdf4]0" />
-                  <span className="text-sm font-medium text-gray-600">{badge}</span>
+                  <span className="text-sm font-medium text-gray-400">{badge}</span>
                 </div>
               ))}
             </div>
@@ -228,11 +228,11 @@ export default function PricingPage({
         </div>
       </section>
 
-      <section className="py-8 sm:py-12 bg-gray-50/50">
+      <section className="py-8 sm:py-12 bg-gray-800/50/50">
         <TrustedSchoolsCarousel lang={lang} />
       </section>
 
-      <section className="py-12 sm:py-16 bg-white">
+      <section className="py-12 sm:py-16 bg-gray-900">
         <div className="container px-4">
           <div
             ref={cardsRef}
@@ -243,7 +243,7 @@ export default function PricingPage({
               transition: "opacity 0.5s ease-out, transform 0.5s ease-out",
             }}
           >
-            <Card className="relative h-full flex flex-col p-6 lg:p-8 rounded-2xl border-2 border-[#16a34a] shadow-lg hover:shadow-xl transition-all duration-300 bg-white">
+            <Card className="relative h-full flex flex-col p-6 lg:p-8 rounded-2xl border-2 border-[#16a34a] shadow-lg hover:shadow-xl transition-all duration-300 bg-gray-900">
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-10">
                 <Badge className="bg-gradient-to-r from-[#16a34a] to-[#15803d] text-white px-4 py-1.5 text-sm font-semibold shadow-lg">
                   {pricingTier.badge}
@@ -256,7 +256,7 @@ export default function PricingPage({
                     <Building2 className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-gray-900">{pricingTier.name}</h3>
+                    <h3 className="text-lg font-bold text-white">{pricingTier.name}</h3>
                     <p className="text-sm text-gray-500">{pricingTier.subtitle}</p>
                   </div>
                 </div>
@@ -271,14 +271,14 @@ export default function PricingPage({
                 <p className="text-sm text-gray-500">{pricingTier.description}</p>
               </div>
 
-              <div className="mb-6 p-4 rounded-xl border border-[#ffe0d4] bg-[#f0fdf4]/50">
+              <div className="mb-6 p-4 rounded-xl border border-[#ffe0d4] bg-gray-900/50">
                 <div className="flex items-center gap-2 mb-3">
                   <Brain className="h-4 w-4 text-[#15803d]" />
-                  <span className="text-sm font-semibold text-gray-900">{t.aiFeatures}</span>
+                  <span className="text-sm font-semibold text-white">{t.aiFeatures}</span>
                 </div>
                 <ul className="space-y-2">
                   {pricingTier.aiFeatures.map((feature) => (
-                    <li key={feature} className="flex items-start gap-2 text-sm text-gray-600">
+                    <li key={feature} className="flex items-start gap-2 text-sm text-gray-400">
                       <Check className="h-4 w-4 mt-0.5 shrink-0 text-[#16a34a]" />
                       {feature}
                     </li>
@@ -289,7 +289,7 @@ export default function PricingPage({
               <div className="flex-1 mb-6">
                 <ul className="space-y-2">
                   {pricingTier.features.map((feature) => (
-                    <li key={feature} className="flex items-start gap-2 text-sm text-gray-600">
+                    <li key={feature} className="flex items-start gap-2 text-sm text-gray-400">
                       <Check className="h-4 w-4 mt-0.5 shrink-0 text-gray-400" />
                       {feature}
                     </li>
@@ -308,25 +308,25 @@ export default function PricingPage({
         </div>
       </section>
 
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-800/50">
         <div className="container px-4">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">{t.faqTitle}</h2>
-              <p className="text-gray-600">{t.faqSubtitle}</p>
+              <h2 className="text-3xl font-bold text-white mb-4">{t.faqTitle}</h2>
+              <p className="text-gray-400">{t.faqSubtitle}</p>
             </div>
 
             <div className="space-y-4">
               {t.faqs.map((faq, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-xl border border-gray-200 overflow-hidden"
+                  className="bg-gray-900 rounded-xl border border-gray-700 overflow-hidden"
                 >
                   <button
                     onClick={() => setOpenFaq(openFaq === index ? null : index)}
                     className="w-full flex items-center justify-between p-6 text-left"
                   >
-                    <span className="font-semibold text-gray-900">{faq.question}</span>
+                    <span className="font-semibold text-white">{faq.question}</span>
                     <ChevronDown className={cn(
                       "h-5 w-5 text-gray-500 transition-transform",
                       openFaq === index && "rotate-180"
@@ -334,7 +334,7 @@ export default function PricingPage({
                   </button>
                   {openFaq === index && (
                     <div className="px-6 pb-6">
-                      <p className="text-gray-600">{faq.answer}</p>
+                      <p className="text-gray-400">{faq.answer}</p>
                     </div>
                   )}
                 </div>
@@ -350,7 +350,7 @@ export default function PricingPage({
             <h2 className="text-3xl font-bold text-white mb-4">{t.ctaTitle}</h2>
             <p className="text-lg text-white/90 mb-8">{t.ctaSubtitle}</p>
             <Link href={getLocalizedPath("/contact?type=school")}> 
-              <Button size="lg" className="bg-white text-[#16a34a] hover:bg-gray-100 px-8 py-6 text-lg rounded-xl">
+              <Button size="lg" className="bg-gray-900 text-[#16a34a] hover:bg-gray-800 px-8 py-6 text-lg rounded-xl">
                 {t.contactSales}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>

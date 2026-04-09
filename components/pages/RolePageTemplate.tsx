@@ -118,10 +118,10 @@ export function RolePageTemplate({
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gray-900">
       {/* Hero Section */}
       <section className="relative pt-16 sm:pt-20 md:pt-24 pb-16 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#f0fdf4]/70 via-white to-white" />
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-900/70 via-gray-950 to-gray-950" />
         <div className="absolute top-20 left-10 w-72 h-72 bg-[#ffe0d4]/60 rounded-full blur-3xl hidden sm:block" />
         <div className="absolute bottom-0 right-10 w-96 h-96 bg-[#ffd5c4]/40 rounded-full blur-3xl hidden sm:block" />
 
@@ -137,14 +137,14 @@ export function RolePageTemplate({
                     <span>{badge}</span>
                   </div>
 
-                  <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
                     {title}{" "}
                     <span className="bg-gradient-to-r from-[#16a34a] to-[#166534] bg-clip-text text-transparent">
                       {highlight}
                     </span>
                   </h1>
 
-                  <p className="text-lg sm:text-xl text-gray-600 mb-8">{description}</p>
+                  <p className="text-lg sm:text-xl text-gray-400 mb-8">{description}</p>
 
                   <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
                     <Link href={getLocalizedPath("/contact")}>
@@ -161,7 +161,7 @@ export function RolePageTemplate({
                   </div>
 
                   {safeTrustIndicators.length > 0 && (
-                    <div className="flex flex-wrap justify-center lg:justify-start gap-4 text-sm text-gray-600">
+                    <div className="flex flex-wrap justify-center lg:justify-start gap-4 text-sm text-gray-400">
                       {safeTrustIndicators.map((indicator) => (
                         <span key={indicator} className="flex items-center gap-2">
                           <Check className="h-4 w-4 text-green-500" />
@@ -191,14 +191,14 @@ export function RolePageTemplate({
                 <span>{badge}</span>
               </div>
 
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
                 {title}{" "}
                 <span className="bg-gradient-to-r from-[#16a34a] to-[#166534] bg-clip-text text-transparent">
                   {highlight}
                 </span>
               </h1>
 
-              <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">{description}</p>
+              <p className="text-lg sm:text-xl text-gray-400 mb-8 max-w-2xl mx-auto">{description}</p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                 <Link href={getLocalizedPath("/contact")}>
@@ -215,7 +215,7 @@ export function RolePageTemplate({
               </div>
 
               {safeTrustIndicators.length > 0 && (
-                <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-600">
+                <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400">
                   {safeTrustIndicators.map((indicator) => (
                     <span key={indicator} className="flex items-center gap-2">
                       <Check className="h-4 w-4 text-green-500" />
@@ -231,17 +231,17 @@ export function RolePageTemplate({
 
       {/* Pain Points Section */}
       {safePainPoints.length > 0 && (
-        <section className="py-16 bg-gray-50">
+        <section className="py-16 bg-gray-800/50">
           <div className="container px-4">
             <div className="text-center mb-12">
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">{t.challengesTitle}</h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">{t.challengesSubtitle}</p>
+              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">{t.challengesTitle}</h2>
+              <p className="text-gray-400 max-w-2xl mx-auto">{t.challengesSubtitle}</p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               {safePainPoints.map((point) => (
-                <Card key={point.title} className="p-6 bg-white border border-gray-200 rounded-2xl">
-                  <h3 className="font-semibold text-gray-900 mb-3">{point.title}</h3>
+                <Card key={point.title} className="p-6 bg-gray-900 border border-gray-700 rounded-2xl">
+                  <h3 className="font-semibold text-white mb-3">{point.title}</h3>
                   <div className="space-y-2">
                     <p className="text-sm text-red-600 flex items-start gap-2">
                       <span className="mt-0.5">✗</span>
@@ -260,18 +260,18 @@ export function RolePageTemplate({
       )}
 
       {/* Features Grid */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gray-900">
         <div className="container px-4">
           <div className="text-center mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">{t.toolsTitle}</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">{t.toolsSubtitle}</p>
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">{t.toolsTitle}</h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">{t.toolsSubtitle}</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {safeFeatures.map((feature) => (
               <Card
                 key={feature.title}
-                className="p-6 bg-white border border-gray-200 rounded-2xl hover:shadow-lg transition-all duration-300"
+                className="p-6 bg-gray-900 border border-gray-700 rounded-2xl hover:shadow-lg transition-all duration-300"
               >
                 <div className="flex items-start gap-4">
                   <div className="p-3 bg-[#16a34a]/10 rounded-xl">
@@ -279,12 +279,12 @@ export function RolePageTemplate({
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
-                      <h3 className="font-semibold text-gray-900">{feature.title}</h3>
+                      <h3 className="font-semibold text-white">{feature.title}</h3>
                       {feature.badge && (
                         <span className={`inline-flex items-center rounded-full border-0 px-2.5 py-0.5 text-xs font-semibold ${feature.badgeColor || "bg-[#16a34a]/10 text-[#16a34a]"}`}>{feature.badge}</span>
                       )}
                     </div>
-                    <p className="text-sm text-gray-600">{feature.description}</p>
+                    <p className="text-sm text-gray-400">{feature.description}</p>
                   </div>
                 </div>
               </Card>
@@ -295,24 +295,24 @@ export function RolePageTemplate({
 
       {/* Daily Workflow */}
       {safeWorkflow.length > 0 && (
-        <section className="py-16 bg-gray-50">
+        <section className="py-16 bg-gray-800/50">
           <div className="container px-4">
             <div className="text-center mb-12">
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">{t.dayTitle}</h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">{t.daySubtitle}</p>
+              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">{t.dayTitle}</h2>
+              <p className="text-gray-400 max-w-2xl mx-auto">{t.daySubtitle}</p>
             </div>
 
             <div className="max-w-3xl mx-auto">
               {safeWorkflow.map((item) => (
                 <div
                   key={`workflow-${item.time}`}
-                  className="flex items-center gap-4 py-4 border-b border-gray-200 last:border-0"
+                  className="flex items-center gap-4 py-4 border-b border-gray-700 last:border-0"
                 >
                   <div className="w-20 text-sm font-medium text-gray-500">{item.time}</div>
                   <div className="p-2 bg-[#16a34a]/10 rounded-lg">
                     <item.icon className="h-5 w-5 text-[#16a34a]" />
                   </div>
-                  <div className="text-gray-700">{item.task}</div>
+                  <div className="text-gray-300">{item.task}</div>
                 </div>
               ))}
             </div>
@@ -328,7 +328,7 @@ export function RolePageTemplate({
             <p className="text-lg text-white/90 mb-8">{t.ctaSubtitle}</p>
             <div className="flex justify-center">
               <Link href={getLocalizedPath("/contact")}>
-                <Button size="lg" className="bg-white text-[#16a34a] hover:bg-gray-100 px-8 py-6 text-lg rounded-xl">
+                <Button size="lg" className="bg-gray-900 text-[#16a34a] hover:bg-gray-800 px-8 py-6 text-lg rounded-xl">
                   {t.talkToSales}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>

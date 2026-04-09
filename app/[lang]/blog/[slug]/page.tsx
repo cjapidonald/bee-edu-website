@@ -496,7 +496,7 @@ function RenderContent({ content }: { content: ContentBlock[] }) {
           const level = Math.min(Math.max(block.level || 2, 2), 4);
           const HeadingTag = `h${level}` as keyof JSX.IntrinsicElements;
           return (
-            <HeadingTag key={index} className="text-gray-900 font-semibold mt-8 mb-4">
+            <HeadingTag key={index} className="text-white font-semibold mt-8 mb-4">
               {text}
             </HeadingTag>
           );
@@ -505,7 +505,7 @@ function RenderContent({ content }: { content: ContentBlock[] }) {
         if (block.type === "paragraph") {
           const text = block.children?.map((c) => c.text).join("") || "";
           return (
-            <p key={index} className="text-gray-700 leading-relaxed mb-4">
+            <p key={index} className="text-gray-300 leading-relaxed mb-4">
               {text}
             </p>
           );
@@ -591,11 +591,11 @@ export default async function BlogPostPage({
   const structuredDataJson = JSON.stringify(structuredData).replace(/</g, "\\u003c");
 
   return (
-    <article className="relative min-h-screen overflow-hidden bg-white">
+    <article className="relative min-h-screen overflow-hidden bg-gray-900">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: structuredDataJson }} />
       {/* Subtle gradient background */}
       <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#f0fdf4]/70 via-white to-white" />
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-900/70 via-gray-950 to-gray-950" />
         <div className="absolute top-20 left-10 w-72 h-72 bg-[#ffe0d4]/60 rounded-full blur-3xl" />
         <div className="absolute bottom-0 right-10 w-96 h-96 bg-[#ffd5c4]/40 rounded-full blur-3xl" />
       </div>
@@ -606,7 +606,7 @@ export default async function BlogPostPage({
           <Button
             asChild
             variant="ghost"
-            className="w-fit rounded-xl border border-[#D9E2EF] bg-white px-4 text-gray-700 shadow-sm hover:bg-[#F5F8FF] hover:border-primary/30"
+            className="w-fit rounded-xl border border-gray-800 bg-gray-900 px-4 text-gray-300 shadow-sm hover:bg-[#F5F8FF] hover:border-primary/30"
           >
             <Link href={getLocalizedPath(lang, "/blog")}>
               <ArrowLeft className="mr-2 h-4 w-4" />
@@ -614,14 +614,14 @@ export default async function BlogPostPage({
             </Link>
           </Button>
 
-          <div className="relative overflow-hidden rounded-[2rem] border border-[#D9E2EF] bg-white p-6 shadow-xl sm:p-10">
+          <div className="relative overflow-hidden rounded-[2rem] border border-gray-800 bg-gray-900 p-6 shadow-xl sm:p-10">
             <div className="absolute top-0 right-0 w-64 h-64 bg-[#E3F8FF]/60 rounded-full blur-3xl -z-10" />
 
             <div className="relative z-10 flex flex-col gap-8">
               {/* Featured Image */}
               {safeImageUrl(post.featured_image) && (
                 <figure className="mx-auto flex w-full flex-col items-center gap-4 text-center">
-                  <div className="relative w-full overflow-hidden rounded-2xl border border-[#D9E2EF] bg-[#F5F8FF] p-1.5 shadow-lg">
+                  <div className="relative w-full overflow-hidden rounded-2xl border border-gray-800 bg-[#F5F8FF] p-1.5 shadow-lg">
                     <div className="relative overflow-hidden rounded-xl">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
@@ -651,7 +651,7 @@ export default async function BlogPostPage({
                     <Badge
                       key={tag}
                       variant="secondary"
-                      className="flex items-center gap-1 bg-gray-100 text-gray-600 px-3 py-1 rounded-full"
+                      className="flex items-center gap-1 bg-gray-800 text-gray-400 px-3 py-1 rounded-full"
                     >
                       <Tag className="h-3 w-3" />
                       {tag}
@@ -660,21 +660,21 @@ export default async function BlogPostPage({
                 </div>
 
                 <div className="space-y-4">
-                  <h1 className="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl">{post.title}</h1>
+                  <h1 className="text-3xl font-bold leading-tight text-white sm:text-4xl">{post.title}</h1>
 
                   {post.subtitle && (
-                    <p className="text-xl text-gray-600">{post.subtitle}</p>
+                    <p className="text-xl text-gray-400">{post.subtitle}</p>
                   )}
                 </div>
 
-                <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-gray-600">
+                <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-gray-400">
                   <div className="flex items-center gap-2">
                     {safeImageUrl(post.author_image) ? (
                       /* eslint-disable-next-line @next/next/no-img-element */
                       <img
                         src={safeImageUrl(post.author_image)!}
                         alt={authorName}
-                        className="h-10 w-10 rounded-full object-cover border border-[#D9E2EF]"
+                        className="h-10 w-10 rounded-full object-cover border border-gray-800"
                       />
                     ) : (
                       <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#16a34a]/10">
@@ -682,7 +682,7 @@ export default async function BlogPostPage({
                       </div>
                     )}
                     <div className="text-left">
-                      <span className="font-medium text-gray-900">{authorName}</span>
+                      <span className="font-medium text-white">{authorName}</span>
                       {authorJobTitle && (
                         <span className="ml-2 text-xs text-gray-500">• {authorJobTitle}</span>
                       )}
@@ -712,7 +712,7 @@ export default async function BlogPostPage({
                 {resolvedContent && <RenderContent content={resolvedContent} />}
 
                 {!resolvedContent && post.excerpt && (
-                  <p className="text-gray-700 leading-relaxed">{post.excerpt}</p>
+                  <p className="text-gray-300 leading-relaxed">{post.excerpt}</p>
                 )}
               </div>
             </div>

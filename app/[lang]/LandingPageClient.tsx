@@ -120,7 +120,7 @@ const StatItem = memo(function StatItem({
           {Math.floor(count)}{suffix}
         </span>
       </div>
-      <div className="text-xs sm:text-sm md:text-base text-gray-600">{label}</div>
+      <div className="text-xs sm:text-sm md:text-base text-gray-400">{label}</div>
     </div>
   );
 });
@@ -138,11 +138,11 @@ const TrustedByCarousel = memo(function TrustedByCarousel({ dict }: { dict: Dict
   }, [dict]);
 
   return (
-    <section ref={sectionRef} className="py-16 bg-white overflow-hidden">
+    <section ref={sectionRef} className="py-16 bg-gray-900 overflow-hidden">
       <div
         className={`container mb-10 transition-all duration-700 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
       >
-        <p className="text-center text-base font-semibold text-gray-600">
+        <p className="text-center text-base font-semibold text-gray-400">
           {dict.landing.trusted.title}{" "}
           <span className="text-[#16a34a]">16+</span> {dict.landing.trusted.roles}{" "}
           <span className="text-gray-400">•</span>{" "}
@@ -150,7 +150,7 @@ const TrustedByCarousel = memo(function TrustedByCarousel({ dict }: { dict: Dict
           <span className="text-gray-400">•</span>{" "}
           <span className="text-[#16a34a]">2+</span> {dict.landing.trusted.languages}{" "}
           <span className="text-gray-400">•</span>{" "}
-          <span className="text-gray-700">{dict.landing.trusted.comingSoon}</span>
+          <span className="text-gray-300">{dict.landing.trusted.comingSoon}</span>
         </p>
       </div>
 
@@ -250,7 +250,7 @@ const getFeatures = (dict: Dictionary) => [
 // Theme map for bento cards
 const BENTO_THEMES = {
   dark: {
-    bg: "bg-green-50",
+    bg: "bg-green-950/50",
     text: "text-green-900",
     sub: "text-green-800/70",
     iconBg: "bg-green-200/60",
@@ -259,46 +259,46 @@ const BENTO_THEMES = {
     badge: "bg-green-600 text-white",
   },
   amber: {
-    bg: "bg-amber-50",
-    text: "text-amber-900",
-    sub: "text-amber-800/70",
-    iconBg: "bg-amber-200/60",
+    bg: "bg-amber-950/50",
+    text: "text-amber-200",
+    sub: "text-amber-300/70",
+    iconBg: "bg-amber-800/30",
     iconText: "text-amber-700",
     link: "text-amber-700",
     badge: "bg-amber-600 text-white",
   },
   rose: {
-    bg: "bg-rose-50",
-    text: "text-rose-900",
-    sub: "text-rose-800/70",
-    iconBg: "bg-rose-200/60",
+    bg: "bg-rose-950/50",
+    text: "text-rose-200",
+    sub: "text-rose-300/70",
+    iconBg: "bg-rose-800/30",
     iconText: "text-rose-700",
     link: "text-rose-700",
     badge: "bg-rose-600 text-white",
   },
   violet: {
-    bg: "bg-violet-50",
-    text: "text-violet-900",
-    sub: "text-violet-800/70",
-    iconBg: "bg-violet-200/60",
+    bg: "bg-violet-950/50",
+    text: "text-violet-200",
+    sub: "text-violet-300/70",
+    iconBg: "bg-violet-800/30",
     iconText: "text-violet-700",
     link: "text-violet-700",
     badge: "bg-violet-600 text-white",
   },
   sky: {
-    bg: "bg-sky-50",
-    text: "text-sky-900",
-    sub: "text-sky-800/70",
-    iconBg: "bg-sky-200/60",
+    bg: "bg-sky-950/50",
+    text: "text-sky-200",
+    sub: "text-sky-300/70",
+    iconBg: "bg-sky-800/30",
     iconText: "text-sky-700",
     link: "text-sky-700",
     badge: "bg-sky-600 text-white",
   },
   emerald: {
-    bg: "bg-emerald-50",
-    text: "text-emerald-900",
-    sub: "text-emerald-800/70",
-    iconBg: "bg-emerald-200/60",
+    bg: "bg-emerald-950/50",
+    text: "text-emerald-200",
+    sub: "text-emerald-300/70",
+    iconBg: "bg-emerald-800/30",
     iconText: "text-emerald-700",
     link: "text-emerald-700",
     badge: "bg-emerald-600 text-white",
@@ -311,7 +311,7 @@ const FeaturesSection = memo(function FeaturesSection({ dict, lang }: { dict: Di
   const features = useMemo(() => getFeatures(dict), [dict]);
 
   return (
-    <section className="pt-4 sm:pt-6 md:pt-8 pb-12 sm:pb-16 md:pb-20 bg-[#f4f4f5]">
+    <section className="pt-4 sm:pt-6 md:pt-8 pb-12 sm:pb-16 md:pb-20 bg-gray-900/50">
       <div className="container px-4">
         <div
           className="text-center mb-6 sm:mb-8 md:mb-10"
@@ -321,14 +321,14 @@ const FeaturesSection = memo(function FeaturesSection({ dict, lang }: { dict: Di
             transition: 'opacity 0.7s ease-out, transform 0.7s ease-out'
           }}
         >
-          <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 mb-3 sm:mb-4 bg-white shadow-sm text-[#16a34a] rounded-full text-xs sm:text-sm font-medium">
+          <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 mb-3 sm:mb-4 bg-gray-900 border border-gray-800/50 text-[#16a34a] rounded-full text-xs sm:text-sm font-medium">
             <Sparkles className="h-3 w-3 sm:h-4 sm:w-4" />
             <span>{dict.landing.features.badge}</span>
           </div>
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-2 sm:mb-3 md:mb-4 tracking-tight">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2 sm:mb-3 md:mb-4 tracking-tight">
             {dict.landing.features.title}
           </h2>
-          <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base md:text-lg text-gray-400 max-w-2xl mx-auto">
             {dict.landing.features.subtitle}
           </p>
         </div>
@@ -468,7 +468,7 @@ export default function LandingPageClient({
       title: dict.landing?.communication?.video?.title,
       description: dict.landing?.communication?.video?.description,
       badge: dict.landing?.communication?.video?.badge,
-      badgeColor: "bg-amber text-gray-900",
+      badgeColor: "bg-amber text-white",
       iconColor: "text-amber",
       iconBg: "bg-amber-light",
     },
@@ -500,7 +500,7 @@ export default function LandingPageClient({
       badge: dict.landing?.studentParent?.portfolio?.badge,
       badgeColor: "bg-amber-600 text-white",
       iconColor: "text-amber-600",
-      iconBg: "bg-amber-50",
+      iconBg: "bg-amber-950/50",
     },
     {
       icon: Gamepad2,
@@ -509,7 +509,7 @@ export default function LandingPageClient({
       badge: dict.landing?.studentParent?.activities?.badge,
       badgeColor: "bg-rose-600 text-white",
       iconColor: "text-rose-600",
-      iconBg: "bg-rose-50",
+      iconBg: "bg-rose-950/50",
     },
     {
       icon: Heart,
@@ -518,7 +518,7 @@ export default function LandingPageClient({
       badge: null,
       badgeColor: null,
       iconColor: "text-teal-600",
-      iconBg: "bg-teal-50",
+      iconBg: "bg-teal-950/50",
     },
     {
       icon: ClipboardCheck,
@@ -527,7 +527,7 @@ export default function LandingPageClient({
       badge: null,
       badgeColor: null,
       iconColor: "text-violet-600",
-      iconBg: "bg-violet-50",
+      iconBg: "bg-violet-950/50",
     },
   ];
 
@@ -545,9 +545,9 @@ export default function LandingPageClient({
       title: dict.landing?.howItWorks?.step1Title,
       description: dict.landing?.howItWorks?.step1Description,
       color: "text-sky-600",
-      bgColor: "bg-sky-50",
+      bgColor: "bg-sky-950/50",
       badgeBg: "bg-sky-100",
-      badgeText: "text-sky-900",
+      badgeText: "text-sky-200",
     },
     {
       icon: BookOpen,
@@ -555,7 +555,7 @@ export default function LandingPageClient({
       title: dict.landing?.howItWorks?.step2Title,
       description: dict.landing?.howItWorks?.step2Description,
       color: "text-pink-600",
-      bgColor: "bg-pink-50",
+      bgColor: "bg-pink-950/50",
       badgeBg: "bg-pink-100",
       badgeText: "text-pink-900",
     },
@@ -565,33 +565,33 @@ export default function LandingPageClient({
       title: dict.landing?.howItWorks?.step3Title,
       description: dict.landing?.howItWorks?.step3Description,
       color: "text-emerald-600",
-      bgColor: "bg-emerald-50",
+      bgColor: "bg-emerald-950/50",
       badgeBg: "bg-emerald-100",
-      badgeText: "text-emerald-900",
+      badgeText: "text-emerald-200",
     },
   ];
 
   const techTopics = [
-    { icon: BrainCircuit, title: dict.landing?.blog?.topic1Title, description: dict.landing?.blog?.topic1Description, iconColor: "text-violet-600", iconBg: "bg-violet-50", hoverBorder: "hover:border-violet-300", hoverChevron: "group-hover:text-violet-600" },
-    { icon: TabletSmartphone, title: dict.landing?.blog?.topic2Title, description: dict.landing?.blog?.topic2Description, iconColor: "text-sky-600", iconBg: "bg-sky-50", hoverBorder: "hover:border-sky-300", hoverChevron: "group-hover:text-sky-600" },
-    { icon: CloudCog, title: dict.landing?.blog?.topic3Title, description: dict.landing?.blog?.topic3Description, iconColor: "text-emerald-600", iconBg: "bg-emerald-50", hoverBorder: "hover:border-emerald-300", hoverChevron: "group-hover:text-emerald-600" },
-    { icon: Sparkles, title: dict.landing?.blog?.topic4Title, description: dict.landing?.blog?.topic4Description, iconColor: "text-amber-600", iconBg: "bg-amber-50", hoverBorder: "hover:border-amber-300", hoverChevron: "group-hover:text-amber-600" },
+    { icon: BrainCircuit, title: dict.landing?.blog?.topic1Title, description: dict.landing?.blog?.topic1Description, iconColor: "text-violet-600", iconBg: "bg-violet-950/50", hoverBorder: "hover:border-violet-300", hoverChevron: "group-hover:text-violet-600" },
+    { icon: TabletSmartphone, title: dict.landing?.blog?.topic2Title, description: dict.landing?.blog?.topic2Description, iconColor: "text-sky-600", iconBg: "bg-sky-950/50", hoverBorder: "hover:border-sky-300", hoverChevron: "group-hover:text-sky-600" },
+    { icon: CloudCog, title: dict.landing?.blog?.topic3Title, description: dict.landing?.blog?.topic3Description, iconColor: "text-emerald-600", iconBg: "bg-emerald-950/50", hoverBorder: "hover:border-emerald-300", hoverChevron: "group-hover:text-emerald-600" },
+    { icon: Sparkles, title: dict.landing?.blog?.topic4Title, description: dict.landing?.blog?.topic4Description, iconColor: "text-amber-600", iconBg: "bg-amber-950/50", hoverBorder: "hover:border-amber-300", hoverChevron: "group-hover:text-amber-600" },
   ];
 
   const getLocalizedPath = (path: string) => `/${lang === 'en' ? '' : lang + '/'}${path.startsWith('/') ? path.slice(1) : path}`;
 
   return (
-    <div className="redesign-wrapper min-h-screen bg-white text-gray-900">
+    <div className="redesign-wrapper min-h-screen bg-gray-950 text-gray-100">
       {/* HERO SECTION */}
       <section className="relative pt-12 sm:pt-16 md:pt-20 pb-10 sm:pb-12 md:pb-16 lg:pt-28 lg:pb-24 overflow-hidden">
         <NeuralNetworkBackground
           className="z-[1]"
-          particleColor="rgba(252, 60, 0, 0.4)"
-          lineColor="rgba(252, 60, 0, 0.15)"
+          particleColor="rgba(250, 204, 21, 0.4)"
+          lineColor="rgba(250, 204, 21, 0.15)"
           particleCount={60}
         />
 
-        <div className="absolute inset-0 bg-gradient-to-b from-[#f0fdf4]/30 via-white/40 to-white/70 z-[2]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-950/60 to-gray-950 z-[2]" />
 
         {/* Decorative blobs removed */}
 
@@ -601,7 +601,7 @@ export default function LandingPageClient({
               {/* Left Column - Text Content */}
               <div className="text-center lg:text-left lg:col-span-5">
                 {/* Animated Badge */}
-                <div className="group relative inline-flex items-center justify-center rounded-full px-4 sm:px-6 py-2 sm:py-3 mb-6 sm:mb-8 shadow-[inset_0_-8px_10px_#16a34a1f] transition-shadow duration-500 ease-out hover:shadow-[inset_0_-5px_10px_#16a34a3f] bg-white/80 backdrop-blur-sm">
+                <div className="group relative inline-flex items-center justify-center rounded-full px-4 sm:px-6 py-2 sm:py-3 mb-6 sm:mb-8 shadow-[inset_0_-8px_10px_#16a34a1f] transition-shadow duration-500 ease-out hover:shadow-[inset_0_-5px_10px_#16a34a3f] bg-gray-900/80 backdrop-blur-sm">
                   <span
                     className="animate-gradient absolute inset-0 block h-full w-full rounded-[inherit] bg-gradient-to-r from-[#16a34a]/50 via-[#facc15]/50 to-[#16a34a]/50 bg-[length:300%_100%] p-[1px]"
                     style={{
@@ -620,7 +620,7 @@ export default function LandingPageClient({
                 </div>
 
                 {/* Main Headline */}
-                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
                   {dict.landing.hero.title}{" "}
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#16a34a] via-[#facc15] to-[#facc15]">
                     {dict.landing.hero.titleHighlight}
@@ -629,7 +629,7 @@ export default function LandingPageClient({
                   {dict.landing.hero.titleEnd}
                 </h1>
 
-                <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 sm:mb-8 max-w-2xl lg:max-w-none">
+                <p className="text-base sm:text-lg md:text-xl text-gray-400 mb-6 sm:mb-8 max-w-2xl lg:max-w-none">
                   {dict.landing.hero.subtitle}
                 </p>
                 <p className="text-sm sm:text-base text-gray-500 mb-6 sm:mb-8 max-w-2xl lg:max-w-none">
@@ -651,7 +651,7 @@ export default function LandingPageClient({
                   <Link href={getLocalizedPath("/features")} className="w-full sm:w-auto">
                     <Button
                       variant="outline"
-                      className="w-full sm:w-auto border-[#16a34a] text-gray-700 px-5 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base rounded-xl hover:bg-[#f0fdf4]"
+                      className="w-full sm:w-auto border-[#16a34a] text-gray-300 px-5 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base rounded-xl hover:bg-gray-900"
                     >
                       <Play className="mr-2 h-4 w-4" />
                       {dict.landing.hero.watchDemo}
@@ -676,7 +676,7 @@ export default function LandingPageClient({
                 </div>
 
                 {/* Compact app store strip (desktop only) */}
-                <div className="hidden lg:flex items-center gap-3 pt-2 border-t border-gray-100">
+                <div className="hidden lg:flex items-center gap-3 pt-2 border-t border-gray-800">
                   <span className="text-xs text-gray-500 font-medium">
                     {lang === "zh-HK" ? "亦可於行動裝置使用" : "Also on mobile"}
                   </span>
@@ -767,21 +767,21 @@ export default function LandingPageClient({
                   </div>
 
                   {/* Floating rating badge */}
-                  <div className="hidden sm:flex absolute -bottom-4 -left-4 lg:-bottom-6 lg:-left-6 items-center gap-2 px-4 py-2.5 bg-white rounded-2xl shadow-xl ring-1 ring-black/5">
+                  <div className="hidden sm:flex absolute -bottom-4 -left-4 lg:-bottom-6 lg:-left-6 items-center gap-2 px-4 py-2.5 bg-gray-900 rounded-2xl shadow-xl ring-1 ring-white/5">
                     <div className="flex">
                       {[...Array(5)].map((_, i) => (
                         <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
                       ))}
                     </div>
-                    <div className="text-sm font-semibold text-gray-900">4.6</div>
+                    <div className="text-sm font-semibold text-white">4.6</div>
                     <div className="text-xs text-gray-500">· {lang === "zh-HK" ? "家長評價" : "from parents"}</div>
                   </div>
 
                   {/* Floating "live demo" badge */}
                   <div className="hidden sm:flex absolute -top-3 -right-3 lg:-top-4 lg:-right-4 items-center gap-2 px-3 py-2 bg-[#16a34a] text-white rounded-xl shadow-xl">
                     <span className="relative flex h-2 w-2">
-                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75" />
-                      <span className="relative inline-flex rounded-full h-2 w-2 bg-white" />
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gray-900 opacity-75" />
+                      <span className="relative inline-flex rounded-full h-2 w-2 bg-gray-900" />
                     </span>
                     <span className="text-xs font-semibold">{lang === "zh-HK" ? "即時示範" : "Live demo data"}</span>
                   </div>
@@ -796,7 +796,7 @@ export default function LandingPageClient({
       <TrustedByCarousel dict={dict} />
 
       {/* STATS SECTION */}
-      <section className="py-10 sm:py-12 md:py-16 bg-white">
+      <section className="py-10 sm:py-12 md:py-16 bg-gray-900">
         <div className="container px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
             {[
@@ -812,20 +812,20 @@ export default function LandingPageClient({
       </section>
 
       {/* UNIFIED PLATFORM SECTION — Bento */}
-      <section className="py-12 sm:py-16 bg-[#f4f4f5] border-y border-gray-100">
+      <section className="py-12 sm:py-16 bg-gray-900/50 border-y border-gray-800">
         <div className="container px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 auto-rows-[180px] md:auto-rows-[200px] gap-3 sm:gap-4">
             {/* Header card — spans 2 cols, 2 rows */}
-            <div className="md:col-span-4 md:row-span-1 lg:col-span-2 lg:row-span-2 p-6 sm:p-8 bg-white rounded-3xl shadow-sm flex flex-col justify-between">
+            <div className="md:col-span-4 md:row-span-1 lg:col-span-2 lg:row-span-2 p-6 sm:p-8 bg-gray-900 rounded-3xl shadow-sm flex flex-col justify-between">
               <div>
                 <div className="inline-flex items-center gap-2 px-3 py-1.5 mb-4 bg-[#16a34a]/10 text-[#16a34a] rounded-full text-xs font-semibold">
                   <LineChart className="h-3.5 w-3.5" />
                   <span>{dict.landing?.unified?.badge}</span>
                 </div>
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 tracking-tight leading-tight">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3 tracking-tight leading-tight">
                   {dict.landing?.unified?.title}
                 </h2>
-                <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+                <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
                   {dict.landing?.unified?.subtitle}
                 </p>
               </div>
@@ -836,10 +836,10 @@ export default function LandingPageClient({
               const iconMap = [BarChart3, ClipboardCheck, Target, Heart] as const;
               const IconComponent = iconMap[index] ?? Sparkles;
               const themes = [
-                { bg: "bg-sky-50", text: "text-sky-900", sub: "text-sky-800/70", iconBg: "bg-sky-200/60", iconText: "text-sky-700" },
-                { bg: "bg-amber-50", text: "text-amber-900", sub: "text-amber-800/70", iconBg: "bg-amber-200/60", iconText: "text-amber-700" },
-                { bg: "bg-rose-50", text: "text-rose-900", sub: "text-rose-800/70", iconBg: "bg-rose-200/60", iconText: "text-rose-700" },
-                { bg: "bg-emerald-50", text: "text-emerald-900", sub: "text-emerald-800/70", iconBg: "bg-emerald-200/60", iconText: "text-emerald-700" },
+                { bg: "bg-sky-950/50", text: "text-sky-200", sub: "text-sky-300/70", iconBg: "bg-sky-800/30", iconText: "text-sky-700" },
+                { bg: "bg-amber-950/50", text: "text-amber-200", sub: "text-amber-300/70", iconBg: "bg-amber-800/30", iconText: "text-amber-700" },
+                { bg: "bg-rose-950/50", text: "text-rose-200", sub: "text-rose-300/70", iconBg: "bg-rose-800/30", iconText: "text-rose-700" },
+                { bg: "bg-emerald-950/50", text: "text-emerald-200", sub: "text-emerald-300/70", iconBg: "bg-emerald-800/30", iconText: "text-emerald-700" },
               ];
               const t = themes[index % themes.length];
               // First item is bigger
@@ -886,17 +886,17 @@ export default function LandingPageClient({
       <FeaturesSection dict={dict} lang={lang} />
 
       {/* COMMUNICATION SECTION — Bento */}
-      <section className="pt-6 pb-12 sm:pt-8 sm:pb-16 bg-[#f4f4f5]">
+      <section className="pt-6 pb-12 sm:pt-8 sm:pb-16 bg-gray-900/50">
         <div className="container px-4">
           <div className="text-center mb-6 sm:mb-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 mb-4 bg-white shadow-sm text-[#16a34a] rounded-full text-sm font-medium">
+            <div className="inline-flex items-center gap-2 px-4 py-2 mb-4 bg-gray-900 border border-gray-800/50 text-[#16a34a] rounded-full text-sm font-medium">
               <MessageCircle className="h-4 w-4" />
               <span>{dict.landing?.communication?.badge}</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 tracking-tight">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">
               {dict.landing?.communication?.title}
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-400 max-w-2xl mx-auto">
               {dict.landing?.communication?.subtitle}
             </p>
           </div>
@@ -905,13 +905,13 @@ export default function LandingPageClient({
             {communicationFeatures.map((feature, index) => {
               const themes = [
                 // Big featured (light yellow - messaging)
-                { bg: "bg-yellow-50", text: "text-yellow-900", sub: "text-yellow-800/70", iconBg: "bg-yellow-200/60", iconText: "text-yellow-700", size: "md:col-span-4 md:row-span-2 lg:col-span-3 lg:row-span-2" },
+                { bg: "bg-yellow-950/50", text: "text-yellow-200", sub: "text-yellow-300/70", iconBg: "bg-yellow-800/30", iconText: "text-yellow-700", size: "md:col-span-4 md:row-span-2 lg:col-span-3 lg:row-span-2" },
                 // Tall (amber - video)
-                { bg: "bg-amber-50", text: "text-amber-900", sub: "text-amber-800/70", iconBg: "bg-amber-200/60", iconText: "text-amber-700", size: "md:col-span-2 md:row-span-2 lg:col-span-3 lg:row-span-1" },
+                { bg: "bg-amber-950/50", text: "text-amber-200", sub: "text-amber-300/70", iconBg: "bg-amber-800/30", iconText: "text-amber-700", size: "md:col-span-2 md:row-span-2 lg:col-span-3 lg:row-span-1" },
                 // Small (emerald - materials)
-                { bg: "bg-emerald-50", text: "text-emerald-900", sub: "text-emerald-800/70", iconBg: "bg-emerald-200/60", iconText: "text-emerald-700", size: "md:col-span-2 md:row-span-1 lg:col-span-3 lg:row-span-1" },
+                { bg: "bg-emerald-950/50", text: "text-emerald-200", sub: "text-emerald-300/70", iconBg: "bg-emerald-800/30", iconText: "text-emerald-700", size: "md:col-span-2 md:row-span-1 lg:col-span-3 lg:row-span-1" },
                 // Dark (violet - stories)
-                { bg: "bg-gradient-to-br from-violet-900 to-violet-800", text: "text-white", sub: "text-violet-100/80", iconBg: "bg-white/10", iconText: "text-violet-200", size: "hidden md:hidden lg:hidden" },
+                { bg: "bg-gradient-to-br from-violet-900 to-violet-800", text: "text-white", sub: "text-violet-100/80", iconBg: "bg-gray-900/10", iconText: "text-violet-200", size: "hidden md:hidden lg:hidden" },
               ];
               const t = themes[index];
               const isBig = index === 0;
@@ -942,7 +942,7 @@ export default function LandingPageClient({
                     <p className={`text-base sm:text-lg max-w-xl ${t.sub} leading-relaxed relative z-10`}>
                       {feature.description}
                     </p>
-                    <div className="absolute -bottom-20 -right-20 w-64 h-64 rounded-full bg-yellow-200/50 blur-3xl pointer-events-none" />
+                    <div className="absolute -bottom-20 -right-20 w-64 h-64 rounded-full bg-yellow-800/30 blur-3xl pointer-events-none" />
                   </div>
                 );
               }
@@ -975,7 +975,7 @@ export default function LandingPageClient({
             })}
             {/* 4th card — stories — explicitly placed for bento layout */}
             {communicationFeatures[3] && (
-              <div className="md:col-span-4 md:row-span-1 lg:col-span-6 lg:row-span-1 bg-purple-50 p-6 sm:p-7 rounded-3xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center gap-5 relative overflow-hidden">
+              <div className="md:col-span-4 md:row-span-1 lg:col-span-6 lg:row-span-1 bg-purple-950/50 p-6 sm:p-7 rounded-3xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center gap-5 relative overflow-hidden">
                 <div className="p-3 bg-purple-200/60 rounded-2xl shrink-0">
                   {(() => {
                     const Icon = communicationFeatures[3].icon;
@@ -1001,17 +1001,17 @@ export default function LandingPageClient({
       </section>
 
       {/* STUDENT & PARENT SECTION — Bento */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-900">
         <div className="container px-4">
           <div className="text-center mb-12 sm:mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 mb-4 bg-[#f4f4f5] text-[#16a34a] rounded-full text-sm font-medium">
+            <div className="inline-flex items-center gap-2 px-4 py-2 mb-4 bg-gray-900/50 text-[#16a34a] rounded-full text-sm font-medium">
               <Heart className="h-4 w-4" />
               <span>{dict.landing?.studentParent?.badge}</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 tracking-tight">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">
               {dict.landing?.studentParent?.title}
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-400 max-w-2xl mx-auto">
               {dict.landing?.studentParent?.subtitle}
             </p>
           </div>
@@ -1020,10 +1020,10 @@ export default function LandingPageClient({
             {studentParentFeatures.map((feature, index) => {
               // Bento layout: tall, big, small, small
               const layouts = [
-                { size: "md:col-span-2 md:row-span-2 lg:col-span-2 lg:row-span-2", bg: "bg-amber-50", text: "text-amber-900", sub: "text-amber-800/70", iconBg: "bg-amber-200/60", iconText: "text-amber-700", isFeatured: true },
-                { size: "md:col-span-2 md:row-span-1 lg:col-span-4 lg:row-span-1", bg: "bg-rose-50", text: "text-rose-900", sub: "text-rose-800/70", iconBg: "bg-rose-200/60", iconText: "text-rose-700", isFeatured: false },
-                { size: "md:col-span-2 md:row-span-1 lg:col-span-2 lg:row-span-1", bg: "bg-teal-50", text: "text-teal-900", sub: "text-teal-800/70", iconBg: "bg-teal-200/60", iconText: "text-teal-700", isFeatured: false },
-                { size: "md:col-span-2 md:row-span-1 lg:col-span-2 lg:row-span-1", bg: "bg-violet-50", text: "text-violet-900", sub: "text-violet-800/70", iconBg: "bg-violet-200/60", iconText: "text-violet-700", isFeatured: false },
+                { size: "md:col-span-2 md:row-span-2 lg:col-span-2 lg:row-span-2", bg: "bg-amber-950/50", text: "text-amber-200", sub: "text-amber-300/70", iconBg: "bg-amber-800/30", iconText: "text-amber-700", isFeatured: true },
+                { size: "md:col-span-2 md:row-span-1 lg:col-span-4 lg:row-span-1", bg: "bg-rose-950/50", text: "text-rose-200", sub: "text-rose-300/70", iconBg: "bg-rose-800/30", iconText: "text-rose-700", isFeatured: false },
+                { size: "md:col-span-2 md:row-span-1 lg:col-span-2 lg:row-span-1", bg: "bg-teal-950/50", text: "text-teal-900", sub: "text-teal-800/70", iconBg: "bg-teal-200/60", iconText: "text-teal-700", isFeatured: false },
+                { size: "md:col-span-2 md:row-span-1 lg:col-span-2 lg:row-span-1", bg: "bg-violet-950/50", text: "text-violet-200", sub: "text-violet-300/70", iconBg: "bg-violet-800/30", iconText: "text-violet-700", isFeatured: false },
               ];
               const l = layouts[index];
 
@@ -1058,7 +1058,7 @@ export default function LandingPageClient({
       </section>
 
       {/* CLASSSPARK SHOWCASE — Bento with mockup */}
-      <section className="py-20 bg-white relative overflow-hidden">
+      <section className="py-20 bg-gray-900 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-[#FDB714]/10 blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-[#E83B5E]/10 blur-3xl pointer-events-none" />
 
@@ -1094,12 +1094,12 @@ export default function LandingPageClient({
                 <Sparkles className="h-4 w-4" />
                 <span>ClassSpark · Behavior Gamification</span>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 tracking-tight">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">
                 {lang === "zh-HK"
                   ? "讓課堂氣氛活起來的遊戲化系統"
                   : "The gamified classroom that teachers actually love"}
               </h2>
-              <p className="text-lg text-gray-600 mb-6">
+              <p className="text-lg text-gray-400 mb-6">
                 {lang === "zh-HK"
                   ? "每位學生都有自己的怪獸夥伴。獎勵正向行為、完成作業與積極參與——家長同步看到進度。"
                   : "Every student has a monster companion. Reward positive behavior, homework completion, and participation — parents see updates in real time."}
@@ -1114,7 +1114,7 @@ export default function LandingPageClient({
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-3">
                     <span className="text-xl shrink-0">{item.icon}</span>
-                    <span className="text-gray-700 pt-0.5">{item.text}</span>
+                    <span className="text-gray-300 pt-0.5">{item.text}</span>
                   </div>
                 ))}
               </div>
@@ -1130,7 +1130,7 @@ export default function LandingPageClient({
       </section>
 
       {/* AI SHOWCASE SECTION */}
-      <section className="py-20 bg-gradient-to-b from-[#f0fdf4] to-white">
+      <section className="py-20 bg-gradient-to-b from-gray-900 to-gray-950">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -1138,10 +1138,10 @@ export default function LandingPageClient({
                 <Brain className="h-4 w-4" />
                 <span>{dict.landing?.ai?.badge}</span>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 {dict.landing?.ai?.title}
               </h2>
-              <p className="text-lg text-gray-600 mb-8">
+              <p className="text-lg text-gray-400 mb-8">
                 {dict.landing?.ai?.subtitle}
               </p>
 
@@ -1159,7 +1159,7 @@ export default function LandingPageClient({
                     <div className="p-1 bg-[#16a34a]/10 rounded-full">
                       <Check className="h-4 w-4 text-[#16a34a]" />
                     </div>
-                    <span className="text-gray-700">{item}</span>
+                    <span className="text-gray-300">{item}</span>
                   </div>
                 ))}
               </div>
@@ -1198,20 +1198,20 @@ export default function LandingPageClient({
       </section>
 
       {/* SOLUTIONS BY ROLE — Bento */}
-      <section className="py-20 bg-[#f4f4f5]">
+      <section className="py-20 bg-gray-900/50">
         <div className="container px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 auto-rows-[160px] md:auto-rows-[180px] gap-3 sm:gap-4">
             {/* Header card */}
-            <div className="md:col-span-4 md:row-span-1 lg:col-span-2 lg:row-span-2 p-6 sm:p-8 bg-white rounded-3xl shadow-sm flex flex-col justify-between">
+            <div className="md:col-span-4 md:row-span-1 lg:col-span-2 lg:row-span-2 p-6 sm:p-8 bg-gray-900 rounded-3xl shadow-sm flex flex-col justify-between">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#16a34a]/10 text-[#16a34a] rounded-full text-xs font-semibold w-fit">
                 <Users className="h-3.5 w-3.5" />
                 <span>Roles</span>
               </div>
               <div>
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-2 tracking-tight leading-tight">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-2 tracking-tight leading-tight">
                   {dict.landing?.solutions?.title}
                 </h2>
-                <p className="text-sm sm:text-base text-gray-600">
+                <p className="text-sm sm:text-base text-gray-400">
                   {dict.landing?.solutions?.subtitle}
                 </p>
               </div>
@@ -1220,11 +1220,11 @@ export default function LandingPageClient({
             {/* Solution chips */}
             {solutions.map((solution, index) => {
               const themes = [
-                { bg: "bg-rose-50", text: "text-rose-900", iconBg: "bg-rose-200/60", iconText: "text-rose-700" },
-                { bg: "bg-violet-50", text: "text-violet-900", iconBg: "bg-violet-200/60", iconText: "text-violet-700" },
-                { bg: "bg-amber-50", text: "text-amber-900", iconBg: "bg-amber-200/60", iconText: "text-amber-700" },
-                { bg: "bg-emerald-50", text: "text-emerald-900", iconBg: "bg-emerald-200/60", iconText: "text-emerald-700" },
-                { bg: "bg-[#18181b]", text: "text-white", iconBg: "bg-white/10", iconText: "text-[#facc15]" },
+                { bg: "bg-rose-950/50", text: "text-rose-200", iconBg: "bg-rose-800/30", iconText: "text-rose-700" },
+                { bg: "bg-violet-950/50", text: "text-violet-200", iconBg: "bg-violet-800/30", iconText: "text-violet-700" },
+                { bg: "bg-amber-950/50", text: "text-amber-200", iconBg: "bg-amber-800/30", iconText: "text-amber-700" },
+                { bg: "bg-emerald-950/50", text: "text-emerald-200", iconBg: "bg-emerald-800/30", iconText: "text-emerald-700" },
+                { bg: "bg-[#18181b]", text: "text-white", iconBg: "bg-gray-900/10", iconText: "text-[#facc15]" },
               ];
               const t = themes[index % themes.length];
 
@@ -1251,17 +1251,17 @@ export default function LandingPageClient({
       </section>
 
       {/* HOW IT WORKS — Bento */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-900">
         <div className="container px-4">
           <div className="text-center mb-12 sm:mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 mb-4 bg-[#f4f4f5] text-[#16a34a] rounded-full text-sm font-medium">
+            <div className="inline-flex items-center gap-2 px-4 py-2 mb-4 bg-gray-900/50 text-[#16a34a] rounded-full text-sm font-medium">
               <Sparkles className="h-4 w-4" />
               <span>{dict.landing?.howItWorks?.badge}</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 tracking-tight">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">
               {dict.landing?.howItWorks?.title}
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-400 max-w-2xl mx-auto">
               {dict.landing?.howItWorks?.subtitle}
             </p>
           </div>
@@ -1270,9 +1270,9 @@ export default function LandingPageClient({
             {workflowSteps.map((step, index) => {
               // Bento: 1st bigger, 2nd middle, 3rd bigger
               const themes = [
-                { bg: "bg-sky-50", text: "text-sky-900", sub: "text-sky-800/70", iconBg: "bg-sky-200/60", iconText: "text-sky-700", numBg: "bg-sky-200", size: "md:col-span-3 lg:col-span-2" },
-                { bg: "bg-pink-50", text: "text-pink-900", sub: "text-pink-800/70", iconBg: "bg-pink-200/60", iconText: "text-pink-700", numBg: "bg-pink-200", size: "md:col-span-3 lg:col-span-2" },
-                { bg: "bg-emerald-50", text: "text-emerald-900", sub: "text-emerald-800/70", iconBg: "bg-emerald-200/60", iconText: "text-emerald-700", numBg: "bg-emerald-200", size: "md:col-span-6 lg:col-span-2" },
+                { bg: "bg-sky-950/50", text: "text-sky-200", sub: "text-sky-300/70", iconBg: "bg-sky-800/30", iconText: "text-sky-700", numBg: "bg-sky-200", size: "md:col-span-3 lg:col-span-2" },
+                { bg: "bg-pink-950/50", text: "text-pink-900", sub: "text-pink-800/70", iconBg: "bg-pink-200/60", iconText: "text-pink-700", numBg: "bg-pink-200", size: "md:col-span-3 lg:col-span-2" },
+                { bg: "bg-emerald-950/50", text: "text-emerald-200", sub: "text-emerald-300/70", iconBg: "bg-emerald-800/30", iconText: "text-emerald-700", numBg: "bg-emerald-200", size: "md:col-span-6 lg:col-span-2" },
               ];
               const t = themes[index];
 
@@ -1304,20 +1304,20 @@ export default function LandingPageClient({
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-900">
         <div className="container">
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 px-4 py-2 mb-4 bg-secondary text-secondary-foreground rounded-full text-sm font-medium">
               <Star className="h-4 w-4 fill-current" />
               <span>{dict.landing?.testimonials?.badge}</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+            <h2 className="text-3xl md:text-4xl font-bold text-white">
               {dict.landing?.testimonials?.title}
             </h2>
           </div>
 
           <div className="max-w-3xl mx-auto">
-            <Card className="p-8 md:p-12 bg-white border-0 shadow-lg rounded-2xl">
+            <Card className="p-8 md:p-12 bg-gray-900 border-0 shadow-lg rounded-2xl">
               <div className="flex justify-center gap-1 mb-6">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="h-6 w-6 text-secondary fill-current" />
@@ -1325,12 +1325,12 @@ export default function LandingPageClient({
               </div>
 
               <div key={activeTestimonial} className="testimonial-fade">
-                <blockquote className="text-xl md:text-2xl text-gray-700 text-center mb-8 italic">
+                <blockquote className="text-xl md:text-2xl text-gray-300 text-center mb-8 italic">
                   &ldquo;{testimonials[activeTestimonial]?.quote}&rdquo;
                 </blockquote>
 
                 <div className="text-center">
-                  <div className="font-semibold text-gray-900">
+                  <div className="font-semibold text-white">
                     {testimonials[activeTestimonial]?.author}
                   </div>
                   <div className="text-gray-500">
@@ -1364,7 +1364,7 @@ export default function LandingPageClient({
       </section>
 
       {/* COMPLIANCE */}
-      <section className="py-16 bg-white border-y border-gray-100">
+      <section className="py-16 bg-gray-900 border-y border-gray-800">
         <div className="container">
           <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16">
             {[
@@ -1373,7 +1373,7 @@ export default function LandingPageClient({
               { icon: Award, label: dict.landing?.compliance?.soc2 },
               { icon: Clock, label: dict.landing?.compliance?.uptime },
             ].map((item, index) => (
-              <div key={index} className="flex items-center gap-2 text-gray-600">
+              <div key={index} className="flex items-center gap-2 text-gray-400">
                 <item.icon className="h-5 w-5 text-[#16a34a]" />
                 <span className="font-medium">{item.label}</span>
               </div>
@@ -1383,12 +1383,12 @@ export default function LandingPageClient({
       </section>
 
       {/* BLOG/RESOURCES — Bento */}
-      <section className="py-20 bg-[#f4f4f5]">
+      <section className="py-20 bg-gray-900/50">
         <div className="container px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 auto-rows-[180px] md:auto-rows-[200px] gap-3 sm:gap-4">
             {/* Header card */}
             <div className="md:col-span-4 md:row-span-1 lg:col-span-2 lg:row-span-2 p-6 sm:p-8 bg-gradient-to-br from-[#16a34a] to-[#166534] rounded-3xl shadow-sm flex flex-col justify-between text-white relative overflow-hidden">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/15 backdrop-blur-sm rounded-full text-xs font-semibold w-fit border border-white/20">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-gray-900/15 backdrop-blur-sm rounded-full text-xs font-semibold w-fit border border-white/20">
                 <BrainCircuit className="h-3.5 w-3.5" />
                 <span>{dict.landing?.blog?.badge}</span>
               </div>
@@ -1399,22 +1399,22 @@ export default function LandingPageClient({
                 <p className="text-sm sm:text-base text-white/85 mb-5">
                   {dict.landing?.blog?.subtitle}
                 </p>
-                <Link href={getLocalizedPath("/blog")} className="inline-flex items-center gap-2 px-4 py-2 bg-white text-[#16a34a] rounded-xl text-sm font-semibold hover:scale-105 transition-transform">
+                <Link href={getLocalizedPath("/blog")} className="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 text-[#16a34a] rounded-xl text-sm font-semibold hover:scale-105 transition-transform">
                   {dict.landing?.blog?.viewAll}
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
-              <div className="absolute -bottom-20 -right-20 w-64 h-64 rounded-full bg-white/10 blur-3xl pointer-events-none" />
-              <div className="absolute -top-20 -left-20 w-48 h-48 rounded-full bg-white/5 blur-3xl pointer-events-none" />
+              <div className="absolute -bottom-20 -right-20 w-64 h-64 rounded-full bg-gray-900/10 blur-3xl pointer-events-none" />
+              <div className="absolute -top-20 -left-20 w-48 h-48 rounded-full bg-gray-900/5 blur-3xl pointer-events-none" />
             </div>
 
             {/* Topic cards */}
             {techTopics.map((topic, index) => {
               const themes = [
-                { bg: "bg-violet-50", text: "text-violet-900", sub: "text-violet-800/70", iconBg: "bg-violet-200/60", iconText: "text-violet-700" },
-                { bg: "bg-sky-50", text: "text-sky-900", sub: "text-sky-800/70", iconBg: "bg-sky-200/60", iconText: "text-sky-700" },
-                { bg: "bg-emerald-50", text: "text-emerald-900", sub: "text-emerald-800/70", iconBg: "bg-emerald-200/60", iconText: "text-emerald-700" },
-                { bg: "bg-amber-50", text: "text-amber-900", sub: "text-amber-800/70", iconBg: "bg-amber-200/60", iconText: "text-amber-700" },
+                { bg: "bg-violet-950/50", text: "text-violet-200", sub: "text-violet-300/70", iconBg: "bg-violet-800/30", iconText: "text-violet-700" },
+                { bg: "bg-sky-950/50", text: "text-sky-200", sub: "text-sky-300/70", iconBg: "bg-sky-800/30", iconText: "text-sky-700" },
+                { bg: "bg-emerald-950/50", text: "text-emerald-200", sub: "text-emerald-300/70", iconBg: "bg-emerald-800/30", iconText: "text-emerald-700" },
+                { bg: "bg-amber-950/50", text: "text-amber-200", sub: "text-amber-300/70", iconBg: "bg-amber-800/30", iconText: "text-amber-700" },
               ];
               const t = themes[index];
 
@@ -1465,7 +1465,7 @@ export default function LandingPageClient({
                 <Button
                   size="lg"
                   variant="outline"
-                  className="w-full sm:w-auto border-[#16a34a] bg-white !text-[#16a34a] hover:bg-[#f0fdf4] hover:!text-[#16a34a] px-6 sm:px-8 py-4 sm:py-5 md:py-6 text-sm sm:text-base md:text-lg rounded-xl"
+                  className="w-full sm:w-auto border-[#16a34a] bg-gray-900 !text-[#16a34a] hover:bg-gray-900 hover:!text-[#16a34a] px-6 sm:px-8 py-4 sm:py-5 md:py-6 text-sm sm:text-base md:text-lg rounded-xl"
                 >
                   {dict.landing.cta.viewPricing}
                 </Button>
@@ -1482,7 +1482,7 @@ export default function LandingPageClient({
                     href={link.href}
                     target={link.href.startsWith("mailto:") ? "_self" : "_blank"}
                     rel={link.href.startsWith("mailto:") ? undefined : "noopener noreferrer"}
-                    className="p-2 sm:p-3 bg-white rounded-full hover:bg-orange-50 transition-colors shadow-sm"
+                    className="p-2 sm:p-3 bg-gray-900 rounded-full hover:bg-orange-950/50 transition-colors shadow-sm"
                     aria-label={link.label}
                   >
                     <link.icon className="h-4 w-4 sm:h-5 sm:w-5 !text-[#16a34a]" />
