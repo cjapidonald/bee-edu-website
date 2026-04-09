@@ -1,16 +1,10 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
-const i18n = {
-  defaultLocale: 'vi' as const,
-  locales: ['vi', 'en', 'zh-HK'] as const,
-};
+const defaultLocale = 'vi';
+const locales = ['vi', 'en', 'zh-HK'];
 
-type Locale = (typeof i18n)['locales'][number];
-
-const WRITE_METHODS = new Set(['POST', 'PUT', 'PATCH', 'DELETE']);
-
-const isProd = process.env.NODE_ENV === 'production';
+const WRITE_METHODS = ['POST', 'PUT', 'PATCH', 'DELETE'];
 
 function buildCspHeader(reportOnly: boolean): string {
   const scriptSrc = reportOnly
@@ -37,15 +31,12 @@ function buildCspHeader(reportOnly: boolean): string {
   return directives.join('; ');
 }
 
-function getLocale(request: NextRequest): Locale {
-  // Check for locale in cookie (user preference from manual language switch)
-  const cookieLocale = request.cookies.get('NEXT_LOCALE')?.value as Locale | undefined;
-  if (cookieLocale && i18n.locales.includes(cookieLocale)) {
+function getLocale(request: NextRequest): string {
+  const cookieLocale = request.cookies.get('NEXT_LOCALE')?.value;
+  if (cookieLocale && locales.indexOf(cookieLocale) !== -1) {
     return cookieLocale;
   }
-
-  // Default to English globally — users can switch to Chinese manually
-  return i18n.defaultLocale;
+  return defaultLocale;
 }
 
 function getOriginCandidate(request: NextRequest): string | null {
@@ -68,7 +59,7 @@ export function middleware(request: NextRequest) {
   const isSafeMethod = method === 'GET' || method === 'HEAD' || method === 'OPTIONS';
 
   // Basic CSRF mitigation: enforce same-origin on state-changing requests
-  if (WRITE_METHODS.has(method)) {
+  if (WRITE_METHODS.indexOf(method) !== -1) {
     const candidate = getOriginCandidate(request);
     if (candidate === 'null' || candidate === null) {
       return new NextResponse('Forbidden', { status: 403 });
@@ -78,6 +69,7 @@ export function middleware(request: NextRequest) {
     }
   }
 
+  const isProd = process.env.NODE_ENV === 'production';
   const isReportOnly = !isProd;
   const cspHeader = buildCspHeader(isReportOnly);
   const cspHeaderName = isReportOnly
@@ -85,37 +77,45 @@ export function middleware(request: NextRequest) {
     : 'Content-Security-Policy';
 
   // Skip locale logic for static files, API routes, and Next.js internals
-  // (CSRF check above still applies to /api routes)
   if (
     pathname.startsWith('/_next') ||
     pathname.startsWith('/api') ||
     pathname.startsWith('/static') ||
-    pathname.includes('.') // Files with extensions
+    pathname.includes('.')
   ) {
     const response = NextResponse.next();
     response.headers.set(cspHeaderName, cspHeader);
     return response;
   }
 
-  // Helper: apply CSP header to a response
   function withCsp(response: NextResponse): NextResponse {
     response.headers.set(cspHeaderName, cspHeader);
     return response;
   }
 
   // Check if the pathname already has a locale
-  const pathnameHasLocale = i18n.locales.some(
-    (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
-  );
+  let pathnameHasLocale = false;
+  for (let i = 0; i < locales.length; i++) {
+    const loc = locales[i];
+    if (pathname === '/' + loc || pathname.startsWith('/' + loc + '/')) {
+      pathnameHasLocale = true;
+      break;
+    }
+  }
 
   if (pathnameHasLocale) {
-    if (pathname === `/${i18n.defaultLocale}` || pathname.startsWith(`/${i18n.defaultLocale}/`)) {
+    if (pathname === '/' + defaultLocale || pathname.startsWith('/' + defaultLocale + '/')) {
       if (!isSafeMethod) {
         return withCsp(NextResponse.next());
       }
       const url = request.nextUrl.clone();
-      const withoutLocale = pathname.replace(new RegExp(`^/${i18n.defaultLocale}(?=/|$)`), "") || "/";
-      url.pathname = withoutLocale;
+      let withoutLocale = pathname;
+      if (pathname === '/' + defaultLocale) {
+        withoutLocale = '/';
+      } else {
+        withoutLocale = pathname.substring(defaultLocale.length + 1);
+      }
+      url.pathname = withoutLocale || '/';
       return withCsp(NextResponse.redirect(url, 308));
     }
 
@@ -125,17 +125,13 @@ export function middleware(request: NextRequest) {
   // Redirect to locale-prefixed path
   const locale = getLocale(request);
 
-  // For default locale (en), don't add prefix to URL
-  // This keeps English URLs clean: / instead of /en
-  if (locale === i18n.defaultLocale) {
-    // Rewrite internally to include locale in the path for routing
-    const url = new URL(`/${locale}${pathname}`, request.url);
+  if (locale === defaultLocale) {
+    const url = new URL('/' + locale + pathname, request.url);
     url.search = request.nextUrl.search;
     return withCsp(NextResponse.rewrite(url));
   }
 
-  // For other locales, redirect to locale-prefixed path
-  const url = new URL(`/${locale}${pathname}`, request.url);
+  const url = new URL('/' + locale + pathname, request.url);
   url.search = request.nextUrl.search;
   if (!isSafeMethod) {
     return withCsp(NextResponse.rewrite(url));
@@ -145,7 +141,6 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    // Match all pathnames except for Next.js internals and static files
     '/((?!_next|_vercel|.*\\..*).*)',
   ],
 };
