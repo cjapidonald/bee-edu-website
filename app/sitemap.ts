@@ -10,7 +10,7 @@ interface BlogSitemapEntry {
   language?: string | null;
 }
 
-const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://elementals.com").trim();
+const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://kiwibee.io").trim();
 const includeSampleContent = process.env.NODE_ENV !== "production";
 
 const baseRoutes = [
@@ -36,36 +36,44 @@ const baseRoutes = [
 ];
 
 const featureRoutes = [
-  "/features/gradebook",
-  "/features/curriculum",
-  "/features/exams",
-  "/features/classspark",
+  "/features/admissions",
   "/features/ai",
+  "/features/ai-analytics",
+  "/features/chat",
+  "/features/class-stories",
+  "/features/classspark",
+  "/features/curriculum",
+  "/features/customer-service",
+  "/features/emergency-communications",
+  "/features/exams",
+  "/features/finance",
   "/features/gamification",
-  "/features/scheduling",
-  "/features/resource-booking",
-  "/features/year-migration",
-  "/features/library",
-  "/features/pilot-projects",
-  "/features/integrations",
+  "/features/gradebook",
+  "/features/homework",
   "/features/hr",
+  "/features/insights",
+  "/features/integrations",
+  "/features/library",
+  "/features/marketing",
+  "/features/parent-portal",
+  "/features/pilot-projects",
+  "/features/policy-management",
+  "/features/portfolios",
   "/features/professional-dev",
+  "/features/recruitment",
+  "/features/resource-booking",
+  "/features/sales-admin",
+  "/features/scheduling",
+  "/features/school-news",
+  "/features/student-affairs",
+  "/features/survey",
   "/features/teacher-kpi",
   "/features/teaching-assistants",
-  "/features/finance",
-  "/features/sales-admin",
-  "/features/marketing",
-  "/features/policy-management",
-  "/features/survey",
-  "/features/student-affairs",
-  "/features/school-news",
   "/features/wordwall",
-  "/features/portfolios",
-  "/features/emergency-communications",
-  "/features/ai-analytics",
+  "/features/year-migration",
 ];
 
-const locales = ["en", "zh-HK"] as const;
+const locales = ["vi", "en", "zh-HK"] as const;
 
 type SupportedLang = (typeof locales)[number];
 
@@ -75,6 +83,7 @@ const normalizePostLanguage = (value: string | null | undefined): SupportedLang 
   if (!trimmed) return null;
   const lower = trimmed.toLowerCase();
 
+  if (lower === "vi" || lower.startsWith("vi")) return "vi";
   if (lower === "en" || lower.startsWith("en-")) return "en";
   if (lower === "zh-hk" || lower === "zh_hk" || lower.startsWith("zh")) return "zh-HK";
 
@@ -82,10 +91,15 @@ const normalizePostLanguage = (value: string | null | undefined): SupportedLang 
 };
 
 const getPostLangKey = (language: string | null | undefined): SupportedLang =>
-  normalizePostLanguage(language) === "zh-HK" ? "zh-HK" : "en";
+  normalizePostLanguage(language) === "zh-HK"
+    ? "zh-HK"
+    : normalizePostLanguage(language) === "en"
+      ? "en"
+      : "vi";
 
-const toLocalizedUrl = (lang: (typeof locales)[number], path: string) => {
-  if (lang === "en") return `${siteUrl}${path}`;
+const toLocalizedUrl = (lang: SupportedLang, path: string) => {
+  // vi is the default locale — no prefix
+  if (lang === "vi") return `${siteUrl}${path || "/"}`;
   return `${siteUrl}/${lang}${path}`;
 };
 
@@ -152,6 +166,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     staticPaths.map((path) => ({
       url: toLocalizedUrl(lang, path),
       lastModified: now,
+      changeFrequency: path === "" ? "weekly" as const : "monthly" as const,
+      priority: path === "" ? 1.0 : path.startsWith("/features") ? 0.8 : 0.7,
     }))
   );
 
@@ -161,20 +177,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     if (!identifier) return [];
 
     const lastModified = post.updated_at || post.published_at || now.toISOString();
-
-    if (getPostLangKey(post.language) === "zh-HK") {
-      return [
-        {
-          url: toLocalizedUrl("zh-HK", `/blog/${identifier}`),
-          lastModified,
-        },
-      ];
-    }
+    const postLang = getPostLangKey(post.language);
 
     return [
       {
-        url: toLocalizedUrl("en", `/blog/${identifier}`),
+        url: toLocalizedUrl(postLang, `/blog/${identifier}`),
         lastModified,
+        changeFrequency: "weekly" as const,
+        priority: 0.6,
       },
     ];
   });

@@ -58,7 +58,7 @@ interface BlogPost {
   language?: string | null;
 }
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://elementals.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://kiwibee.io";
 const includeSampleContent = true;
 
 const getLocalizedPath = (lang: string, path: string) => {

@@ -4,7 +4,7 @@ import type { Locale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
 import LandingPageClient from "./LandingPageClient";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://elementals.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://kiwibee.io";
 
 const getLocalizedPath = (lang: Locale, path: string) => {
   if (lang === "en") return path;

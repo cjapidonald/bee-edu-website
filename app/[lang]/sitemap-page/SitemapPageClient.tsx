@@ -207,7 +207,7 @@ export default function SitemapPage({ params }: SitemapPageProps) {
                 rel="noopener noreferrer"
                 className="text-[#fc3c00] hover:underline"
               >
-                https://elementals.com/sitemap.xml
+                https://kiwibee.io/sitemap.xml
               </a>
             </CardContent>
           </Card>
