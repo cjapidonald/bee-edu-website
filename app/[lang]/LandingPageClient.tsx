@@ -45,6 +45,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { AnimatedGradientText } from '@/components/ui/animated-gradient-text';
+import SpotlightCards from '@/components/ui/spotlight-card';
 import NeuralNetworkBackground from '@/components/NeuralNetworkBackground';
 import {
   HomeroomTeacherDashboardMockup,
@@ -305,22 +306,32 @@ const BENTO_THEMES = {
   },
 } as const;
 
-// Features Section — Bento Grid Layout
+// Features Section — Spotlight Cards with 3D tilt
 const FeaturesSection = memo(function FeaturesSection({ dict, lang }: { dict: Dictionary; lang: string }) {
-  const { ref: sectionRef, isInView } = useInView<HTMLDivElement>({ threshold: 0.05, rootMargin: "-100px 0px", once: true });
   const features = useMemo(() => getFeatures(dict), [dict]);
 
+  const THEME_COLORS: Record<string, string> = {
+    dark: "#16a34a",
+    amber: "#f59e0b",
+    violet: "#a78bfa",
+    rose: "#f472b6",
+    sky: "#38bdf8",
+    emerald: "#34d399",
+  };
+
+  const spotlightItems = features.map((feature) => ({
+    icon: feature.icon,
+    title: feature.title,
+    description: feature.description,
+    color: THEME_COLORS[feature.theme] || "#16a34a",
+    badge: feature.badge || undefined,
+    href: feature.href,
+  }));
+
   return (
-    <section className="pt-4 sm:pt-6 md:pt-8 pb-12 sm:pb-16 md:pb-20 bg-gray-900/50">
+    <section className="pt-4 sm:pt-6 md:pt-8 pb-12 sm:pb-16 md:pb-20 bg-gray-950">
       <div className="container px-4">
-        <div
-          className="text-center mb-6 sm:mb-8 md:mb-10"
-          style={{
-            opacity: isInView ? 1 : 0,
-            transform: isInView ? 'translateY(0)' : 'translateY(40px)',
-            transition: 'opacity 0.7s ease-out, transform 0.7s ease-out'
-          }}
-        >
+        <div className="text-center mb-6 sm:mb-8 md:mb-10">
           <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 mb-3 sm:mb-4 bg-gray-900 border border-gray-800/50 text-[#16a34a] rounded-full text-xs sm:text-sm font-medium">
             <Sparkles className="h-3 w-3 sm:h-4 sm:w-4" />
             <span>{dict.landing.features.badge}</span>
@@ -333,83 +344,7 @@ const FeaturesSection = memo(function FeaturesSection({ dict, lang }: { dict: Di
           </p>
         </div>
 
-        <div
-          ref={sectionRef}
-          className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 auto-rows-[180px] md:auto-rows-[200px] gap-3 sm:gap-4"
-        >
-          {features.map((feature, index) => {
-            const theme = BENTO_THEMES[feature.theme];
-            const sizeClasses =
-              feature.size === "big"
-                ? "md:col-span-4 md:row-span-2 lg:col-span-3 lg:row-span-2"
-                : feature.size === "med"
-                  ? "md:col-span-4 md:row-span-1 lg:col-span-3 lg:row-span-1"
-                  : "md:col-span-2 md:row-span-1 lg:col-span-2 lg:row-span-1";
-
-            return (
-              <Link
-                key={index}
-                href={`/${lang === 'en' ? '' : lang + '/'}${feature.href.slice(1)}`}
-                aria-label={`Learn more about ${feature.title}`}
-                className={`group ${sizeClasses} ${theme.bg} rounded-3xl p-6 sm:p-7 ${feature.size === "big" ? "md:p-9 lg:p-11" : ""} flex flex-col justify-between shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden relative scroll-animate-card ${isInView ? 'in-view' : ''}`}
-              >
-                {feature.size === "med" ? (
-                  // Medium: horizontal layout
-                  <div className="flex items-center gap-5 h-full">
-                    <div className={`p-3 sm:p-4 ${theme.iconBg} rounded-2xl shrink-0`}>
-                      <feature.icon className={`h-6 w-6 sm:h-7 sm:w-7 ${theme.iconText}`} />
-                    </div>
-                    <div className="min-w-0 flex-1">
-                      <div className="flex items-center gap-2 mb-1">
-                        <h3 className={`text-lg sm:text-xl font-bold ${theme.text} truncate`}>
-                          {feature.title}
-                        </h3>
-                        {feature.badge && (
-                          <span className={`px-1.5 py-0.5 text-[10px] font-bold rounded ${theme.badge}`}>
-                            {feature.badge}
-                          </span>
-                        )}
-                      </div>
-                      <p className={`text-sm ${theme.sub} line-clamp-2`}>{feature.description}</p>
-                    </div>
-                    <ChevronRight className={`h-5 w-5 ${theme.iconText} opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all shrink-0`} />
-                  </div>
-                ) : (
-                  // Big & Small: vertical layout
-                  <div>
-                    <div className="flex items-start justify-between gap-3 mb-4 sm:mb-5">
-                      <div className={`p-2.5 sm:p-3 ${theme.iconBg} rounded-2xl`}>
-                        <feature.icon className={`h-5 w-5 sm:h-6 sm:w-6 ${theme.iconText}`} />
-                      </div>
-                      <div className="flex items-center gap-2">
-                        {feature.badge && (
-                          <span className={`px-2 py-1 text-[10px] sm:text-xs font-bold rounded ${theme.badge}`}>
-                            {feature.badge}
-                          </span>
-                        )}
-                        <span className={`inline-flex items-center text-xs sm:text-sm font-semibold ${theme.link}`}>
-                          {dict.landing?.features?.learnMore || "Learn more"}
-                          <ChevronRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                        </span>
-                      </div>
-                    </div>
-                    <h3 className={`${feature.size === "big" ? "text-2xl sm:text-3xl md:text-4xl" : "text-base sm:text-lg"} font-bold ${theme.text} mb-2 tracking-tight leading-tight`}>
-                      {feature.title}
-                    </h3>
-                    <p className={`${feature.size === "big" ? "text-base sm:text-lg" : "text-sm"} ${theme.sub} ${feature.size === "small" ? "line-clamp-2" : ""}`}>
-                      {feature.description}
-                    </p>
-                  </div>
-                )}
-
-                {/* Decorative gradient blob for big card */}
-                {feature.size === "big" && (
-                  <div className="absolute -bottom-20 -right-20 w-64 h-64 rounded-full bg-gradient-to-br from-[#16a34a]/20 to-[#facc15]/0 blur-3xl pointer-events-none" />
-                )}
-              </Link>
-            );
-          })}
-        </div>
+        <SpotlightCards items={spotlightItems} columns={3} />
       </div>
     </section>
   );
