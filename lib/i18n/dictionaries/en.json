@@ -349,9 +349,10 @@
     },
     "contact": {
       "email": "Email",
-      "whatsapp": "WhatsApp",
+      "phone": "Phone",
+      "zalo": "Zalo",
       "address": "Address",
-      "addressValue": "721-725 Nathan Road, Belgian Bank Building, Mongkok, Hong Kong",
+      "addressValue": "Shop-house SH3B, HH03, Eco Lake View, 32 Đại Từ, Đại Kim, Hoàng Mai, Hà Nội",
       "worldwide": "Serving schools globally"
     }
   },

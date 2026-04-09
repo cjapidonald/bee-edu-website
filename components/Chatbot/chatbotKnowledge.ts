@@ -114,7 +114,7 @@ export const knowledgeBase: KnowledgeEntry[] = [
     keywords: ["contact", "support", "help", "talk", "human"],
     question: "How can I get support?",
     answer:
-      "**We're here to help!**\n\n**Contact Options:**\n• Email: hello@kiwibee.io\n• WhatsApp: +852 94954912\n• Address: 721-725 Nathan Road, Belgian Bank Building, Mongkok, Hong Kong\n\n**Self-Service:**\n• Documentation & tutorials\n• FAQ section\n• In-app guides\n\n**For Schools:**\n• Dedicated success manager\n• On-site training",
+      "**We're here to help!**\n\n**Contact Options:**\n• Email: hello@kiwibee.io\n• Phone: +84 372 725 432\n• Zalo: 0338 106 091\n• Address: Shop-house SH3B, HH03, Eco Lake View, 32 Đại Từ, Đại Kim, Hoàng Mai, Hà Nội\n\n**Self-Service:**\n• Documentation & tutorials\n• FAQ section\n• In-app guides\n\n**For Schools:**\n• Dedicated success manager\n• On-site training",
     category: "support",
     priority: 7,
     pageLink: "/contact",
@@ -311,8 +311,9 @@ AI 亦提供 **Fast / Balanced / Deep** 模式，以及面向學生使用的 **S
 
 **聯絡方式：**
 • 電郵：hello@kiwibee.io
-• WhatsApp：+852 94954912
-• 地址：721-725 Nathan Road, Belgian Bank Building, Mongkok, Hong Kong
+• 電話：+84 372 725 432
+• Zalo：0338 106 091
+• 地址：Shop-house SH3B, HH03, Eco Lake View, 32 Đại Từ, Đại Kim, Hoàng Mai, Hà Nội
 
 你也可以到聯絡頁面預約演示或留言。`,
     category: "support",

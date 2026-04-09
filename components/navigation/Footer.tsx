@@ -100,7 +100,7 @@ export default function Footer({ lang, dict }: FooterProps) {
   const errorFailed = getFooterText(dict, 'newsletter.errorFailed', 'Subscription failed. Please try again.');
 
   // Get contact translations
-  const contactAddress = getFooterText(dict, 'contact.addressValue', '721-725 Nathan Road, Belgian Bank Building, Mongkok, Hong Kong');
+  const contactAddress = getFooterText(dict, 'contact.addressValue', 'Shop-house SH3B, HH03, Eco Lake View, 32 Đại Từ, Đại Kim, Hoàng Mai, Hà Nội');
   const contactWorldwide = getFooterText(dict, 'contact.worldwide', 'Available worldwide for remote rollout support');
 
   const isValidEmail = (emailInput: string): boolean => {
@@ -276,7 +276,9 @@ export default function Footer({ lang, dict }: FooterProps) {
           <p className="text-sm text-gray-400 mt-2">
             {getFooterText(dict, 'contact.email', 'Email')}: <a href="mailto:hello@kiwibee.io" className="hover:text-[#16a34a]">hello@kiwibee.io</a>
             {" | "}
-            {getFooterText(dict, 'contact.whatsapp', 'WhatsApp')}: <a href="https://wa.me/85294954912" className="hover:text-[#16a34a]">+852 94954912</a>
+            {getFooterText(dict, 'contact.phone', 'Phone')}: <a href="tel:+84372725432" className="hover:text-[#16a34a]">+84 372 725 432</a>
+            {" | "}
+            Zalo: <a href="https://zalo.me/0338106091" target="_blank" rel="noopener noreferrer" className="hover:text-[#16a34a]">0338 106 091</a>
           </p>
           <p className="text-sm text-gray-400 mt-1">
             {getFooterText(dict, 'contact.address', 'Address')}: {contactAddress}

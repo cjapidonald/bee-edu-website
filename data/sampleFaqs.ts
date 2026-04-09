@@ -12,7 +12,7 @@ export const SAMPLE_FAQS: Record<string, SampleFaqItem[]> = {
     { id: "faq-vi-2", category: "AI & An toàn", display_order: 2, question: "Học sinh có thể sử dụng AI an toàn không?", answer: "Có. Trường có thể bật Chế độ An toàn và kiểm soát truy cập bằng phân quyền theo vai trò." },
     { id: "faq-vi-3", category: "Nền tảng", display_order: 3, question: "Có bao nhiêu module?", answer: "Hơn 20 module: ClassSpark, sổ điểm, lập lịch, thi cử, TeacherLab AI, nhắn tin, cổng phụ huynh, và nhiều hơn nữa." },
     { id: "faq-vi-4", category: "Triển khai", display_order: 4, question: "Mất bao lâu để triển khai?", answer: "Hầu hết các trường hoạt động trong 1-2 tuần với hỗ trợ của đội ngũ." },
-    { id: "faq-vi-5", category: "Hỗ trợ", display_order: 5, question: "Liên hệ hỗ trợ như thế nào?", answer: "Email, WhatsApp hoặc trang Liên hệ để đặt lịch demo." },
+    { id: "faq-vi-5", category: "Hỗ trợ", display_order: 5, question: "Liên hệ hỗ trợ như thế nào?", answer: "Email, Zalo hoặc trang Liên hệ để đặt lịch demo." },
   ],
   en: [
     {
@@ -61,7 +61,7 @@ export const SAMPLE_FAQS: Record<string, SampleFaqItem[]> = {
       display_order: 6,
       question: "How can I contact support?",
       answer:
-        "Email hello@kiwibee.io or message us on WhatsApp. You can also use the Contact page to book a demo.",
+        "Email hello@kiwibee.io or reach us on Zalo (0338 106 091). You can also use the Contact page to book a demo.",
     },
   ],
   "zh-HK": [
@@ -111,7 +111,7 @@ export const SAMPLE_FAQS: Record<string, SampleFaqItem[]> = {
       display_order: 6,
       question: "如何聯絡支援？",
       answer:
-        "你可以電郵至 hello@kiwibee.io 或透過 WhatsApp 聯絡我們；亦可在聯絡頁面預約演示。",
+        "你可以電郵至 hello@kiwibee.io 或透過 Zalo（0338 106 091）聯絡我們；亦可在聯絡頁面預約演示。",
     },
   ],
 };

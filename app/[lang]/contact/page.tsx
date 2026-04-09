@@ -12,8 +12,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   };
 
   const descriptions: Record<string, string> = {
-    en: "Talk to KiwiBee. Email hello@kiwibee.io or WhatsApp +852 94954912.",
-    "zh-HK": "聯絡 KiwiBee。電郵 hello@kiwibee.io 或 WhatsApp +852 94954912。",
+    en: "Talk to Ben Oxford Hub. Email hello@kiwibee.io or call +84 372 725 432.",
+    "zh-HK": "聯絡 Ben Oxford Hub。電郵 hello@kiwibee.io 或致電 +84 372 725 432。",
   };
 
   return buildPageMetadata({

@@ -41,9 +41,10 @@ const texts = {
     tabDemoDesc: "See KiwiBee in action with our team",
     quickContact: "Quick Contact",
     email: "Email",
-    whatsApp: "WhatsApp",
+    phone: "Phone",
+    zalo: "Zalo",
     address: "Address",
-    addressValue: "721-725 Nathan Road, Belgian Bank Building, Mongkok, Hong Kong",
+    addressValue: "Shop-house SH3B, HH03, Eco Lake View, 32 Đại Từ, Đại Kim, Hoàng Mai, Hà Nội",
     officeHours: "Office Hours",
     mondayFriday: "Monday - Friday",
     saturday: "Saturday",
@@ -103,7 +104,7 @@ const texts = {
     slotRequired: "Please select a time slot for your demo",
     namePlaceholder: "John Smith",
     emailPlaceholder: "john@school.edu",
-    phonePlaceholder: "+852 94954912",
+    phonePlaceholder: "+84 372 725 432",
     schoolPlaceholder: "Springfield Elementary",
   },
   "zh-HK": {
@@ -117,9 +118,10 @@ const texts = {
     tabDemoDesc: "與我們的團隊一起體驗 KiwiBee",
     quickContact: "快速聯絡",
     email: "電郵",
-    whatsApp: "WhatsApp",
+    phone: "電話",
+    zalo: "Zalo",
     address: "地址",
-    addressValue: "香港旺角彌敦道721-725號華比銀行大廈",
+    addressValue: "Shop-house SH3B, HH03, Eco Lake View, 32 Đại Từ, Đại Kim, Hoàng Mai, Hà Nội",
     officeHours: "辦公時間",
     mondayFriday: "週一至週五",
     saturday: "週六",
@@ -179,7 +181,7 @@ const texts = {
     slotRequired: "請為您的演示選擇時段",
     namePlaceholder: "陳大文",
     emailPlaceholder: "john@school.edu",
-    phonePlaceholder: "+852 94954912",
+    phonePlaceholder: "+84 372 725 432",
     schoolPlaceholder: "春田小學",
   },
 };
@@ -606,12 +608,31 @@ export default function ContactPage({
                         <Phone className="h-5 w-5 text-[#16a34a]" />
                       </div>
                       <div>
-                        <p className="text-sm text-gray-500">{t.whatsApp}</p>
+                        <p className="text-sm text-gray-500">{t.phone}</p>
                         <a
-                          href="https://wa.me/85294954912"
+                          href="tel:+84372725432"
                           className="text-white font-medium hover:underline"
                         >
-                          +852 94954912
+                          +84 372 725 432
+                        </a>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3">
+                      <div className="p-2 bg-gray-900 rounded-lg">
+                        <svg className="h-5 w-5 text-[#16a34a]" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M12 0C5.373 0 0 5.037 0 11.25c0 3.14 1.342 5.973 3.5 7.988V24l4.285-2.35c1.342.37 2.76.6 4.215.6 6.627 0 12-5.037 12-11.25S18.627 0 12 0zm1.2 15.15l-3.06-3.263L4.2 15.15l5.55-5.888 3.135 3.263L18.72 9.262 13.2 15.15z"/>
+                        </svg>
+                      </div>
+                      <div>
+                        <p className="text-sm text-gray-500">{t.zalo}</p>
+                        <a
+                          href="https://zalo.me/0338106091"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-white font-medium hover:underline"
+                        >
+                          0338 106 091
                         </a>
                       </div>
                     </div>
@@ -627,6 +648,16 @@ export default function ContactPage({
                         </p>
                       </div>
                     </div>
+                  </div>
+
+                  {/* Zalo QR Code */}
+                  <div className="mt-6 pt-4 border-t border-gray-700">
+                    <p className="text-sm text-gray-400 mb-3">Scan to chat on Zalo</p>
+                    <img
+                      src="/zalo-qr.jpg"
+                      alt="Zalo QR Code"
+                      className="w-32 h-32 rounded-lg"
+                    />
                   </div>
                 </Card>
 

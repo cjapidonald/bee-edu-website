@@ -350,9 +350,10 @@
     },
     "contact": {
       "email": "電郵",
-      "whatsapp": "WhatsApp",
+      "phone": "電話",
+      "zalo": "Zalo",
       "address": "地址",
-      "addressValue": "香港旺角彌敦道721-725號比利時銀行大廈",
+      "addressValue": "Shop-house SH3B, HH03, Eco Lake View, 32 Đại Từ, Đại Kim, Hoàng Mai, Hà Nội",
       "worldwide": "服務全球學校"
     }
   },
