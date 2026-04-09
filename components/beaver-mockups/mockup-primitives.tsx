@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode } from "react";
+import { ReactNode, useId } from "react";
 
 /**
  * Shared primitives for KiwiBee dashboard mockups.
@@ -147,7 +147,8 @@ export function MiniLineChart({
     padding.top + chartHeight
   } L ${pointCoords[0].x},${padding.top + chartHeight} Z`;
 
-  const id = gradientId || `chartGradient-${color.replace("#", "")}-${Math.random().toString(36).slice(2, 7)}`;
+  const reactId = useId();
+  const id = gradientId || `chartGradient-${color.replace("#", "")}-${reactId}`;
 
   return (
     <svg
