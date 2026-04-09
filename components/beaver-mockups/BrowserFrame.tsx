@@ -22,7 +22,7 @@ export function BrowserFrame({
 }) {
   return (
     <div
-      className={`relative rounded-2xl bg-gray-900/50 shadow-2xl shadow-black/20 ring-1 ring-black/10 overflow-hidden ${className}`}
+      className={`relative rounded-2xl bg-gray-900/50 shadow-[0_20px_60px_-10px_rgba(0,0,0,0.7),0_8px_20px_-6px_rgba(0,0,0,0.5)] ring-1 ring-white/5 overflow-hidden ${className}`}
     >
       {/* Top chrome */}
       <div className="bg-gradient-to-b from-gray-800 to-gray-850 border-b border-gray-700/50">
