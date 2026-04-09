@@ -746,84 +746,39 @@ export default function LandingPageClient({
         </div>
       </section>
 
-      {/* UNIFIED PLATFORM SECTION — Bento */}
-      <section className="py-12 sm:py-16 bg-gray-900/50 border-y border-gray-800">
+      {/* UNIFIED PLATFORM SECTION */}
+      <section className="py-12 sm:py-16 bg-gray-950 border-y border-gray-800/50">
         <div className="container px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 auto-rows-[180px] md:auto-rows-[200px] gap-3 sm:gap-4">
-            {/* Header card — spans 2 cols, 2 rows */}
-            <div className="md:col-span-4 md:row-span-1 lg:col-span-2 lg:row-span-2 p-6 sm:p-8 bg-gray-900 rounded-3xl shadow-sm flex flex-col justify-between">
-              <div>
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 mb-4 bg-[#16a34a]/10 text-[#16a34a] rounded-full text-xs font-semibold">
-                  <LineChart className="h-3.5 w-3.5" />
-                  <span>{dict.landing?.unified?.badge}</span>
-                </div>
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3 tracking-tight leading-tight">
-                  {dict.landing?.unified?.title}
-                </h2>
-                <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
-                  {dict.landing?.unified?.subtitle}
-                </p>
-              </div>
+          <div className="text-center mb-8">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 mb-4 bg-gray-900 border border-gray-800/50 text-[#16a34a] rounded-full text-xs font-semibold">
+              <LineChart className="h-3.5 w-3.5" />
+              <span>{dict.landing?.unified?.badge}</span>
             </div>
-
-            {/* Item cards in varying themes */}
-            {(dict.landing?.unified?.items || []).map((item: { title: string; description: string }, index: number) => {
-              const iconMap = [BarChart3, ClipboardCheck, Target, Heart] as const;
-              const IconComponent = iconMap[index] ?? Sparkles;
-              const themes = [
-                { bg: "bg-sky-950/50", text: "text-sky-200", sub: "text-sky-300/70", iconBg: "bg-sky-800/30", iconText: "text-sky-700" },
-                { bg: "bg-amber-950/50", text: "text-amber-200", sub: "text-amber-300/70", iconBg: "bg-amber-800/30", iconText: "text-amber-700" },
-                { bg: "bg-rose-950/50", text: "text-rose-200", sub: "text-rose-300/70", iconBg: "bg-rose-800/30", iconText: "text-rose-700" },
-                { bg: "bg-emerald-950/50", text: "text-emerald-200", sub: "text-emerald-300/70", iconBg: "bg-emerald-800/30", iconText: "text-emerald-700" },
-              ];
-              const t = themes[index % themes.length];
-              // First item is bigger
-              const sizeClass = index === 0
-                ? "md:col-span-2 md:row-span-1 lg:col-span-2 lg:row-span-2"
-                : "md:col-span-2 md:row-span-1 lg:col-span-2 lg:row-span-1";
-
-              if (index === 0) {
-                return (
-                  <div
-                    key={`${item.title}-${index}`}
-                    className={`${sizeClass} ${t.bg} p-6 rounded-3xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col gap-4`}
-                  >
-                    <div className="flex items-center gap-3">
-                      <div className={`p-2.5 ${t.iconBg} rounded-xl w-fit`}>
-                        <IconComponent className={`h-5 w-5 ${t.iconText}`} />
-                      </div>
-                      <h3 className={`text-lg sm:text-xl font-bold ${t.text} tracking-tight leading-tight`}>{item.title}</h3>
-                    </div>
-                    <p className={`text-sm ${t.sub} leading-relaxed`}>{item.description}</p>
-                  </div>
-                );
-              }
-              return (
-                <div
-                  key={`${item.title}-${index}`}
-                  className={`${sizeClass} ${t.bg} p-6 rounded-3xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between`}
-                >
-                  <div className={`p-3 ${t.iconBg} rounded-2xl w-fit`}>
-                    <IconComponent className={`h-5 w-5 ${t.iconText}`} />
-                  </div>
-                  <div>
-                    <h3 className={`text-lg sm:text-xl font-bold ${t.text} mb-1.5 tracking-tight leading-tight`}>{item.title}</h3>
-                    <p className={`text-sm ${t.sub} line-clamp-2`}>{item.description}</p>
-                  </div>
-                </div>
-              );
-            })}
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3 tracking-tight">
+              {dict.landing?.unified?.title}
+            </h2>
+            <p className="text-sm sm:text-base text-gray-400 max-w-2xl mx-auto">
+              {dict.landing?.unified?.subtitle}
+            </p>
           </div>
+          <SpotlightCards
+            columns={2}
+            items={(dict.landing?.unified?.items || []).map((item: { title: string; description: string }, index: number) => {
+              const iconMap = [BarChart3, ClipboardCheck, Target, Heart];
+              const colors = ["#38bdf8", "#f59e0b", "#f472b6", "#34d399"];
+              return { icon: iconMap[index] ?? Sparkles, title: item.title, description: item.description, color: colors[index % 4] };
+            })}
+          />
         </div>
       </section>
 
       {/* FEATURES SECTION */}
       <FeaturesSection dict={dict} lang={lang} />
 
-      {/* COMMUNICATION SECTION — Bento */}
-      <section className="pt-6 pb-12 sm:pt-8 sm:pb-16 bg-gray-900/50">
+      {/* COMMUNICATION SECTION */}
+      <section className="pt-6 pb-12 sm:pt-8 sm:pb-16 bg-gray-950">
         <div className="container px-4">
-          <div className="text-center mb-6 sm:mb-8">
+          <div className="text-center mb-8">
             <div className="inline-flex items-center gap-2 px-4 py-2 mb-4 bg-gray-900 border border-gray-800/50 text-[#16a34a] rounded-full text-sm font-medium">
               <MessageCircle className="h-4 w-4" />
               <span>{dict.landing?.communication?.badge}</span>
@@ -835,111 +790,21 @@ export default function LandingPageClient({
               {dict.landing?.communication?.subtitle}
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 auto-rows-[180px] md:auto-rows-[200px] gap-3 sm:gap-4">
-            {communicationFeatures.map((feature, index) => {
-              const themes = [
-                // Big featured (light yellow - messaging)
-                { bg: "bg-yellow-950/50", text: "text-yellow-200", sub: "text-yellow-300/70", iconBg: "bg-yellow-800/30", iconText: "text-yellow-700", size: "md:col-span-4 md:row-span-2 lg:col-span-3 lg:row-span-2" },
-                // Tall (amber - video)
-                { bg: "bg-amber-950/50", text: "text-amber-200", sub: "text-amber-300/70", iconBg: "bg-amber-800/30", iconText: "text-amber-700", size: "md:col-span-2 md:row-span-2 lg:col-span-3 lg:row-span-1" },
-                // Small (emerald - materials)
-                { bg: "bg-emerald-950/50", text: "text-emerald-200", sub: "text-emerald-300/70", iconBg: "bg-emerald-800/30", iconText: "text-emerald-700", size: "md:col-span-2 md:row-span-1 lg:col-span-3 lg:row-span-1" },
-                // Dark (violet - stories)
-                { bg: "bg-gradient-to-br from-violet-900 to-violet-800", text: "text-white", sub: "text-violet-100/80", iconBg: "bg-gray-900/10", iconText: "text-violet-200", size: "hidden md:hidden lg:hidden" },
-              ];
-              const t = themes[index];
-              const isBig = index === 0;
-
-              if (index === 3) return null; // skip 4th if we want 3-card bento; we'll place it differently
-
-              if (isBig) {
-                return (
-                  <div
-                    key={index}
-                    className={`group ${t.size} ${t.bg} p-6 sm:p-8 md:p-10 rounded-3xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col gap-5 relative overflow-hidden`}
-                  >
-                    <div className="flex items-center justify-between gap-3">
-                      <div className="flex items-center gap-3">
-                        <div className={`p-3 ${t.iconBg} rounded-2xl`}>
-                          <feature.icon className={`h-6 w-6 ${t.iconText}`} />
-                        </div>
-                        <h3 className={`text-2xl sm:text-3xl md:text-4xl font-bold ${t.text} tracking-tight leading-tight`}>
-                          {feature.title}
-                        </h3>
-                      </div>
-                      {feature.badge && (
-                        <span className={`px-2 py-1 text-xs font-bold rounded ${feature.badgeColor} shrink-0`}>
-                          {feature.badge}
-                        </span>
-                      )}
-                    </div>
-                    <p className={`text-base sm:text-lg max-w-xl ${t.sub} leading-relaxed relative z-10`}>
-                      {feature.description}
-                    </p>
-                    <div className="absolute -bottom-20 -right-20 w-64 h-64 rounded-full bg-yellow-800/30 blur-3xl pointer-events-none" />
-                  </div>
-                );
-              }
-
-              return (
-                <div
-                  key={index}
-                  className={`group ${t.size} ${t.bg} p-6 rounded-3xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between relative overflow-hidden`}
-                >
-                  <div className="flex items-start justify-between">
-                    <div className={`p-3 ${t.iconBg} rounded-2xl`}>
-                      <feature.icon className={`h-6 w-6 ${t.iconText}`} />
-                    </div>
-                    {feature.badge && (
-                      <span className={`px-2 py-1 text-xs font-bold rounded ${feature.badgeColor}`}>
-                        {feature.badge}
-                      </span>
-                    )}
-                  </div>
-                  <div>
-                    <h3 className={`text-lg sm:text-xl font-bold ${t.text} mb-2 tracking-tight leading-tight`}>
-                      {feature.title}
-                    </h3>
-                    <p className={`text-sm line-clamp-2 ${t.sub}`}>
-                      {feature.description}
-                    </p>
-                  </div>
-                </div>
-              );
+          <SpotlightCards
+            columns={2}
+            items={communicationFeatures.map((f, i) => {
+              const colors = ["#eab308", "#f59e0b", "#34d399", "#a78bfa"];
+              return { icon: f.icon, title: f.title || "", description: f.description || "", color: colors[i % 4], badge: f.badge || undefined };
             })}
-            {/* 4th card — stories — explicitly placed for bento layout */}
-            {communicationFeatures[3] && (
-              <div className="md:col-span-4 md:row-span-1 lg:col-span-6 lg:row-span-1 bg-purple-950/50 p-6 sm:p-7 rounded-3xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center gap-5 relative overflow-hidden">
-                <div className="p-3 bg-purple-200/60 rounded-2xl shrink-0">
-                  {(() => {
-                    const Icon = communicationFeatures[3].icon;
-                    return <Icon className="h-6 w-6 text-purple-700" />;
-                  })()}
-                </div>
-                <div className="min-w-0 flex-1">
-                  <div className="flex items-center gap-2 mb-1">
-                    <h3 className="text-lg sm:text-xl font-bold text-purple-900 tracking-tight truncate">{communicationFeatures[3].title}</h3>
-                    {communicationFeatures[3].badge && (
-                      <span className="px-2 py-0.5 text-[10px] font-bold rounded bg-purple-600 text-white">
-                        {communicationFeatures[3].badge}
-                      </span>
-                    )}
-                  </div>
-                  <p className="text-sm text-purple-800/70 line-clamp-2">{communicationFeatures[3].description}</p>
-                </div>
-                <div className="absolute -top-10 -right-10 w-48 h-48 rounded-full bg-purple-300/40 blur-3xl pointer-events-none" />
-              </div>
-            )}
-          </div>
+          />
         </div>
       </section>
 
-      {/* STUDENT & PARENT SECTION — Bento */}
-      <section className="py-20 bg-gray-900">
+      {/* STUDENT & PARENT SECTION */}
+      <section className="py-20 bg-gray-950">
         <div className="container px-4">
-          <div className="text-center mb-12 sm:mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 mb-4 bg-gray-900/50 text-[#16a34a] rounded-full text-sm font-medium">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 px-4 py-2 mb-4 bg-gray-900 border border-gray-800/50 text-[#16a34a] rounded-full text-sm font-medium">
               <Heart className="h-4 w-4" />
               <span>{dict.landing?.studentParent?.badge}</span>
             </div>
@@ -950,45 +815,13 @@ export default function LandingPageClient({
               {dict.landing?.studentParent?.subtitle}
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 auto-rows-[180px] md:auto-rows-[200px] gap-3 sm:gap-4">
-            {studentParentFeatures.map((feature, index) => {
-              // Bento layout: tall, big, small, small
-              const layouts = [
-                { size: "md:col-span-2 md:row-span-2 lg:col-span-2 lg:row-span-2", bg: "bg-amber-950/50", text: "text-amber-200", sub: "text-amber-300/70", iconBg: "bg-amber-800/30", iconText: "text-amber-700", isFeatured: true },
-                { size: "md:col-span-2 md:row-span-1 lg:col-span-4 lg:row-span-1", bg: "bg-rose-950/50", text: "text-rose-200", sub: "text-rose-300/70", iconBg: "bg-rose-800/30", iconText: "text-rose-700", isFeatured: false },
-                { size: "md:col-span-2 md:row-span-1 lg:col-span-2 lg:row-span-1", bg: "bg-teal-950/50", text: "text-teal-900", sub: "text-teal-800/70", iconBg: "bg-teal-200/60", iconText: "text-teal-700", isFeatured: false },
-                { size: "md:col-span-2 md:row-span-1 lg:col-span-2 lg:row-span-1", bg: "bg-violet-950/50", text: "text-violet-200", sub: "text-violet-300/70", iconBg: "bg-violet-800/30", iconText: "text-violet-700", isFeatured: false },
-              ];
-              const l = layouts[index];
-
-              return (
-                <div
-                  key={index}
-                  className={`group ${l.size} ${l.bg} p-6 ${l.isFeatured ? "sm:p-7" : ""} rounded-3xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between relative overflow-hidden`}
-                >
-                  <div className="flex items-start justify-between">
-                    <div className={`p-3 ${l.iconBg} rounded-2xl`}>
-                      <feature.icon className={`h-6 w-6 ${l.iconText}`} />
-                    </div>
-                    {feature.badge && (
-                      <span className={`px-2 py-1 text-xs font-bold rounded ${feature.badgeColor}`}>
-                        {feature.badge}
-                      </span>
-                    )}
-                  </div>
-                  <div>
-                    <h3 className={`${l.isFeatured ? "text-xl sm:text-2xl md:text-3xl" : "text-lg sm:text-xl"} font-bold ${l.text} mb-2 tracking-tight leading-tight`}>
-                      {feature.title}
-                    </h3>
-                    <p className={`${l.isFeatured ? "text-sm sm:text-base" : "text-sm line-clamp-2"} ${l.sub}`}>
-                      {feature.description}
-                    </p>
-                  </div>
-                </div>
-              );
+          <SpotlightCards
+            columns={2}
+            items={studentParentFeatures.map((f, i) => {
+              const colors = ["#f59e0b", "#f472b6", "#2dd4bf", "#a78bfa"];
+              return { icon: f.icon, title: f.title || "", description: f.description || "", color: colors[i % 4], badge: f.badge || undefined };
             })}
-          </div>
+          />
         </div>
       </section>
 
@@ -1132,64 +965,36 @@ export default function LandingPageClient({
         </div>
       </section>
 
-      {/* SOLUTIONS BY ROLE — Bento */}
-      <section className="py-20 bg-gray-900/50">
+      {/* SOLUTIONS BY ROLE */}
+      <section className="py-20 bg-gray-950">
         <div className="container px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 auto-rows-[160px] md:auto-rows-[180px] gap-3 sm:gap-4">
-            {/* Header card */}
-            <div className="md:col-span-4 md:row-span-1 lg:col-span-2 lg:row-span-2 p-6 sm:p-8 bg-gray-900 rounded-3xl shadow-sm flex flex-col justify-between">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#16a34a]/10 text-[#16a34a] rounded-full text-xs font-semibold w-fit">
-                <Users className="h-3.5 w-3.5" />
-                <span>Roles</span>
-              </div>
-              <div>
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-2 tracking-tight leading-tight">
-                  {dict.landing?.solutions?.title}
-                </h2>
-                <p className="text-sm sm:text-base text-gray-400">
-                  {dict.landing?.solutions?.subtitle}
-                </p>
-              </div>
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 mb-4 bg-gray-900 border border-gray-800/50 text-[#16a34a] rounded-full text-xs font-semibold">
+              <Users className="h-3.5 w-3.5" />
+              <span>Roles</span>
             </div>
-
-            {/* Solution chips */}
-            {solutions.map((solution, index) => {
-              const themes = [
-                { bg: "bg-rose-950/50", text: "text-rose-200", iconBg: "bg-rose-800/30", iconText: "text-rose-700" },
-                { bg: "bg-violet-950/50", text: "text-violet-200", iconBg: "bg-violet-800/30", iconText: "text-violet-700" },
-                { bg: "bg-amber-950/50", text: "text-amber-200", iconBg: "bg-amber-800/30", iconText: "text-amber-700" },
-                { bg: "bg-emerald-950/50", text: "text-emerald-200", iconBg: "bg-emerald-800/30", iconText: "text-emerald-700" },
-                { bg: "bg-[#18181b]", text: "text-white", iconBg: "bg-gray-900/10", iconText: "text-[#facc15]" },
-              ];
-              const t = themes[index % themes.length];
-
-              return (
-                <Link
-                  key={index}
-                  href={getLocalizedPath(solution.href)}
-                  className={`group md:col-span-2 md:row-span-1 lg:col-span-2 lg:row-span-1 p-5 sm:p-6 ${t.bg} rounded-3xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between`}
-                >
-                  <div className={`p-2.5 ${t.iconBg} rounded-2xl w-fit group-hover:scale-110 transition-transform`}>
-                    <solution.icon className={`h-5 w-5 ${t.iconText}`} />
-                  </div>
-                  <div>
-                    <h3 className={`text-base sm:text-lg font-bold ${t.text} mb-0.5 tracking-tight`}>{solution.title}</h3>
-                    <p className={`text-xs sm:text-sm ${index === 4 ? "text-white/70" : "opacity-70"} ${index !== 4 ? t.text : ""} line-clamp-1`}>
-                      {solution.description}
-                    </p>
-                  </div>
-                </Link>
-              );
-            })}
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3 tracking-tight">
+              {dict.landing?.solutions?.title}
+            </h2>
+            <p className="text-sm sm:text-base text-gray-400 max-w-2xl mx-auto">
+              {dict.landing?.solutions?.subtitle}
+            </p>
           </div>
+          <SpotlightCards
+            columns={2}
+            items={solutions.map((s, i) => {
+              const colors = ["#f472b6", "#a78bfa", "#f59e0b", "#34d399"];
+              return { icon: s.icon, title: s.title || "", description: s.description || "", color: colors[i % 4] };
+            })}
+          />
         </div>
       </section>
 
-      {/* HOW IT WORKS — Bento */}
-      <section className="py-20 bg-gray-900">
+      {/* HOW IT WORKS */}
+      <section className="py-20 bg-gray-950">
         <div className="container px-4">
-          <div className="text-center mb-12 sm:mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 mb-4 bg-gray-900/50 text-[#16a34a] rounded-full text-sm font-medium">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 px-4 py-2 mb-4 bg-gray-900 border border-gray-800/50 text-[#16a34a] rounded-full text-sm font-medium">
               <Sparkles className="h-4 w-4" />
               <span>{dict.landing?.howItWorks?.badge}</span>
             </div>
@@ -1200,41 +1005,13 @@ export default function LandingPageClient({
               {dict.landing?.howItWorks?.subtitle}
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-6 auto-rows-[260px] md:auto-rows-[280px] gap-3 sm:gap-4">
-            {workflowSteps.map((step, index) => {
-              // Bento: 1st bigger, 2nd middle, 3rd bigger
-              const themes = [
-                { bg: "bg-sky-950/50", text: "text-sky-200", sub: "text-sky-300/70", iconBg: "bg-sky-800/30", iconText: "text-sky-700", numBg: "bg-sky-200", size: "md:col-span-3 lg:col-span-2" },
-                { bg: "bg-pink-950/50", text: "text-pink-900", sub: "text-pink-800/70", iconBg: "bg-pink-200/60", iconText: "text-pink-700", numBg: "bg-pink-200", size: "md:col-span-3 lg:col-span-2" },
-                { bg: "bg-emerald-950/50", text: "text-emerald-200", sub: "text-emerald-300/70", iconBg: "bg-emerald-800/30", iconText: "text-emerald-700", numBg: "bg-emerald-200", size: "md:col-span-6 lg:col-span-2" },
-              ];
-              const t = themes[index];
-
-              return (
-                <div
-                  key={index}
-                  className={`group relative ${t.size} ${t.bg} p-7 sm:p-8 rounded-3xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between overflow-hidden`}
-                >
-                  <div className="flex items-center justify-between">
-                    <span className={`px-3 py-1 text-[10px] font-bold ${t.text} ${t.numBg} rounded-full uppercase tracking-wider opacity-90`}>
-                      {step.badge}
-                    </span>
-                    <div className={`flex items-center justify-center w-10 h-10 ${t.iconBg} rounded-full ${t.text} font-bold`}>
-                      {index + 1}
-                    </div>
-                  </div>
-                  <div>
-                    <div className={`p-3 ${t.iconBg} rounded-2xl w-fit mb-4`}>
-                      <step.icon className={`h-6 w-6 ${t.iconText}`} />
-                    </div>
-                    <h3 className={`text-xl sm:text-2xl font-bold ${t.text} mb-2 tracking-tight leading-tight`}>{step.title}</h3>
-                    <p className={`text-sm ${t.sub}`}>{step.description}</p>
-                  </div>
-                </div>
-              );
+          <SpotlightCards
+            columns={3}
+            items={workflowSteps.map((step, i) => {
+              const colors = ["#38bdf8", "#f472b6", "#34d399"];
+              return { icon: step.icon, title: step.title || "", description: step.description || "", color: colors[i % 3], badge: step.badge || undefined };
             })}
-          </div>
+          />
         </div>
       </section>
 
